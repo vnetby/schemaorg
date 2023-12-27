@@ -2,6 +2,8 @@
 
 A small library for working with schema.org markup. Enables the generation of JSON-LD markup.
 
+Schema.org documentation: https://schema.org/docs/full.html
+
 ## Installation
 
 You can install the library via Composer. Add the following line to your composer.json file:
