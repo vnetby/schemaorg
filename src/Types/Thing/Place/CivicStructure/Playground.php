@@ -4,9 +4,9 @@
  * @see https://schema.org/Playground
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class Playground extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class Playground extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'Playground';
 }

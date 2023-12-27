@@ -4,9 +4,9 @@
  * @see https://schema.org/WriteAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\CreateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\CreateAction;
 
-class WriteAction extends \Vnet\Schemaorg\Types\Thing\Action\CreateAction\CreateAction
+class WriteAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\CreateAction
 {
     const TYPE = 'WriteAction';
 }

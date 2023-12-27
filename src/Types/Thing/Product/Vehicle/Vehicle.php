@@ -4,9 +4,9 @@
  * @see https://schema.org/Vehicle
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Product\Vehicle;
+namespace Vnetby\Schemaorg\Types\Thing\Product\Vehicle;
 
-class Vehicle extends \Vnet\Schemaorg\Types\Thing\Product\Product
+class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 {
     const TYPE = 'Vehicle';
 }

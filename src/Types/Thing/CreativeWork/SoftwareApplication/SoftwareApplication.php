@@ -4,9 +4,9 @@
  * @see https://schema.org/SoftwareApplication
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication;
 
-class SoftwareApplication extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'SoftwareApplication';
 }

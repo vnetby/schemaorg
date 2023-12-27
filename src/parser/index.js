@@ -20,10 +20,10 @@ const SCHEMA_ORG_URL = 'https://schema.org/docs/full.html';
 const SCHEMA_ORG_BASE_URL = 'https://schema.org';
 
 // базовое пространство имен
-const NAMEPSACE_PREFIX = 'Vnet\\Schemaorg\\Types';
+const NAMEPSACE_PREFIX = 'Vnetby\\Schemaorg\\Types';
 
 // полное наименование базового класса (с пространством имен)
-const BASE_CLASS = 'Vnet\\Schemaorg\\Types\\Type';
+const BASE_CLASS = 'Vnetby\\Schemaorg\\Types\\Type';
 
 // папка в которой будет создаваться структура
 const STRUCTURE_DIR = path.resolve(__dirname, '../Types');

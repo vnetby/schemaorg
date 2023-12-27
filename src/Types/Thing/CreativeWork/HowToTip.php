@@ -4,9 +4,9 @@
  * @see https://schema.org/HowToTip
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class HowToTip extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class HowToTip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'HowToTip';
 }

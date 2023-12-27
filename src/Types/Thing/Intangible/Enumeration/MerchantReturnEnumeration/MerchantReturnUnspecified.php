@@ -4,9 +4,9 @@
  * @see https://schema.org/MerchantReturnUnspecified
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration;
 
-class MerchantReturnUnspecified extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration\MerchantReturnEnumeration
+class MerchantReturnUnspecified extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration\MerchantReturnEnumeration
 {
     const TYPE = 'MerchantReturnUnspecified';
 }

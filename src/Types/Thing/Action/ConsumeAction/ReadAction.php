@@ -4,9 +4,9 @@
  * @see https://schema.org/ReadAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\ConsumeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction;
 
-class ReadAction extends \Vnet\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
+class ReadAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
 {
     const TYPE = 'ReadAction';
 }

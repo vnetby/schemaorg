@@ -4,9 +4,9 @@
  * @see https://schema.org/Geriatric
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
 
-class Geriatric extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
+class Geriatric extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
 {
     const TYPE = 'Geriatric';
 }

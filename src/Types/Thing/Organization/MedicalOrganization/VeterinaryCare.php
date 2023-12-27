@@ -4,9 +4,9 @@
  * @see https://schema.org/VeterinaryCare
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\MedicalOrganization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization;
 
-class VeterinaryCare extends \Vnet\Schemaorg\Types\Thing\Organization\MedicalOrganization\MedicalOrganization
+class VeterinaryCare extends \Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization\MedicalOrganization
 {
     const TYPE = 'VeterinaryCare';
 }

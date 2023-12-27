@@ -4,9 +4,9 @@
  * @see https://schema.org/EUEnergyEfficiencyCategoryA
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration;
 
-class EUEnergyEfficiencyCategoryA extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration
+class EUEnergyEfficiencyCategoryA extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration
 {
     const TYPE = 'EUEnergyEfficiencyCategoryA';
 }

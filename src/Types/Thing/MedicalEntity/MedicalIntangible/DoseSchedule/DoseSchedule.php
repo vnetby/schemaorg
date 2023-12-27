@@ -4,9 +4,9 @@
  * @see https://schema.org/DoseSchedule
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule;
 
-class DoseSchedule extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalIntangible
+class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalIntangible
 {
     const TYPE = 'DoseSchedule';
 }

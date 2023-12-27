@@ -4,9 +4,9 @@
  * @see https://schema.org/PercutaneousProcedure
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalProcedureType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalProcedureType;
 
-class PercutaneousProcedure extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalProcedureType\MedicalProcedureType
+class PercutaneousProcedure extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalProcedureType\MedicalProcedureType
 {
     const TYPE = 'PercutaneousProcedure';
 }

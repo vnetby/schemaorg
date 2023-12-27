@@ -4,9 +4,9 @@
  * @see https://schema.org/UseAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\ConsumeAction\UseAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\UseAction;
 
-class UseAction extends \Vnet\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
+class UseAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
 {
     const TYPE = 'UseAction';
 }

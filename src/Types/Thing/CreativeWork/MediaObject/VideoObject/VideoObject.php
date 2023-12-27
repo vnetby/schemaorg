@@ -4,9 +4,9 @@
  * @see https://schema.org/VideoObject
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject;
 
-class VideoObject extends \Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
 {
     const TYPE = 'VideoObject';
 }

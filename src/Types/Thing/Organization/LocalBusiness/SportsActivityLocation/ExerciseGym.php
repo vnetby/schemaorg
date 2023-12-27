@@ -4,9 +4,9 @@
  * @see https://schema.org/ExerciseGym
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
 
-class ExerciseGym extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
+class ExerciseGym extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
 {
     const TYPE = 'ExerciseGym';
 }

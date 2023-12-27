@@ -4,9 +4,9 @@
  * @see https://schema.org/DataDownload
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject;
 
-class DataDownload extends \Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+class DataDownload extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
 {
     const TYPE = 'DataDownload';
 }

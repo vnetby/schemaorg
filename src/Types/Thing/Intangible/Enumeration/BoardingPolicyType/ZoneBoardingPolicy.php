@@ -4,9 +4,9 @@
  * @see https://schema.org/ZoneBoardingPolicy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\BoardingPolicyType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BoardingPolicyType;
 
-class ZoneBoardingPolicy extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\BoardingPolicyType\BoardingPolicyType
+class ZoneBoardingPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BoardingPolicyType\BoardingPolicyType
 {
     const TYPE = 'ZoneBoardingPolicy';
 }

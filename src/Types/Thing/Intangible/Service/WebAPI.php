@@ -4,9 +4,9 @@
  * @see https://schema.org/WebAPI
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service;
 
-class WebAPI extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\Service
+class WebAPI extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 {
     const TYPE = 'WebAPI';
 }

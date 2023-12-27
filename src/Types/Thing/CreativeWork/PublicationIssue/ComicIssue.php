@@ -4,9 +4,9 @@
  * @see https://schema.org/ComicIssue
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\PublicationIssue;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationIssue;
 
-class ComicIssue extends \Vnet\Schemaorg\Types\Thing\CreativeWork\PublicationIssue\PublicationIssue
+class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationIssue\PublicationIssue
 {
     const TYPE = 'ComicIssue';
 }

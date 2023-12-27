@@ -4,9 +4,9 @@
  * @see https://schema.org/ApplyAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\OrganizeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction;
 
-class ApplyAction extends \Vnet\Schemaorg\Types\Thing\Action\OrganizeAction\OrganizeAction
+class ApplyAction extends \Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\OrganizeAction
 {
     const TYPE = 'ApplyAction';
 }

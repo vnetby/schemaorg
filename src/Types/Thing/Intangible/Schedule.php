@@ -4,9 +4,9 @@
  * @see https://schema.org/Schedule
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class Schedule extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class Schedule extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'Schedule';
 }

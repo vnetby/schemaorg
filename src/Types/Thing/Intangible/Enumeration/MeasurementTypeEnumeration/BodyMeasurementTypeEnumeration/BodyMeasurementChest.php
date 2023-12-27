@@ -4,9 +4,9 @@
  * @see https://schema.org/BodyMeasurementChest
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\BodyMeasurementTypeEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\BodyMeasurementTypeEnumeration;
 
-class BodyMeasurementChest extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\BodyMeasurementTypeEnumeration\BodyMeasurementTypeEnumeration
+class BodyMeasurementChest extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\BodyMeasurementTypeEnumeration\BodyMeasurementTypeEnumeration
 {
     const TYPE = 'BodyMeasurementChest';
 }

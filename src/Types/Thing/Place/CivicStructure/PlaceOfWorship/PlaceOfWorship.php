@@ -4,9 +4,9 @@
  * @see https://schema.org/PlaceOfWorship
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship;
 
-class PlaceOfWorship extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class PlaceOfWorship extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'PlaceOfWorship';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/BasicIncome
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType;
 
-class BasicIncome extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType\GovernmentBenefitsType
+class BasicIncome extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType\GovernmentBenefitsType
 {
     const TYPE = 'BasicIncome';
 }

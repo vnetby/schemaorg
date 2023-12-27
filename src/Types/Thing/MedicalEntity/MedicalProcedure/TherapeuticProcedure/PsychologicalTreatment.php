@@ -4,9 +4,9 @@
  * @see https://schema.org/PsychologicalTreatment
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure;
 
-class PsychologicalTreatment extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\TherapeuticProcedure
+class PsychologicalTreatment extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\TherapeuticProcedure
 {
     const TYPE = 'PsychologicalTreatment';
 }

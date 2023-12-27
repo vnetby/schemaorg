@@ -4,9 +4,9 @@
  * @see https://schema.org/EatAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\ConsumeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction;
 
-class EatAction extends \Vnet\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
+class EatAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
 {
     const TYPE = 'EatAction';
 }

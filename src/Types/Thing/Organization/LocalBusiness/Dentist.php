@@ -4,9 +4,9 @@
  * @see https://schema.org/Dentist
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness;
 
-class Dentist extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class Dentist extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'Dentist';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/MusicPlaylist
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist;
 
-class MusicPlaylist extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class MusicPlaylist extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'MusicPlaylist';
 }

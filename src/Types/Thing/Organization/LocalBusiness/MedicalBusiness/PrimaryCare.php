@@ -4,9 +4,9 @@
  * @see https://schema.org/PrimaryCare
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
 
-class PrimaryCare extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
+class PrimaryCare extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
 {
     const TYPE = 'PrimaryCare';
 }

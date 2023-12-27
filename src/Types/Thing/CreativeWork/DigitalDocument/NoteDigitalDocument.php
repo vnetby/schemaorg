@@ -4,9 +4,9 @@
  * @see https://schema.org/NoteDigitalDocument
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\DigitalDocument;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\DigitalDocument;
 
-class NoteDigitalDocument extends \Vnet\Schemaorg\Types\Thing\CreativeWork\DigitalDocument\DigitalDocument
+class NoteDigitalDocument extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\DigitalDocument\DigitalDocument
 {
     const TYPE = 'NoteDigitalDocument';
 }

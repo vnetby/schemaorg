@@ -4,9 +4,9 @@
  * @see https://schema.org/FreeReturn
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration;
 
-class FreeReturn extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
+class FreeReturn extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
 {
     const TYPE = 'FreeReturn';
 }

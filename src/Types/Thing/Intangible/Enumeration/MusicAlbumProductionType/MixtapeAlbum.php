@@ -4,9 +4,9 @@
  * @see https://schema.org/MixtapeAlbum
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType;
 
-class MixtapeAlbum extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType\MusicAlbumProductionType
+class MixtapeAlbum extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType\MusicAlbumProductionType
 {
     const TYPE = 'MixtapeAlbum';
 }

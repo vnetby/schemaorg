@@ -4,9 +4,9 @@
  * @see https://schema.org/DriveWheelConfigurationValue
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue;
 
-class DriveWheelConfigurationValue extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+class DriveWheelConfigurationValue extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
 {
     const TYPE = 'DriveWheelConfigurationValue';
 }

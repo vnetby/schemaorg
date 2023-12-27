@@ -4,9 +4,9 @@
  * @see https://schema.org/LearningResource
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\LearningResource;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\LearningResource;
 
-class LearningResource extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'LearningResource';
 }

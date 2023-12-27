@@ -4,9 +4,9 @@
  * @see https://schema.org/MusicReleaseFormatType
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
 
-class MusicReleaseFormatType extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
+class MusicReleaseFormatType extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
 {
     const TYPE = 'MusicReleaseFormatType';
 }

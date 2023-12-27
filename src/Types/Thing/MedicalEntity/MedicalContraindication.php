@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalContraindication
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity;
 
-class MedicalContraindication extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+class MedicalContraindication extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 {
     const TYPE = 'MedicalContraindication';
 }

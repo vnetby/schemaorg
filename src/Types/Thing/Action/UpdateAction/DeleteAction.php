@@ -4,9 +4,9 @@
  * @see https://schema.org/DeleteAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\UpdateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\UpdateAction;
 
-class DeleteAction extends \Vnet\Schemaorg\Types\Thing\Action\UpdateAction\UpdateAction
+class DeleteAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\UpdateAction
 {
     const TYPE = 'DeleteAction';
 }

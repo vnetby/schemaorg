@@ -4,9 +4,9 @@
  * @see https://schema.org/SexualContentConsideration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
 
-class SexualContentConsideration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
+class SexualContentConsideration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
 {
     const TYPE = 'SexualContentConsideration';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalProcedureType
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalProcedureType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalProcedureType;
 
-class MedicalProcedureType extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration
+class MedicalProcedureType extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration
 {
     const TYPE = 'MedicalProcedureType';
 }

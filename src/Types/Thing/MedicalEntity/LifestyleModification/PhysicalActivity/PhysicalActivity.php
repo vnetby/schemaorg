@@ -4,9 +4,9 @@
  * @see https://schema.org/PhysicalActivity
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\PhysicalActivity;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\PhysicalActivity;
 
-class PhysicalActivity extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\LifestyleModification
+class PhysicalActivity extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\LifestyleModification
 {
     const TYPE = 'PhysicalActivity';
 }

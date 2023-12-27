@@ -4,9 +4,9 @@
  * @see https://schema.org/ActionAccessSpecification
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class ActionAccessSpecification extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'ActionAccessSpecification';
 }

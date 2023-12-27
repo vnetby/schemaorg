@@ -4,9 +4,9 @@
  * @see https://schema.org/EventPostponed
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType;
 
-class EventPostponed extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
+class EventPostponed extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
 {
     const TYPE = 'EventPostponed';
 }

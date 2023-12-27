@@ -4,9 +4,9 @@
  * @see https://schema.org/PaymentCard
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct;
 
-class PaymentCard extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\FinancialProduct
+class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\FinancialProduct
 {
     const TYPE = 'PaymentCard';
 }

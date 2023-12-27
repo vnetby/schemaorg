@@ -4,9 +4,9 @@
  * @see https://schema.org/DryCleaningOrLaundry
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness;
 
-class DryCleaningOrLaundry extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class DryCleaningOrLaundry extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'DryCleaningOrLaundry';
 }

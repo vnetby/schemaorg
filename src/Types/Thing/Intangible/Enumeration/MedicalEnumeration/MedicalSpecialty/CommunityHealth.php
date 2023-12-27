@@ -4,9 +4,9 @@
  * @see https://schema.org/CommunityHealth
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty;
 
-class CommunityHealth extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
+class CommunityHealth extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
 {
     const TYPE = 'CommunityHealth';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ReservationPackage
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Reservation;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Reservation;
 
-class ReservationPackage extends \Vnet\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
+class ReservationPackage extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
 {
     const TYPE = 'ReservationPackage';
 }

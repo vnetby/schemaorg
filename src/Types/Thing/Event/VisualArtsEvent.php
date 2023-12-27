@@ -4,9 +4,9 @@
  * @see https://schema.org/VisualArtsEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class VisualArtsEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class VisualArtsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'VisualArtsEvent';
 }

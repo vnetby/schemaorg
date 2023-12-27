@@ -4,9 +4,9 @@
  * @see https://schema.org/AppendAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\UpdateAction\AddAction\InsertAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\AddAction\InsertAction;
 
-class AppendAction extends \Vnet\Schemaorg\Types\Thing\Action\UpdateAction\AddAction\InsertAction\InsertAction
+class AppendAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\AddAction\InsertAction\InsertAction
 {
     const TYPE = 'AppendAction';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/SuperficialAnatomy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity;
 
-class SuperficialAnatomy extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+class SuperficialAnatomy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 {
     const TYPE = 'SuperficialAnatomy';
 }

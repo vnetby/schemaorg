@@ -4,9 +4,9 @@
  * @see https://schema.org/Airline
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization;
 
-class Airline extends \Vnet\Schemaorg\Types\Thing\Organization\Organization
+class Airline extends \Vnetby\Schemaorg\Types\Thing\Organization\Organization
 {
     const TYPE = 'Airline';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Hospital
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EmergencyService;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EmergencyService;
 
-class Hospital extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EmergencyService\EmergencyService
+class Hospital extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EmergencyService\EmergencyService
 {
     const TYPE = 'Hospital';
 }

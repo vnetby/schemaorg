@@ -4,9 +4,9 @@
  * @see https://schema.org/Physician
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\MedicalOrganization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization;
 
-class Physician extends \Vnet\Schemaorg\Types\Thing\Organization\MedicalOrganization\MedicalOrganization
+class Physician extends \Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization\MedicalOrganization
 {
     const TYPE = 'Physician';
 }

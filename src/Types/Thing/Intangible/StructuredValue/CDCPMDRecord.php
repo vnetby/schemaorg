@@ -4,9 +4,9 @@
  * @see https://schema.org/CDCPMDRecord
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue;
 
-class CDCPMDRecord extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'CDCPMDRecord';
 }

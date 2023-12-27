@@ -4,9 +4,9 @@
  * @see https://schema.org/FoodEstablishment
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment;
 
-class FoodEstablishment extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'FoodEstablishment';
 }

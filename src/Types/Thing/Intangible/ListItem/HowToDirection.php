@@ -4,9 +4,9 @@
  * @see https://schema.org/HowToDirection
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\ListItem;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\ListItem;
 
-class HowToDirection extends \Vnet\Schemaorg\Types\Thing\Intangible\ListItem\ListItem
+class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem
 {
     const TYPE = 'HowToDirection';
 }

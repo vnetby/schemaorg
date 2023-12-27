@@ -4,9 +4,9 @@
  * @see https://schema.org/ReturnLabelDownloadAndPrint
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration;
 
-class ReturnLabelDownloadAndPrint extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration\ReturnLabelSourceEnumeration
+class ReturnLabelDownloadAndPrint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration\ReturnLabelSourceEnumeration
 {
     const TYPE = 'ReturnLabelDownloadAndPrint';
 }

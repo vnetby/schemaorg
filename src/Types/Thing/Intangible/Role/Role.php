@@ -4,9 +4,9 @@
  * @see https://schema.org/Role
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Role;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Role;
 
-class Role extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class Role extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'Role';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ContactPage
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\WebPage;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage;
 
-class ContactPage extends \Vnet\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage
+class ContactPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage
 {
     const TYPE = 'ContactPage';
 }

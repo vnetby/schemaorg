@@ -4,9 +4,9 @@
  * @see https://schema.org/Energy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Quantity;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Quantity;
 
-class Energy extends \Vnet\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
+class Energy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
 {
     const TYPE = 'Energy';
 }

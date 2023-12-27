@@ -4,9 +4,9 @@
  * @see https://schema.org/GovernmentService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service;
 
-class GovernmentService extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\Service
+class GovernmentService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 {
     const TYPE = 'GovernmentService';
 }

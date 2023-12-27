@@ -4,9 +4,9 @@
  * @see https://schema.org/ClaimReview
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Review;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Review;
 
-class ClaimReview extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Review\Review
+class ClaimReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
 {
     const TYPE = 'ClaimReview';
 }

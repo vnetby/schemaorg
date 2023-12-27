@@ -4,9 +4,9 @@
  * @see https://schema.org/VitalSign
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSign;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSign;
 
-class VitalSign extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSign\MedicalSign
+class VitalSign extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSign\MedicalSign
 {
     const TYPE = 'VitalSign';
 }

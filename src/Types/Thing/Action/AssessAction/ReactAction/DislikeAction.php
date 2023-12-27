@@ -4,9 +4,9 @@
  * @see https://schema.org/DislikeAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\AssessAction\ReactAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\AssessAction\ReactAction;
 
-class DislikeAction extends \Vnet\Schemaorg\Types\Thing\Action\AssessAction\ReactAction\ReactAction
+class DislikeAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\ReactAction\ReactAction
 {
     const TYPE = 'DislikeAction';
 }

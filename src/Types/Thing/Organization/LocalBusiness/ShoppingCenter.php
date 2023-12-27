@@ -4,9 +4,9 @@
  * @see https://schema.org/ShoppingCenter
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness;
 
-class ShoppingCenter extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class ShoppingCenter extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'ShoppingCenter';
 }

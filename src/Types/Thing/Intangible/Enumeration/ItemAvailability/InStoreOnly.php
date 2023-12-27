@@ -4,9 +4,9 @@
  * @see https://schema.org/InStoreOnly
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
 
-class InStoreOnly extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
+class InStoreOnly extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
 {
     const TYPE = 'InStoreOnly';
 }

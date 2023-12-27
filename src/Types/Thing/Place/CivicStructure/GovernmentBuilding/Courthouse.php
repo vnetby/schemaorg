@@ -4,9 +4,9 @@
  * @see https://schema.org/Courthouse
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
 
-class Courthouse extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
+class Courthouse extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
 {
     const TYPE = 'Courthouse';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/CollegeOrUniversity
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\EducationalOrganization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\EducationalOrganization;
 
-class CollegeOrUniversity extends \Vnet\Schemaorg\Types\Thing\Organization\EducationalOrganization\EducationalOrganization
+class CollegeOrUniversity extends \Vnetby\Schemaorg\Types\Thing\Organization\EducationalOrganization\EducationalOrganization
 {
     const TYPE = 'CollegeOrUniversity';
 }

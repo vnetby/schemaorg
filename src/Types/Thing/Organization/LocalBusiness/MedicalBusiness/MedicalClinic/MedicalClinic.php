@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalClinic
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalClinic;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalClinic;
 
-class MedicalClinic extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
+class MedicalClinic extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
 {
     const TYPE = 'MedicalClinic';
 }

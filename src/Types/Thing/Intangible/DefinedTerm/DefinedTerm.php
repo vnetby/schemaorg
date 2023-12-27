@@ -4,9 +4,9 @@
  * @see https://schema.org/DefinedTerm
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\DefinedTerm;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm;
 
-class DefinedTerm extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'DefinedTerm';
 }

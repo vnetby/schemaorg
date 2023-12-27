@@ -4,9 +4,9 @@
  * @see https://schema.org/DefenceEstablishment
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
 
-class DefenceEstablishment extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
+class DefenceEstablishment extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
 {
     const TYPE = 'DefenceEstablishment';
 }

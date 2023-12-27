@@ -4,9 +4,9 @@
  * @see https://schema.org/LimitedAvailability
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
 
-class LimitedAvailability extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
+class LimitedAvailability extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
 {
     const TYPE = 'LimitedAvailability';
 }

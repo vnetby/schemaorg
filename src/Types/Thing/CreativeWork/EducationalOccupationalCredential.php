@@ -4,9 +4,9 @@
  * @see https://schema.org/EducationalOccupationalCredential
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class EducationalOccupationalCredential extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'EducationalOccupationalCredential';
 }

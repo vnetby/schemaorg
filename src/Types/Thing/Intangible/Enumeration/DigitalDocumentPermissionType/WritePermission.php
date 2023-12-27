@@ -4,9 +4,9 @@
  * @see https://schema.org/WritePermission
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalDocumentPermissionType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalDocumentPermissionType;
 
-class WritePermission extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalDocumentPermissionType\DigitalDocumentPermissionType
+class WritePermission extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalDocumentPermissionType\DigitalDocumentPermissionType
 {
     const TYPE = 'WritePermission';
 }

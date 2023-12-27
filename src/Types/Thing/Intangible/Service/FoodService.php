@@ -4,9 +4,9 @@
  * @see https://schema.org/FoodService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service;
 
-class FoodService extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\Service
+class FoodService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 {
     const TYPE = 'FoodService';
 }

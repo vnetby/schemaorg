@@ -4,9 +4,9 @@
  * @see https://schema.org/Discontinued
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
 
-class Discontinued extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
+class Discontinued extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
 {
     const TYPE = 'Discontinued';
 }

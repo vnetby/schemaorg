@@ -4,9 +4,9 @@
  * @see https://schema.org/TipAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\TradeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\TradeAction;
 
-class TipAction extends \Vnet\Schemaorg\Types\Thing\Action\TradeAction\TradeAction
+class TipAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeAction
 {
     const TYPE = 'TipAction';
 }

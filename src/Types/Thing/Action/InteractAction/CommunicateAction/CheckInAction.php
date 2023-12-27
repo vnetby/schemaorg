@@ -4,9 +4,9 @@
  * @see https://schema.org/CheckInAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction;
 
-class CheckInAction extends \Vnet\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction\CommunicateAction
+class CheckInAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction\CommunicateAction
 {
     const TYPE = 'CheckInAction';
 }

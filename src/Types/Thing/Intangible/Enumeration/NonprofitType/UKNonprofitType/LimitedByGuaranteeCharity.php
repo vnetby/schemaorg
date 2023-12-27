@@ -4,9 +4,9 @@
  * @see https://schema.org/LimitedByGuaranteeCharity
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType;
 
-class LimitedByGuaranteeCharity extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType\UKNonprofitType
+class LimitedByGuaranteeCharity extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType\UKNonprofitType
 {
     const TYPE = 'LimitedByGuaranteeCharity';
 }

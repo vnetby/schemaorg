@@ -4,9 +4,9 @@
  * @see https://schema.org/EducationalAudience
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Audience;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Audience;
 
-class EducationalAudience extends \Vnet\Schemaorg\Types\Thing\Intangible\Audience\Audience
+class EducationalAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
 {
     const TYPE = 'EducationalAudience';
 }

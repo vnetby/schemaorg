@@ -4,9 +4,9 @@
  * @see https://schema.org/DepositAccount
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit;
 
-class DepositAccount extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit\InvestmentOrDeposit
+class DepositAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit\InvestmentOrDeposit
 {
     const TYPE = 'DepositAccount';
 }

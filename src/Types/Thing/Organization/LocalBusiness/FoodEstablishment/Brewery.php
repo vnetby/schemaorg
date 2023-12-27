@@ -4,9 +4,9 @@
  * @see https://schema.org/Brewery
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment;
 
-class Brewery extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment\FoodEstablishment
+class Brewery extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment\FoodEstablishment
 {
     const TYPE = 'Brewery';
 }

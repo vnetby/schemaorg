@@ -4,9 +4,9 @@
  * @see https://schema.org/FilmAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\CreateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\CreateAction;
 
-class FilmAction extends \Vnet\Schemaorg\Types\Thing\Action\CreateAction\CreateAction
+class FilmAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\CreateAction
 {
     const TYPE = 'FilmAction';
 }

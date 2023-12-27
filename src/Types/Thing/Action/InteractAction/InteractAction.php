@@ -4,9 +4,9 @@
  * @see https://schema.org/InteractAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction;
 
-class InteractAction extends \Vnet\Schemaorg\Types\Thing\Action\Action
+class InteractAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 {
     const TYPE = 'InteractAction';
 }

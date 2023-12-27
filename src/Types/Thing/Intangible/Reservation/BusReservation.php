@@ -4,9 +4,9 @@
  * @see https://schema.org/BusReservation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Reservation;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Reservation;
 
-class BusReservation extends \Vnet\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
+class BusReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
 {
     const TYPE = 'BusReservation';
 }

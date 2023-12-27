@@ -4,9 +4,9 @@
  * @see https://schema.org/Demand
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class Demand extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'Demand';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/CommentAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction;
 
-class CommentAction extends \Vnet\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction\CommunicateAction
+class CommentAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction\CommunicateAction
 {
     const TYPE = 'CommentAction';
 }

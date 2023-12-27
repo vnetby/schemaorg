@@ -4,9 +4,9 @@
  * @see https://schema.org/Hotel
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness;
 
-class Hotel extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\LodgingBusiness
+class Hotel extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\LodgingBusiness
 {
     const TYPE = 'Hotel';
 }

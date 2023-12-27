@@ -4,9 +4,9 @@
  * @see https://schema.org/WearableSizeGroupMisses
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\WearableSizeGroupEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\WearableSizeGroupEnumeration;
 
-class WearableSizeGroupMisses extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\WearableSizeGroupEnumeration\WearableSizeGroupEnumeration
+class WearableSizeGroupMisses extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\WearableSizeGroupEnumeration\WearableSizeGroupEnumeration
 {
     const TYPE = 'WearableSizeGroupMisses';
 }

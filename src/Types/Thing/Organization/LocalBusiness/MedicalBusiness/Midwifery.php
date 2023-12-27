@@ -4,9 +4,9 @@
  * @see https://schema.org/Midwifery
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
 
-class Midwifery extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
+class Midwifery extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
 {
     const TYPE = 'Midwifery';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/CreditCard
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit;
 
-class CreditCard extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit
+class CreditCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit
 {
     const TYPE = 'CreditCard';
 }

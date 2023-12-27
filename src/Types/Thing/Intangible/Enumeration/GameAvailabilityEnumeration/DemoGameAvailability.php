@@ -4,9 +4,9 @@
  * @see https://schema.org/DemoGameAvailability
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration;
 
-class DemoGameAvailability extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration
+class DemoGameAvailability extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration
 {
     const TYPE = 'DemoGameAvailability';
 }

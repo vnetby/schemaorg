@@ -4,9 +4,9 @@
  * @see https://schema.org/DietarySupplement
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\Substance;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance;
 
-class DietarySupplement extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\Substance\Substance
+class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substance
 {
     const TYPE = 'DietarySupplement';
 }

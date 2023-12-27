@@ -4,9 +4,9 @@
  * @see https://schema.org/CompilationAlbum
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType;
 
-class CompilationAlbum extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType\MusicAlbumProductionType
+class CompilationAlbum extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType\MusicAlbumProductionType
 {
     const TYPE = 'CompilationAlbum';
 }

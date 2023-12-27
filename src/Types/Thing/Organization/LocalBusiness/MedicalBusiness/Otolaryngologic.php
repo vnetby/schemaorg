@@ -4,9 +4,9 @@
  * @see https://schema.org/Otolaryngologic
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness;
 
-class Otolaryngologic extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
+class Otolaryngologic extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalBusiness
 {
     const TYPE = 'Otolaryngologic';
 }

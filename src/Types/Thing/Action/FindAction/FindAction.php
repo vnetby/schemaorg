@@ -4,9 +4,9 @@
  * @see https://schema.org/FindAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\FindAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\FindAction;
 
-class FindAction extends \Vnet\Schemaorg\Types\Thing\Action\Action
+class FindAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 {
     const TYPE = 'FindAction';
 }

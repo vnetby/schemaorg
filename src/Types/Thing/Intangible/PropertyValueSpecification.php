@@ -4,9 +4,9 @@
  * @see https://schema.org/PropertyValueSpecification
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class PropertyValueSpecification extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'PropertyValueSpecification';
 }

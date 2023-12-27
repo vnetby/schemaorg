@@ -4,9 +4,9 @@
  * @see https://schema.org/TelevisionChannel
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\BroadcastChannel;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastChannel;
 
-class TelevisionChannel extends \Vnet\Schemaorg\Types\Thing\Intangible\BroadcastChannel\BroadcastChannel
+class TelevisionChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastChannel\BroadcastChannel
 {
     const TYPE = 'TelevisionChannel';
 }

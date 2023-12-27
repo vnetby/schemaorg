@@ -4,9 +4,9 @@
  * @see https://schema.org/SubwayStation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class SubwayStation extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class SubwayStation extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'SubwayStation';
 }

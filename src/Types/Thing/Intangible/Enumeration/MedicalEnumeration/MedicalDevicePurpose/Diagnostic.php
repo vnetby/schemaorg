@@ -4,9 +4,9 @@
  * @see https://schema.org/Diagnostic
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose;
 
-class Diagnostic extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose\MedicalDevicePurpose
+class Diagnostic extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose\MedicalDevicePurpose
 {
     const TYPE = 'Diagnostic';
 }

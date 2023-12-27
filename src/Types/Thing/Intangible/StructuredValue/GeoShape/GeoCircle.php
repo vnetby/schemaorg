@@ -4,9 +4,9 @@
  * @see https://schema.org/GeoCircle
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape;
 
-class GeoCircle extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape
+class GeoCircle extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape
 {
     const TYPE = 'GeoCircle';
 }

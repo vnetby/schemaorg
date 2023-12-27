@@ -4,9 +4,9 @@
  * @see https://schema.org/Physiotherapy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty;
 
-class Physiotherapy extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
+class Physiotherapy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
 {
     const TYPE = 'Physiotherapy';
 }

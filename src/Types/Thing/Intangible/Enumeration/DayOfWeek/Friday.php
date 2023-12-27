@@ -4,9 +4,9 @@
  * @see https://schema.org/Friday
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek;
 
-class Friday extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek
+class Friday extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek
 {
     const TYPE = 'Friday';
 }

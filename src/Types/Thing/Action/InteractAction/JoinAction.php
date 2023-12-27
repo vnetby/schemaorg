@@ -4,9 +4,9 @@
  * @see https://schema.org/JoinAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction;
 
-class JoinAction extends \Vnet\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
+class JoinAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
 {
     const TYPE = 'JoinAction';
 }

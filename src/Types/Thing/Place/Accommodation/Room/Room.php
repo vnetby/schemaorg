@@ -4,9 +4,9 @@
  * @see https://schema.org/Room
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Accommodation\Room;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Room;
 
-class Room extends \Vnet\Schemaorg\Types\Thing\Place\Accommodation\Accommodation
+class Room extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodation
 {
     const TYPE = 'Room';
 }

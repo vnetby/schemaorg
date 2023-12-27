@@ -4,9 +4,9 @@
  * @see https://schema.org/MediaReviewItem
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class MediaReviewItem extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class MediaReviewItem extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'MediaReviewItem';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Hardcover
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\BookFormatType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BookFormatType;
 
-class Hardcover extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\BookFormatType\BookFormatType
+class Hardcover extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BookFormatType\BookFormatType
 {
     const TYPE = 'Hardcover';
 }

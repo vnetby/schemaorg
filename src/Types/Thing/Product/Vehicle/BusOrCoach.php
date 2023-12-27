@@ -4,9 +4,9 @@
  * @see https://schema.org/BusOrCoach
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Product\Vehicle;
+namespace Vnetby\Schemaorg\Types\Thing\Product\Vehicle;
 
-class BusOrCoach extends \Vnet\Schemaorg\Types\Thing\Product\Vehicle\Vehicle
+class BusOrCoach extends \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle
 {
     const TYPE = 'BusOrCoach';
 }

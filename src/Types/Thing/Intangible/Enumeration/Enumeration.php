@@ -4,9 +4,9 @@
  * @see https://schema.org/Enumeration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration;
 
-class Enumeration extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class Enumeration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'Enumeration';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/CampingPitch
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Accommodation;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Accommodation;
 
-class CampingPitch extends \Vnet\Schemaorg\Types\Thing\Place\Accommodation\Accommodation
+class CampingPitch extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodation
 {
     const TYPE = 'CampingPitch';
 }

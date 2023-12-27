@@ -4,9 +4,9 @@
  * @see https://schema.org/TVEpisode
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Episode;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode;
 
-class TVEpisode extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
+class TVEpisode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
 {
     const TYPE = 'TVEpisode';
 }

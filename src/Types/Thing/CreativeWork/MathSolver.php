@@ -4,9 +4,9 @@
  * @see https://schema.org/MathSolver
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class MathSolver extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class MathSolver extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'MathSolver';
 }

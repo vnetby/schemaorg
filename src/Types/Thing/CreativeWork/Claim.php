@@ -4,9 +4,9 @@
  * @see https://schema.org/Claim
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Claim extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Claim extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Claim';
 }

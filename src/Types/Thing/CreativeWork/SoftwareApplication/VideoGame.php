@@ -4,9 +4,9 @@
  * @see https://schema.org/VideoGame
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication;
 
-class VideoGame extends \Vnet\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
+class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
 {
     const TYPE = 'VideoGame';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/CardiovascularExam
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam;
 
-class CardiovascularExam extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam\PhysicalExam
+class CardiovascularExam extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam\PhysicalExam
 {
     const TYPE = 'CardiovascularExam';
 }

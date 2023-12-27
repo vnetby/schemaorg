@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalTest
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalTest;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest;
 
-class MedicalTest extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 {
     const TYPE = 'MedicalTest';
 }

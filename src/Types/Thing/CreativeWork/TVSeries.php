@@ -4,9 +4,9 @@
  * @see https://schema.org/TVSeries
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class TVSeries extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'TVSeries';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/CriticReview
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Review\CriticReview;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\CriticReview;
 
-class CriticReview extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Review\Review
+class CriticReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
 {
     const TYPE = 'CriticReview';
 }

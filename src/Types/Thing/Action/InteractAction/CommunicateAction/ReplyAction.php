@@ -4,9 +4,9 @@
  * @see https://schema.org/ReplyAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction;
 
-class ReplyAction extends \Vnet\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction\CommunicateAction
+class ReplyAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\CommunicateAction\CommunicateAction
 {
     const TYPE = 'ReplyAction';
 }

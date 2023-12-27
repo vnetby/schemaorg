@@ -4,9 +4,9 @@
  * @see https://schema.org/Bacteria
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass;
 
-class Bacteria extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass
+class Bacteria extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass
 {
     const TYPE = 'Bacteria';
 }

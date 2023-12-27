@@ -4,9 +4,9 @@
  * @see https://schema.org/Flight
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Trip;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Trip;
 
-class Flight extends \Vnet\Schemaorg\Types\Thing\Intangible\Trip\Trip
+class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 {
     const TYPE = 'Flight';
 }

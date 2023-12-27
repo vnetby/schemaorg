@@ -4,9 +4,9 @@
  * @see https://schema.org/WearableSizeSystemCN
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\WearableSizeSystemEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\WearableSizeSystemEnumeration;
 
-class WearableSizeSystemCN extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\WearableSizeSystemEnumeration\WearableSizeSystemEnumeration
+class WearableSizeSystemCN extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\WearableSizeSystemEnumeration\WearableSizeSystemEnumeration
 {
     const TYPE = 'WearableSizeSystemCN';
 }

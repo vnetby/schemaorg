@@ -4,9 +4,9 @@
  * @see https://schema.org/FoodEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class FoodEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class FoodEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'FoodEvent';
 }

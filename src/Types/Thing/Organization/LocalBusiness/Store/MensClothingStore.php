@@ -4,9 +4,9 @@
  * @see https://schema.org/MensClothingStore
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
 
-class MensClothingStore extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
+class MensClothingStore extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
 {
     const TYPE = 'MensClothingStore';
 }

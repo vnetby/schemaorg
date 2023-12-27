@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalGuidelineRecommendation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalGuideline;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalGuideline;
 
-class MedicalGuidelineRecommendation extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalGuideline\MedicalGuideline
+class MedicalGuidelineRecommendation extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalGuideline\MedicalGuideline
 {
     const TYPE = 'MedicalGuidelineRecommendation';
 }

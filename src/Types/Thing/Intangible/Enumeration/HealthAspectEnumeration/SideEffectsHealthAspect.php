@@ -4,9 +4,9 @@
  * @see https://schema.org/SideEffectsHealthAspect
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
 
-class SideEffectsHealthAspect extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
+class SideEffectsHealthAspect extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
 {
     const TYPE = 'SideEffectsHealthAspect';
 }

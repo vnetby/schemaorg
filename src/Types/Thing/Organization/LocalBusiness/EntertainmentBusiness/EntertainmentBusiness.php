@@ -4,9 +4,9 @@
  * @see https://schema.org/EntertainmentBusiness
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
 
-class EntertainmentBusiness extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class EntertainmentBusiness extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'EntertainmentBusiness';
 }

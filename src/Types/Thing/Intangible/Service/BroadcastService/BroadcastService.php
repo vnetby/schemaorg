@@ -4,9 +4,9 @@
  * @see https://schema.org/BroadcastService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service\BroadcastService;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService;
 
-class BroadcastService extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\Service
+class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 {
     const TYPE = 'BroadcastService';
 }

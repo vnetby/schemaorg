@@ -4,9 +4,9 @@
  * @see https://schema.org/Drawing
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Drawing extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Drawing extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Drawing';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/AllocateAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\OrganizeAction\AllocateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\AllocateAction;
 
-class AllocateAction extends \Vnet\Schemaorg\Types\Thing\Action\OrganizeAction\OrganizeAction
+class AllocateAction extends \Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\OrganizeAction
 {
     const TYPE = 'AllocateAction';
 }

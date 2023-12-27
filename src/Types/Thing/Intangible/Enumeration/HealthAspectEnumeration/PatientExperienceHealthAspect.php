@@ -4,9 +4,9 @@
  * @see https://schema.org/PatientExperienceHealthAspect
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
 
-class PatientExperienceHealthAspect extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
+class PatientExperienceHealthAspect extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
 {
     const TYPE = 'PatientExperienceHealthAspect';
 }

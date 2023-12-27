@@ -4,9 +4,9 @@
  * @see https://schema.org/CreativeWorkSeason
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
 
-class CreativeWorkSeason extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'CreativeWorkSeason';
 }

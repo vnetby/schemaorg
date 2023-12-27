@@ -4,9 +4,9 @@
  * @see https://schema.org/NailSalon
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
 
-class NailSalon extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness\HealthAndBeautyBusiness
+class NailSalon extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness\HealthAndBeautyBusiness
 {
     const TYPE = 'NailSalon';
 }

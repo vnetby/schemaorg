@@ -4,9 +4,9 @@
  * @see https://schema.org/ParentAudience
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Audience\PeopleAudience;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAudience;
 
-class ParentAudience extends \Vnet\Schemaorg\Types\Thing\Intangible\Audience\PeopleAudience\PeopleAudience
+class ParentAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAudience\PeopleAudience
 {
     const TYPE = 'ParentAudience';
 }

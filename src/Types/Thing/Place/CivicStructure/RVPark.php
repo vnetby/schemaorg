@@ -4,9 +4,9 @@
  * @see https://schema.org/RVPark
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class RVPark extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class RVPark extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'RVPark';
 }

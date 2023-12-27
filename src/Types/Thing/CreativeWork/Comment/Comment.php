@@ -4,9 +4,9 @@
  * @see https://schema.org/Comment
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Comment;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment;
 
-class Comment extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Comment';
 }

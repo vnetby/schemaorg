@@ -4,9 +4,9 @@
  * @see https://schema.org/UserBlocks
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event\UserInteraction;
+namespace Vnetby\Schemaorg\Types\Thing\Event\UserInteraction;
 
-class UserBlocks extends \Vnet\Schemaorg\Types\Thing\Event\UserInteraction\UserInteraction
+class UserBlocks extends \Vnetby\Schemaorg\Types\Thing\Event\UserInteraction\UserInteraction
 {
     const TYPE = 'UserBlocks';
 }

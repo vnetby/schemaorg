@@ -4,9 +4,9 @@
  * @see https://schema.org/GameServer
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class GameServer extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'GameServer';
 }

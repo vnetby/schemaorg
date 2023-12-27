@@ -4,9 +4,9 @@
  * @see https://schema.org/Series
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Series;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Series;
 
-class Series extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class Series extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'Series';
 }

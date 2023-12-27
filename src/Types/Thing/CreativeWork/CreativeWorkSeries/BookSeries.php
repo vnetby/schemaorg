@@ -4,9 +4,9 @@
  * @see https://schema.org/BookSeries
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries;
 
-class BookSeries extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries\CreativeWorkSeries
+class BookSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries\CreativeWorkSeries
 {
     const TYPE = 'BookSeries';
 }

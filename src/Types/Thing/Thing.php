@@ -4,9 +4,9 @@
  * @see https://schema.org/Thing
  */
 
-namespace Vnet\Schemaorg\Types\Thing;
+namespace Vnetby\Schemaorg\Types\Thing;
 
-class Thing extends \Vnet\Schemaorg\Types\Type
+class Thing extends \Vnetby\Schemaorg\Types\Type
 {
     const TYPE = 'Thing';
 }

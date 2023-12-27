@@ -4,9 +4,9 @@
  * @see https://schema.org/UnitPriceSpecification
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification;
 
-class UnitPriceSpecification extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
+class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
 {
     const TYPE = 'UnitPriceSpecification';
 }

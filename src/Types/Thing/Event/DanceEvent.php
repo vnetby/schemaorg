@@ -4,9 +4,9 @@
  * @see https://schema.org/DanceEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class DanceEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class DanceEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'DanceEvent';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/TattooParlor
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
 
-class TattooParlor extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness\HealthAndBeautyBusiness
+class TattooParlor extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness\HealthAndBeautyBusiness
 {
     const TYPE = 'TattooParlor';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/WeaponConsideration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
 
-class WeaponConsideration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
+class WeaponConsideration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
 {
     const TYPE = 'WeaponConsideration';
 }

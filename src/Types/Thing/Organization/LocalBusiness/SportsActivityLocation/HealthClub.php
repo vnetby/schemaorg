@@ -4,9 +4,9 @@
  * @see https://schema.org/HealthClub
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
 
-class HealthClub extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
+class HealthClub extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
 {
     const TYPE = 'HealthClub';
 }

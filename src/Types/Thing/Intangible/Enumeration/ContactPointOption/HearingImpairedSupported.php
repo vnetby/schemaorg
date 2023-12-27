@@ -4,9 +4,9 @@
  * @see https://schema.org/HearingImpairedSupported
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption;
 
-class HearingImpairedSupported extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption
+class HearingImpairedSupported extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption
 {
     const TYPE = 'HearingImpairedSupported';
 }

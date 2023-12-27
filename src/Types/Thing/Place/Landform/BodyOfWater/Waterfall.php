@@ -4,9 +4,9 @@
  * @see https://schema.org/Waterfall
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Landform\BodyOfWater;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Landform\BodyOfWater;
 
-class Waterfall extends \Vnet\Schemaorg\Types\Thing\Place\Landform\BodyOfWater\BodyOfWater
+class Waterfall extends \Vnetby\Schemaorg\Types\Thing\Place\Landform\BodyOfWater\BodyOfWater
 {
     const TYPE = 'Waterfall';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/DeliveryTimeSettings
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue;
 
-class DeliveryTimeSettings extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'DeliveryTimeSettings';
 }

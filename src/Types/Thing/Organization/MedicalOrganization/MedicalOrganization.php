@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalOrganization
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\MedicalOrganization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization;
 
-class MedicalOrganization extends \Vnet\Schemaorg\Types\Thing\Organization\Organization
+class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Organization
 {
     const TYPE = 'MedicalOrganization';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/PoliticalParty
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization;
 
-class PoliticalParty extends \Vnet\Schemaorg\Types\Thing\Organization\Organization
+class PoliticalParty extends \Vnetby\Schemaorg\Types\Thing\Organization\Organization
 {
     const TYPE = 'PoliticalParty';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Therapeutic
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose;
 
-class Therapeutic extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose\MedicalDevicePurpose
+class Therapeutic extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalDevicePurpose\MedicalDevicePurpose
 {
     const TYPE = 'Therapeutic';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/VirtualLocation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class VirtualLocation extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class VirtualLocation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'VirtualLocation';
 }

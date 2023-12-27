@@ -4,9 +4,9 @@
  * @see https://schema.org/WearableMeasurementBack
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\WearableMeasurementTypeEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\WearableMeasurementTypeEnumeration;
 
-class WearableMeasurementBack extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\WearableMeasurementTypeEnumeration\WearableMeasurementTypeEnumeration
+class WearableMeasurementBack extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\WearableMeasurementTypeEnumeration\WearableMeasurementTypeEnumeration
 {
     const TYPE = 'WearableMeasurementBack';
 }

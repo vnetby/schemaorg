@@ -4,9 +4,9 @@
  * @see https://schema.org/OfferShippingDetails
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue;
 
-class OfferShippingDetails extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'OfferShippingDetails';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/UKTrust
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType;
 
-class UKTrust extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType\UKNonprofitType
+class UKTrust extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\UKNonprofitType\UKNonprofitType
 {
     const TYPE = 'UKTrust';
 }

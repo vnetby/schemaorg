@@ -4,9 +4,9 @@
  * @see https://schema.org/LegislationObject
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject;
 
-class LegislationObject extends \Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+class LegislationObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
 {
     const TYPE = 'LegislationObject';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/RentAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\TradeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\TradeAction;
 
-class RentAction extends \Vnet\Schemaorg\Types\Thing\Action\TradeAction\TradeAction
+class RentAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeAction
 {
     const TYPE = 'RentAction';
 }

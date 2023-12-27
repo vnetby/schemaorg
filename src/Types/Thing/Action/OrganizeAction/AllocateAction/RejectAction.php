@@ -4,9 +4,9 @@
  * @see https://schema.org/RejectAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\OrganizeAction\AllocateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\AllocateAction;
 
-class RejectAction extends \Vnet\Schemaorg\Types\Thing\Action\OrganizeAction\AllocateAction\AllocateAction
+class RejectAction extends \Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\AllocateAction\AllocateAction
 {
     const TYPE = 'RejectAction';
 }

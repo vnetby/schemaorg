@@ -4,9 +4,9 @@
  * @see https://schema.org/NightClub
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
 
-class NightClub extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
+class NightClub extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
 {
     const TYPE = 'NightClub';
 }

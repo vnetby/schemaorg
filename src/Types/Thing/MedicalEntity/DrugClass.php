@@ -4,9 +4,9 @@
  * @see https://schema.org/DrugClass
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity;
 
-class DrugClass extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+class DrugClass extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 {
     const TYPE = 'DrugClass';
 }

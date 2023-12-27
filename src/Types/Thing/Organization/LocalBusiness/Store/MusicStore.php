@@ -4,9 +4,9 @@
  * @see https://schema.org/MusicStore
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
 
-class MusicStore extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
+class MusicStore extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
 {
     const TYPE = 'MusicStore';
 }

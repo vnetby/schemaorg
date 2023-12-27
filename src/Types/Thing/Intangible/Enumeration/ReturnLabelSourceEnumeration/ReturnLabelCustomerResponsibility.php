@@ -4,9 +4,9 @@
  * @see https://schema.org/ReturnLabelCustomerResponsibility
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration;
 
-class ReturnLabelCustomerResponsibility extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration\ReturnLabelSourceEnumeration
+class ReturnLabelCustomerResponsibility extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration\ReturnLabelSourceEnumeration
 {
     const TYPE = 'ReturnLabelCustomerResponsibility';
 }

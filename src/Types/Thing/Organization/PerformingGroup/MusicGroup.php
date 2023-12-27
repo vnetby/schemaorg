@@ -4,9 +4,9 @@
  * @see https://schema.org/MusicGroup
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\PerformingGroup;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup;
 
-class MusicGroup extends \Vnet\Schemaorg\Types\Thing\Organization\PerformingGroup\PerformingGroup
+class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\PerformingGroup
 {
     const TYPE = 'MusicGroup';
 }

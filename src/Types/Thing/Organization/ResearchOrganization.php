@@ -4,9 +4,9 @@
  * @see https://schema.org/ResearchOrganization
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization;
 
-class ResearchOrganization extends \Vnet\Schemaorg\Types\Thing\Organization\Organization
+class ResearchOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Organization
 {
     const TYPE = 'ResearchOrganization';
 }

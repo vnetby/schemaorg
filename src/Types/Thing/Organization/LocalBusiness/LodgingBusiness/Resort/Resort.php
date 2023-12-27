@@ -4,9 +4,9 @@
  * @see https://schema.org/Resort
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\Resort;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\Resort;
 
-class Resort extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\LodgingBusiness
+class Resort extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\LodgingBusiness
 {
     const TYPE = 'Resort';
 }

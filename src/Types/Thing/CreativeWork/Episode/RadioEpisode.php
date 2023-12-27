@@ -4,9 +4,9 @@
  * @see https://schema.org/RadioEpisode
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Episode;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode;
 
-class RadioEpisode extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
+class RadioEpisode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
 {
     const TYPE = 'RadioEpisode';
 }

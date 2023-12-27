@@ -4,9 +4,9 @@
  * @see https://schema.org/PalliativeProcedure
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure;
 
-class PalliativeProcedure extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\MedicalProcedure
+class PalliativeProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\MedicalProcedure
 {
     const TYPE = 'PalliativeProcedure';
 }

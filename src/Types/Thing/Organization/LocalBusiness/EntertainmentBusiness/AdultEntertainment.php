@@ -4,9 +4,9 @@
  * @see https://schema.org/AdultEntertainment
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
 
-class AdultEntertainment extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
+class AdultEntertainment extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
 {
     const TYPE = 'AdultEntertainment';
 }

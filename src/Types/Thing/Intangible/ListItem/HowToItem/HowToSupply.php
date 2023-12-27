@@ -4,9 +4,9 @@
  * @see https://schema.org/HowToSupply
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem;
 
-class HowToSupply extends \Vnet\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToItem
+class HowToSupply extends \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToItem
 {
     const TYPE = 'HowToSupply';
 }

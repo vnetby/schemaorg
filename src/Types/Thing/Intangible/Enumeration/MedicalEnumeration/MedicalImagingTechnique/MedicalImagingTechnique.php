@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalImagingTechnique
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique;
 
-class MedicalImagingTechnique extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration
+class MedicalImagingTechnique extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration
 {
     const TYPE = 'MedicalImagingTechnique';
 }

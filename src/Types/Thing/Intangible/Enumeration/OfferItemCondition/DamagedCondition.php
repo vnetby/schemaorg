@@ -4,9 +4,9 @@
  * @see https://schema.org/DamagedCondition
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition;
 
-class DamagedCondition extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition\OfferItemCondition
+class DamagedCondition extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition\OfferItemCondition
 {
     const TYPE = 'DamagedCondition';
 }

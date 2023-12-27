@@ -4,9 +4,9 @@
  * @see https://schema.org/Language
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class Language extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class Language extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'Language';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/InvestmentFund
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit;
 
-class InvestmentFund extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit\InvestmentOrDeposit
+class InvestmentFund extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\InvestmentOrDeposit\InvestmentOrDeposit
 {
     const TYPE = 'InvestmentFund';
 }

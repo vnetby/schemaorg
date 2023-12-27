@@ -4,9 +4,9 @@
  * @see https://schema.org/DataFeed
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed;
 
-class DataFeed extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset
+class DataFeed extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset
 {
     const TYPE = 'DataFeed';
 }

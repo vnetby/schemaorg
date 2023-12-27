@@ -4,9 +4,9 @@
  * @see https://schema.org/Statement
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Statement extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Statement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Statement';
 }

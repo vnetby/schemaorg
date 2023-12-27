@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalSignOrSymptom
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom;
 
-class MedicalSignOrSymptom extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
+class MedicalSignOrSymptom extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
 {
     const TYPE = 'MedicalSignOrSymptom';
 }

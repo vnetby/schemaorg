@@ -4,9 +4,9 @@
  * @see https://schema.org/AutoBodyShop
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
 
-class AutoBodyShop extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness\AutomotiveBusiness
+class AutoBodyShop extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness\AutomotiveBusiness
 {
     const TYPE = 'AutoBodyShop';
 }

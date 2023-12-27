@@ -4,9 +4,9 @@
  * @see https://schema.org/Intangible
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class Intangible extends \Vnet\Schemaorg\Types\Thing\Thing
+class Intangible extends \Vnetby\Schemaorg\Types\Thing\Thing
 {
     const TYPE = 'Intangible';
 }

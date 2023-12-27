@@ -4,9 +4,9 @@
  * @see https://schema.org/ReplaceAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\UpdateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\UpdateAction;
 
-class ReplaceAction extends \Vnet\Schemaorg\Types\Thing\Action\UpdateAction\UpdateAction
+class ReplaceAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\UpdateAction
 {
     const TYPE = 'ReplaceAction';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/AboutPage
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\WebPage;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage;
 
-class AboutPage extends \Vnet\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage
+class AboutPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage
 {
     const TYPE = 'AboutPage';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Person
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Person;
+namespace Vnetby\Schemaorg\Types\Thing\Person;
 
-class Person extends \Vnet\Schemaorg\Types\Thing\Thing
+class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 {
     const TYPE = 'Person';
 }

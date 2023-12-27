@@ -4,9 +4,9 @@
  * @see https://schema.org/NotInForce
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\LegalForceStatus;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\LegalForceStatus;
 
-class NotInForce extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\LegalForceStatus\LegalForceStatus
+class NotInForce extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\LegalForceStatus\LegalForceStatus
 {
     const TYPE = 'NotInForce';
 }

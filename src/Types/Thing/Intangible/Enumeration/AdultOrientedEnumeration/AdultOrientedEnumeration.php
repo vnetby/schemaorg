@@ -4,9 +4,9 @@
  * @see https://schema.org/AdultOrientedEnumeration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
 
-class AdultOrientedEnumeration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
+class AdultOrientedEnumeration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
 {
     const TYPE = 'AdultOrientedEnumeration';
 }

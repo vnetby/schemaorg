@@ -4,9 +4,9 @@
  * @see https://schema.org/CatholicChurch
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship\Church;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship\Church;
 
-class CatholicChurch extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship\Church\Church
+class CatholicChurch extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship\Church\Church
 {
     const TYPE = 'CatholicChurch';
 }

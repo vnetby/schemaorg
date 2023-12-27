@@ -4,9 +4,9 @@
  * @see https://schema.org/BroadcastFrequencySpecification
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class BroadcastFrequencySpecification extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'BroadcastFrequencySpecification';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ControlAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\ControlAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\ControlAction;
 
-class ControlAction extends \Vnet\Schemaorg\Types\Thing\Action\Action
+class ControlAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 {
     const TYPE = 'ControlAction';
 }

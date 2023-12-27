@@ -4,9 +4,9 @@
  * @see https://schema.org/MoneyTransfer
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\TransferAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\TransferAction;
 
-class MoneyTransfer extends \Vnet\Schemaorg\Types\Thing\Action\TransferAction\TransferAction
+class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\TransferAction
 {
     const TYPE = 'MoneyTransfer';
 }

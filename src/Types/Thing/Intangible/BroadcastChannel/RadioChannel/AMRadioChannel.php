@@ -4,9 +4,9 @@
  * @see https://schema.org/AMRadioChannel
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\BroadcastChannel\RadioChannel;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastChannel\RadioChannel;
 
-class AMRadioChannel extends \Vnet\Schemaorg\Types\Thing\Intangible\BroadcastChannel\RadioChannel\RadioChannel
+class AMRadioChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastChannel\RadioChannel\RadioChannel
 {
     const TYPE = 'AMRadioChannel';
 }

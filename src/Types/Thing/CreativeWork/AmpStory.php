@@ -4,9 +4,9 @@
  * @see https://schema.org/AmpStory
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class AmpStory extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class AmpStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'AmpStory';
 }

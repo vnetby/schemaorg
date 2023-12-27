@@ -4,9 +4,9 @@
  * @see https://schema.org/CovidTestingFacility
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalClinic;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalClinic;
 
-class CovidTestingFacility extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalClinic\MedicalClinic
+class CovidTestingFacility extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\MedicalBusiness\MedicalClinic\MedicalClinic
 {
     const TYPE = 'CovidTestingFacility';
 }

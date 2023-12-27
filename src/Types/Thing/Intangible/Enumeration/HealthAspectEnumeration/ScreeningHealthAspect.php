@@ -4,9 +4,9 @@
  * @see https://schema.org/ScreeningHealthAspect
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
 
-class ScreeningHealthAspect extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
+class ScreeningHealthAspect extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
 {
     const TYPE = 'ScreeningHealthAspect';
 }

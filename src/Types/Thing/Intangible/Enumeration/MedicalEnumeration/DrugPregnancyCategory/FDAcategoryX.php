@@ -4,9 +4,9 @@
  * @see https://schema.org/FDAcategoryX
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPregnancyCategory;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPregnancyCategory;
 
-class FDAcategoryX extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPregnancyCategory\DrugPregnancyCategory
+class FDAcategoryX extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPregnancyCategory\DrugPregnancyCategory
 {
     const TYPE = 'FDAcategoryX';
 }

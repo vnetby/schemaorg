@@ -4,9 +4,9 @@
  * @see https://schema.org/TypeAndQuantityNode
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue;
 
-class TypeAndQuantityNode extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'TypeAndQuantityNode';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Country
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\AdministrativeArea;
+namespace Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea;
 
-class Country extends \Vnet\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
+class Country extends \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
 {
     const TYPE = 'Country';
 }

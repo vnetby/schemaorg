@@ -4,9 +4,9 @@
  * @see https://schema.org/LocalBusiness
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place;
+namespace Vnetby\Schemaorg\Types\Thing\Place;
 
-class LocalBusiness extends \Vnet\Schemaorg\Types\Thing\Place\Place
+class LocalBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 {
     const TYPE = 'LocalBusiness';
 }

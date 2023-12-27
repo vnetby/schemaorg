@@ -4,9 +4,9 @@
  * @see https://schema.org/Photograph
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Photograph extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Photograph extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Photograph';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/EmployerAggregateRating
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating;
 
-class EmployerAggregateRating extends \Vnet\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
+class EmployerAggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
 {
     const TYPE = 'EmployerAggregateRating';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Artery
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel;
 
-class Artery extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
+class Artery extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
 {
     const TYPE = 'Artery';
 }

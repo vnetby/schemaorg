@@ -4,9 +4,9 @@
  * @see https://schema.org/UnclassifiedAdultConsideration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
 
-class UnclassifiedAdultConsideration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
+class UnclassifiedAdultConsideration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
 {
     const TYPE = 'UnclassifiedAdultConsideration';
 }

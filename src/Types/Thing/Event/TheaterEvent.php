@@ -4,9 +4,9 @@
  * @see https://schema.org/TheaterEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class TheaterEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class TheaterEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'TheaterEvent';
 }

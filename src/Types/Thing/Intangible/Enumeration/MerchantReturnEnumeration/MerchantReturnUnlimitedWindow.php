@@ -4,9 +4,9 @@
  * @see https://schema.org/MerchantReturnUnlimitedWindow
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration;
 
-class MerchantReturnUnlimitedWindow extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration\MerchantReturnEnumeration
+class MerchantReturnUnlimitedWindow extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration\MerchantReturnEnumeration
 {
     const TYPE = 'MerchantReturnUnlimitedWindow';
 }

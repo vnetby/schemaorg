@@ -4,9 +4,9 @@
  * @see https://schema.org/ComedyClub
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
 
-class ComedyClub extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
+class ComedyClub extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
 {
     const TYPE = 'ComedyClub';
 }

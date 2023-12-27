@@ -4,9 +4,9 @@
  * @see https://schema.org/LakeBodyOfWater
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Landform\BodyOfWater;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Landform\BodyOfWater;
 
-class LakeBodyOfWater extends \Vnet\Schemaorg\Types\Thing\Place\Landform\BodyOfWater\BodyOfWater
+class LakeBodyOfWater extends \Vnetby\Schemaorg\Types\Thing\Place\Landform\BodyOfWater\BodyOfWater
 {
     const TYPE = 'LakeBodyOfWater';
 }

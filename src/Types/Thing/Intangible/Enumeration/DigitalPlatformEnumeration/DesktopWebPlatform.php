@@ -4,9 +4,9 @@
  * @see https://schema.org/DesktopWebPlatform
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration;
 
-class DesktopWebPlatform extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
+class DesktopWebPlatform extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
 {
     const TYPE = 'DesktopWebPlatform';
 }

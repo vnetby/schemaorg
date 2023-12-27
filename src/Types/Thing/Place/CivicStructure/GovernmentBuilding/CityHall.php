@@ -4,9 +4,9 @@
  * @see https://schema.org/CityHall
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
 
-class CityHall extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
+class CityHall extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
 {
     const TYPE = 'CityHall';
 }

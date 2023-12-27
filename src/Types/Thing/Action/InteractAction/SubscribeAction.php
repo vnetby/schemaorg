@@ -4,9 +4,9 @@
  * @see https://schema.org/SubscribeAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction;
 
-class SubscribeAction extends \Vnet\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
+class SubscribeAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
 {
     const TYPE = 'SubscribeAction';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/NLNonprofitType
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\NLNonprofitType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\NLNonprofitType;
 
-class NLNonprofitType extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\NonprofitType
+class NLNonprofitType extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\NonprofitType
 {
     const TYPE = 'NLNonprofitType';
 }

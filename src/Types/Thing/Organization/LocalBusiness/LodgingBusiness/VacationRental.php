@@ -4,9 +4,9 @@
  * @see https://schema.org/VacationRental
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness;
 
-class VacationRental extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\LodgingBusiness
+class VacationRental extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LodgingBusiness\LodgingBusiness
 {
     const TYPE = 'VacationRental';
 }

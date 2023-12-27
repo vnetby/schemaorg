@@ -4,9 +4,9 @@
  * @see https://schema.org/ReducedRelevanceForChildrenConsideration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
 
-class ReducedRelevanceForChildrenConsideration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
+class ReducedRelevanceForChildrenConsideration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
 {
     const TYPE = 'ReducedRelevanceForChildrenConsideration';
 }

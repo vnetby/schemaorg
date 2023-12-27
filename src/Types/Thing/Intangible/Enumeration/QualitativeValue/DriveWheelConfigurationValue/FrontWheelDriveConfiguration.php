@@ -4,9 +4,9 @@
  * @see https://schema.org/FrontWheelDriveConfiguration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue;
 
-class FrontWheelDriveConfiguration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue
+class FrontWheelDriveConfiguration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue
 {
     const TYPE = 'FrontWheelDriveConfiguration';
 }

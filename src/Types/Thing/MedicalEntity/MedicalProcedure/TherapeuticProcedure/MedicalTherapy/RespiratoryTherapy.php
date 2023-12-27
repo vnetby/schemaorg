@@ -4,9 +4,9 @@
  * @see https://schema.org/RespiratoryTherapy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy;
 
-class RespiratoryTherapy extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
+class RespiratoryTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
 {
     const TYPE = 'RespiratoryTherapy';
 }

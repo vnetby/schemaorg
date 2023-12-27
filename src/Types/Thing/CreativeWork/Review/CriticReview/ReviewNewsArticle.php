@@ -4,9 +4,9 @@
  * @see https://schema.org/ReviewNewsArticle
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Review\CriticReview;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\CriticReview;
 
-class ReviewNewsArticle extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Review\CriticReview\CriticReview
+class ReviewNewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\CriticReview\CriticReview
 {
     const TYPE = 'ReviewNewsArticle';
 }

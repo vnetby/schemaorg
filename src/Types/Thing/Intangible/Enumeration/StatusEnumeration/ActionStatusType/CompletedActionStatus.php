@@ -4,9 +4,9 @@
  * @see https://schema.org/CompletedActionStatus
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\ActionStatusType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\ActionStatusType;
 
-class CompletedActionStatus extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\ActionStatusType\ActionStatusType
+class CompletedActionStatus extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\ActionStatusType\ActionStatusType
 {
     const TYPE = 'CompletedActionStatus';
 }

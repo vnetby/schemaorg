@@ -4,9 +4,9 @@
  * @see https://schema.org/ProductCollection
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Collection;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Collection;
 
-class ProductCollection extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Collection\Collection
+class ProductCollection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Collection\Collection
 {
     const TYPE = 'ProductCollection';
 }

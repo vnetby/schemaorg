@@ -4,9 +4,9 @@
  * @see https://schema.org/MediaGallery
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\WebPage\CollectionPage\MediaGallery;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\CollectionPage\MediaGallery;
 
-class MediaGallery extends \Vnet\Schemaorg\Types\Thing\CreativeWork\WebPage\CollectionPage\CollectionPage
+class MediaGallery extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\CollectionPage\CollectionPage
 {
     const TYPE = 'MediaGallery';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/CourseInstance
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class CourseInstance extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'CourseInstance';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Cemetery
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class Cemetery extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class Cemetery extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'Cemetery';
 }

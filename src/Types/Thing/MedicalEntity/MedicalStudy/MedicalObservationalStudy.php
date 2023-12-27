@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalObservationalStudy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalStudy;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalStudy;
 
-class MedicalObservationalStudy extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalStudy\MedicalStudy
+class MedicalObservationalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalStudy\MedicalStudy
 {
     const TYPE = 'MedicalObservationalStudy';
 }

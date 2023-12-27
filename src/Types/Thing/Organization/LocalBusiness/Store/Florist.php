@@ -4,9 +4,9 @@
  * @see https://schema.org/Florist
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
 
-class Florist extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
+class Florist extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
 {
     const TYPE = 'Florist';
 }

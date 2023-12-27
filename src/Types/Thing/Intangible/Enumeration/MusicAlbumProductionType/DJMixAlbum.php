@@ -4,9 +4,9 @@
  * @see https://schema.org/DJMixAlbum
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType;
 
-class DJMixAlbum extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType\MusicAlbumProductionType
+class DJMixAlbum extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType\MusicAlbumProductionType
 {
     const TYPE = 'DJMixAlbum';
 }

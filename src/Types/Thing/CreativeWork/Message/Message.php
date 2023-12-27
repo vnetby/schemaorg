@@ -4,9 +4,9 @@
  * @see https://schema.org/Message
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Message;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Message;
 
-class Message extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Message';
 }

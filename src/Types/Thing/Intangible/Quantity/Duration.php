@@ -4,9 +4,9 @@
  * @see https://schema.org/Duration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Quantity;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Quantity;
 
-class Duration extends \Vnet\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
+class Duration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
 {
     const TYPE = 'Duration';
 }

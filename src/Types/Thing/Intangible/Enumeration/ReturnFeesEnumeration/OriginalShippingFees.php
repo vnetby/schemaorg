@@ -4,9 +4,9 @@
  * @see https://schema.org/OriginalShippingFees
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration;
 
-class OriginalShippingFees extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
+class OriginalShippingFees extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
 {
     const TYPE = 'OriginalShippingFees';
 }

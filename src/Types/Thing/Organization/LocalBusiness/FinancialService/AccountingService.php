@@ -4,9 +4,9 @@
  * @see https://schema.org/AccountingService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService;
 
-class AccountingService extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\FinancialService
+class AccountingService extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\FinancialService
 {
     const TYPE = 'AccountingService';
 }

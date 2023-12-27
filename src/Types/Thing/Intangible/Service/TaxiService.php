@@ -4,9 +4,9 @@
  * @see https://schema.org/TaxiService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service;
 
-class TaxiService extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\Service
+class TaxiService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 {
     const TYPE = 'TaxiService';
 }

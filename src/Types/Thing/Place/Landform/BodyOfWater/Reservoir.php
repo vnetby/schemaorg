@@ -4,9 +4,9 @@
  * @see https://schema.org/Reservoir
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Landform\BodyOfWater;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Landform\BodyOfWater;
 
-class Reservoir extends \Vnet\Schemaorg\Types\Thing\Place\Landform\BodyOfWater\BodyOfWater
+class Reservoir extends \Vnetby\Schemaorg\Types\Thing\Place\Landform\BodyOfWater\BodyOfWater
 {
     const TYPE = 'Reservoir';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/DigitalAudioTapeFormat
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
 
-class DigitalAudioTapeFormat extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
+class DigitalAudioTapeFormat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
 {
     const TYPE = 'DigitalAudioTapeFormat';
 }

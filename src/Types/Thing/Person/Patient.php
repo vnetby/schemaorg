@@ -4,9 +4,9 @@
  * @see https://schema.org/Patient
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Person;
+namespace Vnetby\Schemaorg\Types\Thing\Person;
 
-class Patient extends \Vnet\Schemaorg\Types\Thing\Person\Person
+class Patient extends \Vnetby\Schemaorg\Types\Thing\Person\Person
 {
     const TYPE = 'Patient';
 }

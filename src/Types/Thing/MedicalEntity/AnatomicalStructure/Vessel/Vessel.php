@@ -4,9 +4,9 @@
  * @see https://schema.org/Vessel
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel;
 
-class Vessel extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
+class Vessel extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
 {
     const TYPE = 'Vessel';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/RadioSeason
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
 
-class RadioSeason extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
+class RadioSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
 {
     const TYPE = 'RadioSeason';
 }

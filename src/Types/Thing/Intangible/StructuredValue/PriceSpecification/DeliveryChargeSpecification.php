@@ -4,9 +4,9 @@
  * @see https://schema.org/DeliveryChargeSpecification
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification;
 
-class DeliveryChargeSpecification extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
+class DeliveryChargeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
 {
     const TYPE = 'DeliveryChargeSpecification';
 }

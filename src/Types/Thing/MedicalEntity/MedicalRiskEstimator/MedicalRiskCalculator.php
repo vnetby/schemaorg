@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalRiskCalculator
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalRiskEstimator;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalRiskEstimator;
 
-class MedicalRiskCalculator extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalRiskEstimator\MedicalRiskEstimator
+class MedicalRiskCalculator extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalRiskEstimator\MedicalRiskEstimator
 {
     const TYPE = 'MedicalRiskCalculator';
 }

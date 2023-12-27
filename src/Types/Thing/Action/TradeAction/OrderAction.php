@@ -4,9 +4,9 @@
  * @see https://schema.org/OrderAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\TradeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\TradeAction;
 
-class OrderAction extends \Vnet\Schemaorg\Types\Thing\Action\TradeAction\TradeAction
+class OrderAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeAction
 {
     const TYPE = 'OrderAction';
 }

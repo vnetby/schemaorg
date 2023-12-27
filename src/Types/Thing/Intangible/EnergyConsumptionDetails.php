@@ -4,9 +4,9 @@
  * @see https://schema.org/EnergyConsumptionDetails
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class EnergyConsumptionDetails extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class EnergyConsumptionDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'EnergyConsumptionDetails';
 }

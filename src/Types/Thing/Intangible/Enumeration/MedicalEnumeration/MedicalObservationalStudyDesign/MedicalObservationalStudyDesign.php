@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalObservationalStudyDesign
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalObservationalStudyDesign;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalObservationalStudyDesign;
 
-class MedicalObservationalStudyDesign extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration
+class MedicalObservationalStudyDesign extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration
 {
     const TYPE = 'MedicalObservationalStudyDesign';
 }

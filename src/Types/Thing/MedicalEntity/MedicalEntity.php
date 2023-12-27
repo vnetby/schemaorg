@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalEntity
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity;
 
-class MedicalEntity extends \Vnet\Schemaorg\Types\Thing\Thing
+class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
 {
     const TYPE = 'MedicalEntity';
 }

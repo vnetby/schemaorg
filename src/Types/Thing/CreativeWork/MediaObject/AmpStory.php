@@ -4,9 +4,9 @@
  * @see https://schema.org/AmpStory
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject;
 
-class AmpStory extends \Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+class AmpStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
 {
     const TYPE = 'AmpStory';
 }

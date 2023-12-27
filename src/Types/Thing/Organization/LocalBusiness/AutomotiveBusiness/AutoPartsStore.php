@@ -4,9 +4,9 @@
  * @see https://schema.org/AutoPartsStore
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
 
-class AutoPartsStore extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness\AutomotiveBusiness
+class AutoPartsStore extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness\AutomotiveBusiness
 {
     const TYPE = 'AutoPartsStore';
 }

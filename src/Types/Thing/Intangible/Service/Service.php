@@ -4,9 +4,9 @@
  * @see https://schema.org/Service
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service;
 
-class Service extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class Service extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'Service';
 }

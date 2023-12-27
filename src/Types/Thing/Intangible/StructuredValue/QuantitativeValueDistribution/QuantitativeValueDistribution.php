@@ -4,9 +4,9 @@
  * @see https://schema.org/QuantitativeValueDistribution
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution;
 
-class QuantitativeValueDistribution extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class QuantitativeValueDistribution extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'QuantitativeValueDistribution';
 }

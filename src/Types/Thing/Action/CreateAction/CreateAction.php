@@ -4,9 +4,9 @@
  * @see https://schema.org/CreateAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\CreateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\CreateAction;
 
-class CreateAction extends \Vnet\Schemaorg\Types\Thing\Action\Action
+class CreateAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 {
     const TYPE = 'CreateAction';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Mass
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Quantity;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Quantity;
 
-class Mass extends \Vnet\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
+class Mass extends \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
 {
     const TYPE = 'Mass';
 }

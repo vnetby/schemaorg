@@ -4,9 +4,9 @@
  * @see https://schema.org/PhysicalTherapy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy;
 
-class PhysicalTherapy extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
+class PhysicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
 {
     const TYPE = 'PhysicalTherapy';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/DiagnosticLab
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\MedicalOrganization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization;
 
-class DiagnosticLab extends \Vnet\Schemaorg\Types\Thing\Organization\MedicalOrganization\MedicalOrganization
+class DiagnosticLab extends \Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization\MedicalOrganization
 {
     const TYPE = 'DiagnosticLab';
 }

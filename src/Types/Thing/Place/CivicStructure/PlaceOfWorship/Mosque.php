@@ -4,9 +4,9 @@
  * @see https://schema.org/Mosque
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship;
 
-class Mosque extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship\PlaceOfWorship
+class Mosque extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\PlaceOfWorship\PlaceOfWorship
 {
     const TYPE = 'Mosque';
 }

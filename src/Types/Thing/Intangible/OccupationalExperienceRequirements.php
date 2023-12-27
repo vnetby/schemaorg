@@ -4,9 +4,9 @@
  * @see https://schema.org/OccupationalExperienceRequirements
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class OccupationalExperienceRequirements extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class OccupationalExperienceRequirements extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'OccupationalExperienceRequirements';
 }

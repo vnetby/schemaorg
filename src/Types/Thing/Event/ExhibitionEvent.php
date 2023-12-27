@@ -4,9 +4,9 @@
  * @see https://schema.org/ExhibitionEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class ExhibitionEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class ExhibitionEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'ExhibitionEvent';
 }

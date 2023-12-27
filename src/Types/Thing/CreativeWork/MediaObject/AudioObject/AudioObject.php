@@ -4,9 +4,9 @@
  * @see https://schema.org/AudioObject
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\AudioObject;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\AudioObject;
 
-class AudioObject extends \Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
 {
     const TYPE = 'AudioObject';
 }

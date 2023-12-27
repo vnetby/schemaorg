@@ -4,9 +4,9 @@
  * @see https://schema.org/SinglePlayer
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode;
 
-class SinglePlayer extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode
+class SinglePlayer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode
 {
     const TYPE = 'SinglePlayer';
 }

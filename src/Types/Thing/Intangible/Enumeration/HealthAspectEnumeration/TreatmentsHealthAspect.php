@@ -4,9 +4,9 @@
  * @see https://schema.org/TreatmentsHealthAspect
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration;
 
-class TreatmentsHealthAspect extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
+class TreatmentsHealthAspect extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
 {
     const TYPE = 'TreatmentsHealthAspect';
 }

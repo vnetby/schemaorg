@@ -4,9 +4,9 @@
  * @see https://schema.org/HealthAndBeautyBusiness
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
 
-class HealthAndBeautyBusiness extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class HealthAndBeautyBusiness extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'HealthAndBeautyBusiness';
 }

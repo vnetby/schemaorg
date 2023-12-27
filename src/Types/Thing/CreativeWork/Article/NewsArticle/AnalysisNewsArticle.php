@@ -4,9 +4,9 @@
  * @see https://schema.org/AnalysisNewsArticle
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle;
 
-class AnalysisNewsArticle extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle
+class AnalysisNewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle
 {
     const TYPE = 'AnalysisNewsArticle';
 }

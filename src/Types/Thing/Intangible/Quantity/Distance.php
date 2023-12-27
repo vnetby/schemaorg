@@ -4,9 +4,9 @@
  * @see https://schema.org/Distance
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Quantity;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Quantity;
 
-class Distance extends \Vnet\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
+class Distance extends \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Quantity
 {
     const TYPE = 'Distance';
 }

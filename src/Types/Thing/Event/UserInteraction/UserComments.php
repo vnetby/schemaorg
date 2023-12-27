@@ -4,9 +4,9 @@
  * @see https://schema.org/UserComments
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event\UserInteraction;
+namespace Vnetby\Schemaorg\Types\Thing\Event\UserInteraction;
 
-class UserComments extends \Vnet\Schemaorg\Types\Thing\Event\UserInteraction\UserInteraction
+class UserComments extends \Vnetby\Schemaorg\Types\Thing\Event\UserInteraction\UserInteraction
 {
     const TYPE = 'UserComments';
 }

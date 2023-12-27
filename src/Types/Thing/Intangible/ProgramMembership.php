@@ -4,9 +4,9 @@
  * @see https://schema.org/ProgramMembership
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class ProgramMembership extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'ProgramMembership';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Code
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Code extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Code extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Code';
 }

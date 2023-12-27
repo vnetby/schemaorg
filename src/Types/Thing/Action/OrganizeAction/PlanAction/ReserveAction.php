@@ -4,9 +4,9 @@
  * @see https://schema.org/ReserveAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\OrganizeAction\PlanAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\PlanAction;
 
-class ReserveAction extends \Vnet\Schemaorg\Types\Thing\Action\OrganizeAction\PlanAction\PlanAction
+class ReserveAction extends \Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\PlanAction\PlanAction
 {
     const TYPE = 'ReserveAction';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ReactAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\AssessAction\ReactAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\AssessAction\ReactAction;
 
-class ReactAction extends \Vnet\Schemaorg\Types\Thing\Action\AssessAction\AssessAction
+class ReactAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\AssessAction
 {
     const TYPE = 'ReactAction';
 }

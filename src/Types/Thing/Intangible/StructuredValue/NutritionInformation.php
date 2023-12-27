@@ -4,9 +4,9 @@
  * @see https://schema.org/NutritionInformation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue;
 
-class NutritionInformation extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class NutritionInformation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'NutritionInformation';
 }

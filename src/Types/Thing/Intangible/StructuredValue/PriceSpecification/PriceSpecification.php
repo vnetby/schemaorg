@@ -4,9 +4,9 @@
  * @see https://schema.org/PriceSpecification
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification;
 
-class PriceSpecification extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'PriceSpecification';
 }

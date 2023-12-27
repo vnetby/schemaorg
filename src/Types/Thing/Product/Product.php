@@ -4,9 +4,9 @@
  * @see https://schema.org/Product
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Product;
+namespace Vnetby\Schemaorg\Types\Thing\Product;
 
-class Product extends \Vnet\Schemaorg\Types\Thing\Thing
+class Product extends \Vnetby\Schemaorg\Types\Thing\Thing
 {
     const TYPE = 'Product';
 }

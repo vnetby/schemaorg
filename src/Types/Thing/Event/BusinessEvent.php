@@ -4,9 +4,9 @@
  * @see https://schema.org/BusinessEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class BusinessEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class BusinessEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'BusinessEvent';
 }

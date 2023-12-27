@@ -4,9 +4,9 @@
  * @see https://schema.org/Volcano
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Landform;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Landform;
 
-class Volcano extends \Vnet\Schemaorg\Types\Thing\Place\Landform\Landform
+class Volcano extends \Vnetby\Schemaorg\Types\Thing\Place\Landform\Landform
 {
     const TYPE = 'Volcano';
 }

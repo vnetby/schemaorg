@@ -4,9 +4,9 @@
  * @see https://schema.org/AdministrativeArea
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\AdministrativeArea;
+namespace Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea;
 
-class AdministrativeArea extends \Vnet\Schemaorg\Types\Thing\Place\Place
+class AdministrativeArea extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 {
     const TYPE = 'AdministrativeArea';
 }

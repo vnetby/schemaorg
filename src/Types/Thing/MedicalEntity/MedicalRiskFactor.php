@@ -4,9 +4,9 @@
  * @see https://schema.org/MedicalRiskFactor
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity;
 
-class MedicalRiskFactor extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+class MedicalRiskFactor extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 {
     const TYPE = 'MedicalRiskFactor';
 }

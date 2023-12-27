@@ -4,9 +4,9 @@
  * @see https://schema.org/Clip
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Clip;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Clip;
 
-class Clip extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Clip';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ExercisePlan
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class ExercisePlan extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'ExercisePlan';
 }

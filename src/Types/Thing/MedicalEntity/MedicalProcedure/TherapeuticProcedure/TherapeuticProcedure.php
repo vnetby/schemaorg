@@ -4,9 +4,9 @@
  * @see https://schema.org/TherapeuticProcedure
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure;
 
-class TherapeuticProcedure extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\MedicalProcedure
+class TherapeuticProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\MedicalProcedure
 {
     const TYPE = 'TherapeuticProcedure';
 }

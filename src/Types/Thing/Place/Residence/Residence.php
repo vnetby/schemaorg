@@ -4,9 +4,9 @@
  * @see https://schema.org/Residence
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Residence;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Residence;
 
-class Residence extends \Vnet\Schemaorg\Types\Thing\Place\Place
+class Residence extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 {
     const TYPE = 'Residence';
 }

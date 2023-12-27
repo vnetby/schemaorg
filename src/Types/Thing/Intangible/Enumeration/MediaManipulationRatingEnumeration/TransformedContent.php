@@ -4,9 +4,9 @@
  * @see https://schema.org/TransformedContent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration;
 
-class TransformedContent extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration\MediaManipulationRatingEnumeration
+class TransformedContent extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration\MediaManipulationRatingEnumeration
 {
     const TYPE = 'TransformedContent';
 }

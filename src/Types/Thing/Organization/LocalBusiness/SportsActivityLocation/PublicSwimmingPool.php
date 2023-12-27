@@ -4,9 +4,9 @@
  * @see https://schema.org/PublicSwimmingPool
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
 
-class PublicSwimmingPool extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
+class PublicSwimmingPool extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
 {
     const TYPE = 'PublicSwimmingPool';
 }

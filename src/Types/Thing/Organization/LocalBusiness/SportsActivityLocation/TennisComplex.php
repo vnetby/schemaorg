@@ -4,9 +4,9 @@
  * @see https://schema.org/TennisComplex
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
 
-class TennisComplex extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
+class TennisComplex extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
 {
     const TYPE = 'TennisComplex';
 }

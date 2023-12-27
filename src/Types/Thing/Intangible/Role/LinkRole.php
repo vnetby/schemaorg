@@ -4,9 +4,9 @@
  * @see https://schema.org/LinkRole
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Role;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Role;
 
-class LinkRole extends \Vnet\Schemaorg\Types\Thing\Intangible\Role\Role
+class LinkRole extends \Vnetby\Schemaorg\Types\Thing\Intangible\Role\Role
 {
     const TYPE = 'LinkRole';
 }

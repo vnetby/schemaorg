@@ -4,9 +4,9 @@
  * @see https://schema.org/PhotographAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\CreateAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\CreateAction;
 
-class PhotographAction extends \Vnet\Schemaorg\Types\Thing\Action\CreateAction\CreateAction
+class PhotographAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\CreateAction
 {
     const TYPE = 'PhotographAction';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/HealthPlanFormulary
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class HealthPlanFormulary extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'HealthPlanFormulary';
 }

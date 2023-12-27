@@ -4,9 +4,9 @@
  * @see https://schema.org/OrderPaymentDue
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus;
 
-class OrderPaymentDue extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus\OrderStatus
+class OrderPaymentDue extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus\OrderStatus
 {
     const TYPE = 'OrderPaymentDue';
 }

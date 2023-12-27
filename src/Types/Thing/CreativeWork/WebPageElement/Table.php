@@ -4,9 +4,9 @@
  * @see https://schema.org/Table
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\WebPageElement;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPageElement;
 
-class Table extends \Vnet\Schemaorg\Types\Thing\CreativeWork\WebPageElement\WebPageElement
+class Table extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPageElement\WebPageElement
 {
     const TYPE = 'Table';
 }

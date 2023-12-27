@@ -4,9 +4,9 @@
  * @see https://schema.org/RsvpResponseYes
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\RsvpResponseType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\RsvpResponseType;
 
-class RsvpResponseYes extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\RsvpResponseType\RsvpResponseType
+class RsvpResponseYes extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\RsvpResponseType\RsvpResponseType
 {
     const TYPE = 'RsvpResponseYes';
 }

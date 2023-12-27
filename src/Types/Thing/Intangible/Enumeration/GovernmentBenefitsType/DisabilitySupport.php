@@ -4,9 +4,9 @@
  * @see https://schema.org/DisabilitySupport
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType;
 
-class DisabilitySupport extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType\GovernmentBenefitsType
+class DisabilitySupport extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType\GovernmentBenefitsType
 {
     const TYPE = 'DisabilitySupport';
 }

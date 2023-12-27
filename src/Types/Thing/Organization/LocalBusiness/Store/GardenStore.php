@@ -4,9 +4,9 @@
  * @see https://schema.org/GardenStore
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store;
 
-class GardenStore extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
+class GardenStore extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\Store\Store
 {
     const TYPE = 'GardenStore';
 }

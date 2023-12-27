@@ -4,9 +4,9 @@
  * @see https://schema.org/OfflineTemporarily
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\GameServerStatus;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\GameServerStatus;
 
-class OfflineTemporarily extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\GameServerStatus\GameServerStatus
+class OfflineTemporarily extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\GameServerStatus\GameServerStatus
 {
     const TYPE = 'OfflineTemporarily';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/HealthInsurancePlan
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class HealthInsurancePlan extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'HealthInsurancePlan';
 }

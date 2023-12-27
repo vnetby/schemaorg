@@ -4,9 +4,9 @@
  * @see https://schema.org/MotorizedBicycle
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Product\Vehicle;
+namespace Vnetby\Schemaorg\Types\Thing\Product\Vehicle;
 
-class MotorizedBicycle extends \Vnet\Schemaorg\Types\Thing\Product\Vehicle\Vehicle
+class MotorizedBicycle extends \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle
 {
     const TYPE = 'MotorizedBicycle';
 }

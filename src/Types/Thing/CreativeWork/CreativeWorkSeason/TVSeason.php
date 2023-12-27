@@ -4,9 +4,9 @@
  * @see https://schema.org/TVSeason
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
 
-class TVSeason extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
+class TVSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
 {
     const TYPE = 'TVSeason';
 }

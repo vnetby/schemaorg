@@ -4,9 +4,9 @@
  * @see https://schema.org/TouristDestination
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place;
+namespace Vnetby\Schemaorg\Types\Thing\Place;
 
-class TouristDestination extends \Vnet\Schemaorg\Types\Thing\Place\Place
+class TouristDestination extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 {
     const TYPE = 'TouristDestination';
 }

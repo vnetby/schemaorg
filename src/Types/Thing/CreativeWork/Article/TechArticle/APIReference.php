@@ -4,9 +4,9 @@
  * @see https://schema.org/APIReference
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Article\TechArticle;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\TechArticle;
 
-class APIReference extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Article\TechArticle\TechArticle
+class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\TechArticle\TechArticle
 {
     const TYPE = 'APIReference';
 }

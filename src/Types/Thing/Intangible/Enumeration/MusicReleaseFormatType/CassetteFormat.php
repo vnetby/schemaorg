@@ -4,9 +4,9 @@
  * @see https://schema.org/CassetteFormat
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
 
-class CassetteFormat extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
+class CassetteFormat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
 {
     const TYPE = 'CassetteFormat';
 }

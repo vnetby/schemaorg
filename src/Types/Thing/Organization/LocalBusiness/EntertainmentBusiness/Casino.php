@@ -4,9 +4,9 @@
  * @see https://schema.org/Casino
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness;
 
-class Casino extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
+class Casino extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
 {
     const TYPE = 'Casino';
 }

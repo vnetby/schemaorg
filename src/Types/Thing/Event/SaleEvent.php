@@ -4,9 +4,9 @@
  * @see https://schema.org/SaleEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class SaleEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class SaleEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'SaleEvent';
 }

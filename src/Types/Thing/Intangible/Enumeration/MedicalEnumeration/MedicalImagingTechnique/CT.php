@@ -4,9 +4,9 @@
  * @see https://schema.org/CT
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique;
 
-class CT extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique\MedicalImagingTechnique
+class CT extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique\MedicalImagingTechnique
 {
     const TYPE = 'CT';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/Chapter
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Chapter extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Chapter extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Chapter';
 }

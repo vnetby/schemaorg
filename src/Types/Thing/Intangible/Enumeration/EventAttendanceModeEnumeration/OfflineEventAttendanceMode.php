@@ -4,9 +4,9 @@
  * @see https://schema.org/OfflineEventAttendanceMode
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\EventAttendanceModeEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EventAttendanceModeEnumeration;
 
-class OfflineEventAttendanceMode extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\EventAttendanceModeEnumeration\EventAttendanceModeEnumeration
+class OfflineEventAttendanceMode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EventAttendanceModeEnumeration\EventAttendanceModeEnumeration
 {
     const TYPE = 'OfflineEventAttendanceMode';
 }

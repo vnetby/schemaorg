@@ -4,9 +4,9 @@
  * @see https://schema.org/MusicVenue
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class MusicVenue extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class MusicVenue extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'MusicVenue';
 }

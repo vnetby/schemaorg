@@ -4,9 +4,9 @@
  * @see https://schema.org/TrainReservation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Reservation;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Reservation;
 
-class TrainReservation extends \Vnet\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
+class TrainReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
 {
     const TYPE = 'TrainReservation';
 }

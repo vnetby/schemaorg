@@ -4,9 +4,9 @@
  * @see https://schema.org/PodcastEpisode
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Episode;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode;
 
-class PodcastEpisode extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
+class PodcastEpisode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
 {
     const TYPE = 'PodcastEpisode';
 }

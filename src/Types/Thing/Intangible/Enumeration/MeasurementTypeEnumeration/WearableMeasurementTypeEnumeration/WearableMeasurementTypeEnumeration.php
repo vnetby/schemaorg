@@ -4,9 +4,9 @@
  * @see https://schema.org/WearableMeasurementTypeEnumeration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\WearableMeasurementTypeEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\WearableMeasurementTypeEnumeration;
 
-class WearableMeasurementTypeEnumeration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\MeasurementTypeEnumeration
+class WearableMeasurementTypeEnumeration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementTypeEnumeration\MeasurementTypeEnumeration
 {
     const TYPE = 'WearableMeasurementTypeEnumeration';
 }

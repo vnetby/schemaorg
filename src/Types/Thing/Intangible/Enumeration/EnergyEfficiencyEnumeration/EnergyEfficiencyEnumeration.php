@@ -4,9 +4,9 @@
  * @see https://schema.org/EnergyEfficiencyEnumeration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration;
 
-class EnergyEfficiencyEnumeration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
+class EnergyEfficiencyEnumeration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
 {
     const TYPE = 'EnergyEfficiencyEnumeration';
 }

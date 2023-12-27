@@ -4,9 +4,9 @@
  * @see https://schema.org/RentalCarReservation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Reservation;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Reservation;
 
-class RentalCarReservation extends \Vnet\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
+class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
 {
     const TYPE = 'RentalCarReservation';
 }

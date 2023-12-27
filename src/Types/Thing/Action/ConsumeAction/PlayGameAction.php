@@ -4,9 +4,9 @@
  * @see https://schema.org/PlayGameAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\ConsumeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction;
 
-class PlayGameAction extends \Vnet\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
+class PlayGameAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
 {
     const TYPE = 'PlayGameAction';
 }

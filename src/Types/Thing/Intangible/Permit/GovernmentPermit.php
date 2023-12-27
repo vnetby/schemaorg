@@ -4,9 +4,9 @@
  * @see https://schema.org/GovernmentPermit
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Permit;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Permit;
 
-class GovernmentPermit extends \Vnet\Schemaorg\Types\Thing\Intangible\Permit\Permit
+class GovernmentPermit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Permit\Permit
 {
     const TYPE = 'GovernmentPermit';
 }

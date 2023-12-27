@@ -4,9 +4,9 @@
  * @see https://schema.org/EmergencyService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\EmergencyService;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EmergencyService;
 
-class EmergencyService extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class EmergencyService extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'EmergencyService';
 }

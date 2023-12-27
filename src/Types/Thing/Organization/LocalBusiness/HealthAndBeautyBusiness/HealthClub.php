@@ -4,9 +4,9 @@
  * @see https://schema.org/HealthClub
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness;
 
-class HealthClub extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness\HealthAndBeautyBusiness
+class HealthClub extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\HealthAndBeautyBusiness\HealthAndBeautyBusiness
 {
     const TYPE = 'HealthClub';
 }

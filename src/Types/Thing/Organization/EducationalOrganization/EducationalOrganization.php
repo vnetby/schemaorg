@@ -4,9 +4,9 @@
  * @see https://schema.org/EducationalOrganization
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\EducationalOrganization;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\EducationalOrganization;
 
-class EducationalOrganization extends \Vnet\Schemaorg\Types\Thing\Organization\Organization
+class EducationalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Organization
 {
     const TYPE = 'EducationalOrganization';
 }

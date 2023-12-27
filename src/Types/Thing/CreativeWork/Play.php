@@ -4,9 +4,9 @@
  * @see https://schema.org/Play
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Play extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Play extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Play';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/SheetMusic
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class SheetMusic extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class SheetMusic extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'SheetMusic';
 }

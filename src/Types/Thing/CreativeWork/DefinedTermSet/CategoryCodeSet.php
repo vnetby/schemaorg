@@ -4,9 +4,9 @@
  * @see https://schema.org/CategoryCodeSet
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet;
 
-class CategoryCodeSet extends \Vnet\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet
+class CategoryCodeSet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet
 {
     const TYPE = 'CategoryCodeSet';
 }

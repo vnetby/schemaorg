@@ -4,9 +4,9 @@
  * @see https://schema.org/BorrowAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\TransferAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\TransferAction;
 
-class BorrowAction extends \Vnet\Schemaorg\Types\Thing\Action\TransferAction\TransferAction
+class BorrowAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\TransferAction
 {
     const TYPE = 'BorrowAction';
 }

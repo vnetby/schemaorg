@@ -4,9 +4,9 @@
  * @see https://schema.org/ImageObjectSnapshot
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject;
 
-class ImageObjectSnapshot extends \Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject
+class ImageObjectSnapshot extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject
 {
     const TYPE = 'ImageObjectSnapshot';
 }

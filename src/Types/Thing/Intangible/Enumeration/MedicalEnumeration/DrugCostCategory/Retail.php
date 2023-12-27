@@ -4,9 +4,9 @@
  * @see https://schema.org/Retail
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory;
 
-class Retail extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory\DrugCostCategory
+class Retail extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory\DrugCostCategory
 {
     const TYPE = 'Retail';
 }

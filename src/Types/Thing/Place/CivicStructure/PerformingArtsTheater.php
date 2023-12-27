@@ -4,9 +4,9 @@
  * @see https://schema.org/PerformingArtsTheater
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class PerformingArtsTheater extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class PerformingArtsTheater extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'PerformingArtsTheater';
 }

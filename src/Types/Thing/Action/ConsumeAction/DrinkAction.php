@@ -4,9 +4,9 @@
  * @see https://schema.org/DrinkAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\ConsumeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction;
 
-class DrinkAction extends \Vnet\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
+class DrinkAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
 {
     const TYPE = 'DrinkAction';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/WarrantyScope
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration;
 
-class WarrantyScope extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
+class WarrantyScope extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
 {
     const TYPE = 'WarrantyScope';
 }

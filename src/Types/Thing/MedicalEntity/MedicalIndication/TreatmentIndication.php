@@ -4,9 +4,9 @@
  * @see https://schema.org/TreatmentIndication
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalIndication;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIndication;
 
-class TreatmentIndication extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalIndication\MedicalIndication
+class TreatmentIndication extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIndication\MedicalIndication
 {
     const TYPE = 'TreatmentIndication';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/MolecularEntity
  */
 
-namespace Vnet\Schemaorg\Types\Thing\BioChemEntity;
+namespace Vnetby\Schemaorg\Types\Thing\BioChemEntity;
 
-class MolecularEntity extends \Vnet\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
+class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
 {
     const TYPE = 'MolecularEntity';
 }

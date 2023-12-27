@@ -4,9 +4,9 @@
  * @see https://schema.org/Mountain
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Landform;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Landform;
 
-class Mountain extends \Vnet\Schemaorg\Types\Thing\Place\Landform\Landform
+class Mountain extends \Vnetby\Schemaorg\Types\Thing\Place\Landform\Landform
 {
     const TYPE = 'Mountain';
 }

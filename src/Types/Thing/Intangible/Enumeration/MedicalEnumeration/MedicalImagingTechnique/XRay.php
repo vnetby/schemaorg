@@ -4,9 +4,9 @@
  * @see https://schema.org/XRay
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique;
 
-class XRay extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique\MedicalImagingTechnique
+class XRay extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique\MedicalImagingTechnique
 {
     const TYPE = 'XRay';
 }

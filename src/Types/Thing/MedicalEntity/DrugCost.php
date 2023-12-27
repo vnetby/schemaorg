@@ -4,9 +4,9 @@
  * @see https://schema.org/DrugCost
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity;
 
-class DrugCost extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 {
     const TYPE = 'DrugCost';
 }

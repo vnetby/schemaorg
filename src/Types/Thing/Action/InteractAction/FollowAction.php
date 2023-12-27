@@ -4,9 +4,9 @@
  * @see https://schema.org/FollowAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction;
 
-class FollowAction extends \Vnet\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
+class FollowAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
 {
     const TYPE = 'FollowAction';
 }

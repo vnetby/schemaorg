@@ -4,9 +4,9 @@
  * @see https://schema.org/ActivationFee
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration;
 
-class ActivationFee extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration
+class ActivationFee extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration
 {
     const TYPE = 'ActivationFee';
 }

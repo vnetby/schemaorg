@@ -4,9 +4,9 @@
  * @see https://schema.org/Painting
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Painting extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Painting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Painting';
 }

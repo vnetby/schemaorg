@@ -4,9 +4,9 @@
  * @see https://schema.org/CreativeWorkSeries
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries;
 
-class CreativeWorkSeries extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class CreativeWorkSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'CreativeWorkSeries';
 }

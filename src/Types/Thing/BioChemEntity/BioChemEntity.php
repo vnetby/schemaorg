@@ -4,9 +4,9 @@
  * @see https://schema.org/BioChemEntity
  */
 
-namespace Vnet\Schemaorg\Types\Thing\BioChemEntity;
+namespace Vnetby\Schemaorg\Types\Thing\BioChemEntity;
 
-class BioChemEntity extends \Vnet\Schemaorg\Types\Thing\Thing
+class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
 {
     const TYPE = 'BioChemEntity';
 }

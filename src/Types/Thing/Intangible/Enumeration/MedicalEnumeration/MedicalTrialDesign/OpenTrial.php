@@ -4,9 +4,9 @@
  * @see https://schema.org/OpenTrial
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalTrialDesign;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalTrialDesign;
 
-class OpenTrial extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalTrialDesign\MedicalTrialDesign
+class OpenTrial extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalTrialDesign\MedicalTrialDesign
 {
     const TYPE = 'OpenTrial';
 }

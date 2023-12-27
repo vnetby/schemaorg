@@ -4,9 +4,9 @@
  * @see https://schema.org/CableOrSatelliteService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Service;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Service;
 
-class CableOrSatelliteService extends \Vnet\Schemaorg\Types\Thing\Intangible\Service\Service
+class CableOrSatelliteService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 {
     const TYPE = 'CableOrSatelliteService';
 }

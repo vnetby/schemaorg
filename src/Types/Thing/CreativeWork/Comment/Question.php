@@ -4,9 +4,9 @@
  * @see https://schema.org/Question
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Comment;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment;
 
-class Question extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
+class Question extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
 {
     const TYPE = 'Question';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ProfessionalService
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness;
 
-class ProfessionalService extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class ProfessionalService extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'ProfessionalService';
 }

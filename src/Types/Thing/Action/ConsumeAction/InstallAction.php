@@ -4,9 +4,9 @@
  * @see https://schema.org/InstallAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\ConsumeAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction;
 
-class InstallAction extends \Vnet\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
+class InstallAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\ConsumeAction
 {
     const TYPE = 'InstallAction';
 }

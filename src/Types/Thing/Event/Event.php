@@ -4,9 +4,9 @@
  * @see https://schema.org/Event
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class Event extends \Vnet\Schemaorg\Types\Thing\Thing
+class Event extends \Vnetby\Schemaorg\Types\Thing\Thing
 {
     const TYPE = 'Event';
 }

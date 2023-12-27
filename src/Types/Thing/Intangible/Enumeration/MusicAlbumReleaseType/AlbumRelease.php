@@ -4,9 +4,9 @@
  * @see https://schema.org/AlbumRelease
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumReleaseType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumReleaseType;
 
-class AlbumRelease extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumReleaseType\MusicAlbumReleaseType
+class AlbumRelease extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumReleaseType\MusicAlbumReleaseType
 {
     const TYPE = 'AlbumRelease';
 }

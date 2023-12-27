@@ -4,9 +4,9 @@
  * @see https://schema.org/DefinedRegion
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue;
 
-class DefinedRegion extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class DefinedRegion extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'DefinedRegion';
 }

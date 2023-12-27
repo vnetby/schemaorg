@@ -4,9 +4,9 @@
  * @see https://schema.org/Article
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Article;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Article;
 
-class Article extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Article extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Article';
 }

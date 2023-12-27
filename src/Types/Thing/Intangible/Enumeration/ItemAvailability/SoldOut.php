@@ -4,9 +4,9 @@
  * @see https://schema.org/SoldOut
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
 
-class SoldOut extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
+class SoldOut extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
 {
     const TYPE = 'SoldOut';
 }

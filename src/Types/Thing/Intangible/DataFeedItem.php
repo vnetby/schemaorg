@@ -4,9 +4,9 @@
  * @see https://schema.org/DataFeedItem
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class DataFeedItem extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class DataFeedItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'DataFeedItem';
 }

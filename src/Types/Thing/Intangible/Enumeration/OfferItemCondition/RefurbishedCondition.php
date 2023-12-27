@@ -4,9 +4,9 @@
  * @see https://schema.org/RefurbishedCondition
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition;
 
-class RefurbishedCondition extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition\OfferItemCondition
+class RefurbishedCondition extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition\OfferItemCondition
 {
     const TYPE = 'RefurbishedCondition';
 }

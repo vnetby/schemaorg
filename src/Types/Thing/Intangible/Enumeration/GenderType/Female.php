@@ -4,9 +4,9 @@
  * @see https://schema.org/Female
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType;
 
-class Female extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType
+class Female extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType
 {
     const TYPE = 'Female';
 }

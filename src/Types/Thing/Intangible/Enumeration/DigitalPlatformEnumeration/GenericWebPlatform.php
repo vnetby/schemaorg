@@ -4,9 +4,9 @@
  * @see https://schema.org/GenericWebPlatform
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration;
 
-class GenericWebPlatform extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
+class GenericWebPlatform extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
 {
     const TYPE = 'GenericWebPlatform';
 }

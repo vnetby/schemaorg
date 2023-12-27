@@ -4,9 +4,9 @@
  * @see https://schema.org/ReturnFeesCustomerResponsibility
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration;
 
-class ReturnFeesCustomerResponsibility extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
+class ReturnFeesCustomerResponsibility extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
 {
     const TYPE = 'ReturnFeesCustomerResponsibility';
 }

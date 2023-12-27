@@ -4,9 +4,9 @@
  * @see https://schema.org/Apartment
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\Accommodation;
+namespace Vnetby\Schemaorg\Types\Thing\Place\Accommodation;
 
-class Apartment extends \Vnet\Schemaorg\Types\Thing\Place\Accommodation\Accommodation
+class Apartment extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodation
 {
     const TYPE = 'Apartment';
 }

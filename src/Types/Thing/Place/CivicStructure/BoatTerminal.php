@@ -4,9 +4,9 @@
  * @see https://schema.org/BoatTerminal
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class BoatTerminal extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class BoatTerminal extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'BoatTerminal';
 }

@@ -7,13 +7,14 @@
  * - Все свойства, которые участвуют в разметке json-ld, должны быть protected и начинаться с префикса prop_
  */
 
-namespace Vnet\Schemaorg\Types;
+namespace Vnetby\Schemaorg\Types;
 
 use ReflectionObject;
 
 abstract class Type
 {
     const TYPE = '';
+    const TYPE_URL = 'https://schema.org';
 
     /**
      * @return static
@@ -25,6 +26,23 @@ abstract class Type
             $type->setProp($key, $val);
         }
         return $type;
+    }
+
+
+    static function itemscope(): string
+    {
+        return 'itemscope itemtype="' . static::TYPE_URL . '/' . static::TYPE . '"';
+    }
+
+
+    static function itemprop(string $prop, string $itemScopeClass = null): string
+    {
+        $str = 'itemprop="' . $prop . '"';
+        if ($itemScopeClass === null) {
+            return $str;
+        }
+        $str .= ' ' . $itemScopeClass::itemscope();
+        return $str;
     }
 
 

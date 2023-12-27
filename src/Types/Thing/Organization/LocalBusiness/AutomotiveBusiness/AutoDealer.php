@@ -4,9 +4,9 @@
  * @see https://schema.org/AutoDealer
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
 
-class AutoDealer extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness\AutomotiveBusiness
+class AutoDealer extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness\AutomotiveBusiness
 {
     const TYPE = 'AutoDealer';
 }

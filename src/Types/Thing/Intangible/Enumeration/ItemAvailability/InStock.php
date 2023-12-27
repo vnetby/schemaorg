@@ -4,9 +4,9 @@
  * @see https://schema.org/InStock
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability;
 
-class InStock extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
+class InStock extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
 {
     const TYPE = 'InStock';
 }

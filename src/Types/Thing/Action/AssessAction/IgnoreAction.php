@@ -4,9 +4,9 @@
  * @see https://schema.org/IgnoreAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\AssessAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\AssessAction;
 
-class IgnoreAction extends \Vnet\Schemaorg\Types\Thing\Action\AssessAction\AssessAction
+class IgnoreAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\AssessAction
 {
     const TYPE = 'IgnoreAction';
 }

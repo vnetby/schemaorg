@@ -4,9 +4,9 @@
  * @see https://schema.org/TollFree
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption;
 
-class TollFree extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption
+class TollFree extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption
 {
     const TYPE = 'TollFree';
 }

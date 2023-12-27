@@ -4,9 +4,9 @@
  * @see https://schema.org/Audiobook
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\AudioObject;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\AudioObject;
 
-class Audiobook extends \Vnet\Schemaorg\Types\Thing\CreativeWork\MediaObject\AudioObject\AudioObject
+class Audiobook extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\AudioObject\AudioObject
 {
     const TYPE = 'Audiobook';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ComedyEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class ComedyEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class ComedyEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'ComedyEvent';
 }

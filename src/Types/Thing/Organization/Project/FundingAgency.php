@@ -4,9 +4,9 @@
  * @see https://schema.org/FundingAgency
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\Project;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\Project;
 
-class FundingAgency extends \Vnet\Schemaorg\Types\Thing\Organization\Project\Project
+class FundingAgency extends \Vnetby\Schemaorg\Types\Thing\Organization\Project\Project
 {
     const TYPE = 'FundingAgency';
 }

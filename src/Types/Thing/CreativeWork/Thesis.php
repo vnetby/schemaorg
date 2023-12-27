@@ -4,9 +4,9 @@
  * @see https://schema.org/Thesis
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
-class Thesis extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+class Thesis extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
     const TYPE = 'Thesis';
 }

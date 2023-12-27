@@ -4,9 +4,9 @@
  * @see https://schema.org/LegislativeBuilding
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding;
 
-class LegislativeBuilding extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
+class LegislativeBuilding extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\GovernmentBuilding\GovernmentBuilding
 {
     const TYPE = 'LegislativeBuilding';
 }

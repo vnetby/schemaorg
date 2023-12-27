@@ -4,9 +4,9 @@
  * @see https://schema.org/GovernmentBenefitsType
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GovernmentBenefitsType;
 
-class GovernmentBenefitsType extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
+class GovernmentBenefitsType extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
 {
     const TYPE = 'GovernmentBenefitsType';
 }

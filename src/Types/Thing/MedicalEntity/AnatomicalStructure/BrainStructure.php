@@ -4,9 +4,9 @@
  * @see https://schema.org/BrainStructure
  */
 
-namespace Vnet\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure;
+namespace Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure;
 
-class BrainStructure extends \Vnet\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
+class BrainStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
 {
     const TYPE = 'BrainStructure';
 }

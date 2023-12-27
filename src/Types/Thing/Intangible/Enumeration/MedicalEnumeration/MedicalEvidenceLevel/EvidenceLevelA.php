@@ -4,9 +4,9 @@
  * @see https://schema.org/EvidenceLevelA
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEvidenceLevel;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEvidenceLevel;
 
-class EvidenceLevelA extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEvidenceLevel\MedicalEvidenceLevel
+class EvidenceLevelA extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEvidenceLevel\MedicalEvidenceLevel
 {
     const TYPE = 'EvidenceLevelA';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/MusculoskeletalExam
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam;
 
-class MusculoskeletalExam extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam\PhysicalExam
+class MusculoskeletalExam extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\PhysicalExam\PhysicalExam
 {
     const TYPE = 'MusculoskeletalExam';
 }

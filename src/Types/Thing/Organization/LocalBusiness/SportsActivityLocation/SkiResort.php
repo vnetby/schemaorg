@@ -4,9 +4,9 @@
  * @see https://schema.org/SkiResort
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation;
 
-class SkiResort extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
+class SkiResort extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
 {
     const TYPE = 'SkiResort';
 }

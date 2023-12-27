@@ -4,9 +4,9 @@
  * @see https://schema.org/TheaterGroup
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\PerformingGroup;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup;
 
-class TheaterGroup extends \Vnet\Schemaorg\Types\Thing\Organization\PerformingGroup\PerformingGroup
+class TheaterGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\PerformingGroup
 {
     const TYPE = 'TheaterGroup';
 }

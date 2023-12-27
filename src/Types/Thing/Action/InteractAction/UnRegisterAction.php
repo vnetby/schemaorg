@@ -4,9 +4,9 @@
  * @see https://schema.org/UnRegisterAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\InteractAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\InteractAction;
 
-class UnRegisterAction extends \Vnet\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
+class UnRegisterAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\InteractAction
 {
     const TYPE = 'UnRegisterAction';
 }

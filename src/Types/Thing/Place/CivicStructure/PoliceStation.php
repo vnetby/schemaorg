@@ -4,9 +4,9 @@
  * @see https://schema.org/PoliceStation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Place\CivicStructure;
+namespace Vnetby\Schemaorg\Types\Thing\Place\CivicStructure;
 
-class PoliceStation extends \Vnet\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
+class PoliceStation extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure
 {
     const TYPE = 'PoliceStation';
 }

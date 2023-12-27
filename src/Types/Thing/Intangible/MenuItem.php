@@ -4,9 +4,9 @@
  * @see https://schema.org/MenuItem
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class MenuItem extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class MenuItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'MenuItem';
 }

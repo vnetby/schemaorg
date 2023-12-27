@@ -4,9 +4,9 @@
  * @see https://schema.org/AutomotiveBusiness
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
+namespace Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\AutomotiveBusiness;
 
-class AutomotiveBusiness extends \Vnet\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
+class AutomotiveBusiness extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
 {
     const TYPE = 'AutomotiveBusiness';
 }

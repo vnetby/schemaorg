@@ -4,9 +4,9 @@
  * @see https://schema.org/ChildrensEvent
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Event;
+namespace Vnetby\Schemaorg\Types\Thing\Event;
 
-class ChildrensEvent extends \Vnet\Schemaorg\Types\Thing\Event\Event
+class ChildrensEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 {
     const TYPE = 'ChildrensEvent';
 }

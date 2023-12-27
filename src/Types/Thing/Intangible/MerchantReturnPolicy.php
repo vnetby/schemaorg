@@ -4,9 +4,9 @@
  * @see https://schema.org/MerchantReturnPolicy
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible;
 
-class MerchantReturnPolicy extends \Vnet\Schemaorg\Types\Thing\Intangible\Intangible
+class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 {
     const TYPE = 'MerchantReturnPolicy';
 }

@@ -4,9 +4,9 @@
  * @see https://schema.org/ComicCoverArt
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\VisualArtwork\CoverArt;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\VisualArtwork\CoverArt;
 
-class ComicCoverArt extends \Vnet\Schemaorg\Types\Thing\CreativeWork\VisualArtwork\CoverArt\CoverArt
+class ComicCoverArt extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\VisualArtwork\CoverArt\CoverArt
 {
     const TYPE = 'ComicCoverArt';
 }

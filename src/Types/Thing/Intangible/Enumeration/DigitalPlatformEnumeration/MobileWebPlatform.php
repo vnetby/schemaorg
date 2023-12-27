@@ -4,9 +4,9 @@
  * @see https://schema.org/MobileWebPlatform
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration;
 
-class MobileWebPlatform extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
+class MobileWebPlatform extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
 {
     const TYPE = 'MobileWebPlatform';
 }

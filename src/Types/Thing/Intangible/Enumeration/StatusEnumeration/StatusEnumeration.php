@@ -4,9 +4,9 @@
  * @see https://schema.org/StatusEnumeration
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration;
 
-class StatusEnumeration extends \Vnet\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
+class StatusEnumeration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
 {
     const TYPE = 'StatusEnumeration';
 }

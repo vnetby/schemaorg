@@ -4,9 +4,9 @@
  * @see https://schema.org/BlogPosting
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Article\SocialMediaPosting\BlogPosting;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\SocialMediaPosting\BlogPosting;
 
-class BlogPosting extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Article\SocialMediaPosting\SocialMediaPosting
+class BlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\SocialMediaPosting\SocialMediaPosting
 {
     const TYPE = 'BlogPosting';
 }

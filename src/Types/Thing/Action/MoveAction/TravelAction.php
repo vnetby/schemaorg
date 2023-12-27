@@ -4,9 +4,9 @@
  * @see https://schema.org/TravelAction
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Action\MoveAction;
+namespace Vnetby\Schemaorg\Types\Thing\Action\MoveAction;
 
-class TravelAction extends \Vnet\Schemaorg\Types\Thing\Action\MoveAction\MoveAction
+class TravelAction extends \Vnetby\Schemaorg\Types\Thing\Action\MoveAction\MoveAction
 {
     const TYPE = 'TravelAction';
 }

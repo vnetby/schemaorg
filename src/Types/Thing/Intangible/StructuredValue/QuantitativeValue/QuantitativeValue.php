@@ -4,9 +4,9 @@
  * @see https://schema.org/QuantitativeValue
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue;
 
-class QuantitativeValue extends \Vnet\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+class QuantitativeValue extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
 {
     const TYPE = 'QuantitativeValue';
 }

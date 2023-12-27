@@ -4,9 +4,9 @@
  * @see https://schema.org/PodcastSeason
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason;
 
-class PodcastSeason extends \Vnet\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
+class PodcastSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
 {
     const TYPE = 'PodcastSeason';
 }

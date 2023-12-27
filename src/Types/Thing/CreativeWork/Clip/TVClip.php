@@ -4,9 +4,9 @@
  * @see https://schema.org/TVClip
  */
 
-namespace Vnet\Schemaorg\Types\Thing\CreativeWork\Clip;
+namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\Clip;
 
-class TVClip extends \Vnet\Schemaorg\Types\Thing\CreativeWork\Clip\Clip
+class TVClip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Clip\Clip
 {
     const TYPE = 'TVClip';
 }

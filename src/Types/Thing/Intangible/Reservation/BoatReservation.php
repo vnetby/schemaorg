@@ -4,9 +4,9 @@
  * @see https://schema.org/BoatReservation
  */
 
-namespace Vnet\Schemaorg\Types\Thing\Intangible\Reservation;
+namespace Vnetby\Schemaorg\Types\Thing\Intangible\Reservation;
 
-class BoatReservation extends \Vnet\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
+class BoatReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
 {
     const TYPE = 'BoatReservation';
 }
