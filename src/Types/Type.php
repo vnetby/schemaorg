@@ -29,19 +29,54 @@ abstract class Type
     }
 
 
-    static function itemscope(): string
+    /**
+     * - Размечает тег, который оборачивает данные
+     * @see https://schema.org/docs/gs.html
+     * @return string
+     */
+    static function scope(): string
     {
         return 'itemscope itemtype="' . static::TYPE_URL . '/' . static::TYPE . '"';
     }
 
 
-    static function itemprop(string $prop, string $itemScopeClass = null): string
+    /**
+     * - Размечает тег, который содержит значение какого-то свойства
+     * @see https://schema.org/docs/gs.html
+     * @param string $prop
+     * @param string $content
+     * @param class-string<Type> $itemScopeClass
+     * 
+     * @return string
+     */
+    static function prop(string $prop, string $content = '', string $itemScopeClass = null): string
     {
         $str = 'itemprop="' . $prop . '"';
-        if ($itemScopeClass === null) {
-            return $str;
+        if ($content !== '') {
+            $str .= ' content="' . $content . '"';
         }
-        $str .= ' ' . $itemScopeClass::itemscope();
+        if ($itemScopeClass !== null) {
+            $str .= ' ' . $itemScopeClass::scope();
+        }
+        return $str;
+    }
+
+
+    /**
+     * - Выводит скрытый тег link на сторонний ресурс
+     * @param string $url
+     * @return string
+     */
+    static function link(string $url): string
+    {
+        $str = '<link itemprop="url" href="' . $url . '" />';
+        return $str;
+    }
+
+
+    static function meta(string $itemprop, string $content): string
+    {
+        $str = '<meta itemprop="' . $itemprop . '" content="' . $content . '" />';
         return $str;
     }
 

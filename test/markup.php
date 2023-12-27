@@ -11,6 +11,10 @@ require __DIR__ . '/../vendor/autoload.php';
 
 ?>
 
-<div <?= Movie::itemscope(); ?>>
-    <h1 <?= Movie::itemprop('name', Person::class); ?>>Avatar</h1>
+<div <?= Movie::scope(); ?>>
+    <h1 <?= Movie::prop('name'); ?>>Avatar</h1>
+    <?= Movie::meta('poster', 'https://path-to-poster.jpg'); ?>
+    <div <?= Movie::prop('author', '', Person::class); ?>>
+        <?= Movie::link('https://authorurl.com/'); ?>
+    </div>
 </div>
