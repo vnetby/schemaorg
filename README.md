@@ -11,7 +11,7 @@ You can install the library via Composer. Add the following line to your compose
 ```json
 {
     "require": {
-        "vnetby/schemaorg": "1.0.1"
+        "vnetby/schemaorg": "#PACKAGE_VERSION#"
     }
 }
 ```
