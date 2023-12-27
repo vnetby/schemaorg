@@ -71,7 +71,7 @@ $jsonld = Jsonld::create($type);
 In the Jsonld class object, the following methods are available
 
 ```php
-$jsonld->toArray(); // returns array of json-ld markup
-$jsonld->generate(); // generates string of json-ld markup
-$jsonld->render(); // outputs json-ld markup
+$jsonld->toArray(); // returns an array of json-ld markup
+$jsonld->generate(); // generates a string with json-ld markup
+$jsonld->render(); // outputs the json-ld markup
 ```
