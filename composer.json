@@ -1,0 +1,18 @@
+{
+    "name": "vnetby/schemaorg",
+    "description": "schema.org helper",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Vnetby\\Schemaorg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vadzim Kananovich",
+            "email": "vadzim.kananovich.by@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
