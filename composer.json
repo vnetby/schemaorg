@@ -1,6 +1,6 @@
 {
     "name": "vnetby/schemaorg",
-    "description": "schema.org helper",
+    "description": "A small library for working with schema.org markup. Enables the generation of JSON-LD markup.",
     "type": "library",
     "autoload": {
         "psr-4": {
