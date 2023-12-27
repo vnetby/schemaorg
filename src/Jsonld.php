@@ -4,9 +4,9 @@
  * - Класс для генерации разметки json-ld
  */
 
-namespace Vnet\Schemaorg;
+namespace Vnetby\Schemaorg;
 
-use Vnet\Schemaorg\Types\Type;
+use Vnetby\Schemaorg\Types\Type;
 
 class Jsonld
 {
