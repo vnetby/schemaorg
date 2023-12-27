@@ -20,6 +20,12 @@ Then run the following command:
 composer install
 ```
 
+You can install the latest version by running the command
+
+```bash
+composer require vnetby/schemaorg
+```
+
 ## Usage
 
 Create an instance of the class type you want to use for markup, pass an array of properties to it according to the schema.org documentation:
