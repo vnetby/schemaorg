@@ -115,15 +115,15 @@ const getTypeClassContent = (item) => {
     let str = `<?php
 
 /**
-* @see https://schema.org/${className}
+ * @see https://schema.org/${className}
 ${comment}
-*/
+ */
 
 namespace ${nameSpace};
 
 class ${className} extends ${extend}
 {
-   const TYPE = '${className}';`;
+    const TYPE = '${className}';`;
 
     if (strProps) {
         str += `
@@ -155,14 +155,14 @@ const getTypeClassGettersStr = (item) => {
         let comment = formatComment(prop['rdfs:comment'], 5);
         let types = prop.types.length ? prop.types.join('|') : 'void';
         let str = `
-   /**
+    /**
 ${comment}
-    * @return ${types}|null
-    */
-   function ${fnName}()
-   {
-       return $this->getProp('${propName}');
-   }`;
+     * @return ${types}|null
+     */
+    function ${fnName}()
+    {
+        return $this->getProp('${propName}');
+    }`;
         arrStr.push(str);
     }
 
@@ -180,15 +180,15 @@ const getTypeClassSettersStr = (item) => {
         let comment = formatComment(prop['rdfs:comment'], 5);
         let types = prop.types.length ? prop.types.join('|') : 'void';
         let str = `
-   /**
+    /**
 ${comment}
-    * @param ${types} $value
-    * @return static
-    */
-   function ${fnName}($value)
-   {
-       return $this->setProp('${propName}', $value);
-   }`;
+     * @param ${types} $value
+     * @return static
+     */
+    function ${fnName}($value)
+    {
+        return $this->setProp('${propName}', $value);
+    }`;
         arrStr.push(str);
     }
 
@@ -208,11 +208,11 @@ const getTypeClassPropsStr = (item) => {
             types = 'mixed';
         }
         let str = `
-   /**
+    /**
 ${comment}
-    * @var ${types}
-    */
-   protected $prop_${name};`;
+     * @var ${types}
+     */
+    protected $prop_${name};`;
         arrStr.push(str);
     }
 
@@ -257,13 +257,13 @@ const createDataTypes = (data, extend = BASE_CLASS_DATA_TYPES) => {
 
 const getDataTypeClassContent = (item, extend = null) => {
     let className = 'Data' + ucFirst(item['rdfs:label']);
-    let comment = formatComment(item['rdfs:comment']);
+    let comment = formatComment(item['rdfs:comment'], 1);
     let strExtend = extend ? ' extends ' + extend : '';
     let str = `<?php
 
 /**
 ${comment}
-*/
+ */
 
 namespace ${NAMESPACE_DATA_TYPES};
 

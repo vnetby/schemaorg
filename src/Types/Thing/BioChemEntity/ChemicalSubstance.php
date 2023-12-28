@@ -1,89 +1,89 @@
 <?php
 
 /**
-* @see https://schema.org/ChemicalSubstance
+ * @see https://schema.org/ChemicalSubstance
  * A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of
  * different types' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).
-*/
+ */
 
 namespace Vnetby\Schemaorg\Types\Thing\BioChemEntity;
 
 class ChemicalSubstance extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
 {
-   const TYPE = 'ChemicalSubstance';
+    const TYPE = 'ChemicalSubstance';
 
-   /**
+    /**
      * Intended use of the BioChemEntity by humans.
-    * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-    */
-   protected $prop_potentialUse;
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     */
+    protected $prop_potentialUse;
 
-   /**
+    /**
      * A role played by the BioChemEntity within a chemical context.
-    * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-    */
-   protected $prop_chemicalRole;
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     */
+    protected $prop_chemicalRole;
 
-   /**
+    /**
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
-    * @var \Vnetby\Schemaorg\DataTypes\DataText
-    */
-   protected $prop_chemicalComposition;
+     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     */
+    protected $prop_chemicalComposition;
 
-   /**
+    /**
      * Intended use of the BioChemEntity by humans.
-    * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-    * @return static
-    */
-   function setPotentialUse($value)
-   {
-       return $this->setProp('potentialUse', $value);
-   }
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @return static
+     */
+    function setPotentialUse($value)
+    {
+        return $this->setProp('potentialUse', $value);
+    }
 
-   /**
+    /**
      * A role played by the BioChemEntity within a chemical context.
-    * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-    * @return static
-    */
-   function setChemicalRole($value)
-   {
-       return $this->setProp('chemicalRole', $value);
-   }
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @return static
+     */
+    function setChemicalRole($value)
+    {
+        return $this->setProp('chemicalRole', $value);
+    }
 
-   /**
+    /**
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
-    * @param \Vnetby\Schemaorg\DataTypes\DataText $value
-    * @return static
-    */
-   function setChemicalComposition($value)
-   {
-       return $this->setProp('chemicalComposition', $value);
-   }
+     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setChemicalComposition($value)
+    {
+        return $this->setProp('chemicalComposition', $value);
+    }
 
-   /**
+    /**
      * Intended use of the BioChemEntity by humans.
-    * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-    */
-   function getPotentialUse()
-   {
-       return $this->getProp('potentialUse');
-   }
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     */
+    function getPotentialUse()
+    {
+        return $this->getProp('potentialUse');
+    }
 
-   /**
+    /**
      * A role played by the BioChemEntity within a chemical context.
-    * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-    */
-   function getChemicalRole()
-   {
-       return $this->getProp('chemicalRole');
-   }
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     */
+    function getChemicalRole()
+    {
+        return $this->getProp('chemicalRole');
+    }
 
-   /**
+    /**
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
-    * @return \Vnetby\Schemaorg\DataTypes\DataText|null
-    */
-   function getChemicalComposition()
-   {
-       return $this->getProp('chemicalComposition');
-   }
+     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getChemicalComposition()
+    {
+        return $this->getProp('chemicalComposition');
+    }
 }

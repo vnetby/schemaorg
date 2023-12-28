@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Data type: URL.
-*/
+ * Data type: URL.
+ */
 
 namespace Vnetby\Schemaorg\DataTypes;
 

@@ -1,8 +1,8 @@
 <?php
 
 /**
-* The boolean value true.
-*/
+ * The boolean value true.
+ */
 
 namespace Vnetby\Schemaorg\DataTypes;
 

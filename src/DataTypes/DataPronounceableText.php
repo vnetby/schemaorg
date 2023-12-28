@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Data type: PronounceableText.
-*/
+ * Data type: PronounceableText.
+ */
 
 namespace Vnetby\Schemaorg\DataTypes;
 

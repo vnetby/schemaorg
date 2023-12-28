@@ -1,63 +1,63 @@
 <?php
 
 /**
-* @see https://schema.org/Menu
+ * @see https://schema.org/Menu
  * A structured representation of food or drink items available from a FoodEstablishment.
-*/
+ */
 
 namespace Vnetby\Schemaorg\Types\Thing\CreativeWork;
 
 class Menu extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 {
-   const TYPE = 'Menu';
+    const TYPE = 'Menu';
 
-   /**
+    /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
-    * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection
-    */
-   protected $prop_hasMenuSection;
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection
+     */
+    protected $prop_hasMenuSection;
 
-   /**
+    /**
      * A food or drink item contained in a menu or menu section.
-    * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem
-    */
-   protected $prop_hasMenuItem;
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem
+     */
+    protected $prop_hasMenuItem;
 
-   /**
+    /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
-    * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection $value
-    * @return static
-    */
-   function setHasMenuSection($value)
-   {
-       return $this->setProp('hasMenuSection', $value);
-   }
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection $value
+     * @return static
+     */
+    function setHasMenuSection($value)
+    {
+        return $this->setProp('hasMenuSection', $value);
+    }
 
-   /**
+    /**
      * A food or drink item contained in a menu or menu section.
-    * @param \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem $value
-    * @return static
-    */
-   function setHasMenuItem($value)
-   {
-       return $this->setProp('hasMenuItem', $value);
-   }
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem $value
+     * @return static
+     */
+    function setHasMenuItem($value)
+    {
+        return $this->setProp('hasMenuItem', $value);
+    }
 
-   /**
+    /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
-    * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection|null
-    */
-   function getHasMenuSection()
-   {
-       return $this->getProp('hasMenuSection');
-   }
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection|null
+     */
+    function getHasMenuSection()
+    {
+        return $this->getProp('hasMenuSection');
+    }
 
-   /**
+    /**
      * A food or drink item contained in a menu or menu section.
-    * @return \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|null
-    */
-   function getHasMenuItem()
-   {
-       return $this->getProp('hasMenuItem');
-   }
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|null
+     */
+    function getHasMenuItem()
+    {
+        return $this->getProp('hasMenuItem');
+    }
 }

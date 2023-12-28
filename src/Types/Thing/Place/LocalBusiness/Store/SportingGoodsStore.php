@@ -1,13 +1,13 @@
 <?php
 
 /**
-* @see https://schema.org/SportingGoodsStore
+ * @see https://schema.org/SportingGoodsStore
  * A sporting goods store.
-*/
+ */
 
 namespace Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\Store;
 
 class SportingGoodsStore extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\Store\Store
 {
-   const TYPE = 'SportingGoodsStore';
+    const TYPE = 'SportingGoodsStore';
 }

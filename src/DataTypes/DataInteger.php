@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Data type: Integer.
-*/
+ * Data type: Integer.
+ */
 
 namespace Vnetby\Schemaorg\DataTypes;
 

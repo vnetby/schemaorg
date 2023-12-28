@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Data type: Floating number.
-*/
+ * Data type: Floating number.
+ */
 
 namespace Vnetby\Schemaorg\DataTypes;
 

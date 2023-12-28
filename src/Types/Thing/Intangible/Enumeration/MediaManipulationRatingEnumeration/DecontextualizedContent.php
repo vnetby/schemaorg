@@ -1,7 +1,7 @@
 <?php
 
 /**
-* @see https://schema.org/DecontextualizedContent
+ * @see https://schema.org/DecontextualizedContent
  * Content coded 'missing context' in a [[MediaReview]], considered in the context of how it was published or shared. For a [[VideoObject]]
  * to be 'missing context': Presenting unaltered video in an inaccurate manner that misrepresents the footage. For example, using incorrect dates or
  * locations, altering the transcript or sharing brief clips from a longer video to mislead viewers. (A video rated 'original' can also
@@ -13,11 +13,11 @@
  * text would generally fall in this category.) For an [[AudioObject]] to be 'missing context': Unaltered audio presented in an inaccurate manner
  * that misrepresents it. For example, using incorrect dates or locations, or sharing brief clips from a longer recording to mislead viewers.
  * (Audio rated “original” can also be missing context.) 
-*/
+ */
 
 namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration;
 
 class DecontextualizedContent extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration\MediaManipulationRatingEnumeration
 {
-   const TYPE = 'DecontextualizedContent';
+    const TYPE = 'DecontextualizedContent';
 }

@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Data type: Text.
-*/
+ * Data type: Text.
+ */
 
 namespace Vnetby\Schemaorg\DataTypes;
 

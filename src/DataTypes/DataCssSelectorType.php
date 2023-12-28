@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Text representing a CSS selector.
-*/
+ * Text representing a CSS selector.
+ */
 
 namespace Vnetby\Schemaorg\DataTypes;
 

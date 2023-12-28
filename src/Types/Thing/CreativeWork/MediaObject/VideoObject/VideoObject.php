@@ -1,219 +1,219 @@
 <?php
 
 /**
-* @see https://schema.org/VideoObject
+ * @see https://schema.org/VideoObject
  * A video file.
-*/
+ */
 
 namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject;
 
 class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
 {
-   const TYPE = 'VideoObject';
+    const TYPE = 'VideoObject';
 
-   /**
+    /**
      * The composer of the soundtrack.
-    * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
-    */
-   protected $prop_musicBy;
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    protected $prop_musicBy;
 
-   /**
+    /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
-    * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-    */
-   protected $prop_director;
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    protected $prop_director;
 
-   /**
+    /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-    * @var \Vnetby\Schemaorg\DataTypes\DataText
-    */
-   protected $prop_transcript;
+     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     */
+    protected $prop_transcript;
 
-   /**
+    /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-    * @var \Vnetby\Schemaorg\DataTypes\DataText
-    */
-   protected $prop_embeddedTextCaption;
+     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     */
+    protected $prop_embeddedTextCaption;
 
-   /**
+    /**
      * The frame size of the video.
-    * @var \Vnetby\Schemaorg\DataTypes\DataText
-    */
-   protected $prop_videoFrameSize;
+     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     */
+    protected $prop_videoFrameSize;
 
-   /**
+    /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
-    * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-    */
-   protected $prop_actor;
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    protected $prop_actor;
 
-   /**
+    /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-    * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
-    */
-   protected $prop_caption;
+     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     */
+    protected $prop_caption;
 
-   /**
+    /**
      * The quality of the video.
-    * @var \Vnetby\Schemaorg\DataTypes\DataText
-    */
-   protected $prop_videoQuality;
+     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     */
+    protected $prop_videoQuality;
 
-   /**
+    /**
      * The composer of the soundtrack.
-    * @param \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
-    * @return static
-    */
-   function setMusicBy($value)
-   {
-       return $this->setProp('musicBy', $value);
-   }
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setMusicBy($value)
+    {
+        return $this->setProp('musicBy', $value);
+    }
 
-   /**
+    /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
-    * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-    * @return static
-    */
-   function setDirector($value)
-   {
-       return $this->setProp('director', $value);
-   }
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setDirector($value)
+    {
+        return $this->setProp('director', $value);
+    }
 
-   /**
+    /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-    * @param \Vnetby\Schemaorg\DataTypes\DataText $value
-    * @return static
-    */
-   function setTranscript($value)
-   {
-       return $this->setProp('transcript', $value);
-   }
+     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTranscript($value)
+    {
+        return $this->setProp('transcript', $value);
+    }
 
-   /**
+    /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-    * @param \Vnetby\Schemaorg\DataTypes\DataText $value
-    * @return static
-    */
-   function setEmbeddedTextCaption($value)
-   {
-       return $this->setProp('embeddedTextCaption', $value);
-   }
+     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setEmbeddedTextCaption($value)
+    {
+        return $this->setProp('embeddedTextCaption', $value);
+    }
 
-   /**
+    /**
      * The frame size of the video.
-    * @param \Vnetby\Schemaorg\DataTypes\DataText $value
-    * @return static
-    */
-   function setVideoFrameSize($value)
-   {
-       return $this->setProp('videoFrameSize', $value);
-   }
+     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setVideoFrameSize($value)
+    {
+        return $this->setProp('videoFrameSize', $value);
+    }
 
-   /**
+    /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
-    * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-    * @return static
-    */
-   function setActor($value)
-   {
-       return $this->setProp('actor', $value);
-   }
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setActor($value)
+    {
+        return $this->setProp('actor', $value);
+    }
 
-   /**
+    /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-    * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
-    * @return static
-    */
-   function setCaption($value)
-   {
-       return $this->setProp('caption', $value);
-   }
+     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @return static
+     */
+    function setCaption($value)
+    {
+        return $this->setProp('caption', $value);
+    }
 
-   /**
+    /**
      * The quality of the video.
-    * @param \Vnetby\Schemaorg\DataTypes\DataText $value
-    * @return static
-    */
-   function setVideoQuality($value)
-   {
-       return $this->setProp('videoQuality', $value);
-   }
+     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setVideoQuality($value)
+    {
+        return $this->setProp('videoQuality', $value);
+    }
 
-   /**
+    /**
      * The composer of the soundtrack.
-    * @return \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
-    */
-   function getMusicBy()
-   {
-       return $this->getProp('musicBy');
-   }
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getMusicBy()
+    {
+        return $this->getProp('musicBy');
+    }
 
-   /**
+    /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
-    * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-    */
-   function getDirector()
-   {
-       return $this->getProp('director');
-   }
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getDirector()
+    {
+        return $this->getProp('director');
+    }
 
-   /**
+    /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-    * @return \Vnetby\Schemaorg\DataTypes\DataText|null
-    */
-   function getTranscript()
-   {
-       return $this->getProp('transcript');
-   }
+     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTranscript()
+    {
+        return $this->getProp('transcript');
+    }
 
-   /**
+    /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-    * @return \Vnetby\Schemaorg\DataTypes\DataText|null
-    */
-   function getEmbeddedTextCaption()
-   {
-       return $this->getProp('embeddedTextCaption');
-   }
+     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getEmbeddedTextCaption()
+    {
+        return $this->getProp('embeddedTextCaption');
+    }
 
-   /**
+    /**
      * The frame size of the video.
-    * @return \Vnetby\Schemaorg\DataTypes\DataText|null
-    */
-   function getVideoFrameSize()
-   {
-       return $this->getProp('videoFrameSize');
-   }
+     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getVideoFrameSize()
+    {
+        return $this->getProp('videoFrameSize');
+    }
 
-   /**
+    /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
-    * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-    */
-   function getActor()
-   {
-       return $this->getProp('actor');
-   }
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getActor()
+    {
+        return $this->getProp('actor');
+    }
 
-   /**
+    /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-    * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
-    */
-   function getCaption()
-   {
-       return $this->getProp('caption');
-   }
+     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     */
+    function getCaption()
+    {
+        return $this->getProp('caption');
+    }
 
-   /**
+    /**
      * The quality of the video.
-    * @return \Vnetby\Schemaorg\DataTypes\DataText|null
-    */
-   function getVideoQuality()
-   {
-       return $this->getProp('videoQuality');
-   }
+     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getVideoQuality()
+    {
+        return $this->getProp('videoQuality');
+    }
 }

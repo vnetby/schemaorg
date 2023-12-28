@@ -1,14 +1,14 @@
 <?php
 
 /**
-* @see https://schema.org/Periodical
+ * @see https://schema.org/Periodical
  * A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as
  * a magazine, scholarly journal, or newspaper.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
-*/
+ */
 
 namespace Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries\Periodical;
 
 class Periodical extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries\CreativeWorkSeries
 {
-   const TYPE = 'Periodical';
+    const TYPE = 'Periodical';
 }
