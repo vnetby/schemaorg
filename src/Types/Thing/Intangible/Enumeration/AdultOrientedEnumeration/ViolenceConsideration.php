@@ -1,12 +1,13 @@
 <?php
 
 /**
- * @see https://schema.org/ViolenceConsideration
- */
+* @see https://schema.org/ViolenceConsideration
+ * Item shows or promotes violence.
+*/
 
 namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration;
 
 class ViolenceConsideration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
 {
-    const TYPE = 'ViolenceConsideration';
+   const TYPE = 'ViolenceConsideration';
 }

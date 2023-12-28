@@ -10,6 +10,7 @@
 namespace Vnetby\Schemaorg\Types;
 
 use ReflectionObject;
+use Vnetby\Schemaorg\DataTypes\DataType;
 
 abstract class Type
 {
@@ -142,7 +143,20 @@ abstract class Type
     function setProp(string $origKey, $value)
     {
         $key = "prop_{$origKey}";
+        if ($value instanceof DataType) {
+            $value = (string)$value;
+        }
         $this->$key = $value;
         return $this;
+    }
+
+
+    /**
+     * - Получает свойство
+     */
+    function getProp(string $origKey)
+    {
+        $key = "prop_{$origKey}";
+        return $this->$key;
     }
 }

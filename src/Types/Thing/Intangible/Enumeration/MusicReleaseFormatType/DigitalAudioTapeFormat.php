@@ -1,12 +1,13 @@
 <?php
 
 /**
- * @see https://schema.org/DigitalAudioTapeFormat
- */
+* @see https://schema.org/DigitalAudioTapeFormat
+ * DigitalAudioTapeFormat.
+*/
 
 namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
 
 class DigitalAudioTapeFormat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
 {
-    const TYPE = 'DigitalAudioTapeFormat';
+   const TYPE = 'DigitalAudioTapeFormat';
 }

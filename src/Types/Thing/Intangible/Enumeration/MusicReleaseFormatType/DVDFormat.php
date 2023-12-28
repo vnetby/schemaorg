@@ -1,12 +1,13 @@
 <?php
 
 /**
- * @see https://schema.org/DVDFormat
- */
+* @see https://schema.org/DVDFormat
+ * DVDFormat.
+*/
 
 namespace Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType;
 
 class DVDFormat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
 {
-    const TYPE = 'DVDFormat';
+   const TYPE = 'DVDFormat';
 }
