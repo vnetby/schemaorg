@@ -83,3 +83,17 @@ $jsonld->toArray(); // returns an array of json-ld markup
 $jsonld->generate(); // generates a string with json-ld markup
 $jsonld->render(); // outputs the json-ld markup
 ```
+
+Each class type has a set of methods for setting and retrieving properties
+
+```php
+use Vnetby\Schemaorg\DataTypes\DataDate;
+use Vnetby\Schemaorg\Types\Thing\Event\Event;
+
+$event = new Event;
+$event
+    ->setEndDate(new DataDate('23-03-1995'))
+    ->setStartDate(new DataDate('23-03-1995'));
+
+$date = $event->getStartDate();
+```
