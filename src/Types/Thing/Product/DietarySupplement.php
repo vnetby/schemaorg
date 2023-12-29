@@ -16,62 +16,62 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\RecommendedDoseSchedule
      */
-    protected $prop_recommendedIntake;
+    public $recommendedIntake;
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_proprietaryName;
+    public $proprietaryName;
 
     /**
      * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions,
      * and documented efficacy of the supplement.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_safetyConsideration;
+    public $safetyConsideration;
 
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isProprietary;
+    public $isProprietary;
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_activeIngredient;
+    public $activeIngredient;
 
     /**
      * The generic name of this drug or supplement.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_nonProprietaryName;
+    public $nonProprietaryName;
 
     /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule
      */
-    protected $prop_maximumIntake;
+    public $maximumIntake;
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_legalStatus;
+    public $legalStatus;
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_mechanismOfAction;
+    public $mechanismOfAction;
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_targetPopulation;
+    public $targetPopulation;
 
     /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
@@ -85,7 +85,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setProprietaryName($value)
@@ -96,7 +96,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions,
      * and documented efficacy of the supplement.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSafetyConsideration($value)
@@ -106,7 +106,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsProprietary($value)
@@ -116,7 +116,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setActiveIngredient($value)
@@ -126,7 +126,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The generic name of this drug or supplement.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setNonProprietaryName($value)
@@ -146,7 +146,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLegalStatus($value)
@@ -156,7 +156,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMechanismOfAction($value)
@@ -166,7 +166,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTargetPopulation($value)
@@ -185,7 +185,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProprietaryName()
     {
@@ -195,7 +195,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions,
      * and documented efficacy of the supplement.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSafetyConsideration()
     {
@@ -204,7 +204,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsProprietary()
     {
@@ -213,7 +213,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getActiveIngredient()
     {
@@ -222,7 +222,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The generic name of this drug or supplement.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getNonProprietaryName()
     {
@@ -240,7 +240,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLegalStatus()
     {
@@ -249,7 +249,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMechanismOfAction()
     {
@@ -258,7 +258,7 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTargetPopulation()
     {

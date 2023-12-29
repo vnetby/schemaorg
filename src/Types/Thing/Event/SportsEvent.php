@@ -15,25 +15,25 @@ class SportsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
      * The home team in a sports event.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_homeTeam;
+    public $homeTeam;
 
     /**
      * A type of sport (e.g. Baseball).
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_sport;
+    public $sport;
 
     /**
      * A competitor in a sports event.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam
      */
-    protected $prop_competitor;
+    public $competitor;
 
     /**
      * The away team in a sports event.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam
      */
-    protected $prop_awayTeam;
+    public $awayTeam;
 
     /**
      * The home team in a sports event.
@@ -47,7 +47,7 @@ class SportsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * A type of sport (e.g. Baseball).
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSport($value)
@@ -86,7 +86,7 @@ class SportsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * A type of sport (e.g. Baseball).
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSport()
     {

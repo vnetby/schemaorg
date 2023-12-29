@@ -13,19 +13,19 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_codeValue;
+    public $codeValue;
 
     /**
      * A [[CategoryCodeSet]] that contains this category code.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\CategoryCodeSet|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\CategoryCodeSet|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_inCodeSet;
+    public $inCodeSet;
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCodeValue($value)
@@ -35,7 +35,7 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
 
     /**
      * A [[CategoryCodeSet]] that contains this category code.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\CategoryCodeSet|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\CategoryCodeSet|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setInCodeSet($value)
@@ -45,7 +45,7 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCodeValue()
     {
@@ -54,7 +54,7 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
 
     /**
      * A [[CategoryCodeSet]] that contains this category code.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\CategoryCodeSet|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\CategoryCodeSet|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getInCodeSet()
     {

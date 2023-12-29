@@ -16,7 +16,7 @@ class TrackAction extends \Vnetby\Schemaorg\Types\Thing\Action\FindAction\FindAc
      * A sub property of instrument. The method of delivery.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
-    protected $prop_deliveryMethod;
+    public $deliveryMethod;
 
     /**
      * A sub property of instrument. The method of delivery.

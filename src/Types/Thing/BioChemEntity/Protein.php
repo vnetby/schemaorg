@@ -17,14 +17,14 @@ class Protein extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     /**
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
      * Protein.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_hasBioPolymerSequence;
+    public $hasBioPolymerSequence;
 
     /**
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
      * Protein.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHasBioPolymerSequence($value)
@@ -35,7 +35,7 @@ class Protein extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     /**
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
      * Protein.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHasBioPolymerSequence()
     {

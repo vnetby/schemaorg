@@ -13,38 +13,38 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for <a href='unitCode'>unitCode</a>.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_unitText;
+    public $unitText;
 
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
      * Code may be used with a prefix followed by a colon.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_unitCode;
+    public $unitCode;
 
     /**
      * The quantity of the goods included in the offer.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_amountOfThisGood;
+    public $amountOfThisGood;
 
     /**
      * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction
      */
-    protected $prop_businessFunction;
+    public $businessFunction;
 
     /**
      * The product that this structured value is referring to.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_typeOfGood;
+    public $typeOfGood;
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for <a href='unitCode'>unitCode</a>.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setUnitText($value)
@@ -55,7 +55,7 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
      * Code may be used with a prefix followed by a colon.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setUnitCode($value)
@@ -65,7 +65,7 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
 
     /**
      * The quantity of the goods included in the offer.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setAmountOfThisGood($value)
@@ -95,7 +95,7 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for <a href='unitCode'>unitCode</a>.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getUnitText()
     {
@@ -105,7 +105,7 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
      * Code may be used with a prefix followed by a colon.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getUnitCode()
     {
@@ -114,7 +114,7 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
 
     /**
      * The quantity of the goods included in the offer.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getAmountOfThisGood()
     {

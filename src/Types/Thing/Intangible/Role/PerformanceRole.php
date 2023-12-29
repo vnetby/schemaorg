@@ -13,13 +13,13 @@ class PerformanceRole extends \Vnetby\Schemaorg\Types\Thing\Intangible\Role\Role
 
     /**
      * The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_characterName;
+    public $characterName;
 
     /**
      * The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCharacterName($value)
@@ -29,7 +29,7 @@ class PerformanceRole extends \Vnetby\Schemaorg\Types\Thing\Intangible\Role\Role
 
     /**
      * The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCharacterName()
     {

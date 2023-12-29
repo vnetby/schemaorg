@@ -14,64 +14,64 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     /**
      * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact
      * point and so on. This property is used to specify the kind of contact point.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_contactType;
+    public $contactType;
 
     /**
      * The telephone number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_telephone;
+    public $telephone;
 
     /**
      * An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption
      */
-    protected $prop_contactOption;
+    public $contactOption;
 
     /**
      * Email address.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_email;
+    public $email;
 
     /**
      * The product or service this support contact point is related to (such as product support for a particular product line). This
      * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_productSupported;
+    public $productSupported;
 
     /**
      * The fax number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_faxNumber;
+    public $faxNumber;
 
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_availableLanguage;
+    public $availableLanguage;
 
     /**
      * The hours during which this service or contact is available.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
      */
-    protected $prop_hoursAvailable;
+    public $hoursAvailable;
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_areaServed;
+    public $areaServed;
 
     /**
      * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact
      * point and so on. This property is used to specify the kind of contact point.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setContactType($value)
@@ -81,7 +81,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * The telephone number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTelephone($value)
@@ -101,7 +101,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * Email address.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmail($value)
@@ -112,7 +112,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     /**
      * The product or service this support contact point is related to (such as product support for a particular product line). This
      * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setProductSupported($value)
@@ -122,7 +122,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * The fax number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFaxNumber($value)
@@ -133,7 +133,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setAvailableLanguage($value)
@@ -153,7 +153,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAreaServed($value)
@@ -164,7 +164,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     /**
      * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact
      * point and so on. This property is used to specify the kind of contact point.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getContactType()
     {
@@ -173,7 +173,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * The telephone number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTelephone()
     {
@@ -191,7 +191,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * Email address.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmail()
     {
@@ -201,7 +201,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     /**
      * The product or service this support contact point is related to (such as product support for a particular product line). This
      * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProductSupported()
     {
@@ -210,7 +210,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * The fax number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFaxNumber()
     {
@@ -220,7 +220,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getAvailableLanguage()
     {
@@ -238,7 +238,7 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAreaServed()
     {

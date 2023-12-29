@@ -16,7 +16,7 @@ class ReviewAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\Ass
      * A sub property of result. The review that resulted in the performing of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
      */
-    protected $prop_resultReview;
+    public $resultReview;
 
     /**
      * A sub property of result. The review that resulted in the performing of the action.

@@ -13,13 +13,13 @@ class EducationalAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audie
 
     /**
      * An educationalRole of an EducationalAudience.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_educationalRole;
+    public $educationalRole;
 
     /**
      * An educationalRole of an EducationalAudience.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEducationalRole($value)
@@ -29,7 +29,7 @@ class EducationalAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audie
 
     /**
      * An educationalRole of an EducationalAudience.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEducationalRole()
     {

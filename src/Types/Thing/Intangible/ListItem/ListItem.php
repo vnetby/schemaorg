@@ -15,25 +15,25 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_item;
+    public $item;
 
     /**
      * A link to the ListItem that precedes the current one.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem
      */
-    protected $prop_previousItem;
+    public $previousItem;
 
     /**
      * The position of an item in a series or sequence of items.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_position;
+    public $position;
 
     /**
      * A link to the ListItem that follows the current one.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem
      */
-    protected $prop_nextItem;
+    public $nextItem;
 
     /**
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
@@ -57,7 +57,7 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The position of an item in a series or sequence of items.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setPosition($value)
@@ -95,7 +95,7 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The position of an item in a series or sequence of items.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getPosition()
     {

@@ -13,60 +13,60 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
 
     /**
      * The earliest someone may check into a lodging establishment.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_checkinTime;
+    public $checkinTime;
 
     /**
      * The latest someone may check out of a lodging establishment.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_checkoutTime;
+    public $checkoutTime;
 
     /**
      * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property
      * to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating
      */
-    protected $prop_starRating;
+    public $starRating;
 
     /**
      * An intended audience, i.e. a group for whom something was created.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_audience;
+    public $audience;
 
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_petsAllowed;
+    public $petsAllowed;
 
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_availableLanguage;
+    public $availableLanguage;
 
     /**
      * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
      * the feature is included in an offer for the main accommodation or available at extra costs.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification
      */
-    protected $prop_amenityFeature;
+    public $amenityFeature;
 
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_numberOfRooms;
+    public $numberOfRooms;
 
     /**
      * The earliest someone may check into a lodging establishment.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setCheckinTime($value)
@@ -76,7 +76,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
 
     /**
      * The latest someone may check out of a lodging establishment.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setCheckoutTime($value)
@@ -108,7 +108,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPetsAllowed($value)
@@ -119,7 +119,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setAvailableLanguage($value)
@@ -141,7 +141,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setNumberOfRooms($value)
@@ -151,7 +151,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
 
     /**
      * The earliest someone may check into a lodging establishment.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getCheckinTime()
     {
@@ -160,7 +160,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
 
     /**
      * The latest someone may check out of a lodging establishment.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getCheckoutTime()
     {
@@ -189,7 +189,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPetsAllowed()
     {
@@ -199,7 +199,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getAvailableLanguage()
     {
@@ -219,7 +219,7 @@ class LodgingBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getNumberOfRooms()
     {

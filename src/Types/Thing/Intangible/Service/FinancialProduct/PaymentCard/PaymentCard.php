@@ -15,26 +15,26 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
      * A floor limit is the amount of money above which credit card transactions must be authorized.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_floorLimit;
+    public $floorLimit;
 
     /**
      * The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each
      * month.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_monthlyMinimumRepaymentAmount;
+    public $monthlyMinimumRepaymentAmount;
 
     /**
      * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_cashBack;
+    public $cashBack;
 
     /**
      * A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_contactlessPayment;
+    public $contactlessPayment;
 
     /**
      * A floor limit is the amount of money above which credit card transactions must be authorized.
@@ -49,7 +49,7 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     /**
      * The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each
      * month.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
      * @return static
      */
     function setMonthlyMinimumRepaymentAmount($value)
@@ -59,7 +59,7 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
 
     /**
      * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setCashBack($value)
@@ -69,7 +69,7 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
 
     /**
      * A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setContactlessPayment($value)
@@ -89,7 +89,7 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     /**
      * The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each
      * month.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
      */
     function getMonthlyMinimumRepaymentAmount()
     {
@@ -98,7 +98,7 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
 
     /**
      * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getCashBack()
     {
@@ -107,7 +107,7 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
 
     /**
      * A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getContactlessPayment()
     {

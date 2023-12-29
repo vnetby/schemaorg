@@ -21,20 +21,20 @@ class Claim extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_appearance;
+    public $appearance;
 
     /**
      * For a [[Claim]] interpreted from [[MediaObject]] content sed to indicate a claim contained, implied or refined from the content of a
      * [[MediaObject]].
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_claimInterpreter;
+    public $claimInterpreter;
 
     /**
      * Indicates the first known occurrence of a [[Claim]] in some [[CreativeWork]].
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_firstAppearance;
+    public $firstAppearance;
 
     /**
      * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].

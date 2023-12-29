@@ -16,7 +16,7 @@ class GeospatialGeometry extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intang
      * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_geoCoveredBy;
+    public $geoCoveredBy;
 
     /**
      * Represents a relationship between two geometries (or the places they represent), relating a containing geometry to a contained geometry. "a contains
@@ -24,14 +24,14 @@ class GeospatialGeometry extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intang
      * b lies in the interior of a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    protected $prop_geoContains;
+    public $geoContains;
 
     /**
      * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e.
      * they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    protected $prop_geoOverlaps;
+    public $geoOverlaps;
 
     /**
      * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses
@@ -39,28 +39,28 @@ class GeospatialGeometry extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intang
      * of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_geoCrosses;
+    public $geoCrosses;
 
     /**
      * Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined
      * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    protected $prop_geoIntersects;
+    public $geoIntersects;
 
     /**
      * Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it
      * is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    protected $prop_geoWithin;
+    public $geoWithin;
 
     /**
      * Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common.
      * They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    protected $prop_geoDisjoint;
+    public $geoDisjoint;
 
     /**
      * Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries
@@ -68,21 +68,21 @@ class GeospatialGeometry extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intang
      * of the other" (a symmetric relationship).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_geoEquals;
+    public $geoEquals;
 
     /**
      * Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point
      * of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    protected $prop_geoCovers;
+    public $geoCovers;
 
     /**
      * Represents spatial relations in which two geometries (or the places they represent) touch: "they have at least one boundary point in
      * common, but no interior points." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    protected $prop_geoTouches;
+    public $geoTouches;
 
     /**
      * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined

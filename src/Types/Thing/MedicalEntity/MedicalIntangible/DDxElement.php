@@ -17,13 +17,13 @@ class DDxElement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInta
      * diagnosis.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSignOrSymptom
      */
-    protected $prop_distinguishingSign;
+    public $distinguishingSign;
 
     /**
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_diagnosis;
+    public $diagnosis;
 
     /**
      * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential

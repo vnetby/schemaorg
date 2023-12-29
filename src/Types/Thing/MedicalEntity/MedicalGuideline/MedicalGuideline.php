@@ -18,25 +18,25 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
      * Strength of evidence of the data used to formulate the guideline (enumerated).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEvidenceLevel\MedicalEvidenceLevel
      */
-    protected $prop_evidenceLevel;
+    public $evidenceLevel;
 
     /**
      * The medical conditions, treatments, etc. that are the subject of the guideline.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_guidelineSubject;
+    public $guidelineSubject;
 
     /**
      * Date on which this guideline's recommendation was made.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_guidelineDate;
+    public $guidelineDate;
 
     /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_evidenceOrigin;
+    public $evidenceOrigin;
 
     /**
      * Strength of evidence of the data used to formulate the guideline (enumerated).
@@ -60,7 +60,7 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Date on which this guideline's recommendation was made.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setGuidelineDate($value)
@@ -70,7 +70,7 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEvidenceOrigin($value)
@@ -98,7 +98,7 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Date on which this guideline's recommendation was made.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getGuidelineDate()
     {
@@ -107,7 +107,7 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEvidenceOrigin()
     {

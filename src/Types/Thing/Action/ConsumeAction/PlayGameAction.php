@@ -14,14 +14,14 @@ class PlayGameAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\
     /**
      * Indicates the availability type of the game content associated with this action, such as whether it is a full version or
      * a demo.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gameAvailabilityType;
+    public $gameAvailabilityType;
 
     /**
      * Indicates the availability type of the game content associated with this action, such as whether it is a full version or
      * a demo.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGameAvailabilityType($value)
@@ -32,7 +32,7 @@ class PlayGameAction extends \Vnetby\Schemaorg\Types\Thing\Action\ConsumeAction\
     /**
      * Indicates the availability type of the game content associated with this action, such as whether it is a full version or
      * a demo.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GameAvailabilityEnumeration\GameAvailabilityEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGameAvailabilityType()
     {

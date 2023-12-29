@@ -15,13 +15,13 @@ class ProductModel extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * A pointer from a previous, often discontinued variant of the product to its newer variant.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\ProductModel
      */
-    protected $prop_predecessorOf;
+    public $predecessorOf;
 
     /**
      * A pointer from a newer variant of a product to its previous, often discontinued predecessor.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\ProductModel
      */
-    protected $prop_successorOf;
+    public $successorOf;
 
     /**
      * Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from
@@ -32,7 +32,7 @@ class ProductModel extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * this property can apply to any [[Product]] included in the group.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\ProductModel|\Vnetby\Schemaorg\Types\Thing\Product\ProductGroup
      */
-    protected $prop_isVariantOf;
+    public $isVariantOf;
 
     /**
      * A pointer from a previous, often discontinued variant of the product to its newer variant.

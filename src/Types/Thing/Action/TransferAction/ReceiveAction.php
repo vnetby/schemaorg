@@ -17,13 +17,13 @@ class ReceiveAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
      * A sub property of participant. The participant who is at the sending end of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_sender;
+    public $sender;
 
     /**
      * A sub property of instrument. The method of delivery.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
-    protected $prop_deliveryMethod;
+    public $deliveryMethod;
 
     /**
      * A sub property of participant. The participant who is at the sending end of the action.

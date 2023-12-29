@@ -15,25 +15,25 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
      * The stop or station from which the bus arrives.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop
      */
-    protected $prop_arrivalBusStop;
+    public $arrivalBusStop;
 
     /**
      * The unique identifier for the bus.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_busNumber;
+    public $busNumber;
 
     /**
      * The stop or station from which the bus departs.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation
      */
-    protected $prop_departureBusStop;
+    public $departureBusStop;
 
     /**
      * The name of the bus (e.g. Bolt Express).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_busName;
+    public $busName;
 
     /**
      * The stop or station from which the bus arrives.
@@ -47,7 +47,7 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The unique identifier for the bus.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBusNumber($value)
@@ -67,7 +67,7 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The name of the bus (e.g. Bolt Express).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBusName($value)
@@ -86,7 +86,7 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The unique identifier for the bus.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBusNumber()
     {
@@ -104,7 +104,7 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The name of the bus (e.g. Bolt Express).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBusName()
     {

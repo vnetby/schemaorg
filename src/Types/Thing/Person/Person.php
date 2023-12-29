@@ -15,369 +15,369 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
      */
-    protected $prop_funding;
+    public $funding;
 
     /**
      * An Organization (or ProgramMembership) to which this Person or Organization belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\ProgramMembership
      */
-    protected $prop_memberOf;
+    public $memberOf;
 
     /**
      * Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text
      * strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used
      * in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not
      * try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType
      */
-    protected $prop_gender;
+    public $gender;
 
     /**
      * The height of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_height;
+    public $height;
 
     /**
      * The place where the person died.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_deathPlace;
+    public $deathPlace;
 
     /**
      * A pointer to products or services offered by the organization or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    protected $prop_makesOffer;
+    public $makesOffer;
 
     /**
      * The telephone number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_telephone;
+    public $telephone;
 
     /**
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical
      * Study or a corporate sponsor of an event.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_sponsor;
+    public $sponsor;
 
     /**
      * Products owned by the organization or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OwnershipInfo|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_owns;
+    public $owns;
 
     /**
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\OfferCatalog
      */
-    protected $prop_hasOfferCatalog;
+    public $hasOfferCatalog;
 
     /**
      * A contact location for a person's residence.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
-    protected $prop_homeLocation;
+    public $homeLocation;
 
     /**
      * A contact location for a person's place of work.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_workLocation;
+    public $workLocation;
 
     /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
      * place. The GLN is a 13-digit number used to identify parties and physical locations.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_globalLocationNumber;
+    public $globalLocationNumber;
 
     /**
      * The North American Industry Classification System (NAICS) code for a particular organization or business person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_naics;
+    public $naics;
 
     /**
      * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_honorificSuffix;
+    public $honorificSuffix;
 
     /**
      * Email address.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_email;
+    public $email;
 
     /**
      * The person's spouse.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_spouse;
+    public $spouse;
 
     /**
      * The weight of the product or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_weight;
+    public $weight;
 
     /**
      * The Value-added Tax ID of the organization or person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_vatID;
+    public $vatID;
 
     /**
      * A colleague of the person.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_colleague;
+    public $colleague;
 
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_taxID;
+    public $taxID;
 
     /**
      * Family name. In the U.S., the last name of a Person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_familyName;
+    public $familyName;
 
     /**
      * The fax number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_faxNumber;
+    public $faxNumber;
 
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise
      * but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]]
      * descriptions.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_knowsAbout;
+    public $knowsAbout;
 
     /**
      * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_honorificPrefix;
+    public $honorificPrefix;
 
     /**
      * Date of birth.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_birthDate;
+    public $birthDate;
 
     /**
      * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Brand|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_brand;
+    public $brand;
 
     /**
      * The job title of the person (for example, Financial Manager).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_jobTitle;
+    public $jobTitle;
 
     /**
      * The most generic uni-directional social relation.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_follows;
+    public $follows;
 
     /**
      * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be
      * used.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\InteractionCounter
      */
-    protected $prop_interactionStatistic;
+    public $interactionStatistic;
 
     /**
      * The place where the person was born.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_birthPlace;
+    public $birthPlace;
 
     /**
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_funder;
+    public $funder;
 
     /**
      * A parent of this person.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_parent;
+    public $parent;
 
     /**
      * Event that this person is a performer or participant in.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_performerIn;
+    public $performerIn;
 
     /**
      * An additional name for a Person, can be used for a middle name.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_additionalName;
+    public $additionalName;
 
     /**
      * Organizations that the person works for.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_worksFor;
+    public $worksFor;
 
     /**
      * The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the
      * statistic), and in a particular context (i.e. interactionService).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\InteractionCounter
      */
-    protected $prop_agentInteractionStatistic;
+    public $agentInteractionStatistic;
 
     /**
      * Nationality of the person.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country
      */
-    protected $prop_nationality;
+    public $nationality;
 
     /**
      * A pointer to products or services sought by the organization or person (demand).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Demand
      */
-    protected $prop_seeks;
+    public $seeks;
 
     /**
      * A credential awarded to the Person or Organization.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential
      */
-    protected $prop_hasCredential;
+    public $hasCredential;
 
     /**
      * Physical address of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_address;
+    public $address;
 
     /**
      * A contact point for a person or organization.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
-    protected $prop_contactPoint;
+    public $contactPoint;
 
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or
      * reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_knowsLanguage;
+    public $knowsLanguage;
 
     /**
      * The most generic bi-directional social/work relation.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_knows;
+    public $knows;
 
     /**
      * Points-of-Sales operated by the organization or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_hasPOS;
+    public $hasPOS;
 
     /**
      * The most generic familial relation.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_relatedTo;
+    public $relatedTo;
 
     /**
      * The Person's occupation. For past professions, use Role for expressing dates.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Occupation
      */
-    protected $prop_hasOccupation;
+    public $hasOccupation;
 
     /**
      * An organization that the person is an alumni of.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Organization\EducationalOrganization\EducationalOrganization
      */
-    protected $prop_alumniOf;
+    public $alumniOf;
 
     /**
      * The total financial value of the person as calculated by subtracting assets from liabilities.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_netWorth;
+    public $netWorth;
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_callSign;
+    public $callSign;
 
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
      * place.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_isicV4;
+    public $isicV4;
 
     /**
      * An organization that this person is affiliated with. For example, a school/university, a club, or a team.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_affiliation;
+    public $affiliation;
 
     /**
      * Date of death.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_deathDate;
+    public $deathDate;
 
     /**
      * The Dun & Bradstreet DUNS number for identifying an organization or business person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_duns;
+    public $duns;
 
     /**
      * An award won by or for this item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_award;
+    public $award;
 
     /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]]
      * writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]]
      * (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]]. While such policies are
      * most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology. 
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_publishingPrinciples;
+    public $publishingPrinciples;
 
     /**
      * A sibling of the person.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_sibling;
+    public $sibling;
 
     /**
      * A child of the person.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_children;
+    public $children;
 
     /**
      * Given name. In the U.S., the first name of a Person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_givenName;
+    public $givenName;
 
     /**
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
@@ -404,7 +404,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
      * strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used
      * in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not
      * try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType $value
      * @return static
      */
     function setGender($value)
@@ -444,7 +444,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The telephone number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTelephone($value)
@@ -506,7 +506,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
      * place. The GLN is a 13-digit number used to identify parties and physical locations.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGlobalLocationNumber($value)
@@ -516,7 +516,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The North American Industry Classification System (NAICS) code for a particular organization or business person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setNaics($value)
@@ -526,7 +526,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHonorificSuffix($value)
@@ -536,7 +536,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Email address.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmail($value)
@@ -566,7 +566,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Value-added Tax ID of the organization or person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVatID($value)
@@ -576,7 +576,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * A colleague of the person.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setColleague($value)
@@ -586,7 +586,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTaxID($value)
@@ -596,7 +596,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Family name. In the U.S., the last name of a Person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFamilyName($value)
@@ -606,7 +606,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The fax number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFaxNumber($value)
@@ -618,7 +618,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise
      * but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]]
      * descriptions.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setKnowsAbout($value)
@@ -628,7 +628,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHonorificPrefix($value)
@@ -638,7 +638,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Date of birth.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setBirthDate($value)
@@ -658,7 +658,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The job title of the person (for example, Financial Manager).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setJobTitle($value)
@@ -729,7 +729,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An additional name for a Person, can be used for a middle name.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAdditionalName($value)
@@ -790,7 +790,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Physical address of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAddress($value)
@@ -811,7 +811,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or
      * reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setKnowsLanguage($value)
@@ -881,7 +881,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCallSign($value)
@@ -892,7 +892,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
      * place.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIsicV4($value)
@@ -912,7 +912,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Date of death.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDeathDate($value)
@@ -922,7 +922,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Dun & Bradstreet DUNS number for identifying an organization or business person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDuns($value)
@@ -932,7 +932,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An award won by or for this item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAward($value)
@@ -945,7 +945,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
      * writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]]
      * (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]]. While such policies are
      * most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology. 
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setPublishingPrinciples($value)
@@ -975,7 +975,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Given name. In the U.S., the first name of a Person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGivenName($value)
@@ -1006,7 +1006,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
      * strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used
      * in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not
      * try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|null
      */
     function getGender()
     {
@@ -1042,7 +1042,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The telephone number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTelephone()
     {
@@ -1098,7 +1098,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
      * place. The GLN is a 13-digit number used to identify parties and physical locations.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGlobalLocationNumber()
     {
@@ -1107,7 +1107,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The North American Industry Classification System (NAICS) code for a particular organization or business person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getNaics()
     {
@@ -1116,7 +1116,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHonorificSuffix()
     {
@@ -1125,7 +1125,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Email address.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmail()
     {
@@ -1152,7 +1152,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Value-added Tax ID of the organization or person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVatID()
     {
@@ -1161,7 +1161,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * A colleague of the person.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getColleague()
     {
@@ -1170,7 +1170,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTaxID()
     {
@@ -1179,7 +1179,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Family name. In the U.S., the last name of a Person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFamilyName()
     {
@@ -1188,7 +1188,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The fax number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFaxNumber()
     {
@@ -1199,7 +1199,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise
      * but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]]
      * descriptions.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getKnowsAbout()
     {
@@ -1208,7 +1208,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHonorificPrefix()
     {
@@ -1217,7 +1217,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Date of birth.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getBirthDate()
     {
@@ -1235,7 +1235,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The job title of the person (for example, Financial Manager).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getJobTitle()
     {
@@ -1299,7 +1299,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An additional name for a Person, can be used for a middle name.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAdditionalName()
     {
@@ -1354,7 +1354,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Physical address of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAddress()
     {
@@ -1373,7 +1373,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or
      * reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getKnowsLanguage()
     {
@@ -1436,7 +1436,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCallSign()
     {
@@ -1446,7 +1446,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
      * place.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIsicV4()
     {
@@ -1464,7 +1464,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Date of death.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDeathDate()
     {
@@ -1473,7 +1473,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Dun & Bradstreet DUNS number for identifying an organization or business person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDuns()
     {
@@ -1482,7 +1482,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An award won by or for this item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAward()
     {
@@ -1494,7 +1494,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
      * writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]]
      * (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]]. While such policies are
      * most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology. 
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getPublishingPrinciples()
     {
@@ -1521,7 +1521,7 @@ class Person extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Given name. In the U.S., the first name of a Person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGivenName()
     {

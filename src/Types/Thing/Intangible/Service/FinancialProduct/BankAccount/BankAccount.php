@@ -16,13 +16,13 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
      * A minimum amount that has to be paid in every month.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_accountMinimumInflow;
+    public $accountMinimumInflow;
 
     /**
      * The type of a bank account.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_bankAccountType;
+    public $bankAccountType;
 
     /**
      * An overdraft is an extension of credit from a lending institution when an account reaches zero. An overdraft allows the individual
@@ -30,7 +30,7 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
      * set amount of money.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_accountOverdraftLimit;
+    public $accountOverdraftLimit;
 
     /**
      * A minimum amount that has to be paid in every month.
@@ -44,7 +44,7 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
 
     /**
      * The type of a bank account.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setBankAccountType($value)
@@ -75,7 +75,7 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
 
     /**
      * The type of a bank account.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getBankAccountType()
     {

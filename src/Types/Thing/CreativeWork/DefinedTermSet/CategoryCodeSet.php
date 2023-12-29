@@ -15,7 +15,7 @@ class CategoryCodeSet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Defined
      * A Category code contained in this code set.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode
      */
-    protected $prop_hasCategoryCode;
+    public $hasCategoryCode;
 
     /**
      * A Category code contained in this code set.

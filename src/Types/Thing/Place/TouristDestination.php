@@ -18,19 +18,19 @@ class TouristDestination extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_touristType;
+    public $touristType;
 
     /**
      * Attraction located at destination.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\TouristAttraction
      */
-    protected $prop_includesAttraction;
+    public $includesAttraction;
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTouristType($value)
@@ -50,7 +50,7 @@ class TouristDestination extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTouristType()
     {

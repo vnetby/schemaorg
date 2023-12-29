@@ -15,19 +15,19 @@ class CookAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\Creat
      * A sub property of instrument. The recipe/instructions used to perform the action.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\Recipe
      */
-    protected $prop_recipe;
+    public $recipe;
 
     /**
      * A sub property of location. The specific food establishment where the action occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment\FoodEstablishment
      */
-    protected $prop_foodEstablishment;
+    public $foodEstablishment;
 
     /**
      * A sub property of location. The specific food event where the action occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\FoodEvent
      */
-    protected $prop_foodEvent;
+    public $foodEvent;
 
     /**
      * A sub property of instrument. The recipe/instructions used to perform the action.

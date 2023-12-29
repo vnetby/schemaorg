@@ -17,27 +17,27 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
-    protected $prop_shippingDestination;
+    public $shippingDestination;
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_transitTimeLabel;
+    public $transitTimeLabel;
 
     /**
      * The total delay between the receipt of the order and the goods reaching the final customer.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ShippingDeliveryTime
      */
-    protected $prop_deliveryTime;
+    public $deliveryTime;
 
     /**
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isUnlabelledFallback;
+    public $isUnlabelledFallback;
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
@@ -51,7 +51,7 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTransitTimeLabel($value)
@@ -73,7 +73,7 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsUnlabelledFallback($value)
@@ -92,7 +92,7 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTransitTimeLabel()
     {
@@ -112,7 +112,7 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsUnlabelledFallback()
     {

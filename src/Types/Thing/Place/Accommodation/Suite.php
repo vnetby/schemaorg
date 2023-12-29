@@ -17,9 +17,9 @@ class Suite extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodat
      * The type of bed or beds included in the accommodation. For the single case of just one bed of a certain
      * type, you use bed directly with a text. If you want to indicate the quantity of a certain kind of bed,
      * use an instance of BedDetails. For more detailed information, use the amenityFeature property.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|\Vnetby\Schemaorg\Types\Thing\Intangible\BedDetails
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|\Vnetby\Schemaorg\Types\Thing\Intangible\BedDetails
      */
-    protected $prop_bed;
+    public $bed;
 
     /**
      * The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal
@@ -27,20 +27,20 @@ class Suite extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodat
      * unit code(s): C62 for person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_occupancy;
+    public $occupancy;
 
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_numberOfRooms;
+    public $numberOfRooms;
 
     /**
      * The type of bed or beds included in the accommodation. For the single case of just one bed of a certain
      * type, you use bed directly with a text. If you want to indicate the quantity of a certain kind of bed,
      * use an instance of BedDetails. For more detailed information, use the amenityFeature property.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|\Vnetby\Schemaorg\Types\Thing\Intangible\BedDetails $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|\Vnetby\Schemaorg\Types\Thing\Intangible\BedDetails $value
      * @return static
      */
     function setBed($value)
@@ -63,7 +63,7 @@ class Suite extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodat
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setNumberOfRooms($value)
@@ -75,7 +75,7 @@ class Suite extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodat
      * The type of bed or beds included in the accommodation. For the single case of just one bed of a certain
      * type, you use bed directly with a text. If you want to indicate the quantity of a certain kind of bed,
      * use an instance of BedDetails. For more detailed information, use the amenityFeature property.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|\Vnetby\Schemaorg\Types\Thing\Intangible\BedDetails|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|\Vnetby\Schemaorg\Types\Thing\Intangible\BedDetails|null
      */
     function getBed()
     {
@@ -96,7 +96,7 @@ class Suite extends \Vnetby\Schemaorg\Types\Thing\Place\Accommodation\Accommodat
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getNumberOfRooms()
     {

@@ -13,13 +13,13 @@ class ChooseAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\Ass
 
     /**
      * A sub property of object. The options subject to this action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_actionOption;
+    public $actionOption;
 
     /**
      * A sub property of object. The options subject to this action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setActionOption($value)
@@ -29,7 +29,7 @@ class ChooseAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\Ass
 
     /**
      * A sub property of object. The options subject to this action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getActionOption()
     {

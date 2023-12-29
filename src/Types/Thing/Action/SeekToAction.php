@@ -13,13 +13,13 @@ class SeekToAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_startOffset;
+    public $startOffset;
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setStartOffset($value)
@@ -29,7 +29,7 @@ class SeekToAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getStartOffset()
     {

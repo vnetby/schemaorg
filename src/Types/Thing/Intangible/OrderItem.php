@@ -15,31 +15,31 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The delivery of the parcel related to this order or order item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ParcelDelivery
      */
-    protected $prop_orderDelivery;
+    public $orderDelivery;
 
     /**
      * The number of the item ordered. If the property is not set, assume the quantity is one.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_orderQuantity;
+    public $orderQuantity;
 
     /**
      * The identifier of the order item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_orderItemNumber;
+    public $orderItemNumber;
 
     /**
      * The item ordered.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_orderedItem;
+    public $orderedItem;
 
     /**
      * The current status of the order item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus\OrderStatus
      */
-    protected $prop_orderItemStatus;
+    public $orderItemStatus;
 
     /**
      * The delivery of the parcel related to this order or order item.
@@ -53,7 +53,7 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The number of the item ordered. If the property is not set, assume the quantity is one.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setOrderQuantity($value)
@@ -63,7 +63,7 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The identifier of the order item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOrderItemNumber($value)
@@ -102,7 +102,7 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The number of the item ordered. If the property is not set, assume the quantity is one.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getOrderQuantity()
     {
@@ -111,7 +111,7 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The identifier of the order item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOrderItemNumber()
     {

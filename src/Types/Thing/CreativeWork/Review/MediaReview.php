@@ -17,26 +17,26 @@ class MediaReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
 
     /**
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_originalMediaContextDescription;
+    public $originalMediaContextDescription;
 
     /**
      * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
      * content, e.g. video file.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_originalMediaLink;
+    public $originalMediaLink;
 
     /**
      * Indicates a MediaManipulationRatingEnumeration classification of a media object (in the context of how it was published or shared).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration\MediaManipulationRatingEnumeration
      */
-    protected $prop_mediaAuthenticityCategory;
+    public $mediaAuthenticityCategory;
 
     /**
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOriginalMediaContextDescription($value)
@@ -47,7 +47,7 @@ class MediaReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
     /**
      * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
      * content, e.g. video file.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
      * @return static
      */
     function setOriginalMediaLink($value)
@@ -67,7 +67,7 @@ class MediaReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
 
     /**
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOriginalMediaContextDescription()
     {
@@ -77,7 +77,7 @@ class MediaReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
     /**
      * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
      * content, e.g. video file.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
     function getOriginalMediaLink()
     {

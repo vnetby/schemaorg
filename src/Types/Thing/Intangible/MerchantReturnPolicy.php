@@ -16,63 +16,63 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
      * remorse.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration\ReturnLabelSourceEnumeration
      */
-    protected $prop_customerRemorseReturnLabelSource;
+    public $customerRemorseReturnLabelSource;
 
     /**
      * Are in-store returns offered? (For more advanced return methods use the [[returnMethod]] property.)
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_inStoreReturnsOffered;
+    public $inStoreReturnsOffered;
 
     /**
      * Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product
      * price paid by the customer.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_restockingFee;
+    public $restockingFee;
 
     /**
      * A refund type, from an enumerated list.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\RefundTypeEnumeration\RefundTypeEnumeration
      */
-    protected $prop_refundType;
+    public $refundType;
 
     /**
      * The type of return method offered, specified from an enumeration.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnMethodEnumeration\ReturnMethodEnumeration
      */
-    protected $prop_returnMethod;
+    public $returnMethod;
 
     /**
      * A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_applicableCountry;
+    public $applicableCountry;
 
     /**
      * The method (from an enumeration) by which the customer obtains a return shipping label for a defect product.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration\ReturnLabelSourceEnumeration
      */
-    protected $prop_itemDefectReturnLabelSource;
+    public $itemDefectReturnLabelSource;
 
     /**
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned.
      * Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_merchantReturnDays;
+    public $merchantReturnDays;
 
     /**
      * The type of return fees if the product is returned due to customer remorse.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
      */
-    protected $prop_customerRemorseReturnFees;
+    public $customerRemorseReturnFees;
 
     /**
      * The type of return fees for purchased products (for any return reason).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
      */
-    protected $prop_returnFees;
+    public $returnFees;
 
     /**
      * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is
@@ -80,70 +80,70 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
      * ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. 
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
      */
-    protected $prop_additionalProperty;
+    public $additionalProperty;
 
     /**
      * A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the
      * offer. Also used for product return policies to specify the condition of products accepted for returns.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition\OfferItemCondition
      */
-    protected $prop_itemCondition;
+    public $itemCondition;
 
     /**
      * The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_customerRemorseReturnShippingFeesAmount;
+    public $customerRemorseReturnShippingFeesAmount;
 
     /**
      * Specifies an applicable return policy (from an enumeration).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration\MerchantReturnEnumeration
      */
-    protected $prop_returnPolicyCategory;
+    public $returnPolicyCategory;
 
     /**
      * The method (from an enumeration) by which the customer obtains a return shipping label for a product returned for any reason.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnLabelSourceEnumeration\ReturnLabelSourceEnumeration
      */
-    protected $prop_returnLabelSource;
+    public $returnLabelSource;
 
     /**
      * Specifies a Web page or service by URL, for product returns.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_merchantReturnLink;
+    public $merchantReturnLink;
 
     /**
      * The type of return fees for returns of defect products.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ReturnFeesEnumeration\ReturnFeesEnumeration
      */
-    protected $prop_itemDefectReturnFees;
+    public $itemDefectReturnFees;
 
     /**
      * Amount of shipping costs for defect product returns. Applicable when property [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_itemDefectReturnShippingFeesAmount;
+    public $itemDefectReturnShippingFeesAmount;
 
     /**
      * Seasonal override of a return policy.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicySeasonalOverride
      */
-    protected $prop_returnPolicySeasonalOverride;
+    public $returnPolicySeasonalOverride;
 
     /**
      * Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_returnShippingFeesAmount;
+    public $returnShippingFeesAmount;
 
     /**
      * The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]].
      * You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where
      * the product was originally shipped from or sent to.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_returnPolicyCountry;
+    public $returnPolicyCountry;
 
     /**
      * The method (from an enumeration) by which the customer obtains a return shipping label for a product returned due to customer
@@ -158,7 +158,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
 
     /**
      * Are in-store returns offered? (For more advanced return methods use the [[returnMethod]] property.)
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setInStoreReturnsOffered($value)
@@ -169,7 +169,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
     /**
      * Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product
      * price paid by the customer.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setRestockingFee($value)
@@ -199,7 +199,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
 
     /**
      * A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setApplicableCountry($value)
@@ -220,7 +220,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
     /**
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned.
      * Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setMerchantReturnDays($value)
@@ -303,7 +303,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
 
     /**
      * Specifies a Web page or service by URL, for product returns.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setMerchantReturnLink($value)
@@ -355,7 +355,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
      * The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]].
      * You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where
      * the product was originally shipped from or sent to.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setReturnPolicyCountry($value)
@@ -375,7 +375,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
 
     /**
      * Are in-store returns offered? (For more advanced return methods use the [[returnMethod]] property.)
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getInStoreReturnsOffered()
     {
@@ -385,7 +385,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
     /**
      * Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product
      * price paid by the customer.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getRestockingFee()
     {
@@ -412,7 +412,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
 
     /**
      * A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getApplicableCountry()
     {
@@ -431,7 +431,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
     /**
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned.
      * Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getMerchantReturnDays()
     {
@@ -506,7 +506,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
 
     /**
      * Specifies a Web page or service by URL, for product returns.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getMerchantReturnLink()
     {
@@ -553,7 +553,7 @@ class MerchantReturnPolicy extends \Vnetby\Schemaorg\Types\Thing\Intangible\Inta
      * The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]].
      * You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where
      * the product was originally shipped from or sent to.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getReturnPolicyCountry()
     {

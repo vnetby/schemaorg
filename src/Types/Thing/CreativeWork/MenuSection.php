@@ -16,13 +16,13 @@ class MenuSection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection
      */
-    protected $prop_hasMenuSection;
+    public $hasMenuSection;
 
     /**
      * A food or drink item contained in a menu or menu section.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem
      */
-    protected $prop_hasMenuItem;
+    public $hasMenuItem;
 
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).

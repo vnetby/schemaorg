@@ -13,25 +13,25 @@ class AggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Ra
 
     /**
      * The count of total number of reviews.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_reviewCount;
+    public $reviewCount;
 
     /**
      * The item that is being reviewed/rated.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_itemReviewed;
+    public $itemReviewed;
 
     /**
      * The count of total number of ratings.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_ratingCount;
+    public $ratingCount;
 
     /**
      * The count of total number of reviews.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setReviewCount($value)
@@ -51,7 +51,7 @@ class AggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Ra
 
     /**
      * The count of total number of ratings.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setRatingCount($value)
@@ -61,7 +61,7 @@ class AggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Ra
 
     /**
      * The count of total number of reviews.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getReviewCount()
     {
@@ -79,7 +79,7 @@ class AggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Ra
 
     /**
      * The count of total number of ratings.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getRatingCount()
     {

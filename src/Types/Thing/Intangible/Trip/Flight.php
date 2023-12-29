@@ -13,93 +13,93 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's departure gate.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_departureGate;
+    public $departureGate;
 
     /**
      * Description of the meals that will be provided or available for purchase.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_mealService;
+    public $mealService;
 
     /**
      * The estimated time the flight will take.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_estimatedFlightDuration;
+    public $estimatedFlightDuration;
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a
      * provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_seller;
+    public $seller;
 
     /**
      * The airport where the flight terminates.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\Airport
      */
-    protected $prop_arrivalAirport;
+    public $arrivalAirport;
 
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BoardingPolicyType\BoardingPolicyType
      */
-    protected $prop_boardingPolicy;
+    public $boardingPolicy;
 
     /**
      * The airport where the flight originates.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\Airport
      */
-    protected $prop_departureAirport;
+    public $departureAirport;
 
     /**
      * The time when a passenger can check into the flight online.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_webCheckinTime;
+    public $webCheckinTime;
 
     /**
      * The distance of the flight.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_flightDistance;
+    public $flightDistance;
 
     /**
      * Identifier of the flight's departure terminal.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_departureTerminal;
+    public $departureTerminal;
 
     /**
      * The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA
      * code for United is 'UA', the flightNumber is 'UA110'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_flightNumber;
+    public $flightNumber;
 
     /**
      * Identifier of the flight's arrival terminal.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_arrivalTerminal;
+    public $arrivalTerminal;
 
     /**
      * The kind of aircraft (e.g., "Boeing 747").
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_aircraft;
+    public $aircraft;
 
     /**
      * Identifier of the flight's arrival gate.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_arrivalGate;
+    public $arrivalGate;
 
     /**
      * Identifier of the flight's departure gate.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDepartureGate($value)
@@ -109,7 +109,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Description of the meals that will be provided or available for purchase.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMealService($value)
@@ -119,7 +119,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The estimated time the flight will take.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
      * @return static
      */
     function setEstimatedFlightDuration($value)
@@ -170,7 +170,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The time when a passenger can check into the flight online.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setWebCheckinTime($value)
@@ -180,7 +180,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The distance of the flight.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
      * @return static
      */
     function setFlightDistance($value)
@@ -190,7 +190,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's departure terminal.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDepartureTerminal($value)
@@ -201,7 +201,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     /**
      * The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA
      * code for United is 'UA', the flightNumber is 'UA110'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFlightNumber($value)
@@ -211,7 +211,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's arrival terminal.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setArrivalTerminal($value)
@@ -221,7 +221,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The kind of aircraft (e.g., "Boeing 747").
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAircraft($value)
@@ -231,7 +231,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's arrival gate.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setArrivalGate($value)
@@ -241,7 +241,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's departure gate.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDepartureGate()
     {
@@ -250,7 +250,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Description of the meals that will be provided or available for purchase.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMealService()
     {
@@ -259,7 +259,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The estimated time the flight will take.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
      */
     function getEstimatedFlightDuration()
     {
@@ -305,7 +305,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The time when a passenger can check into the flight online.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getWebCheckinTime()
     {
@@ -314,7 +314,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The distance of the flight.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
      */
     function getFlightDistance()
     {
@@ -323,7 +323,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's departure terminal.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDepartureTerminal()
     {
@@ -333,7 +333,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     /**
      * The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA
      * code for United is 'UA', the flightNumber is 'UA110'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFlightNumber()
     {
@@ -342,7 +342,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's arrival terminal.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getArrivalTerminal()
     {
@@ -351,7 +351,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The kind of aircraft (e.g., "Boeing 747").
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAircraft()
     {
@@ -360,7 +360,7 @@ class Flight extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Identifier of the flight's arrival gate.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getArrivalGate()
     {

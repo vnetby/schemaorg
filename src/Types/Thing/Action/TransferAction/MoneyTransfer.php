@@ -14,20 +14,20 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
     /**
      * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the
      * beneficiary.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion
      */
-    protected $prop_beneficiaryBank;
+    public $beneficiaryBank;
 
     /**
      * The amount of money.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_amount;
+    public $amount;
 
     /**
      * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the
      * beneficiary.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion $value
      * @return static
      */
     function setBeneficiaryBank($value)
@@ -37,7 +37,7 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
 
     /**
      * The amount of money.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setAmount($value)
@@ -48,7 +48,7 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
     /**
      * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the
      * beneficiary.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion|null
      */
     function getBeneficiaryBank()
     {
@@ -57,7 +57,7 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
 
     /**
      * The amount of money.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getAmount()
     {

@@ -13,25 +13,25 @@ class ScreeningEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_videoFormat;
+    public $videoFormat;
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_subtitleLanguage;
+    public $subtitleLanguage;
 
     /**
      * The movie presented during this event.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Movie
      */
-    protected $prop_workPresented;
+    public $workPresented;
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVideoFormat($value)
@@ -41,7 +41,7 @@ class ScreeningEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSubtitleLanguage($value)
@@ -61,7 +61,7 @@ class ScreeningEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVideoFormat()
     {
@@ -70,7 +70,7 @@ class ScreeningEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSubtitleLanguage()
     {

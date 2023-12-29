@@ -13,13 +13,13 @@ class WebApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Software
 
     /**
      * Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_browserRequirements;
+    public $browserRequirements;
 
     /**
      * Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBrowserRequirements($value)
@@ -29,7 +29,7 @@ class WebApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Software
 
     /**
      * Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBrowserRequirements()
     {

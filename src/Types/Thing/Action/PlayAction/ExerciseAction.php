@@ -15,73 +15,73 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
      * A sub property of participant. The sports team that participated on this action.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam
      */
-    protected $prop_sportsTeam;
+    public $sportsTeam;
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_toLocation;
+    public $toLocation;
 
     /**
      * A sub property of participant. The opponent on this action.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_opponent;
+    public $opponent;
 
     /**
      * A sub property of location. The sports activity location where this action occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
      */
-    protected $prop_sportsActivityLocation;
+    public $sportsActivityLocation;
 
     /**
      * A sub property of location. The original location of the object or the agent before the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_fromLocation;
+    public $fromLocation;
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_exerciseType;
+    public $exerciseType;
 
     /**
      * A sub property of instrument. The diet used in this action.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet
      */
-    protected $prop_exerciseRelatedDiet;
+    public $exerciseRelatedDiet;
 
     /**
      * A sub property of location. The course where this action was taken.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_exerciseCourse;
+    public $exerciseCourse;
 
     /**
      * A sub property of instrument. The exercise plan used on this action.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\PhysicalActivity\ExercisePlan
      */
-    protected $prop_exercisePlan;
+    public $exercisePlan;
 
     /**
      * The distance travelled, e.g. exercising or travelling.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_distance;
+    public $distance;
 
     /**
      * A sub property of instrument. The diet used in this action.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet
      */
-    protected $prop_diet;
+    public $diet;
 
     /**
      * A sub property of location. The sports event where this action occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\SportsEvent
      */
-    protected $prop_sportsEvent;
+    public $sportsEvent;
 
     /**
      * A sub property of participant. The sports team that participated on this action.
@@ -135,7 +135,7 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setExerciseType($value)
@@ -250,7 +250,7 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getExerciseType()
     {

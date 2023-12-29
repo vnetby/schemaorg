@@ -14,26 +14,26 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * The date when the item becomes valid.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validFrom;
+    public $validFrom;
 
     /**
      * The hours during which this service or contact is available.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
      */
-    protected $prop_hoursAvailable;
+    public $hoursAvailable;
 
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validThrough;
+    public $validThrough;
 
     /**
      * The date when the item becomes valid.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidFrom($value)
@@ -54,7 +54,7 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidThrough($value)
@@ -64,7 +64,7 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * The date when the item becomes valid.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidFrom()
     {
@@ -83,7 +83,7 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidThrough()
     {

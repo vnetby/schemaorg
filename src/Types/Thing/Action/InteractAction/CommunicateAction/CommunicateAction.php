@@ -15,20 +15,20 @@ class CommunicateAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAct
      * The subject matter of the content.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_about;
+    public $about;
 
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_inLanguage;
+    public $inLanguage;
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_recipient;
+    public $recipient;
 
     /**
      * The subject matter of the content.
@@ -43,7 +43,7 @@ class CommunicateAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAct
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setInLanguage($value)
@@ -73,7 +73,7 @@ class CommunicateAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAct
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getInLanguage()
     {

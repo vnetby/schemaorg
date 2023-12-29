@@ -17,7 +17,7 @@ class MedicalTrial extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalSt
      * Specifics about the trial design (enumerated).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalTrialDesign\MedicalTrialDesign
      */
-    protected $prop_trialDesign;
+    public $trialDesign;
 
     /**
      * Specifics about the trial design (enumerated).

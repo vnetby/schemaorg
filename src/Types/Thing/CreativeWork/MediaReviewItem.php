@@ -16,7 +16,7 @@ class MediaReviewItem extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creativ
      * In the context of a [[MediaReview]], indicates specific media item(s) that are grouped using a [[MediaReviewItem]].
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_mediaItemAppearance;
+    public $mediaItemAppearance;
 
     /**
      * In the context of a [[MediaReview]], indicates specific media item(s) that are grouped using a [[MediaReviewItem]].

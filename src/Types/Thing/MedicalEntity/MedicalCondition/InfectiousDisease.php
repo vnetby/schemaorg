@@ -15,25 +15,25 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
 
     /**
      * The actual infectious agent, such as a specific bacterium.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_infectiousAgent;
+    public $infectiousAgent;
 
     /**
      * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass
      */
-    protected $prop_infectiousAgentClass;
+    public $infectiousAgentClass;
 
     /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_transmissionMethod;
+    public $transmissionMethod;
 
     /**
      * The actual infectious agent, such as a specific bacterium.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setInfectiousAgent($value)
@@ -53,7 +53,7 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
 
     /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTransmissionMethod($value)
@@ -63,7 +63,7 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
 
     /**
      * The actual infectious agent, such as a specific bacterium.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getInfectiousAgent()
     {
@@ -81,7 +81,7 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
 
     /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTransmissionMethod()
     {

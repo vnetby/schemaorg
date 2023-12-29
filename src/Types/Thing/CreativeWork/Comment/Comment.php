@@ -16,19 +16,19 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_sharedContent;
+    public $sharedContent;
 
     /**
      * The number of downvotes this question, answer or comment has received from the community.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_downvoteCount;
+    public $downvoteCount;
 
     /**
      * The number of upvotes this question, answer or comment has received from the community.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_upvoteCount;
+    public $upvoteCount;
 
     /**
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments
@@ -36,7 +36,7 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * it.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      */
-    protected $prop_parentItem;
+    public $parentItem;
 
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
@@ -50,7 +50,7 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The number of downvotes this question, answer or comment has received from the community.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setDownvoteCount($value)
@@ -60,7 +60,7 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The number of upvotes this question, answer or comment has received from the community.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setUpvoteCount($value)
@@ -91,7 +91,7 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The number of downvotes this question, answer or comment has received from the community.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getDownvoteCount()
     {
@@ -100,7 +100,7 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The number of upvotes this question, answer or comment has received from the community.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getUpvoteCount()
     {

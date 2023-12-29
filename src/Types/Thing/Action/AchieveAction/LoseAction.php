@@ -15,7 +15,7 @@ class LoseAction extends \Vnetby\Schemaorg\Types\Thing\Action\AchieveAction\Achi
      * A sub property of participant. The winner of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_winner;
+    public $winner;
 
     /**
      * A sub property of participant. The winner of the action.

@@ -19,26 +19,26 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * to specify the reference speeds.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_accelerationTime;
+    public $accelerationTime;
 
     /**
      * Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation
      * in many countries requires this information to be revealed when offering a car for sale.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\CarUsageType\CarUsageType|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\CarUsageType\CarUsageType|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_vehicleSpecialUsage;
+    public $vehicleSpecialUsage;
 
     /**
      * The number of owners of the vehicle, including the current one.\n\nTypical unit code(s): C62.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_numberOfPreviousOwners;
+    public $numberOfPreviousOwners;
 
     /**
      * The number or type of airbags in the vehicle.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_numberOfAirbags;
+    public $numberOfAirbags;
 
     /**
      * The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).\n\n* Note 1:
@@ -49,7 +49,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * value for the fuel economy to another value.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_fuelEfficiency;
+    public $fuelEfficiency;
 
     /**
      * The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.\n\nTypical unit code(s):
@@ -58,19 +58,19 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * use [[minValue]] and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_weightTotal;
+    public $weightTotal;
 
     /**
      * The total number of forward gears available for the transmission system of the vehicle.\n\nTypical unit code(s): C62.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfForwardGears;
+    public $numberOfForwardGears;
 
     /**
      * The release date of a vehicle model (often used to differentiate versions of the same make and model).
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_modelDate;
+    public $modelDate;
 
     /**
      * The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range
@@ -80,19 +80,19 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * given value has been determined using the [[valueReference]] property.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_speed;
+    public $speed;
 
     /**
      * The color or color combination of the interior of the vehicle.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_vehicleInteriorColor;
+    public $vehicleInteriorColor;
 
     /**
      * Indicates that the vehicle meets the respective emission standard.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_meetsEmissionStandard;
+    public $meetsEmissionStandard;
 
     /**
      * The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or
@@ -101,7 +101,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_tongueWeight;
+    public $tongueWeight;
 
     /**
      * The permitted weight of a trailer attached to the vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n* Note 1: You
@@ -109,45 +109,45 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_trailerWeight;
+    public $trailerWeight;
 
     /**
      * A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_vehicleConfiguration;
+    public $vehicleConfiguration;
 
     /**
      * The number of axles.\n\nTypical unit code(s): C62.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfAxles;
+    public $numberOfAxles;
 
     /**
      * The position of the steering wheel or similar device (mostly for cars).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\SteeringPositionValue\SteeringPositionValue
      */
-    protected $prop_steeringPosition;
+    public $steeringPosition;
 
     /**
      * Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
-    protected $prop_bodyType;
+    public $bodyType;
 
     /**
      * The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value,
      * since there is no UN/CEFACT Common Code for "g/km".
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_emissionsCO2;
+    public $emissionsCO2;
 
     /**
      * The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and
      * in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_seatingCapacity;
+    public $seatingCapacity;
 
     /**
      * The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for
@@ -155,39 +155,39 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_fuelCapacity;
+    public $fuelCapacity;
 
     /**
      * The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_vehicleIdentificationNumber;
+    public $vehicleIdentificationNumber;
 
     /**
      * The total distance travelled by the particular vehicle since its initial production, as read from its odometer.\n\nTypical unit code(s): KMT for
      * kilometers, SMI for statute miles.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_mileageFromOdometer;
+    public $mileageFromOdometer;
 
     /**
      * A textual description of known damages, both repaired and unrepaired.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_knownVehicleDamages;
+    public $knownVehicleDamages;
 
     /**
      * The release date of a vehicle model (often used to differentiate versions of the same make and model).
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_vehicleModelDate;
+    public $vehicleModelDate;
 
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this
      * property can be attached directly to the vehicle.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
-    protected $prop_fuelType;
+    public $fuelType;
 
     /**
      * The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100
@@ -198,45 +198,45 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * for the fuel consumption to another value.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_fuelConsumption;
+    public $fuelConsumption;
 
     /**
      * The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in
      * terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_vehicleSeatingCapacity;
+    public $vehicleSeatingCapacity;
 
     /**
      * The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.\n\nTypical unit code(s): LTR for liters, FTQ
      * for cubic foot/feet\n\nNote: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_cargoVolume;
+    public $cargoVolume;
 
     /**
      * The date the item, e.g. vehicle, was purchased by the current owner.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_purchaseDate;
+    public $purchaseDate;
 
     /**
      * The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue
      */
-    protected $prop_driveWheelConfiguration;
+    public $driveWheelConfiguration;
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_callSign;
+    public $callSign;
 
     /**
      * The date of production of the item, e.g. vehicle.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_productionDate;
+    public $productionDate;
 
     /**
      * The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for
@@ -245,46 +245,46 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * node that provides additional information using [[valueReference]].\n* Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_payload;
+    public $payload;
 
     /**
      * The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s)
      * ("gearbox" for cars).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_vehicleTransmission;
+    public $vehicleTransmission;
 
     /**
      * The distance between the centers of the front and rear wheels.\n\nTypical unit code(s): CMT for centimeters, MTR for meters, INH for
      * inches, FOT for foot/feet.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_wheelbase;
+    public $wheelbase;
 
     /**
      * Information about the engine or engines of the vehicle.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\EngineSpecification
      */
-    protected $prop_vehicleEngine;
+    public $vehicleEngine;
 
     /**
      * The date of the first registration of the vehicle with the respective public authorities.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_dateVehicleFirstRegistered;
+    public $dateVehicleFirstRegistered;
 
     /**
      * The number of doors.\n\nTypical unit code(s): C62.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfDoors;
+    public $numberOfDoors;
 
     /**
      * The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are
      * characterized by the material used, an interior type can also be based on vehicle usage or target audience.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_vehicleInteriorType;
+    public $vehicleInteriorType;
 
     /**
      * The time needed to accelerate the vehicle from a given start velocity to a given target velocity.\n\nTypical unit code(s): SEC for
@@ -302,7 +302,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation
      * in many countries requires this information to be revealed when offering a car for sale.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\CarUsageType\CarUsageType|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\CarUsageType\CarUsageType|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVehicleSpecialUsage($value)
@@ -312,7 +312,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number of owners of the vehicle, including the current one.\n\nTypical unit code(s): C62.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setNumberOfPreviousOwners($value)
@@ -322,7 +322,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number or type of airbags in the vehicle.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setNumberOfAirbags($value)
@@ -360,7 +360,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The total number of forward gears available for the transmission system of the vehicle.\n\nTypical unit code(s): C62.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setNumberOfForwardGears($value)
@@ -370,7 +370,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The release date of a vehicle model (often used to differentiate versions of the same make and model).
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setModelDate($value)
@@ -394,7 +394,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The color or color combination of the interior of the vehicle.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVehicleInteriorColor($value)
@@ -404,7 +404,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Indicates that the vehicle meets the respective emission standard.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMeetsEmissionStandard($value)
@@ -439,7 +439,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVehicleConfiguration($value)
@@ -449,7 +449,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number of axles.\n\nTypical unit code(s): C62.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setNumberOfAxles($value)
@@ -469,7 +469,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setBodyType($value)
@@ -480,7 +480,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value,
      * since there is no UN/CEFACT Common Code for "g/km".
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setEmissionsCO2($value)
@@ -491,7 +491,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and
      * in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setSeatingCapacity($value)
@@ -513,7 +513,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVehicleIdentificationNumber($value)
@@ -534,7 +534,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * A textual description of known damages, both repaired and unrepaired.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setKnownVehicleDamages($value)
@@ -544,7 +544,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The release date of a vehicle model (often used to differentiate versions of the same make and model).
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setVehicleModelDate($value)
@@ -555,7 +555,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this
      * property can be attached directly to the vehicle.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setFuelType($value)
@@ -581,7 +581,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in
      * terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setVehicleSeatingCapacity($value)
@@ -602,7 +602,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The date the item, e.g. vehicle, was purchased by the current owner.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setPurchaseDate($value)
@@ -612,7 +612,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue $value
      * @return static
      */
     function setDriveWheelConfiguration($value)
@@ -622,7 +622,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCallSign($value)
@@ -632,7 +632,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The date of production of the item, e.g. vehicle.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setProductionDate($value)
@@ -656,7 +656,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s)
      * ("gearbox" for cars).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setVehicleTransmission($value)
@@ -687,7 +687,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The date of the first registration of the vehicle with the respective public authorities.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDateVehicleFirstRegistered($value)
@@ -697,7 +697,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number of doors.\n\nTypical unit code(s): C62.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setNumberOfDoors($value)
@@ -708,7 +708,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are
      * characterized by the material used, an interior type can also be based on vehicle usage or target audience.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVehicleInteriorType($value)
@@ -731,7 +731,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation
      * in many countries requires this information to be revealed when offering a car for sale.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\CarUsageType\CarUsageType|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\CarUsageType\CarUsageType|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVehicleSpecialUsage()
     {
@@ -740,7 +740,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number of owners of the vehicle, including the current one.\n\nTypical unit code(s): C62.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getNumberOfPreviousOwners()
     {
@@ -749,7 +749,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number or type of airbags in the vehicle.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getNumberOfAirbags()
     {
@@ -784,7 +784,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The total number of forward gears available for the transmission system of the vehicle.\n\nTypical unit code(s): C62.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getNumberOfForwardGears()
     {
@@ -793,7 +793,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The release date of a vehicle model (often used to differentiate versions of the same make and model).
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getModelDate()
     {
@@ -815,7 +815,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The color or color combination of the interior of the vehicle.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVehicleInteriorColor()
     {
@@ -824,7 +824,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Indicates that the vehicle meets the respective emission standard.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMeetsEmissionStandard()
     {
@@ -856,7 +856,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVehicleConfiguration()
     {
@@ -865,7 +865,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number of axles.\n\nTypical unit code(s): C62.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getNumberOfAxles()
     {
@@ -883,7 +883,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getBodyType()
     {
@@ -893,7 +893,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value,
      * since there is no UN/CEFACT Common Code for "g/km".
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getEmissionsCO2()
     {
@@ -903,7 +903,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and
      * in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getSeatingCapacity()
     {
@@ -923,7 +923,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVehicleIdentificationNumber()
     {
@@ -942,7 +942,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * A textual description of known damages, both repaired and unrepaired.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getKnownVehicleDamages()
     {
@@ -951,7 +951,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The release date of a vehicle model (often used to differentiate versions of the same make and model).
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getVehicleModelDate()
     {
@@ -961,7 +961,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this
      * property can be attached directly to the vehicle.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getFuelType()
     {
@@ -985,7 +985,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in
      * terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getVehicleSeatingCapacity()
     {
@@ -1004,7 +1004,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The date the item, e.g. vehicle, was purchased by the current owner.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getPurchaseDate()
     {
@@ -1013,7 +1013,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\DriveWheelConfigurationValue\DriveWheelConfigurationValue|null
      */
     function getDriveWheelConfiguration()
     {
@@ -1022,7 +1022,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCallSign()
     {
@@ -1031,7 +1031,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The date of production of the item, e.g. vehicle.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getProductionDate()
     {
@@ -1053,7 +1053,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s)
      * ("gearbox" for cars).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getVehicleTransmission()
     {
@@ -1081,7 +1081,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The date of the first registration of the vehicle with the respective public authorities.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDateVehicleFirstRegistered()
     {
@@ -1090,7 +1090,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * The number of doors.\n\nTypical unit code(s): C62.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getNumberOfDoors()
     {
@@ -1100,7 +1100,7 @@ class Vehicle extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are
      * characterized by the material used, an interior type can also be based on vehicle usage or target audience.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVehicleInteriorType()
     {

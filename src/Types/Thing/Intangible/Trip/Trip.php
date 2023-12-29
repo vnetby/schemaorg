@@ -13,15 +13,15 @@ class Trip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The expected departure time.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_departureTime;
+    public $departureTime;
 
     /**
      * The location of origin of the trip, prior to any destination(s).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_tripOrigin;
+    public $tripOrigin;
 
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
@@ -31,43 +31,43 @@ class Trip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * of Product, can clarify the nature of the offer. 
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    protected $prop_offers;
+    public $offers;
 
     /**
      * Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination order is important use [[ItemList]] to specify
      * that order (see examples).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_itinerary;
+    public $itinerary;
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
      * on behalf of the provider. A provider may also serve as the seller.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_provider;
+    public $provider;
 
     /**
      * The expected arrival time.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_arrivalTime;
+    public $arrivalTime;
 
     /**
      * Identifies that this [[Trip]] is a subTrip of another Trip. For example Day 1, Day 2, etc. of a multi-day trip.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
      */
-    protected $prop_partOfTrip;
+    public $partOfTrip;
 
     /**
      * Identifies a [[Trip]] that is a subTrip of this Trip. For example Day 1, Day 2, etc. of a multi-day trip.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
      */
-    protected $prop_subTrip;
+    public $subTrip;
 
     /**
      * The expected departure time.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setDepartureTime($value)
@@ -123,7 +123,7 @@ class Trip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The expected arrival time.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setArrivalTime($value)
@@ -153,7 +153,7 @@ class Trip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The expected departure time.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getDepartureTime()
     {
@@ -204,7 +204,7 @@ class Trip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The expected arrival time.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getArrivalTime()
     {

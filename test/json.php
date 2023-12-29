@@ -7,8 +7,9 @@ use Vnetby\Schemaorg\Types\Thing\Event\Event;
 require __DIR__ . '/../vendor/autoload.php';
 
 $event = (new Event)
-    ->setEndDate(new DataDate('23-03-1995'))
+    ->setEndDate('23-03-1995')
     ->setStartDate(new DataDate('23-03-1995'));
+
 
 $jsonld = Jsonld::create($event)->toArray();
 

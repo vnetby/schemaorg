@@ -15,7 +15,7 @@ class SocialMediaPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Arti
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_sharedContent;
+    public $sharedContent;
 
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.

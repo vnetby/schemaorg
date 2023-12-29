@@ -15,7 +15,7 @@ class EndorseAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\Re
      * A sub property of participant. The person/organization being supported.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_endorsee;
+    public $endorsee;
 
     /**
      * A sub property of participant. The person/organization being supported.

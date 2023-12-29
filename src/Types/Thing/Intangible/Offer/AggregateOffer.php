@@ -15,9 +15,9 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
 
     /**
      * The number of offers for the product.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_offerCount;
+    public $offerCount;
 
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
@@ -27,27 +27,27 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * of Product, can clarify the nature of the offer. 
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    protected $prop_offers;
+    public $offers;
 
     /**
      * The lowest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_lowPrice;
+    public $lowPrice;
 
     /**
      * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_highPrice;
+    public $highPrice;
 
     /**
      * The number of offers for the product.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setOfferCount($value)
@@ -73,7 +73,7 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * The lowest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setLowPrice($value)
@@ -85,7 +85,7 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setHighPrice($value)
@@ -95,7 +95,7 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
 
     /**
      * The number of offers for the product.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getOfferCount()
     {
@@ -119,7 +119,7 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * The lowest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getLowPrice()
     {
@@ -130,7 +130,7 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getHighPrice()
     {

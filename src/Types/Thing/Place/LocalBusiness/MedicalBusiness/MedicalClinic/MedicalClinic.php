@@ -16,13 +16,13 @@ class MedicalClinic extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\Me
      * A medical specialty of the provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
      */
-    protected $prop_medicalSpecialty;
+    public $medicalSpecialty;
 
     /**
      * A medical service available from this provider.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\MedicalProcedure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest\MedicalTest
      */
-    protected $prop_availableService;
+    public $availableService;
 
     /**
      * A medical specialty of the provider.

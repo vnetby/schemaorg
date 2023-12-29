@@ -18,21 +18,21 @@ class HyperTocEntry extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_associatedMedia;
+    public $associatedMedia;
 
     /**
      * Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a
      * [[HyperTocEntry]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_utterances;
+    public $utterances;
 
     /**
      * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or
      * render.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry
      */
-    protected $prop_tocContinuation;
+    public $tocContinuation;
 
     /**
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
@@ -47,7 +47,7 @@ class HyperTocEntry extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     /**
      * Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a
      * [[HyperTocEntry]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setUtterances($value)
@@ -78,7 +78,7 @@ class HyperTocEntry extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     /**
      * Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a
      * [[HyperTocEntry]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getUtterances()
     {

@@ -18,21 +18,21 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * to a certain minimal amount.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
      */
-    protected $prop_eligibleTransactionVolume;
+    public $eligibleTransactionVolume;
 
     /**
      * The date when the item becomes valid.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validFrom;
+    public $validFrom;
 
     /**
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_priceCurrency;
+    public $priceCurrency;
 
     /**
      * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
@@ -42,41 +42,41 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
      * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
      * Unicode symbols. 
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_price;
+    public $price;
 
     /**
      * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
      * specifying that a certain freight charge is valid only for a certain quantity.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_eligibleQuantity;
+    public $eligibleQuantity;
 
     /**
      * The highest price if the price is a range.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_maxPrice;
+    public $maxPrice;
 
     /**
      * The lowest price if the price is a range.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_minPrice;
+    public $minPrice;
 
     /**
      * Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_valueAddedTaxIncluded;
+    public $valueAddedTaxIncluded;
 
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validThrough;
+    public $validThrough;
 
     /**
      * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
@@ -92,7 +92,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The date when the item becomes valid.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidFrom($value)
@@ -104,7 +104,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPriceCurrency($value)
@@ -120,7 +120,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
      * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
      * Unicode symbols. 
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPrice($value)
@@ -141,7 +141,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The highest price if the price is a range.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setMaxPrice($value)
@@ -151,7 +151,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The lowest price if the price is a range.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setMinPrice($value)
@@ -161,7 +161,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setValueAddedTaxIncluded($value)
@@ -172,7 +172,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidThrough($value)
@@ -193,7 +193,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The date when the item becomes valid.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidFrom()
     {
@@ -204,7 +204,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPriceCurrency()
     {
@@ -219,7 +219,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
      * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
      * Unicode symbols. 
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPrice()
     {
@@ -238,7 +238,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The highest price if the price is a range.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getMaxPrice()
     {
@@ -247,7 +247,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The lowest price if the price is a range.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getMinPrice()
     {
@@ -256,7 +256,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getValueAddedTaxIncluded()
     {
@@ -266,7 +266,7 @@ class PriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidThrough()
     {

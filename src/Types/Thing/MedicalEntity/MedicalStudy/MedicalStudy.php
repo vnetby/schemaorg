@@ -20,31 +20,31 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
      * Study or a corporate sponsor of an event.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_sponsor;
+    public $sponsor;
 
     /**
      * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_studySubject;
+    public $studySubject;
 
     /**
      * Specifying the health condition(s) of a patient, medical study, or other target audience.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_healthCondition;
+    public $healthCondition;
 
     /**
      * The status of the study (enumerated).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
      */
-    protected $prop_status;
+    public $status;
 
     /**
      * The location in which the study is taking/took place.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_studyLocation;
+    public $studyLocation;
 
     /**
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical
@@ -79,7 +79,7 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
 
     /**
      * The status of the study (enumerated).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType $value
      * @return static
      */
     function setStatus($value)
@@ -127,7 +127,7 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
 
     /**
      * The status of the study (enumerated).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|null
      */
     function getStatus()
     {

@@ -14,31 +14,31 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The type of security screening the passenger is subject to.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_securityScreening;
+    public $securityScreening;
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_passengerPriorityStatus;
+    public $passengerPriorityStatus;
 
     /**
      * The passenger's sequence number as assigned by the airline.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_passengerSequenceNumber;
+    public $passengerSequenceNumber;
 
     /**
      * The airline-specific indicator of boarding order / preference.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_boardingGroup;
+    public $boardingGroup;
 
     /**
      * The type of security screening the passenger is subject to.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSecurityScreening($value)
@@ -48,7 +48,7 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPassengerPriorityStatus($value)
@@ -58,7 +58,7 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The passenger's sequence number as assigned by the airline.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPassengerSequenceNumber($value)
@@ -68,7 +68,7 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The airline-specific indicator of boarding order / preference.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBoardingGroup($value)
@@ -78,7 +78,7 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The type of security screening the passenger is subject to.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSecurityScreening()
     {
@@ -87,7 +87,7 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPassengerPriorityStatus()
     {
@@ -96,7 +96,7 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The passenger's sequence number as assigned by the airline.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPassengerSequenceNumber()
     {
@@ -105,7 +105,7 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The airline-specific indicator of boarding order / preference.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBoardingGroup()
     {

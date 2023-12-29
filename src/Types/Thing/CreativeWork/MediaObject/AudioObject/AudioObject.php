@@ -13,25 +13,25 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_transcript;
+    public $transcript;
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_embeddedTextCaption;
+    public $embeddedTextCaption;
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_caption;
+    public $caption;
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTranscript($value)
@@ -41,7 +41,7 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmbeddedTextCaption($value)
@@ -51,7 +51,7 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
      * @return static
      */
     function setCaption($value)
@@ -61,7 +61,7 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTranscript()
     {
@@ -70,7 +70,7 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmbeddedTextCaption()
     {
@@ -79,7 +79,7 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
     function getCaption()
     {

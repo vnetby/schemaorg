@@ -13,19 +13,19 @@ class Substance extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntit
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_activeIngredient;
+    public $activeIngredient;
 
     /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule
      */
-    protected $prop_maximumIntake;
+    public $maximumIntake;
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setActiveIngredient($value)
@@ -45,7 +45,7 @@ class Substance extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntit
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getActiveIngredient()
     {

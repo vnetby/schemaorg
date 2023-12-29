@@ -13,13 +13,13 @@ class Thesis extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Qualification, candidature, degree, application that Thesis supports.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_inSupportOf;
+    public $inSupportOf;
 
     /**
      * Qualification, candidature, degree, application that Thesis supports.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setInSupportOf($value)
@@ -29,7 +29,7 @@ class Thesis extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Qualification, candidature, degree, application that Thesis supports.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getInSupportOf()
     {

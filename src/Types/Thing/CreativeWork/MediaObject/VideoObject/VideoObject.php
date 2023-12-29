@@ -15,51 +15,51 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_transcript;
+    public $transcript;
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_embeddedTextCaption;
+    public $embeddedTextCaption;
 
     /**
      * The frame size of the video.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_videoFrameSize;
+    public $videoFrameSize;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_caption;
+    public $caption;
 
     /**
      * The quality of the video.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_videoQuality;
+    public $videoQuality;
 
     /**
      * The composer of the soundtrack.
@@ -84,7 +84,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTranscript($value)
@@ -94,7 +94,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmbeddedTextCaption($value)
@@ -104,7 +104,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The frame size of the video.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVideoFrameSize($value)
@@ -125,7 +125,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
      * @return static
      */
     function setCaption($value)
@@ -135,7 +135,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The quality of the video.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVideoQuality($value)
@@ -164,7 +164,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTranscript()
     {
@@ -173,7 +173,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmbeddedTextCaption()
     {
@@ -182,7 +182,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The frame size of the video.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVideoFrameSize()
     {
@@ -201,7 +201,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
     function getCaption()
     {
@@ -210,7 +210,7 @@ class VideoObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The quality of the video.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVideoQuality()
     {

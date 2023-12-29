@@ -19,7 +19,7 @@ class MedicalObservationalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEnt
      * Specifics about the observational study design (enumerated).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalObservationalStudyDesign\MedicalObservationalStudyDesign
      */
-    protected $prop_studyDesign;
+    public $studyDesign;
 
     /**
      * Specifics about the observational study design (enumerated).

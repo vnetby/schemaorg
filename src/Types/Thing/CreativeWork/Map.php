@@ -15,7 +15,7 @@ class Map extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MapCategoryType\MapCategoryType
      */
-    protected $prop_mapType;
+    public $mapType;
 
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.

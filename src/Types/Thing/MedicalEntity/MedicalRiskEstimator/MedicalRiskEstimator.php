@@ -15,13 +15,13 @@ class MedicalRiskEstimator extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\M
      * A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalRiskFactor
      */
-    protected $prop_includedRiskFactor;
+    public $includedRiskFactor;
 
     /**
      * The condition, complication, or symptom whose risk is being estimated.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_estimatesRiskOf;
+    public $estimatesRiskOf;
 
     /**
      * A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.

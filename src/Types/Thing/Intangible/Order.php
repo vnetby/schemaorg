@@ -15,88 +15,88 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known
      * names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_discountCurrency;
+    public $discountCurrency;
 
     /**
      * The delivery of the parcel related to this order or order item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ParcelDelivery
      */
-    protected $prop_orderDelivery;
+    public $orderDelivery;
 
     /**
      * The identifier of the transaction.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_orderNumber;
+    public $orderNumber;
 
     /**
      * A number that confirms the given order or payment has been received.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_confirmationNumber;
+    public $confirmationNumber;
 
     /**
      * The URL for sending a payment.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_paymentUrl;
+    public $paymentUrl;
 
     /**
      * The date that payment is due.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_paymentDueDate;
+    public $paymentDueDate;
 
     /**
      * Date order was placed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_orderDate;
+    public $orderDate;
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a
      * provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_seller;
+    public $seller;
 
     /**
      * The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    protected $prop_acceptedOffer;
+    public $acceptedOffer;
 
     /**
      * Any discount applied (to an Order).
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_discount;
+    public $discount;
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_paymentMethodId;
+    public $paymentMethodId;
 
     /**
      * The item ordered.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_orderedItem;
+    public $orderedItem;
 
     /**
      * The name of the credit card or other method of payment for the order.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod
      */
-    protected $prop_paymentMethod;
+    public $paymentMethod;
 
     /**
      * The billing address for the order.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress
      */
-    protected $prop_billingAddress;
+    public $billingAddress;
 
     /**
      * An entity that arranges for an exchange between a buyer and a seller. In most cases a broker never acquires or
@@ -104,42 +104,42 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * broker, seller, or buyer, the latter two terms are preferred.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_broker;
+    public $broker;
 
     /**
      * Party placing the order or paying the invoice.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_customer;
+    public $customer;
 
     /**
      * Indicates whether the offer was accepted as a gift for someone other than the buyer.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isGift;
+    public $isGift;
 
     /**
      * The current status of the order.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus\OrderStatus
      */
-    protected $prop_orderStatus;
+    public $orderStatus;
 
     /**
      * The order is being paid as part of the referenced Invoice.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Invoice
      */
-    protected $prop_partOfInvoice;
+    public $partOfInvoice;
 
     /**
      * Code used to redeem a discount.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_discountCode;
+    public $discountCode;
 
     /**
      * The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known
      * names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDiscountCurrency($value)
@@ -159,7 +159,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The identifier of the transaction.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOrderNumber($value)
@@ -169,7 +169,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A number that confirms the given order or payment has been received.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setConfirmationNumber($value)
@@ -179,7 +179,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The URL for sending a payment.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setPaymentUrl($value)
@@ -189,7 +189,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date that payment is due.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setPaymentDueDate($value)
@@ -199,7 +199,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Date order was placed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setOrderDate($value)
@@ -230,7 +230,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Any discount applied (to an Order).
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDiscount($value)
@@ -240,7 +240,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPaymentMethodId($value)
@@ -302,7 +302,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Indicates whether the offer was accepted as a gift for someone other than the buyer.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsGift($value)
@@ -332,7 +332,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Code used to redeem a discount.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDiscountCode($value)
@@ -343,7 +343,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known
      * names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDiscountCurrency()
     {
@@ -361,7 +361,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The identifier of the transaction.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOrderNumber()
     {
@@ -370,7 +370,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A number that confirms the given order or payment has been received.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getConfirmationNumber()
     {
@@ -379,7 +379,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The URL for sending a payment.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getPaymentUrl()
     {
@@ -388,7 +388,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date that payment is due.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getPaymentDueDate()
     {
@@ -397,7 +397,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Date order was placed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getOrderDate()
     {
@@ -425,7 +425,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Any discount applied (to an Order).
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDiscount()
     {
@@ -434,7 +434,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPaymentMethodId()
     {
@@ -490,7 +490,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Indicates whether the offer was accepted as a gift for someone other than the buyer.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsGift()
     {
@@ -517,7 +517,7 @@ class Order extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Code used to redeem a discount.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDiscountCode()
     {

@@ -14,383 +14,383 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the
      * public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_actionableFeedbackPolicy;
+    public $actionableFeedbackPolicy;
 
     /**
      * The date that this organization was dissolved.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_dissolutionDate;
+    public $dissolutionDate;
 
     /**
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
      */
-    protected $prop_funding;
+    public $funding;
 
     /**
      * An Organization (or ProgramMembership) to which this Person or Organization belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\ProgramMembership
      */
-    protected $prop_memberOf;
+    public $memberOf;
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_event;
+    public $event;
 
     /**
      * The date that this organization was founded.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_foundingDate;
+    public $foundingDate;
 
     /**
      * The place where the Organization was founded.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_foundingLocation;
+    public $foundingLocation;
 
     /**
      * A person who founded this organization.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_founder;
+    public $founder;
 
     /**
      * A pointer to products or services offered by the organization or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    protected $prop_makesOffer;
+    public $makesOffer;
 
     /**
      * Specifies a MerchantReturnPolicy that may be applicable.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicy
      */
-    protected $prop_hasMerchantReturnPolicy;
+    public $hasMerchantReturnPolicy;
 
     /**
      * The telephone number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_telephone;
+    public $telephone;
 
     /**
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical
      * Study or a corporate sponsor of an event.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_sponsor;
+    public $sponsor;
 
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might
      * be for example ASNE or RTDNA (US) reports, or self-reported.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_diversityStaffingReport;
+    public $diversityStaffingReport;
 
     /**
      * The number of employees in an organization, e.g. business.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfEmployees;
+    public $numberOfEmployees;
 
     /**
      * Products owned by the organization or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OwnershipInfo|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_owns;
+    public $owns;
 
     /**
      * Indicates an OfferCatalog listing for this Organization, Person, or Service.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\OfferCatalog
      */
-    protected $prop_hasOfferCatalog;
+    public $hasOfferCatalog;
 
     /**
      * Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on
      * both staffing and sources, typically providing staffing data.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_diversityPolicy;
+    public $diversityPolicy;
 
     /**
      * nonprofitStatus indicates the legal status of a non-profit organization in its primary place of business.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\NonprofitType\NonprofitType
      */
-    protected $prop_nonprofitStatus;
+    public $nonprofitStatus;
 
     /**
      * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_member;
+    public $member;
 
     /**
      * The official name of the organization, e.g. the registered company name.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_legalName;
+    public $legalName;
 
     /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
      * place. The GLN is a 13-digit number used to identify parties and physical locations.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_globalLocationNumber;
+    public $globalLocationNumber;
 
     /**
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_correctionsPolicy;
+    public $correctionsPolicy;
 
     /**
      * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food
      * source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards
      * of behavior expected by the organization.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_ethicsPolicy;
+    public $ethicsPolicy;
 
     /**
      * The North American Industry Classification System (NAICS) code for a particular organization or business person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_naics;
+    public $naics;
 
     /**
      * Email address.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_email;
+    public $email;
 
     /**
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_unnamedSourcesPolicy;
+    public $unnamedSourcesPolicy;
 
     /**
      * A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening
      * hours). For example: a store with a pharmacy, or a bakery with a cafe.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_department;
+    public $department;
 
     /**
      * The Value-added Tax ID of the organization or person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_vatID;
+    public $vatID;
 
     /**
      * The larger organization that this organization is a [[subOrganization]] of, if any.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_parentOrganization;
+    public $parentOrganization;
 
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_taxID;
+    public $taxID;
 
     /**
      * The fax number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_faxNumber;
+    public $faxNumber;
 
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise
      * but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]]
      * descriptions.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_knowsAbout;
+    public $knowsAbout;
 
     /**
      * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Brand|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_brand;
+    public $brand;
 
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
      */
-    protected $prop_aggregateRating;
+    public $aggregateRating;
 
     /**
      * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be
      * used.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\InteractionCounter
      */
-    protected $prop_interactionStatistic;
+    public $interactionStatistic;
 
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media
      * setting, this is with particular reference to editorial independence. Note that the [[funder]] is also available and can be used to
      * make basic funder information machine-readable.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage
      */
-    protected $prop_ownershipFundingInfo;
+    public $ownershipFundingInfo;
 
     /**
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_funder;
+    public $funder;
 
     /**
      * An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_leiCode;
+    public $leiCode;
 
     /**
      * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
      * by repeating the property.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_keywords;
+    public $keywords;
 
     /**
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_location;
+    public $location;
 
     /**
      * A review of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
      */
-    protected $prop_review;
+    public $review;
 
     /**
      * The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the
      * statistic), and in a particular context (i.e. interactionService).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\InteractionCounter
      */
-    protected $prop_agentInteractionStatistic;
+    public $agentInteractionStatistic;
 
     /**
      * A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department'
      * property.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_subOrganization;
+    public $subOrganization;
 
     /**
      * A pointer to products or services sought by the organization or person (demand).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Demand
      */
-    protected $prop_seeks;
+    public $seeks;
 
     /**
      * A credential awarded to the Person or Organization.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential
      */
-    protected $prop_hasCredential;
+    public $hasCredential;
 
     /**
      * Physical address of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_address;
+    public $address;
 
     /**
      * A contact point for a person or organization.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
-    protected $prop_contactPoint;
+    public $contactPoint;
 
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or
      * reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_knowsLanguage;
+    public $knowsLanguage;
 
     /**
      * Alumni of an organization.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_alumni;
+    public $alumni;
 
     /**
      * Points-of-Sales operated by the organization or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_hasPOS;
+    public $hasPOS;
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_areaServed;
+    public $areaServed;
 
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
      * place.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_isicV4;
+    public $isicV4;
 
     /**
      * Someone working for this organization.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_employee;
+    public $employee;
 
     /**
      * The Dun & Bradstreet DUNS number for identifying an organization or business person.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_duns;
+    public $duns;
 
     /**
      * An award won by or for this item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_award;
+    public $award;
 
     /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]]
      * writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]]
      * (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]]. While such policies are
      * most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology. 
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_publishingPrinciples;
+    public $publishingPrinciples;
 
     /**
      * A slogan or motto associated with the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_slogan;
+    public $slogan;
 
     /**
      * An organization identifier as defined in ISO 6523(-1). Note that many existing organization identifiers such as [leiCode](https://schema.org/leiCode), [duns](https://schema.org/duns) and [vatID](https://schema.org/vatID) can
      * be expressed as an ISO 6523 identifier by setting the ICD part of the ISO 6523 identifier accordingly. 
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_iso6523Code;
+    public $iso6523Code;
 
     /**
      * An associated logo.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_logo;
+    public $logo;
 
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the
      * public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setActionableFeedbackPolicy($value)
@@ -400,7 +400,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The date that this organization was dissolved.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDissolutionDate($value)
@@ -440,7 +440,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The date that this organization was founded.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setFoundingDate($value)
@@ -490,7 +490,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The telephone number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTelephone($value)
@@ -512,7 +512,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might
      * be for example ASNE or RTDNA (US) reports, or self-reported.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setDiversityStaffingReport($value)
@@ -553,7 +553,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on
      * both staffing and sources, typically providing staffing data.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setDiversityPolicy($value)
@@ -583,7 +583,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The official name of the organization, e.g. the registered company name.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLegalName($value)
@@ -594,7 +594,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
      * place. The GLN is a 13-digit number used to identify parties and physical locations.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGlobalLocationNumber($value)
@@ -604,7 +604,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setCorrectionsPolicy($value)
@@ -616,7 +616,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food
      * source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards
      * of behavior expected by the organization.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setEthicsPolicy($value)
@@ -626,7 +626,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The North American Industry Classification System (NAICS) code for a particular organization or business person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setNaics($value)
@@ -636,7 +636,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Email address.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmail($value)
@@ -646,7 +646,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setUnnamedSourcesPolicy($value)
@@ -667,7 +667,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Value-added Tax ID of the organization or person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVatID($value)
@@ -687,7 +687,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTaxID($value)
@@ -697,7 +697,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The fax number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFaxNumber($value)
@@ -709,7 +709,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise
      * but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]]
      * descriptions.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setKnowsAbout($value)
@@ -752,7 +752,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media
      * setting, this is with particular reference to editorial independence. Note that the [[funder]] is also available and can be used to
      * make basic funder information machine-readable.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage $value
      * @return static
      */
     function setOwnershipFundingInfo($value)
@@ -772,7 +772,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLeiCode($value)
@@ -783,7 +783,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
      * by repeating the property.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setKeywords($value)
@@ -793,7 +793,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setLocation($value)
@@ -855,7 +855,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Physical address of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAddress($value)
@@ -876,7 +876,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or
      * reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setKnowsLanguage($value)
@@ -906,7 +906,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAreaServed($value)
@@ -917,7 +917,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
      * place.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIsicV4($value)
@@ -937,7 +937,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Dun & Bradstreet DUNS number for identifying an organization or business person.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDuns($value)
@@ -947,7 +947,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An award won by or for this item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAward($value)
@@ -960,7 +960,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]]
      * (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]]. While such policies are
      * most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology. 
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setPublishingPrinciples($value)
@@ -970,7 +970,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * A slogan or motto associated with the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSlogan($value)
@@ -981,7 +981,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * An organization identifier as defined in ISO 6523(-1). Note that many existing organization identifiers such as [leiCode](https://schema.org/leiCode), [duns](https://schema.org/duns) and [vatID](https://schema.org/vatID) can
      * be expressed as an ISO 6523 identifier by setting the ICD part of the ISO 6523 identifier accordingly. 
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIso6523Code($value)
@@ -991,7 +991,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An associated logo.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setLogo($value)
@@ -1002,7 +1002,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the
      * public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getActionableFeedbackPolicy()
     {
@@ -1011,7 +1011,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The date that this organization was dissolved.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDissolutionDate()
     {
@@ -1047,7 +1047,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The date that this organization was founded.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getFoundingDate()
     {
@@ -1092,7 +1092,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The telephone number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTelephone()
     {
@@ -1112,7 +1112,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might
      * be for example ASNE or RTDNA (US) reports, or self-reported.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getDiversityStaffingReport()
     {
@@ -1149,7 +1149,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on
      * both staffing and sources, typically providing staffing data.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getDiversityPolicy()
     {
@@ -1176,7 +1176,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The official name of the organization, e.g. the registered company name.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLegalName()
     {
@@ -1186,7 +1186,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
      * place. The GLN is a 13-digit number used to identify parties and physical locations.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGlobalLocationNumber()
     {
@@ -1195,7 +1195,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getCorrectionsPolicy()
     {
@@ -1206,7 +1206,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food
      * source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards
      * of behavior expected by the organization.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getEthicsPolicy()
     {
@@ -1215,7 +1215,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The North American Industry Classification System (NAICS) code for a particular organization or business person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getNaics()
     {
@@ -1224,7 +1224,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Email address.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmail()
     {
@@ -1233,7 +1233,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getUnnamedSourcesPolicy()
     {
@@ -1252,7 +1252,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Value-added Tax ID of the organization or person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVatID()
     {
@@ -1270,7 +1270,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTaxID()
     {
@@ -1279,7 +1279,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The fax number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFaxNumber()
     {
@@ -1290,7 +1290,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise
      * but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]]
      * descriptions.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getKnowsAbout()
     {
@@ -1329,7 +1329,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media
      * setting, this is with particular reference to editorial independence. Note that the [[funder]] is also available and can be used to
      * make basic funder information machine-readable.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage|null
      */
     function getOwnershipFundingInfo()
     {
@@ -1347,7 +1347,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLeiCode()
     {
@@ -1357,7 +1357,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
      * by repeating the property.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getKeywords()
     {
@@ -1366,7 +1366,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getLocation()
     {
@@ -1422,7 +1422,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Physical address of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAddress()
     {
@@ -1441,7 +1441,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or
      * reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getKnowsLanguage()
     {
@@ -1468,7 +1468,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAreaServed()
     {
@@ -1478,7 +1478,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
      * place.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIsicV4()
     {
@@ -1496,7 +1496,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The Dun & Bradstreet DUNS number for identifying an organization or business person.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDuns()
     {
@@ -1505,7 +1505,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An award won by or for this item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAward()
     {
@@ -1517,7 +1517,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
      * writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]]
      * (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]]. While such policies are
      * most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology. 
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getPublishingPrinciples()
     {
@@ -1526,7 +1526,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * A slogan or motto associated with the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSlogan()
     {
@@ -1536,7 +1536,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
     /**
      * An organization identifier as defined in ISO 6523(-1). Note that many existing organization identifiers such as [leiCode](https://schema.org/leiCode), [duns](https://schema.org/duns) and [vatID](https://schema.org/vatID) can
      * be expressed as an ISO 6523 identifier by setting the ICD part of the ISO 6523 identifier accordingly. 
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIso6523Code()
     {
@@ -1545,7 +1545,7 @@ class Organization extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * An associated logo.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getLogo()
     {

@@ -15,31 +15,31 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
      * A sign detected by the test.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSign\MedicalSign
      */
-    protected $prop_signDetected;
+    public $signDetected;
 
     /**
      * Range of acceptable values for a typical patient, when applicable.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_normalRange;
+    public $normalRange;
 
     /**
      * Device used to perform the test.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalDevice
      */
-    protected $prop_usesDevice;
+    public $usesDevice;
 
     /**
      * A condition the test is used to diagnose.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_usedToDiagnose;
+    public $usedToDiagnose;
 
     /**
      * Drugs that affect the test's results.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
      */
-    protected $prop_affectedBy;
+    public $affectedBy;
 
     /**
      * A sign detected by the test.
@@ -53,7 +53,7 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
 
     /**
      * Range of acceptable values for a typical patient, when applicable.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setNormalRange($value)
@@ -102,7 +102,7 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
 
     /**
      * Range of acceptable values for a typical patient, when applicable.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getNormalRange()
     {

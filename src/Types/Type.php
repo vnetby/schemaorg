@@ -4,7 +4,7 @@
  * - Базовый класс для всех типов
  * - Все типы должны наследорваться от данного класса
  * - В дочернем классе необходимо переопределить константу TYPE
- * - Все свойства, которые участвуют в разметке json-ld, должны быть protected и начинаться с префикса prop_
+ * - Все публичные свойства объекта рассматриваются как свойства schema.org
  */
 
 namespace Vnetby\Schemaorg\Types;
@@ -103,13 +103,11 @@ abstract class Type
         $props = $ref->getProperties();
 
         foreach ($props as $prop) {
-            $key = $prop->name;
-            if (!preg_match("/^prop_/", $key)) {
+            if (!$prop->isPublic()) {
                 continue;
             }
-            $key = preg_replace("/^prop_/", '', $key);
-            $prop->setAccessible(true);
-            $val = $prop->getValue($this);
+            $key = $prop->name;
+            $val = $this->getProp($key);
             if (!$val) {
                 continue;
             }
@@ -140,12 +138,8 @@ abstract class Type
      * - Устанавливает свойство
      * @return static
      */
-    function setProp(string $origKey, $value)
+    function setProp(string $key, $value)
     {
-        $key = "prop_{$origKey}";
-        if ($value instanceof DataType) {
-            $value = (string)$value;
-        }
         $this->$key = $value;
         return $this;
     }
@@ -154,9 +148,11 @@ abstract class Type
     /**
      * - Получает свойство
      */
-    function getProp(string $origKey)
+    function getProp(string $key)
     {
-        $key = "prop_{$origKey}";
+        if ($this->$key instanceof DataType) {
+            return $this->$key->getValue();
+        }
         return $this->$key;
     }
 }

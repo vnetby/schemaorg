@@ -15,38 +15,38 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
      * The album this is a release of.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
      */
-    protected $prop_releaseOf;
+    public $releaseOf;
 
     /**
      * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani
      * Germanotta Band", but by Lady Gaga.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_creditedTo;
+    public $creditedTo;
 
     /**
      * The label that issued the release.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_recordLabel;
+    public $recordLabel;
 
     /**
      * The catalog number for the release.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_catalogNumber;
+    public $catalogNumber;
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_duration;
+    public $duration;
 
     /**
      * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
      */
-    protected $prop_musicReleaseFormat;
+    public $musicReleaseFormat;
 
     /**
      * The album this is a release of.
@@ -81,7 +81,7 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
 
     /**
      * The catalog number for the release.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCatalogNumber($value)
@@ -139,7 +139,7 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
 
     /**
      * The catalog number for the release.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCatalogNumber()
     {

@@ -13,57 +13,57 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_supply;
+    public $supply;
 
     /**
      * A media object representing the circumstances while performing this direction.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_duringMedia;
+    public $duringMedia;
 
     /**
      * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_totalTime;
+    public $totalTime;
 
     /**
      * A media object representing the circumstances after performing this direction.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_afterMedia;
+    public $afterMedia;
 
     /**
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_tool;
+    public $tool;
 
     /**
      * The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO
      * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_performTime;
+    public $performTime;
 
     /**
      * A media object representing the circumstances before performing this direction.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_beforeMedia;
+    public $beforeMedia;
 
     /**
      * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_prepTime;
+    public $prepTime;
 
     /**
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSupply($value)
@@ -73,7 +73,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A media object representing the circumstances while performing this direction.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
      * @return static
      */
     function setDuringMedia($value)
@@ -93,7 +93,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A media object representing the circumstances after performing this direction.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setAfterMedia($value)
@@ -103,7 +103,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTool($value)
@@ -124,7 +124,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A media object representing the circumstances before performing this direction.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
      * @return static
      */
     function setBeforeMedia($value)
@@ -145,7 +145,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSupply()
     {
@@ -154,7 +154,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A media object representing the circumstances while performing this direction.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
     function getDuringMedia()
     {
@@ -172,7 +172,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A media object representing the circumstances after performing this direction.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getAfterMedia()
     {
@@ -181,7 +181,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTool()
     {
@@ -200,7 +200,7 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * A media object representing the circumstances before performing this direction.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
     function getBeforeMedia()
     {

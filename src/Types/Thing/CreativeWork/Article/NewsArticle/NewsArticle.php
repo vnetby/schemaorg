@@ -14,9 +14,9 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * The number of the column in which the NewsArticle appears in the print edition.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_printColumn;
+    public $printColumn;
 
     /**
      * A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of text included in news articles that describes where and when the story was written
@@ -25,32 +25,32 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
      * location depicted or described in the content, use [[contentLocation]]. Dateline summaries are oriented more towards human readers than towards automated processing,
      * and can vary substantially. Some examples: "BEIRUT, Lebanon, June 2.", "Paris, France", "December 19, 2017 11:43AM Reporting from Washington", "Beijing/Moscow", "QUEZON
      * CITY, Philippines". 
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_dateline;
+    public $dateline;
 
     /**
      * If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please
      * note that this field is intended for the exact page name (e.g. A5, B18).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_printPage;
+    public $printPage;
 
     /**
      * The edition of the print product in which the NewsArticle appears.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_printEdition;
+    public $printEdition;
 
     /**
      * If this NewsArticle appears in print, this field indicates the print section in which the article appeared.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_printSection;
+    public $printSection;
 
     /**
      * The number of the column in which the NewsArticle appears in the print edition.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPrintColumn($value)
@@ -65,7 +65,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
      * location depicted or described in the content, use [[contentLocation]]. Dateline summaries are oriented more towards human readers than towards automated processing,
      * and can vary substantially. Some examples: "BEIRUT, Lebanon, June 2.", "Paris, France", "December 19, 2017 11:43AM Reporting from Washington", "Beijing/Moscow", "QUEZON
      * CITY, Philippines". 
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDateline($value)
@@ -76,7 +76,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
     /**
      * If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please
      * note that this field is intended for the exact page name (e.g. A5, B18).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPrintPage($value)
@@ -86,7 +86,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * The edition of the print product in which the NewsArticle appears.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPrintEdition($value)
@@ -96,7 +96,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * If this NewsArticle appears in print, this field indicates the print section in which the article appeared.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPrintSection($value)
@@ -106,7 +106,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * The number of the column in which the NewsArticle appears in the print edition.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPrintColumn()
     {
@@ -120,7 +120,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
      * location depicted or described in the content, use [[contentLocation]]. Dateline summaries are oriented more towards human readers than towards automated processing,
      * and can vary substantially. Some examples: "BEIRUT, Lebanon, June 2.", "Paris, France", "December 19, 2017 11:43AM Reporting from Washington", "Beijing/Moscow", "QUEZON
      * CITY, Philippines". 
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDateline()
     {
@@ -130,7 +130,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
     /**
      * If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please
      * note that this field is intended for the exact page name (e.g. A5, B18).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPrintPage()
     {
@@ -139,7 +139,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * The edition of the print product in which the NewsArticle appears.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPrintEdition()
     {
@@ -148,7 +148,7 @@ class NewsArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * If this NewsArticle appears in print, this field indicates the print section in which the article appeared.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPrintSection()
     {

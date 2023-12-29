@@ -15,7 +15,7 @@ class EducationalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization
      * Alumni of an organization.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_alumni;
+    public $alumni;
 
     /**
      * Alumni of an organization.

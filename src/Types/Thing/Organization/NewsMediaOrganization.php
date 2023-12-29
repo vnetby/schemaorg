@@ -14,80 +14,80 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the
      * public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_actionableFeedbackPolicy;
+    public $actionableFeedbackPolicy;
 
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_noBylinesPolicy;
+    public $noBylinesPolicy;
 
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might
      * be for example ASNE or RTDNA (US) reports, or self-reported.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_diversityStaffingReport;
+    public $diversityStaffingReport;
 
     /**
      * Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on
      * both staffing and sources, typically providing staffing data.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_diversityPolicy;
+    public $diversityPolicy;
 
     /**
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_correctionsPolicy;
+    public $correctionsPolicy;
 
     /**
      * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food
      * source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards
      * of behavior expected by the organization.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_ethicsPolicy;
+    public $ethicsPolicy;
 
     /**
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_unnamedSourcesPolicy;
+    public $unnamedSourcesPolicy;
 
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media
      * setting, this is with particular reference to editorial independence. Note that the [[funder]] is also available and can be used to
      * make basic funder information machine-readable.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage
      */
-    protected $prop_ownershipFundingInfo;
+    public $ownershipFundingInfo;
 
     /**
      * Disclosure about verification and fact-checking processes for a [[NewsMediaOrganization]] or other fact-checking [[Organization]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_verificationFactCheckingPolicy;
+    public $verificationFactCheckingPolicy;
 
     /**
      * For a [[NewsMediaOrganization]], a link to the masthead page or a page listing top editorial management.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_masthead;
+    public $masthead;
 
     /**
      * For a [[NewsMediaOrganization]], a statement on coverage priorities, including any public agenda or stance on issues.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_missionCoveragePrioritiesPolicy;
+    public $missionCoveragePrioritiesPolicy;
 
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the
      * public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setActionableFeedbackPolicy($value)
@@ -97,7 +97,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setNoBylinesPolicy($value)
@@ -108,7 +108,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might
      * be for example ASNE or RTDNA (US) reports, or self-reported.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setDiversityStaffingReport($value)
@@ -119,7 +119,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
     /**
      * Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on
      * both staffing and sources, typically providing staffing data.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setDiversityPolicy($value)
@@ -129,7 +129,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setCorrectionsPolicy($value)
@@ -141,7 +141,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
      * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food
      * source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards
      * of behavior expected by the organization.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setEthicsPolicy($value)
@@ -151,7 +151,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setUnnamedSourcesPolicy($value)
@@ -163,7 +163,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media
      * setting, this is with particular reference to editorial independence. Note that the [[funder]] is also available and can be used to
      * make basic funder information machine-readable.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage $value
      * @return static
      */
     function setOwnershipFundingInfo($value)
@@ -173,7 +173,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * Disclosure about verification and fact-checking processes for a [[NewsMediaOrganization]] or other fact-checking [[Organization]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setVerificationFactCheckingPolicy($value)
@@ -183,7 +183,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For a [[NewsMediaOrganization]], a link to the masthead page or a page listing top editorial management.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setMasthead($value)
@@ -193,7 +193,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For a [[NewsMediaOrganization]], a statement on coverage priorities, including any public agenda or stance on issues.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setMissionCoveragePrioritiesPolicy($value)
@@ -204,7 +204,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the
      * public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getActionableFeedbackPolicy()
     {
@@ -213,7 +213,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getNoBylinesPolicy()
     {
@@ -223,7 +223,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
     /**
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might
      * be for example ASNE or RTDNA (US) reports, or self-reported.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getDiversityStaffingReport()
     {
@@ -233,7 +233,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
     /**
      * Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on
      * both staffing and sources, typically providing staffing data.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getDiversityPolicy()
     {
@@ -242,7 +242,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getCorrectionsPolicy()
     {
@@ -253,7 +253,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
      * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food
      * source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards
      * of behavior expected by the organization.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getEthicsPolicy()
     {
@@ -262,7 +262,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getUnnamedSourcesPolicy()
     {
@@ -273,7 +273,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
      * For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media
      * setting, this is with particular reference to editorial independence. Note that the [[funder]] is also available and can be used to
      * make basic funder information machine-readable.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\AboutPage|null
      */
     function getOwnershipFundingInfo()
     {
@@ -282,7 +282,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * Disclosure about verification and fact-checking processes for a [[NewsMediaOrganization]] or other fact-checking [[Organization]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getVerificationFactCheckingPolicy()
     {
@@ -291,7 +291,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For a [[NewsMediaOrganization]], a link to the masthead page or a page listing top editorial management.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getMasthead()
     {
@@ -300,7 +300,7 @@ class NewsMediaOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\O
 
     /**
      * For a [[NewsMediaOrganization]], a statement on coverage priorities, including any public agenda or stance on issues.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getMissionCoveragePrioritiesPolicy()
     {

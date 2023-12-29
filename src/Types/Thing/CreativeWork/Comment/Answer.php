@@ -16,7 +16,7 @@ class Answer extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      * about it. 
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
-    protected $prop_answerExplanation;
+    public $answerExplanation;
 
     /**
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments
@@ -24,7 +24,7 @@ class Answer extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      * it.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      */
-    protected $prop_parentItem;
+    public $parentItem;
 
     /**
      * A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement

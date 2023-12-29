@@ -15,7 +15,7 @@ class InviteAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\C
      * Upcoming or past event associated with this place, organization, or action.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_event;
+    public $event;
 
     /**
      * Upcoming or past event associated with this place, organization, or action.

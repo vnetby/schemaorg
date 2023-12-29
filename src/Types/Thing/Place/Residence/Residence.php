@@ -15,7 +15,7 @@ class Residence extends \Vnetby\Schemaorg\Types\Thing\Place\Place
      * A floorplan of some [[Accommodation]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\FloorPlan
      */
-    protected $prop_accommodationFloorPlan;
+    public $accommodationFloorPlan;
 
     /**
      * A floorplan of some [[Accommodation]].

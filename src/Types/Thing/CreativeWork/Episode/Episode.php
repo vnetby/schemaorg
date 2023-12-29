@@ -15,57 +15,57 @@ class Episode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * The season to which this episode belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
      */
-    protected $prop_partOfSeason;
+    public $partOfSeason;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject\VideoObject
      */
-    protected $prop_trailer;
+    public $trailer;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The series to which this episode or season belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Series\CreativeWorkSeries\CreativeWorkSeries
      */
-    protected $prop_partOfSeries;
+    public $partOfSeries;
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_duration;
+    public $duration;
 
     /**
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_productionCompany;
+    public $productionCompany;
 
     /**
      * Position of the episode within an ordered group of episodes.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_episodeNumber;
+    public $episodeNumber;
 
     /**
      * The composer of the soundtrack.
@@ -151,7 +151,7 @@ class Episode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Position of the episode within an ordered group of episodes.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setEpisodeNumber($value)
@@ -235,7 +235,7 @@ class Episode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Position of the episode within an ordered group of episodes.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getEpisodeNumber()
     {

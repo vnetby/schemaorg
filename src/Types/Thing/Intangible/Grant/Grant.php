@@ -21,19 +21,19 @@ class Grant extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * Study or a corporate sponsor of an event.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_sponsor;
+    public $sponsor;
 
     /**
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_funder;
+    public $funder;
 
     /**
      * Indicates something directly or indirectly funded or sponsored through a [[Grant]]. See also [[ownershipFundingInfo]].
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|\Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_fundedItem;
+    public $fundedItem;
 
     /**
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical

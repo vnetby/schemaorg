@@ -13,25 +13,25 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
 
     /**
      * The name given to how bone physically connects to each other.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_structuralClass;
+    public $structuralClass;
 
     /**
      * The degree of mobility the joint allows.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_functionalClass;
+    public $functionalClass;
 
     /**
      * The biomechanical properties of the bone.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_biomechnicalClass;
+    public $biomechnicalClass;
 
     /**
      * The name given to how bone physically connects to each other.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setStructuralClass($value)
@@ -41,7 +41,7 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
 
     /**
      * The degree of mobility the joint allows.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
      * @return static
      */
     function setFunctionalClass($value)
@@ -51,7 +51,7 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
 
     /**
      * The biomechanical properties of the bone.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBiomechnicalClass($value)
@@ -61,7 +61,7 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
 
     /**
      * The name given to how bone physically connects to each other.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getStructuralClass()
     {
@@ -70,7 +70,7 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
 
     /**
      * The degree of mobility the joint allows.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
      */
     function getFunctionalClass()
     {
@@ -79,7 +79,7 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
 
     /**
      * The biomechanical properties of the bone.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBiomechnicalClass()
     {

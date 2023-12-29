@@ -13,61 +13,61 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The date/time at which the message was sent.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_dateSent;
+    public $dateSent;
 
     /**
      * The date/time the message was received if a single recipient exists.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_dateReceived;
+    public $dateReceived;
 
     /**
      * A sub property of recipient. The recipient copied on a message.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_ccRecipient;
+    public $ccRecipient;
 
     /**
      * A sub property of recipient. The recipient who was directly sent the message.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_toRecipient;
+    public $toRecipient;
 
     /**
      * A sub property of participant. The participant who is at the sending end of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_sender;
+    public $sender;
 
     /**
      * A CreativeWork attached to the message.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_messageAttachment;
+    public $messageAttachment;
 
     /**
      * The date/time at which the message has been read by the recipient if a single recipient exists.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_dateRead;
+    public $dateRead;
 
     /**
      * A sub property of recipient. The recipient blind copied on a message.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_bccRecipient;
+    public $bccRecipient;
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_recipient;
+    public $recipient;
 
     /**
      * The date/time at which the message was sent.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setDateSent($value)
@@ -77,7 +77,7 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The date/time the message was received if a single recipient exists.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setDateReceived($value)
@@ -127,7 +127,7 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The date/time at which the message has been read by the recipient if a single recipient exists.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setDateRead($value)
@@ -157,7 +157,7 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The date/time at which the message was sent.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getDateSent()
     {
@@ -166,7 +166,7 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The date/time the message was received if a single recipient exists.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getDateReceived()
     {
@@ -211,7 +211,7 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The date/time at which the message has been read by the recipient if a single recipient exists.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getDateRead()
     {

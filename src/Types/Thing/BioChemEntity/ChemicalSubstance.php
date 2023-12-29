@@ -16,19 +16,19 @@ class ChemicalSubstance extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioC
      * Intended use of the BioChemEntity by humans.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_potentialUse;
+    public $potentialUse;
 
     /**
      * A role played by the BioChemEntity within a chemical context.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_chemicalRole;
+    public $chemicalRole;
 
     /**
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_chemicalComposition;
+    public $chemicalComposition;
 
     /**
      * Intended use of the BioChemEntity by humans.
@@ -52,7 +52,7 @@ class ChemicalSubstance extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioC
 
     /**
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setChemicalComposition($value)
@@ -80,7 +80,7 @@ class ChemicalSubstance extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioC
 
     /**
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getChemicalComposition()
     {

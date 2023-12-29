@@ -13,38 +13,38 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Medical expert advice related to the plan.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_expertConsiderations;
+    public $expertConsiderations;
 
     /**
      * Specific physiologic risks associated to the diet plan.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_risks;
+    public $risks;
 
     /**
      * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
      * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_dietFeatures;
+    public $dietFeatures;
 
     /**
      * People or organizations that endorse the plan.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_endorsers;
+    public $endorsers;
 
     /**
      * Specific physiologic benefits associated to the plan.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_physiologicalBenefits;
+    public $physiologicalBenefits;
 
     /**
      * Medical expert advice related to the plan.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setExpertConsiderations($value)
@@ -54,7 +54,7 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Specific physiologic risks associated to the diet plan.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRisks($value)
@@ -65,7 +65,7 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     /**
      * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
      * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDietFeatures($value)
@@ -85,7 +85,7 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Specific physiologic benefits associated to the plan.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPhysiologicalBenefits($value)
@@ -95,7 +95,7 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Medical expert advice related to the plan.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getExpertConsiderations()
     {
@@ -104,7 +104,7 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Specific physiologic risks associated to the diet plan.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRisks()
     {
@@ -114,7 +114,7 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     /**
      * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
      * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDietFeatures()
     {
@@ -132,7 +132,7 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Specific physiologic benefits associated to the plan.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPhysiologicalBenefits()
     {

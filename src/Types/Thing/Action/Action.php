@@ -17,81 +17,81 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
      * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_instrument;
+    public $instrument;
 
     /**
      * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_participant;
+    public $participant;
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
      * on behalf of the provider. A provider may also serve as the seller.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_provider;
+    public $provider;
 
     /**
      * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_startTime;
+    public $startTime;
 
     /**
      * The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic
      * roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_object;
+    public $object;
 
     /**
      * Indicates a target EntryPoint, or url, for an Action.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint
      */
-    protected $prop_target;
+    public $target;
 
     /**
      * The result produced in the action. E.g. John wrote *a book*.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_result;
+    public $result;
 
     /**
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_location;
+    public $location;
 
     /**
      * Indicates the current disposition of the Action.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\ActionStatusType\ActionStatusType
      */
-    protected $prop_actionStatus;
+    public $actionStatus;
 
     /**
      * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_agent;
+    public $agent;
 
     /**
      * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_endTime;
+    public $endTime;
 
     /**
      * For failed actions, more information on the cause of the failure.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_error;
+    public $error;
 
     /**
      * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
@@ -129,7 +129,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setStartTime($value)
@@ -150,7 +150,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Indicates a target EntryPoint, or url, for an Action.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint $value
      * @return static
      */
     function setTarget($value)
@@ -170,7 +170,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setLocation($value)
@@ -203,7 +203,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setEndTime($value)
@@ -254,7 +254,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getStartTime()
     {
@@ -273,7 +273,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Indicates a target EntryPoint, or url, for an Action.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint|null
      */
     function getTarget()
     {
@@ -291,7 +291,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getLocation()
     {
@@ -321,7 +321,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getEndTime()
     {

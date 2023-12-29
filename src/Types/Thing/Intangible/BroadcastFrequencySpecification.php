@@ -13,25 +13,25 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
 
     /**
      * The subchannel used for the broadcast.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_broadcastSubChannel;
+    public $broadcastSubChannel;
 
     /**
      * The frequency in MHz for a particular broadcast.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_broadcastFrequencyValue;
+    public $broadcastFrequencyValue;
 
     /**
      * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
-    protected $prop_broadcastSignalModulation;
+    public $broadcastSignalModulation;
 
     /**
      * The subchannel used for the broadcast.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBroadcastSubChannel($value)
@@ -41,7 +41,7 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
 
     /**
      * The frequency in MHz for a particular broadcast.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setBroadcastFrequencyValue($value)
@@ -51,7 +51,7 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
 
     /**
      * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setBroadcastSignalModulation($value)
@@ -61,7 +61,7 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
 
     /**
      * The subchannel used for the broadcast.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastSubChannel()
     {
@@ -70,7 +70,7 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
 
     /**
      * The frequency in MHz for a particular broadcast.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getBroadcastFrequencyValue()
     {
@@ -79,7 +79,7 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
 
     /**
      * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getBroadcastSignalModulation()
     {

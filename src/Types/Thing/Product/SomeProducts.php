@@ -15,7 +15,7 @@ class SomeProducts extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * The current approximate inventory level for the item or items.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_inventoryLevel;
+    public $inventoryLevel;
 
     /**
      * The current approximate inventory level for the item or items.

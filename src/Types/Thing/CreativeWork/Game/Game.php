@@ -16,31 +16,31 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * Indicate how many people can play this game (minimum, maximum, or range).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfPlayers;
+    public $numberOfPlayers;
 
     /**
      * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_quest;
+    public $quest;
 
     /**
      * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_gameItem;
+    public $gameItem;
 
     /**
      * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_characterAttribute;
+    public $characterAttribute;
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_gameLocation;
+    public $gameLocation;
 
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
@@ -84,7 +84,7 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setGameLocation($value)
@@ -130,7 +130,7 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getGameLocation()
     {

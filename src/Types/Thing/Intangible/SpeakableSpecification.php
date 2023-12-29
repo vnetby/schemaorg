@@ -15,21 +15,21 @@ class SpeakableSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\In
     /**
      * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single
      * conceptual "Web page element".
-     * @var \Vnetby\Schemaorg\DataTypes\DataXPathType
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataXPathType
      */
-    protected $prop_xpath;
+    public $xpath;
 
     /**
      * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a
      * single conceptual "Web page element".
-     * @var \Vnetby\Schemaorg\DataTypes\DataCssSelectorType
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataCssSelectorType
      */
-    protected $prop_cssSelector;
+    public $cssSelector;
 
     /**
      * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single
      * conceptual "Web page element".
-     * @param \Vnetby\Schemaorg\DataTypes\DataXPathType $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataXPathType $value
      * @return static
      */
     function setXpath($value)
@@ -40,7 +40,7 @@ class SpeakableSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\In
     /**
      * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a
      * single conceptual "Web page element".
-     * @param \Vnetby\Schemaorg\DataTypes\DataCssSelectorType $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataCssSelectorType $value
      * @return static
      */
     function setCssSelector($value)
@@ -51,7 +51,7 @@ class SpeakableSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\In
     /**
      * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single
      * conceptual "Web page element".
-     * @return \Vnetby\Schemaorg\DataTypes\DataXPathType|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataXPathType|null
      */
     function getXpath()
     {
@@ -61,7 +61,7 @@ class SpeakableSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\In
     /**
      * A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a
      * single conceptual "Web page element".
-     * @return \Vnetby\Schemaorg\DataTypes\DataCssSelectorType|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataCssSelectorType|null
      */
     function getCssSelector()
     {

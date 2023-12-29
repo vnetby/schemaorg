@@ -15,7 +15,7 @@ class MedicalRiskFactor extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
      * The condition, complication, etc. influenced by this factor.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_increasesRiskOf;
+    public $increasesRiskOf;
 
     /**
      * The condition, complication, etc. influenced by this factor.

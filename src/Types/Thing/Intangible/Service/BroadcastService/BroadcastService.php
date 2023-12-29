@@ -14,69 +14,69 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_broadcastFrequency;
+    public $broadcastFrequency;
 
     /**
      * A broadcast channel of a broadcast service.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastChannel\BroadcastChannel
      */
-    protected $prop_hasBroadcastChannel;
+    public $hasBroadcastChannel;
 
     /**
      * A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService
      */
-    protected $prop_parentService;
+    public $parentService;
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_videoFormat;
+    public $videoFormat;
 
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_inLanguage;
+    public $inLanguage;
 
     /**
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for which the service bases its broadcasts.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_broadcastTimezone;
+    public $broadcastTimezone;
 
     /**
      * The media network(s) whose content is broadcast on this station.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_broadcastAffiliateOf;
+    public $broadcastAffiliateOf;
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_callSign;
+    public $callSign;
 
     /**
      * The name displayed in the channel guide. For many US affiliates, it is the network name.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_broadcastDisplayName;
+    public $broadcastDisplayName;
 
     /**
      * The organization owning or operating the broadcast service.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_broadcaster;
+    public $broadcaster;
 
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBroadcastFrequency($value)
@@ -106,7 +106,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVideoFormat($value)
@@ -117,7 +117,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setInLanguage($value)
@@ -127,7 +127,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for which the service bases its broadcasts.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBroadcastTimezone($value)
@@ -147,7 +147,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCallSign($value)
@@ -157,7 +157,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The name displayed in the channel guide. For many US affiliates, it is the network name.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBroadcastDisplayName($value)
@@ -178,7 +178,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastFrequency()
     {
@@ -205,7 +205,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVideoFormat()
     {
@@ -215,7 +215,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getInLanguage()
     {
@@ -224,7 +224,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for which the service bases its broadcasts.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastTimezone()
     {
@@ -242,7 +242,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCallSign()
     {
@@ -251,7 +251,7 @@ class BroadcastService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The name displayed in the channel guide. For many US affiliates, it is the network name.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastDisplayName()
     {

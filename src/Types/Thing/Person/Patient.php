@@ -15,19 +15,19 @@ class Patient extends \Vnetby\Schemaorg\Types\Thing\Person\Person
      * Specifying the health condition(s) of a patient, medical study, or other target audience.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_healthCondition;
+    public $healthCondition;
 
     /**
      * Specifying a drug or medicine used in a medication procedure.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
      */
-    protected $prop_drug;
+    public $drug;
 
     /**
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_diagnosis;
+    public $diagnosis;
 
     /**
      * Specifying the health condition(s) of a patient, medical study, or other target audience.

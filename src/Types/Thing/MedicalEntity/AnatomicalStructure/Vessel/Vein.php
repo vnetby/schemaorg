@@ -15,19 +15,19 @@ class Vein extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructu
      * The vasculature that the vein drains into.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
      */
-    protected $prop_drainsTo;
+    public $drainsTo;
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_regionDrained;
+    public $regionDrained;
 
     /**
      * The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_tributary;
+    public $tributary;
 
     /**
      * The vasculature that the vein drains into.

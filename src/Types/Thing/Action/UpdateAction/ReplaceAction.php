@@ -15,13 +15,13 @@ class ReplaceAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\Up
      * A sub property of object. The object that is being replaced.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_replacee;
+    public $replacee;
 
     /**
      * A sub property of object. The object that replaces.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_replacer;
+    public $replacer;
 
     /**
      * A sub property of object. The object that is being replaced.

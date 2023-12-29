@@ -13,13 +13,13 @@ class MovieTheater extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\Ci
 
     /**
      * The number of screens in the movie theater.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_screenCount;
+    public $screenCount;
 
     /**
      * The number of screens in the movie theater.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setScreenCount($value)
@@ -29,7 +29,7 @@ class MovieTheater extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\Ci
 
     /**
      * The number of screens in the movie theater.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getScreenCount()
     {

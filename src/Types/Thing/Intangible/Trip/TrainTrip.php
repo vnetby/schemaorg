@@ -13,43 +13,43 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The platform from which the train departs.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_departurePlatform;
+    public $departurePlatform;
 
     /**
      * The unique identifier for the train.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_trainNumber;
+    public $trainNumber;
 
     /**
      * The name of the train (e.g. The Orient Express).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_trainName;
+    public $trainName;
 
     /**
      * The station where the train trip ends.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation
      */
-    protected $prop_arrivalStation;
+    public $arrivalStation;
 
     /**
      * The platform where the train arrives.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_arrivalPlatform;
+    public $arrivalPlatform;
 
     /**
      * The station from which the train departs.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation
      */
-    protected $prop_departureStation;
+    public $departureStation;
 
     /**
      * The platform from which the train departs.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDeparturePlatform($value)
@@ -59,7 +59,7 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The unique identifier for the train.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTrainNumber($value)
@@ -69,7 +69,7 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The name of the train (e.g. The Orient Express).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTrainName($value)
@@ -89,7 +89,7 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The platform where the train arrives.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setArrivalPlatform($value)
@@ -109,7 +109,7 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The platform from which the train departs.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDeparturePlatform()
     {
@@ -118,7 +118,7 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The unique identifier for the train.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTrainNumber()
     {
@@ -127,7 +127,7 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The name of the train (e.g. The Orient Express).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTrainName()
     {
@@ -145,7 +145,7 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The platform where the train arrives.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getArrivalPlatform()
     {

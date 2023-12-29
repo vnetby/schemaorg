@@ -22,7 +22,7 @@ class MedicalCause extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
      * The condition, complication, symptom, sign, etc. caused.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_causeOf;
+    public $causeOf;
 
     /**
      * The condition, complication, symptom, sign, etc. caused.

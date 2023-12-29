@@ -15,7 +15,7 @@ class InsertAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\Add
      * A sub property of location. The final location of the object or the agent after the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_toLocation;
+    public $toLocation;
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.

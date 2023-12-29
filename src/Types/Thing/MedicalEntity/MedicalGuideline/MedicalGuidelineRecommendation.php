@@ -13,13 +13,13 @@ class MedicalGuidelineRecommendation extends \Vnetby\Schemaorg\Types\Thing\Medic
 
     /**
      * Strength of the guideline's recommendation (e.g. 'class I').
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_recommendationStrength;
+    public $recommendationStrength;
 
     /**
      * Strength of the guideline's recommendation (e.g. 'class I').
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRecommendationStrength($value)
@@ -29,7 +29,7 @@ class MedicalGuidelineRecommendation extends \Vnetby\Schemaorg\Types\Thing\Medic
 
     /**
      * Strength of the guideline's recommendation (e.g. 'class I').
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRecommendationStrength()
     {

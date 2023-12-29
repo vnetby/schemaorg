@@ -15,7 +15,7 @@ class PerformAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Play
      * A sub property of location. The entertainment business where the action occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\EntertainmentBusiness\EntertainmentBusiness
      */
-    protected $prop_entertainmentBusiness;
+    public $entertainmentBusiness;
 
     /**
      * A sub property of location. The entertainment business where the action occurred.

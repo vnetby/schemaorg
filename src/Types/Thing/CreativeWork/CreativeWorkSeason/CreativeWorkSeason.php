@@ -16,62 +16,62 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject\VideoObject
      */
-    protected $prop_trailer;
+    public $trailer;
 
     /**
      * The number of episodes in this season or series.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfEpisodes;
+    public $numberOfEpisodes;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The series to which this episode or season belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Series\CreativeWorkSeries\CreativeWorkSeries
      */
-    protected $prop_partOfSeries;
+    public $partOfSeries;
 
     /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_startDate;
+    public $startDate;
 
     /**
      * Position of the season within an ordered group of seasons.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_seasonNumber;
+    public $seasonNumber;
 
     /**
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_productionCompany;
+    public $productionCompany;
 
     /**
      * An episode of a TV, radio or game media within a series or season.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
      */
-    protected $prop_episode;
+    public $episode;
 
     /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_endDate;
+    public $endDate;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
@@ -96,7 +96,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The number of episodes in this season or series.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfEpisodes($value)
@@ -127,7 +127,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setStartDate($value)
@@ -137,7 +137,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * Position of the season within an ordered group of seasons.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setSeasonNumber($value)
@@ -167,7 +167,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setEndDate($value)
@@ -196,7 +196,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The number of episodes in this season or series.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfEpisodes()
     {
@@ -224,7 +224,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getStartDate()
     {
@@ -233,7 +233,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * Position of the season within an ordered group of seasons.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getSeasonNumber()
     {
@@ -260,7 +260,7 @@ class CreativeWorkSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getEndDate()
     {

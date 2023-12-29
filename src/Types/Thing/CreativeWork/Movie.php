@@ -15,23 +15,23 @@ class Movie extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television. For example, the
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_titleEIDR;
+    public $titleEIDR;
 
     /**
      * The country of origin of something, including products as well as creative works such as movie and TV content. In the
@@ -41,38 +41,38 @@ class Movie extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * of this may vary by context and product type, and cannot be fully enumerated here.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country
      */
-    protected $prop_countryOfOrigin;
+    public $countryOfOrigin;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject\VideoObject
      */
-    protected $prop_trailer;
+    public $trailer;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_duration;
+    public $duration;
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_subtitleLanguage;
+    public $subtitleLanguage;
 
     /**
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_productionCompany;
+    public $productionCompany;
 
     /**
      * The composer of the soundtrack.
@@ -100,7 +100,7 @@ class Movie extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setTitleEIDR($value)
@@ -155,7 +155,7 @@ class Movie extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSubtitleLanguage($value)
@@ -197,7 +197,7 @@ class Movie extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getTitleEIDR()
     {
@@ -247,7 +247,7 @@ class Movie extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSubtitleLanguage()
     {

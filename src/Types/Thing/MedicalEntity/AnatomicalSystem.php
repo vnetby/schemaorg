@@ -18,33 +18,33 @@ class AnatomicalSystem extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
      * anatomical system.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_comprisedOf;
+    public $comprisedOf;
 
     /**
      * A medical therapy related to this anatomy.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
      */
-    protected $prop_relatedTherapy;
+    public $relatedTherapy;
 
     /**
      * A medical condition associated with this anatomy.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_relatedCondition;
+    public $relatedCondition;
 
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_associatedPathophysiology;
+    public $associatedPathophysiology;
 
     /**
      * Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated
      * with an organ system.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_relatedStructure;
+    public $relatedStructure;
 
     /**
      * Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the
@@ -80,7 +80,7 @@ class AnatomicalSystem extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAssociatedPathophysiology($value)
@@ -130,7 +130,7 @@ class AnatomicalSystem extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAssociatedPathophysiology()
     {

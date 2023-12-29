@@ -15,7 +15,7 @@ class ImagingTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTes
      * Imaging technique used.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalImagingTechnique\MedicalImagingTechnique
      */
-    protected $prop_imagingTechnique;
+    public $imagingTechnique;
 
     /**
      * Imaging technique used.

@@ -15,57 +15,57 @@ class RadioSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject\VideoObject
      */
-    protected $prop_trailer;
+    public $trailer;
 
     /**
      * The number of episodes in this season or series.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfEpisodes;
+    public $numberOfEpisodes;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_productionCompany;
+    public $productionCompany;
 
     /**
      * An episode of a TV, radio or game media within a series or season.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
      */
-    protected $prop_episode;
+    public $episode;
 
     /**
      * The number of seasons in this series.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfSeasons;
+    public $numberOfSeasons;
 
     /**
      * A season that is part of the media series.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
      */
-    protected $prop_containsSeason;
+    public $containsSeason;
 
     /**
      * The composer of the soundtrack.
@@ -100,7 +100,7 @@ class RadioSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
 
     /**
      * The number of episodes in this season or series.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfEpisodes($value)
@@ -141,7 +141,7 @@ class RadioSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
 
     /**
      * The number of seasons in this series.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfSeasons($value)
@@ -189,7 +189,7 @@ class RadioSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
 
     /**
      * The number of episodes in this season or series.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfEpisodes()
     {
@@ -226,7 +226,7 @@ class RadioSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
 
     /**
      * The number of seasons in this series.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfSeasons()
     {

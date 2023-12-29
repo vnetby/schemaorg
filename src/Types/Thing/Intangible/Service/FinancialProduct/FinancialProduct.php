@@ -16,27 +16,27 @@ class FinancialProduct extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
      * The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the
      * actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the
      * transaction.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_annualPercentageRate;
+    public $annualPercentageRate;
 
     /**
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_feesAndCommissionsSpecification;
+    public $feesAndCommissionsSpecification;
 
     /**
      * The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_interestRate;
+    public $interestRate;
 
     /**
      * The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the
      * actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the
      * transaction.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setAnnualPercentageRate($value)
@@ -46,7 +46,7 @@ class FinancialProduct extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setFeesAndCommissionsSpecification($value)
@@ -56,7 +56,7 @@ class FinancialProduct extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setInterestRate($value)
@@ -68,7 +68,7 @@ class FinancialProduct extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
      * The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the
      * actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the
      * transaction.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getAnnualPercentageRate()
     {
@@ -77,7 +77,7 @@ class FinancialProduct extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getFeesAndCommissionsSpecification()
     {
@@ -86,7 +86,7 @@ class FinancialProduct extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\
 
     /**
      * The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getInterestRate()
     {

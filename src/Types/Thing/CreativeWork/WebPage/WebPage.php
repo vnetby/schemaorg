@@ -17,7 +17,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_reviewedBy;
+    public $reviewedBy;
 
     /**
      * Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for
@@ -29,51 +29,51 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * XPaths (assuming an XML view of the content). Use the [[xpath]] property. For more sophisticated markup of speakable sections beyond simple
      * ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this we define a supporting
      * type, [[SpeakableSpecification]] which is defined to be a possible value of the *speakable* property. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\SpeakableSpecification|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\SpeakableSpecification|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_speakable;
+    public $speakable;
 
     /**
      * Indicates the main image on the page.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject
      */
-    protected $prop_primaryImageOfPage;
+    public $primaryImageOfPage;
 
     /**
      * A link related to this web page, for example to other related web pages.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_relatedLink;
+    public $relatedLink;
 
     /**
      * Indicates if this web page element is the main subject of the page.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPageElement\WebPageElement
      */
-    protected $prop_mainContentOfPage;
+    public $mainContentOfPage;
 
     /**
      * One of the domain specialities to which this web page's content applies.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Specialty\Specialty
      */
-    protected $prop_specialty;
+    public $specialty;
 
     /**
      * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_significantLink;
+    public $significantLink;
 
     /**
      * A set of links that can help a user understand and navigate a website hierarchy.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\BreadcrumbList
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\BreadcrumbList
      */
-    protected $prop_breadcrumb;
+    public $breadcrumb;
 
     /**
      * Date on which the content on this web page was last reviewed for accuracy and/or completeness.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_lastReviewed;
+    public $lastReviewed;
 
     /**
      * People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
@@ -95,7 +95,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * XPaths (assuming an XML view of the content). Use the [[xpath]] property. For more sophisticated markup of speakable sections beyond simple
      * ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this we define a supporting
      * type, [[SpeakableSpecification]] which is defined to be a possible value of the *speakable* property. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\SpeakableSpecification|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\SpeakableSpecification|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setSpeakable($value)
@@ -115,7 +115,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A link related to this web page, for example to other related web pages.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setRelatedLink($value)
@@ -145,7 +145,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setSignificantLink($value)
@@ -155,7 +155,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A set of links that can help a user understand and navigate a website hierarchy.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\BreadcrumbList $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\BreadcrumbList $value
      * @return static
      */
     function setBreadcrumb($value)
@@ -165,7 +165,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Date on which the content on this web page was last reviewed for accuracy and/or completeness.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setLastReviewed($value)
@@ -192,7 +192,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * XPaths (assuming an XML view of the content). Use the [[xpath]] property. For more sophisticated markup of speakable sections beyond simple
      * ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this we define a supporting
      * type, [[SpeakableSpecification]] which is defined to be a possible value of the *speakable* property. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\SpeakableSpecification|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\SpeakableSpecification|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getSpeakable()
     {
@@ -210,7 +210,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A link related to this web page, for example to other related web pages.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getRelatedLink()
     {
@@ -237,7 +237,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getSignificantLink()
     {
@@ -246,7 +246,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A set of links that can help a user understand and navigate a website hierarchy.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\BreadcrumbList|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\BreadcrumbList|null
      */
     function getBreadcrumb()
     {
@@ -255,7 +255,7 @@ class WebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Date on which the content on this web page was last reviewed for accuracy and/or completeness.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getLastReviewed()
     {

@@ -15,19 +15,19 @@ class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * Status of a game server.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\GameServerStatus\GameServerStatus
      */
-    protected $prop_serverStatus;
+    public $serverStatus;
 
     /**
      * Video game which is played on this server.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\VideoGame
      */
-    protected $prop_game;
+    public $game;
 
     /**
      * Number of players on the server.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_playersOnline;
+    public $playersOnline;
 
     /**
      * Status of a game server.
@@ -51,7 +51,7 @@ class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Number of players on the server.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setPlayersOnline($value)
@@ -79,7 +79,7 @@ class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Number of players on the server.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getPlayersOnline()
     {

@@ -15,59 +15,59 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_priceCurrency;
+    public $priceCurrency;
 
     /**
      * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_ticketToken;
+    public $ticketToken;
 
     /**
      * The organization issuing the ticket or permit.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_issuedBy;
+    public $issuedBy;
 
     /**
      * The person or organization the reservation or ticket is for.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_underName;
+    public $underName;
 
     /**
      * The seat associated with the ticket.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Seat
      */
-    protected $prop_ticketedSeat;
+    public $ticketedSeat;
 
     /**
      * The unique identifier for the ticket.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_ticketNumber;
+    public $ticketNumber;
 
     /**
      * The date the ticket was issued.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_dateIssued;
+    public $dateIssued;
 
     /**
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO'
      * (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to
      * indicate a decimal point. Avoid using these symbols as a readability separator.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_totalPrice;
+    public $totalPrice;
 
     /**
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPriceCurrency($value)
@@ -77,7 +77,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setTicketToken($value)
@@ -117,7 +117,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The unique identifier for the ticket.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTicketNumber($value)
@@ -127,7 +127,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date the ticket was issued.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDateIssued($value)
@@ -139,7 +139,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO'
      * (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to
      * indicate a decimal point. Avoid using these symbols as a readability separator.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTotalPrice($value)
@@ -151,7 +151,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPriceCurrency()
     {
@@ -160,7 +160,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getTicketToken()
     {
@@ -196,7 +196,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The unique identifier for the ticket.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTicketNumber()
     {
@@ -205,7 +205,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date the ticket was issued.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDateIssued()
     {
@@ -216,7 +216,7 @@ class Ticket extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO'
      * (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to
      * indicate a decimal point. Avoid using these symbols as a readability separator.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTotalPrice()
     {

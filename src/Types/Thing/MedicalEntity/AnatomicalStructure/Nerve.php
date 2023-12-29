@@ -15,19 +15,19 @@ class Nerve extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
      * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_sensoryUnit;
+    public $sensoryUnit;
 
     /**
      * The neurological pathway that originates the neurons.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\BrainStructure
      */
-    protected $prop_sourcedFrom;
+    public $sourcedFrom;
 
     /**
      * The neurological pathway extension that involves muscle control.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle
      */
-    protected $prop_nerveMotor;
+    public $nerveMotor;
 
     /**
      * The neurological pathway extension that inputs and sends information to the brain or spinal cord.

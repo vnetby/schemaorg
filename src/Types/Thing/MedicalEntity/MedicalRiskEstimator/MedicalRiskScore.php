@@ -14,13 +14,13 @@ class MedicalRiskScore extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * The algorithm or rules to follow to compute the score.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_algorithm;
+    public $algorithm;
 
     /**
      * The algorithm or rules to follow to compute the score.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAlgorithm($value)
@@ -30,7 +30,7 @@ class MedicalRiskScore extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * The algorithm or rules to follow to compute the score.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAlgorithm()
     {

@@ -15,106 +15,106 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfPlayers;
+    public $numberOfPlayers;
 
     /**
      * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_quest;
+    public $quest;
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gamePlatform;
+    public $gamePlatform;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject\VideoObject
      */
-    protected $prop_trailer;
+    public $trailer;
 
     /**
      * The number of episodes in this season or series.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfEpisodes;
+    public $numberOfEpisodes;
 
     /**
      * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_gameItem;
+    public $gameItem;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_characterAttribute;
+    public $characterAttribute;
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_gameLocation;
+    public $gameLocation;
 
     /**
      * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
      * same time.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode
      */
-    protected $prop_playMode;
+    public $playMode;
 
     /**
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_productionCompany;
+    public $productionCompany;
 
     /**
      * An episode of a TV, radio or game media within a series or season.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
      */
-    protected $prop_episode;
+    public $episode;
 
     /**
      * Cheat codes to the game.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_cheatCode;
+    public $cheatCode;
 
     /**
      * The number of seasons in this series.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfSeasons;
+    public $numberOfSeasons;
 
     /**
      * A season that is part of the media series.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
      */
-    protected $prop_containsSeason;
+    public $containsSeason;
 
     /**
      * The composer of the soundtrack.
@@ -159,7 +159,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGamePlatform($value)
@@ -179,7 +179,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * The number of episodes in this season or series.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfEpisodes($value)
@@ -220,7 +220,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setGameLocation($value)
@@ -271,7 +271,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * The number of seasons in this series.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfSeasons($value)
@@ -328,7 +328,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGamePlatform()
     {
@@ -346,7 +346,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * The number of episodes in this season or series.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfEpisodes()
     {
@@ -383,7 +383,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getGameLocation()
     {
@@ -429,7 +429,7 @@ class VideoGameSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Cr
 
     /**
      * The number of seasons in this series.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfSeasons()
     {

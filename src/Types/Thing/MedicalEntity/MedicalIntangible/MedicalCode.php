@@ -13,19 +13,19 @@ class MedicalCode extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInt
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_codeValue;
+    public $codeValue;
 
     /**
      * The coding system, e.g. 'ICD-10'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_codingSystem;
+    public $codingSystem;
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCodeValue($value)
@@ -35,7 +35,7 @@ class MedicalCode extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInt
 
     /**
      * The coding system, e.g. 'ICD-10'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCodingSystem($value)
@@ -45,7 +45,7 @@ class MedicalCode extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInt
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCodeValue()
     {
@@ -54,7 +54,7 @@ class MedicalCode extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInt
 
     /**
      * The coding system, e.g. 'ICD-10'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCodingSystem()
     {

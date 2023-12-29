@@ -15,13 +15,13 @@ class MedicalSign extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCon
      * A diagnostic test that can identify this sign.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest\MedicalTest
      */
-    protected $prop_identifyingTest;
+    public $identifyingTest;
 
     /**
      * A physical examination that can identify this sign.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\PhysicalExam\PhysicalExam
      */
-    protected $prop_identifyingExam;
+    public $identifyingExam;
 
     /**
      * A diagnostic test that can identify this sign.

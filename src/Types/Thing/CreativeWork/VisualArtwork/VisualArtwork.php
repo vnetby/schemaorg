@@ -15,75 +15,75 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_letterer;
+    public $letterer;
 
     /**
      * The individual who adds color to inked drawings.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_colorist;
+    public $colorist;
 
     /**
      * The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of
      * 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_artEdition;
+    public $artEdition;
 
     /**
      * The primary artist for a work in a medium other than pencils or digital line art--for example, if the primary artwork
      * is done in watercolors or digital paints.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_artist;
+    public $artist;
 
     /**
      * The height of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_height;
+    public $height;
 
     /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_artform;
+    public $artform;
 
     /**
      * The width of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_width;
+    public $width;
 
     /**
      * The individual who draws the primary narrative artwork.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_penciler;
+    public $penciler;
 
     /**
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_inker;
+    public $inker;
 
     /**
      * The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_artMedium;
+    public $artMedium;
 
     /**
      * The depth of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_depth;
+    public $depth;
 
     /**
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_artworkSurface;
+    public $artworkSurface;
 
     /**
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.
@@ -108,7 +108,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     /**
      * The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of
      * 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setArtEdition($value)
@@ -139,7 +139,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setArtform($value)
@@ -179,7 +179,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setArtMedium($value)
@@ -199,7 +199,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setArtworkSurface($value)
@@ -228,7 +228,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     /**
      * The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of
      * 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getArtEdition()
     {
@@ -256,7 +256,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getArtform()
     {
@@ -292,7 +292,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getArtMedium()
     {
@@ -310,7 +310,7 @@ class VisualArtwork extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getArtworkSurface()
     {

@@ -16,28 +16,28 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The type(s) of customers for which the given offer is valid.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessEntityType
      */
-    protected $prop_eligibleCustomerType;
+    public $eligibleCustomerType;
 
     /**
      * The duration for which the given offer is valid.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_eligibleDuration;
+    public $eligibleDuration;
 
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape
      */
-    protected $prop_eligibleRegion;
+    public $eligibleRegion;
 
     /**
      * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
      * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
      * for more details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gtin12;
+    public $gtin12;
 
     /**
      * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
@@ -45,19 +45,19 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * to a certain minimal amount.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
      */
-    protected $prop_eligibleTransactionVolume;
+    public $eligibleTransactionVolume;
 
     /**
      * The date when the item becomes valid.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validFrom;
+    public $validFrom;
 
     /**
      * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_advanceBookingRequirement;
+    public $advanceBookingRequirement;
 
     /**
      * An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease
@@ -65,111 +65,111 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * as Product or a subtype of Product, can clarify the nature of the offer.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\AggregateOffer|\Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|\Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_itemOffered;
+    public $itemOffered;
 
     /**
      * The end of the availability of the product or service included in the offer.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_availabilityEnds;
+    public $availabilityEnds;
 
     /**
      * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_mpn;
+    public $mpn;
 
     /**
      * The beginning of the availability of the product or service included in the offer.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_availabilityStarts;
+    public $availabilityStarts;
 
     /**
      * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
      * specifying that a certain freight charge is valid only for a certain quantity.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_eligibleQuantity;
+    public $eligibleQuantity;
 
     /**
      * The place(s) from which the offer can be obtained (e.g. store locations).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_availableAtOrFrom;
+    public $availableAtOrFrom;
 
     /**
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
      * refers.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_sku;
+    public $sku;
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a
      * provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_seller;
+    public $seller;
 
     /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for
      * the serial number of the product included in the offer.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_serialNumber;
+    public $serialNumber;
 
     /**
      * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gtin14;
+    public $gtin14;
 
     /**
      * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
      */
-    protected $prop_priceSpecification;
+    public $priceSpecification;
 
     /**
      * The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup,
      * in case the delivery method is on site pickup.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_deliveryLeadTime;
+    public $deliveryLeadTime;
 
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_ineligibleRegion;
+    public $ineligibleRegion;
 
     /**
      * A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the
      * offer. Also used for product return policies to specify the condition of products accepted for returns.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\OfferItemCondition\OfferItemCondition
      */
-    protected $prop_itemCondition;
+    public $itemCondition;
 
     /**
      * The delivery method(s) available for this offer.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
-    protected $prop_availableDeliveryMethod;
+    public $availableDeliveryMethod;
 
     /**
      * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
      * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gtin8;
+    public $gtin8;
 
     /**
      * The current approximate inventory level for the item or items.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_inventoryLevel;
+    public $inventoryLevel;
 
     /**
      * A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The GS1 [digital
@@ -181,69 +181,69 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
      * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
      * the GS1 documentation for authoritative details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_gtin;
+    public $gtin;
 
     /**
      * This links to a node or nodes indicating the exact quantity of the products included in an [[Offer]] or [[ProductCollection]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\TypeAndQuantityNode
      */
-    protected $prop_includesObject;
+    public $includesObject;
 
     /**
      * The payment method(s) accepted by seller for this offer.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit
      */
-    protected $prop_acceptedPaymentMethod;
+    public $acceptedPaymentMethod;
 
     /**
      * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
      * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
      * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gtin13;
+    public $gtin13;
 
     /**
      * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction
      */
-    protected $prop_businessFunction;
+    public $businessFunction;
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_areaServed;
+    public $areaServed;
 
     /**
      * The warranty promise(s) included in the offer.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\WarrantyPromise
      */
-    protected $prop_warranty;
+    public $warranty;
 
     /**
      * An Amazon Standard Identification Number (ASIN) is a 10-character alphanumeric unique identifier assigned by Amazon.com and its partners for product identification
      * within the Amazon organization (summary from [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s article). Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details. ASINs are most
      * commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_asin;
+    public $asin;
 
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validThrough;
+    public $validThrough;
 
     /**
      * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
      */
-    protected $prop_availability;
+    public $availability;
 
     /**
      * The type(s) of customers for which the given offer is valid.
@@ -268,7 +268,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape $value
      * @return static
      */
     function setEligibleRegion($value)
@@ -280,7 +280,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
      * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
      * for more details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGtin12($value)
@@ -302,7 +302,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date when the item becomes valid.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidFrom($value)
@@ -334,7 +334,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The end of the availability of the product or service included in the offer.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setAvailabilityEnds($value)
@@ -344,7 +344,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMpn($value)
@@ -354,7 +354,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The beginning of the availability of the product or service included in the offer.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setAvailabilityStarts($value)
@@ -386,7 +386,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
      * refers.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSku($value)
@@ -408,7 +408,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for
      * the serial number of the product included in the offer.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSerialNumber($value)
@@ -418,7 +418,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGtin14($value)
@@ -450,7 +450,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIneligibleRegion($value)
@@ -482,7 +482,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
      * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGtin8($value)
@@ -510,7 +510,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
      * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
      * the GS1 documentation for authoritative details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setGtin($value)
@@ -542,7 +542,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
      * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
      * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGtin13($value)
@@ -562,7 +562,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAreaServed($value)
@@ -585,7 +585,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * within the Amazon organization (summary from [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s article). Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details. ASINs are most
      * commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAsin($value)
@@ -596,7 +596,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidThrough($value)
@@ -635,7 +635,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|null
      */
     function getEligibleRegion()
     {
@@ -646,7 +646,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
      * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
      * for more details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGtin12()
     {
@@ -666,7 +666,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date when the item becomes valid.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidFrom()
     {
@@ -695,7 +695,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The end of the availability of the product or service included in the offer.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getAvailabilityEnds()
     {
@@ -704,7 +704,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMpn()
     {
@@ -713,7 +713,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The beginning of the availability of the product or service included in the offer.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getAvailabilityStarts()
     {
@@ -742,7 +742,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
      * refers.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSku()
     {
@@ -762,7 +762,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for
      * the serial number of the product included in the offer.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSerialNumber()
     {
@@ -771,7 +771,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGtin14()
     {
@@ -800,7 +800,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIneligibleRegion()
     {
@@ -829,7 +829,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
      * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGtin8()
     {
@@ -855,7 +855,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
      * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
      * the GS1 documentation for authoritative details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getGtin()
     {
@@ -884,7 +884,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
      * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
      * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGtin13()
     {
@@ -902,7 +902,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The geographic area where a service or offered item is provided.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAreaServed()
     {
@@ -923,7 +923,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * within the Amazon organization (summary from [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s article). Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details. ASINs are most
      * commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAsin()
     {
@@ -933,7 +933,7 @@ class Demand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidThrough()
     {

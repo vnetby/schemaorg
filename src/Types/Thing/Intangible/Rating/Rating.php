@@ -16,40 +16,40 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_author;
+    public $author;
 
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_reviewAspect;
+    public $reviewAspect;
 
     /**
      * The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_worstRating;
+    public $worstRating;
 
     /**
      * A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in
      * the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_ratingExplanation;
+    public $ratingExplanation;
 
     /**
      * The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially
      * similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols
      * as a readability separator.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_ratingValue;
+    public $ratingValue;
 
     /**
      * The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_bestRating;
+    public $bestRating;
 
     /**
      * The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism
@@ -64,7 +64,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setReviewAspect($value)
@@ -74,7 +74,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setWorstRating($value)
@@ -85,7 +85,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in
      * the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRatingExplanation($value)
@@ -97,7 +97,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially
      * similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols
      * as a readability separator.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRatingValue($value)
@@ -107,7 +107,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setBestRating($value)
@@ -127,7 +127,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getReviewAspect()
     {
@@ -136,7 +136,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getWorstRating()
     {
@@ -146,7 +146,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in
      * the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRatingExplanation()
     {
@@ -157,7 +157,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially
      * similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols
      * as a readability separator.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRatingValue()
     {
@@ -166,7 +166,7 @@ class Rating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getBestRating()
     {

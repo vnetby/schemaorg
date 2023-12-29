@@ -15,60 +15,60 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date and time the reservation was booked.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_bookingTime;
+    public $bookingTime;
 
     /**
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_priceCurrency;
+    public $priceCurrency;
 
     /**
      * The date and time the reservation was modified.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_modifiedTime;
+    public $modifiedTime;
 
     /**
      * A unique identifier for the reservation.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_reservationId;
+    public $reservationId;
 
     /**
      * The person or organization the reservation or ticket is for.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_underName;
+    public $underName;
 
     /**
      * The current status of the reservation.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\ReservationStatusType\ReservationStatusType
      */
-    protected $prop_reservationStatus;
+    public $reservationStatus;
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
      * on behalf of the provider. A provider may also serve as the seller.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_provider;
+    public $provider;
 
     /**
      * A ticket associated with the reservation.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Ticket
      */
-    protected $prop_reservedTicket;
+    public $reservedTicket;
 
     /**
      * Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ProgramMembership
      */
-    protected $prop_programMembershipUsed;
+    public $programMembershipUsed;
 
     /**
      * An entity that arranges for an exchange between a buyer and a seller. In most cases a broker never acquires or
@@ -76,25 +76,25 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * broker, seller, or buyer, the latter two terms are preferred.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_broker;
+    public $broker;
 
     /**
      * The thing -- flight, event, restaurant, etc. being reserved.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_reservationFor;
+    public $reservationFor;
 
     /**
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO'
      * (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to
      * indicate a decimal point. Avoid using these symbols as a readability separator.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_totalPrice;
+    public $totalPrice;
 
     /**
      * The date and time the reservation was booked.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setBookingTime($value)
@@ -106,7 +106,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPriceCurrency($value)
@@ -116,7 +116,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date and time the reservation was modified.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setModifiedTime($value)
@@ -126,7 +126,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A unique identifier for the reservation.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setReservationId($value)
@@ -211,7 +211,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO'
      * (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to
      * indicate a decimal point. Avoid using these symbols as a readability separator.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTotalPrice($value)
@@ -221,7 +221,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date and time the reservation was booked.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getBookingTime()
     {
@@ -232,7 +232,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPriceCurrency()
     {
@@ -241,7 +241,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date and time the reservation was modified.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getModifiedTime()
     {
@@ -250,7 +250,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A unique identifier for the reservation.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getReservationId()
     {
@@ -327,7 +327,7 @@ class Reservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO'
      * (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to
      * indicate a decimal point. Avoid using these symbols as a readability separator.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTotalPrice()
     {

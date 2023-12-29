@@ -16,13 +16,13 @@ class MoveAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
      * A sub property of location. The final location of the object or the agent after the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_toLocation;
+    public $toLocation;
 
     /**
      * A sub property of location. The original location of the object or the agent before the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_fromLocation;
+    public $fromLocation;
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.

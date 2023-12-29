@@ -13,25 +13,25 @@ class HealthPlanNetwork extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_healthPlanCostSharing;
+    public $healthPlanCostSharing;
 
     /**
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_healthPlanNetworkId;
+    public $healthPlanNetworkId;
 
     /**
      * The tier(s) for this network.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_healthPlanNetworkTier;
+    public $healthPlanNetworkTier;
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setHealthPlanCostSharing($value)
@@ -41,7 +41,7 @@ class HealthPlanNetwork extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHealthPlanNetworkId($value)
@@ -51,7 +51,7 @@ class HealthPlanNetwork extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * The tier(s) for this network.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHealthPlanNetworkTier($value)
@@ -61,7 +61,7 @@ class HealthPlanNetwork extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getHealthPlanCostSharing()
     {
@@ -70,7 +70,7 @@ class HealthPlanNetwork extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHealthPlanNetworkId()
     {
@@ -79,7 +79,7 @@ class HealthPlanNetwork extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * The tier(s) for this network.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHealthPlanNetworkTier()
     {

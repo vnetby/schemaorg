@@ -13,31 +13,31 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_targetPlatform;
+    public $targetPlatform;
 
     /**
      * Indicates whether API is managed or unmanaged.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_programmingModel;
+    public $programmingModel;
 
     /**
      * Associated product/technology version. E.g., .NET Framework 4.5.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_assemblyVersion;
+    public $assemblyVersion;
 
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_executableLibraryName;
+    public $executableLibraryName;
 
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTargetPlatform($value)
@@ -47,7 +47,7 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Indicates whether API is managed or unmanaged.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setProgrammingModel($value)
@@ -57,7 +57,7 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Associated product/technology version. E.g., .NET Framework 4.5.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAssemblyVersion($value)
@@ -67,7 +67,7 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setExecutableLibraryName($value)
@@ -77,7 +77,7 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTargetPlatform()
     {
@@ -86,7 +86,7 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Indicates whether API is managed or unmanaged.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProgrammingModel()
     {
@@ -95,7 +95,7 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Associated product/technology version. E.g., .NET Framework 4.5.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAssemblyVersion()
     {
@@ -104,7 +104,7 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
 
     /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getExecutableLibraryName()
     {

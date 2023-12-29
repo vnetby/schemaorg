@@ -20,7 +20,7 @@ class FollowAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\I
      * A sub property of object. The person or organization being followed.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_followee;
+    public $followee;
 
     /**
      * A sub property of object. The person or organization being followed.

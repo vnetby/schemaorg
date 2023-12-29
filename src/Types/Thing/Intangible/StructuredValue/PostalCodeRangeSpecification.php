@@ -13,19 +13,19 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * First postal code in a range (included).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_postalCodeBegin;
+    public $postalCodeBegin;
 
     /**
      * Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_postalCodeEnd;
+    public $postalCodeEnd;
 
     /**
      * First postal code in a range (included).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPostalCodeBegin($value)
@@ -35,7 +35,7 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPostalCodeEnd($value)
@@ -45,7 +45,7 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * First postal code in a range (included).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPostalCodeBegin()
     {
@@ -54,7 +54,7 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPostalCodeEnd()
     {

@@ -15,51 +15,51 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
      * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_workload;
+    public $workload;
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_exerciseType;
+    public $exerciseType;
 
     /**
      * Length of time to engage in the activity.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_activityDuration;
+    public $activityDuration;
 
     /**
      * Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order
      * of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_additionalVariable;
+    public $additionalVariable;
 
     /**
      * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
      * the movement.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_intensity;
+    public $intensity;
 
     /**
      * How often one should break from the activity.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_restPeriods;
+    public $restPeriods;
 
     /**
      * Number of times one should repeat the activity.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_repetitions;
+    public $repetitions;
 
     /**
      * How often one should engage in the activity.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_activityFrequency;
+    public $activityFrequency;
 
     /**
      * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
@@ -73,7 +73,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setExerciseType($value)
@@ -94,7 +94,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
     /**
      * Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order
      * of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAdditionalVariable($value)
@@ -105,7 +105,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
     /**
      * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
      * the movement.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setIntensity($value)
@@ -115,7 +115,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * How often one should break from the activity.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setRestPeriods($value)
@@ -125,7 +125,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * Number of times one should repeat the activity.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setRepetitions($value)
@@ -135,7 +135,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * How often one should engage in the activity.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setActivityFrequency($value)
@@ -154,7 +154,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getExerciseType()
     {
@@ -173,7 +173,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
     /**
      * Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order
      * of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAdditionalVariable()
     {
@@ -183,7 +183,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
     /**
      * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
      * the movement.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getIntensity()
     {
@@ -192,7 +192,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * How often one should break from the activity.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getRestPeriods()
     {
@@ -201,7 +201,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * Number of times one should repeat the activity.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getRepetitions()
     {
@@ -210,7 +210,7 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifestyle
 
     /**
      * How often one should engage in the activity.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getActivityFrequency()
     {

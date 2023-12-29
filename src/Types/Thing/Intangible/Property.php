@@ -17,25 +17,25 @@ class Property extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * in these situations RDFa and JSON-LD syntax for reverse properties can be used.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Property
      */
-    protected $prop_inverseOf;
+    public $inverseOf;
 
     /**
      * Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Class
      */
-    protected $prop_domainIncludes;
+    public $domainIncludes;
 
     /**
      * Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Class
      */
-    protected $prop_rangeIncludes;
+    public $rangeIncludes;
 
     /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\Types\Thing\Intangible\Class|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
      */
-    protected $prop_supersededBy;
+    public $supersededBy;
 
     /**
      * Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other,

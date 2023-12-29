@@ -16,13 +16,13 @@ class RentAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeA
      * A sub property of participant. The owner of the real estate property.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_landlord;
+    public $landlord;
 
     /**
      * A sub property of participant. The real estate agent involved in the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\RealEstateAgent
      */
-    protected $prop_realEstateAgent;
+    public $realEstateAgent;
 
     /**
      * A sub property of participant. The owner of the real estate property.

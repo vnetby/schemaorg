@@ -15,7 +15,7 @@ class AskAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\Comm
      * A sub property of object. A question.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Question
      */
-    protected $prop_question;
+    public $question;
 
     /**
      * A sub property of object. A question.

@@ -15,7 +15,7 @@ class TravelAction extends \Vnetby\Schemaorg\Types\Thing\Action\MoveAction\MoveA
      * The distance travelled, e.g. exercising or travelling.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_distance;
+    public $distance;
 
     /**
      * The distance travelled, e.g. exercising or travelling.

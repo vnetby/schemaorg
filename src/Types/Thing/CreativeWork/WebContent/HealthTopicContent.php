@@ -19,7 +19,7 @@ class HealthTopicContent extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebC
      * talks about treatment, self-care, treatments or their side-effects.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\HealthAspectEnumeration\HealthAspectEnumeration
      */
-    protected $prop_hasHealthAspect;
+    public $hasHealthAspect;
 
     /**
      * Indicates the aspect or aspects specifically addressed in some [[HealthTopicContent]]. For example, that the content is an overview, or that it

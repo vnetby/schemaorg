@@ -16,14 +16,14 @@ class MediaSubscription extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
      * a movie before being able to watch it.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    protected $prop_expectsAcceptanceOf;
+    public $expectsAcceptanceOf;
 
     /**
      * The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription
      * before playing media.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_authenticator;
+    public $authenticator;
 
     /**
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy

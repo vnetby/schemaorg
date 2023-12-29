@@ -15,13 +15,13 @@ class PaymentChargeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
      * The payment method(s) to which the payment charge specification applies.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod
      */
-    protected $prop_appliesToPaymentMethod;
+    public $appliesToPaymentMethod;
 
     /**
      * The delivery method(s) to which the delivery charge or payment charge specification applies.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
-    protected $prop_appliesToDeliveryMethod;
+    public $appliesToDeliveryMethod;
 
     /**
      * The payment method(s) to which the payment charge specification applies.

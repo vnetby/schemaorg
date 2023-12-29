@@ -13,13 +13,13 @@ class WebAPI extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 
     /**
      * Further documentation describing the Web API in more detail.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_documentation;
+    public $documentation;
 
     /**
      * Further documentation describing the Web API in more detail.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setDocumentation($value)
@@ -29,7 +29,7 @@ class WebAPI extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
 
     /**
      * Further documentation describing the Web API in more detail.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getDocumentation()
     {

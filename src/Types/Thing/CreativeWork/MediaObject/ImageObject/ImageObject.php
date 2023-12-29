@@ -13,31 +13,31 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Indicates whether this image is representative of the content of the page.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_representativeOfPage;
+    public $representativeOfPage;
 
     /**
      * exif data for this object.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_exifData;
+    public $exifData;
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_embeddedTextCaption;
+    public $embeddedTextCaption;
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_caption;
+    public $caption;
 
     /**
      * Indicates whether this image is representative of the content of the page.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setRepresentativeOfPage($value)
@@ -47,7 +47,7 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * exif data for this object.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setExifData($value)
@@ -57,7 +57,7 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmbeddedTextCaption($value)
@@ -67,7 +67,7 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
      * @return static
      */
     function setCaption($value)
@@ -77,7 +77,7 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Indicates whether this image is representative of the content of the page.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getRepresentativeOfPage()
     {
@@ -86,7 +86,7 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * exif data for this object.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getExifData()
     {
@@ -95,7 +95,7 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmbeddedTextCaption()
     {
@@ -104,7 +104,7 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
     function getCaption()
     {

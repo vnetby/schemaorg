@@ -22,7 +22,7 @@ class StatisticalPopulation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Int
      * Indicates the populationType common to all members of a [[StatisticalPopulation]] or all cases within the scope of a [[StatisticalVariable]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Class
      */
-    protected $prop_populationType;
+    public $populationType;
 
     /**
      * Indicates the populationType common to all members of a [[StatisticalPopulation]] or all cases within the scope of a [[StatisticalVariable]].

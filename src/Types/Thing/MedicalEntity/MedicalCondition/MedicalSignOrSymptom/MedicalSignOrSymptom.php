@@ -15,7 +15,7 @@ class MedicalSignOrSymptom extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\M
      * A possible treatment to address this condition, sign or symptom.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
      */
-    protected $prop_possibleTreatment;
+    public $possibleTreatment;
 
     /**
      * A possible treatment to address this condition, sign or symptom.

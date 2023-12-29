@@ -15,19 +15,19 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_numberOfBeds;
+    public $numberOfBeds;
 
     /**
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType
      */
-    protected $prop_typeOfBed;
+    public $typeOfBed;
 
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setNumberOfBeds($value)
@@ -37,7 +37,7 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType $value
      * @return static
      */
     function setTypeOfBed($value)
@@ -47,7 +47,7 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getNumberOfBeds()
     {
@@ -56,7 +56,7 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType|null
      */
     function getTypeOfBed()
     {

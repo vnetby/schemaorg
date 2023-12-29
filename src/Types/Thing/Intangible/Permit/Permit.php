@@ -13,49 +13,49 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date when the item is no longer valid.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validUntil;
+    public $validUntil;
 
     /**
      * The date when the item becomes valid.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validFrom;
+    public $validFrom;
 
     /**
      * The duration of validity of a permit or similar thing.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_validFor;
+    public $validFor;
 
     /**
      * The target audience for this permit.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_permitAudience;
+    public $permitAudience;
 
     /**
      * The organization issuing the ticket or permit.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_issuedBy;
+    public $issuedBy;
 
     /**
      * The geographic area where a permit or similar thing is valid.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_validIn;
+    public $validIn;
 
     /**
      * The service through which the permit was granted.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
      */
-    protected $prop_issuedThrough;
+    public $issuedThrough;
 
     /**
      * The date when the item is no longer valid.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidUntil($value)
@@ -65,7 +65,7 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date when the item becomes valid.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidFrom($value)
@@ -125,7 +125,7 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date when the item is no longer valid.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidUntil()
     {
@@ -134,7 +134,7 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date when the item becomes valid.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidFrom()
     {

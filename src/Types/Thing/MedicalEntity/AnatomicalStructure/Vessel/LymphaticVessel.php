@@ -15,19 +15,19 @@ class LymphaticVessel extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Anatom
      * The vasculature the lymphatic structure runs, or efferents, to.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
      */
-    protected $prop_runsTo;
+    public $runsTo;
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_regionDrained;
+    public $regionDrained;
 
     /**
      * The vasculature the lymphatic structure originates, or afferents, from.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
      */
-    protected $prop_originatesFrom;
+    public $originatesFrom;
 
     /**
      * The vasculature the lymphatic structure runs, or efferents, to.

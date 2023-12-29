@@ -14,25 +14,25 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
 
     /**
      * Number of people the reservation should accommodate.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_partySize;
+    public $partySize;
 
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_pickupLocation;
+    public $pickupLocation;
 
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_pickupTime;
+    public $pickupTime;
 
     /**
      * Number of people the reservation should accommodate.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setPartySize($value)
@@ -52,7 +52,7 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
 
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setPickupTime($value)
@@ -62,7 +62,7 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
 
     /**
      * Number of people the reservation should accommodate.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getPartySize()
     {
@@ -80,7 +80,7 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
 
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getPickupTime()
     {

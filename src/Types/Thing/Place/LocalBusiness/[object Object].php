@@ -15,7 +15,7 @@ class [object Object] extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\
      * Collection, [fonds](https://en.wikipedia.org/wiki/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]].
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\[object Object]
      */
-    protected $prop_[object Object];
+    public $[object Object];
 
     /**
      * Collection, [fonds](https://en.wikipedia.org/wiki/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]].

@@ -13,13 +13,13 @@ class OccupationalExperienceRequirements extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * Indicates the minimal number of months of experience required for a position.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_monthsOfExperience;
+    public $monthsOfExperience;
 
     /**
      * Indicates the minimal number of months of experience required for a position.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setMonthsOfExperience($value)
@@ -29,7 +29,7 @@ class OccupationalExperienceRequirements extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * Indicates the minimal number of months of experience required for a position.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getMonthsOfExperience()
     {

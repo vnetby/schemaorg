@@ -13,31 +13,31 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
 
     /**
      * The date and time of obtaining the product.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_ownedFrom;
+    public $ownedFrom;
 
     /**
      * The date and time of giving up ownership on the product.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_ownedThrough;
+    public $ownedThrough;
 
     /**
      * The organization or person from which the product was acquired.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_acquiredFrom;
+    public $acquiredFrom;
 
     /**
      * The product that this structured value is referring to.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_typeOfGood;
+    public $typeOfGood;
 
     /**
      * The date and time of obtaining the product.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setOwnedFrom($value)
@@ -47,7 +47,7 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
 
     /**
      * The date and time of giving up ownership on the product.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setOwnedThrough($value)
@@ -77,7 +77,7 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
 
     /**
      * The date and time of obtaining the product.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getOwnedFrom()
     {
@@ -86,7 +86,7 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
 
     /**
      * The date and time of giving up ownership on the product.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getOwnedThrough()
     {

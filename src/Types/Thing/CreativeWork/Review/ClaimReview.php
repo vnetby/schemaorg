@@ -13,13 +13,13 @@ class ClaimReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
 
     /**
      * A short summary of the specific claims reviewed in a ClaimReview.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_claimReviewed;
+    public $claimReviewed;
 
     /**
      * A short summary of the specific claims reviewed in a ClaimReview.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setClaimReviewed($value)
@@ -29,7 +29,7 @@ class ClaimReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
 
     /**
      * A short summary of the specific claims reviewed in a ClaimReview.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getClaimReviewed()
     {

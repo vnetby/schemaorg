@@ -15,20 +15,20 @@ class TouristAttraction extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_touristType;
+    public $touristType;
 
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_availableLanguage;
+    public $availableLanguage;
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTouristType($value)
@@ -39,7 +39,7 @@ class TouristAttraction extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setAvailableLanguage($value)
@@ -49,7 +49,7 @@ class TouristAttraction extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTouristType()
     {
@@ -59,7 +59,7 @@ class TouristAttraction extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getAvailableLanguage()
     {

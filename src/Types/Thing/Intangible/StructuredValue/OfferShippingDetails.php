@@ -18,74 +18,74 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
-    protected $prop_shippingDestination;
+    public $shippingDestination;
 
     /**
      * The height of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_height;
+    public $height;
 
     /**
      * Indicates the origin of a shipment, i.e. where it should be coming from.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
-    protected $prop_shippingOrigin;
+    public $shippingOrigin;
 
     /**
      * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_doesNotShip;
+    public $doesNotShip;
 
     /**
      * The weight of the product or person.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_weight;
+    public $weight;
 
     /**
      * The width of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_width;
+    public $width;
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_transitTimeLabel;
+    public $transitTimeLabel;
 
     /**
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_shippingSettingsLink;
+    public $shippingSettingsLink;
 
     /**
      * The total delay between the receipt of the order and the goods reaching the final customer.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ShippingDeliveryTime
      */
-    protected $prop_deliveryTime;
+    public $deliveryTime;
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_shippingLabel;
+    public $shippingLabel;
 
     /**
      * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
      * are most appropriate.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_shippingRate;
+    public $shippingRate;
 
     /**
      * The depth of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    protected $prop_depth;
+    public $depth;
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
@@ -119,7 +119,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setDoesNotShip($value)
@@ -149,7 +149,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTransitTimeLabel($value)
@@ -159,7 +159,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setShippingSettingsLink($value)
@@ -179,7 +179,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setShippingLabel($value)
@@ -237,7 +237,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getDoesNotShip()
     {
@@ -264,7 +264,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTransitTimeLabel()
     {
@@ -273,7 +273,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getShippingSettingsLink()
     {
@@ -291,7 +291,7 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getShippingLabel()
     {

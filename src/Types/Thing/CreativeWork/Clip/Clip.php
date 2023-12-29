@@ -15,57 +15,57 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * The season to which this episode belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
      */
-    protected $prop_partOfSeason;
+    public $partOfSeason;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * The episode to which this clip belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
      */
-    protected $prop_partOfEpisode;
+    public $partOfEpisode;
 
     /**
      * Position of the clip within an ordered group of clips.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_clipNumber;
+    public $clipNumber;
 
     /**
      * The end time of the clip expressed as the number of seconds from the beginning of the work.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry
      */
-    protected $prop_endOffset;
+    public $endOffset;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The series to which this episode or season belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Series\CreativeWorkSeries\CreativeWorkSeries
      */
-    protected $prop_partOfSeries;
+    public $partOfSeries;
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_startOffset;
+    public $startOffset;
 
     /**
      * The composer of the soundtrack.
@@ -110,7 +110,7 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Position of the clip within an ordered group of clips.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setClipNumber($value)
@@ -120,7 +120,7 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The end time of the clip expressed as the number of seconds from the beginning of the work.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry $value
      * @return static
      */
     function setEndOffset($value)
@@ -151,7 +151,7 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setStartOffset($value)
@@ -198,7 +198,7 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Position of the clip within an ordered group of clips.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getClipNumber()
     {
@@ -207,7 +207,7 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The end time of the clip expressed as the number of seconds from the beginning of the work.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|null
      */
     function getEndOffset()
     {
@@ -235,7 +235,7 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getStartOffset()
     {

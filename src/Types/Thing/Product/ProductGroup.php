@@ -20,20 +20,20 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
      * @var \Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_hasVariant;
+    public $hasVariant;
 
     /**
      * Indicates a textual identifier for a ProductGroup.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_productGroupID;
+    public $productGroupID;
 
     /**
      * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can
      * be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_variesBy;
+    public $variesBy;
 
     /**
      * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
@@ -47,7 +47,7 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Indicates a textual identifier for a ProductGroup.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setProductGroupID($value)
@@ -58,7 +58,7 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can
      * be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setVariesBy($value)
@@ -77,7 +77,7 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
 
     /**
      * Indicates a textual identifier for a ProductGroup.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProductGroupID()
     {
@@ -87,7 +87,7 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     /**
      * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can
      * be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getVariesBy()
     {

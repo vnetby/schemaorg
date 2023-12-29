@@ -16,56 +16,56 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
      * Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\RestrictedDiet\RestrictedDiet
      */
-    protected $prop_suitableForDiet;
+    public $suitableForDiet;
 
     /**
      * The time it takes to actually cook the dish, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_cookTime;
+    public $cookTime;
 
     /**
      * A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with
      * HowToStep and/or HowToSection items.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_recipeInstructions;
+    public $recipeInstructions;
 
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_recipeIngredient;
+    public $recipeIngredient;
 
     /**
      * The category of the recipe—for example, appetizer, entree, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_recipeCategory;
+    public $recipeCategory;
 
     /**
      * Nutrition information about the recipe or menu item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\NutritionInformation
      */
-    protected $prop_nutrition;
+    public $nutrition;
 
     /**
      * The quantity produced by the recipe (for example, number of people served, number of servings, etc).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_recipeYield;
+    public $recipeYield;
 
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_recipeCuisine;
+    public $recipeCuisine;
 
     /**
      * The method of cooking, such as Frying, Steaming, ...
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_cookingMethod;
+    public $cookingMethod;
 
     /**
      * Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
@@ -90,7 +90,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
     /**
      * A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with
      * HowToStep and/or HowToSection items.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRecipeInstructions($value)
@@ -100,7 +100,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRecipeIngredient($value)
@@ -110,7 +110,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The category of the recipe—for example, appetizer, entree, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRecipeCategory($value)
@@ -130,7 +130,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The quantity produced by the recipe (for example, number of people served, number of servings, etc).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setRecipeYield($value)
@@ -140,7 +140,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRecipeCuisine($value)
@@ -150,7 +150,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The method of cooking, such as Frying, Steaming, ...
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCookingMethod($value)
@@ -179,7 +179,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
     /**
      * A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with
      * HowToStep and/or HowToSection items.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRecipeInstructions()
     {
@@ -188,7 +188,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRecipeIngredient()
     {
@@ -197,7 +197,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The category of the recipe—for example, appetizer, entree, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRecipeCategory()
     {
@@ -215,7 +215,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The quantity produced by the recipe (for example, number of people served, number of servings, etc).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getRecipeYield()
     {
@@ -224,7 +224,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRecipeCuisine()
     {
@@ -233,7 +233,7 @@ class Recipe extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\HowTo
 
     /**
      * The method of cooking, such as Frying, Steaming, ...
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCookingMethod()
     {

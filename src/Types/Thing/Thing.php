@@ -15,71 +15,71 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
      * A CreativeWork or Event about this Thing.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\Event|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_subjectOf;
+    public $subjectOf;
 
     /**
      * Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_mainEntityOfPage;
+    public $mainEntityOfPage;
 
     /**
      * The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org
      * provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for
      * more details. 
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_identifier;
+    public $identifier;
 
     /**
      * An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_image;
+    public $image;
 
     /**
      * The name of the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_name;
+    public $name;
 
     /**
      * URL of the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_url;
+    public $url;
 
     /**
      * URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata
      * entry, or official website.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_sameAs;
+    public $sameAs;
 
     /**
      * A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other
      * properties (in particular, name) may be necessary for the description to be useful for disambiguation.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_disambiguatingDescription;
+    public $disambiguatingDescription;
 
     /**
      * An alias for the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_alternateName;
+    public $alternateName;
 
     /**
      * A description of the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\TextObject
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\TextObject
      */
-    protected $prop_description;
+    public $description;
 
     /**
      * Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
      * @var \Vnetby\Schemaorg\Types\Thing\Action\Action
      */
-    protected $prop_potentialAction;
+    public $potentialAction;
 
     /**
      * An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is
@@ -87,9 +87,9 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
      * in this case corresponds to the use of rdf:type in RDF. Text values can be used sparingly, for cases where useful
      * information can be added without their being an appropriate schema to reference. In the case of text values, the class label
      * should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_additionalType;
+    public $additionalType;
 
     /**
      * A CreativeWork or Event about this Thing.
@@ -103,7 +103,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setMainEntityOfPage($value)
@@ -115,7 +115,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
      * The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org
      * provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for
      * more details. 
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIdentifier($value)
@@ -125,7 +125,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setImage($value)
@@ -135,7 +135,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * The name of the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setName($value)
@@ -145,7 +145,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * URL of the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setUrl($value)
@@ -156,7 +156,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
     /**
      * URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata
      * entry, or official website.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setSameAs($value)
@@ -167,7 +167,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
     /**
      * A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other
      * properties (in particular, name) may be necessary for the description to be useful for disambiguation.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDisambiguatingDescription($value)
@@ -177,7 +177,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * An alias for the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAlternateName($value)
@@ -187,7 +187,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * A description of the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\TextObject $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\TextObject $value
      * @return static
      */
     function setDescription($value)
@@ -211,7 +211,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
      * in this case corresponds to the use of rdf:type in RDF. Text values can be used sparingly, for cases where useful
      * information can be added without their being an appropriate schema to reference. In the case of text values, the class label
      * should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAdditionalType($value)
@@ -230,7 +230,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getMainEntityOfPage()
     {
@@ -241,7 +241,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
      * The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org
      * provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for
      * more details. 
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIdentifier()
     {
@@ -250,7 +250,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getImage()
     {
@@ -259,7 +259,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * The name of the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getName()
     {
@@ -268,7 +268,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * URL of the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getUrl()
     {
@@ -278,7 +278,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
     /**
      * URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata
      * entry, or official website.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getSameAs()
     {
@@ -288,7 +288,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
     /**
      * A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other
      * properties (in particular, name) may be necessary for the description to be useful for disambiguation.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDisambiguatingDescription()
     {
@@ -297,7 +297,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * An alias for the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAlternateName()
     {
@@ -306,7 +306,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
 
     /**
      * A description of the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\TextObject|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\TextObject|null
      */
     function getDescription()
     {
@@ -328,7 +328,7 @@ class Thing extends \Vnetby\Schemaorg\Types\Type
      * in this case corresponds to the use of rdf:type in RDF. Text values can be used sparingly, for cases where useful
      * information can be added without their being an appropriate schema to reference. In the case of text values, the class label
      * should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAdditionalType()
     {

@@ -15,61 +15,61 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
      * The person who wrote the words.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_lyricist;
+    public $lyricist;
 
     /**
      * An audio recording of the work.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording
      */
-    protected $prop_recordedAs;
+    public $recordedAs;
 
     /**
      * The key, mode, or scale this composition uses.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_musicalKey;
+    public $musicalKey;
 
     /**
      * The date and place the work was first performed.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_firstPerformance;
+    public $firstPerformance;
 
     /**
      * An arrangement derived from the composition.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
      */
-    protected $prop_musicArrangement;
+    public $musicArrangement;
 
     /**
      * The International Standard Musical Work Code for the composition.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_iswcCode;
+    public $iswcCode;
 
     /**
      * The words in the song.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_lyrics;
+    public $lyrics;
 
     /**
      * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_composer;
+    public $composer;
 
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_musicCompositionForm;
+    public $musicCompositionForm;
 
     /**
      * Smaller compositions included in this work (e.g. a movement in a symphony).
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
      */
-    protected $prop_includedComposition;
+    public $includedComposition;
 
     /**
      * The person who wrote the words.
@@ -93,7 +93,7 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The key, mode, or scale this composition uses.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMusicalKey($value)
@@ -123,7 +123,7 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The International Standard Musical Work Code for the composition.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIswcCode($value)
@@ -153,7 +153,7 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMusicCompositionForm($value)
@@ -191,7 +191,7 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The key, mode, or scale this composition uses.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMusicalKey()
     {
@@ -218,7 +218,7 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The International Standard Musical Work Code for the composition.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIswcCode()
     {
@@ -245,7 +245,7 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMusicCompositionForm()
     {

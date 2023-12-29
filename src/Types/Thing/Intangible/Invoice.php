@@ -13,70 +13,70 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The identifier for the account the payment will be applied to.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_accountId;
+    public $accountId;
 
     /**
      * A number that confirms the given order or payment has been received.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_confirmationNumber;
+    public $confirmationNumber;
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_category;
+    public $category;
 
     /**
      * The date that payment is due.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_paymentDueDate;
+    public $paymentDueDate;
 
     /**
      * The time interval used to compute the invoice.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_billingPeriod;
+    public $billingPeriod;
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
      * on behalf of the provider. A provider may also serve as the seller.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_provider;
+    public $provider;
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_paymentMethodId;
+    public $paymentMethodId;
 
     /**
      * The minimum payment required at this time.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
      */
-    protected $prop_minimumPaymentDue;
+    public $minimumPaymentDue;
 
     /**
      * The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Order
      */
-    protected $prop_referencesOrder;
+    public $referencesOrder;
 
     /**
      * The status of payment; whether the invoice has been paid or not.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\PaymentStatusType\PaymentStatusType
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\PaymentStatusType\PaymentStatusType
      */
-    protected $prop_paymentStatus;
+    public $paymentStatus;
 
     /**
      * The name of the credit card or other method of payment for the order.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod
      */
-    protected $prop_paymentMethod;
+    public $paymentMethod;
 
     /**
      * An entity that arranges for an exchange between a buyer and a seller. In most cases a broker never acquires or
@@ -84,29 +84,29 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * broker, seller, or buyer, the latter two terms are preferred.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_broker;
+    public $broker;
 
     /**
      * The date the invoice is scheduled to be paid.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_scheduledPaymentDate;
+    public $scheduledPaymentDate;
 
     /**
      * Party placing the order or paying the invoice.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_customer;
+    public $customer;
 
     /**
      * The total amount due.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_totalPaymentDue;
+    public $totalPaymentDue;
 
     /**
      * The identifier for the account the payment will be applied to.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAccountId($value)
@@ -116,7 +116,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A number that confirms the given order or payment has been received.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setConfirmationNumber($value)
@@ -126,7 +126,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
      */
     function setCategory($value)
@@ -136,7 +136,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date that payment is due.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setPaymentDueDate($value)
@@ -167,7 +167,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPaymentMethodId($value)
@@ -197,7 +197,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The status of payment; whether the invoice has been paid or not.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\PaymentStatusType\PaymentStatusType $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\PaymentStatusType\PaymentStatusType $value
      * @return static
      */
     function setPaymentStatus($value)
@@ -229,7 +229,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date the invoice is scheduled to be paid.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setScheduledPaymentDate($value)
@@ -259,7 +259,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The identifier for the account the payment will be applied to.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAccountId()
     {
@@ -268,7 +268,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A number that confirms the given order or payment has been received.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getConfirmationNumber()
     {
@@ -277,7 +277,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
     function getCategory()
     {
@@ -286,7 +286,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date that payment is due.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getPaymentDueDate()
     {
@@ -314,7 +314,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPaymentMethodId()
     {
@@ -341,7 +341,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The status of payment; whether the invoice has been paid or not.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\PaymentStatusType\PaymentStatusType|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\PaymentStatusType\PaymentStatusType|null
      */
     function getPaymentStatus()
     {
@@ -370,7 +370,7 @@ class Invoice extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The date the invoice is scheduled to be paid.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getScheduledPaymentDate()
     {

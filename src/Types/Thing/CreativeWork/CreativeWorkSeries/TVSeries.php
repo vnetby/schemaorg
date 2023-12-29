@@ -15,23 +15,23 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television. For example, the
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_titleEIDR;
+    public $titleEIDR;
 
     /**
      * The country of origin of something, including products as well as creative works such as movie and TV content. In the
@@ -41,50 +41,50 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
      * of this may vary by context and product type, and cannot be fully enumerated here.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country
      */
-    protected $prop_countryOfOrigin;
+    public $countryOfOrigin;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject\VideoObject
      */
-    protected $prop_trailer;
+    public $trailer;
 
     /**
      * The number of episodes in this season or series.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfEpisodes;
+    public $numberOfEpisodes;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The production company or studio responsible for the item, e.g. series, video game, episode etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_productionCompany;
+    public $productionCompany;
 
     /**
      * An episode of a TV, radio or game media within a series or season.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
      */
-    protected $prop_episode;
+    public $episode;
 
     /**
      * The number of seasons in this series.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfSeasons;
+    public $numberOfSeasons;
 
     /**
      * A season that is part of the media series.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
      */
-    protected $prop_containsSeason;
+    public $containsSeason;
 
     /**
      * The composer of the soundtrack.
@@ -112,7 +112,7 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setTitleEIDR($value)
@@ -146,7 +146,7 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
 
     /**
      * The number of episodes in this season or series.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfEpisodes($value)
@@ -187,7 +187,7 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
 
     /**
      * The number of seasons in this series.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfSeasons($value)
@@ -229,7 +229,7 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getTitleEIDR()
     {
@@ -260,7 +260,7 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
 
     /**
      * The number of episodes in this season or series.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfEpisodes()
     {
@@ -297,7 +297,7 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
 
     /**
      * The number of seasons in this series.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfSeasons()
     {

@@ -14,43 +14,43 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The earliest someone may check into a lodging establishment.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_checkinTime;
+    public $checkinTime;
 
     /**
      * The latest someone may check out of a lodging establishment.
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_checkoutTime;
+    public $checkoutTime;
 
     /**
      * The number of children staying in the unit.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numChildren;
+    public $numChildren;
 
     /**
      * The number of adults staying in the unit.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numAdults;
+    public $numAdults;
 
     /**
      * A full description of the lodging unit.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_lodgingUnitDescription;
+    public $lodgingUnitDescription;
 
     /**
      * Textual description of the unit type (including suite vs. room, size of bed, etc.).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
-    protected $prop_lodgingUnitType;
+    public $lodgingUnitType;
 
     /**
      * The earliest someone may check into a lodging establishment.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setCheckinTime($value)
@@ -60,7 +60,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The latest someone may check out of a lodging establishment.
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setCheckoutTime($value)
@@ -70,7 +70,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The number of children staying in the unit.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setNumChildren($value)
@@ -80,7 +80,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The number of adults staying in the unit.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setNumAdults($value)
@@ -90,7 +90,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * A full description of the lodging unit.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLodgingUnitDescription($value)
@@ -100,7 +100,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * Textual description of the unit type (including suite vs. room, size of bed, etc.).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setLodgingUnitType($value)
@@ -110,7 +110,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The earliest someone may check into a lodging establishment.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getCheckinTime()
     {
@@ -119,7 +119,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The latest someone may check out of a lodging establishment.
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getCheckoutTime()
     {
@@ -128,7 +128,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The number of children staying in the unit.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getNumChildren()
     {
@@ -137,7 +137,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * The number of adults staying in the unit.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getNumAdults()
     {
@@ -146,7 +146,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * A full description of the lodging unit.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLodgingUnitDescription()
     {
@@ -155,7 +155,7 @@ class LodgingReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
 
     /**
      * Textual description of the unit type (including suite vs. room, size of bed, etc.).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getLodgingUnitType()
     {

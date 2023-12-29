@@ -16,64 +16,64 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_musicBy;
+    public $musicBy;
 
     /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_director;
+    public $director;
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gamePlatform;
+    public $gamePlatform;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\VideoObject\VideoObject
      */
-    protected $prop_trailer;
+    public $trailer;
 
     /**
      * Links to tips, tactics, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_gameTip;
+    public $gameTip;
 
     /**
      * The server on which it is possible to play the game.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GameServer
      */
-    protected $prop_gameServer;
+    public $gameServer;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
      * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_actor;
+    public $actor;
 
     /**
      * The edition of a video game.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_gameEdition;
+    public $gameEdition;
 
     /**
      * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
      * same time.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode
      */
-    protected $prop_playMode;
+    public $playMode;
 
     /**
      * Cheat codes to the game.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_cheatCode;
+    public $cheatCode;
 
     /**
      * The composer of the soundtrack.
@@ -98,7 +98,7 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGamePlatform($value)
@@ -149,7 +149,7 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
 
     /**
      * The edition of a video game.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGameEdition($value)
@@ -199,7 +199,7 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGamePlatform()
     {
@@ -245,7 +245,7 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
 
     /**
      * The edition of a video game.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGameEdition()
     {

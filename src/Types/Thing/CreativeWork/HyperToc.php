@@ -17,13 +17,13 @@ class HyperToc extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * Indicates a [[HyperTocEntry]] in a [[HyperToc]].
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry
      */
-    protected $prop_tocEntry;
+    public $tocEntry;
 
     /**
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    protected $prop_associatedMedia;
+    public $associatedMedia;
 
     /**
      * Indicates a [[HyperTocEntry]] in a [[HyperToc]].

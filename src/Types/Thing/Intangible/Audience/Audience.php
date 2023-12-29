@@ -13,19 +13,19 @@ class Audience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_audienceType;
+    public $audienceType;
 
     /**
      * The geographic area associated with the audience.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_geographicArea;
+    public $geographicArea;
 
     /**
      * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAudienceType($value)
@@ -45,7 +45,7 @@ class Audience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAudienceType()
     {

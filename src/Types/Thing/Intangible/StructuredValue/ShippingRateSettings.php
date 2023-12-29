@@ -17,41 +17,41 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
-    protected $prop_shippingDestination;
+    public $shippingDestination;
 
     /**
      * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_doesNotShip;
+    public $doesNotShip;
 
     /**
      * A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]]
      * matching this [[ShippingRateSettings]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\DeliveryChargeSpecification
      */
-    protected $prop_freeShippingThreshold;
+    public $freeShippingThreshold;
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_shippingLabel;
+    public $shippingLabel;
 
     /**
      * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
      * are most appropriate.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_shippingRate;
+    public $shippingRate;
 
     /**
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isUnlabelledFallback;
+    public $isUnlabelledFallback;
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
@@ -65,7 +65,7 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setDoesNotShip($value)
@@ -86,7 +86,7 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setShippingLabel($value)
@@ -109,7 +109,7 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsUnlabelledFallback($value)
@@ -128,7 +128,7 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getDoesNotShip()
     {
@@ -147,7 +147,7 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getShippingLabel()
     {
@@ -168,7 +168,7 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsUnlabelledFallback()
     {

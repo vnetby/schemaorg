@@ -15,7 +15,7 @@ class WinAction extends \Vnetby\Schemaorg\Types\Thing\Action\AchieveAction\Achie
      * A sub property of participant. The loser of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_loser;
+    public $loser;
 
     /**
      * A sub property of participant. The loser of the action.

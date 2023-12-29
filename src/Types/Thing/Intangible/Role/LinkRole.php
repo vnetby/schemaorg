@@ -15,20 +15,20 @@ class LinkRole extends \Vnetby\Schemaorg\Types\Thing\Intangible\Role\Role
 
     /**
      * Indicates the relationship type of a Web link. 
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_linkRelationship;
+    public $linkRelationship;
 
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    protected $prop_inLanguage;
+    public $inLanguage;
 
     /**
      * Indicates the relationship type of a Web link. 
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLinkRelationship($value)
@@ -39,7 +39,7 @@ class LinkRole extends \Vnetby\Schemaorg\Types\Thing\Intangible\Role\Role
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
     function setInLanguage($value)
@@ -49,7 +49,7 @@ class LinkRole extends \Vnetby\Schemaorg\Types\Thing\Intangible\Role\Role
 
     /**
      * Indicates the relationship type of a Web link. 
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLinkRelationship()
     {
@@ -59,7 +59,7 @@ class LinkRole extends \Vnetby\Schemaorg\Types\Thing\Intangible\Role\Role
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
     function getInLanguage()
     {

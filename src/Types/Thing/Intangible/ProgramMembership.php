@@ -14,38 +14,38 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
     /**
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the
      * points are issued in. (E.g. stars, miles, etc.)
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_membershipPointsEarned;
+    public $membershipPointsEarned;
 
     /**
      * The organization (airline, travelers' club, etc.) the membership is made with.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_hostingOrganization;
+    public $hostingOrganization;
 
     /**
      * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_member;
+    public $member;
 
     /**
      * A unique identifier for the membership.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_membershipNumber;
+    public $membershipNumber;
 
     /**
      * The program providing the membership.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_programName;
+    public $programName;
 
     /**
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the
      * points are issued in. (E.g. stars, miles, etc.)
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setMembershipPointsEarned($value)
@@ -75,7 +75,7 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * A unique identifier for the membership.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMembershipNumber($value)
@@ -85,7 +85,7 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * The program providing the membership.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setProgramName($value)
@@ -96,7 +96,7 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
     /**
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the
      * points are issued in. (E.g. stars, miles, etc.)
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getMembershipPointsEarned()
     {
@@ -123,7 +123,7 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * A unique identifier for the membership.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMembershipNumber()
     {
@@ -132,7 +132,7 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
 
     /**
      * The program providing the membership.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProgramName()
     {

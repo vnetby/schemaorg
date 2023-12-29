@@ -15,7 +15,7 @@ class MedicalWebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\
      * Medical audience for page.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalAudienceType\MedicalAudienceType|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\MedicalAudience\MedicalAudience
      */
-    protected $prop_medicalAudience;
+    public $medicalAudience;
 
     /**
      * Medical audience for page.

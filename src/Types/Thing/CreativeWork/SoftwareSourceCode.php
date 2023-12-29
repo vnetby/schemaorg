@@ -13,38 +13,38 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_codeSampleType;
+    public $codeSampleType;
 
     /**
      * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_runtimePlatform;
+    public $runtimePlatform;
 
     /**
      * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be
      * used.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
      */
-    protected $prop_targetProduct;
+    public $targetProduct;
 
     /**
      * The computer programming language.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ComputerLanguage
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ComputerLanguage
      */
-    protected $prop_programmingLanguage;
+    public $programmingLanguage;
 
     /**
      * Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_codeRepository;
+    public $codeRepository;
 
     /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCodeSampleType($value)
@@ -54,7 +54,7 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRuntimePlatform($value)
@@ -75,7 +75,7 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The computer programming language.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ComputerLanguage $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ComputerLanguage $value
      * @return static
      */
     function setProgrammingLanguage($value)
@@ -85,7 +85,7 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setCodeRepository($value)
@@ -95,7 +95,7 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCodeSampleType()
     {
@@ -104,7 +104,7 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRuntimePlatform()
     {
@@ -123,7 +123,7 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * The computer programming language.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ComputerLanguage|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ComputerLanguage|null
      */
     function getProgrammingLanguage()
     {
@@ -132,7 +132,7 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
 
     /**
      * Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getCodeRepository()
     {

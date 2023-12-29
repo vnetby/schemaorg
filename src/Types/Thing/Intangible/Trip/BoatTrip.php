@@ -15,13 +15,13 @@ class BoatTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
      * The terminal or port from which the boat departs.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal
      */
-    protected $prop_departureBoatTerminal;
+    public $departureBoatTerminal;
 
     /**
      * The terminal or port from which the boat arrives.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal
      */
-    protected $prop_arrivalBoatTerminal;
+    public $arrivalBoatTerminal;
 
     /**
      * The terminal or port from which the boat departs.

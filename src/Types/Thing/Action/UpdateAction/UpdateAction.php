@@ -15,7 +15,7 @@ class UpdateAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
      * A sub property of object. The collection target of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_targetCollection;
+    public $targetCollection;
 
     /**
      * A sub property of object. The collection target of the action.

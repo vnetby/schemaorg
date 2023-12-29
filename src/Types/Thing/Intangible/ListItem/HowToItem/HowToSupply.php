@@ -13,13 +13,13 @@ class HowToSupply extends \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowT
 
     /**
      * The estimated cost of the supply or supplies consumed when performing instructions.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_estimatedCost;
+    public $estimatedCost;
 
     /**
      * The estimated cost of the supply or supplies consumed when performing instructions.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
      * @return static
      */
     function setEstimatedCost($value)
@@ -29,7 +29,7 @@ class HowToSupply extends \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowT
 
     /**
      * The estimated cost of the supply or supplies consumed when performing instructions.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
      */
     function getEstimatedCost()
     {

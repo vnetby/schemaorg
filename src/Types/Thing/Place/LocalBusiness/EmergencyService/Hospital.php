@@ -15,19 +15,19 @@ class Hospital extends \Vnetby\Schemaorg\Types\Thing\Place\LocalBusiness\Emergen
      * A medical specialty of the provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
      */
-    protected $prop_medicalSpecialty;
+    public $medicalSpecialty;
 
     /**
      * Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\CDCPMDRecord|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset
      */
-    protected $prop_healthcareReportingData;
+    public $healthcareReportingData;
 
     /**
      * A medical service available from this provider.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\MedicalProcedure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest\MedicalTest
      */
-    protected $prop_availableService;
+    public $availableService;
 
     /**
      * A medical specialty of the provider.

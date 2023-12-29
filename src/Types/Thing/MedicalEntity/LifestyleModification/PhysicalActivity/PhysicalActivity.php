@@ -14,31 +14,31 @@ class PhysicalActivity extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifes
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_category;
+    public $category;
 
     /**
      * The anatomy of the underlying organ system or structures associated with this entity.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_associatedAnatomy;
+    public $associatedAnatomy;
 
     /**
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_pathophysiology;
+    public $pathophysiology;
 
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_epidemiology;
+    public $epidemiology;
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
      */
     function setCategory($value)
@@ -58,7 +58,7 @@ class PhysicalActivity extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifes
 
     /**
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPathophysiology($value)
@@ -68,7 +68,7 @@ class PhysicalActivity extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifes
 
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEpidemiology($value)
@@ -78,7 +78,7 @@ class PhysicalActivity extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifes
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
     function getCategory()
     {
@@ -96,7 +96,7 @@ class PhysicalActivity extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifes
 
     /**
      * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPathophysiology()
     {
@@ -105,7 +105,7 @@ class PhysicalActivity extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Lifes
 
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEpidemiology()
     {

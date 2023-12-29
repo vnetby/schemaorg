@@ -16,61 +16,61 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_occupationalCategory;
+    public $occupationalCategory;
 
     /**
      * Specific qualifications required for this role or Occupation.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_qualifications;
+    public $qualifications;
 
     /**
      *  The region/country for which this occupational description is appropriate. Note that educational requirements and qualifications can vary between jurisdictions.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_occupationLocation;
+    public $occupationLocation;
 
     /**
      * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill
      * this role or to work in this occupation.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_skills;
+    public $skills;
 
     /**
      * Educational background needed for the position or Occupation.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_educationRequirements;
+    public $educationRequirements;
 
     /**
      * Responsibilities associated with this role or Occupation.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_responsibilities;
+    public $responsibilities;
 
     /**
      * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry,
      * job title, and location. Estimated salaries are often computed by outside organizations rather than the hiring organization, who may not have
      * committed to the estimated value.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
      */
-    protected $prop_estimatedSalary;
+    public $estimatedSalary;
 
     /**
      * Description of skills and experience needed for the position or Occupation.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_experienceRequirements;
+    public $experienceRequirements;
 
     /**
      * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOccupationalCategory($value)
@@ -80,7 +80,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Specific qualifications required for this role or Occupation.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setQualifications($value)
@@ -101,7 +101,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill
      * this role or to work in this occupation.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setSkills($value)
@@ -111,7 +111,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Educational background needed for the position or Occupation.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEducationRequirements($value)
@@ -121,7 +121,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Responsibilities associated with this role or Occupation.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setResponsibilities($value)
@@ -133,7 +133,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry,
      * job title, and location. Estimated salaries are often computed by outside organizations rather than the hiring organization, who may not have
      * committed to the estimated value.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
      * @return static
      */
     function setEstimatedSalary($value)
@@ -143,7 +143,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of skills and experience needed for the position or Occupation.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setExperienceRequirements($value)
@@ -156,7 +156,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOccupationalCategory()
     {
@@ -165,7 +165,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Specific qualifications required for this role or Occupation.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getQualifications()
     {
@@ -184,7 +184,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill
      * this role or to work in this occupation.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getSkills()
     {
@@ -193,7 +193,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Educational background needed for the position or Occupation.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEducationRequirements()
     {
@@ -202,7 +202,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Responsibilities associated with this role or Occupation.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getResponsibilities()
     {
@@ -213,7 +213,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry,
      * job title, and location. Estimated salaries are often computed by outside organizations rather than the hiring organization, who may not have
      * committed to the estimated value.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
      */
     function getEstimatedSalary()
     {
@@ -222,7 +222,7 @@ class Occupation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of skills and experience needed for the position or Occupation.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getExperienceRequirements()
     {

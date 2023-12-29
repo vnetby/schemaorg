@@ -13,141 +13,141 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Subcategory of the application, e.g. 'Arcade Game'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_applicationSubCategory;
+    public $applicationSubCategory;
 
     /**
      * Storage requirements (free space required).
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_storageRequirements;
+    public $storageRequirements;
 
     /**
      * The name of the application suite to which the application belongs (e.g. Excel belongs to Office).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_applicationSuite;
+    public $applicationSuite;
 
     /**
      * A link to a screenshot image of the app.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_screenshot;
+    public $screenshot;
 
     /**
      * Features or modules provided by this application (and possibly required by other applications).
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_featureList;
+    public $featureList;
 
     /**
      * URL at which the app may be installed, if different from the URL of the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_installUrl;
+    public $installUrl;
 
     /**
      * If the file can be downloaded, URL to download the binary.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_downloadUrl;
+    public $downloadUrl;
 
     /**
      * Supporting data for a SoftwareApplication.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed
      */
-    protected $prop_supportingData;
+    public $supportingData;
 
     /**
      * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_fileSize;
+    public $fileSize;
 
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_applicationCategory;
+    public $applicationCategory;
 
     /**
      * Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_countriesNotSupported;
+    public $countriesNotSupported;
 
     /**
      * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package,
      * but required to run the application (examples: DirectX, Java or .NET runtime).
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_softwareRequirements;
+    public $softwareRequirements;
 
     /**
      * Device required to run the application. Used in cases where a specific make/model is required to run the application.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_availableOnDevice;
+    public $availableOnDevice;
 
     /**
      * Additional content for a software application.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
      */
-    protected $prop_softwareAddOn;
+    public $softwareAddOn;
 
     /**
      * Software application help.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    protected $prop_softwareHelp;
+    public $softwareHelp;
 
     /**
      * Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_operatingSystem;
+    public $operatingSystem;
 
     /**
      * Minimum memory requirements.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_memoryRequirements;
+    public $memoryRequirements;
 
     /**
      * Description of what changed in this version.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_releaseNotes;
+    public $releaseNotes;
 
     /**
      * Version of the software instance.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_softwareVersion;
+    public $softwareVersion;
 
     /**
      * Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on
      * wifi).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_permissions;
+    public $permissions;
 
     /**
      * Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_countriesSupported;
+    public $countriesSupported;
 
     /**
      * Processor architecture required to run the application (e.g. IA64).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_processorRequirements;
+    public $processorRequirements;
 
     /**
      * Subcategory of the application, e.g. 'Arcade Game'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setApplicationSubCategory($value)
@@ -157,7 +157,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Storage requirements (free space required).
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setStorageRequirements($value)
@@ -167,7 +167,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * The name of the application suite to which the application belongs (e.g. Excel belongs to Office).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setApplicationSuite($value)
@@ -177,7 +177,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * A link to a screenshot image of the app.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setScreenshot($value)
@@ -187,7 +187,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Features or modules provided by this application (and possibly required by other applications).
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFeatureList($value)
@@ -197,7 +197,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * URL at which the app may be installed, if different from the URL of the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setInstallUrl($value)
@@ -207,7 +207,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * If the file can be downloaded, URL to download the binary.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setDownloadUrl($value)
@@ -227,7 +227,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFileSize($value)
@@ -237,7 +237,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setApplicationCategory($value)
@@ -247,7 +247,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCountriesNotSupported($value)
@@ -258,7 +258,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package,
      * but required to run the application (examples: DirectX, Java or .NET runtime).
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSoftwareRequirements($value)
@@ -268,7 +268,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Device required to run the application. Used in cases where a specific make/model is required to run the application.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAvailableOnDevice($value)
@@ -298,7 +298,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOperatingSystem($value)
@@ -308,7 +308,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Minimum memory requirements.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setMemoryRequirements($value)
@@ -318,7 +318,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Description of what changed in this version.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setReleaseNotes($value)
@@ -328,7 +328,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Version of the software instance.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSoftwareVersion($value)
@@ -339,7 +339,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on
      * wifi).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPermissions($value)
@@ -349,7 +349,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCountriesSupported($value)
@@ -359,7 +359,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Processor architecture required to run the application (e.g. IA64).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setProcessorRequirements($value)
@@ -369,7 +369,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Subcategory of the application, e.g. 'Arcade Game'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getApplicationSubCategory()
     {
@@ -378,7 +378,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Storage requirements (free space required).
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getStorageRequirements()
     {
@@ -387,7 +387,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * The name of the application suite to which the application belongs (e.g. Excel belongs to Office).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getApplicationSuite()
     {
@@ -396,7 +396,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * A link to a screenshot image of the app.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getScreenshot()
     {
@@ -405,7 +405,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Features or modules provided by this application (and possibly required by other applications).
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFeatureList()
     {
@@ -414,7 +414,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * URL at which the app may be installed, if different from the URL of the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getInstallUrl()
     {
@@ -423,7 +423,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * If the file can be downloaded, URL to download the binary.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getDownloadUrl()
     {
@@ -441,7 +441,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFileSize()
     {
@@ -450,7 +450,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getApplicationCategory()
     {
@@ -459,7 +459,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCountriesNotSupported()
     {
@@ -469,7 +469,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package,
      * but required to run the application (examples: DirectX, Java or .NET runtime).
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSoftwareRequirements()
     {
@@ -478,7 +478,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Device required to run the application. Used in cases where a specific make/model is required to run the application.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAvailableOnDevice()
     {
@@ -505,7 +505,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOperatingSystem()
     {
@@ -514,7 +514,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Minimum memory requirements.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getMemoryRequirements()
     {
@@ -523,7 +523,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Description of what changed in this version.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getReleaseNotes()
     {
@@ -532,7 +532,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Version of the software instance.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSoftwareVersion()
     {
@@ -542,7 +542,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on
      * wifi).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPermissions()
     {
@@ -551,7 +551,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCountriesSupported()
     {
@@ -560,7 +560,7 @@ class SoftwareApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Processor architecture required to run the application (e.g. IA64).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProcessorRequirements()
     {

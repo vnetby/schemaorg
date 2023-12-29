@@ -15,19 +15,19 @@ class BusinessAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience
      * The age of the business.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_yearsInOperation;
+    public $yearsInOperation;
 
     /**
      * The number of employees in an organization, e.g. business.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfEmployees;
+    public $numberOfEmployees;
 
     /**
      * The size of the business in annual revenue.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_yearlyRevenue;
+    public $yearlyRevenue;
 
     /**
      * The age of the business.

@@ -15,13 +15,13 @@ class Artery extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
      * The area to which the artery supplies blood.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_supplyTo;
+    public $supplyTo;
 
     /**
      * The branches that comprise the arterial structure.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_arterialBranch;
+    public $arterialBranch;
 
     /**
      * The area to which the artery supplies blood.

@@ -18,39 +18,39 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_letterer;
+    public $letterer;
 
     /**
      * The individual who adds color to inked drawings.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_colorist;
+    public $colorist;
 
     /**
      * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
      * Cover" or "2nd Printing Variant".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_variantCover;
+    public $variantCover;
 
     /**
      * The primary artist for a work in a medium other than pencils or digital line art--for example, if the primary artwork
      * is done in watercolors or digital paints.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_artist;
+    public $artist;
 
     /**
      * The individual who draws the primary narrative artwork.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_penciler;
+    public $penciler;
 
     /**
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_inker;
+    public $inker;
 
     /**
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.
@@ -75,7 +75,7 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     /**
      * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
      * Cover" or "2nd Printing Variant".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVariantCover($value)
@@ -135,7 +135,7 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     /**
      * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
      * Cover" or "2nd Printing Variant".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVariantCover()
     {

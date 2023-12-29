@@ -14,43 +14,43 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Location in the body of the anatomical structure.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_bodyLocation;
+    public $bodyLocation;
 
     /**
      * How the procedure is performed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_howPerformed;
+    public $howPerformed;
 
     /**
      * The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalProcedureType\MedicalProcedureType
      */
-    protected $prop_procedureType;
+    public $procedureType;
 
     /**
      * The status of the study (enumerated).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
      */
-    protected $prop_status;
+    public $status;
 
     /**
      * Typical or recommended followup care after the procedure is performed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_followup;
+    public $followup;
 
     /**
      * Typical preparation that a patient must undergo before having the procedure performed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_preparation;
+    public $preparation;
 
     /**
      * Location in the body of the anatomical structure.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBodyLocation($value)
@@ -60,7 +60,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * How the procedure is performed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHowPerformed($value)
@@ -80,7 +80,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * The status of the study (enumerated).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType $value
      * @return static
      */
     function setStatus($value)
@@ -90,7 +90,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Typical or recommended followup care after the procedure is performed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFollowup($value)
@@ -100,7 +100,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Typical preparation that a patient must undergo before having the procedure performed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
      * @return static
      */
     function setPreparation($value)
@@ -110,7 +110,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Location in the body of the anatomical structure.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBodyLocation()
     {
@@ -119,7 +119,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * How the procedure is performed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHowPerformed()
     {
@@ -137,7 +137,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * The status of the study (enumerated).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|null
      */
     function getStatus()
     {
@@ -146,7 +146,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Typical or recommended followup care after the procedure is performed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFollowup()
     {
@@ -155,7 +155,7 @@ class MedicalProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
 
     /**
      * Typical preparation that a patient must undergo before having the procedure performed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
      */
     function getPreparation()
     {

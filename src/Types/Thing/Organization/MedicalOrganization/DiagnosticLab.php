@@ -15,7 +15,7 @@ class DiagnosticLab extends \Vnetby\Schemaorg\Types\Thing\Organization\MedicalOr
      * A diagnostic test or procedure offered by this lab.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest\MedicalTest
      */
-    protected $prop_availableTest;
+    public $availableTest;
 
     /**
      * A diagnostic test or procedure offered by this lab.

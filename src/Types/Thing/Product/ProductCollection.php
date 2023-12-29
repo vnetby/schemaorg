@@ -15,7 +15,7 @@ class ProductCollection extends \Vnetby\Schemaorg\Types\Thing\Product\Product
      * This links to a node or nodes indicating the exact quantity of the products included in an [[Offer]] or [[ProductCollection]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\TypeAndQuantityNode
      */
-    protected $prop_includesObject;
+    public $includesObject;
 
     /**
      * This links to a node or nodes indicating the exact quantity of the products included in an [[Offer]] or [[ProductCollection]].

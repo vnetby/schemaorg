@@ -15,7 +15,7 @@ class MedicalTestPanel extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
      * A component test of the panel.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest\MedicalTest
      */
-    protected $prop_subTest;
+    public $subTest;
 
     /**
      * A component test of the panel.

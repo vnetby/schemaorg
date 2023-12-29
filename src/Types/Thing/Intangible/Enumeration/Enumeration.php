@@ -15,7 +15,7 @@ class Enumeration extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\Types\Thing\Intangible\Class|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Enumeration
      */
-    protected $prop_supersededBy;
+    public $supersededBy;
 
     /**
      * Relates a term (i.e. a property, class or enumeration) to one that supersedes it.

@@ -15,7 +15,7 @@ class CommentAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\
      * A sub property of result. The Comment created or sent as a result of this action.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      */
-    protected $prop_resultComment;
+    public $resultComment;
 
     /**
      * A sub property of result. The Comment created or sent as a result of this action.

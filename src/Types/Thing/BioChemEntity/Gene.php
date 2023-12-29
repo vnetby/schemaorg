@@ -16,26 +16,26 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
      * Another BioChemEntity encoded by this one. 
      * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
      */
-    protected $prop_encodesBioChemEntity;
+    public $encodesBioChemEntity;
 
     /**
      * Another gene which is a variation of this one.
      * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\Gene
      */
-    protected $prop_alternativeOf;
+    public $alternativeOf;
 
     /**
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
      * Protein.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_hasBioPolymerSequence;
+    public $hasBioPolymerSequence;
 
     /**
      * Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_expressedIn;
+    public $expressedIn;
 
     /**
      * Another BioChemEntity encoded by this one. 
@@ -60,7 +60,7 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     /**
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
      * Protein.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHasBioPolymerSequence($value)
@@ -99,7 +99,7 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     /**
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
      * Protein.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHasBioPolymerSequence()
     {

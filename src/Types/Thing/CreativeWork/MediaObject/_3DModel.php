@@ -17,14 +17,14 @@ class _3DModel extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\Me
     /**
      * Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect
      * reality.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isResizable;
+    public $isResizable;
 
     /**
      * Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect
      * reality.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsResizable($value)
@@ -35,7 +35,7 @@ class _3DModel extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\Me
     /**
      * Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect
      * reality.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsResizable()
     {

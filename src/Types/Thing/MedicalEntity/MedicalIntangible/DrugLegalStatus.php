@@ -15,7 +15,7 @@ class DrugLegalStatus extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medica
      * The location in which the status applies.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_applicableLocation;
+    public $applicableLocation;
 
     /**
      * The location in which the status applies.

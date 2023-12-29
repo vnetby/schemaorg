@@ -37,89 +37,89 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about public transport closures.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
-    protected $prop_publicTransportClosuresInfo;
+    public $publicTransportClosuresInfo;
 
     /**
      * Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening
      * hours. For a larger geographic region like a quarantine of an entire region, use [[spatialCoverage]].
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicStructure|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\LocalBusiness
      */
-    protected $prop_announcementLocation;
+    public $announcementLocation;
 
     /**
      * Information about school closures.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_schoolClosuresInfo;
+    public $schoolClosuresInfo;
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_category;
+    public $category;
 
     /**
      * Guidelines about quarantine rules, e.g. in the context of a pandemic.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
-    protected $prop_quarantineGuidelines;
+    public $quarantineGuidelines;
 
     /**
      * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
      * containing [[SpecialAnnouncement]] markup on a site.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
-    protected $prop_newsUpdatesAndGuidelines;
+    public $newsUpdatesAndGuidelines;
 
     /**
      * Information about disease prevention.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
-    protected $prop_diseasePreventionInfo;
+    public $diseasePreventionInfo;
 
     /**
      * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\GovernmentService
      */
-    protected $prop_governmentBenefitsInfo;
+    public $governmentBenefitsInfo;
 
     /**
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS
      * or Atom.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed
      */
-    protected $prop_webFeed;
+    public $webFeed;
 
     /**
      * Information about travel bans, e.g. in the context of a pandemic.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_travelBans;
+    public $travelBans;
 
     /**
      * Publication date of an online listing.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_datePosted;
+    public $datePosted;
 
     /**
      * Information about getting tested (for a [[MedicalCondition]]), e.g. in the context of a pandemic.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
-    protected $prop_gettingTestedInfo;
+    public $gettingTestedInfo;
 
     /**
      * Statistical information about the spread of a disease, either as [[WebContent]], or described directly as a [[Dataset]], or the specific [[Observation]]s
      * in the dataset. When a [[WebContent]] URL is provided, the page indicated might also contain more such markup.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation
      */
-    protected $prop_diseaseSpreadStatistics;
+    public $diseaseSpreadStatistics;
 
     /**
      * Information about public transport closures.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
      * @return static
      */
     function setPublicTransportClosuresInfo($value)
@@ -140,7 +140,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about school closures.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setSchoolClosuresInfo($value)
@@ -150,7 +150,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
      */
     function setCategory($value)
@@ -160,7 +160,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Guidelines about quarantine rules, e.g. in the context of a pandemic.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
      * @return static
      */
     function setQuarantineGuidelines($value)
@@ -171,7 +171,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
      * containing [[SpecialAnnouncement]] markup on a site.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
      * @return static
      */
     function setNewsUpdatesAndGuidelines($value)
@@ -181,7 +181,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about disease prevention.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
      * @return static
      */
     function setDiseasePreventionInfo($value)
@@ -202,7 +202,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS
      * or Atom.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed $value
      * @return static
      */
     function setWebFeed($value)
@@ -212,7 +212,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about travel bans, e.g. in the context of a pandemic.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setTravelBans($value)
@@ -222,7 +222,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Publication date of an online listing.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDatePosted($value)
@@ -232,7 +232,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about getting tested (for a [[MedicalCondition]]), e.g. in the context of a pandemic.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
      * @return static
      */
     function setGettingTestedInfo($value)
@@ -243,7 +243,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Statistical information about the spread of a disease, either as [[WebContent]], or described directly as a [[Dataset]], or the specific [[Observation]]s
      * in the dataset. When a [[WebContent]] URL is provided, the page indicated might also contain more such markup.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation $value
      * @return static
      */
     function setDiseaseSpreadStatistics($value)
@@ -253,7 +253,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about public transport closures.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
      */
     function getPublicTransportClosuresInfo()
     {
@@ -272,7 +272,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about school closures.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getSchoolClosuresInfo()
     {
@@ -281,7 +281,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
     function getCategory()
     {
@@ -290,7 +290,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Guidelines about quarantine rules, e.g. in the context of a pandemic.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
      */
     function getQuarantineGuidelines()
     {
@@ -300,7 +300,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
      * containing [[SpecialAnnouncement]] markup on a site.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
      */
     function getNewsUpdatesAndGuidelines()
     {
@@ -309,7 +309,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about disease prevention.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
      */
     function getDiseasePreventionInfo()
     {
@@ -328,7 +328,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS
      * or Atom.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed|null
      */
     function getWebFeed()
     {
@@ -337,7 +337,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about travel bans, e.g. in the context of a pandemic.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getTravelBans()
     {
@@ -346,7 +346,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Publication date of an online listing.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDatePosted()
     {
@@ -355,7 +355,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
 
     /**
      * Information about getting tested (for a [[MedicalCondition]]), e.g. in the context of a pandemic.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
      */
     function getGettingTestedInfo()
     {
@@ -365,7 +365,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Statistical information about the spread of a disease, either as [[WebContent]], or described directly as a [[Dataset]], or the specific [[Observation]]s
      * in the dataset. When a [[WebContent]] URL is provided, the page indicated might also contain more such markup.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation|null
      */
     function getDiseaseSpreadStatistics()
     {

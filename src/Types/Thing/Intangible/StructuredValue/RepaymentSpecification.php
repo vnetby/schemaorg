@@ -14,40 +14,40 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     /**
      * The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of
      * months from the contractual first payment date to the maturity date.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_numberOfLoanPayments;
+    public $numberOfLoanPayments;
 
     /**
      * The amount to be paid as a penalty in the event of early payment of the loan.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_earlyPrepaymentPenalty;
+    public $earlyPrepaymentPenalty;
 
     /**
      * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents
      * only a percentage of the full purchase price.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_downPayment;
+    public $downPayment;
 
     /**
      * Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a
      * period of time.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_loanPaymentFrequency;
+    public $loanPaymentFrequency;
 
     /**
      * The amount of money to pay in a single payment.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_loanPaymentAmount;
+    public $loanPaymentAmount;
 
     /**
      * The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of
      * months from the contractual first payment date to the maturity date.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setNumberOfLoanPayments($value)
@@ -68,7 +68,7 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     /**
      * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents
      * only a percentage of the full purchase price.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setDownPayment($value)
@@ -79,7 +79,7 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     /**
      * Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a
      * period of time.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setLoanPaymentFrequency($value)
@@ -100,7 +100,7 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     /**
      * The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of
      * months from the contractual first payment date to the maturity date.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getNumberOfLoanPayments()
     {
@@ -119,7 +119,7 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     /**
      * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents
      * only a percentage of the full purchase price.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getDownPayment()
     {
@@ -129,7 +129,7 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     /**
      * Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a
      * period of time.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getLoanPaymentFrequency()
     {

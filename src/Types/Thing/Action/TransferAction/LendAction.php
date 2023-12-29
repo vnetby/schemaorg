@@ -16,7 +16,7 @@ class LendAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\Tra
      * A sub property of participant. The person that borrows the object being lent.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_borrower;
+    public $borrower;
 
     /**
      * A sub property of participant. The person that borrows the object being lent.

@@ -14,19 +14,19 @@ class [object Object] extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creativ
 
     /**
      * Current location of the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_[object Object];
+    public $[object Object];
 
     /**
      * [[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]].
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\[object Object]
      */
-    protected $prop_[object Object];
+    public $[object Object];
 
     /**
      * Current location of the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setItemLocation($value)
@@ -46,7 +46,7 @@ class [object Object] extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creativ
 
     /**
      * Current location of the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getItemLocation()
     {

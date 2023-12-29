@@ -13,13 +13,13 @@ class SearchAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 
     /**
      * A sub property of instrument. The query used on this action.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_query;
+    public $query;
 
     /**
      * A sub property of instrument. The query used on this action.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setQuery($value)
@@ -29,7 +29,7 @@ class SearchAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 
     /**
      * A sub property of instrument. The query used on this action.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getQuery()
     {

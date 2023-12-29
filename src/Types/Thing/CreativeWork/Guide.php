@@ -16,13 +16,13 @@ class Guide extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_reviewAspect;
+    public $reviewAspect;
 
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setReviewAspect($value)
@@ -32,7 +32,7 @@ class Guide extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * This Review or Rating is relevant to this part or facet of the itemReviewed.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getReviewAspect()
     {

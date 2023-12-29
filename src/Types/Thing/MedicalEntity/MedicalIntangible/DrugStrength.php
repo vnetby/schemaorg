@@ -15,31 +15,31 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
      * The location in which the strength is available.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_availableIn;
+    public $availableIn;
 
     /**
      * The units of an active ingredient's strength, e.g. mg.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_strengthUnit;
+    public $strengthUnit;
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_activeIngredient;
+    public $activeIngredient;
 
     /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule
      */
-    protected $prop_maximumIntake;
+    public $maximumIntake;
 
     /**
      * The value of an active ingredient's strength, e.g. 325.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_strengthValue;
+    public $strengthValue;
 
     /**
      * The location in which the strength is available.
@@ -53,7 +53,7 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The units of an active ingredient's strength, e.g. mg.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setStrengthUnit($value)
@@ -63,7 +63,7 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setActiveIngredient($value)
@@ -83,7 +83,7 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The value of an active ingredient's strength, e.g. 325.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setStrengthValue($value)
@@ -102,7 +102,7 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The units of an active ingredient's strength, e.g. mg.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getStrengthUnit()
     {
@@ -111,7 +111,7 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getActiveIngredient()
     {
@@ -129,7 +129,7 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The value of an active ingredient's strength, e.g. 325.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getStrengthValue()
     {

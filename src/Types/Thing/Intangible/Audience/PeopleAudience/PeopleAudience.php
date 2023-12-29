@@ -13,62 +13,62 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Maximum recommended age in years for the audience or user.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_suggestedMaxAge;
+    public $suggestedMaxAge;
 
     /**
      * Audiences defined by a person's minimum age.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_requiredMinAge;
+    public $requiredMinAge;
 
     /**
      * Audiences defined by a person's gender.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_requiredGender;
+    public $requiredGender;
 
     /**
      * Specifying the health condition(s) of a patient, medical study, or other target audience.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_healthCondition;
+    public $healthCondition;
 
     /**
      * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
      * height between 170 and 190 cm. Typically found on a size chart for wearable products.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_suggestedMeasurement;
+    public $suggestedMeasurement;
 
     /**
      * Minimum recommended age in years for the audience or user.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_suggestedMinAge;
+    public $suggestedMinAge;
 
     /**
      * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_suggestedGender;
+    public $suggestedGender;
 
     /**
      * The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_suggestedAge;
+    public $suggestedAge;
 
     /**
      * Audiences defined by a person's maximum age.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_requiredMaxAge;
+    public $requiredMaxAge;
 
     /**
      * Maximum recommended age in years for the audience or user.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setSuggestedMaxAge($value)
@@ -78,7 +78,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Audiences defined by a person's minimum age.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setRequiredMinAge($value)
@@ -88,7 +88,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Audiences defined by a person's gender.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRequiredGender($value)
@@ -119,7 +119,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Minimum recommended age in years for the audience or user.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setSuggestedMinAge($value)
@@ -129,7 +129,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSuggestedGender($value)
@@ -149,7 +149,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Audiences defined by a person's maximum age.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setRequiredMaxAge($value)
@@ -159,7 +159,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Maximum recommended age in years for the audience or user.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getSuggestedMaxAge()
     {
@@ -168,7 +168,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Audiences defined by a person's minimum age.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getRequiredMinAge()
     {
@@ -177,7 +177,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Audiences defined by a person's gender.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRequiredGender()
     {
@@ -205,7 +205,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Minimum recommended age in years for the audience or user.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getSuggestedMinAge()
     {
@@ -214,7 +214,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSuggestedGender()
     {
@@ -232,7 +232,7 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
 
     /**
      * Audiences defined by a person's maximum age.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getRequiredMaxAge()
     {

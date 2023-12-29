@@ -15,19 +15,19 @@ class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A [[DefinedTermSet]] that contains this term.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_inDefinedTermSet;
+    public $inDefinedTermSet;
 
     /**
      * A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_termCode;
+    public $termCode;
 
     /**
      * A [[DefinedTermSet]] that contains this term.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setInDefinedTermSet($value)
@@ -37,7 +37,7 @@ class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTermCode($value)
@@ -47,7 +47,7 @@ class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A [[DefinedTermSet]] that contains this term.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getInDefinedTermSet()
     {
@@ -56,7 +56,7 @@ class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTermCode()
     {

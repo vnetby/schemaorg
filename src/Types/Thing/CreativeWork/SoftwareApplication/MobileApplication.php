@@ -13,13 +13,13 @@ class MobileApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Softw
 
     /**
      * Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_carrierRequirements;
+    public $carrierRequirements;
 
     /**
      * Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCarrierRequirements($value)
@@ -29,7 +29,7 @@ class MobileApplication extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Softw
 
     /**
      * Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCarrierRequirements()
     {

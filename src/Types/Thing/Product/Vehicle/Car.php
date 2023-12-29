@@ -18,14 +18,14 @@ class Car extends \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle
      * and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_roofLoad;
+    public $roofLoad;
 
     /**
      * The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association
      * of Car Rental Industry Systems and Standards.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_acrissCode;
+    public $acrissCode;
 
     /**
      * The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.\n\nTypical unit code(s): KGM for
@@ -43,7 +43,7 @@ class Car extends \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle
     /**
      * The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association
      * of Car Rental Industry Systems and Standards.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAcrissCode($value)
@@ -66,7 +66,7 @@ class Car extends \Vnetby\Schemaorg\Types\Thing\Product\Vehicle\Vehicle
     /**
      * The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association
      * of Car Rental Industry Systems and Standards.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAcrissCode()
     {

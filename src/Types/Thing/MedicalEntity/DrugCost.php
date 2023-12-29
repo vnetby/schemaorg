@@ -17,43 +17,43 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * The cost per unit of the drug.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
-    protected $prop_costPerUnit;
+    public $costPerUnit;
 
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_drugUnit;
+    public $drugUnit;
 
     /**
      * The location in which the status applies.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_applicableLocation;
+    public $applicableLocation;
 
     /**
      * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_costCurrency;
+    public $costCurrency;
 
     /**
      * The category of cost, such as wholesale, retail, reimbursement cap, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory\DrugCostCategory
      */
-    protected $prop_costCategory;
+    public $costCategory;
 
     /**
      * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_costOrigin;
+    public $costOrigin;
 
     /**
      * The cost per unit of the drug.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setCostPerUnit($value)
@@ -63,7 +63,7 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDrugUnit($value)
@@ -83,7 +83,7 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCostCurrency($value)
@@ -103,7 +103,7 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCostOrigin($value)
@@ -113,7 +113,7 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * The cost per unit of the drug.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getCostPerUnit()
     {
@@ -122,7 +122,7 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDrugUnit()
     {
@@ -140,7 +140,7 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCostCurrency()
     {
@@ -158,7 +158,7 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCostOrigin()
     {

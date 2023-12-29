@@ -18,22 +18,22 @@ class WorkBasedProgram extends \Vnetby\Schemaorg\Types\Thing\Intangible\Educatio
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_occupationalCategory;
+    public $occupationalCategory;
 
     /**
      * The estimated salary earned while in the program.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
      */
-    protected $prop_trainingSalary;
+    public $trainingSalary;
 
     /**
      * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOccupationalCategory($value)
@@ -56,7 +56,7 @@ class WorkBasedProgram extends \Vnetby\Schemaorg\Types\Thing\Intangible\Educatio
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOccupationalCategory()
     {

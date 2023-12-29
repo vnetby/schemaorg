@@ -14,13 +14,13 @@ class InvestmentOrDeposit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Servi
 
     /**
      * The amount of money.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_amount;
+    public $amount;
 
     /**
      * The amount of money.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setAmount($value)
@@ -30,7 +30,7 @@ class InvestmentOrDeposit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Servi
 
     /**
      * The amount of money.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getAmount()
     {

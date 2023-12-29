@@ -18,22 +18,22 @@ class CompoundPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_priceType;
+    public $priceType;
 
     /**
      * This property links to all [[UnitPriceSpecification]] nodes that apply in parallel for the [[CompoundPriceSpecification]] node.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\UnitPriceSpecification
      */
-    protected $prop_priceComponent;
+    public $priceComponent;
 
     /**
      * Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPriceType($value)
@@ -56,7 +56,7 @@ class CompoundPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPriceType()
     {

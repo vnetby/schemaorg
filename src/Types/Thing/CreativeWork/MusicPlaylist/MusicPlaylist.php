@@ -13,19 +13,19 @@ class MusicPlaylist extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The number of tracks in this album or playlist.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numTracks;
+    public $numTracks;
 
     /**
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording
      */
-    protected $prop_track;
+    public $track;
 
     /**
      * The number of tracks in this album or playlist.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumTracks($value)
@@ -45,7 +45,7 @@ class MusicPlaylist extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The number of tracks in this album or playlist.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumTracks()
     {

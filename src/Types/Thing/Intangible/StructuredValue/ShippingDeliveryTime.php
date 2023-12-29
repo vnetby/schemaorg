@@ -15,16 +15,16 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * Days of the week when the merchant typically operates, indicated via opening hours markup.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
      */
-    protected $prop_businessDays;
+    public $businessDays;
 
     /**
      * Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day.
      * For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be
      * most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent
      * 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-     * @var \Vnetby\Schemaorg\DataTypes\DataTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime
      */
-    protected $prop_cutoffTime;
+    public $cutoffTime;
 
     /**
      * The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup,
@@ -33,14 +33,14 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * normally operates.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_handlingTime;
+    public $handlingTime;
 
     /**
      * The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue,
      * unitCode (d for DAY).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_transitTime;
+    public $transitTime;
 
     /**
      * Days of the week when the merchant typically operates, indicated via opening hours markup.
@@ -57,7 +57,7 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be
      * most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent
      * 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-     * @param \Vnetby\Schemaorg\DataTypes\DataTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime $value
      * @return static
      */
     function setCutoffTime($value)
@@ -103,7 +103,7 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be
      * most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent
      * 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-     * @return \Vnetby\Schemaorg\DataTypes\DataTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
     function getCutoffTime()
     {

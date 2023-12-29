@@ -97,3 +97,18 @@ $event
 
 $date = $event->getStartDate();
 ```
+
+The use of DataType classes is optional. Each object of this class has its corresponding data type in PHP. For example, the DataBoolean class is equivalent to bool. This means that wherever the DataBoolean data type is specified, you can instead set/pass true/false instead of an instance of this class.
+
+```php
+use Vnetby\Schemaorg\DataTypes\DataDate;
+use Vnetby\Schemaorg\Types\Thing\Event\Event;
+
+$event = new Event;
+$event
+    ->setEndDate('23-03-1995')
+    ->setStartDate('23-03-1995');
+
+$date = $event->getStartDate();
+```
+*The classes from the DataTypes namespace are implemented to provide a clearer understanding of the data types associated with schema.org properties.

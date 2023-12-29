@@ -16,14 +16,14 @@ class ConsumeAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
      * fulfilling one set of requirements will allow the Action to be performed.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ActionAccessSpecification
      */
-    protected $prop_actionAccessibilityRequirement;
+    public $actionAccessibilityRequirement;
 
     /**
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy
      * a movie before being able to watch it.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    protected $prop_expectsAcceptanceOf;
+    public $expectsAcceptanceOf;
 
     /**
      * A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified,

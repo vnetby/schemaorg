@@ -13,13 +13,13 @@ class Report extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article
 
     /**
      * The number or other unique designator assigned to a Report by the publishing organization.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_reportNumber;
+    public $reportNumber;
 
     /**
      * The number or other unique designator assigned to a Report by the publishing organization.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setReportNumber($value)
@@ -29,7 +29,7 @@ class Report extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Article
 
     /**
      * The number or other unique designator assigned to a Report by the publishing organization.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getReportNumber()
     {

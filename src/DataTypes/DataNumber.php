@@ -10,4 +10,26 @@ namespace Vnetby\Schemaorg\DataTypes;
 
 class DataNumber extends DataType
 {
+
+    /**
+     * @var string|int|float
+     */
+    protected $value;
+
+
+    /**
+     * @param string|int|float $value
+     */
+    function __construct($value)
+    {
+        parent::__construct($value);
+    }
+
+    /**
+     * @return string|int|float
+     */
+    function getValue()
+    {
+        return parent::getValue();
+    }
 }

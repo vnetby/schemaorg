@@ -15,50 +15,50 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
      * Other anatomical structures to which this structure is connected.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_connectedTo;
+    public $connectedTo;
 
     /**
      * Location in the body of the anatomical structure.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_bodyLocation;
+    public $bodyLocation;
 
     /**
      * An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject
      */
-    protected $prop_diagram;
+    public $diagram;
 
     /**
      * A medical therapy related to this anatomy.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
      */
-    protected $prop_relatedTherapy;
+    public $relatedTherapy;
 
     /**
      * A medical condition associated with this anatomy.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_relatedCondition;
+    public $relatedCondition;
 
     /**
      * Component (sub-)structure(s) that comprise this anatomical structure.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_subStructure;
+    public $subStructure;
 
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_associatedPathophysiology;
+    public $associatedPathophysiology;
 
     /**
      * The anatomical or organ system that this structure is part of.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem
      */
-    protected $prop_partOfSystem;
+    public $partOfSystem;
 
     /**
      * Other anatomical structures to which this structure is connected.
@@ -72,7 +72,7 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
 
     /**
      * Location in the body of the anatomical structure.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBodyLocation($value)
@@ -123,7 +123,7 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAssociatedPathophysiology($value)
@@ -152,7 +152,7 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
 
     /**
      * Location in the body of the anatomical structure.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBodyLocation()
     {
@@ -198,7 +198,7 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAssociatedPathophysiology()
     {

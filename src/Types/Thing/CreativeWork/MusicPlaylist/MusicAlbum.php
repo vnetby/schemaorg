@@ -15,25 +15,25 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
      * A release of this album.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicRelease
      */
-    protected $prop_albumRelease;
+    public $albumRelease;
 
     /**
      * The kind of release which this album is: single, EP or album.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumReleaseType\MusicAlbumReleaseType
      */
-    protected $prop_albumReleaseType;
+    public $albumReleaseType;
 
     /**
      * The artist that performed this album or recording.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_byArtist;
+    public $byArtist;
 
     /**
      * Classification of the album by its type of content: soundtrack, live album, studio album, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumProductionType\MusicAlbumProductionType
      */
-    protected $prop_albumProductionType;
+    public $albumProductionType;
 
     /**
      * A release of this album.

@@ -17,13 +17,13 @@ class PlayAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
      * Upcoming or past event associated with this place, organization, or action.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_event;
+    public $event;
 
     /**
      * An intended audience, i.e. a group for whom something was created.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_audience;
+    public $audience;
 
     /**
      * Upcoming or past event associated with this place, organization, or action.

@@ -13,31 +13,31 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * After this date, the item will no longer be available for pickup.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_availableThrough;
+    public $availableThrough;
 
     /**
      * Method used for delivery or shipping.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
-    protected $prop_hasDeliveryMethod;
+    public $hasDeliveryMethod;
 
     /**
      * When the item is available for pickup from the store, locker, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_availableFrom;
+    public $availableFrom;
 
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_accessCode;
+    public $accessCode;
 
     /**
      * After this date, the item will no longer be available for pickup.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setAvailableThrough($value)
@@ -57,7 +57,7 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * When the item is available for pickup from the store, locker, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setAvailableFrom($value)
@@ -67,7 +67,7 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAccessCode($value)
@@ -77,7 +77,7 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * After this date, the item will no longer be available for pickup.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getAvailableThrough()
     {
@@ -95,7 +95,7 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * When the item is available for pickup from the store, locker, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getAvailableFrom()
     {
@@ -104,7 +104,7 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAccessCode()
     {

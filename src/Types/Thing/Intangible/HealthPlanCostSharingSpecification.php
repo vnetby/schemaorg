@@ -13,37 +13,37 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_healthPlanCoinsuranceOption;
+    public $healthPlanCoinsuranceOption;
 
     /**
      * The copay amount.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
      */
-    protected $prop_healthPlanCopay;
+    public $healthPlanCopay;
 
     /**
      * The category or type of pharmacy associated with this cost sharing.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_healthPlanPharmacyCategory;
+    public $healthPlanPharmacyCategory;
 
     /**
      * Whether the copay is before or after deductible, etc. TODO: Is this a closed set?
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_healthPlanCopayOption;
+    public $healthPlanCopayOption;
 
     /**
      * The rate of coinsurance expressed as a number between 0.0 and 1.0.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_healthPlanCoinsuranceRate;
+    public $healthPlanCoinsuranceRate;
 
     /**
      * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHealthPlanCoinsuranceOption($value)
@@ -63,7 +63,7 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * The category or type of pharmacy associated with this cost sharing.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHealthPlanPharmacyCategory($value)
@@ -73,7 +73,7 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * Whether the copay is before or after deductible, etc. TODO: Is this a closed set?
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHealthPlanCopayOption($value)
@@ -83,7 +83,7 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * The rate of coinsurance expressed as a number between 0.0 and 1.0.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setHealthPlanCoinsuranceRate($value)
@@ -93,7 +93,7 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHealthPlanCoinsuranceOption()
     {
@@ -111,7 +111,7 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * The category or type of pharmacy associated with this cost sharing.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHealthPlanPharmacyCategory()
     {
@@ -120,7 +120,7 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * Whether the copay is before or after deductible, etc. TODO: Is this a closed set?
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHealthPlanCopayOption()
     {
@@ -129,7 +129,7 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
 
     /**
      * The rate of coinsurance expressed as a number between 0.0 and 1.0.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getHealthPlanCoinsuranceRate()
     {

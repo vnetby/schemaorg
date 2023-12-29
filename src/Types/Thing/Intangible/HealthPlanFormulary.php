@@ -13,25 +13,25 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_healthPlanCostSharing;
+    public $healthPlanCostSharing;
 
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_healthPlanDrugTier;
+    public $healthPlanDrugTier;
 
     /**
      * Whether prescriptions can be delivered by mail.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_offersPrescriptionByMail;
+    public $offersPrescriptionByMail;
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setHealthPlanCostSharing($value)
@@ -41,7 +41,7 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHealthPlanDrugTier($value)
@@ -51,7 +51,7 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * Whether prescriptions can be delivered by mail.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setOffersPrescriptionByMail($value)
@@ -61,7 +61,7 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getHealthPlanCostSharing()
     {
@@ -70,7 +70,7 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHealthPlanDrugTier()
     {
@@ -79,7 +79,7 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * Whether prescriptions can be delivered by mail.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getOffersPrescriptionByMail()
     {

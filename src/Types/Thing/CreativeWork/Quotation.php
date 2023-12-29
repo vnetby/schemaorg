@@ -17,7 +17,7 @@ class Quotation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_spokenByCharacter;
+    public $spokenByCharacter;
 
     /**
      * The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork.

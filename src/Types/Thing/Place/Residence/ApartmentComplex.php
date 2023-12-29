@@ -16,34 +16,34 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
      * its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfAvailableAccommodationUnits;
+    public $numberOfAvailableAccommodationUnits;
 
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_petsAllowed;
+    public $petsAllowed;
 
     /**
      * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
      * real estate setting, as well as other kinds of tours as appropriate.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_tourBookingPage;
+    public $tourBookingPage;
 
     /**
      * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfBedrooms;
+    public $numberOfBedrooms;
 
     /**
      * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a
      * specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_numberOfAccommodationUnits;
+    public $numberOfAccommodationUnits;
 
     /**
      * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within
@@ -59,7 +59,7 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPetsAllowed($value)
@@ -70,7 +70,7 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     /**
      * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
      * real estate setting, as well as other kinds of tours as appropriate.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setTourBookingPage($value)
@@ -80,7 +80,7 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
 
     /**
      * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setNumberOfBedrooms($value)
@@ -112,7 +112,7 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPetsAllowed()
     {
@@ -122,7 +122,7 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     /**
      * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
      * real estate setting, as well as other kinds of tours as appropriate.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getTourBookingPage()
     {
@@ -131,7 +131,7 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
 
     /**
      * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getNumberOfBedrooms()
     {

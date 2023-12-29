@@ -15,37 +15,37 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The name of a node in an established educational framework.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_targetName;
+    public $targetName;
 
     /**
      * The framework to which the resource being described is aligned.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_educationalFramework;
+    public $educationalFramework;
 
     /**
      * The description of a node in an established educational framework.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_targetDescription;
+    public $targetDescription;
 
     /**
      * The URL of a node in an established educational framework.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_targetUrl;
+    public $targetUrl;
 
     /**
      * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_alignmentType;
+    public $alignmentType;
 
     /**
      * The name of a node in an established educational framework.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTargetName($value)
@@ -55,7 +55,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The framework to which the resource being described is aligned.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEducationalFramework($value)
@@ -65,7 +65,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The description of a node in an established educational framework.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTargetDescription($value)
@@ -75,7 +75,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The URL of a node in an established educational framework.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setTargetUrl($value)
@@ -85,7 +85,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAlignmentType($value)
@@ -95,7 +95,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The name of a node in an established educational framework.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTargetName()
     {
@@ -104,7 +104,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The framework to which the resource being described is aligned.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEducationalFramework()
     {
@@ -113,7 +113,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The description of a node in an established educational framework.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTargetDescription()
     {
@@ -122,7 +122,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * The URL of a node in an established educational framework.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getTargetUrl()
     {
@@ -131,7 +131,7 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
 
     /**
      * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAlignmentType()
     {

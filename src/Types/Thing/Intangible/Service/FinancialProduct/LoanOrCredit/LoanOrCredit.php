@@ -13,66 +13,66 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * Whether the terms for payment of interest can be renegotiated during the life of the loan.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_renegotiableLoan;
+    public $renegotiableLoan;
 
     /**
      * The type of a loan or credit.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_loanType;
+    public $loanType;
 
     /**
      * The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to
      * pay) is deemed to have occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_gracePeriod;
+    public $gracePeriod;
 
     /**
      * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies,
      * e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_currency;
+    public $currency;
 
     /**
      * A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally
      * include part principal plus interest in each payment.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\RepaymentSpecification
      */
-    protected $prop_loanRepaymentForm;
+    public $loanRepaymentForm;
 
     /**
      * The duration of the loan or credit agreement.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_loanTerm;
+    public $loanTerm;
 
     /**
      * The only way you get the money back in the event of default is the security. Recourse is where you still
      * have the opportunity to go back to the borrower for the rest of the money.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_recourseLoan;
+    public $recourseLoan;
 
     /**
      * The amount of money.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_amount;
+    public $amount;
 
     /**
      * Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities,
      * etc.)
-     * @var \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_requiredCollateral;
+    public $requiredCollateral;
 
     /**
      * Whether the terms for payment of interest can be renegotiated during the life of the loan.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setRenegotiableLoan($value)
@@ -82,7 +82,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * The type of a loan or credit.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setLoanType($value)
@@ -104,7 +104,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     /**
      * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies,
      * e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCurrency($value)
@@ -136,7 +136,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     /**
      * The only way you get the money back in the event of default is the security. Recourse is where you still
      * have the opportunity to go back to the borrower for the rest of the money.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setRecourseLoan($value)
@@ -146,7 +146,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * The amount of money.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setAmount($value)
@@ -157,7 +157,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     /**
      * Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities,
      * etc.)
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRequiredCollateral($value)
@@ -167,7 +167,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * Whether the terms for payment of interest can be renegotiated during the life of the loan.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getRenegotiableLoan()
     {
@@ -176,7 +176,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * The type of a loan or credit.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getLoanType()
     {
@@ -196,7 +196,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     /**
      * The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies,
      * e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCurrency()
     {
@@ -225,7 +225,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     /**
      * The only way you get the money back in the event of default is the security. Recourse is where you still
      * have the opportunity to go back to the borrower for the rest of the money.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getRecourseLoan()
     {
@@ -234,7 +234,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * The amount of money.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getAmount()
     {
@@ -244,7 +244,7 @@ class LoanOrCredit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     /**
      * Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities,
      * etc.)
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRequiredCollateral()
     {

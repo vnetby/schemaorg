@@ -15,19 +15,19 @@ class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGr
      * A music album.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
      */
-    protected $prop_album;
+    public $album;
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_genre;
+    public $genre;
 
     /**
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording
      */
-    protected $prop_track;
+    public $track;
 
     /**
      * A music album.
@@ -41,7 +41,7 @@ class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGr
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setGenre($value)
@@ -70,7 +70,7 @@ class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGr
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getGenre()
     {

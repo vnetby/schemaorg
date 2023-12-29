@@ -13,74 +13,74 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Tracking url for the parcel delivery.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_trackingUrl;
+    public $trackingUrl;
 
     /**
      * New entry added as the package passes through each leg of its journey (from shipment to final delivery).
      * @var \Vnetby\Schemaorg\Types\Thing\Event\DeliveryEvent
      */
-    protected $prop_deliveryStatus;
+    public $deliveryStatus;
 
     /**
      * Shipper tracking number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_trackingNumber;
+    public $trackingNumber;
 
     /**
      * Method used for delivery or shipping.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
-    protected $prop_hasDeliveryMethod;
+    public $hasDeliveryMethod;
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
      * on behalf of the provider. A provider may also serve as the seller.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_provider;
+    public $provider;
 
     /**
      * Shipper's address.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress
      */
-    protected $prop_originAddress;
+    public $originAddress;
 
     /**
      * Item(s) being shipped.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    protected $prop_itemShipped;
+    public $itemShipped;
 
     /**
      * Destination address.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress
      */
-    protected $prop_deliveryAddress;
+    public $deliveryAddress;
 
     /**
      * The latest date the package may arrive.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_expectedArrivalUntil;
+    public $expectedArrivalUntil;
 
     /**
      * The earliest date the package may arrive.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_expectedArrivalFrom;
+    public $expectedArrivalFrom;
 
     /**
      * The overall order the items in this delivery were included in.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Order
      */
-    protected $prop_partOfOrder;
+    public $partOfOrder;
 
     /**
      * Tracking url for the parcel delivery.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setTrackingUrl($value)
@@ -100,7 +100,7 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Shipper tracking number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTrackingNumber($value)
@@ -161,7 +161,7 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The latest date the package may arrive.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setExpectedArrivalUntil($value)
@@ -171,7 +171,7 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The earliest date the package may arrive.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setExpectedArrivalFrom($value)
@@ -191,7 +191,7 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Tracking url for the parcel delivery.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getTrackingUrl()
     {
@@ -209,7 +209,7 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Shipper tracking number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTrackingNumber()
     {
@@ -264,7 +264,7 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The latest date the package may arrive.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getExpectedArrivalUntil()
     {
@@ -273,7 +273,7 @@ class ParcelDelivery extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The earliest date the package may arrive.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getExpectedArrivalFrom()
     {

@@ -13,25 +13,25 @@ class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Org
 
     /**
      * Whether the provider is accepting new patients.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isAcceptingNewPatients;
+    public $isAcceptingNewPatients;
 
     /**
      * A medical specialty of the provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
      */
-    protected $prop_medicalSpecialty;
+    public $medicalSpecialty;
 
     /**
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_healthPlanNetworkId;
+    public $healthPlanNetworkId;
 
     /**
      * Whether the provider is accepting new patients.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsAcceptingNewPatients($value)
@@ -51,7 +51,7 @@ class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Org
 
     /**
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHealthPlanNetworkId($value)
@@ -61,7 +61,7 @@ class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Org
 
     /**
      * Whether the provider is accepting new patients.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsAcceptingNewPatients()
     {
@@ -79,7 +79,7 @@ class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Org
 
     /**
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHealthPlanNetworkId()
     {

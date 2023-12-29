@@ -14,182 +14,182 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPrescriptionStatus\DrugPrescriptionStatus
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPrescriptionStatus\DrugPrescriptionStatus
      */
-    protected $prop_prescriptionStatus;
+    public $prescriptionStatus;
 
     /**
      * Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_foodWarning;
+    public $foodWarning;
 
     /**
      * The insurance plans that cover this drug.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\HealthInsurancePlan
      */
-    protected $prop_includedInHealthInsurancePlan;
+    public $includedInHealthInsurancePlan;
 
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_drugUnit;
+    public $drugUnit;
 
     /**
      * Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_pregnancyWarning;
+    public $pregnancyWarning;
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_proprietaryName;
+    public $proprietaryName;
 
     /**
      * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\DoseSchedule
      */
-    protected $prop_doseSchedule;
+    public $doseSchedule;
 
     /**
      * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_clinicalPharmacology;
+    public $clinicalPharmacology;
 
     /**
      * Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_overdosage;
+    public $overdosage;
 
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isProprietary;
+    public $isProprietary;
 
     /**
      * Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_alcoholWarning;
+    public $alcoholWarning;
 
     /**
      * A route by which this drug may be administered, e.g. 'oral'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_administrationRoute;
+    public $administrationRoute;
 
     /**
      * Link to prescribing information for the drug.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_prescribingInfo;
+    public $prescribingInfo;
 
     /**
      * Any FDA or other warnings about the drug (text or URL).
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_warning;
+    public $warning;
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_activeIngredient;
+    public $activeIngredient;
 
     /**
      * The generic name of this drug or supplement.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_nonProprietaryName;
+    public $nonProprietaryName;
 
     /**
      * Pregnancy category of this drug.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPregnancyCategory\DrugPregnancyCategory
      */
-    protected $prop_pregnancyCategory;
+    public $pregnancyCategory;
 
     /**
      * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule
      */
-    protected $prop_maximumIntake;
+    public $maximumIntake;
 
     /**
      * The RxCUI drug identifier from RXNORM.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_rxcui;
+    public $rxcui;
 
     /**
      * Another drug that is known to interact with this drug in a way that impacts the effect of this drug or
      * causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
      */
-    protected $prop_interactingDrug;
+    public $interactingDrug;
 
     /**
      * The class of drug this belongs to (e.g., statins).
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\DrugClass
      */
-    protected $prop_drugClass;
+    public $drugClass;
 
     /**
      * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_dosageForm;
+    public $dosageForm;
 
     /**
      * Any other drug related to this one, for example commonly-prescribed alternatives.
      * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
      */
-    protected $prop_relatedDrug;
+    public $relatedDrug;
 
     /**
      * An available dosage strength for the drug.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugStrength
      */
-    protected $prop_availableStrength;
+    public $availableStrength;
 
     /**
      * True if the drug is available in a generic form (regardless of name).
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isAvailableGenerically;
+    public $isAvailableGenerically;
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_legalStatus;
+    public $legalStatus;
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_mechanismOfAction;
+    public $mechanismOfAction;
 
     /**
      * Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_breastfeedingWarning;
+    public $breastfeedingWarning;
 
     /**
      * Link to the drug's label details.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_labelDetails;
+    public $labelDetails;
 
     /**
      * Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPrescriptionStatus\DrugPrescriptionStatus $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPrescriptionStatus\DrugPrescriptionStatus $value
      * @return static
      */
     function setPrescriptionStatus($value)
@@ -199,7 +199,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFoodWarning($value)
@@ -219,7 +219,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDrugUnit($value)
@@ -229,7 +229,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPregnancyWarning($value)
@@ -239,7 +239,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setProprietaryName($value)
@@ -259,7 +259,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setClinicalPharmacology($value)
@@ -269,7 +269,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOverdosage($value)
@@ -279,7 +279,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsProprietary($value)
@@ -289,7 +289,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAlcoholWarning($value)
@@ -299,7 +299,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * A route by which this drug may be administered, e.g. 'oral'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAdministrationRoute($value)
@@ -309,7 +309,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Link to prescribing information for the drug.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setPrescribingInfo($value)
@@ -319,7 +319,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any FDA or other warnings about the drug (text or URL).
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setWarning($value)
@@ -329,7 +329,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setActiveIngredient($value)
@@ -339,7 +339,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The generic name of this drug or supplement.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setNonProprietaryName($value)
@@ -369,7 +369,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The RxCUI drug identifier from RXNORM.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRxcui($value)
@@ -400,7 +400,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDosageForm($value)
@@ -430,7 +430,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * True if the drug is available in a generic form (regardless of name).
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsAvailableGenerically($value)
@@ -440,7 +440,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLegalStatus($value)
@@ -450,7 +450,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMechanismOfAction($value)
@@ -460,7 +460,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBreastfeedingWarning($value)
@@ -470,7 +470,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Link to the drug's label details.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setLabelDetails($value)
@@ -480,7 +480,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPrescriptionStatus\DrugPrescriptionStatus|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugPrescriptionStatus\DrugPrescriptionStatus|null
      */
     function getPrescriptionStatus()
     {
@@ -489,7 +489,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFoodWarning()
     {
@@ -507,7 +507,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDrugUnit()
     {
@@ -516,7 +516,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPregnancyWarning()
     {
@@ -525,7 +525,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProprietaryName()
     {
@@ -543,7 +543,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getClinicalPharmacology()
     {
@@ -552,7 +552,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOverdosage()
     {
@@ -561,7 +561,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsProprietary()
     {
@@ -570,7 +570,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAlcoholWarning()
     {
@@ -579,7 +579,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * A route by which this drug may be administered, e.g. 'oral'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAdministrationRoute()
     {
@@ -588,7 +588,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Link to prescribing information for the drug.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getPrescribingInfo()
     {
@@ -597,7 +597,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any FDA or other warnings about the drug (text or URL).
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getWarning()
     {
@@ -606,7 +606,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getActiveIngredient()
     {
@@ -615,7 +615,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The generic name of this drug or supplement.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getNonProprietaryName()
     {
@@ -642,7 +642,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The RxCUI drug identifier from RXNORM.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRxcui()
     {
@@ -670,7 +670,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDosageForm()
     {
@@ -697,7 +697,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * True if the drug is available in a generic form (regardless of name).
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsAvailableGenerically()
     {
@@ -706,7 +706,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLegalStatus()
     {
@@ -715,7 +715,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMechanismOfAction()
     {
@@ -724,7 +724,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBreastfeedingWarning()
     {
@@ -733,7 +733,7 @@ class Drug extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Substan
 
     /**
      * Link to the drug's label details.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getLabelDetails()
     {

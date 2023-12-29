@@ -15,7 +15,7 @@ class DefinedTermSet extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
      * A Defined Term contained in this term set.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_hasDefinedTerm;
+    public $hasDefinedTerm;
 
     /**
      * A Defined Term contained in this term set.

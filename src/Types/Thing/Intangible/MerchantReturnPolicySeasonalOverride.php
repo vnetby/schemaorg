@@ -14,32 +14,32 @@ class MerchantReturnPolicySeasonalOverride extends \Vnetby\Schemaorg\Types\Thing
     /**
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned.
      * Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_merchantReturnDays;
+    public $merchantReturnDays;
 
     /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_startDate;
+    public $startDate;
 
     /**
      * Specifies an applicable return policy (from an enumeration).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MerchantReturnEnumeration\MerchantReturnEnumeration
      */
-    protected $prop_returnPolicyCategory;
+    public $returnPolicyCategory;
 
     /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_endDate;
+    public $endDate;
 
     /**
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned.
      * Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setMerchantReturnDays($value)
@@ -49,7 +49,7 @@ class MerchantReturnPolicySeasonalOverride extends \Vnetby\Schemaorg\Types\Thing
 
     /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setStartDate($value)
@@ -69,7 +69,7 @@ class MerchantReturnPolicySeasonalOverride extends \Vnetby\Schemaorg\Types\Thing
 
     /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setEndDate($value)
@@ -80,7 +80,7 @@ class MerchantReturnPolicySeasonalOverride extends \Vnetby\Schemaorg\Types\Thing
     /**
      * Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned.
      * Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getMerchantReturnDays()
     {
@@ -89,7 +89,7 @@ class MerchantReturnPolicySeasonalOverride extends \Vnetby\Schemaorg\Types\Thing
 
     /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getStartDate()
     {
@@ -107,7 +107,7 @@ class MerchantReturnPolicySeasonalOverride extends \Vnetby\Schemaorg\Types\Thing
 
     /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getEndDate()
     {

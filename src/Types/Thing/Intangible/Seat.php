@@ -13,31 +13,31 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The type/class of the seat.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_seatingType;
+    public $seatingType;
 
     /**
      * The location of the reserved seat (e.g., 27).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_seatNumber;
+    public $seatNumber;
 
     /**
      * The section location of the reserved seat (e.g. Orchestra).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_seatSection;
+    public $seatSection;
 
     /**
      * The row location of the reserved seat (e.g., B).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_seatRow;
+    public $seatRow;
 
     /**
      * The type/class of the seat.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSeatingType($value)
@@ -47,7 +47,7 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The location of the reserved seat (e.g., 27).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSeatNumber($value)
@@ -57,7 +57,7 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The section location of the reserved seat (e.g. Orchestra).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSeatSection($value)
@@ -67,7 +67,7 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The row location of the reserved seat (e.g., B).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSeatRow($value)
@@ -77,7 +77,7 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The type/class of the seat.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSeatingType()
     {
@@ -86,7 +86,7 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The location of the reserved seat (e.g., 27).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSeatNumber()
     {
@@ -95,7 +95,7 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The section location of the reserved seat (e.g. Orchestra).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSeatSection()
     {
@@ -104,7 +104,7 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The row location of the reserved seat (e.g., B).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSeatRow()
     {

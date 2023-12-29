@@ -16,32 +16,32 @@ class ComicStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_letterer;
+    public $letterer;
 
     /**
      * The individual who adds color to inked drawings.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_colorist;
+    public $colorist;
 
     /**
      * The primary artist for a work in a medium other than pencils or digital line art--for example, if the primary artwork
      * is done in watercolors or digital paints.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_artist;
+    public $artist;
 
     /**
      * The individual who draws the primary narrative artwork.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_penciler;
+    public $penciler;
 
     /**
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_inker;
+    public $inker;
 
     /**
      * The individual who adds lettering, including speech balloons and sound effects, to artwork.

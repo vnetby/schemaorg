@@ -13,19 +13,19 @@ class Airline extends \Vnetby\Schemaorg\Types\Thing\Organization\Organization
 
     /**
      * IATA identifier for an airline or airport.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_iataCode;
+    public $iataCode;
 
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or group-based).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BoardingPolicyType\BoardingPolicyType
      */
-    protected $prop_boardingPolicy;
+    public $boardingPolicy;
 
     /**
      * IATA identifier for an airline or airport.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIataCode($value)
@@ -45,7 +45,7 @@ class Airline extends \Vnetby\Schemaorg\Types\Thing\Organization\Organization
 
     /**
      * IATA identifier for an airline or airport.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIataCode()
     {

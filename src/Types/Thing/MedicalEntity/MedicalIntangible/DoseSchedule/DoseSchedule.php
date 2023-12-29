@@ -13,31 +13,31 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * How often the dose is taken, e.g. 'daily'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_frequency;
+    public $frequency;
 
     /**
      * The value of the dose, e.g. 500.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
-    protected $prop_doseValue;
+    public $doseValue;
 
     /**
      * The unit of the dose, e.g. 'mg'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_doseUnit;
+    public $doseUnit;
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_targetPopulation;
+    public $targetPopulation;
 
     /**
      * How often the dose is taken, e.g. 'daily'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setFrequency($value)
@@ -47,7 +47,7 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The value of the dose, e.g. 500.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setDoseValue($value)
@@ -57,7 +57,7 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The unit of the dose, e.g. 'mg'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setDoseUnit($value)
@@ -67,7 +67,7 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTargetPopulation($value)
@@ -77,7 +77,7 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * How often the dose is taken, e.g. 'daily'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getFrequency()
     {
@@ -86,7 +86,7 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The value of the dose, e.g. 500.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getDoseValue()
     {
@@ -95,7 +95,7 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * The unit of the dose, e.g. 'mg'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDoseUnit()
     {
@@ -104,7 +104,7 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
 
     /**
      * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTargetPopulation()
     {

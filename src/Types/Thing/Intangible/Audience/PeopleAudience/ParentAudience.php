@@ -13,19 +13,19 @@ class ParentAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\P
 
     /**
      * Minimal age of the child.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_childMinAge;
+    public $childMinAge;
 
     /**
      * Maximal age of the child.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_childMaxAge;
+    public $childMaxAge;
 
     /**
      * Minimal age of the child.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setChildMinAge($value)
@@ -35,7 +35,7 @@ class ParentAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\P
 
     /**
      * Maximal age of the child.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setChildMaxAge($value)
@@ -45,7 +45,7 @@ class ParentAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\P
 
     /**
      * Minimal age of the child.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getChildMinAge()
     {
@@ -54,7 +54,7 @@ class ParentAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\P
 
     /**
      * Maximal age of the child.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getChildMaxAge()
     {

@@ -15,7 +15,7 @@ class VoteAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\Choos
      * A sub property of object. The candidate subject of this action.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_candidate;
+    public $candidate;
 
     /**
      * A sub property of object. The candidate subject of this action.

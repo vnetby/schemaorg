@@ -13,45 +13,45 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The supported encoding type(s) for an EntryPoint request.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_encodingType;
+    public $encodingType;
 
     /**
      * The supported content type(s) for an EntryPoint response.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_contentType;
+    public $contentType;
 
     /**
      * The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating
      * system instance, use actionApplication.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration
      */
-    protected $prop_actionPlatform;
+    public $actionPlatform;
 
     /**
      * An url template (RFC6570) that will be used to construct the target of the execution of the action.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_urlTemplate;
+    public $urlTemplate;
 
     /**
      * An application that can complete the request.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
      */
-    protected $prop_actionApplication;
+    public $actionApplication;
 
     /**
      * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as
      * used in HTTP.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_httpMethod;
+    public $httpMethod;
 
     /**
      * The supported encoding type(s) for an EntryPoint request.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEncodingType($value)
@@ -61,7 +61,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The supported content type(s) for an EntryPoint response.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setContentType($value)
@@ -72,7 +72,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating
      * system instance, use actionApplication.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration $value
      * @return static
      */
     function setActionPlatform($value)
@@ -82,7 +82,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An url template (RFC6570) that will be used to construct the target of the execution of the action.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setUrlTemplate($value)
@@ -103,7 +103,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as
      * used in HTTP.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHttpMethod($value)
@@ -113,7 +113,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The supported encoding type(s) for an EntryPoint request.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEncodingType()
     {
@@ -122,7 +122,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The supported content type(s) for an EntryPoint response.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getContentType()
     {
@@ -132,7 +132,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating
      * system instance, use actionApplication.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalPlatformEnumeration\DigitalPlatformEnumeration|null
      */
     function getActionPlatform()
     {
@@ -141,7 +141,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An url template (RFC6570) that will be used to construct the target of the execution of the action.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getUrlTemplate()
     {
@@ -160,7 +160,7 @@ class EntryPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as
      * used in HTTP.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHttpMethod()
     {

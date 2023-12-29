@@ -16,35 +16,35 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
      * The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g.
      * "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled
      * vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_courseMode;
+    public $courseMode;
 
     /**
      * Represents the length and pace of a course, expressed as a [[Schedule]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Schedule
      */
-    protected $prop_courseSchedule;
+    public $courseSchedule;
 
     /**
      * The amount of work expected of students taking the course, often provided as a figure per week or per month, and
      * may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of
      * independent study per week".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_courseWorkload;
+    public $courseWorkload;
 
     /**
      * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_instructor;
+    public $instructor;
 
     /**
      * The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g.
      * "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled
      * vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setCourseMode($value)
@@ -66,7 +66,7 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
      * The amount of work expected of students taking the course, often provided as a figure per week or per month, and
      * may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of
      * independent study per week".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCourseWorkload($value)
@@ -88,7 +88,7 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
      * The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g.
      * "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled
      * vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getCourseMode()
     {
@@ -108,7 +108,7 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
      * The amount of work expected of students taking the course, often provided as a figure per week or per month, and
      * may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of
      * independent study per week".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCourseWorkload()
     {

@@ -16,13 +16,13 @@ class RealEstateListing extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPa
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_leaseLength;
+    public $leaseLength;
 
     /**
      * Publication date of an online listing.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_datePosted;
+    public $datePosted;
 
     /**
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
@@ -36,7 +36,7 @@ class RealEstateListing extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPa
 
     /**
      * Publication date of an online listing.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDatePosted($value)
@@ -55,7 +55,7 @@ class RealEstateListing extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPa
 
     /**
      * Publication date of an online listing.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDatePosted()
     {

@@ -14,26 +14,26 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
     /**
      * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time.
      * The LiveBlogPosting may also be created before coverage begins.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_coverageStartTime;
+    public $coverageStartTime;
 
     /**
      * An update to the LiveBlog.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\SocialMediaPosting\BlogPosting\BlogPosting
      */
-    protected $prop_liveBlogUpdate;
+    public $liveBlogUpdate;
 
     /**
      * The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_coverageEndTime;
+    public $coverageEndTime;
 
     /**
      * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time.
      * The LiveBlogPosting may also be created before coverage begins.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setCoverageStartTime($value)
@@ -53,7 +53,7 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
 
     /**
      * The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setCoverageEndTime($value)
@@ -64,7 +64,7 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
     /**
      * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time.
      * The LiveBlogPosting may also be created before coverage begins.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getCoverageStartTime()
     {
@@ -82,7 +82,7 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
 
     /**
      * The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getCoverageEndTime()
     {

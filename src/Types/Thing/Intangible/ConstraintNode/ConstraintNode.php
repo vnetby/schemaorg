@@ -17,21 +17,21 @@ class ConstraintNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * Indicates the number of constraints property values defined for a particular [[ConstraintNode]] such as [[StatisticalVariable]]. This helps applications understand if they
      * have access to a sufficiently complete description of a [[StatisticalVariable]] or other construct that is defined using properties on template-style nodes.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numConstraints;
+    public $numConstraints;
 
     /**
      * Indicates a property used as a constraint. For example, in the definition of a [[StatisticalVariable]]. The value is a property, either
      * from within Schema.org or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_constraintProperty;
+    public $constraintProperty;
 
     /**
      * Indicates the number of constraints property values defined for a particular [[ConstraintNode]] such as [[StatisticalVariable]]. This helps applications understand if they
      * have access to a sufficiently complete description of a [[StatisticalVariable]] or other construct that is defined using properties on template-style nodes.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumConstraints($value)
@@ -42,7 +42,7 @@ class ConstraintNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * Indicates a property used as a constraint. For example, in the definition of a [[StatisticalVariable]]. The value is a property, either
      * from within Schema.org or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setConstraintProperty($value)
@@ -53,7 +53,7 @@ class ConstraintNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * Indicates the number of constraints property values defined for a particular [[ConstraintNode]] such as [[StatisticalVariable]]. This helps applications understand if they
      * have access to a sufficiently complete description of a [[StatisticalVariable]] or other construct that is defined using properties on template-style nodes.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumConstraints()
     {
@@ -63,7 +63,7 @@ class ConstraintNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * Indicates a property used as a constraint. For example, in the definition of a [[StatisticalVariable]]. The value is a property, either
      * from within Schema.org or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getConstraintProperty()
     {

@@ -36,6 +36,23 @@ const PATH_DATA_TYPES = path.resolve(__dirname, '../src/DataTypes');
 const NAMESPACE_DATA_TYPES = 'Vnetby\\Schemaorg\\DataTypes';
 const BASE_CLASS_DATA_TYPES = 'DataType';
 
+const DATA_TYPES_TO_PHP = {
+    DataBoolean: ['bool'],
+    DataCssSelectorType: ['string'],
+    DataDate: ['string'],
+    DataDateTime: ['string'],
+    DataFalse: ['false'],
+    DataFloat: ['string', 'float'],
+    DataInteger: ['string', 'int'],
+    DataNumber: ['string', 'int', 'float'],
+    DataPronounceableText: ['string'],
+    DataText: ['string'],
+    DataTime: ['string'],
+    DataTrue: ['true'],
+    DataURL: ['string'],
+    DataXPathType: ['string']
+}
+
 let DATA_TYPES_IDS = [];
 let TYPES_COLLECTION = [];
 
@@ -153,7 +170,7 @@ const getTypeClassGettersStr = (item) => {
         let fnName = `get${ucFirst(prop['rdfs:label'])}`;
         let propName = prop['rdfs:label'];
         let comment = formatComment(prop['rdfs:comment'], 5);
-        let types = prop.types.length ? prop.types.join('|') : 'void';
+        let types = formatTypesStr(prop.types);
         let str = `
     /**
 ${comment}
@@ -178,7 +195,7 @@ const getTypeClassSettersStr = (item) => {
         let fnName = `set${ucFirst(prop['rdfs:label'])}`;
         let propName = prop['rdfs:label'];
         let comment = formatComment(prop['rdfs:comment'], 5);
-        let types = prop.types.length ? prop.types.join('|') : 'void';
+        let types = formatTypesStr(prop.types);
         let str = `
     /**
 ${comment}
@@ -196,6 +213,49 @@ ${comment}
 }
 
 
+/**
+ * - Формирует строку с php типами
+ * @param {string[]} arrTypes 
+ * @returns {string}
+ */
+const formatTypesStr = (arrTypes) => {
+    if (!arrTypes.length) {
+        return 'mixed';
+    }
+    let res = [];
+    let phpRes = [];
+    for (let i = 0; i < arrTypes.length; i++) {
+        let type = arrTypes[i];
+        res.push(type);
+        let phpType = getDataTypePhp(type);
+        if (phpType.length) {
+            for (let j = 0; j < phpType.length; j++) {
+                if (!phpRes.includes(phpType[j])) {
+                    phpRes.push(phpType[j]);
+                }
+            }
+        }
+    }
+    if (!phpRes.length) {
+        return res.join('|');
+    }
+    return phpRes.join('|') + '|' + res.join('|');
+}
+
+
+/**
+ * @param {string} schemaDataType 
+ * @returns {string[]}
+ */
+const getDataTypePhp = (schemaDataType) => {
+    let className = schemaDataType.replace(/.*\\([^\\]+)$/, "$1");
+    if (DATA_TYPES_TO_PHP[className] && DATA_TYPES_TO_PHP[className].length) {
+        return DATA_TYPES_TO_PHP[className];
+    }
+    return [];
+}
+
+
 const getTypeClassPropsStr = (item) => {
     let arrStr = [];
 
@@ -203,16 +263,13 @@ const getTypeClassPropsStr = (item) => {
         let prop = item.props[i];
         let comment = formatComment(prop['rdfs:comment'], 5);
         let name = prop['rdfs:label'];
-        let types = prop.types.join('|');
-        if (!types) {
-            types = 'mixed';
-        }
+        let types = formatTypesStr(prop.types);
         let str = `
     /**
 ${comment}
      * @var ${types}
      */
-    protected $prop_${name};`;
+    public $${name};`;
         arrStr.push(str);
     }
 
@@ -259,6 +316,7 @@ const getDataTypeClassContent = (item, extend = null) => {
     let className = 'Data' + ucFirst(item['rdfs:label']);
     let comment = formatComment(item['rdfs:comment'], 1);
     let strExtend = extend ? ' extends ' + extend : '';
+    let types = DATA_TYPES_TO_PHP[className] && DATA_TYPES_TO_PHP[className].length ? DATA_TYPES_TO_PHP[className].join('|') : 'mixed';
     let str = `<?php
 
 /**
@@ -269,6 +327,28 @@ namespace ${NAMESPACE_DATA_TYPES};
 
 class ${className}${strExtend}
 {
+
+    /**
+     * @var ${types}
+     */
+    protected $value;
+
+
+    /**
+     * @param ${types} $value
+     */
+    function __construct($value)
+    {
+        parent::__construct($value);
+    }
+
+    /**
+     * @return ${types}
+     */
+    function getValue()
+    {
+        return parent::getValue();
+    }
 }
 `;
     return str;

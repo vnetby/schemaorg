@@ -14,14 +14,14 @@ class SolveMathAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     /**
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice",
      * "Open ended", "Flashcard".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_eduQuestionType;
+    public $eduQuestionType;
 
     /**
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice",
      * "Open ended", "Flashcard".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEduQuestionType($value)
@@ -32,7 +32,7 @@ class SolveMathAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     /**
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice",
      * "Open ended", "Flashcard".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEduQuestionType()
     {

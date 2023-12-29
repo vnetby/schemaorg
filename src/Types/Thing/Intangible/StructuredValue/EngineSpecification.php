@@ -18,20 +18,20 @@ class EngineSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
      * Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_enginePower;
+    public $enginePower;
 
     /**
      * The type of engine or engines powering the vehicle.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_engineType;
+    public $engineType;
 
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this
      * property can be attached directly to the vehicle.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
-    protected $prop_fuelType;
+    public $fuelType;
 
     /**
      * The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. \n\nTypical
@@ -40,7 +40,7 @@ class EngineSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
      * ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_engineDisplacement;
+    public $engineDisplacement;
 
     /**
      * The torque (turning force) of the vehicle's engine.\n\nTypical unit code(s): NU for newton metre (N m), F17 for pound-force per foot,
@@ -48,7 +48,7 @@ class EngineSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
      * (e.g. reference RPM) using the [[valueReference]] property.\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_torque;
+    public $torque;
 
     /**
      * The power of the vehicle's engine. Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS,
@@ -65,7 +65,7 @@ class EngineSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
 
     /**
      * The type of engine or engines powering the vehicle.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEngineType($value)
@@ -76,7 +76,7 @@ class EngineSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this
      * property can be attached directly to the vehicle.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setFuelType($value)
@@ -123,7 +123,7 @@ class EngineSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
 
     /**
      * The type of engine or engines powering the vehicle.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEngineType()
     {
@@ -133,7 +133,7 @@ class EngineSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this
      * property can be attached directly to the vehicle.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getFuelType()
     {

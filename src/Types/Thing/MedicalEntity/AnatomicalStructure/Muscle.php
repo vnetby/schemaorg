@@ -15,31 +15,31 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
      * The muscle whose action counteracts the specified muscle.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle
      */
-    protected $prop_antagonist;
+    public $antagonist;
 
     /**
      * The underlying innervation associated with the muscle.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Nerve
      */
-    protected $prop_nerve;
+    public $nerve;
 
     /**
      * The movement the muscle generates.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_muscleAction;
+    public $muscleAction;
 
     /**
      * The blood vessel that carries blood from the heart to the muscle.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
      */
-    protected $prop_bloodSupply;
+    public $bloodSupply;
 
     /**
      * The place of attachment of a muscle, or what the muscle moves.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_insertion;
+    public $insertion;
 
     /**
      * The muscle whose action counteracts the specified muscle.
@@ -63,7 +63,7 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
 
     /**
      * The movement the muscle generates.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMuscleAction($value)
@@ -111,7 +111,7 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
 
     /**
      * The movement the muscle generates.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMuscleAction()
     {

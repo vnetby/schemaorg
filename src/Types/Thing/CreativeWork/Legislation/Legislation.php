@@ -16,21 +16,21 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
      * Whether the legislation is currently in force, not in force, or partially in force.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\LegalForceStatus\LegalForceStatus
      */
-    protected $prop_legislationLegalForce;
+    public $legislationLegalForce;
 
     /**
      * The point-in-time at which the provided description of the legislation is valid (e.g.: when looking at the law on the 2016-04-07
      * (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_legislationDateVersion;
+    public $legislationDateVersion;
 
     /**
      * The person or organization that originally passed or made the law: typically parliament (for primary legislation) or government (for secondary legislation).
      * This indicates the "legal author" of the law, as opposed to its physical author.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_legislationPassedBy;
+    public $legislationPassedBy;
 
     /**
      * Another legislation that this legislation changes. This encompasses the notions of amendment, replacement, correction, repeal, or other types of change. This
@@ -39,13 +39,13 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
      * text that shows the result of the change. For consolidation relationships, use the <a href="/legislationConsolidates">legislationConsolidates</a> property.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Legislation\Legislation
      */
-    protected $prop_legislationChanges;
+    public $legislationChanges;
 
     /**
      * The jurisdiction from which the legislation originates.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_legislationJurisdiction;
+    public $legislationJurisdiction;
 
     /**
      * Indicates another legislation taken into account in this consolidated legislation (which is usually the product of an editorial process that revises
@@ -53,13 +53,13 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
      * and to the legislations making the change.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Legislation\Legislation
      */
-    protected $prop_legislationConsolidates;
+    public $legislationConsolidates;
 
     /**
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_jurisdiction;
+    public $jurisdiction;
 
     /**
      * Indicates that this legislation (or part of legislation) fulfills the objectives set by another legislation, by passing appropriate implementation measures. Typically,
@@ -67,21 +67,21 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
      * legislations.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Legislation\Legislation
      */
-    protected $prop_legislationTransposes;
+    public $legislationTransposes;
 
     /**
      * The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to
      * be a legislation, even though it might not even be published or in force.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_legislationDate;
+    public $legislationDate;
 
     /**
      * An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR
      * in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_legislationIdentifier;
+    public $legislationIdentifier;
 
     /**
      * Indicates that this legislation (or part of a legislation) somehow transfers another legislation in a different legislative context. This is an
@@ -89,21 +89,21 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
      * informative consolidated law of a European Union's member state "applies" the consolidated version of the European Directive implemented in it.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Legislation\Legislation
      */
-    protected $prop_legislationApplies;
+    public $legislationApplies;
 
     /**
      * The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc.,
      * depending on the country.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_legislationType;
+    public $legislationType;
 
     /**
      * An individual or organization that has some kind of responsibility for the legislation. Typically the ministry who is/was in charge of
      * elaborating the legislation, or the adressee for potential questions about the legislation once it is published.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_legislationResponsible;
+    public $legislationResponsible;
 
     /**
      * Whether the legislation is currently in force, not in force, or partially in force.
@@ -118,7 +118,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * The point-in-time at which the provided description of the legislation is valid (e.g.: when looking at the law on the 2016-04-07
      * (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setLegislationDateVersion($value)
@@ -152,7 +152,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
 
     /**
      * The jurisdiction from which the legislation originates.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
      * @return static
      */
     function setLegislationJurisdiction($value)
@@ -174,7 +174,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
 
     /**
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setJurisdiction($value)
@@ -197,7 +197,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to
      * be a legislation, even though it might not even be published or in force.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setLegislationDate($value)
@@ -208,7 +208,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR
      * in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setLegislationIdentifier($value)
@@ -231,7 +231,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc.,
      * depending on the country.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLegislationType($value)
@@ -262,7 +262,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * The point-in-time at which the provided description of the legislation is valid (e.g.: when looking at the law on the 2016-04-07
      * (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getLegislationDateVersion()
     {
@@ -293,7 +293,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
 
     /**
      * The jurisdiction from which the legislation originates.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|null
      */
     function getLegislationJurisdiction()
     {
@@ -313,7 +313,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
 
     /**
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getJurisdiction()
     {
@@ -334,7 +334,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to
      * be a legislation, even though it might not even be published or in force.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getLegislationDate()
     {
@@ -344,7 +344,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR
      * in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getLegislationIdentifier()
     {
@@ -365,7 +365,7 @@ class Legislation extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     /**
      * The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc.,
      * depending on the country.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLegislationType()
     {

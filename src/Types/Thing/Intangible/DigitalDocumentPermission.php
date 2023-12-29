@@ -15,13 +15,13 @@ class DigitalDocumentPermission extends \Vnetby\Schemaorg\Types\Thing\Intangible
      * The person, organization, contact point, or audience that has been granted this permission.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_grantee;
+    public $grantee;
 
     /**
      * The type of permission granted the person, organization, or audience.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DigitalDocumentPermissionType\DigitalDocumentPermissionType
      */
-    protected $prop_permissionType;
+    public $permissionType;
 
     /**
      * The person, organization, contact point, or audience that has been granted this permission.

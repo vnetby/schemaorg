@@ -16,13 +16,13 @@ class PublicationEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
      * A broadcast service associated with the publication event.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService
      */
-    protected $prop_publishedOn;
+    public $publishedOn;
 
     /**
      * An agent associated with the publication event.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_publishedBy;
+    public $publishedBy;
 
     /**
      * A broadcast service associated with the publication event.

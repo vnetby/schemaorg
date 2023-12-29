@@ -13,13 +13,13 @@ class FinancialService extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalB
 
     /**
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_feesAndCommissionsSpecification;
+    public $feesAndCommissionsSpecification;
 
     /**
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setFeesAndCommissionsSpecification($value)
@@ -29,7 +29,7 @@ class FinancialService extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalB
 
     /**
      * Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getFeesAndCommissionsSpecification()
     {

@@ -17,7 +17,7 @@ class GiveAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\Tra
      * A sub property of participant. The participant who is at the receiving end of the action.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
-    protected $prop_recipient;
+    public $recipient;
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.

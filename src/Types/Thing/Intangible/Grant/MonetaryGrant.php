@@ -15,13 +15,13 @@ class MonetaryGrant extends \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_funder;
+    public $funder;
 
     /**
      * The amount of money.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_amount;
+    public $amount;
 
     /**
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
@@ -35,7 +35,7 @@ class MonetaryGrant extends \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
 
     /**
      * The amount of money.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setAmount($value)
@@ -54,7 +54,7 @@ class MonetaryGrant extends \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
 
     /**
      * The amount of money.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getAmount()
     {

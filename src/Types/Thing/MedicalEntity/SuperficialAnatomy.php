@@ -23,39 +23,39 @@ class SuperficialAnatomy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Med
     /**
      * The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions
      * or courses of treatment.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_significance;
+    public $significance;
 
     /**
      * A medical therapy related to this anatomy.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
      */
-    protected $prop_relatedTherapy;
+    public $relatedTherapy;
 
     /**
      * A medical condition associated with this anatomy.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    protected $prop_relatedCondition;
+    public $relatedCondition;
 
     /**
      * Anatomical systems or structures that relate to the superficial anatomy.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    protected $prop_relatedAnatomy;
+    public $relatedAnatomy;
 
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_associatedPathophysiology;
+    public $associatedPathophysiology;
 
     /**
      * The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions
      * or courses of treatment.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSignificance($value)
@@ -96,7 +96,7 @@ class SuperficialAnatomy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Med
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setAssociatedPathophysiology($value)
@@ -107,7 +107,7 @@ class SuperficialAnatomy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Med
     /**
      * The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions
      * or courses of treatment.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSignificance()
     {
@@ -144,7 +144,7 @@ class SuperficialAnatomy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Med
     /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAssociatedPathophysiology()
     {

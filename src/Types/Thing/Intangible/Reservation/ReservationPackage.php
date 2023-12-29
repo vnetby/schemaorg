@@ -15,7 +15,7 @@ class ReservationPackage extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserv
      * The individual reservations included in the package. Typically a repeated property.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Reservation\Reservation
      */
-    protected $prop_subReservation;
+    public $subReservation;
 
     /**
      * The individual reservations included in the package. Typically a repeated property.

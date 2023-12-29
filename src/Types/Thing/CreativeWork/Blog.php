@@ -16,14 +16,14 @@ class Blog extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * A posting that is part of this blog.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\SocialMediaPosting\BlogPosting\BlogPosting
      */
-    protected $prop_blogPost;
+    public $blogPost;
 
     /**
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of,
      * or the linking ISSN (ISSN-L) for, this serial publication.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_issn;
+    public $issn;
 
     /**
      * A posting that is part of this blog.
@@ -38,7 +38,7 @@ class Blog extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     /**
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of,
      * or the linking ISSN (ISSN-L) for, this serial publication.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIssn($value)
@@ -58,7 +58,7 @@ class Blog extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     /**
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of,
      * or the linking ISSN (ISSN-L) for, this serial publication.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIssn()
     {

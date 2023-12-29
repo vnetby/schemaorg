@@ -15,132 +15,132 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * Indicates the department, unit and/or facility where the employee reports and/or in which the job is to be performed.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_employmentUnit;
+    public $employmentUnit;
 
     /**
      * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_occupationalCategory;
+    public $occupationalCategory;
 
     /**
      * A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be
      * used, but note that there is no way to specify the level of ability as well as its nature when using
      * a defined term.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_physicalRequirement;
+    public $physicalRequirement;
 
     /**
      * Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by
      * [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_experienceInPlaceOfEducation;
+    public $experienceInPlaceOfEducation;
 
     /**
      * An indicator as to whether a position is available for an immediate start.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_jobImmediateStart;
+    public $jobImmediateStart;
 
     /**
      * Specific qualifications required for this role or Occupation.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_qualifications;
+    public $qualifications;
 
     /**
      * A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such
      * as those in O*net may be used, but note that there is no way to specify the level of ability as
      * well as its nature when using a defined term.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_sensoryRequirement;
+    public $sensoryRequirement;
 
     /**
      * The title of the job.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_title;
+    public $title;
 
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_baseSalary;
+    public $baseSalary;
 
     /**
      * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_salaryCurrency;
+    public $salaryCurrency;
 
     /**
      * A description of any security clearance requirements of the job.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_securityClearanceRequirement;
+    public $securityClearanceRequirement;
 
     /**
      * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill
      * this role or to work in this occupation.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_skills;
+    public $skills;
 
     /**
      * Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_employmentType;
+    public $employmentType;
 
     /**
      * Organization or Person offering the job position.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_hiringOrganization;
+    public $hiringOrganization;
 
     /**
      * The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions
      * is unclear or not known.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_totalJobOpenings;
+    public $totalJobOpenings;
 
     /**
      * A (typically single) geographic location associated with the job position.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_jobLocation;
+    public $jobLocation;
 
     /**
      * Contact details for further information relevant to this job posting.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
-    protected $prop_applicationContact;
+    public $applicationContact;
 
     /**
      * Educational background needed for the position or Occupation.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_educationRequirements;
+    public $educationRequirements;
 
     /**
      * The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_workHours;
+    public $workHours;
 
     /**
      * The location(s) applicants can apply from. This is usually used for telecommuting jobs where the applicant does not need to be
      * in a physical office. Note: This should not be used for citizenship or work visa requirements.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_applicantLocationRequirements;
+    public $applicantLocationRequirements;
 
     /**
      * Indicates whether an [[url]] that is associated with a [[JobPosting]] enables direct application for the job, via the posting website. A
@@ -148,97 +148,97 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of
      * [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the
      * JobPosting url(s) supplied.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_directApply;
+    public $directApply;
 
     /**
      * A description of the job location (e.g. TELECOMMUTE for telecommute jobs).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_jobLocationType;
+    public $jobLocationType;
 
     /**
      * A description of the employer, career opportunities and work environment for this position.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_employerOverview;
+    public $employerOverview;
 
     /**
      * The industry associated with the job position.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_industry;
+    public $industry;
 
     /**
      * The date on which a successful applicant for this job would be expected to start work. Choose a specific date in
      * the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_jobStartDate;
+    public $jobStartDate;
 
     /**
      * Description of bonus and commission compensation aspects of the job.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_incentiveCompensation;
+    public $incentiveCompensation;
 
     /**
      * Responsibilities associated with this role or Occupation.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_responsibilities;
+    public $responsibilities;
 
     /**
      * Publication date of an online listing.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_datePosted;
+    public $datePosted;
 
     /**
      * Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_specialCommitments;
+    public $specialCommitments;
 
     /**
      * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry,
      * job title, and location. Estimated salaries are often computed by outside organizations rather than the hiring organization, who may not have
      * committed to the estimated value.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
      */
-    protected $prop_estimatedSalary;
+    public $estimatedSalary;
 
     /**
      * The Occupation for the JobPosting.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Occupation
      */
-    protected $prop_relevantOccupation;
+    public $relevantOccupation;
 
     /**
      * Description of skills and experience needed for the position or Occupation.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_experienceRequirements;
+    public $experienceRequirements;
 
     /**
      * The legal requirements such as citizenship, visa and other documentation required for an applicant to this job.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_eligibilityToWorkRequirement;
+    public $eligibilityToWorkRequirement;
 
     /**
      * Description of benefits associated with the job.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_jobBenefits;
+    public $jobBenefits;
 
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    protected $prop_validThrough;
+    public $validThrough;
 
     /**
      * Indicates the department, unit and/or facility where the employee reports and/or in which the job is to be performed.
@@ -255,7 +255,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setOccupationalCategory($value)
@@ -267,7 +267,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be
      * used, but note that there is no way to specify the level of ability as well as its nature when using
      * a defined term.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setPhysicalRequirement($value)
@@ -278,7 +278,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by
      * [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setExperienceInPlaceOfEducation($value)
@@ -288,7 +288,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An indicator as to whether a position is available for an immediate start.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setJobImmediateStart($value)
@@ -298,7 +298,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Specific qualifications required for this role or Occupation.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setQualifications($value)
@@ -310,7 +310,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such
      * as those in O*net may be used, but note that there is no way to specify the level of ability as
      * well as its nature when using a defined term.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setSensoryRequirement($value)
@@ -320,7 +320,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The title of the job.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTitle($value)
@@ -330,7 +330,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
      * @return static
      */
     function setBaseSalary($value)
@@ -340,7 +340,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSalaryCurrency($value)
@@ -350,7 +350,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A description of any security clearance requirements of the job.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSecurityClearanceRequirement($value)
@@ -361,7 +361,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill
      * this role or to work in this occupation.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setSkills($value)
@@ -371,7 +371,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmploymentType($value)
@@ -392,7 +392,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions
      * is unclear or not known.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setTotalJobOpenings($value)
@@ -422,7 +422,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Educational background needed for the position or Occupation.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEducationRequirements($value)
@@ -432,7 +432,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setWorkHours($value)
@@ -457,7 +457,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of
      * [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the
      * JobPosting url(s) supplied.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setDirectApply($value)
@@ -467,7 +467,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A description of the job location (e.g. TELECOMMUTE for telecommute jobs).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setJobLocationType($value)
@@ -477,7 +477,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A description of the employer, career opportunities and work environment for this position.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEmployerOverview($value)
@@ -487,7 +487,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The industry associated with the job position.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setIndustry($value)
@@ -498,7 +498,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The date on which a successful applicant for this job would be expected to start work. Choose a specific date in
      * the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setJobStartDate($value)
@@ -508,7 +508,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of bonus and commission compensation aspects of the job.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIncentiveCompensation($value)
@@ -518,7 +518,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Responsibilities associated with this role or Occupation.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setResponsibilities($value)
@@ -528,7 +528,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Publication date of an online listing.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDatePosted($value)
@@ -538,7 +538,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSpecialCommitments($value)
@@ -550,7 +550,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry,
      * job title, and location. Estimated salaries are often computed by outside organizations rather than the hiring organization, who may not have
      * committed to the estimated value.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
      * @return static
      */
     function setEstimatedSalary($value)
@@ -570,7 +570,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of skills and experience needed for the position or Occupation.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setExperienceRequirements($value)
@@ -580,7 +580,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The legal requirements such as citizenship, visa and other documentation required for an applicant to this job.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEligibilityToWorkRequirement($value)
@@ -590,7 +590,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of benefits associated with the job.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setJobBenefits($value)
@@ -601,7 +601,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setValidThrough($value)
@@ -623,7 +623,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOccupationalCategory()
     {
@@ -634,7 +634,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be
      * used, but note that there is no way to specify the level of ability as well as its nature when using
      * a defined term.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getPhysicalRequirement()
     {
@@ -644,7 +644,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by
      * [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getExperienceInPlaceOfEducation()
     {
@@ -653,7 +653,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An indicator as to whether a position is available for an immediate start.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getJobImmediateStart()
     {
@@ -662,7 +662,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Specific qualifications required for this role or Occupation.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getQualifications()
     {
@@ -673,7 +673,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such
      * as those in O*net may be used, but note that there is no way to specify the level of ability as
      * well as its nature when using a defined term.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getSensoryRequirement()
     {
@@ -682,7 +682,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The title of the job.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTitle()
     {
@@ -691,7 +691,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
      */
     function getBaseSalary()
     {
@@ -700,7 +700,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSalaryCurrency()
     {
@@ -709,7 +709,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A description of any security clearance requirements of the job.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSecurityClearanceRequirement()
     {
@@ -719,7 +719,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill
      * this role or to work in this occupation.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getSkills()
     {
@@ -728,7 +728,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmploymentType()
     {
@@ -747,7 +747,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions
      * is unclear or not known.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getTotalJobOpenings()
     {
@@ -774,7 +774,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Educational background needed for the position or Occupation.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEducationRequirements()
     {
@@ -783,7 +783,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getWorkHours()
     {
@@ -806,7 +806,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of
      * [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the
      * JobPosting url(s) supplied.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getDirectApply()
     {
@@ -815,7 +815,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A description of the job location (e.g. TELECOMMUTE for telecommute jobs).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getJobLocationType()
     {
@@ -824,7 +824,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A description of the employer, career opportunities and work environment for this position.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEmployerOverview()
     {
@@ -833,7 +833,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The industry associated with the job position.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getIndustry()
     {
@@ -843,7 +843,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The date on which a successful applicant for this job would be expected to start work. Choose a specific date in
      * the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getJobStartDate()
     {
@@ -852,7 +852,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of bonus and commission compensation aspects of the job.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIncentiveCompensation()
     {
@@ -861,7 +861,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Responsibilities associated with this role or Occupation.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getResponsibilities()
     {
@@ -870,7 +870,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Publication date of an online listing.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDatePosted()
     {
@@ -879,7 +879,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSpecialCommitments()
     {
@@ -890,7 +890,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry,
      * job title, and location. Estimated salaries are often computed by outside organizations rather than the hiring organization, who may not have
      * committed to the estimated value.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
      */
     function getEstimatedSalary()
     {
@@ -908,7 +908,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of skills and experience needed for the position or Occupation.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\OccupationalExperienceRequirements|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getExperienceRequirements()
     {
@@ -917,7 +917,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The legal requirements such as citizenship, visa and other documentation required for an applicant to this job.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEligibilityToWorkRequirement()
     {
@@ -926,7 +926,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Description of benefits associated with the job.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getJobBenefits()
     {
@@ -936,7 +936,7 @@ class JobPosting extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
      * of opening hours.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getValidThrough()
     {

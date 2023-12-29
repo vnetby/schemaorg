@@ -13,29 +13,29 @@ class Question extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Commen
 
     /**
      * The number of answers this question has received.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_answerCount;
+    public $answerCount;
 
     /**
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice",
      * "Open ended", "Flashcard".
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_eduQuestionType;
+    public $eduQuestionType;
 
     /**
      * The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing
      * on community opinion and/or the view of the Question author.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Answer|\Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList
      */
-    protected $prop_acceptedAnswer;
+    public $acceptedAnswer;
 
     /**
      * An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Answer
      */
-    protected $prop_suggestedAnswer;
+    public $suggestedAnswer;
 
     /**
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments
@@ -43,11 +43,11 @@ class Question extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Commen
      * it.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      */
-    protected $prop_parentItem;
+    public $parentItem;
 
     /**
      * The number of answers this question has received.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setAnswerCount($value)
@@ -58,7 +58,7 @@ class Question extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Commen
     /**
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice",
      * "Open ended", "Flashcard".
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEduQuestionType($value)
@@ -101,7 +101,7 @@ class Question extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Commen
 
     /**
      * The number of answers this question has received.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getAnswerCount()
     {
@@ -111,7 +111,7 @@ class Question extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Commen
     /**
      * For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice",
      * "Open ended", "Flashcard".
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEduQuestionType()
     {

@@ -15,9 +15,9 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g.,
      * multi-page pagination); in such cases, the numberOfItems would be for the entire list.
-     * @var \Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    protected $prop_numberOfItems;
+    public $numberOfItems;
 
     /**
      * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if
@@ -25,20 +25,20 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
      * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
      * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing
      */
-    protected $prop_itemListElement;
+    public $itemListElement;
 
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_itemListOrder;
+    public $itemListOrder;
 
     /**
      * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g.,
      * multi-page pagination); in such cases, the numberOfItems would be for the entire list.
-     * @param \Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
     function setNumberOfItems($value)
@@ -52,7 +52,7 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
      * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
      * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
      */
     function setItemListElement($value)
@@ -62,7 +62,7 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setItemListOrder($value)
@@ -73,7 +73,7 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     /**
      * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g.,
      * multi-page pagination); in such cases, the numberOfItems would be for the entire list.
-     * @return \Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfItems()
     {
@@ -86,7 +86,7 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
      * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
      * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
     function getItemListElement()
     {
@@ -95,7 +95,7 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getItemListOrder()
     {

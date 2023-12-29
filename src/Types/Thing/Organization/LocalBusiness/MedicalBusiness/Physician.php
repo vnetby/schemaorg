@@ -15,19 +15,19 @@ class Physician extends \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness
      * A medical specialty of the provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
      */
-    protected $prop_medicalSpecialty;
+    public $medicalSpecialty;
 
     /**
      * A hospital with which the physician or office is affiliated.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\MedicalOrganization\Hospital
      */
-    protected $prop_hospitalAffiliation;
+    public $hospitalAffiliation;
 
     /**
      * A medical service available from this provider.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\MedicalProcedure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest\MedicalTest
      */
-    protected $prop_availableService;
+    public $availableService;
 
     /**
      * A medical specialty of the provider.

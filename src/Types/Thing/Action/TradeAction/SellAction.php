@@ -16,7 +16,7 @@ class SellAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeA
      * A sub property of participant. The participant/person/organization that bought the object.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_buyer;
+    public $buyer;
 
     /**
      * A sub property of participant. The participant/person/organization that bought the object.

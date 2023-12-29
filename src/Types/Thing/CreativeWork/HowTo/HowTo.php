@@ -13,57 +13,57 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_supply;
+    public $supply;
 
     /**
      * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_totalTime;
+    public $totalTime;
 
     /**
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_tool;
+    public $tool;
 
     /**
      * The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_yield;
+    public $yield;
 
     /**
      * The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO
      * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_performTime;
+    public $performTime;
 
     /**
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToSection|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToStep|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToSection|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToStep|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_step;
+    public $step;
 
     /**
      * The estimated cost of the supply or supplies consumed when performing instructions.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_estimatedCost;
+    public $estimatedCost;
 
     /**
      * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_prepTime;
+    public $prepTime;
 
     /**
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSupply($value)
@@ -83,7 +83,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTool($value)
@@ -93,7 +93,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setYield($value)
@@ -114,7 +114,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToSection|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToStep|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToSection|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToStep|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setStep($value)
@@ -124,7 +124,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The estimated cost of the supply or supplies consumed when performing instructions.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
      * @return static
      */
     function setEstimatedCost($value)
@@ -145,7 +145,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSupply()
     {
@@ -163,7 +163,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTool()
     {
@@ -172,7 +172,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getYield()
     {
@@ -191,7 +191,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToSection|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToStep|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToSection|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToStep|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getStep()
     {
@@ -200,7 +200,7 @@ class HowTo extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * The estimated cost of the supply or supplies consumed when performing instructions.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
      */
     function getEstimatedCost()
     {

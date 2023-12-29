@@ -16,26 +16,26 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
      * to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating
      */
-    protected $prop_starRating;
+    public $starRating;
 
     /**
      * The cuisine of the restaurant.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_servesCuisine;
+    public $servesCuisine;
 
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_acceptsReservations;
+    public $acceptsReservations;
 
     /**
      * Either the actual menu as a structured representation, as text, or a URL of the menu.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_hasMenu;
+    public $hasMenu;
 
     /**
      * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property
@@ -50,7 +50,7 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
 
     /**
      * The cuisine of the restaurant.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setServesCuisine($value)
@@ -61,7 +61,7 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setAcceptsReservations($value)
@@ -71,7 +71,7 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
 
     /**
      * Either the actual menu as a structured representation, as text, or a URL of the menu.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHasMenu($value)
@@ -91,7 +91,7 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
 
     /**
      * The cuisine of the restaurant.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getServesCuisine()
     {
@@ -101,7 +101,7 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getAcceptsReservations()
     {
@@ -110,7 +110,7 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
 
     /**
      * Either the actual menu as a structured representation, as text, or a URL of the menu.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHasMenu()
     {

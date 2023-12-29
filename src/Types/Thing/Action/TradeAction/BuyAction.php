@@ -17,7 +17,7 @@ class BuyAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeAc
      * provider.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_seller;
+    public $seller;
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a

@@ -13,13 +13,13 @@ class PathologyTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalT
 
     /**
      * The type of tissue sample required for the test.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_tissueSample;
+    public $tissueSample;
 
     /**
      * The type of tissue sample required for the test.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setTissueSample($value)
@@ -29,7 +29,7 @@ class PathologyTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalT
 
     /**
      * The type of tissue sample required for the test.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTissueSample()
     {

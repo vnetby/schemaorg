@@ -15,15 +15,15 @@ class MedicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medical
 
     /**
      * A contraindication for this therapy.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_contraindication;
+    public $contraindication;
 
     /**
      * A therapy that duplicates or overlaps this one.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
      */
-    protected $prop_duplicateTherapy;
+    public $duplicateTherapy;
 
     /**
      * A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in
@@ -31,11 +31,11 @@ class MedicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medical
      * and may require medical or surgical intervention to prevent one of the outcomes in this definition.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    protected $prop_seriousAdverseOutcome;
+    public $seriousAdverseOutcome;
 
     /**
      * A contraindication for this therapy.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setContraindication($value)
@@ -67,7 +67,7 @@ class MedicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medical
 
     /**
      * A contraindication for this therapy.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getContraindication()
     {

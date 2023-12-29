@@ -8,14 +8,24 @@ namespace Vnetby\Schemaorg\DataTypes;
 
 class DataType
 {
+
+    /**
+     * @var string
+     */
     protected $value;
 
+    /**
+     * @param string $value
+     */
     function __construct($value)
     {
         $this->value = $value;
     }
 
-    function __toString()
+    /**
+     * @return mixed
+     */
+    function getValue()
     {
         return $this->value;
     }

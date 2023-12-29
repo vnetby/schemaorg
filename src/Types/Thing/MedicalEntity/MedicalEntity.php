@@ -15,49 +15,49 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
      */
-    protected $prop_funding;
+    public $funding;
 
     /**
      * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalCode
      */
-    protected $prop_code;
+    public $code;
 
     /**
      * A medical guideline related to this entity.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalGuideline\MedicalGuideline
      */
-    protected $prop_guideline;
+    public $guideline;
 
     /**
      * If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_recognizingAuthority;
+    public $recognizingAuthority;
 
     /**
      * A medical study or trial related to this entity.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalStudy\MedicalStudy
      */
-    protected $prop_study;
+    public $study;
 
     /**
      * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicineSystem\MedicineSystem
      */
-    protected $prop_medicineSystem;
+    public $medicineSystem;
 
     /**
      * If applicable, a medical specialty in which this entity is relevant.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
      */
-    protected $prop_relevantSpecialty;
+    public $relevantSpecialty;
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_legalStatus;
+    public $legalStatus;
 
     /**
      * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
@@ -131,7 +131,7 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLegalStatus($value)
@@ -204,7 +204,7 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLegalStatus()
     {

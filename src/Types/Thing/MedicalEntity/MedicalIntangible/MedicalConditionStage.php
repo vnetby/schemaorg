@@ -13,19 +13,19 @@ class MedicalConditionStage extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\
 
     /**
      * The stage represented as a number, e.g. 3.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_stageAsNumber;
+    public $stageAsNumber;
 
     /**
      * The substage, e.g. 'a' for Stage IIIa.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_subStageSuffix;
+    public $subStageSuffix;
 
     /**
      * The stage represented as a number, e.g. 3.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setStageAsNumber($value)
@@ -35,7 +35,7 @@ class MedicalConditionStage extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\
 
     /**
      * The substage, e.g. 'a' for Stage IIIa.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSubStageSuffix($value)
@@ -45,7 +45,7 @@ class MedicalConditionStage extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\
 
     /**
      * The stage represented as a number, e.g. 3.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getStageAsNumber()
     {
@@ -54,7 +54,7 @@ class MedicalConditionStage extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\
 
     /**
      * The substage, e.g. 'a' for Stage IIIa.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSubStageSuffix()
     {

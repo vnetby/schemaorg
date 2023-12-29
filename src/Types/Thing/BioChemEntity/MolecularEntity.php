@@ -16,60 +16,60 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
      * Intended use of the BioChemEntity by humans.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_potentialUse;
+    public $potentialUse;
 
     /**
      * A role played by the BioChemEntity within a chemical context.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_chemicalRole;
+    public $chemicalRole;
 
     /**
      * A specification in form of a line notation for describing the structure of chemical species using short ASCII strings. Double bond
      * stereochemistry \ indicators may need to be escaped in the string in formats where the backslash is an escape character.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_smiles;
+    public $smiles;
 
     /**
      * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_iupacName;
+    public $iupacName;
 
     /**
      * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
      * data compilations.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_inChI;
+    public $inChI;
 
     /**
      * The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass
      * of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the
      * form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_monoisotopicMolecularWeight;
+    public $monoisotopicMolecularWeight;
 
     /**
      * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
      * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_molecularWeight;
+    public $molecularWeight;
 
     /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_inChIKey;
+    public $inChIKey;
 
     /**
      * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_molecularFormula;
+    public $molecularFormula;
 
     /**
      * Intended use of the BioChemEntity by humans.
@@ -94,7 +94,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     /**
      * A specification in form of a line notation for describing the structure of chemical species using short ASCII strings. Double bond
      * stereochemistry \ indicators may need to be escaped in the string in formats where the backslash is an escape character.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSmiles($value)
@@ -104,7 +104,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
 
     /**
      * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIupacName($value)
@@ -115,7 +115,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     /**
      * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
      * data compilations.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setInChI($value)
@@ -127,7 +127,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
      * The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass
      * of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the
      * form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMonoisotopicMolecularWeight($value)
@@ -138,7 +138,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     /**
      * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
      * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
     function setMolecularWeight($value)
@@ -148,7 +148,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
 
     /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setInChIKey($value)
@@ -158,7 +158,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
 
     /**
      * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setMolecularFormula($value)
@@ -187,7 +187,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     /**
      * A specification in form of a line notation for describing the structure of chemical species using short ASCII strings. Double bond
      * stereochemistry \ indicators may need to be escaped in the string in formats where the backslash is an escape character.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSmiles()
     {
@@ -196,7 +196,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
 
     /**
      * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIupacName()
     {
@@ -206,7 +206,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     /**
      * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
      * data compilations.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getInChI()
     {
@@ -217,7 +217,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
      * The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass
      * of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the
      * form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMonoisotopicMolecularWeight()
     {
@@ -227,7 +227,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     /**
      * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
      * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getMolecularWeight()
     {
@@ -236,7 +236,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
 
     /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getInChIKey()
     {
@@ -245,7 +245,7 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
 
     /**
      * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getMolecularFormula()
     {

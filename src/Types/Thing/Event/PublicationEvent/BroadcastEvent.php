@@ -13,31 +13,31 @@ class BroadcastEvent extends \Vnetby\Schemaorg\Types\Thing\Event\PublicationEven
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_videoFormat;
+    public $videoFormat;
 
     /**
      * The event being broadcast such as a sporting event or awards ceremony.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    protected $prop_broadcastOfEvent;
+    public $broadcastOfEvent;
 
     /**
      * True if the broadcast is of a live event.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_isLiveBroadcast;
+    public $isLiveBroadcast;
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_subtitleLanguage;
+    public $subtitleLanguage;
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVideoFormat($value)
@@ -57,7 +57,7 @@ class BroadcastEvent extends \Vnetby\Schemaorg\Types\Thing\Event\PublicationEven
 
     /**
      * True if the broadcast is of a live event.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setIsLiveBroadcast($value)
@@ -67,7 +67,7 @@ class BroadcastEvent extends \Vnetby\Schemaorg\Types\Thing\Event\PublicationEven
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSubtitleLanguage($value)
@@ -77,7 +77,7 @@ class BroadcastEvent extends \Vnetby\Schemaorg\Types\Thing\Event\PublicationEven
 
     /**
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVideoFormat()
     {
@@ -95,7 +95,7 @@ class BroadcastEvent extends \Vnetby\Schemaorg\Types\Thing\Event\PublicationEven
 
     /**
      * True if the broadcast is of a live event.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsLiveBroadcast()
     {
@@ -104,7 +104,7 @@ class BroadcastEvent extends \Vnetby\Schemaorg\Types\Thing\Event\PublicationEven
 
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSubtitleLanguage()
     {

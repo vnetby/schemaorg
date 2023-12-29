@@ -15,25 +15,25 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * The overall rating, based on a collection of reviews or ratings, of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
      */
-    protected $prop_aggregateRating;
+    public $aggregateRating;
 
     /**
      * A review of the item.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
      */
-    protected $prop_review;
+    public $review;
 
     /**
      * A slogan or motto associated with the item.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_slogan;
+    public $slogan;
 
     /**
      * An associated logo.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_logo;
+    public $logo;
 
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
@@ -57,7 +57,7 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A slogan or motto associated with the item.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setSlogan($value)
@@ -67,7 +67,7 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An associated logo.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setLogo($value)
@@ -95,7 +95,7 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A slogan or motto associated with the item.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSlogan()
     {
@@ -104,7 +104,7 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * An associated logo.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getLogo()
     {

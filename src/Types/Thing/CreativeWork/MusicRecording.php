@@ -15,37 +15,37 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
      * The composition this track is a recording of.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
      */
-    protected $prop_recordingOf;
+    public $recordingOf;
 
     /**
      * The playlist to which this recording belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicPlaylist
      */
-    protected $prop_inPlaylist;
+    public $inPlaylist;
 
     /**
      * The album to which this recording belongs.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
      */
-    protected $prop_inAlbum;
+    public $inAlbum;
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_duration;
+    public $duration;
 
     /**
      * The International Standard Recording Code for the recording.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_isrcCode;
+    public $isrcCode;
 
     /**
      * The artist that performed this album or recording.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    protected $prop_byArtist;
+    public $byArtist;
 
     /**
      * The composition this track is a recording of.
@@ -89,7 +89,7 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * The International Standard Recording Code for the recording.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIsrcCode($value)
@@ -145,7 +145,7 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
 
     /**
      * The International Standard Recording Code for the recording.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIsrcCode()
     {

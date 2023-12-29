@@ -17,39 +17,39 @@ class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\Cr
      * or accreditation.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    protected $prop_recognizedBy;
+    public $recognizedBy;
 
     /**
      * The duration of validity of a permit or similar thing.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    protected $prop_validFor;
+    public $validFor;
 
     /**
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
-     * @var \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    protected $prop_educationalLevel;
+    public $educationalLevel;
 
     /**
      * The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_credentialCategory;
+    public $credentialCategory;
 
     /**
      * The geographic area where a permit or similar thing is valid.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    protected $prop_validIn;
+    public $validIn;
 
     /**
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something
      * such as earn an Educational Occupational Credential or understand a LearningResource.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_competencyRequired;
+    public $competencyRequired;
 
     /**
      * An organization that acknowledges the validity, value or utility of a credential. Note: recognition may include a process of quality assurance
@@ -75,7 +75,7 @@ class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\Cr
     /**
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
-     * @param \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setEducationalLevel($value)
@@ -85,7 +85,7 @@ class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\Cr
 
     /**
      * The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setCredentialCategory($value)
@@ -106,7 +106,7 @@ class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\Cr
     /**
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something
      * such as earn an Educational Occupational Credential or understand a LearningResource.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setCompetencyRequired($value)
@@ -136,7 +136,7 @@ class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\Cr
     /**
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
-     * @return \Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getEducationalLevel()
     {
@@ -145,7 +145,7 @@ class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\Cr
 
     /**
      * The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getCredentialCategory()
     {
@@ -164,7 +164,7 @@ class EducationalOccupationalCredential extends \Vnetby\Schemaorg\Types\Thing\Cr
     /**
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something
      * such as earn an Educational Occupational Credential or understand a LearningResource.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getCompetencyRequired()
     {

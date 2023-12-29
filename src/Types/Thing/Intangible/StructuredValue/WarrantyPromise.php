@@ -16,13 +16,13 @@ class WarrantyPromise extends \Vnetby\Schemaorg\Types\Thing\Intangible\Structure
      * The scope of the warranty promise.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\WarrantyScope
      */
-    protected $prop_warrantyScope;
+    public $warrantyScope;
 
     /**
      * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    protected $prop_durationOfWarranty;
+    public $durationOfWarranty;
 
     /**
      * The scope of the warranty promise.

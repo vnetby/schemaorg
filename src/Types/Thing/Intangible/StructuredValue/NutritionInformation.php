@@ -15,73 +15,73 @@ class NutritionInformation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
      * The number of grams of fiber.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_fiberContent;
+    public $fiberContent;
 
     /**
      * The serving size, in terms of the number of volume or mass.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_servingSize;
+    public $servingSize;
 
     /**
      * The number of milligrams of sodium.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_sodiumContent;
+    public $sodiumContent;
 
     /**
      * The number of calories.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy
      */
-    protected $prop_calories;
+    public $calories;
 
     /**
      * The number of grams of protein.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_proteinContent;
+    public $proteinContent;
 
     /**
      * The number of grams of trans fat.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_transFatContent;
+    public $transFatContent;
 
     /**
      * The number of grams of carbohydrates.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_carbohydrateContent;
+    public $carbohydrateContent;
 
     /**
      * The number of grams of sugar.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_sugarContent;
+    public $sugarContent;
 
     /**
      * The number of grams of saturated fat.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_saturatedFatContent;
+    public $saturatedFatContent;
 
     /**
      * The number of milligrams of cholesterol.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_cholesterolContent;
+    public $cholesterolContent;
 
     /**
      * The number of grams of fat.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_fatContent;
+    public $fatContent;
 
     /**
      * The number of grams of unsaturated fat.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Mass
      */
-    protected $prop_unsaturatedFatContent;
+    public $unsaturatedFatContent;
 
     /**
      * The number of grams of fiber.
@@ -95,7 +95,7 @@ class NutritionInformation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * The serving size, in terms of the number of volume or mass.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setServingSize($value)
@@ -214,7 +214,7 @@ class NutritionInformation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
 
     /**
      * The serving size, in terms of the number of volume or mass.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getServingSize()
     {

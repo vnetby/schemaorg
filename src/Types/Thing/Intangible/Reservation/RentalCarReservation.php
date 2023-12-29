@@ -14,31 +14,31 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
 
     /**
      * When a rental car can be dropped off.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_dropoffTime;
+    public $dropoffTime;
 
     /**
      * Where a rental car can be dropped off.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_dropoffLocation;
+    public $dropoffLocation;
 
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    protected $prop_pickupLocation;
+    public $pickupLocation;
 
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
-     * @var \Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    protected $prop_pickupTime;
+    public $pickupTime;
 
     /**
      * When a rental car can be dropped off.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setDropoffTime($value)
@@ -68,7 +68,7 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
 
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
-     * @param \Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setPickupTime($value)
@@ -78,7 +78,7 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
 
     /**
      * When a rental car can be dropped off.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getDropoffTime()
     {
@@ -105,7 +105,7 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
 
     /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
-     * @return \Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getPickupTime()
     {

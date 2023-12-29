@@ -13,25 +13,25 @@ class RsvpAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\Com
 
     /**
      * If responding yes, the number of guests who will attend in addition to the invitee.
-     * @var \Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    protected $prop_additionalNumberOfGuests;
+    public $additionalNumberOfGuests;
 
     /**
      * The response (yes, no, maybe) to the RSVP.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\RsvpResponseType\RsvpResponseType
      */
-    protected $prop_rsvpResponse;
+    public $rsvpResponse;
 
     /**
      * Comments, typically from users.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      */
-    protected $prop_comment;
+    public $comment;
 
     /**
      * If responding yes, the number of guests who will attend in addition to the invitee.
-     * @param \Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
     function setAdditionalNumberOfGuests($value)
@@ -61,7 +61,7 @@ class RsvpAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\Com
 
     /**
      * If responding yes, the number of guests who will attend in addition to the invitee.
-     * @return \Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getAdditionalNumberOfGuests()
     {

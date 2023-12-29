@@ -13,19 +13,19 @@ class MortgageLoan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * Whether borrower is a resident of the jurisdiction where the property is located.
-     * @var \Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    protected $prop_domiciledMortgage;
+    public $domiciledMortgage;
 
     /**
      * Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
-    protected $prop_loanMortgageMandateAmount;
+    public $loanMortgageMandateAmount;
 
     /**
      * Whether borrower is a resident of the jurisdiction where the property is located.
-     * @param \Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
     function setDomiciledMortgage($value)
@@ -45,7 +45,7 @@ class MortgageLoan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * Whether borrower is a resident of the jurisdiction where the property is located.
-     * @return \Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getDomiciledMortgage()
     {

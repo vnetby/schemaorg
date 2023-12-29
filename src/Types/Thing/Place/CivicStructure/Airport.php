@@ -13,19 +13,19 @@ class Airport extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicSt
 
     /**
      * IATA identifier for an airline or airport.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_iataCode;
+    public $iataCode;
 
     /**
      * ICAO identifier for an airport.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_icaoCode;
+    public $icaoCode;
 
     /**
      * IATA identifier for an airline or airport.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIataCode($value)
@@ -35,7 +35,7 @@ class Airport extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicSt
 
     /**
      * ICAO identifier for an airport.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setIcaoCode($value)
@@ -45,7 +45,7 @@ class Airport extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicSt
 
     /**
      * IATA identifier for an airline or airport.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIataCode()
     {
@@ -54,7 +54,7 @@ class Airport extends \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\CivicSt
 
     /**
      * ICAO identifier for an airport.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getIcaoCode()
     {

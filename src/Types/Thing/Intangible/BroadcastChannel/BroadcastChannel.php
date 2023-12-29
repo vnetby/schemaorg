@@ -14,44 +14,44 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_broadcastFrequency;
+    public $broadcastFrequency;
 
     /**
      * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_broadcastChannelId;
+    public $broadcastChannelId;
 
     /**
      * The BroadcastService offered on this channel.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService
      */
-    protected $prop_providesBroadcastService;
+    public $providesBroadcastService;
 
     /**
      * The type of service required to have access to the channel (e.g. Standard or Premium).
-     * @var \Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    protected $prop_broadcastServiceTier;
+    public $broadcastServiceTier;
 
     /**
      * The CableOrSatelliteService offering the channel.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\CableOrSatelliteService
      */
-    protected $prop_inBroadcastLineup;
+    public $inBroadcastLineup;
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @var \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    protected $prop_genre;
+    public $genre;
 
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBroadcastFrequency($value)
@@ -61,7 +61,7 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
 
     /**
      * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBroadcastChannelId($value)
@@ -81,7 +81,7 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
 
     /**
      * The type of service required to have access to the channel (e.g. Standard or Premium).
-     * @param \Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setBroadcastServiceTier($value)
@@ -101,7 +101,7 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @param \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setGenre($value)
@@ -112,7 +112,7 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastFrequency()
     {
@@ -121,7 +121,7 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
 
     /**
      * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastChannelId()
     {
@@ -139,7 +139,7 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
 
     /**
      * The type of service required to have access to the channel (e.g. Standard or Premium).
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastServiceTier()
     {
@@ -157,7 +157,7 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @return \Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getGenre()
     {
