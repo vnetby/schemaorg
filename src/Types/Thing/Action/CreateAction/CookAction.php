@@ -12,12 +12,6 @@ class CookAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\Creat
     const TYPE = 'CookAction';
 
     /**
-     * A sub property of instrument. The recipe/instructions used to perform the action.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\Recipe
-     */
-    public $recipe;
-
-    /**
      * A sub property of location. The specific food establishment where the action occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FoodEstablishment\FoodEstablishment
      */
@@ -31,13 +25,9 @@ class CookAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\Creat
 
     /**
      * A sub property of instrument. The recipe/instructions used to perform the action.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\Recipe $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\Recipe
      */
-    function setRecipe($value)
-    {
-        return $this->setProp('recipe', $value);
-    }
+    public $recipe;
 
     /**
      * A sub property of location. The specific food establishment where the action occurred.
@@ -61,11 +51,12 @@ class CookAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\Creat
 
     /**
      * A sub property of instrument. The recipe/instructions used to perform the action.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\Recipe|null
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\Recipe $value
+     * @return static
      */
-    function getRecipe()
+    function setRecipe($value)
     {
-        return $this->getProp('recipe');
+        return $this->setProp('recipe', $value);
     }
 
     /**
@@ -84,5 +75,14 @@ class CookAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\Creat
     function getFoodEvent()
     {
         return $this->getProp('foodEvent');
+    }
+
+    /**
+     * A sub property of instrument. The recipe/instructions used to perform the action.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\HowTo\Recipe|null
+     */
+    function getRecipe()
+    {
+        return $this->getProp('recipe');
     }
 }

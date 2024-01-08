@@ -12,12 +12,6 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
     const TYPE = 'PostalCodeRangeSpecification';
 
     /**
-     * First postal code in a range (included).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $postalCodeBegin;
-
-    /**
      * Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -25,13 +19,9 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * First postal code in a range (included).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setPostalCodeBegin($value)
-    {
-        return $this->setProp('postalCodeBegin', $value);
-    }
+    public $postalCodeBegin;
 
     /**
      * Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
@@ -45,11 +35,12 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * First postal code in a range (included).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getPostalCodeBegin()
+    function setPostalCodeBegin($value)
     {
-        return $this->getProp('postalCodeBegin');
+        return $this->setProp('postalCodeBegin', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class PostalCodeRangeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
     function getPostalCodeEnd()
     {
         return $this->getProp('postalCodeEnd');
+    }
+
+    /**
+     * First postal code in a range (included).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPostalCodeBegin()
+    {
+        return $this->getProp('postalCodeBegin');
     }
 }

@@ -18,26 +18,26 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $dateSent;
 
     /**
-     * The date/time the message was received if a single recipient exists.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * A sub property of participant. The participant who is at the receiving end of the action.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
-    public $dateReceived;
+    public $recipient;
+
+    /**
+     * The date/time at which the message has been read by the recipient if a single recipient exists.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $dateRead;
 
     /**
      * A sub property of recipient. The recipient copied on a message.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
     public $ccRecipient;
 
     /**
-     * A sub property of recipient. The recipient who was directly sent the message.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
-     */
-    public $toRecipient;
-
-    /**
      * A sub property of participant. The participant who is at the sending end of the action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
     public $sender;
 
@@ -48,22 +48,22 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $messageAttachment;
 
     /**
-     * The date/time at which the message has been read by the recipient if a single recipient exists.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * A sub property of recipient. The recipient who was directly sent the message.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
-    public $dateRead;
+    public $toRecipient;
 
     /**
      * A sub property of recipient. The recipient blind copied on a message.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
      */
     public $bccRecipient;
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
+     * The date/time the message was received if a single recipient exists.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    public $recipient;
+    public $dateReceived;
 
     /**
      * The date/time at which the message was sent.
@@ -76,18 +76,28 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The date/time the message was received if a single recipient exists.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * A sub property of participant. The participant who is at the receiving end of the action.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint $value
      * @return static
      */
-    function setDateReceived($value)
+    function setRecipient($value)
     {
-        return $this->setProp('dateReceived', $value);
+        return $this->setProp('recipient', $value);
+    }
+
+    /**
+     * The date/time at which the message has been read by the recipient if a single recipient exists.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setDateRead($value)
+    {
+        return $this->setProp('dateRead', $value);
     }
 
     /**
      * A sub property of recipient. The recipient copied on a message.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint $value
      * @return static
      */
     function setCcRecipient($value)
@@ -96,18 +106,8 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * A sub property of recipient. The recipient who was directly sent the message.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
-     * @return static
-     */
-    function setToRecipient($value)
-    {
-        return $this->setProp('toRecipient', $value);
-    }
-
-    /**
      * A sub property of participant. The participant who is at the sending end of the action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
      * @return static
      */
     function setSender($value)
@@ -126,18 +126,18 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The date/time at which the message has been read by the recipient if a single recipient exists.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * A sub property of recipient. The recipient who was directly sent the message.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint $value
      * @return static
      */
-    function setDateRead($value)
+    function setToRecipient($value)
     {
-        return $this->setProp('dateRead', $value);
+        return $this->setProp('toRecipient', $value);
     }
 
     /**
      * A sub property of recipient. The recipient blind copied on a message.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint $value
      * @return static
      */
     function setBccRecipient($value)
@@ -146,13 +146,13 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
+     * The date/time the message was received if a single recipient exists.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
-    function setRecipient($value)
+    function setDateReceived($value)
     {
-        return $this->setProp('recipient', $value);
+        return $this->setProp('dateReceived', $value);
     }
 
     /**
@@ -165,17 +165,26 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The date/time the message was received if a single recipient exists.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * A sub property of participant. The participant who is at the receiving end of the action.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|null
      */
-    function getDateReceived()
+    function getRecipient()
     {
-        return $this->getProp('dateReceived');
+        return $this->getProp('recipient');
+    }
+
+    /**
+     * The date/time at which the message has been read by the recipient if a single recipient exists.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getDateRead()
+    {
+        return $this->getProp('dateRead');
     }
 
     /**
      * A sub property of recipient. The recipient copied on a message.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|null
      */
     function getCcRecipient()
     {
@@ -183,17 +192,8 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * A sub property of recipient. The recipient who was directly sent the message.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
-     */
-    function getToRecipient()
-    {
-        return $this->getProp('toRecipient');
-    }
-
-    /**
      * A sub property of participant. The participant who is at the sending end of the action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
      */
     function getSender()
     {
@@ -210,17 +210,17 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The date/time at which the message has been read by the recipient if a single recipient exists.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * A sub property of recipient. The recipient who was directly sent the message.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|null
      */
-    function getDateRead()
+    function getToRecipient()
     {
-        return $this->getProp('dateRead');
+        return $this->getProp('toRecipient');
     }
 
     /**
      * A sub property of recipient. The recipient blind copied on a message.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|null
      */
     function getBccRecipient()
     {
@@ -228,11 +228,11 @@ class Message extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
+     * The date/time the message was received if a single recipient exists.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
-    function getRecipient()
+    function getDateReceived()
     {
-        return $this->getProp('recipient');
+        return $this->getProp('dateReceived');
     }
 }

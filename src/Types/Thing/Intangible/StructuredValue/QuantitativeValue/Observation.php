@@ -23,28 +23,22 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     public $measurementQualifier;
 
     /**
-     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\DataTypes\DataURL
+     * A [[marginOfError]] for an [[Observation]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    public $measurementMethod;
+    public $marginOfError;
 
     /**
-     * The [[observationAbout]] property identifies an entity, often a [[Place]], associated with an [[Observation]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property
+     * from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Property
      */
-    public $observationAbout;
-
-    /**
-     * The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M
-     * is Period 3 Months, P3h is Period 3 hours.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $observationPeriod;
+    public $measuredProperty;
 
     /**
      * The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset, either described as text or
      * as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ConstraintNode\StatisticalVariable
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ConstraintNode\StatisticalVariable|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Property
      */
     public $variableMeasured;
 
@@ -59,22 +53,16 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
      * [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". If there are several [[variableMeasured]]
      * properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can
      * also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
     public $measurementTechnique;
 
     /**
-     * The observationDate of an [[Observation]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M
+     * is Period 3 Months, P3h is Period 3 hours.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $observationDate;
-
-    /**
-     * The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property
-     * from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Property
-     */
-    public $measuredProperty;
+    public $observationPeriod;
 
     /**
      * Identifies the denominator variable when an observation represents a ratio or percentage.
@@ -83,10 +71,22 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     public $measurementDenominator;
 
     /**
-     * A [[marginOfError]] for an [[Observation]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    public $marginOfError;
+    public $measurementMethod;
+
+    /**
+     * The observationDate of an [[Observation]].
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     */
+    public $observationDate;
+
+    /**
+     * The [[observationAbout]] property identifies an entity, often a [[Place]], associated with an [[Observation]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Thing
+     */
+    public $observationAbout;
 
     /**
      * Provides additional qualification to an observation. For example, a GDP observation measures the Nominal value.
@@ -99,40 +99,30 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     }
 
     /**
-     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * A [[marginOfError]] for an [[Observation]].
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
-    function setMeasurementMethod($value)
+    function setMarginOfError($value)
     {
-        return $this->setProp('measurementMethod', $value);
+        return $this->setProp('marginOfError', $value);
     }
 
     /**
-     * The [[observationAbout]] property identifies an entity, often a [[Place]], associated with an [[Observation]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property
+     * from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Property $value
      * @return static
      */
-    function setObservationAbout($value)
+    function setMeasuredProperty($value)
     {
-        return $this->setProp('observationAbout', $value);
-    }
-
-    /**
-     * The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M
-     * is Period 3 Months, P3h is Period 3 hours.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setObservationPeriod($value)
-    {
-        return $this->setProp('observationPeriod', $value);
+        return $this->setProp('measuredProperty', $value);
     }
 
     /**
      * The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset, either described as text or
      * as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ConstraintNode\StatisticalVariable $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ConstraintNode\StatisticalVariable|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Property $value
      * @return static
      */
     function setVariableMeasured($value)
@@ -151,7 +141,7 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
      * [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". If there are several [[variableMeasured]]
      * properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can
      * also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
     function setMeasurementTechnique($value)
@@ -160,24 +150,14 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     }
 
     /**
-     * The observationDate of an [[Observation]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M
+     * is Period 3 Months, P3h is Period 3 hours.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setObservationDate($value)
+    function setObservationPeriod($value)
     {
-        return $this->setProp('observationDate', $value);
-    }
-
-    /**
-     * The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property
-     * from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Property $value
-     * @return static
-     */
-    function setMeasuredProperty($value)
-    {
-        return $this->setProp('measuredProperty', $value);
+        return $this->setProp('observationPeriod', $value);
     }
 
     /**
@@ -191,13 +171,33 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     }
 
     /**
-     * A [[marginOfError]] for an [[Observation]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
-    function setMarginOfError($value)
+    function setMeasurementMethod($value)
     {
-        return $this->setProp('marginOfError', $value);
+        return $this->setProp('measurementMethod', $value);
+    }
+
+    /**
+     * The observationDate of an [[Observation]].
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @return static
+     */
+    function setObservationDate($value)
+    {
+        return $this->setProp('observationDate', $value);
+    }
+
+    /**
+     * The [[observationAbout]] property identifies an entity, often a [[Place]], associated with an [[Observation]].
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
+     */
+    function setObservationAbout($value)
+    {
+        return $this->setProp('observationAbout', $value);
     }
 
     /**
@@ -210,37 +210,28 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     }
 
     /**
-     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * A [[marginOfError]] for an [[Observation]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
-    function getMeasurementMethod()
+    function getMarginOfError()
     {
-        return $this->getProp('measurementMethod');
+        return $this->getProp('marginOfError');
     }
 
     /**
-     * The [[observationAbout]] property identifies an entity, often a [[Place]], associated with an [[Observation]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property
+     * from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Property|null
      */
-    function getObservationAbout()
+    function getMeasuredProperty()
     {
-        return $this->getProp('observationAbout');
-    }
-
-    /**
-     * The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M
-     * is Period 3 Months, P3h is Period 3 hours.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getObservationPeriod()
-    {
-        return $this->getProp('observationPeriod');
+        return $this->getProp('measuredProperty');
     }
 
     /**
      * The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset, either described as text or
      * as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Property|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ConstraintNode\StatisticalVariable|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ConstraintNode\StatisticalVariable|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Property|null
      */
     function getVariableMeasured()
     {
@@ -258,7 +249,7 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
      * [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". If there are several [[variableMeasured]]
      * properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can
      * also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getMeasurementTechnique()
     {
@@ -266,22 +257,13 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     }
 
     /**
-     * The observationDate of an [[Observation]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M
+     * is Period 3 Months, P3h is Period 3 hours.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getObservationDate()
+    function getObservationPeriod()
     {
-        return $this->getProp('observationDate');
-    }
-
-    /**
-     * The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property
-     * from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Property|null
-     */
-    function getMeasuredProperty()
-    {
-        return $this->getProp('measuredProperty');
+        return $this->getProp('observationPeriod');
     }
 
     /**
@@ -294,11 +276,29 @@ class Observation extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVal
     }
 
     /**
-     * A [[marginOfError]] for an [[Observation]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MeasurementMethodEnum\MeasurementMethodEnum|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
-    function getMarginOfError()
+    function getMeasurementMethod()
     {
-        return $this->getProp('marginOfError');
+        return $this->getProp('measurementMethod');
+    }
+
+    /**
+     * The observationDate of an [[Observation]].
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     */
+    function getObservationDate()
+    {
+        return $this->getProp('observationDate');
+    }
+
+    /**
+     * The [[observationAbout]] property identifies an entity, often a [[Place]], associated with an [[Observation]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getObservationAbout()
+    {
+        return $this->getProp('observationAbout');
     }
 }

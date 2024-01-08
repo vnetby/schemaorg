@@ -14,14 +14,14 @@ class WriteAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\Crea
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $inLanguage;
 
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setInLanguage($value)
@@ -32,7 +32,7 @@ class WriteAction extends \Vnetby\Schemaorg\Types\Thing\Action\CreateAction\Crea
     /**
      * The language of the content or performance or used in an action. Please use one of the language codes from the
      * [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getInLanguage()
     {

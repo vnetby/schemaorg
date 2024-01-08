@@ -20,7 +20,7 @@ class PublicationEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * An agent associated with the publication event.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
     public $publishedBy;
 
@@ -36,7 +36,7 @@ class PublicationEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * An agent associated with the publication event.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
      * @return static
      */
     function setPublishedBy($value)
@@ -55,7 +55,7 @@ class PublicationEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * An agent associated with the publication event.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
      */
     function getPublishedBy()
     {

@@ -15,7 +15,7 @@ class ReceiveAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
 
     /**
      * A sub property of participant. The participant who is at the sending end of the action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
     public $sender;
 
@@ -27,7 +27,7 @@ class ReceiveAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
 
     /**
      * A sub property of participant. The participant who is at the sending end of the action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
      * @return static
      */
     function setSender($value)
@@ -47,7 +47,7 @@ class ReceiveAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
 
     /**
      * A sub property of participant. The participant who is at the sending end of the action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
      */
     function getSender()
     {

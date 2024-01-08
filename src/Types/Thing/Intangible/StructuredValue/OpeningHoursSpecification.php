@@ -14,28 +14,16 @@ class OpeningHoursSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     const TYPE = 'OpeningHoursSpecification';
 
     /**
-     * The date when the item becomes valid.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $validFrom;
-
-    /**
-     * The day of the week for which these opening hours are valid.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek
-     */
-    public $dayOfWeek;
-
-    /**
      * The closing hour of the place or service on the given day(s) of the week.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataTime
      */
     public $closes;
 
     /**
-     * The opening hour of the place or service on the given day(s) of the week.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime
+     * The day of the week for which these opening hours are valid.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek
      */
-    public $opens;
+    public $dayOfWeek;
 
     /**
      * The date after when the item is not valid. For example the end of an offer, salary period, or a period
@@ -45,24 +33,16 @@ class OpeningHoursSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     public $validThrough;
 
     /**
-     * The date when the item becomes valid.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
+     * The opening hour of the place or service on the given day(s) of the week.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime
      */
-    function setValidFrom($value)
-    {
-        return $this->setProp('validFrom', $value);
-    }
+    public $opens;
 
     /**
-     * The day of the week for which these opening hours are valid.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek $value
-     * @return static
+     * The date when the item becomes valid.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    function setDayOfWeek($value)
-    {
-        return $this->setProp('dayOfWeek', $value);
-    }
+    public $validFrom;
 
     /**
      * The closing hour of the place or service on the given day(s) of the week.
@@ -75,13 +55,13 @@ class OpeningHoursSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     }
 
     /**
-     * The opening hour of the place or service on the given day(s) of the week.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime $value
+     * The day of the week for which these opening hours are valid.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek $value
      * @return static
      */
-    function setOpens($value)
+    function setDayOfWeek($value)
     {
-        return $this->setProp('opens', $value);
+        return $this->setProp('dayOfWeek', $value);
     }
 
     /**
@@ -96,21 +76,23 @@ class OpeningHoursSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     }
 
     /**
-     * The date when the item becomes valid.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * The opening hour of the place or service on the given day(s) of the week.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime $value
+     * @return static
      */
-    function getValidFrom()
+    function setOpens($value)
     {
-        return $this->getProp('validFrom');
+        return $this->setProp('opens', $value);
     }
 
     /**
-     * The day of the week for which these opening hours are valid.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek|null
+     * The date when the item becomes valid.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    function getDayOfWeek()
+    function setValidFrom($value)
     {
-        return $this->getProp('dayOfWeek');
+        return $this->setProp('validFrom', $value);
     }
 
     /**
@@ -123,12 +105,12 @@ class OpeningHoursSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     }
 
     /**
-     * The opening hour of the place or service on the given day(s) of the week.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|null
+     * The day of the week for which these opening hours are valid.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek|null
      */
-    function getOpens()
+    function getDayOfWeek()
     {
-        return $this->getProp('opens');
+        return $this->getProp('dayOfWeek');
     }
 
     /**
@@ -139,5 +121,23 @@ class OpeningHoursSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     function getValidThrough()
     {
         return $this->getProp('validThrough');
+    }
+
+    /**
+     * The opening hour of the place or service on the given day(s) of the week.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|null
+     */
+    function getOpens()
+    {
+        return $this->getProp('opens');
+    }
+
+    /**
+     * The date when the item becomes valid.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getValidFrom()
+    {
+        return $this->getProp('validFrom');
     }
 }

@@ -14,18 +14,6 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     const TYPE = 'DeliveryTimeSettings';
 
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
-     */
-    public $shippingDestination;
-
-    /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $transitTimeLabel;
-
-    /**
      * The total delay between the receipt of the order and the goods reaching the final customer.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ShippingDeliveryTime
      */
@@ -40,24 +28,16 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     public $isUnlabelledFallback;
 
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion $value
-     * @return static
+     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setShippingDestination($value)
-    {
-        return $this->setProp('shippingDestination', $value);
-    }
+    public $transitTimeLabel;
 
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
-    function setTransitTimeLabel($value)
-    {
-        return $this->setProp('transitTimeLabel', $value);
-    }
+    public $shippingDestination;
 
     /**
      * The total delay between the receipt of the order and the goods reaching the final customer.
@@ -82,21 +62,23 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion|null
+     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getShippingDestination()
+    function setTransitTimeLabel($value)
     {
-        return $this->getProp('shippingDestination');
+        return $this->setProp('transitTimeLabel', $value);
     }
 
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion $value
+     * @return static
      */
-    function getTransitTimeLabel()
+    function setShippingDestination($value)
     {
-        return $this->getProp('transitTimeLabel');
+        return $this->setProp('shippingDestination', $value);
     }
 
     /**
@@ -117,5 +99,23 @@ class DeliveryTimeSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     function getIsUnlabelledFallback()
     {
         return $this->getProp('isUnlabelledFallback');
+    }
+
+    /**
+     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTransitTimeLabel()
+    {
+        return $this->getProp('transitTimeLabel');
+    }
+
+    /**
+     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion|null
+     */
+    function getShippingDestination()
+    {
+        return $this->getProp('shippingDestination');
     }
 }

@@ -19,18 +19,18 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     public $accountMinimumInflow;
 
     /**
-     * The type of a bank account.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $bankAccountType;
-
-    /**
      * An overdraft is an extension of credit from a lending institution when an account reaches zero. An overdraft allows the individual
      * to continue withdrawing money even if the account has no funds in it. Basically the bank allows people to borrow a
      * set amount of money.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
     public $accountOverdraftLimit;
+
+    /**
+     * The type of a bank account.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $bankAccountType;
 
     /**
      * A minimum amount that has to be paid in every month.
@@ -40,16 +40,6 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     function setAccountMinimumInflow($value)
     {
         return $this->setProp('accountMinimumInflow', $value);
-    }
-
-    /**
-     * The type of a bank account.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setBankAccountType($value)
-    {
-        return $this->setProp('bankAccountType', $value);
     }
 
     /**
@@ -65,21 +55,22 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     }
 
     /**
+     * The type of a bank account.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setBankAccountType($value)
+    {
+        return $this->setProp('bankAccountType', $value);
+    }
+
+    /**
      * A minimum amount that has to be paid in every month.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
      */
     function getAccountMinimumInflow()
     {
         return $this->getProp('accountMinimumInflow');
-    }
-
-    /**
-     * The type of a bank account.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getBankAccountType()
-    {
-        return $this->getProp('bankAccountType');
     }
 
     /**
@@ -91,5 +82,14 @@ class BankAccount extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     function getAccountOverdraftLimit()
     {
         return $this->getProp('accountOverdraftLimit');
+    }
+
+    /**
+     * The type of a bank account.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getBankAccountType()
+    {
+        return $this->getProp('bankAccountType');
     }
 }

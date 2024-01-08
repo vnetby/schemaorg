@@ -12,28 +12,28 @@ class Book extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Book';
 
     /**
-     * Indicates whether the book is an abridged edition.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $abridged;
-
-    /**
      * The edition of the book.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $bookEdition;
 
     /**
-     * The number of pages in the book.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * Indicates whether the book is an abridged edition.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    public $numberOfPages;
+    public $abridged;
 
     /**
      * The format of the book.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BookFormatType\BookFormatType
      */
     public $bookFormat;
+
+    /**
+     * The number of pages in the book.
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $numberOfPages;
 
     /**
      * The illustrator of the book.
@@ -48,16 +48,6 @@ class Book extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $isbn;
 
     /**
-     * Indicates whether the book is an abridged edition.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
-     */
-    function setAbridged($value)
-    {
-        return $this->setProp('abridged', $value);
-    }
-
-    /**
      * The edition of the book.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -68,13 +58,13 @@ class Book extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The number of pages in the book.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * Indicates whether the book is an abridged edition.
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
-    function setNumberOfPages($value)
+    function setAbridged($value)
     {
-        return $this->setProp('numberOfPages', $value);
+        return $this->setProp('abridged', $value);
     }
 
     /**
@@ -85,6 +75,16 @@ class Book extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function setBookFormat($value)
     {
         return $this->setProp('bookFormat', $value);
+    }
+
+    /**
+     * The number of pages in the book.
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setNumberOfPages($value)
+    {
+        return $this->setProp('numberOfPages', $value);
     }
 
     /**
@@ -108,15 +108,6 @@ class Book extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * Indicates whether the book is an abridged edition.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
-     */
-    function getAbridged()
-    {
-        return $this->getProp('abridged');
-    }
-
-    /**
      * The edition of the book.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
@@ -126,12 +117,12 @@ class Book extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The number of pages in the book.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * Indicates whether the book is an abridged edition.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
-    function getNumberOfPages()
+    function getAbridged()
     {
-        return $this->getProp('numberOfPages');
+        return $this->getProp('abridged');
     }
 
     /**
@@ -141,6 +132,15 @@ class Book extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function getBookFormat()
     {
         return $this->getProp('bookFormat');
+    }
+
+    /**
+     * The number of pages in the book.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getNumberOfPages()
+    {
+        return $this->getProp('numberOfPages');
     }
 
     /**

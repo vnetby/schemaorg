@@ -12,12 +12,6 @@ class TechArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
     const TYPE = 'TechArticle';
 
     /**
-     * Prerequisites needed to fulfill steps in article.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $dependencies;
-
-    /**
      * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -25,13 +19,9 @@ class TechArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * Prerequisites needed to fulfill steps in article.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setDependencies($value)
-    {
-        return $this->setProp('dependencies', $value);
-    }
+    public $dependencies;
 
     /**
      * Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
@@ -45,11 +35,12 @@ class TechArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
 
     /**
      * Prerequisites needed to fulfill steps in article.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getDependencies()
+    function setDependencies($value)
     {
-        return $this->getProp('dependencies');
+        return $this->setProp('dependencies', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class TechArticle extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Art
     function getProficiencyLevel()
     {
         return $this->getProp('proficiencyLevel');
+    }
+
+    /**
+     * Prerequisites needed to fulfill steps in article.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getDependencies()
+    {
+        return $this->getProp('dependencies');
     }
 }

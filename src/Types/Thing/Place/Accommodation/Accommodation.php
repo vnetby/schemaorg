@@ -16,9 +16,23 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
 
     /**
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
     public $leaseLength;
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
+     * real estate setting, as well as other kinds of tours as appropriate.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $tourBookingPage;
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
+     * the feature is included in an offer for the main accommodation or available at extra costs.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification
+     */
+    public $amenityFeature;
 
     /**
      * The type of bed or beds included in the accommodation. For the single case of just one bed of a certain
@@ -29,23 +43,11 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     public $bed;
 
     /**
-     * The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
+     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    public $yearBuilt;
-
-    /**
-     * The size of the accommodation, e.g. in square meter or squarefoot. Typical unit code(s): MTK for square meter, FTK for square
-     * foot, or YDK for square yard.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $floorSize;
-
-    /**
-     * Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields for suggested values).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $accommodationCategory;
+    public $numberOfRooms;
 
     /**
      * Indications regarding the permitted usage of the accommodation.
@@ -54,39 +56,17 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     public $permittedUsage;
 
     /**
-     * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of
-     * the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer
-     * will be 3.". See also [[numberOfRooms]].
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull
+     * field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $numberOfBathroomsTotal;
+    public $numberOfFullBathrooms;
 
     /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
-     * value.
-     * @var bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
+     * The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $petsAllowed;
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
-     * the feature is included in an offer for the main accommodation or available at extra costs.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification
-     */
-    public $amenityFeature;
-
-    /**
-     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
-     * real estate setting, as well as other kinds of tours as appropriate.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $tourBookingPage;
-
-    /**
-     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $numberOfBedrooms;
+    public $yearBuilt;
 
     /**
      * The floor level for an [[Accommodation]] in a multi-storey building. Since counting systems [vary internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations), the local system should be used
@@ -103,17 +83,44 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     public $numberOfPartialBathrooms;
 
     /**
-     * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull
-     * field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $numberOfFullBathrooms;
-
-    /**
      * A floorplan of some [[Accommodation]].
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\FloorPlan
      */
     public $accommodationFloorPlan;
+
+    /**
+     * The size of the accommodation, e.g. in square meter or squarefoot. Typical unit code(s): MTK for square meter, FTK for square
+     * foot, or YDK for square yard.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $floorSize;
+
+    /**
+     * Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields for suggested values).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $accommodationCategory;
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $numberOfBedrooms;
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
+     * value.
+     * @var bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $petsAllowed;
+
+    /**
+     * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of
+     * the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer
+     * will be 3.". See also [[numberOfRooms]].
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $numberOfBathroomsTotal;
 
     /**
      * The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal
@@ -124,20 +131,35 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     public $occupancy;
 
     /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
-     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $numberOfRooms;
-
-    /**
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
      * @return static
      */
     function setLeaseLength($value)
     {
         return $this->setProp('leaseLength', $value);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
+     * real estate setting, as well as other kinds of tours as appropriate.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setTourBookingPage($value)
+    {
+        return $this->setProp('tourBookingPage', $value);
+    }
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
+     * the feature is included in an offer for the main accommodation or available at extra costs.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification $value
+     * @return static
+     */
+    function setAmenityFeature($value)
+    {
+        return $this->setProp('amenityFeature', $value);
     }
 
     /**
@@ -153,34 +175,14 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
+     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
-    function setYearBuilt($value)
+    function setNumberOfRooms($value)
     {
-        return $this->setProp('yearBuilt', $value);
-    }
-
-    /**
-     * The size of the accommodation, e.g. in square meter or squarefoot. Typical unit code(s): MTK for square meter, FTK for square
-     * foot, or YDK for square yard.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setFloorSize($value)
-    {
-        return $this->setProp('floorSize', $value);
-    }
-
-    /**
-     * Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields for suggested values).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setAccommodationCategory($value)
-    {
-        return $this->setProp('accommodationCategory', $value);
+        return $this->setProp('numberOfRooms', $value);
     }
 
     /**
@@ -194,58 +196,24 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of
-     * the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer
-     * will be 3.". See also [[numberOfRooms]].
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull
+     * field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setNumberOfBathroomsTotal($value)
+    function setNumberOfFullBathrooms($value)
     {
-        return $this->setProp('numberOfBathroomsTotal', $value);
+        return $this->setProp('numberOfFullBathrooms', $value);
     }
 
     /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
-     * value.
-     * @param bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setPetsAllowed($value)
+    function setYearBuilt($value)
     {
-        return $this->setProp('petsAllowed', $value);
-    }
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
-     * the feature is included in an offer for the main accommodation or available at extra costs.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification $value
-     * @return static
-     */
-    function setAmenityFeature($value)
-    {
-        return $this->setProp('amenityFeature', $value);
-    }
-
-    /**
-     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
-     * real estate setting, as well as other kinds of tours as appropriate.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setTourBookingPage($value)
-    {
-        return $this->setProp('tourBookingPage', $value);
-    }
-
-    /**
-     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setNumberOfBedrooms($value)
-    {
-        return $this->setProp('numberOfBedrooms', $value);
+        return $this->setProp('yearBuilt', $value);
     }
 
     /**
@@ -271,17 +239,6 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull
-     * field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setNumberOfFullBathrooms($value)
-    {
-        return $this->setProp('numberOfFullBathrooms', $value);
-    }
-
-    /**
      * A floorplan of some [[Accommodation]].
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\FloorPlan $value
      * @return static
@@ -289,6 +246,60 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     function setAccommodationFloorPlan($value)
     {
         return $this->setProp('accommodationFloorPlan', $value);
+    }
+
+    /**
+     * The size of the accommodation, e.g. in square meter or squarefoot. Typical unit code(s): MTK for square meter, FTK for square
+     * foot, or YDK for square yard.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setFloorSize($value)
+    {
+        return $this->setProp('floorSize', $value);
+    }
+
+    /**
+     * Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields for suggested values).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setAccommodationCategory($value)
+    {
+        return $this->setProp('accommodationCategory', $value);
+    }
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setNumberOfBedrooms($value)
+    {
+        return $this->setProp('numberOfBedrooms', $value);
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
+     * value.
+     * @param bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setPetsAllowed($value)
+    {
+        return $this->setProp('petsAllowed', $value);
+    }
+
+    /**
+     * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of
+     * the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer
+     * will be 3.". See also [[numberOfRooms]].
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setNumberOfBathroomsTotal($value)
+    {
+        return $this->setProp('numberOfBathroomsTotal', $value);
     }
 
     /**
@@ -304,23 +315,32 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
-     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setNumberOfRooms($value)
-    {
-        return $this->setProp('numberOfRooms', $value);
-    }
-
-    /**
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
      */
     function getLeaseLength()
     {
         return $this->getProp('leaseLength');
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
+     * real estate setting, as well as other kinds of tours as appropriate.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getTourBookingPage()
+    {
+        return $this->getProp('tourBookingPage');
+    }
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
+     * the feature is included in an offer for the main accommodation or available at extra costs.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification|null
+     */
+    function getAmenityFeature()
+    {
+        return $this->getProp('amenityFeature');
     }
 
     /**
@@ -335,31 +355,13 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
+     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
-    function getYearBuilt()
+    function getNumberOfRooms()
     {
-        return $this->getProp('yearBuilt');
-    }
-
-    /**
-     * The size of the accommodation, e.g. in square meter or squarefoot. Typical unit code(s): MTK for square meter, FTK for square
-     * foot, or YDK for square yard.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getFloorSize()
-    {
-        return $this->getProp('floorSize');
-    }
-
-    /**
-     * Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields for suggested values).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getAccommodationCategory()
-    {
-        return $this->getProp('accommodationCategory');
+        return $this->getProp('numberOfRooms');
     }
 
     /**
@@ -372,53 +374,22 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of
-     * the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer
-     * will be 3.". See also [[numberOfRooms]].
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull
+     * field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getNumberOfBathroomsTotal()
+    function getNumberOfFullBathrooms()
     {
-        return $this->getProp('numberOfBathroomsTotal');
+        return $this->getProp('numberOfFullBathrooms');
     }
 
     /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
-     * value.
-     * @return bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). 
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getPetsAllowed()
+    function getYearBuilt()
     {
-        return $this->getProp('petsAllowed');
-    }
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
-     * the feature is included in an offer for the main accommodation or available at extra costs.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification|null
-     */
-    function getAmenityFeature()
-    {
-        return $this->getProp('amenityFeature');
-    }
-
-    /**
-     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
-     * real estate setting, as well as other kinds of tours as appropriate.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getTourBookingPage()
-    {
-        return $this->getProp('tourBookingPage');
-    }
-
-    /**
-     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getNumberOfBedrooms()
-    {
-        return $this->getProp('numberOfBedrooms');
+        return $this->getProp('yearBuilt');
     }
 
     /**
@@ -442,22 +413,61 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull
-     * field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getNumberOfFullBathrooms()
-    {
-        return $this->getProp('numberOfFullBathrooms');
-    }
-
-    /**
      * A floorplan of some [[Accommodation]].
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\FloorPlan|null
      */
     function getAccommodationFloorPlan()
     {
         return $this->getProp('accommodationFloorPlan');
+    }
+
+    /**
+     * The size of the accommodation, e.g. in square meter or squarefoot. Typical unit code(s): MTK for square meter, FTK for square
+     * foot, or YDK for square yard.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getFloorSize()
+    {
+        return $this->getProp('floorSize');
+    }
+
+    /**
+     * Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields for suggested values).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getAccommodationCategory()
+    {
+        return $this->getProp('accommodationCategory');
+    }
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getNumberOfBedrooms()
+    {
+        return $this->getProp('numberOfBedrooms');
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
+     * value.
+     * @return bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPetsAllowed()
+    {
+        return $this->getProp('petsAllowed');
+    }
+
+    /**
+     * The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of
+     * the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer
+     * will be 3.". See also [[numberOfRooms]].
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getNumberOfBathroomsTotal()
+    {
+        return $this->getProp('numberOfBathroomsTotal');
     }
 
     /**
@@ -469,15 +479,5 @@ class Accommodation extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     function getOccupancy()
     {
         return $this->getProp('occupancy');
-    }
-
-    /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
-     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getNumberOfRooms()
-    {
-        return $this->getProp('numberOfRooms');
     }
 }

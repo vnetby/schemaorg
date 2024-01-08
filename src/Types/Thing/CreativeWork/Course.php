@@ -14,30 +14,30 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Course';
 
     /**
-     * Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may
-     * be a pre-requisite competency, referenced using [[AlignmentObject]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course
+     * A language someone may use with or at the item, service or place. Please use one of the language codes from
+     * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
      */
-    public $coursePrerequisites;
+    public $availableLanguage;
 
     /**
-     * Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\LearningResource\Syllabus
+     * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $syllabusSections;
+    public $financialAidEligible;
 
     /**
      * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
      * course or program.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $educationalCredentialAwarded;
 
     /**
-     * The total number of students that have enrolled in the history of the course.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+     * @var string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    public $totalHistoricalEnrollment;
+    public $numberOfCredits;
 
     /**
      * An offering of the course at a specific time and place or through specific media or mode of study or to
@@ -47,17 +47,30 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $hasCourseInstance;
 
     /**
-     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
+     * Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may
+     * be a pre-requisite competency, referenced using [[AlignmentObject]].
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course
      */
-    public $numberOfCredits;
+    public $coursePrerequisites;
 
     /**
-     * A language someone may use with or at the item, service or place. Please use one of the language codes from
-     * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
+     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    public $availableLanguage;
+    public $occupationalCredentialAwarded;
+
+    /**
+     * The total number of students that have enrolled in the history of the course.
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $totalHistoricalEnrollment;
+
+    /**
+     * Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\LearningResource\Syllabus
+     */
+    public $syllabusSections;
 
     /**
      * The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or 6.001).
@@ -66,43 +79,30 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $courseCode;
 
     /**
-     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential
-     */
-    public $occupationalCredentialAwarded;
-
-    /**
-     * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $financialAidEligible;
-
-    /**
-     * Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may
-     * be a pre-requisite competency, referenced using [[AlignmentObject]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course $value
+     * A language someone may use with or at the item, service or place. Please use one of the language codes from
+     * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
      * @return static
      */
-    function setCoursePrerequisites($value)
+    function setAvailableLanguage($value)
     {
-        return $this->setProp('coursePrerequisites', $value);
+        return $this->setProp('availableLanguage', $value);
     }
 
     /**
-     * Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\LearningResource\Syllabus $value
+     * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setSyllabusSections($value)
+    function setFinancialAidEligible($value)
     {
-        return $this->setProp('syllabusSections', $value);
+        return $this->setProp('financialAidEligible', $value);
     }
 
     /**
      * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
      * course or program.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setEducationalCredentialAwarded($value)
@@ -111,13 +111,13 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The total number of students that have enrolled in the history of the course.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+     * @param string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
-    function setTotalHistoricalEnrollment($value)
+    function setNumberOfCredits($value)
     {
-        return $this->setProp('totalHistoricalEnrollment', $value);
+        return $this->setProp('numberOfCredits', $value);
     }
 
     /**
@@ -132,24 +132,45 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue $value
+     * Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may
+     * be a pre-requisite competency, referenced using [[AlignmentObject]].
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course $value
      * @return static
      */
-    function setNumberOfCredits($value)
+    function setCoursePrerequisites($value)
     {
-        return $this->setProp('numberOfCredits', $value);
+        return $this->setProp('coursePrerequisites', $value);
     }
 
     /**
-     * A language someone may use with or at the item, service or place. Please use one of the language codes from
-     * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language $value
+     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
-    function setAvailableLanguage($value)
+    function setOccupationalCredentialAwarded($value)
     {
-        return $this->setProp('availableLanguage', $value);
+        return $this->setProp('occupationalCredentialAwarded', $value);
+    }
+
+    /**
+     * The total number of students that have enrolled in the history of the course.
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setTotalHistoricalEnrollment($value)
+    {
+        return $this->setProp('totalHistoricalEnrollment', $value);
+    }
+
+    /**
+     * Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\LearningResource\Syllabus $value
+     * @return static
+     */
+    function setSyllabusSections($value)
+    {
+        return $this->setProp('syllabusSections', $value);
     }
 
     /**
@@ -163,49 +184,28 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential $value
-     * @return static
+     * A language someone may use with or at the item, service or place. Please use one of the language codes from
+     * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
      */
-    function setOccupationalCredentialAwarded($value)
+    function getAvailableLanguage()
     {
-        return $this->setProp('occupationalCredentialAwarded', $value);
+        return $this->getProp('availableLanguage');
     }
 
     /**
      * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setFinancialAidEligible($value)
+    function getFinancialAidEligible()
     {
-        return $this->setProp('financialAidEligible', $value);
-    }
-
-    /**
-     * Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may
-     * be a pre-requisite competency, referenced using [[AlignmentObject]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course|null
-     */
-    function getCoursePrerequisites()
-    {
-        return $this->getProp('coursePrerequisites');
-    }
-
-    /**
-     * Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\LearningResource\Syllabus|null
-     */
-    function getSyllabusSections()
-    {
-        return $this->getProp('syllabusSections');
+        return $this->getProp('financialAidEligible');
     }
 
     /**
      * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
      * course or program.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getEducationalCredentialAwarded()
     {
@@ -213,12 +213,12 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The total number of students that have enrolled in the history of the course.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+     * @return string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
-    function getTotalHistoricalEnrollment()
+    function getNumberOfCredits()
     {
-        return $this->getProp('totalHistoricalEnrollment');
+        return $this->getProp('numberOfCredits');
     }
 
     /**
@@ -232,22 +232,41 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|null
+     * Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may
+     * be a pre-requisite competency, referenced using [[AlignmentObject]].
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course|null
      */
-    function getNumberOfCredits()
+    function getCoursePrerequisites()
     {
-        return $this->getProp('numberOfCredits');
+        return $this->getProp('coursePrerequisites');
     }
 
     /**
-     * A language someone may use with or at the item, service or place. Please use one of the language codes from
-     * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language|null
+     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function getAvailableLanguage()
+    function getOccupationalCredentialAwarded()
     {
-        return $this->getProp('availableLanguage');
+        return $this->getProp('occupationalCredentialAwarded');
+    }
+
+    /**
+     * The total number of students that have enrolled in the history of the course.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getTotalHistoricalEnrollment()
+    {
+        return $this->getProp('totalHistoricalEnrollment');
+    }
+
+    /**
+     * Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\LearningResource\Syllabus|null
+     */
+    function getSyllabusSections()
+    {
+        return $this->getProp('syllabusSections');
     }
 
     /**
@@ -257,24 +276,5 @@ class Course extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function getCourseCode()
     {
         return $this->getProp('courseCode');
-    }
-
-    /**
-     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|null
-     */
-    function getOccupationalCredentialAwarded()
-    {
-        return $this->getProp('occupationalCredentialAwarded');
-    }
-
-    /**
-     * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-     */
-    function getFinancialAidEligible()
-    {
-        return $this->getProp('financialAidEligible');
     }
 }

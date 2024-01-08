@@ -12,10 +12,16 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     const TYPE = 'ExerciseAction';
 
     /**
-     * A sub property of participant. The sports team that participated on this action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam
+     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $sportsTeam;
+    public $exerciseType;
+
+    /**
+     * The distance travelled, e.g. exercising or travelling.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
+     */
+    public $distance;
 
     /**
      * A sub property of location. The final location of the object or the agent after the action.
@@ -30,10 +36,10 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     public $opponent;
 
     /**
-     * A sub property of location. The sports activity location where this action occurred.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
+     * A sub property of instrument. The exercise plan used on this action.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\ExercisePlan
      */
-    public $sportsActivityLocation;
+    public $exercisePlan;
 
     /**
      * A sub property of location. The original location of the object or the agent before the action.
@@ -42,16 +48,22 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     public $fromLocation;
 
     /**
-     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * A sub property of instrument. The diet used in this action.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Diet
      */
-    public $exerciseType;
+    public $diet;
 
     /**
-     * A sub property of instrument. The diet used in this action.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet
+     * A sub property of participant. The sports team that participated on this action.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam
      */
-    public $exerciseRelatedDiet;
+    public $sportsTeam;
+
+    /**
+     * A sub property of location. The sports activity location where this action occurred.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation
+     */
+    public $sportsActivityLocation;
 
     /**
      * A sub property of location. The course where this action was taken.
@@ -60,37 +72,35 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     public $exerciseCourse;
 
     /**
-     * A sub property of instrument. The exercise plan used on this action.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\PhysicalActivity\ExercisePlan
-     */
-    public $exercisePlan;
-
-    /**
-     * The distance travelled, e.g. exercising or travelling.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
-     */
-    public $distance;
-
-    /**
-     * A sub property of instrument. The diet used in this action.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet
-     */
-    public $diet;
-
-    /**
      * A sub property of location. The sports event where this action occurred.
      * @var \Vnetby\Schemaorg\Types\Thing\Event\SportsEvent
      */
     public $sportsEvent;
 
     /**
-     * A sub property of participant. The sports team that participated on this action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam $value
+     * A sub property of instrument. The diet used in this action.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Diet
+     */
+    public $exerciseRelatedDiet;
+
+    /**
+     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setSportsTeam($value)
+    function setExerciseType($value)
     {
-        return $this->setProp('sportsTeam', $value);
+        return $this->setProp('exerciseType', $value);
+    }
+
+    /**
+     * The distance travelled, e.g. exercising or travelling.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
+     * @return static
+     */
+    function setDistance($value)
+    {
+        return $this->setProp('distance', $value);
     }
 
     /**
@@ -114,13 +124,13 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     }
 
     /**
-     * A sub property of location. The sports activity location where this action occurred.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation $value
+     * A sub property of instrument. The exercise plan used on this action.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\ExercisePlan $value
      * @return static
      */
-    function setSportsActivityLocation($value)
+    function setExercisePlan($value)
     {
-        return $this->setProp('sportsActivityLocation', $value);
+        return $this->setProp('exercisePlan', $value);
     }
 
     /**
@@ -134,23 +144,33 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     }
 
     /**
-     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * A sub property of instrument. The diet used in this action.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Diet $value
      * @return static
      */
-    function setExerciseType($value)
+    function setDiet($value)
     {
-        return $this->setProp('exerciseType', $value);
+        return $this->setProp('diet', $value);
     }
 
     /**
-     * A sub property of instrument. The diet used in this action.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet $value
+     * A sub property of participant. The sports team that participated on this action.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam $value
      * @return static
      */
-    function setExerciseRelatedDiet($value)
+    function setSportsTeam($value)
     {
-        return $this->setProp('exerciseRelatedDiet', $value);
+        return $this->setProp('sportsTeam', $value);
+    }
+
+    /**
+     * A sub property of location. The sports activity location where this action occurred.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation $value
+     * @return static
+     */
+    function setSportsActivityLocation($value)
+    {
+        return $this->setProp('sportsActivityLocation', $value);
     }
 
     /**
@@ -164,36 +184,6 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     }
 
     /**
-     * A sub property of instrument. The exercise plan used on this action.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\PhysicalActivity\ExercisePlan $value
-     * @return static
-     */
-    function setExercisePlan($value)
-    {
-        return $this->setProp('exercisePlan', $value);
-    }
-
-    /**
-     * The distance travelled, e.g. exercising or travelling.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
-     * @return static
-     */
-    function setDistance($value)
-    {
-        return $this->setProp('distance', $value);
-    }
-
-    /**
-     * A sub property of instrument. The diet used in this action.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet $value
-     * @return static
-     */
-    function setDiet($value)
-    {
-        return $this->setProp('diet', $value);
-    }
-
-    /**
      * A sub property of location. The sports event where this action occurred.
      * @param \Vnetby\Schemaorg\Types\Thing\Event\SportsEvent $value
      * @return static
@@ -204,12 +194,31 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     }
 
     /**
-     * A sub property of participant. The sports team that participated on this action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|null
+     * A sub property of instrument. The diet used in this action.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Diet $value
+     * @return static
      */
-    function getSportsTeam()
+    function setExerciseRelatedDiet($value)
     {
-        return $this->getProp('sportsTeam');
+        return $this->setProp('exerciseRelatedDiet', $value);
+    }
+
+    /**
+     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getExerciseType()
+    {
+        return $this->getProp('exerciseType');
+    }
+
+    /**
+     * The distance travelled, e.g. exercising or travelling.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     */
+    function getDistance()
+    {
+        return $this->getProp('distance');
     }
 
     /**
@@ -231,12 +240,12 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     }
 
     /**
-     * A sub property of location. The sports activity location where this action occurred.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation|null
+     * A sub property of instrument. The exercise plan used on this action.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\ExercisePlan|null
      */
-    function getSportsActivityLocation()
+    function getExercisePlan()
     {
-        return $this->getProp('sportsActivityLocation');
+        return $this->getProp('exercisePlan');
     }
 
     /**
@@ -249,21 +258,30 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     }
 
     /**
-     * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * A sub property of instrument. The diet used in this action.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Diet|null
      */
-    function getExerciseType()
+    function getDiet()
     {
-        return $this->getProp('exerciseType');
+        return $this->getProp('diet');
     }
 
     /**
-     * A sub property of instrument. The diet used in this action.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet|null
+     * A sub property of participant. The sports team that participated on this action.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|null
      */
-    function getExerciseRelatedDiet()
+    function getSportsTeam()
     {
-        return $this->getProp('exerciseRelatedDiet');
+        return $this->getProp('sportsTeam');
+    }
+
+    /**
+     * A sub property of location. The sports activity location where this action occurred.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\SportsActivityLocation\SportsActivityLocation|null
+     */
+    function getSportsActivityLocation()
+    {
+        return $this->getProp('sportsActivityLocation');
     }
 
     /**
@@ -276,38 +294,20 @@ class ExerciseAction extends \Vnetby\Schemaorg\Types\Thing\Action\PlayAction\Pla
     }
 
     /**
-     * A sub property of instrument. The exercise plan used on this action.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\PhysicalActivity\ExercisePlan|null
-     */
-    function getExercisePlan()
-    {
-        return $this->getProp('exercisePlan');
-    }
-
-    /**
-     * The distance travelled, e.g. exercising or travelling.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
-     */
-    function getDistance()
-    {
-        return $this->getProp('distance');
-    }
-
-    /**
-     * A sub property of instrument. The diet used in this action.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModification\Diet|null
-     */
-    function getDiet()
-    {
-        return $this->getProp('diet');
-    }
-
-    /**
      * A sub property of location. The sports event where this action occurred.
      * @return \Vnetby\Schemaorg\Types\Thing\Event\SportsEvent|null
      */
     function getSportsEvent()
     {
         return $this->getProp('sportsEvent');
+    }
+
+    /**
+     * A sub property of instrument. The diet used in this action.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Diet|null
+     */
+    function getExerciseRelatedDiet()
+    {
+        return $this->getProp('exerciseRelatedDiet');
     }
 }

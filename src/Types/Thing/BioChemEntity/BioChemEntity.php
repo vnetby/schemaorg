@@ -12,29 +12,10 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     const TYPE = 'BioChemEntity';
 
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
+     * A role played by the BioChemEntity within a biological context.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    public $funding;
-
-    /**
-     * Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
-     */
-    public $isLocatedInSubcellularLocation;
-
-    /**
-     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence
-     * supporting the association, please use PropertyValue.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
-     */
-    public $associatedDisease;
-
-    /**
-     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
-     * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
-     */
-    public $hasBioChemEntityPart;
+    public $biologicalRole;
 
     /**
      * A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
@@ -43,34 +24,22 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $hasRepresentation;
 
     /**
-     * Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $isInvolvedInBiologicalProcess;
-
-    /**
-     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. 
+     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
      * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
      */
-    public $isPartOfBioChemEntity;
-
-    /**
-     * A role played by the BioChemEntity within a biological context.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $biologicalRole;
+    public $hasBioChemEntityPart;
 
     /**
      * Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
      */
     public $hasMolecularFunction;
 
     /**
-     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
-     * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
+     * Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
      */
-    public $bioChemSimilarity;
+    public $isInvolvedInBiologicalProcess;
 
     /**
      * Another BioChemEntity encoding by this one.
@@ -79,10 +48,29 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $isEncodedByBioChemEntity;
 
     /**
-     * The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
+     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
+     * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
      */
-    public $taxonomicRange;
+    public $bioChemSimilarity;
+
+    /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
+     */
+    public $funding;
+
+    /**
+     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence
+     * supporting the association, please use PropertyValue.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $associatedDisease;
+
+    /**
+     * Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $isLocatedInSubcellularLocation;
 
     /**
      * A BioChemEntity that is known to interact with this item.
@@ -91,44 +79,25 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $bioChemInteraction;
 
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant $value
-     * @return static
+     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. 
+     * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
      */
-    function setFunding($value)
-    {
-        return $this->setProp('funding', $value);
-    }
+    public $isPartOfBioChemEntity;
 
     /**
-     * Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue $value
-     * @return static
+     * The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setIsLocatedInSubcellularLocation($value)
-    {
-        return $this->setProp('isLocatedInSubcellularLocation', $value);
-    }
+    public $taxonomicRange;
 
     /**
-     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence
-     * supporting the association, please use PropertyValue.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
+     * A role played by the BioChemEntity within a biological context.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
-    function setAssociatedDisease($value)
+    function setBiologicalRole($value)
     {
-        return $this->setProp('associatedDisease', $value);
-    }
-
-    /**
-     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
-     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity $value
-     * @return static
-     */
-    function setHasBioChemEntityPart($value)
-    {
-        return $this->setProp('hasBioChemEntityPart', $value);
+        return $this->setProp('biologicalRole', $value);
     }
 
     /**
@@ -142,38 +111,18 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setIsInvolvedInBiologicalProcess($value)
-    {
-        return $this->setProp('isInvolvedInBiologicalProcess', $value);
-    }
-
-    /**
-     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. 
+     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
      * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity $value
      * @return static
      */
-    function setIsPartOfBioChemEntity($value)
+    function setHasBioChemEntityPart($value)
     {
-        return $this->setProp('isPartOfBioChemEntity', $value);
-    }
-
-    /**
-     * A role played by the BioChemEntity within a biological context.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
-     */
-    function setBiologicalRole($value)
-    {
-        return $this->setProp('biologicalRole', $value);
+        return $this->setProp('hasBioChemEntityPart', $value);
     }
 
     /**
      * Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue $value
      * @return static
      */
     function setHasMolecularFunction($value)
@@ -182,13 +131,13 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
-     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity $value
+     * Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue $value
      * @return static
      */
-    function setBioChemSimilarity($value)
+    function setIsInvolvedInBiologicalProcess($value)
     {
-        return $this->setProp('bioChemSimilarity', $value);
+        return $this->setProp('isInvolvedInBiologicalProcess', $value);
     }
 
     /**
@@ -202,13 +151,44 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
+     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity $value
      * @return static
      */
-    function setTaxonomicRange($value)
+    function setBioChemSimilarity($value)
     {
-        return $this->setProp('taxonomicRange', $value);
+        return $this->setProp('bioChemSimilarity', $value);
+    }
+
+    /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant $value
+     * @return static
+     */
+    function setFunding($value)
+    {
+        return $this->setProp('funding', $value);
+    }
+
+    /**
+     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence
+     * supporting the association, please use PropertyValue.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setAssociatedDisease($value)
+    {
+        return $this->setProp('associatedDisease', $value);
+    }
+
+    /**
+     * Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setIsLocatedInSubcellularLocation($value)
+    {
+        return $this->setProp('isLocatedInSubcellularLocation', $value);
     }
 
     /**
@@ -222,67 +202,23 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant|null
-     */
-    function getFunding()
-    {
-        return $this->getProp('funding');
-    }
-
-    /**
-     * Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|null
-     */
-    function getIsLocatedInSubcellularLocation()
-    {
-        return $this->getProp('isLocatedInSubcellularLocation');
-    }
-
-    /**
-     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence
-     * supporting the association, please use PropertyValue.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
-     */
-    function getAssociatedDisease()
-    {
-        return $this->getProp('associatedDisease');
-    }
-
-    /**
-     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
-     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
-     */
-    function getHasBioChemEntityPart()
-    {
-        return $this->getProp('hasBioChemEntityPart');
-    }
-
-    /**
-     * A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getHasRepresentation()
-    {
-        return $this->getProp('hasRepresentation');
-    }
-
-    /**
-     * Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getIsInvolvedInBiologicalProcess()
-    {
-        return $this->getProp('isInvolvedInBiologicalProcess');
-    }
-
-    /**
      * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. 
-     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
+     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity $value
+     * @return static
      */
-    function getIsPartOfBioChemEntity()
+    function setIsPartOfBioChemEntity($value)
     {
-        return $this->getProp('isPartOfBioChemEntity');
+        return $this->setProp('isPartOfBioChemEntity', $value);
+    }
+
+    /**
+     * The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTaxonomicRange($value)
+    {
+        return $this->setProp('taxonomicRange', $value);
     }
 
     /**
@@ -295,8 +231,26 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
+     * A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getHasRepresentation()
+    {
+        return $this->getProp('hasRepresentation');
+    }
+
+    /**
+     * Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
+     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
+     */
+    function getHasBioChemEntityPart()
+    {
+        return $this->getProp('hasBioChemEntityPart');
+    }
+
+    /**
      * Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|null
      */
     function getHasMolecularFunction()
     {
@@ -304,12 +258,12 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
-     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
+     * Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|null
      */
-    function getBioChemSimilarity()
+    function getIsInvolvedInBiologicalProcess()
     {
-        return $this->getProp('bioChemSimilarity');
+        return $this->getProp('isInvolvedInBiologicalProcess');
     }
 
     /**
@@ -322,12 +276,40 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
+     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
      */
-    function getTaxonomicRange()
+    function getBioChemSimilarity()
     {
-        return $this->getProp('taxonomicRange');
+        return $this->getProp('bioChemSimilarity');
+    }
+
+    /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant|null
+     */
+    function getFunding()
+    {
+        return $this->getProp('funding');
+    }
+
+    /**
+     * Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence
+     * supporting the association, please use PropertyValue.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getAssociatedDisease()
+    {
+        return $this->getProp('associatedDisease');
+    }
+
+    /**
+     * Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getIsLocatedInSubcellularLocation()
+    {
+        return $this->getProp('isLocatedInSubcellularLocation');
     }
 
     /**
@@ -337,5 +319,23 @@ class BioChemEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     function getBioChemInteraction()
     {
         return $this->getProp('bioChemInteraction');
+    }
+
+    /**
+     * Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. 
+     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
+     */
+    function getIsPartOfBioChemEntity()
+    {
+        return $this->getProp('isPartOfBioChemEntity');
+    }
+
+    /**
+     * The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTaxonomicRange()
+    {
+        return $this->getProp('taxonomicRange');
     }
 }

@@ -14,7 +14,7 @@ class RentAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeA
 
     /**
      * A sub property of participant. The owner of the real estate property.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $landlord;
 
@@ -26,7 +26,7 @@ class RentAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeA
 
     /**
      * A sub property of participant. The owner of the real estate property.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
      */
     function setLandlord($value)
@@ -46,7 +46,7 @@ class RentAction extends \Vnetby\Schemaorg\Types\Thing\Action\TradeAction\TradeA
 
     /**
      * A sub property of participant. The owner of the real estate property.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
     function getLandlord()
     {

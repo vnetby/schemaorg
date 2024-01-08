@@ -12,16 +12,10 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
     const TYPE = 'Muscle';
 
     /**
-     * The muscle whose action counteracts the specified muscle.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle
+     * The blood vessel that carries blood from the heart to the muscle.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
      */
-    public $antagonist;
-
-    /**
-     * The underlying innervation associated with the muscle.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Nerve
-     */
-    public $nerve;
+    public $bloodSupply;
 
     /**
      * The movement the muscle generates.
@@ -30,10 +24,10 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
     public $muscleAction;
 
     /**
-     * The blood vessel that carries blood from the heart to the muscle.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
+     * The underlying innervation associated with the muscle.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Nerve
      */
-    public $bloodSupply;
+    public $nerve;
 
     /**
      * The place of attachment of a muscle, or what the muscle moves.
@@ -43,22 +37,18 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
 
     /**
      * The muscle whose action counteracts the specified muscle.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle
      */
-    function setAntagonist($value)
-    {
-        return $this->setProp('antagonist', $value);
-    }
+    public $antagonist;
 
     /**
-     * The underlying innervation associated with the muscle.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Nerve $value
+     * The blood vessel that carries blood from the heart to the muscle.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel $value
      * @return static
      */
-    function setNerve($value)
+    function setBloodSupply($value)
     {
-        return $this->setProp('nerve', $value);
+        return $this->setProp('bloodSupply', $value);
     }
 
     /**
@@ -72,13 +62,13 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
     }
 
     /**
-     * The blood vessel that carries blood from the heart to the muscle.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel $value
+     * The underlying innervation associated with the muscle.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Nerve $value
      * @return static
      */
-    function setBloodSupply($value)
+    function setNerve($value)
     {
-        return $this->setProp('bloodSupply', $value);
+        return $this->setProp('nerve', $value);
     }
 
     /**
@@ -93,29 +83,12 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
 
     /**
      * The muscle whose action counteracts the specified muscle.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle|null
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle $value
+     * @return static
      */
-    function getAntagonist()
+    function setAntagonist($value)
     {
-        return $this->getProp('antagonist');
-    }
-
-    /**
-     * The underlying innervation associated with the muscle.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Nerve|null
-     */
-    function getNerve()
-    {
-        return $this->getProp('nerve');
-    }
-
-    /**
-     * The movement the muscle generates.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getMuscleAction()
-    {
-        return $this->getProp('muscleAction');
+        return $this->setProp('antagonist', $value);
     }
 
     /**
@@ -128,11 +101,38 @@ class Muscle extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
     }
 
     /**
+     * The movement the muscle generates.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getMuscleAction()
+    {
+        return $this->getProp('muscleAction');
+    }
+
+    /**
+     * The underlying innervation associated with the muscle.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Nerve|null
+     */
+    function getNerve()
+    {
+        return $this->getProp('nerve');
+    }
+
+    /**
      * The place of attachment of a muscle, or what the muscle moves.
      * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
      */
     function getInsertion()
     {
         return $this->getProp('insertion');
+    }
+
+    /**
+     * The muscle whose action counteracts the specified muscle.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Muscle|null
+     */
+    function getAntagonist()
+    {
+        return $this->getProp('antagonist');
     }
 }

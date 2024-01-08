@@ -14,11 +14,11 @@ class EnergyConsumptionDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\
     const TYPE = 'EnergyConsumptionDetails';
 
     /**
-     * Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
+     * Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
      * For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration
      */
-    public $energyEfficiencyScaleMax;
+    public $energyEfficiencyScaleMin;
 
     /**
      * Defines the energy efficiency Category (which could be either a rating out of range of values or a yes/no certification) for
@@ -28,21 +28,21 @@ class EnergyConsumptionDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\
     public $hasEnergyEfficiencyCategory;
 
     /**
-     * Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
+     * Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
      * For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration
      */
-    public $energyEfficiencyScaleMin;
+    public $energyEfficiencyScaleMax;
 
     /**
-     * Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
+     * Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
      * For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration $value
      * @return static
      */
-    function setEnergyEfficiencyScaleMax($value)
+    function setEnergyEfficiencyScaleMin($value)
     {
-        return $this->setProp('energyEfficiencyScaleMax', $value);
+        return $this->setProp('energyEfficiencyScaleMin', $value);
     }
 
     /**
@@ -57,24 +57,24 @@ class EnergyConsumptionDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\
     }
 
     /**
-     * Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
+     * Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
      * For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration $value
      * @return static
      */
-    function setEnergyEfficiencyScaleMin($value)
+    function setEnergyEfficiencyScaleMax($value)
     {
-        return $this->setProp('energyEfficiencyScaleMin', $value);
+        return $this->setProp('energyEfficiencyScaleMax', $value);
     }
 
     /**
-     * Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
+     * Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
      * For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration|null
      */
-    function getEnergyEfficiencyScaleMax()
+    function getEnergyEfficiencyScaleMin()
     {
-        return $this->getProp('energyEfficiencyScaleMax');
+        return $this->getProp('energyEfficiencyScaleMin');
     }
 
     /**
@@ -88,12 +88,12 @@ class EnergyConsumptionDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\
     }
 
     /**
-     * Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
+     * Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to.
      * For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\EnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration\EUEnergyEfficiencyEnumeration|null
      */
-    function getEnergyEfficiencyScaleMin()
+    function getEnergyEfficiencyScaleMax()
     {
-        return $this->getProp('energyEfficiencyScaleMin');
+        return $this->getProp('energyEfficiencyScaleMax');
     }
 }

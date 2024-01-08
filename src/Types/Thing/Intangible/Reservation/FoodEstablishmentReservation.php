@@ -17,7 +17,7 @@ class FoodEstablishmentReservation extends \Vnetby\Schemaorg\Types\Thing\Intangi
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
      */
     public $startTime;
 
@@ -32,7 +32,7 @@ class FoodEstablishmentReservation extends \Vnetby\Schemaorg\Types\Thing\Intangi
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
      */
     public $endTime;
 
@@ -41,7 +41,7 @@ class FoodEstablishmentReservation extends \Vnetby\Schemaorg\Types\Thing\Intangi
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
      * @return static
      */
     function setStartTime($value)
@@ -64,7 +64,7 @@ class FoodEstablishmentReservation extends \Vnetby\Schemaorg\Types\Thing\Intangi
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
      * @return static
      */
     function setEndTime($value)
@@ -77,7 +77,7 @@ class FoodEstablishmentReservation extends \Vnetby\Schemaorg\Types\Thing\Intangi
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
     function getStartTime()
     {
@@ -98,7 +98,7 @@ class FoodEstablishmentReservation extends \Vnetby\Schemaorg\Types\Thing\Intangi
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
     function getEndTime()
     {

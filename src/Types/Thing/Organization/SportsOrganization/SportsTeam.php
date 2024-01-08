@@ -12,13 +12,10 @@ class SportsTeam extends \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrgani
     const TYPE = 'SportsTeam';
 
     /**
-     * Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text
-     * strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used
-     * in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not
-     * try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType
+     * A person that acts as performing member of a sports team; a player as opposed to a coach.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    public $gender;
+    public $athlete;
 
     /**
      * A person that acts in a coaching role for a sports team.
@@ -27,22 +24,22 @@ class SportsTeam extends \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrgani
     public $coach;
 
     /**
-     * A person that acts as performing member of a sports team; a player as opposed to a coach.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $athlete;
-
-    /**
      * Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text
      * strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used
      * in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not
      * try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType $value
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $gender;
+
+    /**
+     * A person that acts as performing member of a sports team; a player as opposed to a coach.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
      */
-    function setGender($value)
+    function setAthlete($value)
     {
-        return $this->setProp('gender', $value);
+        return $this->setProp('athlete', $value);
     }
 
     /**
@@ -56,25 +53,25 @@ class SportsTeam extends \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrgani
     }
 
     /**
-     * A person that acts as performing member of a sports team; a player as opposed to a coach.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setAthlete($value)
-    {
-        return $this->setProp('athlete', $value);
-    }
-
-    /**
      * Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text
      * strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used
      * in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not
      * try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|null
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getGender()
+    function setGender($value)
     {
-        return $this->getProp('gender');
+        return $this->setProp('gender', $value);
+    }
+
+    /**
+     * A person that acts as performing member of a sports team; a player as opposed to a coach.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getAthlete()
+    {
+        return $this->getProp('athlete');
     }
 
     /**
@@ -87,11 +84,14 @@ class SportsTeam extends \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrgani
     }
 
     /**
-     * A person that acts as performing member of a sports team; a player as opposed to a coach.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text
+     * strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used
+     * in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not
+     * try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getAthlete()
+    function getGender()
     {
-        return $this->getProp('athlete');
+        return $this->getProp('gender');
     }
 }

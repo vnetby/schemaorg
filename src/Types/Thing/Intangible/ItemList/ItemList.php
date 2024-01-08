@@ -20,20 +20,20 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $numberOfItems;
 
     /**
+     * Type of ordering (e.g. Ascending, Descending, Unordered).
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $itemListOrder;
+
+    /**
      * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if
      * the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in
      * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
      * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
      * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem
      */
     public $itemListElement;
-
-    /**
-     * Type of ordering (e.g. Ascending, Descending, Unordered).
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $itemListOrder;
 
     /**
      * The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g.,
@@ -47,20 +47,6 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if
-     * the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in
-     * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
-     * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
-     * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing $value
-     * @return static
-     */
-    function setItemListElement($value)
-    {
-        return $this->setProp('itemListElement', $value);
-    }
-
-    /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
      * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -68,6 +54,20 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     function setItemListOrder($value)
     {
         return $this->setProp('itemListOrder', $value);
+    }
+
+    /**
+     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if
+     * the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in
+     * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
+     * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
+     * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem $value
+     * @return static
+     */
+    function setItemListElement($value)
+    {
+        return $this->setProp('itemListElement', $value);
     }
 
     /**
@@ -81,24 +81,24 @@ class ItemList extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if
-     * the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in
-     * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
-     * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
-     * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|\Vnetby\Schemaorg\Types\Thing\Thing|null
-     */
-    function getItemListElement()
-    {
-        return $this->getProp('itemListElement');
-    }
-
-    /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
      * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemListOrderType\ItemListOrderType|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getItemListOrder()
     {
         return $this->getProp('itemListOrder');
+    }
+
+    /**
+     * For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\n\nText values are best if
+     * the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in
+     * your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list
+     * or when the same item might be in different places in different lists.\n\nNote: The order of elements in your mark-up is
+     * not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|null
+     */
+    function getItemListElement()
+    {
+        return $this->getProp('itemListElement');
     }
 }

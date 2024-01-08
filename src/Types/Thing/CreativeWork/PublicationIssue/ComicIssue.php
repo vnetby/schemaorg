@@ -15,23 +15,10 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     const TYPE = 'ComicIssue';
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $letterer;
-
-    /**
      * The individual who adds color to inked drawings.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $colorist;
-
-    /**
-     * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
-     * Cover" or "2nd Printing Variant".
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $variantCover;
 
     /**
      * The primary artist for a work in a medium other than pencils or digital line art--for example, if the primary artwork
@@ -41,26 +28,29 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     public $artist;
 
     /**
-     * The individual who draws the primary narrative artwork.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $penciler;
-
-    /**
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $inker;
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
+     * The individual who draws the primary narrative artwork.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    function setLetterer($value)
-    {
-        return $this->setProp('letterer', $value);
-    }
+    public $penciler;
+
+    /**
+     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $letterer;
+
+    /**
+     * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
+     * Cover" or "2nd Printing Variant".
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $variantCover;
 
     /**
      * The individual who adds color to inked drawings.
@@ -70,17 +60,6 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     function setColorist($value)
     {
         return $this->setProp('colorist', $value);
-    }
-
-    /**
-     * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
-     * Cover" or "2nd Printing Variant".
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setVariantCover($value)
-    {
-        return $this->setProp('variantCover', $value);
     }
 
     /**
@@ -95,16 +74,6 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     }
 
     /**
-     * The individual who draws the primary narrative artwork.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setPenciler($value)
-    {
-        return $this->setProp('penciler', $value);
-    }
-
-    /**
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
@@ -115,12 +84,34 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     }
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * The individual who draws the primary narrative artwork.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
      */
-    function getLetterer()
+    function setPenciler($value)
     {
-        return $this->getProp('letterer');
+        return $this->setProp('penciler', $value);
+    }
+
+    /**
+     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setLetterer($value)
+    {
+        return $this->setProp('letterer', $value);
+    }
+
+    /**
+     * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
+     * Cover" or "2nd Printing Variant".
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setVariantCover($value)
+    {
+        return $this->setProp('variantCover', $value);
     }
 
     /**
@@ -130,16 +121,6 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     function getColorist()
     {
         return $this->getProp('colorist');
-    }
-
-    /**
-     * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
-     * Cover" or "2nd Printing Variant".
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getVariantCover()
-    {
-        return $this->getProp('variantCover');
     }
 
     /**
@@ -153,6 +134,15 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     }
 
     /**
+     * The individual who traces over the pencil drawings in ink after pencils are complete.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getInker()
+    {
+        return $this->getProp('inker');
+    }
+
+    /**
      * The individual who draws the primary narrative artwork.
      * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
@@ -162,11 +152,21 @@ class ComicIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\PublicationI
     }
 
     /**
-     * The individual who traces over the pencil drawings in ink after pencils are complete.
+     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
      * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
-    function getInker()
+    function getLetterer()
     {
-        return $this->getProp('inker');
+        return $this->getProp('letterer');
+    }
+
+    /**
+     * A description of the variant cover for the issue, if the issue is a variant printing. For example, "Bryan Hitch Variant
+     * Cover" or "2nd Printing Variant".
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getVariantCover()
+    {
+        return $this->getProp('variantCover');
     }
 }

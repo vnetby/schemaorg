@@ -12,12 +12,6 @@ class BoatTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     const TYPE = 'BoatTrip';
 
     /**
-     * The terminal or port from which the boat departs.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal
-     */
-    public $departureBoatTerminal;
-
-    /**
      * The terminal or port from which the boat arrives.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal
      */
@@ -25,13 +19,9 @@ class BoatTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The terminal or port from which the boat departs.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal
      */
-    function setDepartureBoatTerminal($value)
-    {
-        return $this->setProp('departureBoatTerminal', $value);
-    }
+    public $departureBoatTerminal;
 
     /**
      * The terminal or port from which the boat arrives.
@@ -45,11 +35,12 @@ class BoatTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The terminal or port from which the boat departs.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal $value
+     * @return static
      */
-    function getDepartureBoatTerminal()
+    function setDepartureBoatTerminal($value)
     {
-        return $this->getProp('departureBoatTerminal');
+        return $this->setProp('departureBoatTerminal', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class BoatTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     function getArrivalBoatTerminal()
     {
         return $this->getProp('arrivalBoatTerminal');
+    }
+
+    /**
+     * The terminal or port from which the boat departs.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BoatTerminal|null
+     */
+    function getDepartureBoatTerminal()
+    {
+        return $this->getProp('departureBoatTerminal');
     }
 }

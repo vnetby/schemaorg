@@ -13,13 +13,6 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     const TYPE = 'SizeSpecification';
 
     /**
-     * The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for
-     * example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\SizeSystemEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $sizeSystem;
-
-    /**
      * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
      * height between 170 and 190 cm. Typically found on a size chart for wearable products.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
@@ -27,12 +20,11 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     public $suggestedMeasurement;
 
     /**
-     * The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to
-     * define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite
-     * maternity" or "regular".
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\SizeGroupEnumeration
+     * The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for
+     * example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\SizeSystemEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $sizeGroup;
+    public $sizeSystem;
 
     /**
      * A product measurement, for example the inseam of pants, the wheel size of a bicycle, or the gauge of a screw.
@@ -42,10 +34,12 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     public $hasMeasurement;
 
     /**
-     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText
+     * The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to
+     * define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite
+     * maternity" or "regular".
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\SizeGroupEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $suggestedGender;
+    public $sizeGroup;
 
     /**
      * The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
@@ -54,15 +48,10 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     public $suggestedAge;
 
     /**
-     * The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for
-     * example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\SizeSystemEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType
      */
-    function setSizeSystem($value)
-    {
-        return $this->setProp('sizeSystem', $value);
-    }
+    public $suggestedGender;
 
     /**
      * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
@@ -76,15 +65,14 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     }
 
     /**
-     * The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to
-     * define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite
-     * maternity" or "regular".
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\SizeGroupEnumeration $value
+     * The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for
+     * example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\SizeSystemEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setSizeGroup($value)
+    function setSizeSystem($value)
     {
-        return $this->setProp('sizeGroup', $value);
+        return $this->setProp('sizeSystem', $value);
     }
 
     /**
@@ -99,13 +87,15 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     }
 
     /**
-     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to
+     * define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite
+     * maternity" or "regular".
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\SizeGroupEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setSuggestedGender($value)
+    function setSizeGroup($value)
     {
-        return $this->setProp('suggestedGender', $value);
+        return $this->setProp('sizeGroup', $value);
     }
 
     /**
@@ -119,13 +109,13 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     }
 
     /**
-     * The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for
-     * example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\SizeSystemEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType $value
+     * @return static
      */
-    function getSizeSystem()
+    function setSuggestedGender($value)
     {
-        return $this->getProp('sizeSystem');
+        return $this->setProp('suggestedGender', $value);
     }
 
     /**
@@ -139,14 +129,13 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     }
 
     /**
-     * The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to
-     * define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite
-     * maternity" or "regular".
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\SizeGroupEnumeration|null
+     * The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for
+     * example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeSystemEnumeration\SizeSystemEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getSizeGroup()
+    function getSizeSystem()
     {
-        return $this->getProp('sizeGroup');
+        return $this->getProp('sizeSystem');
     }
 
     /**
@@ -160,12 +149,14 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     }
 
     /**
-     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to
+     * define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite
+     * maternity" or "regular".
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\SizeGroupEnumeration\SizeGroupEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getSuggestedGender()
+    function getSizeGroup()
     {
-        return $this->getProp('suggestedGender');
+        return $this->getProp('sizeGroup');
     }
 
     /**
@@ -175,5 +166,14 @@ class SizeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\Enumera
     function getSuggestedAge()
     {
         return $this->getProp('suggestedAge');
+    }
+
+    /**
+     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|null
+     */
+    function getSuggestedGender()
+    {
+        return $this->getProp('suggestedGender');
     }
 }

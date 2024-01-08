@@ -12,12 +12,6 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     const TYPE = 'HealthPlanFormulary';
 
     /**
-     * The costs to the patient for services under this network or formulary.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $healthPlanCostSharing;
-
-    /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -31,13 +25,9 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    function setHealthPlanCostSharing($value)
-    {
-        return $this->setProp('healthPlanCostSharing', $value);
-    }
+    public $healthPlanCostSharing;
 
     /**
      * The tier(s) of drugs offered by this formulary or insurance plan.
@@ -61,11 +51,12 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
 
     /**
      * The costs to the patient for services under this network or formulary.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @return static
      */
-    function getHealthPlanCostSharing()
+    function setHealthPlanCostSharing($value)
     {
-        return $this->getProp('healthPlanCostSharing');
+        return $this->setProp('healthPlanCostSharing', $value);
     }
 
     /**
@@ -84,5 +75,14 @@ class HealthPlanFormulary extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     function getOffersPrescriptionByMail()
     {
         return $this->getProp('offersPrescriptionByMail');
+    }
+
+    /**
+     * The costs to the patient for services under this network or formulary.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     */
+    function getHealthPlanCostSharing()
+    {
+        return $this->getProp('healthPlanCostSharing');
     }
 }

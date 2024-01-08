@@ -12,12 +12,6 @@ class MusicPlaylist extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     const TYPE = 'MusicPlaylist';
 
     /**
-     * The number of tracks in this album or playlist.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
-     */
-    public $numTracks;
-
-    /**
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ItemList\ItemList|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording
      */
@@ -25,13 +19,9 @@ class MusicPlaylist extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The number of tracks in this album or playlist.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
-     * @return static
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    function setNumTracks($value)
-    {
-        return $this->setProp('numTracks', $value);
-    }
+    public $numTracks;
 
     /**
      * A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.
@@ -45,11 +35,12 @@ class MusicPlaylist extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
 
     /**
      * The number of tracks in this album or playlist.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
      */
-    function getNumTracks()
+    function setNumTracks($value)
     {
-        return $this->getProp('numTracks');
+        return $this->setProp('numTracks', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class MusicPlaylist extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     function getTrack()
     {
         return $this->getProp('track');
+    }
+
+    /**
+     * The number of tracks in this album or playlist.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getNumTracks()
+    {
+        return $this->getProp('numTracks');
     }
 }

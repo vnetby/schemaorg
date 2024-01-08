@@ -12,11 +12,10 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
     const TYPE = 'FoodEstablishment';
 
     /**
-     * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property
-     * to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating
+     * Either the actual menu as a structured representation, as text, or a URL of the menu.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu
      */
-    public $starRating;
+    public $hasMenu;
 
     /**
      * The cuisine of the restaurant.
@@ -32,20 +31,20 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
     public $acceptsReservations;
 
     /**
-     * Either the actual menu as a structured representation, as text, or a URL of the menu.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $hasMenu;
-
-    /**
      * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property
      * to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating $value
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating
+     */
+    public $starRating;
+
+    /**
+     * Either the actual menu as a structured representation, as text, or a URL of the menu.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu $value
      * @return static
      */
-    function setStarRating($value)
+    function setHasMenu($value)
     {
-        return $this->setProp('starRating', $value);
+        return $this->setProp('hasMenu', $value);
     }
 
     /**
@@ -70,23 +69,23 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
     }
 
     /**
-     * Either the actual menu as a structured representation, as text, or a URL of the menu.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property
+     * to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating $value
      * @return static
      */
-    function setHasMenu($value)
+    function setStarRating($value)
     {
-        return $this->setProp('hasMenu', $value);
+        return $this->setProp('starRating', $value);
     }
 
     /**
-     * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property
-     * to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating|null
+     * Either the actual menu as a structured representation, as text, or a URL of the menu.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|null
      */
-    function getStarRating()
+    function getHasMenu()
     {
-        return $this->getProp('starRating');
+        return $this->getProp('hasMenu');
     }
 
     /**
@@ -109,11 +108,12 @@ class FoodEstablishment extends \Vnetby\Schemaorg\Types\Thing\Organization\Local
     }
 
     /**
-     * Either the actual menu as a structured representation, as text, or a URL of the menu.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Menu|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property
+     * to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Rating|null
      */
-    function getHasMenu()
+    function getStarRating()
     {
-        return $this->getProp('hasMenu');
+        return $this->getProp('starRating');
     }
 }

@@ -15,35 +15,23 @@ class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     const TYPE = 'LearningResource';
 
     /**
-     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+     * and formal sets of level indicators.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $teaches;
-
-    /**
-     * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $educationalUse;
-
-    /**
-     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $assesses;
+    public $educationalLevel;
 
     /**
      * The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $learningResourceType;
 
     /**
-     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
-     * and formal sets of level indicators.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $educationalLevel;
+    public $assesses;
 
     /**
      * An alignment to an established educational framework. This property should not be used where the nature of the alignment can be
@@ -53,45 +41,38 @@ class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     public $educationalAlignment;
 
     /**
+     * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $educationalUse;
+
+    /**
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something
      * such as earn an Educational Occupational Credential or understand a LearningResource.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $competencyRequired;
 
     /**
      * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setTeaches($value)
-    {
-        return $this->setProp('teaches', $value);
-    }
+    public $teaches;
 
     /**
-     * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+     * and formal sets of level indicators.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setEducationalUse($value)
+    function setEducationalLevel($value)
     {
-        return $this->setProp('educationalUse', $value);
-    }
-
-    /**
-     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
-     */
-    function setAssesses($value)
-    {
-        return $this->setProp('assesses', $value);
+        return $this->setProp('educationalLevel', $value);
     }
 
     /**
      * The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setLearningResourceType($value)
@@ -100,14 +81,13 @@ class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     }
 
     /**
-     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
-     * and formal sets of level indicators.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setEducationalLevel($value)
+    function setAssesses($value)
     {
-        return $this->setProp('educationalLevel', $value);
+        return $this->setProp('assesses', $value);
     }
 
     /**
@@ -122,9 +102,19 @@ class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     }
 
     /**
+     * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setEducationalUse($value)
+    {
+        return $this->setProp('educationalUse', $value);
+    }
+
+    /**
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something
      * such as earn an Educational Occupational Credential or understand a LearningResource.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setCompetencyRequired($value)
@@ -134,34 +124,27 @@ class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getTeaches()
+    function setTeaches($value)
     {
-        return $this->getProp('teaches');
+        return $this->setProp('teaches', $value);
     }
 
     /**
-     * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+     * and formal sets of level indicators.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getEducationalUse()
+    function getEducationalLevel()
     {
-        return $this->getProp('educationalUse');
-    }
-
-    /**
-     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-     */
-    function getAssesses()
-    {
-        return $this->getProp('assesses');
+        return $this->getProp('educationalLevel');
     }
 
     /**
      * The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLearningResourceType()
     {
@@ -169,13 +152,12 @@ class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     }
 
     /**
-     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
-     * and formal sets of level indicators.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getEducationalLevel()
+    function getAssesses()
     {
-        return $this->getProp('educationalLevel');
+        return $this->getProp('assesses');
     }
 
     /**
@@ -189,12 +171,30 @@ class LearningResource extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     }
 
     /**
+     * The purpose of a work in the context of education; for example, 'assignment', 'group work'.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getEducationalUse()
+    {
+        return $this->getProp('educationalUse');
+    }
+
+    /**
      * Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something
      * such as earn an Educational Occupational Credential or understand a LearningResource.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getCompetencyRequired()
     {
         return $this->getProp('competencyRequired');
+    }
+
+    /**
+     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTeaches()
+    {
+        return $this->getProp('teaches');
     }
 }

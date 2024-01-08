@@ -13,12 +13,6 @@ class ComicStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'ComicStory';
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $letterer;
-
-    /**
      * The individual who adds color to inked drawings.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
@@ -32,26 +26,22 @@ class ComicStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $artist;
 
     /**
-     * The individual who draws the primary narrative artwork.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $penciler;
-
-    /**
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $inker;
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
+     * The individual who draws the primary narrative artwork.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    function setLetterer($value)
-    {
-        return $this->setProp('letterer', $value);
-    }
+    public $penciler;
+
+    /**
+     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $letterer;
 
     /**
      * The individual who adds color to inked drawings.
@@ -75,16 +65,6 @@ class ComicStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The individual who draws the primary narrative artwork.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setPenciler($value)
-    {
-        return $this->setProp('penciler', $value);
-    }
-
-    /**
      * The individual who traces over the pencil drawings in ink after pencils are complete.
      * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
@@ -95,12 +75,23 @@ class ComicStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * The individual who draws the primary narrative artwork.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
      */
-    function getLetterer()
+    function setPenciler($value)
     {
-        return $this->getProp('letterer');
+        return $this->setProp('penciler', $value);
+    }
+
+    /**
+     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setLetterer($value)
+    {
+        return $this->setProp('letterer', $value);
     }
 
     /**
@@ -123,6 +114,15 @@ class ComicStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
+     * The individual who traces over the pencil drawings in ink after pencils are complete.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getInker()
+    {
+        return $this->getProp('inker');
+    }
+
+    /**
      * The individual who draws the primary narrative artwork.
      * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
@@ -132,11 +132,11 @@ class ComicStory extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The individual who traces over the pencil drawings in ink after pencils are complete.
+     * The individual who adds lettering, including speech balloons and sound effects, to artwork.
      * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
-    function getInker()
+    function getLetterer()
     {
-        return $this->getProp('inker');
+        return $this->getProp('letterer');
     }
 }

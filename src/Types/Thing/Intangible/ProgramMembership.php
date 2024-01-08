@@ -12,11 +12,10 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
     const TYPE = 'ProgramMembership';
 
     /**
-     * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the
-     * points are issued in. (E.g. stars, miles, etc.)
-     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * A unique identifier for the membership.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $membershipPointsEarned;
+    public $membershipNumber;
 
     /**
      * The organization (airline, travelers' club, etc.) the membership is made with.
@@ -25,32 +24,32 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
     public $hostingOrganization;
 
     /**
-     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
-     */
-    public $member;
-
-    /**
-     * A unique identifier for the membership.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $membershipNumber;
-
-    /**
      * The program providing the membership.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $programName;
 
     /**
+     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $member;
+
+    /**
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the
      * points are issued in. (E.g. stars, miles, etc.)
-     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $membershipPointsEarned;
+
+    /**
+     * A unique identifier for the membership.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setMembershipPointsEarned($value)
+    function setMembershipNumber($value)
     {
-        return $this->setProp('membershipPointsEarned', $value);
+        return $this->setProp('membershipNumber', $value);
     }
 
     /**
@@ -64,26 +63,6 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
     }
 
     /**
-     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
-     * @return static
-     */
-    function setMember($value)
-    {
-        return $this->setProp('member', $value);
-    }
-
-    /**
-     * A unique identifier for the membership.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setMembershipNumber($value)
-    {
-        return $this->setProp('membershipNumber', $value);
-    }
-
-    /**
      * The program providing the membership.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -94,31 +73,24 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
     }
 
     /**
+     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setMember($value)
+    {
+        return $this->setProp('member', $value);
+    }
+
+    /**
      * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the
      * points are issued in. (E.g. stars, miles, etc.)
-     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
      */
-    function getMembershipPointsEarned()
+    function setMembershipPointsEarned($value)
     {
-        return $this->getProp('membershipPointsEarned');
-    }
-
-    /**
-     * The organization (airline, travelers' club, etc.) the membership is made with.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
-     */
-    function getHostingOrganization()
-    {
-        return $this->getProp('hostingOrganization');
-    }
-
-    /**
-     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
-     */
-    function getMember()
-    {
-        return $this->getProp('member');
+        return $this->setProp('membershipPointsEarned', $value);
     }
 
     /**
@@ -131,11 +103,39 @@ class ProgramMembership extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangi
     }
 
     /**
+     * The organization (airline, travelers' club, etc.) the membership is made with.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getHostingOrganization()
+    {
+        return $this->getProp('hostingOrganization');
+    }
+
+    /**
      * The program providing the membership.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getProgramName()
     {
         return $this->getProp('programName');
+    }
+
+    /**
+     * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getMember()
+    {
+        return $this->getProp('member');
+    }
+
+    /**
+     * The number of membership points earned by the member. If necessary, the unitText can be used to express the units the
+     * points are issued in. (E.g. stars, miles, etc.)
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getMembershipPointsEarned()
+    {
+        return $this->getProp('membershipPointsEarned');
     }
 }

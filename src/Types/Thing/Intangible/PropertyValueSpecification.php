@@ -12,22 +12,23 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     const TYPE = 'PropertyValueSpecification';
 
     /**
-     * Specifies the minimum allowed range for number of characters in a literal value.
+     * The upper value of some characteristic or property.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $valueMinLength;
+    public $maxValue;
 
     /**
-     * Specifies the allowed range for number of characters in a literal value.
+     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $valueMaxLength;
+    public $stepValue;
 
     /**
-     * Specifies a regular expression for testing literal values according to the HTML spec.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * The default value of the input. For properties that expect a literal, the default is a literal value, for properties that
+     * expect an object, it's an ID reference to one of the current values.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing
      */
-    public $valuePattern;
+    public $defaultValue;
 
     /**
      * Whether the property must be filled in to complete the action. Default is false.
@@ -36,17 +37,16 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     public $valueRequired;
 
     /**
-     * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's
-     * input@name.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $valueName;
-
-    /**
      * The lower value of some characteristic or property.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
     public $minValue;
+
+    /**
+     * Specifies the allowed range for number of characters in a literal value.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $valueMaxLength;
 
     /**
      * Whether multiple values are allowed for the property. Default is false.
@@ -55,17 +55,10 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     public $multipleValues;
 
     /**
-     * The default value of the input. For properties that expect a literal, the default is a literal value, for properties that
-     * expect an object, it's an ID reference to one of the current values.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * Specifies a regular expression for testing literal values according to the HTML spec.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $defaultValue;
-
-    /**
-     * The upper value of some characteristic or property.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $maxValue;
+    public $valuePattern;
 
     /**
      * Whether or not a property is mutable. Default is false. Specifying this for a property that also has a value makes
@@ -75,39 +68,47 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     public $readonlyValue;
 
     /**
-     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+     * Specifies the minimum allowed range for number of characters in a literal value.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $stepValue;
+    public $valueMinLength;
 
     /**
-     * Specifies the minimum allowed range for number of characters in a literal value.
+     * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's
+     * input@name.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $valueName;
+
+    /**
+     * The upper value of some characteristic or property.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setValueMinLength($value)
+    function setMaxValue($value)
     {
-        return $this->setProp('valueMinLength', $value);
+        return $this->setProp('maxValue', $value);
     }
 
     /**
-     * Specifies the allowed range for number of characters in a literal value.
+     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setValueMaxLength($value)
+    function setStepValue($value)
     {
-        return $this->setProp('valueMaxLength', $value);
+        return $this->setProp('stepValue', $value);
     }
 
     /**
-     * Specifies a regular expression for testing literal values according to the HTML spec.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * The default value of the input. For properties that expect a literal, the default is a literal value, for properties that
+     * expect an object, it's an ID reference to one of the current values.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
      */
-    function setValuePattern($value)
+    function setDefaultValue($value)
     {
-        return $this->setProp('valuePattern', $value);
+        return $this->setProp('defaultValue', $value);
     }
 
     /**
@@ -121,17 +122,6 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     }
 
     /**
-     * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's
-     * input@name.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setValueName($value)
-    {
-        return $this->setProp('valueName', $value);
-    }
-
-    /**
      * The lower value of some characteristic or property.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
@@ -139,6 +129,16 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     function setMinValue($value)
     {
         return $this->setProp('minValue', $value);
+    }
+
+    /**
+     * Specifies the allowed range for number of characters in a literal value.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setValueMaxLength($value)
+    {
+        return $this->setProp('valueMaxLength', $value);
     }
 
     /**
@@ -152,24 +152,13 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     }
 
     /**
-     * The default value of the input. For properties that expect a literal, the default is a literal value, for properties that
-     * expect an object, it's an ID reference to one of the current values.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * Specifies a regular expression for testing literal values according to the HTML spec.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setDefaultValue($value)
+    function setValuePattern($value)
     {
-        return $this->setProp('defaultValue', $value);
-    }
-
-    /**
-     * The upper value of some characteristic or property.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setMaxValue($value)
-    {
-        return $this->setProp('maxValue', $value);
+        return $this->setProp('valuePattern', $value);
     }
 
     /**
@@ -184,40 +173,52 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     }
 
     /**
-     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+     * Specifies the minimum allowed range for number of characters in a literal value.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setStepValue($value)
+    function setValueMinLength($value)
     {
-        return $this->setProp('stepValue', $value);
+        return $this->setProp('valueMinLength', $value);
     }
 
     /**
-     * Specifies the minimum allowed range for number of characters in a literal value.
+     * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's
+     * input@name.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setValueName($value)
+    {
+        return $this->setProp('valueName', $value);
+    }
+
+    /**
+     * The upper value of some characteristic or property.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getValueMinLength()
+    function getMaxValue()
     {
-        return $this->getProp('valueMinLength');
+        return $this->getProp('maxValue');
     }
 
     /**
-     * Specifies the allowed range for number of characters in a literal value.
+     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getValueMaxLength()
+    function getStepValue()
     {
-        return $this->getProp('valueMaxLength');
+        return $this->getProp('stepValue');
     }
 
     /**
-     * Specifies a regular expression for testing literal values according to the HTML spec.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The default value of the input. For properties that expect a literal, the default is a literal value, for properties that
+     * expect an object, it's an ID reference to one of the current values.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
-    function getValuePattern()
+    function getDefaultValue()
     {
-        return $this->getProp('valuePattern');
+        return $this->getProp('defaultValue');
     }
 
     /**
@@ -230,22 +231,21 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     }
 
     /**
-     * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's
-     * input@name.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getValueName()
-    {
-        return $this->getProp('valueName');
-    }
-
-    /**
      * The lower value of some characteristic or property.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getMinValue()
     {
         return $this->getProp('minValue');
+    }
+
+    /**
+     * Specifies the allowed range for number of characters in a literal value.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getValueMaxLength()
+    {
+        return $this->getProp('valueMaxLength');
     }
 
     /**
@@ -258,22 +258,12 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     }
 
     /**
-     * The default value of the input. For properties that expect a literal, the default is a literal value, for properties that
-     * expect an object, it's an ID reference to one of the current values.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * Specifies a regular expression for testing literal values according to the HTML spec.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getDefaultValue()
+    function getValuePattern()
     {
-        return $this->getProp('defaultValue');
-    }
-
-    /**
-     * The upper value of some characteristic or property.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getMaxValue()
-    {
-        return $this->getProp('maxValue');
+        return $this->getProp('valuePattern');
     }
 
     /**
@@ -287,11 +277,21 @@ class PropertyValueSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     }
 
     /**
-     * The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+     * Specifies the minimum allowed range for number of characters in a literal value.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getStepValue()
+    function getValueMinLength()
     {
-        return $this->getProp('stepValue');
+        return $this->getProp('valueMinLength');
+    }
+
+    /**
+     * Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's
+     * input@name.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getValueName()
+    {
+        return $this->getProp('valueName');
     }
 }

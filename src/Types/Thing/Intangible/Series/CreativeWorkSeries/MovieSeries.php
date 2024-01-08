@@ -18,6 +18,19 @@ class MovieSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
     public $musicBy;
 
     /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     */
+    public $productionCompany;
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $actor;
+
+    /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
@@ -31,19 +44,6 @@ class MovieSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
     public $trailer;
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $actor;
-
-    /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
-     */
-    public $productionCompany;
-
-    /**
      * The composer of the soundtrack.
      * @param \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
@@ -51,6 +51,27 @@ class MovieSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
     function setMusicBy($value)
     {
         return $this->setProp('musicBy', $value);
+    }
+
+    /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @return static
+     */
+    function setProductionCompany($value)
+    {
+        return $this->setProp('productionCompany', $value);
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setActor($value)
+    {
+        return $this->setProp('actor', $value);
     }
 
     /**
@@ -75,33 +96,31 @@ class MovieSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
     }
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setActor($value)
-    {
-        return $this->setProp('actor', $value);
-    }
-
-    /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
-     * @return static
-     */
-    function setProductionCompany($value)
-    {
-        return $this->setProp('productionCompany', $value);
-    }
-
-    /**
      * The composer of the soundtrack.
      * @return \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
     function getMusicBy()
     {
         return $this->getProp('musicBy');
+    }
+
+    /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getProductionCompany()
+    {
+        return $this->getProp('productionCompany');
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getActor()
+    {
+        return $this->getProp('actor');
     }
 
     /**
@@ -121,24 +140,5 @@ class MovieSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series\Creati
     function getTrailer()
     {
         return $this->getProp('trailer');
-    }
-
-    /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getActor()
-    {
-        return $this->getProp('actor');
-    }
-
-    /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
-     */
-    function getProductionCompany()
-    {
-        return $this->getProp('productionCompany');
     }
 }

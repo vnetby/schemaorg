@@ -21,6 +21,12 @@ class TradeAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     public $priceCurrency;
 
     /**
+     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
+     */
+    public $priceSpecification;
+
+    /**
      * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
      * [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for
      * [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in
@@ -33,12 +39,6 @@ class TradeAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     public $price;
 
     /**
-     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
-     */
-    public $priceSpecification;
-
-    /**
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
@@ -48,6 +48,16 @@ class TradeAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     function setPriceCurrency($value)
     {
         return $this->setProp('priceCurrency', $value);
+    }
+
+    /**
+     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification $value
+     * @return static
+     */
+    function setPriceSpecification($value)
+    {
+        return $this->setProp('priceSpecification', $value);
     }
 
     /**
@@ -67,16 +77,6 @@ class TradeAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     }
 
     /**
-     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification $value
-     * @return static
-     */
-    function setPriceSpecification($value)
-    {
-        return $this->setProp('priceSpecification', $value);
-    }
-
-    /**
      * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
      * types, e.g. "Ithaca HOUR".
@@ -85,6 +85,15 @@ class TradeAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     function getPriceCurrency()
     {
         return $this->getProp('priceCurrency');
+    }
+
+    /**
+     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|null
+     */
+    function getPriceSpecification()
+    {
+        return $this->getProp('priceSpecification');
     }
 
     /**
@@ -100,14 +109,5 @@ class TradeAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     function getPrice()
     {
         return $this->getProp('price');
-    }
-
-    /**
-     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|null
-     */
-    function getPriceSpecification()
-    {
-        return $this->getProp('priceSpecification');
     }
 }

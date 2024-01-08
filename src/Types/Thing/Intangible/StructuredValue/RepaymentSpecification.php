@@ -19,15 +19,9 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     public $numberOfLoanPayments;
 
     /**
-     * The amount to be paid as a penalty in the event of early payment of the loan.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
-     */
-    public $earlyPrepaymentPenalty;
-
-    /**
      * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents
      * only a percentage of the full purchase price.
-     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
     public $downPayment;
 
@@ -37,6 +31,12 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
     public $loanPaymentFrequency;
+
+    /**
+     * The amount to be paid as a penalty in the event of early payment of the loan.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
+     */
+    public $earlyPrepaymentPenalty;
 
     /**
      * The amount of money to pay in a single payment.
@@ -56,19 +56,9 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * The amount to be paid as a penalty in the event of early payment of the loan.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
-     * @return static
-     */
-    function setEarlyPrepaymentPenalty($value)
-    {
-        return $this->setProp('earlyPrepaymentPenalty', $value);
-    }
-
-    /**
      * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents
      * only a percentage of the full purchase price.
-     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
      * @return static
      */
     function setDownPayment($value)
@@ -85,6 +75,16 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     function setLoanPaymentFrequency($value)
     {
         return $this->setProp('loanPaymentFrequency', $value);
+    }
+
+    /**
+     * The amount to be paid as a penalty in the event of early payment of the loan.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
+     * @return static
+     */
+    function setEarlyPrepaymentPenalty($value)
+    {
+        return $this->setProp('earlyPrepaymentPenalty', $value);
     }
 
     /**
@@ -108,18 +108,9 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * The amount to be paid as a penalty in the event of early payment of the loan.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
-     */
-    function getEarlyPrepaymentPenalty()
-    {
-        return $this->getProp('earlyPrepaymentPenalty');
-    }
-
-    /**
      * a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents
      * only a percentage of the full purchase price.
-     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
      */
     function getDownPayment()
     {
@@ -134,6 +125,15 @@ class RepaymentSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     function getLoanPaymentFrequency()
     {
         return $this->getProp('loanPaymentFrequency');
+    }
+
+    /**
+     * The amount to be paid as a penalty in the event of early payment of the loan.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
+     */
+    function getEarlyPrepaymentPenalty()
+    {
+        return $this->getProp('earlyPrepaymentPenalty');
     }
 
     /**

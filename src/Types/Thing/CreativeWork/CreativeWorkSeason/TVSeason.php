@@ -12,15 +12,6 @@ class TVSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
     const TYPE = 'TVSeason';
 
     /**
-     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television. For example, the
-     * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
-     * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
-     * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $titleEIDR;
-
-    /**
      * The country of origin of something, including products as well as creative works such as movie and TV content. In the
      * case of TV and movie, this would be the country of the principle offices of the production company or individual responsible
      * for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]]
@@ -35,13 +26,9 @@ class TVSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    function setTitleEIDR($value)
-    {
-        return $this->setProp('titleEIDR', $value);
-    }
+    public $titleEIDR;
 
     /**
      * The country of origin of something, including products as well as creative works such as movie and TV content. In the
@@ -62,11 +49,12 @@ class TVSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
      * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
      * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
      * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
      */
-    function getTitleEIDR()
+    function setTitleEIDR($value)
     {
-        return $this->getProp('titleEIDR');
+        return $this->setProp('titleEIDR', $value);
     }
 
     /**
@@ -80,5 +68,17 @@ class TVSeason extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSe
     function getCountryOfOrigin()
     {
         return $this->getProp('countryOfOrigin');
+    }
+
+    /**
+     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television. For example, the
+     * motion picture known as "Ghostbusters" has a titleEIDR of "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls
+     * "edits". See [[editEIDR]]. Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple
+     * expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description. 
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getTitleEIDR()
+    {
+        return $this->getProp('titleEIDR');
     }
 }

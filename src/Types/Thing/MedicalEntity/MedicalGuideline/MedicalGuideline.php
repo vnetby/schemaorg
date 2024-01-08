@@ -27,16 +27,16 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     public $guidelineSubject;
 
     /**
-     * Date on which this guideline's recommendation was made.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $guidelineDate;
-
-    /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $evidenceOrigin;
+
+    /**
+     * Date on which this guideline's recommendation was made.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $guidelineDate;
 
     /**
      * Strength of evidence of the data used to formulate the guideline (enumerated).
@@ -59,16 +59,6 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * Date on which this guideline's recommendation was made.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
-     */
-    function setGuidelineDate($value)
-    {
-        return $this->setProp('guidelineDate', $value);
-    }
-
-    /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -76,6 +66,16 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     function setEvidenceOrigin($value)
     {
         return $this->setProp('evidenceOrigin', $value);
+    }
+
+    /**
+     * Date on which this guideline's recommendation was made.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setGuidelineDate($value)
+    {
+        return $this->setProp('guidelineDate', $value);
     }
 
     /**
@@ -97,20 +97,20 @@ class MedicalGuideline extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * Date on which this guideline's recommendation was made.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
-     */
-    function getGuidelineDate()
-    {
-        return $this->getProp('guidelineDate');
-    }
-
-    /**
      * Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getEvidenceOrigin()
     {
         return $this->getProp('evidenceOrigin');
+    }
+
+    /**
+     * Date on which this guideline's recommendation was made.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getGuidelineDate()
+    {
+        return $this->getProp('guidelineDate');
     }
 }

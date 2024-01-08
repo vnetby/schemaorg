@@ -12,27 +12,15 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     const TYPE = 'HealthInsurancePlan';
 
     /**
-     * The tier(s) of drugs offered by this formulary or insurance plan.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $healthPlanDrugTier;
-
-    /**
      * Networks covered by this plan.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanNetwork
      */
     public $includesHealthPlanNetwork;
 
     /**
-     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $healthPlanId;
-
-    /**
      * The standard for interpreting the Plan ID. The preferred is "HIOS". See the Centers for Medicare & Medicaid Services for more
      * details.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $usesHealthPlanIdStandard;
 
@@ -43,10 +31,22 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     public $contactPoint;
 
     /**
-     * Formularies covered by this plan.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanFormulary
+     * TODO.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $includesHealthPlanFormulary;
+    public $healthPlanDrugOption;
+
+    /**
+     * The tier(s) of drugs offered by this formulary or insurance plan.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $healthPlanDrugTier;
+
+    /**
+     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $healthPlanId;
 
     /**
      * The URL that goes directly to the plan brochure for the specific standard plan or plan variation.
@@ -55,26 +55,16 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     public $healthPlanMarketingUrl;
 
     /**
-     * TODO.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * Formularies covered by this plan.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanFormulary
      */
-    public $healthPlanDrugOption;
+    public $includesHealthPlanFormulary;
 
     /**
      * The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $benefitsSummaryUrl;
-
-    /**
-     * The tier(s) of drugs offered by this formulary or insurance plan.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setHealthPlanDrugTier($value)
-    {
-        return $this->setProp('healthPlanDrugTier', $value);
-    }
 
     /**
      * Networks covered by this plan.
@@ -87,19 +77,9 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     }
 
     /**
-     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setHealthPlanId($value)
-    {
-        return $this->setProp('healthPlanId', $value);
-    }
-
-    /**
      * The standard for interpreting the Plan ID. The preferred is "HIOS". See the Centers for Medicare & Medicaid Services for more
      * details.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setUsesHealthPlanIdStandard($value)
@@ -118,13 +98,33 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     }
 
     /**
-     * Formularies covered by this plan.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanFormulary $value
+     * TODO.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setIncludesHealthPlanFormulary($value)
+    function setHealthPlanDrugOption($value)
     {
-        return $this->setProp('includesHealthPlanFormulary', $value);
+        return $this->setProp('healthPlanDrugOption', $value);
+    }
+
+    /**
+     * The tier(s) of drugs offered by this formulary or insurance plan.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setHealthPlanDrugTier($value)
+    {
+        return $this->setProp('healthPlanDrugTier', $value);
+    }
+
+    /**
+     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setHealthPlanId($value)
+    {
+        return $this->setProp('healthPlanId', $value);
     }
 
     /**
@@ -138,13 +138,13 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     }
 
     /**
-     * TODO.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * Formularies covered by this plan.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanFormulary $value
      * @return static
      */
-    function setHealthPlanDrugOption($value)
+    function setIncludesHealthPlanFormulary($value)
     {
-        return $this->setProp('healthPlanDrugOption', $value);
+        return $this->setProp('includesHealthPlanFormulary', $value);
     }
 
     /**
@@ -158,15 +158,6 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     }
 
     /**
-     * The tier(s) of drugs offered by this formulary or insurance plan.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getHealthPlanDrugTier()
-    {
-        return $this->getProp('healthPlanDrugTier');
-    }
-
-    /**
      * Networks covered by this plan.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanNetwork|null
      */
@@ -176,18 +167,9 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     }
 
     /**
-     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getHealthPlanId()
-    {
-        return $this->getProp('healthPlanId');
-    }
-
-    /**
      * The standard for interpreting the Plan ID. The preferred is "HIOS". See the Centers for Medicare & Medicaid Services for more
      * details.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getUsesHealthPlanIdStandard()
     {
@@ -204,12 +186,30 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     }
 
     /**
-     * Formularies covered by this plan.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanFormulary|null
+     * TODO.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getIncludesHealthPlanFormulary()
+    function getHealthPlanDrugOption()
     {
-        return $this->getProp('includesHealthPlanFormulary');
+        return $this->getProp('healthPlanDrugOption');
+    }
+
+    /**
+     * The tier(s) of drugs offered by this formulary or insurance plan.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getHealthPlanDrugTier()
+    {
+        return $this->getProp('healthPlanDrugTier');
+    }
+
+    /**
+     * The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getHealthPlanId()
+    {
+        return $this->getProp('healthPlanId');
     }
 
     /**
@@ -222,12 +222,12 @@ class HealthInsurancePlan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intan
     }
 
     /**
-     * TODO.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * Formularies covered by this plan.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\HealthPlanFormulary|null
      */
-    function getHealthPlanDrugOption()
+    function getIncludesHealthPlanFormulary()
     {
-        return $this->getProp('healthPlanDrugOption');
+        return $this->getProp('includesHealthPlanFormulary');
     }
 
     /**

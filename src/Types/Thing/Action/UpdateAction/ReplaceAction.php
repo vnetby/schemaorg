@@ -12,12 +12,6 @@ class ReplaceAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\Up
     const TYPE = 'ReplaceAction';
 
     /**
-     * A sub property of object. The object that is being replaced.
-     * @var \Vnetby\Schemaorg\Types\Thing\Thing
-     */
-    public $replacee;
-
-    /**
      * A sub property of object. The object that replaces.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
@@ -25,13 +19,9 @@ class ReplaceAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\Up
 
     /**
      * A sub property of object. The object that is being replaced.
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    function setReplacee($value)
-    {
-        return $this->setProp('replacee', $value);
-    }
+    public $replacee;
 
     /**
      * A sub property of object. The object that replaces.
@@ -45,11 +35,12 @@ class ReplaceAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\Up
 
     /**
      * A sub property of object. The object that is being replaced.
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
      */
-    function getReplacee()
+    function setReplacee($value)
     {
-        return $this->getProp('replacee');
+        return $this->setProp('replacee', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class ReplaceAction extends \Vnetby\Schemaorg\Types\Thing\Action\UpdateAction\Up
     function getReplacer()
     {
         return $this->getProp('replacer');
+    }
+
+    /**
+     * A sub property of object. The object that is being replaced.
+     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getReplacee()
+    {
+        return $this->getProp('replacee');
     }
 }

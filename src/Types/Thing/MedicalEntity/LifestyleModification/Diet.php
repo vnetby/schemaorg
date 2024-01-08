@@ -12,23 +12,10 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModifica
     const TYPE = 'Diet';
 
     /**
-     * Medical expert advice related to the plan.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $expertConsiderations;
-
-    /**
      * Specific physiologic risks associated to the diet plan.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $risks;
-
-    /**
-     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
-     * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $dietFeatures;
 
     /**
      * People or organizations that endorse the plan.
@@ -43,14 +30,17 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModifica
     public $physiologicalBenefits;
 
     /**
-     * Medical expert advice related to the plan.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
+     * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setExpertConsiderations($value)
-    {
-        return $this->setProp('expertConsiderations', $value);
-    }
+    public $dietFeatures;
+
+    /**
+     * Medical expert advice related to the plan.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $expertConsiderations;
 
     /**
      * Specific physiologic risks associated to the diet plan.
@@ -60,17 +50,6 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModifica
     function setRisks($value)
     {
         return $this->setProp('risks', $value);
-    }
-
-    /**
-     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
-     * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setDietFeatures($value)
-    {
-        return $this->setProp('dietFeatures', $value);
     }
 
     /**
@@ -94,12 +73,24 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModifica
     }
 
     /**
-     * Medical expert advice related to the plan.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
+     * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getExpertConsiderations()
+    function setDietFeatures($value)
     {
-        return $this->getProp('expertConsiderations');
+        return $this->setProp('dietFeatures', $value);
+    }
+
+    /**
+     * Medical expert advice related to the plan.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setExpertConsiderations($value)
+    {
+        return $this->setProp('expertConsiderations', $value);
     }
 
     /**
@@ -109,16 +100,6 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModifica
     function getRisks()
     {
         return $this->getProp('risks');
-    }
-
-    /**
-     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
-     * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getDietFeatures()
-    {
-        return $this->getProp('dietFeatures');
     }
 
     /**
@@ -137,5 +118,24 @@ class Diet extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\LifestyleModifica
     function getPhysiologicalBenefits()
     {
         return $this->getProp('physiologicalBenefits');
+    }
+
+    /**
+     * Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and
+     * specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getDietFeatures()
+    {
+        return $this->getProp('dietFeatures');
+    }
+
+    /**
+     * Medical expert advice related to the plan.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getExpertConsiderations()
+    {
+        return $this->getProp('expertConsiderations');
     }
 }

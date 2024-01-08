@@ -13,13 +13,13 @@ class EndorseAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\Re
 
     /**
      * A sub property of participant. The person/organization being supported.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $endorsee;
 
     /**
      * A sub property of participant. The person/organization being supported.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
      */
     function setEndorsee($value)
@@ -29,7 +29,7 @@ class EndorseAction extends \Vnetby\Schemaorg\Types\Thing\Action\AssessAction\Re
 
     /**
      * A sub property of participant. The person/organization being supported.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
     function getEndorsee()
     {

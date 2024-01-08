@@ -14,12 +14,6 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     const TYPE = 'BedDetails';
 
     /**
-     * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $numberOfBeds;
-
-    /**
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\BedType
      */
@@ -27,13 +21,9 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    function setNumberOfBeds($value)
-    {
-        return $this->setProp('numberOfBeds', $value);
-    }
+    public $numberOfBeds;
 
     /**
      * The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.
@@ -47,11 +37,12 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    function getNumberOfBeds()
+    function setNumberOfBeds($value)
     {
-        return $this->getProp('numberOfBeds');
+        return $this->setProp('numberOfBeds', $value);
     }
 
     /**
@@ -61,5 +52,14 @@ class BedDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     function getTypeOfBed()
     {
         return $this->getProp('typeOfBed');
+    }
+
+    /**
+     * The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getNumberOfBeds()
+    {
+        return $this->getProp('numberOfBeds');
     }
 }

@@ -12,28 +12,48 @@ class DataFeedItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     const TYPE = 'DataFeedItem';
 
     /**
+     * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $dateModified;
+
+    /**
+     * The date on which the CreativeWork was created or the item was added to a DataFeed.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $dateCreated;
+
+    /**
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
     public $item;
 
     /**
-     * The date on which the CreativeWork was created or the item was added to a DataFeed.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * The datetime the item was removed from the DataFeed.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    public $dateCreated;
+    public $dateDeleted;
 
     /**
      * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    public $dateModified;
+    function setDateModified($value)
+    {
+        return $this->setProp('dateModified', $value);
+    }
 
     /**
-     * The datetime the item was removed from the DataFeed.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * The date on which the CreativeWork was created or the item was added to a DataFeed.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    public $dateDeleted;
+    function setDateCreated($value)
+    {
+        return $this->setProp('dateCreated', $value);
+    }
 
     /**
      * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
@@ -46,33 +66,31 @@ class DataFeedItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The date on which the CreativeWork was created or the item was added to a DataFeed.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setDateCreated($value)
-    {
-        return $this->setProp('dateCreated', $value);
-    }
-
-    /**
-     * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setDateModified($value)
-    {
-        return $this->setProp('dateModified', $value);
-    }
-
-    /**
      * The datetime the item was removed from the DataFeed.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setDateDeleted($value)
     {
         return $this->setProp('dateDeleted', $value);
+    }
+
+    /**
+     * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getDateModified()
+    {
+        return $this->getProp('dateModified');
+    }
+
+    /**
+     * The date on which the CreativeWork was created or the item was added to a DataFeed.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getDateCreated()
+    {
+        return $this->getProp('dateCreated');
     }
 
     /**
@@ -85,26 +103,8 @@ class DataFeedItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The date on which the CreativeWork was created or the item was added to a DataFeed.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getDateCreated()
-    {
-        return $this->getProp('dateCreated');
-    }
-
-    /**
-     * The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getDateModified()
-    {
-        return $this->getProp('dateModified');
-    }
-
-    /**
      * The datetime the item was removed from the DataFeed.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getDateDeleted()
     {

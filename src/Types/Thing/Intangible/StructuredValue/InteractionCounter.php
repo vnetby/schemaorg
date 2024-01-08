@@ -13,14 +13,8 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
     const TYPE = 'InteractionCounter';
 
     /**
-     * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
-     */
-    public $userInteractionCount;
-
-    /**
      * The WebSite or SoftwareApplication where the interactions took place.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebSite
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebSite|\Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
      */
     public $interactionService;
 
@@ -29,24 +23,9 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
      */
     public $startTime;
-
-    /**
-     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
-     */
-    public $location;
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
-     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $endTime;
 
     /**
      * The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use
@@ -57,17 +36,28 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
-     * @return static
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    function setUserInteractionCount($value)
-    {
-        return $this->setProp('userInteractionCount', $value);
-    }
+    public $userInteractionCount;
+
+    /**
+     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $location;
+
+    /**
+     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
+     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
+     */
+    public $endTime;
 
     /**
      * The WebSite or SoftwareApplication where the interactions took place.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebSite $value
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebSite|\Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication $value
      * @return static
      */
     function setInteractionService($value)
@@ -80,35 +70,12 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
      * @return static
      */
     function setStartTime($value)
     {
         return $this->setProp('startTime', $value);
-    }
-
-    /**
-     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
-     * @return static
-     */
-    function setLocation($value)
-    {
-        return $this->setProp('location', $value);
-    }
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
-     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setEndTime($value)
-    {
-        return $this->setProp('endTime', $value);
     }
 
     /**
@@ -124,16 +91,40 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
 
     /**
      * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
      */
-    function getUserInteractionCount()
+    function setUserInteractionCount($value)
     {
-        return $this->getProp('userInteractionCount');
+        return $this->setProp('userInteractionCount', $value);
+    }
+
+    /**
+     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setLocation($value)
+    {
+        return $this->setProp('location', $value);
+    }
+
+    /**
+     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
+     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
+     * @return static
+     */
+    function setEndTime($value)
+    {
+        return $this->setProp('endTime', $value);
     }
 
     /**
      * The WebSite or SoftwareApplication where the interactions took place.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebSite|null
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebSite|\Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication|null
      */
     function getInteractionService()
     {
@@ -145,7 +136,7 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
     function getStartTime()
     {
@@ -153,8 +144,27 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
     }
 
     /**
+     * The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use
+     * the most specific Action.
+     * @return \Vnetby\Schemaorg\Types\Thing\Action\Action|null
+     */
+    function getInteractionType()
+    {
+        return $this->getProp('interactionType');
+    }
+
+    /**
+     * The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getUserInteractionCount()
+    {
+        return $this->getProp('userInteractionCount');
+    }
+
+    /**
      * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getLocation()
     {
@@ -166,20 +176,10 @@ class InteractionCounter extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struct
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
     function getEndTime()
     {
         return $this->getProp('endTime');
-    }
-
-    /**
-     * The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use
-     * the most specific Action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Action\Action|null
-     */
-    function getInteractionType()
-    {
-        return $this->getProp('interactionType');
     }
 }

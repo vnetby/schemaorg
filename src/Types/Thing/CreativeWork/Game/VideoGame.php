@@ -19,6 +19,32 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
     public $musicBy;
 
     /**
+     * The edition of a video game.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $gameEdition;
+
+    /**
+     * Cheat codes to the game.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     */
+    public $cheatCode;
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $actor;
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
+     * same time.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode
+     */
+    public $playMode;
+
+    /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
      * items or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
@@ -27,7 +53,7 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing
      */
     public $gamePlatform;
 
@@ -50,32 +76,6 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
     public $gameServer;
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $actor;
-
-    /**
-     * The edition of a video game.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $gameEdition;
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
-     * same time.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode
-     */
-    public $playMode;
-
-    /**
-     * Cheat codes to the game.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
-     */
-    public $cheatCode;
-
-    /**
      * The composer of the soundtrack.
      * @param \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
@@ -83,6 +83,48 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
     function setMusicBy($value)
     {
         return $this->setProp('musicBy', $value);
+    }
+
+    /**
+     * The edition of a video game.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setGameEdition($value)
+    {
+        return $this->setProp('gameEdition', $value);
+    }
+
+    /**
+     * Cheat codes to the game.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @return static
+     */
+    function setCheatCode($value)
+    {
+        return $this->setProp('cheatCode', $value);
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setActor($value)
+    {
+        return $this->setProp('actor', $value);
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
+     * same time.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode $value
+     * @return static
+     */
+    function setPlayMode($value)
+    {
+        return $this->setProp('playMode', $value);
     }
 
     /**
@@ -98,7 +140,7 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
      */
     function setGamePlatform($value)
@@ -137,54 +179,50 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
     }
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setActor($value)
-    {
-        return $this->setProp('actor', $value);
-    }
-
-    /**
-     * The edition of a video game.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setGameEdition($value)
-    {
-        return $this->setProp('gameEdition', $value);
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
-     * same time.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode $value
-     * @return static
-     */
-    function setPlayMode($value)
-    {
-        return $this->setProp('playMode', $value);
-    }
-
-    /**
-     * Cheat codes to the game.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
-     * @return static
-     */
-    function setCheatCode($value)
-    {
-        return $this->setProp('cheatCode', $value);
-    }
-
-    /**
      * The composer of the soundtrack.
      * @return \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
     function getMusicBy()
     {
         return $this->getProp('musicBy');
+    }
+
+    /**
+     * The edition of a video game.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getGameEdition()
+    {
+        return $this->getProp('gameEdition');
+    }
+
+    /**
+     * Cheat codes to the game.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     */
+    function getCheatCode()
+    {
+        return $this->getProp('cheatCode');
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getActor()
+    {
+        return $this->getProp('actor');
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
+     * same time.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode|null
+     */
+    function getPlayMode()
+    {
+        return $this->getProp('playMode');
     }
 
     /**
@@ -199,7 +237,7 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
 
     /**
      * The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
     function getGamePlatform()
     {
@@ -231,43 +269,5 @@ class VideoGame extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\Game
     function getGameServer()
     {
         return $this->getProp('gameServer');
-    }
-
-    /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getActor()
-    {
-        return $this->getProp('actor');
-    }
-
-    /**
-     * The edition of a video game.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getGameEdition()
-    {
-        return $this->getProp('gameEdition');
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player. The game can be marked as multi-player, co-op and single-player at the
-     * same time.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GamePlayMode\GamePlayMode|null
-     */
-    function getPlayMode()
-    {
-        return $this->getProp('playMode');
-    }
-
-    /**
-     * Cheat codes to the game.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
-     */
-    function getCheatCode()
-    {
-        return $this->getProp('cheatCode');
     }
 }

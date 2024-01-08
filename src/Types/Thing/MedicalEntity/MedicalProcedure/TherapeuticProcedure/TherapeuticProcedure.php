@@ -18,17 +18,17 @@ class TherapeuticProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\M
     public $doseSchedule;
 
     /**
+     * Specifying a drug or medicine used in a medication procedure.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug
+     */
+    public $drug;
+
+    /**
      * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in
      * death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
     public $adverseOutcome;
-
-    /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
-     */
-    public $drug;
 
     /**
      * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
@@ -38,6 +38,16 @@ class TherapeuticProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\M
     function setDoseSchedule($value)
     {
         return $this->setProp('doseSchedule', $value);
+    }
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug $value
+     * @return static
+     */
+    function setDrug($value)
+    {
+        return $this->setProp('drug', $value);
     }
 
     /**
@@ -52,22 +62,21 @@ class TherapeuticProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\M
     }
 
     /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Drug $value
-     * @return static
-     */
-    function setDrug($value)
-    {
-        return $this->setProp('drug', $value);
-    }
-
-    /**
      * A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
      * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\DoseSchedule|null
      */
     function getDoseSchedule()
     {
         return $this->getProp('doseSchedule');
+    }
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug|null
+     */
+    function getDrug()
+    {
+        return $this->getProp('drug');
     }
 
     /**
@@ -78,14 +87,5 @@ class TherapeuticProcedure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\M
     function getAdverseOutcome()
     {
         return $this->getProp('adverseOutcome');
-    }
-
-    /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Drug|null
-     */
-    function getDrug()
-    {
-        return $this->getProp('drug');
     }
 }

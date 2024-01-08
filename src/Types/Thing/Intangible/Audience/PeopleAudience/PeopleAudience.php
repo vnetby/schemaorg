@@ -12,16 +12,29 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     const TYPE = 'PeopleAudience';
 
     /**
-     * Maximum recommended age in years for the audience or user.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * Audiences defined by a person's maximum age.
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    public $suggestedMaxAge;
+    public $requiredMaxAge;
+
+    /**
+     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
+     * height between 170 and 190 cm. Typically found on a size chart for wearable products.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $suggestedMeasurement;
 
     /**
      * Audiences defined by a person's minimum age.
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
     public $requiredMinAge;
+
+    /**
+     * Maximum recommended age in years for the audience or user.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $suggestedMaxAge;
 
     /**
      * Audiences defined by a person's gender.
@@ -36,23 +49,10 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     public $healthCondition;
 
     /**
-     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
-     * height between 170 and 190 cm. Typically found on a size chart for wearable products.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $suggestedMeasurement;
-
-    /**
      * Minimum recommended age in years for the audience or user.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
     public $suggestedMinAge;
-
-    /**
-     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $suggestedGender;
 
     /**
      * The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
@@ -61,19 +61,30 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     public $suggestedAge;
 
     /**
-     * Audiences defined by a person's maximum age.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType
      */
-    public $requiredMaxAge;
+    public $suggestedGender;
 
     /**
-     * Maximum recommended age in years for the audience or user.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * Audiences defined by a person's maximum age.
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
-    function setSuggestedMaxAge($value)
+    function setRequiredMaxAge($value)
     {
-        return $this->setProp('suggestedMaxAge', $value);
+        return $this->setProp('requiredMaxAge', $value);
+    }
+
+    /**
+     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
+     * height between 170 and 190 cm. Typically found on a size chart for wearable products.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setSuggestedMeasurement($value)
+    {
+        return $this->setProp('suggestedMeasurement', $value);
     }
 
     /**
@@ -84,6 +95,16 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     function setRequiredMinAge($value)
     {
         return $this->setProp('requiredMinAge', $value);
+    }
+
+    /**
+     * Maximum recommended age in years for the audience or user.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setSuggestedMaxAge($value)
+    {
+        return $this->setProp('suggestedMaxAge', $value);
     }
 
     /**
@@ -107,17 +128,6 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     }
 
     /**
-     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
-     * height between 170 and 190 cm. Typically found on a size chart for wearable products.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setSuggestedMeasurement($value)
-    {
-        return $this->setProp('suggestedMeasurement', $value);
-    }
-
-    /**
      * Minimum recommended age in years for the audience or user.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
@@ -125,16 +135,6 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     function setSuggestedMinAge($value)
     {
         return $this->setProp('suggestedMinAge', $value);
-    }
-
-    /**
-     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setSuggestedGender($value)
-    {
-        return $this->setProp('suggestedGender', $value);
     }
 
     /**
@@ -148,22 +148,32 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     }
 
     /**
-     * Audiences defined by a person's maximum age.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType $value
      * @return static
      */
-    function setRequiredMaxAge($value)
+    function setSuggestedGender($value)
     {
-        return $this->setProp('requiredMaxAge', $value);
+        return $this->setProp('suggestedGender', $value);
     }
 
     /**
-     * Maximum recommended age in years for the audience or user.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * Audiences defined by a person's maximum age.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
-    function getSuggestedMaxAge()
+    function getRequiredMaxAge()
     {
-        return $this->getProp('suggestedMaxAge');
+        return $this->getProp('requiredMaxAge');
+    }
+
+    /**
+     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
+     * height between 170 and 190 cm. Typically found on a size chart for wearable products.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getSuggestedMeasurement()
+    {
+        return $this->getProp('suggestedMeasurement');
     }
 
     /**
@@ -173,6 +183,15 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     function getRequiredMinAge()
     {
         return $this->getProp('requiredMinAge');
+    }
+
+    /**
+     * Maximum recommended age in years for the audience or user.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getSuggestedMaxAge()
+    {
+        return $this->getProp('suggestedMaxAge');
     }
 
     /**
@@ -194,31 +213,12 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     }
 
     /**
-     * A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or
-     * height between 170 and 190 cm. Typically found on a size chart for wearable products.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getSuggestedMeasurement()
-    {
-        return $this->getProp('suggestedMeasurement');
-    }
-
-    /**
      * Minimum recommended age in years for the audience or user.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
     function getSuggestedMinAge()
     {
         return $this->getProp('suggestedMinAge');
-    }
-
-    /**
-     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getSuggestedGender()
-    {
-        return $this->getProp('suggestedGender');
     }
 
     /**
@@ -231,11 +231,11 @@ class PeopleAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\A
     }
 
     /**
-     * Audiences defined by a person's maximum age.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\GenderType\GenderType|null
      */
-    function getRequiredMaxAge()
+    function getSuggestedGender()
     {
-        return $this->getProp('requiredMaxAge');
+        return $this->getProp('suggestedGender');
     }
 }

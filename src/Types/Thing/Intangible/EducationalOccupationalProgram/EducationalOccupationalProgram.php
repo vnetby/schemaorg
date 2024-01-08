@@ -15,10 +15,76 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     const TYPE = 'EducationalOccupationalProgram';
 
     /**
+     * The date at which the program stops collecting applications for the next enrollment cycle.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $applicationDeadline;
+
+    /**
+     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
+     * on behalf of the provider. A provider may also serve as the seller.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $provider;
+
+    /**
+     * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $financialAidEligible;
+
+    /**
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $startDate;
+
+    /**
+     * The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined
+     * by the institution.
+     * @var string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $typicalCreditsPerTerm;
+
+    /**
+     * The time of day the program normally runs. For example, "evenings".
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $timeOfDay;
+
+    /**
+     * Prerequisites for enrolling in the program.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course
+     */
+    public $programPrerequisites;
+
+    /**
      * The expected length of time to complete the program if attending full-time.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
     public $timeToComplete;
+
+    /**
+     * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $educationalCredentialAwarded;
+
+    /**
+     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
+     * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
+     * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
+     * assumed to be from O*NET-SOC.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode
+     */
+    public $occupationalCategory;
+
+    /**
+     * The day of the week for which these opening hours are valid.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek
+     */
+    public $dayOfWeek;
 
     /**
      * The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example,
@@ -28,48 +94,10 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     public $termsPerYear;
 
     /**
-     * The type of educational or occupational program. For example, classroom, internship, alternance, etc.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
+     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+     * @var string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    public $programType;
-
-    /**
-     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
-     * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
-     * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
-     * assumed to be from O*NET-SOC.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $occupationalCategory;
-
-    /**
-     * The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined
-     * by the institution.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
-     */
-    public $typicalCreditsPerTerm;
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
-     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
-     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
-     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
-     * of Product, can clarify the nature of the offer. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
-     */
-    public $offers;
-
-    /**
-     * The day of the week for which these opening hours are valid.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek
-     */
-    public $dayOfWeek;
-
-    /**
-     * The time of day the program normally runs. For example, "evenings".
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $timeOfDay;
+    public $numberOfCredits;
 
     /**
      * A course or class that is one of the learning opportunities that constitute an educational / occupational program. No information is
@@ -80,36 +108,14 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     public $hasCourse;
 
     /**
-     * Prerequisites for enrolling in the program.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject
+     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
+     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
+     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
+     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
+     * of Product, can clarify the nature of the offer. 
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|\Vnetby\Schemaorg\Types\Thing\Intangible\Demand
      */
-    public $programPrerequisites;
-
-    /**
-     * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential
-     */
-    public $educationalCredentialAwarded;
-
-    /**
-     * The estimated salary earned while in the program.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
-     */
-    public $trainingSalary;
-
-    /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
-     * on behalf of the provider. A provider may also serve as the seller.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $provider;
-
-    /**
-     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue
-     */
-    public $numberOfCredits;
+    public $offers;
 
     /**
      * The amount of time in a term as defined by the institution. A term is a length of time where students
@@ -119,28 +125,31 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     public $termDuration;
 
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $startDate;
-
-    /**
-     * The expected salary upon completing the training.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
-     */
-    public $salaryUponCompletion;
-
-    /**
      * The maximum number of students who may be enrolled in the program.
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
     public $maximumEnrollment;
 
     /**
-     * The date at which the program stops collecting applications for the next enrollment cycle.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
+     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    public $applicationDeadline;
+    public $occupationalCredentialAwarded;
+
+    /**
+     * Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a
+     * text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from
+     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $educationalProgramMode;
+
+    /**
+     * The type of educational or occupational program. For example, classroom, internship, alternance, etc.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $programType;
 
     /**
      * The date at which the program begins collecting applications for the next enrollment cycle.
@@ -149,11 +158,16 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     public $applicationStartDate;
 
     /**
-     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential
+     * The estimated salary earned while in the program.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
      */
-    public $occupationalCredentialAwarded;
+    public $trainingSalary;
+
+    /**
+     * The expected salary upon completing the training.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution
+     */
+    public $salaryUponCompletion;
 
     /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
@@ -162,18 +176,76 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     public $endDate;
 
     /**
-     * Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a
-     * text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from
-     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * The date at which the program stops collecting applications for the next enrollment cycle.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    public $educationalProgramMode;
+    function setApplicationDeadline($value)
+    {
+        return $this->setProp('applicationDeadline', $value);
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
+     * on behalf of the provider. A provider may also serve as the seller.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setProvider($value)
+    {
+        return $this->setProp('provider', $value);
+    }
 
     /**
      * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    public $financialAidEligible;
+    function setFinancialAidEligible($value)
+    {
+        return $this->setProp('financialAidEligible', $value);
+    }
+
+    /**
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setStartDate($value)
+    {
+        return $this->setProp('startDate', $value);
+    }
+
+    /**
+     * The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined
+     * by the institution.
+     * @param string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setTypicalCreditsPerTerm($value)
+    {
+        return $this->setProp('typicalCreditsPerTerm', $value);
+    }
+
+    /**
+     * The time of day the program normally runs. For example, "evenings".
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTimeOfDay($value)
+    {
+        return $this->setProp('timeOfDay', $value);
+    }
+
+    /**
+     * Prerequisites for enrolling in the program.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course $value
+     * @return static
+     */
+    function setProgramPrerequisites($value)
+    {
+        return $this->setProp('programPrerequisites', $value);
+    }
 
     /**
      * The expected length of time to complete the program if attending full-time.
@@ -183,6 +255,40 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     function setTimeToComplete($value)
     {
         return $this->setProp('timeToComplete', $value);
+    }
+
+    /**
+     * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setEducationalCredentialAwarded($value)
+    {
+        return $this->setProp('educationalCredentialAwarded', $value);
+    }
+
+    /**
+     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
+     * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
+     * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
+     * assumed to be from O*NET-SOC.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode $value
+     * @return static
+     */
+    function setOccupationalCategory($value)
+    {
+        return $this->setProp('occupationalCategory', $value);
+    }
+
+    /**
+     * The day of the week for which these opening hours are valid.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek $value
+     * @return static
+     */
+    function setDayOfWeek($value)
+    {
+        return $this->setProp('dayOfWeek', $value);
     }
 
     /**
@@ -197,71 +303,13 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * The type of educational or occupational program. For example, classroom, internship, alternance, etc.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+     * @param string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
      */
-    function setProgramType($value)
+    function setNumberOfCredits($value)
     {
-        return $this->setProp('programType', $value);
-    }
-
-    /**
-     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
-     * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
-     * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
-     * assumed to be from O*NET-SOC.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setOccupationalCategory($value)
-    {
-        return $this->setProp('occupationalCategory', $value);
-    }
-
-    /**
-     * The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined
-     * by the institution.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue $value
-     * @return static
-     */
-    function setTypicalCreditsPerTerm($value)
-    {
-        return $this->setProp('typicalCreditsPerTerm', $value);
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
-     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
-     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
-     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
-     * of Product, can clarify the nature of the offer. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer $value
-     * @return static
-     */
-    function setOffers($value)
-    {
-        return $this->setProp('offers', $value);
-    }
-
-    /**
-     * The day of the week for which these opening hours are valid.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek $value
-     * @return static
-     */
-    function setDayOfWeek($value)
-    {
-        return $this->setProp('dayOfWeek', $value);
-    }
-
-    /**
-     * The time of day the program normally runs. For example, "evenings".
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setTimeOfDay($value)
-    {
-        return $this->setProp('timeOfDay', $value);
+        return $this->setProp('numberOfCredits', $value);
     }
 
     /**
@@ -277,55 +325,17 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * Prerequisites for enrolling in the program.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject $value
+     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
+     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
+     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
+     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
+     * of Product, can clarify the nature of the offer. 
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|\Vnetby\Schemaorg\Types\Thing\Intangible\Demand $value
      * @return static
      */
-    function setProgramPrerequisites($value)
+    function setOffers($value)
     {
-        return $this->setProp('programPrerequisites', $value);
-    }
-
-    /**
-     * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential $value
-     * @return static
-     */
-    function setEducationalCredentialAwarded($value)
-    {
-        return $this->setProp('educationalCredentialAwarded', $value);
-    }
-
-    /**
-     * The estimated salary earned while in the program.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
-     * @return static
-     */
-    function setTrainingSalary($value)
-    {
-        return $this->setProp('trainingSalary', $value);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
-     * on behalf of the provider. A provider may also serve as the seller.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setProvider($value)
-    {
-        return $this->setProp('provider', $value);
-    }
-
-    /**
-     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue $value
-     * @return static
-     */
-    function setNumberOfCredits($value)
-    {
-        return $this->setProp('numberOfCredits', $value);
+        return $this->setProp('offers', $value);
     }
 
     /**
@@ -340,26 +350,6 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setStartDate($value)
-    {
-        return $this->setProp('startDate', $value);
-    }
-
-    /**
-     * The expected salary upon completing the training.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
-     * @return static
-     */
-    function setSalaryUponCompletion($value)
-    {
-        return $this->setProp('salaryUponCompletion', $value);
-    }
-
-    /**
      * The maximum number of students who may be enrolled in the program.
      * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
@@ -370,13 +360,36 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * The date at which the program stops collecting applications for the next enrollment cycle.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
-    function setApplicationDeadline($value)
+    function setOccupationalCredentialAwarded($value)
     {
-        return $this->setProp('applicationDeadline', $value);
+        return $this->setProp('occupationalCredentialAwarded', $value);
+    }
+
+    /**
+     * Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a
+     * text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from
+     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setEducationalProgramMode($value)
+    {
+        return $this->setProp('educationalProgramMode', $value);
+    }
+
+    /**
+     * The type of educational or occupational program. For example, classroom, internship, alternance, etc.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setProgramType($value)
+    {
+        return $this->setProp('programType', $value);
     }
 
     /**
@@ -390,14 +403,23 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential $value
+     * The estimated salary earned while in the program.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
      * @return static
      */
-    function setOccupationalCredentialAwarded($value)
+    function setTrainingSalary($value)
     {
-        return $this->setProp('occupationalCredentialAwarded', $value);
+        return $this->setProp('trainingSalary', $value);
+    }
+
+    /**
+     * The expected salary upon completing the training.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution $value
+     * @return static
+     */
+    function setSalaryUponCompletion($value)
+    {
+        return $this->setProp('salaryUponCompletion', $value);
     }
 
     /**
@@ -411,25 +433,68 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a
-     * text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from
-     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * The date at which the program stops collecting applications for the next enrollment cycle.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
-    function setEducationalProgramMode($value)
+    function getApplicationDeadline()
     {
-        return $this->setProp('educationalProgramMode', $value);
+        return $this->getProp('applicationDeadline');
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
+     * on behalf of the provider. A provider may also serve as the seller.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getProvider()
+    {
+        return $this->getProp('provider');
     }
 
     /**
      * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setFinancialAidEligible($value)
+    function getFinancialAidEligible()
     {
-        return $this->setProp('financialAidEligible', $value);
+        return $this->getProp('financialAidEligible');
+    }
+
+    /**
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getStartDate()
+    {
+        return $this->getProp('startDate');
+    }
+
+    /**
+     * The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined
+     * by the institution.
+     * @return string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getTypicalCreditsPerTerm()
+    {
+        return $this->getProp('typicalCreditsPerTerm');
+    }
+
+    /**
+     * The time of day the program normally runs. For example, "evenings".
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTimeOfDay()
+    {
+        return $this->getProp('timeOfDay');
+    }
+
+    /**
+     * Prerequisites for enrolling in the program.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course|null
+     */
+    function getProgramPrerequisites()
+    {
+        return $this->getProp('programPrerequisites');
     }
 
     /**
@@ -439,6 +504,37 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     function getTimeToComplete()
     {
         return $this->getProp('timeToComplete');
+    }
+
+    /**
+     * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getEducationalCredentialAwarded()
+    {
+        return $this->getProp('educationalCredentialAwarded');
+    }
+
+    /**
+     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
+     * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
+     * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
+     * assumed to be from O*NET-SOC.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|null
+     */
+    function getOccupationalCategory()
+    {
+        return $this->getProp('occupationalCategory');
+    }
+
+    /**
+     * The day of the week for which these opening hours are valid.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek|null
+     */
+    function getDayOfWeek()
+    {
+        return $this->getProp('dayOfWeek');
     }
 
     /**
@@ -452,65 +548,12 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * The type of educational or occupational program. For example, classroom, internship, alternance, etc.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+     * @return string|int|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
-    function getProgramType()
+    function getNumberOfCredits()
     {
-        return $this->getProp('programType');
-    }
-
-    /**
-     * A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the
-     * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
-     * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
-     * assumed to be from O*NET-SOC.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getOccupationalCategory()
-    {
-        return $this->getProp('occupationalCategory');
-    }
-
-    /**
-     * The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined
-     * by the institution.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|null
-     */
-    function getTypicalCreditsPerTerm()
-    {
-        return $this->getProp('typicalCreditsPerTerm');
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
-     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
-     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
-     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
-     * of Product, can clarify the nature of the offer. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|null
-     */
-    function getOffers()
-    {
-        return $this->getProp('offers');
-    }
-
-    /**
-     * The day of the week for which these opening hours are valid.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DayOfWeek\DayOfWeek|null
-     */
-    function getDayOfWeek()
-    {
-        return $this->getProp('dayOfWeek');
-    }
-
-    /**
-     * The time of day the program normally runs. For example, "evenings".
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getTimeOfDay()
-    {
-        return $this->getProp('timeOfDay');
+        return $this->getProp('numberOfCredits');
     }
 
     /**
@@ -525,50 +568,16 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * Prerequisites for enrolling in the program.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Course|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\AlignmentObject|null
+     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
+     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
+     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
+     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
+     * of Product, can clarify the nature of the offer. 
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|\Vnetby\Schemaorg\Types\Thing\Intangible\Demand|null
      */
-    function getProgramPrerequisites()
+    function getOffers()
     {
-        return $this->getProp('programPrerequisites');
-    }
-
-    /**
-     * A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|null
-     */
-    function getEducationalCredentialAwarded()
-    {
-        return $this->getProp('educationalCredentialAwarded');
-    }
-
-    /**
-     * The estimated salary earned while in the program.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
-     */
-    function getTrainingSalary()
-    {
-        return $this->getProp('trainingSalary');
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
-     * on behalf of the provider. A provider may also serve as the seller.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getProvider()
-    {
-        return $this->getProp('provider');
-    }
-
-    /**
-     * The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\StructuredValue|null
-     */
-    function getNumberOfCredits()
-    {
-        return $this->getProp('numberOfCredits');
+        return $this->getProp('offers');
     }
 
     /**
@@ -582,24 +591,6 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getStartDate()
-    {
-        return $this->getProp('startDate');
-    }
-
-    /**
-     * The expected salary upon completing the training.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
-     */
-    function getSalaryUponCompletion()
-    {
-        return $this->getProp('salaryUponCompletion');
-    }
-
-    /**
      * The maximum number of students who may be enrolled in the program.
      * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
@@ -609,12 +600,33 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * The date at which the program stops collecting applications for the next enrollment cycle.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
+     * course or program.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function getApplicationDeadline()
+    function getOccupationalCredentialAwarded()
     {
-        return $this->getProp('applicationDeadline');
+        return $this->getProp('occupationalCredentialAwarded');
+    }
+
+    /**
+     * Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a
+     * text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from
+     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getEducationalProgramMode()
+    {
+        return $this->getProp('educationalProgramMode');
+    }
+
+    /**
+     * The type of educational or occupational program. For example, classroom, internship, alternance, etc.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getProgramType()
+    {
+        return $this->getProp('programType');
     }
 
     /**
@@ -627,13 +639,21 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     }
 
     /**
-     * A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this
-     * course or program.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\EducationalOccupationalCredential|null
+     * The estimated salary earned while in the program.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
      */
-    function getOccupationalCredentialAwarded()
+    function getTrainingSalary()
     {
-        return $this->getProp('occupationalCredentialAwarded');
+        return $this->getProp('trainingSalary');
+    }
+
+    /**
+     * The expected salary upon completing the training.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValueDistribution\MonetaryAmountDistribution|null
+     */
+    function getSalaryUponCompletion()
+    {
+        return $this->getProp('salaryUponCompletion');
     }
 
     /**
@@ -643,25 +663,5 @@ class EducationalOccupationalProgram extends \Vnetby\Schemaorg\Types\Thing\Intan
     function getEndDate()
     {
         return $this->getProp('endDate');
-    }
-
-    /**
-     * Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a
-     * text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from
-     * a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getEducationalProgramMode()
-    {
-        return $this->getProp('educationalProgramMode');
-    }
-
-    /**
-     * A financial aid type or program which students may use to pay for tuition or fees associated with the program.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-     */
-    function getFinancialAidEligible()
-    {
-        return $this->getProp('financialAidEligible');
     }
 }

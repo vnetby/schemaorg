@@ -13,12 +13,6 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
     const TYPE = 'LocationFeatureSpecification';
 
     /**
-     * The date when the item becomes valid.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $validFrom;
-
-    /**
      * The hours during which this service or contact is available.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
      */
@@ -33,13 +27,9 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * The date when the item becomes valid.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    function setValidFrom($value)
-    {
-        return $this->setProp('validFrom', $value);
-    }
+    public $validFrom;
 
     /**
      * The hours during which this service or contact is available.
@@ -64,11 +54,12 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
 
     /**
      * The date when the item becomes valid.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    function getValidFrom()
+    function setValidFrom($value)
     {
-        return $this->getProp('validFrom');
+        return $this->setProp('validFrom', $value);
     }
 
     /**
@@ -88,5 +79,14 @@ class LocationFeatureSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangi
     function getValidThrough()
     {
         return $this->getProp('validThrough');
+    }
+
+    /**
+     * The date when the item becomes valid.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getValidFrom()
+    {
+        return $this->getProp('validFrom');
     }
 }

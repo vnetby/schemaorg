@@ -13,10 +13,11 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     const TYPE = 'Gene';
 
     /**
-     * Another BioChemEntity encoded by this one. 
-     * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
+     * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
+     * Protein.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $encodesBioChemEntity;
+    public $hasBioPolymerSequence;
 
     /**
      * Another gene which is a variation of this one.
@@ -25,37 +26,16 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     public $alternativeOf;
 
     /**
-     * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
-     * Protein.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $hasBioPolymerSequence;
-
-    /**
      * Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
+     * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem
      */
     public $expressedIn;
 
     /**
      * Another BioChemEntity encoded by this one. 
-     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
      */
-    function setEncodesBioChemEntity($value)
-    {
-        return $this->setProp('encodesBioChemEntity', $value);
-    }
-
-    /**
-     * Another gene which is a variation of this one.
-     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\Gene $value
-     * @return static
-     */
-    function setAlternativeOf($value)
-    {
-        return $this->setProp('alternativeOf', $value);
-    }
+    public $encodesBioChemEntity;
 
     /**
      * A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a
@@ -69,8 +49,18 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     }
 
     /**
+     * Another gene which is a variation of this one.
+     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\Gene $value
+     * @return static
+     */
+    function setAlternativeOf($value)
+    {
+        return $this->setProp('alternativeOf', $value);
+    }
+
+    /**
      * Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
+     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem $value
      * @return static
      */
     function setExpressedIn($value)
@@ -80,20 +70,12 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
 
     /**
      * Another BioChemEntity encoded by this one. 
-     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
+     * @param \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity $value
+     * @return static
      */
-    function getEncodesBioChemEntity()
+    function setEncodesBioChemEntity($value)
     {
-        return $this->getProp('encodesBioChemEntity');
-    }
-
-    /**
-     * Another gene which is a variation of this one.
-     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\Gene|null
-     */
-    function getAlternativeOf()
-    {
-        return $this->getProp('alternativeOf');
+        return $this->setProp('encodesBioChemEntity', $value);
     }
 
     /**
@@ -107,11 +89,29 @@ class Gene extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity
     }
 
     /**
+     * Another gene which is a variation of this one.
+     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\Gene|null
+     */
+    function getAlternativeOf()
+    {
+        return $this->getProp('alternativeOf');
+    }
+
+    /**
      * Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
+     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|null
      */
     function getExpressedIn()
     {
         return $this->getProp('expressedIn');
+    }
+
+    /**
+     * Another BioChemEntity encoded by this one. 
+     * @return \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChemEntity|null
+     */
+    function getEncodesBioChemEntity()
+    {
+        return $this->getProp('encodesBioChemEntity');
     }
 }

@@ -12,6 +12,24 @@ class SportsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     const TYPE = 'SportsEvent';
 
     /**
+     * A type of sport (e.g. Baseball).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $sport;
+
+    /**
+     * A competitor in a sports event.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $competitor;
+
+    /**
+     * The away team in a sports event.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $awayTeam;
+
+    /**
      * The home team in a sports event.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
@@ -19,21 +37,33 @@ class SportsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * A type of sport (e.g. Baseball).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
      */
-    public $sport;
+    function setSport($value)
+    {
+        return $this->setProp('sport', $value);
+    }
 
     /**
      * A competitor in a sports event.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
      */
-    public $competitor;
+    function setCompetitor($value)
+    {
+        return $this->setProp('competitor', $value);
+    }
 
     /**
      * The away team in a sports event.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
      */
-    public $awayTeam;
+    function setAwayTeam($value)
+    {
+        return $this->setProp('awayTeam', $value);
+    }
 
     /**
      * The home team in a sports event.
@@ -47,32 +77,29 @@ class SportsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
 
     /**
      * A type of sport (e.g. Baseball).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function setSport($value)
+    function getSport()
     {
-        return $this->setProp('sport', $value);
+        return $this->getProp('sport');
     }
 
     /**
      * A competitor in a sports event.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam $value
-     * @return static
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
-    function setCompetitor($value)
+    function getCompetitor()
     {
-        return $this->setProp('competitor', $value);
+        return $this->getProp('competitor');
     }
 
     /**
      * The away team in a sports event.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam $value
-     * @return static
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
-    function setAwayTeam($value)
+    function getAwayTeam()
     {
-        return $this->setProp('awayTeam', $value);
+        return $this->getProp('awayTeam');
     }
 
     /**
@@ -82,32 +109,5 @@ class SportsEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     function getHomeTeam()
     {
         return $this->getProp('homeTeam');
-    }
-
-    /**
-     * A type of sport (e.g. Baseball).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getSport()
-    {
-        return $this->getProp('sport');
-    }
-
-    /**
-     * A competitor in a sports event.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|null
-     */
-    function getCompetitor()
-    {
-        return $this->getProp('competitor');
-    }
-
-    /**
-     * The away team in a sports event.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\SportsOrganization\SportsTeam|null
-     */
-    function getAwayTeam()
-    {
-        return $this->getProp('awayTeam');
     }
 }

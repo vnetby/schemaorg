@@ -14,6 +14,34 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     const TYPE = 'ShippingRateSettings';
 
     /**
+     * A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]]
+     * matching this [[ShippingRateSettings]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\DeliveryChargeSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
+     */
+    public $freeShippingThreshold;
+
+    /**
+     * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
+     * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
+     * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     */
+    public $isUnlabelledFallback;
+
+    /**
+     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
+     * are most appropriate.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
+     */
+    public $shippingRate;
+
+    /**
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $shippingLabel;
+
+    /**
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
@@ -28,30 +56,46 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     /**
      * A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]]
      * matching this [[ShippingRateSettings]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\DeliveryChargeSpecification
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\DeliveryChargeSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
+     * @return static
      */
-    public $freeShippingThreshold;
-
-    /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $shippingLabel;
-
-    /**
-     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
-     * are most appropriate.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
-     */
-    public $shippingRate;
+    function setFreeShippingThreshold($value)
+    {
+        return $this->setProp('freeShippingThreshold', $value);
+    }
 
     /**
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @return static
      */
-    public $isUnlabelledFallback;
+    function setIsUnlabelledFallback($value)
+    {
+        return $this->setProp('isUnlabelledFallback', $value);
+    }
+
+    /**
+     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
+     * are most appropriate.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
+     * @return static
+     */
+    function setShippingRate($value)
+    {
+        return $this->setProp('shippingRate', $value);
+    }
+
+    /**
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setShippingLabel($value)
+    {
+        return $this->setProp('shippingLabel', $value);
+    }
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
@@ -76,45 +120,41 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     /**
      * A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]]
      * matching this [[ShippingRateSettings]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\DeliveryChargeSpecification $value
-     * @return static
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\DeliveryChargeSpecification|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
      */
-    function setFreeShippingThreshold($value)
+    function getFreeShippingThreshold()
     {
-        return $this->setProp('freeShippingThreshold', $value);
-    }
-
-    /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setShippingLabel($value)
-    {
-        return $this->setProp('shippingLabel', $value);
-    }
-
-    /**
-     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
-     * are most appropriate.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount $value
-     * @return static
-     */
-    function setShippingRate($value)
-    {
-        return $this->setProp('shippingRate', $value);
+        return $this->getProp('freeShippingThreshold');
     }
 
     /**
      * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
      * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
      * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
-    function setIsUnlabelledFallback($value)
+    function getIsUnlabelledFallback()
     {
-        return $this->setProp('isUnlabelledFallback', $value);
+        return $this->getProp('isUnlabelledFallback');
+    }
+
+    /**
+     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
+     * are most appropriate.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
+     */
+    function getShippingRate()
+    {
+        return $this->getProp('shippingRate');
+    }
+
+    /**
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getShippingLabel()
+    {
+        return $this->getProp('shippingLabel');
     }
 
     /**
@@ -133,45 +173,5 @@ class ShippingRateSettings extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     function getDoesNotShip()
     {
         return $this->getProp('doesNotShip');
-    }
-
-    /**
-     * A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]]
-     * matching this [[ShippingRateSettings]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\DeliveryChargeSpecification|null
-     */
-    function getFreeShippingThreshold()
-    {
-        return $this->getProp('freeShippingThreshold');
-    }
-
-    /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getShippingLabel()
-    {
-        return $this->getProp('shippingLabel');
-    }
-
-    /**
-     * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
-     * are most appropriate.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|null
-     */
-    function getShippingRate()
-    {
-        return $this->getProp('shippingRate');
-    }
-
-    /**
-     * This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published
-     * by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value
-     * for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
-     */
-    function getIsUnlabelledFallback()
-    {
-        return $this->getProp('isUnlabelledFallback');
     }
 }

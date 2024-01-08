@@ -20,16 +20,16 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
     public $infectiousAgent;
 
     /**
-     * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass
-     */
-    public $infectiousAgentClass;
-
-    /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $transmissionMethod;
+
+    /**
+     * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass
+     */
+    public $infectiousAgentClass;
 
     /**
      * The actual infectious agent, such as a specific bacterium.
@@ -39,16 +39,6 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
     function setInfectiousAgent($value)
     {
         return $this->setProp('infectiousAgent', $value);
-    }
-
-    /**
-     * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass $value
-     * @return static
-     */
-    function setInfectiousAgentClass($value)
-    {
-        return $this->setProp('infectiousAgentClass', $value);
     }
 
     /**
@@ -62,6 +52,16 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
     }
 
     /**
+     * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass $value
+     * @return static
+     */
+    function setInfectiousAgentClass($value)
+    {
+        return $this->setProp('infectiousAgentClass', $value);
+    }
+
+    /**
      * The actual infectious agent, such as a specific bacterium.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
@@ -71,20 +71,20 @@ class InfectiousDisease extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medi
     }
 
     /**
-     * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass|null
-     */
-    function getInfectiousAgentClass()
-    {
-        return $this->getProp('infectiousAgentClass');
-    }
-
-    /**
      * How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getTransmissionMethod()
     {
         return $this->getProp('transmissionMethod');
+    }
+
+    /**
+     * The class of infectious agent (bacteria, prion, etc.) that causes the disease.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\InfectiousAgentClass\InfectiousAgentClass|null
+     */
+    function getInfectiousAgentClass()
+    {
+        return $this->getProp('infectiousAgentClass');
     }
 }

@@ -12,11 +12,49 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     const TYPE = 'Place';
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined
-     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
      */
-    public $geoCoveredBy;
+    public $aggregateRating;
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
+     * real estate setting, as well as other kinds of tours as appropriate.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $tourBookingPage;
+
+    /**
+     * An associated logo.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $logo;
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
+     * the feature is included in an offer for the main accommodation or available at extra costs.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification
+     */
+    public $amenityFeature;
+
+    /**
+     * Physical address of the item.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $address;
+
+    /**
+     * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
+     * by repeating the property.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $keywords;
+
+    /**
+     * A slogan or motto associated with the item.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $slogan;
 
     /**
      * Represents a relationship between two geometries (or the places they represent), relating a containing geometry to a contained geometry. "a contains
@@ -27,28 +65,12 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $geoContains;
 
     /**
-     * Upcoming or past event associated with this place, organization, or action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
+     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is
+     * no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13,
+     * ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. 
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
      */
-    public $event;
-
-    /**
-     * A flag to signal that the item, event, or place is accessible for free.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $isAccessibleForFree;
-
-    /**
-     * The telephone number.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $telephone;
-
-    /**
-     * The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $latitude;
+    public $additionalProperty;
 
     /**
      * The basic containment relation between a place and one that contains it.
@@ -57,9 +79,50 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $containedInPlace;
 
     /**
+     * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
+     * place.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $isicV4;
+
+    /**
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it
+     * is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     */
+    public $geoWithin;
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries
+     * are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior
+     * of the other" (a symmetric relationship).
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
+     */
+    public $geoEquals;
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common.
+     * They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
+     */
+    public $geoDisjoint;
+
+    /**
+     * The basic containment relation between a place and another that it contains.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
+     */
+    public $containsPlace;
+
+    /**
+     * A review of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
+     */
+    public $review;
+
+    /**
      * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e.
      * they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
     public $geoOverlaps;
 
@@ -70,33 +133,18 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $maximumAttendeeCapacity;
 
     /**
-     * Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In
-     * the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $hasDriveThroughService;
-
-    /**
-     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
-     * place. The GLN is a 13-digit number used to identify parties and physical locations.
+     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by
+     * the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular
+     * branch. 
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $globalLocationNumber;
+    public $branchCode;
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses
-     * b: they have some but not all interior points in common, and the dimension of the intersection is less than that
-     * of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    public $geoCrosses;
-
-    /**
-     * Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined
-     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
-     */
-    public $geoIntersects;
+    public $smokingAllowed;
 
     /**
      * The special opening hours of a certain place.\n\nUse this to explicitly override general opening hours brought in scope by [[openingHoursSpecification]] or
@@ -106,111 +154,37 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $specialOpeningHoursSpecification;
 
     /**
-     * The opening hours of a certain place.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
-     */
-    public $openingHoursSpecification;
-
-    /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it
-     * is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point
+     * of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    public $geoWithin;
+    public $geoCovers;
 
     /**
-     * The fax number.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In
+     * the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    public $faxNumber;
+    public $hasDriveThroughService;
 
     /**
-     * The basic containment relation between a place and another that it contains.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
+     * Upcoming or past event associated with this place, organization, or action.
+     * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    public $containsPlace;
+    public $event;
 
     /**
-     * Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common.
-     * They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
+     * The geo coordinates of the place.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoCoordinates
      */
-    public $geoDisjoint;
+    public $geo;
 
     /**
-     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by
-     * the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular
-     * branch. 
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $branchCode;
-
-    /**
-     * A URL to a map of the place.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Map|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $hasMap;
-
-    /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
-     */
-    public $aggregateRating;
-
-    /**
-     * Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries
-     * are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior
-     * of the other" (a symmetric relationship).
+     * Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined
+     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    public $geoEquals;
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
-     * the feature is included in an offer for the main accommodation or available at extra costs.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification
-     */
-    public $amenityFeature;
-
-    /**
-     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is
-     * no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13,
-     * ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
-     */
-    public $additionalProperty;
-
-    /**
-     * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
-     * by repeating the property.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $keywords;
-
-    /**
-     * The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $longitude;
-
-    /**
-     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
-     * real estate setting, as well as other kinds of tours as appropriate.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $tourBookingPage;
-
-    /**
-     * A review of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
-     */
-    public $review;
-
-    /**
-     * Physical address of the item.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $address;
+    public $geoIntersects;
 
     /**
      * A flag to signal that the [[Place]] is open to public visitors. If this property is omitted there is no assumed
@@ -220,30 +194,56 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $publicAccess;
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point
-     * of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
-     */
-    public $geoCovers;
-
-    /**
-     * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
-     * place.
+     * The telephone number.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $isicV4;
+    public $telephone;
 
     /**
-     * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses
+     * b: they have some but not all interior points in common, and the dimension of the intersection is less than that
+     * of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
      */
-    public $smokingAllowed;
+    public $geoCrosses;
+
+    /**
+     * The opening hours of a certain place.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
+     */
+    public $openingHoursSpecification;
+
+    /**
+     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
+     * place. The GLN is a 13-digit number used to identify parties and physical locations.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $globalLocationNumber;
 
     /**
      * A photograph of this place.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Photograph|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject
      */
     public $photo;
+
+    /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $longitude;
+
+    /**
+     * The fax number.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $faxNumber;
+
+    /**
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined
+     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry
+     */
+    public $geoCoveredBy;
 
     /**
      * Represents spatial relations in which two geometries (or the places they represent) touch: "they have at least one boundary point in
@@ -253,32 +253,94 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $geoTouches;
 
     /**
-     * The geo coordinates of the place.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoCoordinates|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape
+     * The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $geo;
+    public $latitude;
 
     /**
-     * A slogan or motto associated with the item.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * A flag to signal that the item, event, or place is accessible for free.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    public $slogan;
+    public $isAccessibleForFree;
+
+    /**
+     * A URL to a map of the place.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Map|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $hasMap;
+
+    /**
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating $value
+     * @return static
+     */
+    function setAggregateRating($value)
+    {
+        return $this->setProp('aggregateRating', $value);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
+     * real estate setting, as well as other kinds of tours as appropriate.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setTourBookingPage($value)
+    {
+        return $this->setProp('tourBookingPage', $value);
+    }
 
     /**
      * An associated logo.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $logo;
-
-    /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined
-     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
-    function setGeoCoveredBy($value)
+    function setLogo($value)
     {
-        return $this->setProp('geoCoveredBy', $value);
+        return $this->setProp('logo', $value);
+    }
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
+     * the feature is included in an offer for the main accommodation or available at extra costs.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification $value
+     * @return static
+     */
+    function setAmenityFeature($value)
+    {
+        return $this->setProp('amenityFeature', $value);
+    }
+
+    /**
+     * Physical address of the item.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setAddress($value)
+    {
+        return $this->setProp('address', $value);
+    }
+
+    /**
+     * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
+     * by repeating the property.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setKeywords($value)
+    {
+        return $this->setProp('keywords', $value);
+    }
+
+    /**
+     * A slogan or motto associated with the item.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setSlogan($value)
+    {
+        return $this->setProp('slogan', $value);
     }
 
     /**
@@ -294,43 +356,15 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Upcoming or past event associated with this place, organization, or action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Event\Event $value
+     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is
+     * no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13,
+     * ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. 
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue $value
      * @return static
      */
-    function setEvent($value)
+    function setAdditionalProperty($value)
     {
-        return $this->setProp('event', $value);
-    }
-
-    /**
-     * A flag to signal that the item, event, or place is accessible for free.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
-     */
-    function setIsAccessibleForFree($value)
-    {
-        return $this->setProp('isAccessibleForFree', $value);
-    }
-
-    /**
-     * The telephone number.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setTelephone($value)
-    {
-        return $this->setProp('telephone', $value);
-    }
-
-    /**
-     * The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setLatitude($value)
-    {
-        return $this->setProp('latitude', $value);
+        return $this->setProp('additionalProperty', $value);
     }
 
     /**
@@ -344,9 +378,74 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
+     * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
+     * place.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setIsicV4($value)
+    {
+        return $this->setProp('isicV4', $value);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it
+     * is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @return static
+     */
+    function setGeoWithin($value)
+    {
+        return $this->setProp('geoWithin', $value);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries
+     * are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior
+     * of the other" (a symmetric relationship).
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
+     * @return static
+     */
+    function setGeoEquals($value)
+    {
+        return $this->setProp('geoEquals', $value);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common.
+     * They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
+     * @return static
+     */
+    function setGeoDisjoint($value)
+    {
+        return $this->setProp('geoDisjoint', $value);
+    }
+
+    /**
+     * The basic containment relation between a place and another that it contains.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @return static
+     */
+    function setContainsPlace($value)
+    {
+        return $this->setProp('containsPlace', $value);
+    }
+
+    /**
+     * A review of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review $value
+     * @return static
+     */
+    function setReview($value)
+    {
+        return $this->setProp('review', $value);
+    }
+
+    /**
      * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e.
      * they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setGeoOverlaps($value)
@@ -365,48 +464,25 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In
-     * the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
-     */
-    function setHasDriveThroughService($value)
-    {
-        return $this->setProp('hasDriveThroughService', $value);
-    }
-
-    /**
-     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
-     * place. The GLN is a 13-digit number used to identify parties and physical locations.
+     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by
+     * the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular
+     * branch. 
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setGlobalLocationNumber($value)
+    function setBranchCode($value)
     {
-        return $this->setProp('globalLocationNumber', $value);
+        return $this->setProp('branchCode', $value);
     }
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses
-     * b: they have some but not all interior points in common, and the dimension of the intersection is less than that
-     * of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
-    function setGeoCrosses($value)
+    function setSmokingAllowed($value)
     {
-        return $this->setProp('geoCrosses', $value);
-    }
-
-    /**
-     * Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined
-     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
-     * @return static
-     */
-    function setGeoIntersects($value)
-    {
-        return $this->setProp('geoIntersects', $value);
+        return $this->setProp('smokingAllowed', $value);
     }
 
     /**
@@ -421,174 +497,56 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The opening hours of a certain place.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification $value
-     * @return static
-     */
-    function setOpeningHoursSpecification($value)
-    {
-        return $this->setProp('openingHoursSpecification', $value);
-    }
-
-    /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it
-     * is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point
+     * of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
      * @return static
      */
-    function setGeoWithin($value)
+    function setGeoCovers($value)
     {
-        return $this->setProp('geoWithin', $value);
+        return $this->setProp('geoCovers', $value);
     }
 
     /**
-     * The fax number.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In
+     * the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
-    function setFaxNumber($value)
+    function setHasDriveThroughService($value)
     {
-        return $this->setProp('faxNumber', $value);
+        return $this->setProp('hasDriveThroughService', $value);
     }
 
     /**
-     * The basic containment relation between a place and another that it contains.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * Upcoming or past event associated with this place, organization, or action.
+     * @param \Vnetby\Schemaorg\Types\Thing\Event\Event $value
      * @return static
      */
-    function setContainsPlace($value)
+    function setEvent($value)
     {
-        return $this->setProp('containsPlace', $value);
+        return $this->setProp('event', $value);
     }
 
     /**
-     * Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common.
-     * They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
+     * The geo coordinates of the place.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoCoordinates $value
      * @return static
      */
-    function setGeoDisjoint($value)
+    function setGeo($value)
     {
-        return $this->setProp('geoDisjoint', $value);
+        return $this->setProp('geo', $value);
     }
 
     /**
-     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by
-     * the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular
-     * branch. 
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setBranchCode($value)
-    {
-        return $this->setProp('branchCode', $value);
-    }
-
-    /**
-     * A URL to a map of the place.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Map|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setHasMap($value)
-    {
-        return $this->setProp('hasMap', $value);
-    }
-
-    /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating $value
-     * @return static
-     */
-    function setAggregateRating($value)
-    {
-        return $this->setProp('aggregateRating', $value);
-    }
-
-    /**
-     * Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries
-     * are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior
-     * of the other" (a symmetric relationship).
+     * Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined
+     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
-    function setGeoEquals($value)
+    function setGeoIntersects($value)
     {
-        return $this->setProp('geoEquals', $value);
-    }
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
-     * the feature is included in an offer for the main accommodation or available at extra costs.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification $value
-     * @return static
-     */
-    function setAmenityFeature($value)
-    {
-        return $this->setProp('amenityFeature', $value);
-    }
-
-    /**
-     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is
-     * no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13,
-     * ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue $value
-     * @return static
-     */
-    function setAdditionalProperty($value)
-    {
-        return $this->setProp('additionalProperty', $value);
-    }
-
-    /**
-     * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
-     * by repeating the property.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
-     */
-    function setKeywords($value)
-    {
-        return $this->setProp('keywords', $value);
-    }
-
-    /**
-     * The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setLongitude($value)
-    {
-        return $this->setProp('longitude', $value);
-    }
-
-    /**
-     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
-     * real estate setting, as well as other kinds of tours as appropriate.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setTourBookingPage($value)
-    {
-        return $this->setProp('tourBookingPage', $value);
-    }
-
-    /**
-     * A review of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review $value
-     * @return static
-     */
-    function setReview($value)
-    {
-        return $this->setProp('review', $value);
-    }
-
-    /**
-     * Physical address of the item.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setAddress($value)
-    {
-        return $this->setProp('address', $value);
+        return $this->setProp('geoIntersects', $value);
     }
 
     /**
@@ -603,35 +561,46 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point
-     * of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
-     * @return static
-     */
-    function setGeoCovers($value)
-    {
-        return $this->setProp('geoCovers', $value);
-    }
-
-    /**
-     * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
-     * place.
+     * The telephone number.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setIsicV4($value)
+    function setTelephone($value)
     {
-        return $this->setProp('isicV4', $value);
+        return $this->setProp('telephone', $value);
     }
 
     /**
-     * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses
+     * b: they have some but not all interior points in common, and the dimension of the intersection is less than that
+     * of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
      * @return static
      */
-    function setSmokingAllowed($value)
+    function setGeoCrosses($value)
     {
-        return $this->setProp('smokingAllowed', $value);
+        return $this->setProp('geoCrosses', $value);
+    }
+
+    /**
+     * The opening hours of a certain place.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification $value
+     * @return static
+     */
+    function setOpeningHoursSpecification($value)
+    {
+        return $this->setProp('openingHoursSpecification', $value);
+    }
+
+    /**
+     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
+     * place. The GLN is a 13-digit number used to identify parties and physical locations.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setGlobalLocationNumber($value)
+    {
+        return $this->setProp('globalLocationNumber', $value);
     }
 
     /**
@@ -642,6 +611,37 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     function setPhoto($value)
     {
         return $this->setProp('photo', $value);
+    }
+
+    /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setLongitude($value)
+    {
+        return $this->setProp('longitude', $value);
+    }
+
+    /**
+     * The fax number.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setFaxNumber($value)
+    {
+        return $this->setProp('faxNumber', $value);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined
+     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry $value
+     * @return static
+     */
+    function setGeoCoveredBy($value)
+    {
+        return $this->setProp('geoCoveredBy', $value);
     }
 
     /**
@@ -656,43 +656,99 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The geo coordinates of the place.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoCoordinates|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape $value
+     * The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setGeo($value)
+    function setLatitude($value)
     {
-        return $this->setProp('geo', $value);
+        return $this->setProp('latitude', $value);
     }
 
     /**
-     * A slogan or motto associated with the item.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * A flag to signal that the item, event, or place is accessible for free.
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
-    function setSlogan($value)
+    function setIsAccessibleForFree($value)
     {
-        return $this->setProp('slogan', $value);
+        return $this->setProp('isAccessibleForFree', $value);
+    }
+
+    /**
+     * A URL to a map of the place.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Map|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setHasMap($value)
+    {
+        return $this->setProp('hasMap', $value);
+    }
+
+    /**
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating|null
+     */
+    function getAggregateRating()
+    {
+        return $this->getProp('aggregateRating');
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
+     * real estate setting, as well as other kinds of tours as appropriate.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getTourBookingPage()
+    {
+        return $this->getProp('tourBookingPage');
     }
 
     /**
      * An associated logo.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function setLogo($value)
+    function getLogo()
     {
-        return $this->setProp('logo', $value);
+        return $this->getProp('logo');
     }
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined
-     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
+     * the feature is included in an offer for the main accommodation or available at extra costs.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification|null
      */
-    function getGeoCoveredBy()
+    function getAmenityFeature()
     {
-        return $this->getProp('geoCoveredBy');
+        return $this->getProp('amenityFeature');
+    }
+
+    /**
+     * Physical address of the item.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getAddress()
+    {
+        return $this->getProp('address');
+    }
+
+    /**
+     * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
+     * by repeating the property.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getKeywords()
+    {
+        return $this->getProp('keywords');
+    }
+
+    /**
+     * A slogan or motto associated with the item.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getSlogan()
+    {
+        return $this->getProp('slogan');
     }
 
     /**
@@ -707,39 +763,14 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Upcoming or past event associated with this place, organization, or action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Event\Event|null
+     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is
+     * no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13,
+     * ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. 
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|null
      */
-    function getEvent()
+    function getAdditionalProperty()
     {
-        return $this->getProp('event');
-    }
-
-    /**
-     * A flag to signal that the item, event, or place is accessible for free.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
-     */
-    function getIsAccessibleForFree()
-    {
-        return $this->getProp('isAccessibleForFree');
-    }
-
-    /**
-     * The telephone number.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getTelephone()
-    {
-        return $this->getProp('telephone');
-    }
-
-    /**
-     * The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getLatitude()
-    {
-        return $this->getProp('latitude');
+        return $this->getProp('additionalProperty');
     }
 
     /**
@@ -752,9 +783,68 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
+     * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
+     * place.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getIsicV4()
+    {
+        return $this->getProp('isicV4');
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it
+     * is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     */
+    function getGeoWithin()
+    {
+        return $this->getProp('geoWithin');
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries
+     * are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior
+     * of the other" (a symmetric relationship).
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
+     */
+    function getGeoEquals()
+    {
+        return $this->getProp('geoEquals');
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common.
+     * They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
+     */
+    function getGeoDisjoint()
+    {
+        return $this->getProp('geoDisjoint');
+    }
+
+    /**
+     * The basic containment relation between a place and another that it contains.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     */
+    function getContainsPlace()
+    {
+        return $this->getProp('containsPlace');
+    }
+
+    /**
+     * A review of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review|null
+     */
+    function getReview()
+    {
+        return $this->getProp('review');
+    }
+
+    /**
      * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e.
      * they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getGeoOverlaps()
     {
@@ -771,44 +861,23 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In
-     * the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
-     */
-    function getHasDriveThroughService()
-    {
-        return $this->getProp('hasDriveThroughService');
-    }
-
-    /**
-     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
-     * place. The GLN is a 13-digit number used to identify parties and physical locations.
+     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by
+     * the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular
+     * branch. 
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getGlobalLocationNumber()
+    function getBranchCode()
     {
-        return $this->getProp('globalLocationNumber');
+        return $this->getProp('branchCode');
     }
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses
-     * b: they have some but not all interior points in common, and the dimension of the intersection is less than that
-     * of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
-    function getGeoCrosses()
+    function getSmokingAllowed()
     {
-        return $this->getProp('geoCrosses');
-    }
-
-    /**
-     * Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined
-     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
-     */
-    function getGeoIntersects()
-    {
-        return $this->getProp('geoIntersects');
+        return $this->getProp('smokingAllowed');
     }
 
     /**
@@ -822,158 +891,51 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The opening hours of a certain place.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification|null
-     */
-    function getOpeningHoursSpecification()
-    {
-        return $this->getProp('openingHoursSpecification');
-    }
-
-    /**
-     * Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it
-     * is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point
+     * of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
      */
-    function getGeoWithin()
+    function getGeoCovers()
     {
-        return $this->getProp('geoWithin');
+        return $this->getProp('geoCovers');
     }
 
     /**
-     * The fax number.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In
+     * the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
-    function getFaxNumber()
+    function getHasDriveThroughService()
     {
-        return $this->getProp('faxNumber');
+        return $this->getProp('hasDriveThroughService');
     }
 
     /**
-     * The basic containment relation between a place and another that it contains.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * Upcoming or past event associated with this place, organization, or action.
+     * @return \Vnetby\Schemaorg\Types\Thing\Event\Event|null
      */
-    function getContainsPlace()
+    function getEvent()
     {
-        return $this->getProp('containsPlace');
+        return $this->getProp('event');
     }
 
     /**
-     * Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common.
-     * They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
+     * The geo coordinates of the place.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoCoordinates|null
      */
-    function getGeoDisjoint()
+    function getGeo()
     {
-        return $this->getProp('geoDisjoint');
+        return $this->getProp('geo');
     }
 
     /**
-     * A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by
-     * the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular
-     * branch. 
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getBranchCode()
-    {
-        return $this->getProp('branchCode');
-    }
-
-    /**
-     * A URL to a map of the place.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Map|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getHasMap()
-    {
-        return $this->getProp('hasMap');
-    }
-
-    /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating|null
-     */
-    function getAggregateRating()
-    {
-        return $this->getProp('aggregateRating');
-    }
-
-    /**
-     * Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries
-     * are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior
-     * of the other" (a symmetric relationship).
+     * Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined
+     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
-    function getGeoEquals()
+    function getGeoIntersects()
     {
-        return $this->getProp('geoEquals');
-    }
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether
-     * the feature is included in an offer for the main accommodation or available at extra costs.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification|null
-     */
-    function getAmenityFeature()
-    {
-        return $this->getProp('amenityFeature');
-    }
-
-    /**
-     * A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is
-     * no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13,
-     * ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|null
-     */
-    function getAdditionalProperty()
-    {
-        return $this->getProp('additionalProperty');
-    }
-
-    /**
-     * Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or
-     * by repeating the property.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-     */
-    function getKeywords()
-    {
-        return $this->getProp('keywords');
-    }
-
-    /**
-     * The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getLongitude()
-    {
-        return $this->getProp('longitude');
-    }
-
-    /**
-     * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
-     * real estate setting, as well as other kinds of tours as appropriate.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getTourBookingPage()
-    {
-        return $this->getProp('tourBookingPage');
-    }
-
-    /**
-     * A review of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review|null
-     */
-    function getReview()
-    {
-        return $this->getProp('review');
-    }
-
-    /**
-     * Physical address of the item.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getAddress()
-    {
-        return $this->getProp('address');
+        return $this->getProp('geoIntersects');
     }
 
     /**
@@ -987,32 +949,42 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point
-     * of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
-     */
-    function getGeoCovers()
-    {
-        return $this->getProp('geoCovers');
-    }
-
-    /**
-     * The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or
-     * place.
+     * The telephone number.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getIsicV4()
+    function getTelephone()
     {
-        return $this->getProp('isicV4');
+        return $this->getProp('telephone');
     }
 
     /**
-     * Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses
+     * b: they have some but not all interior points in common, and the dimension of the intersection is less than that
+     * of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
      */
-    function getSmokingAllowed()
+    function getGeoCrosses()
     {
-        return $this->getProp('smokingAllowed');
+        return $this->getProp('geoCrosses');
+    }
+
+    /**
+     * The opening hours of a certain place.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification|null
+     */
+    function getOpeningHoursSpecification()
+    {
+        return $this->getProp('openingHoursSpecification');
+    }
+
+    /**
+     * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or
+     * place. The GLN is a 13-digit number used to identify parties and physical locations.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getGlobalLocationNumber()
+    {
+        return $this->getProp('globalLocationNumber');
     }
 
     /**
@@ -1022,6 +994,34 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     function getPhoto()
     {
         return $this->getProp('photo');
+    }
+
+    /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getLongitude()
+    {
+        return $this->getProp('longitude');
+    }
+
+    /**
+     * The fax number.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getFaxNumber()
+    {
+        return $this->getProp('faxNumber');
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined
+     * in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\GeospatialGeometry|null
+     */
+    function getGeoCoveredBy()
+    {
+        return $this->getProp('geoCoveredBy');
     }
 
     /**
@@ -1035,29 +1035,29 @@ class Place extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The geo coordinates of the place.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoCoordinates|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|null
+     * The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getGeo()
+    function getLatitude()
     {
-        return $this->getProp('geo');
+        return $this->getProp('latitude');
     }
 
     /**
-     * A slogan or motto associated with the item.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * A flag to signal that the item, event, or place is accessible for free.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
-    function getSlogan()
+    function getIsAccessibleForFree()
     {
-        return $this->getProp('slogan');
+        return $this->getProp('isAccessibleForFree');
     }
 
     /**
-     * An associated logo.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * A URL to a map of the place.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Map|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function getLogo()
+    function getHasMap()
     {
-        return $this->getProp('logo');
+        return $this->getProp('hasMap');
     }
 }

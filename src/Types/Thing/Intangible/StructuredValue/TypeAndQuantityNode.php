@@ -12,6 +12,12 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     const TYPE = 'TypeAndQuantityNode';
 
     /**
+     * The quantity of the goods included in the offer.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $amountOfThisGood;
+
+    /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for <a href='unitCode'>unitCode</a>.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -20,15 +26,15 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
      * Code may be used with a prefix followed by a colon.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $unitCode;
 
     /**
-     * The quantity of the goods included in the offer.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * The product that this structured value is referring to.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    public $amountOfThisGood;
+    public $typeOfGood;
 
     /**
      * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
@@ -37,10 +43,14 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     public $businessFunction;
 
     /**
-     * The product that this structured value is referring to.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
+     * The quantity of the goods included in the offer.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    public $typeOfGood;
+    function setAmountOfThisGood($value)
+    {
+        return $this->setProp('amountOfThisGood', $value);
+    }
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for <a href='unitCode'>unitCode</a>.
@@ -55,7 +65,7 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
      * Code may be used with a prefix followed by a colon.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setUnitCode($value)
@@ -64,13 +74,13 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     }
 
     /**
-     * The quantity of the goods included in the offer.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * The product that this structured value is referring to.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product $value
      * @return static
      */
-    function setAmountOfThisGood($value)
+    function setTypeOfGood($value)
     {
-        return $this->setProp('amountOfThisGood', $value);
+        return $this->setProp('typeOfGood', $value);
     }
 
     /**
@@ -84,13 +94,12 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     }
 
     /**
-     * The product that this structured value is referring to.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product $value
-     * @return static
+     * The quantity of the goods included in the offer.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function setTypeOfGood($value)
+    function getAmountOfThisGood()
     {
-        return $this->setProp('typeOfGood', $value);
+        return $this->getProp('amountOfThisGood');
     }
 
     /**
@@ -105,29 +114,11 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     /**
      * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
      * Code may be used with a prefix followed by a colon.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getUnitCode()
     {
         return $this->getProp('unitCode');
-    }
-
-    /**
-     * The quantity of the goods included in the offer.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getAmountOfThisGood()
-    {
-        return $this->getProp('amountOfThisGood');
-    }
-
-    /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction|null
-     */
-    function getBusinessFunction()
-    {
-        return $this->getProp('businessFunction');
     }
 
     /**
@@ -137,5 +128,14 @@ class TypeAndQuantityNode extends \Vnetby\Schemaorg\Types\Thing\Intangible\Struc
     function getTypeOfGood()
     {
         return $this->getProp('typeOfGood');
+    }
+
+    /**
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction|null
+     */
+    function getBusinessFunction()
+    {
+        return $this->getProp('businessFunction');
     }
 }

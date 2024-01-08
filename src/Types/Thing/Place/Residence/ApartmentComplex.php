@@ -12,31 +12,11 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     const TYPE = 'ApartmentComplex';
 
     /**
-     * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within
-     * its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $numberOfAvailableAccommodationUnits;
-
-    /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
-     * value.
-     * @var bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $petsAllowed;
-
-    /**
      * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
      * real estate setting, as well as other kinds of tours as appropriate.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $tourBookingPage;
-
-    /**
-     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $numberOfBedrooms;
 
     /**
      * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a
@@ -48,24 +28,22 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     /**
      * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within
      * its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    function setNumberOfAvailableAccommodationUnits($value)
-    {
-        return $this->setProp('numberOfAvailableAccommodationUnits', $value);
-    }
+    public $numberOfAvailableAccommodationUnits;
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $numberOfBedrooms;
 
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @param bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setPetsAllowed($value)
-    {
-        return $this->setProp('petsAllowed', $value);
-    }
+    public $petsAllowed;
 
     /**
      * A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a
@@ -76,16 +54,6 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     function setTourBookingPage($value)
     {
         return $this->setProp('tourBookingPage', $value);
-    }
-
-    /**
-     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setNumberOfBedrooms($value)
-    {
-        return $this->setProp('numberOfBedrooms', $value);
     }
 
     /**
@@ -102,21 +70,33 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     /**
      * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within
      * its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
      */
-    function getNumberOfAvailableAccommodationUnits()
+    function setNumberOfAvailableAccommodationUnits($value)
     {
-        return $this->getProp('numberOfAvailableAccommodationUnits');
+        return $this->setProp('numberOfAvailableAccommodationUnits', $value);
+    }
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setNumberOfBedrooms($value)
+    {
+        return $this->setProp('numberOfBedrooms', $value);
     }
 
     /**
      * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
      * value.
-     * @return bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getPetsAllowed()
+    function setPetsAllowed($value)
     {
-        return $this->getProp('petsAllowed');
+        return $this->setProp('petsAllowed', $value);
     }
 
     /**
@@ -130,6 +110,26 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     }
 
     /**
+     * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a
+     * specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getNumberOfAccommodationUnits()
+    {
+        return $this->getProp('numberOfAccommodationUnits');
+    }
+
+    /**
+     * Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within
+     * its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getNumberOfAvailableAccommodationUnits()
+    {
+        return $this->getProp('numberOfAvailableAccommodationUnits');
+    }
+
+    /**
      * The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
@@ -139,12 +139,12 @@ class ApartmentComplex extends \Vnetby\Schemaorg\Types\Thing\Place\Residence\Res
     }
 
     /**
-     * Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a
-     * specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text
+     * value.
+     * @return bool|string|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getNumberOfAccommodationUnits()
+    function getPetsAllowed()
     {
-        return $this->getProp('numberOfAccommodationUnits');
+        return $this->getProp('petsAllowed');
     }
 }

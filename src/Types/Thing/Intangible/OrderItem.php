@@ -18,10 +18,10 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $orderDelivery;
 
     /**
-     * The number of the item ordered. If the property is not set, assume the quantity is one.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * The item ordered.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    public $orderQuantity;
+    public $orderedItem;
 
     /**
      * The identifier of the order item.
@@ -30,16 +30,16 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $orderItemNumber;
 
     /**
-     * The item ordered.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
-     */
-    public $orderedItem;
-
-    /**
      * The current status of the order item.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus\OrderStatus
      */
     public $orderItemStatus;
+
+    /**
+     * The number of the item ordered. If the property is not set, assume the quantity is one.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $orderQuantity;
 
     /**
      * The delivery of the parcel related to this order or order item.
@@ -52,13 +52,13 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The number of the item ordered. If the property is not set, assume the quantity is one.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * The item ordered.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Product\Product $value
      * @return static
      */
-    function setOrderQuantity($value)
+    function setOrderedItem($value)
     {
-        return $this->setProp('orderQuantity', $value);
+        return $this->setProp('orderedItem', $value);
     }
 
     /**
@@ -72,16 +72,6 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The item ordered.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product $value
-     * @return static
-     */
-    function setOrderedItem($value)
-    {
-        return $this->setProp('orderedItem', $value);
-    }
-
-    /**
      * The current status of the order item.
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus\OrderStatus $value
      * @return static
@@ -89,6 +79,16 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     function setOrderItemStatus($value)
     {
         return $this->setProp('orderItemStatus', $value);
+    }
+
+    /**
+     * The number of the item ordered. If the property is not set, assume the quantity is one.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setOrderQuantity($value)
+    {
+        return $this->setProp('orderQuantity', $value);
     }
 
     /**
@@ -101,12 +101,12 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The number of the item ordered. If the property is not set, assume the quantity is one.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * The item ordered.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Product\Product|null
      */
-    function getOrderQuantity()
+    function getOrderedItem()
     {
-        return $this->getProp('orderQuantity');
+        return $this->getProp('orderedItem');
     }
 
     /**
@@ -119,20 +119,20 @@ class OrderItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The item ordered.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\OrderItem|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product|null
-     */
-    function getOrderedItem()
-    {
-        return $this->getProp('orderedItem');
-    }
-
-    /**
      * The current status of the order item.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\OrderStatus\OrderStatus|null
      */
     function getOrderItemStatus()
     {
         return $this->getProp('orderItemStatus');
+    }
+
+    /**
+     * The number of the item ordered. If the property is not set, assume the quantity is one.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getOrderQuantity()
+    {
+        return $this->getProp('orderQuantity');
     }
 }

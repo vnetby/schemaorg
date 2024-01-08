@@ -13,6 +13,12 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     const TYPE = 'CourseInstance';
 
     /**
+     * Represents the length and pace of a course, expressed as a [[Schedule]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Schedule
+     */
+    public $courseSchedule;
+
+    /**
      * The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g.
      * "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled
      * vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
@@ -21,10 +27,10 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     public $courseMode;
 
     /**
-     * Represents the length and pace of a course, expressed as a [[Schedule]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Schedule
+     * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    public $courseSchedule;
+    public $instructor;
 
     /**
      * The amount of work expected of students taking the course, often provided as a figure per week or per month, and
@@ -35,10 +41,14 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     public $courseWorkload;
 
     /**
-     * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     * Represents the length and pace of a course, expressed as a [[Schedule]].
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Schedule $value
+     * @return static
      */
-    public $instructor;
+    function setCourseSchedule($value)
+    {
+        return $this->setProp('courseSchedule', $value);
+    }
 
     /**
      * The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g.
@@ -53,13 +63,13 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     }
 
     /**
-     * Represents the length and pace of a course, expressed as a [[Schedule]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Schedule $value
+     * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
      */
-    function setCourseSchedule($value)
+    function setInstructor($value)
     {
-        return $this->setProp('courseSchedule', $value);
+        return $this->setProp('instructor', $value);
     }
 
     /**
@@ -75,13 +85,12 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     }
 
     /**
-     * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
+     * Represents the length and pace of a course, expressed as a [[Schedule]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Schedule|null
      */
-    function setInstructor($value)
+    function getCourseSchedule()
     {
-        return $this->setProp('instructor', $value);
+        return $this->getProp('courseSchedule');
     }
 
     /**
@@ -96,12 +105,12 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     }
 
     /**
-     * Represents the length and pace of a course, expressed as a [[Schedule]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Schedule|null
+     * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
-    function getCourseSchedule()
+    function getInstructor()
     {
-        return $this->getProp('courseSchedule');
+        return $this->getProp('instructor');
     }
 
     /**
@@ -113,14 +122,5 @@ class CourseInstance extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     function getCourseWorkload()
     {
         return $this->getProp('courseWorkload');
-    }
-
-    /**
-     * A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getInstructor()
-    {
-        return $this->getProp('instructor');
     }
 }

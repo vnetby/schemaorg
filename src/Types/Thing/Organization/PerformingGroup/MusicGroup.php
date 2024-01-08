@@ -12,14 +12,8 @@ class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGr
     const TYPE = 'MusicGroup';
 
     /**
-     * A music album.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
-     */
-    public $album;
-
-    /**
      * Genre of the creative work, broadcast channel or group.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $genre;
 
@@ -31,17 +25,13 @@ class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGr
 
     /**
      * A music album.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
      */
-    function setAlbum($value)
-    {
-        return $this->setProp('album', $value);
-    }
+    public $album;
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setGenre($value)
@@ -61,16 +51,17 @@ class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGr
 
     /**
      * A music album.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum|null
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum $value
+     * @return static
      */
-    function getAlbum()
+    function setAlbum($value)
     {
-        return $this->getProp('album');
+        return $this->setProp('album', $value);
     }
 
     /**
      * Genre of the creative work, broadcast channel or group.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGenre()
     {
@@ -84,5 +75,14 @@ class MusicGroup extends \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGr
     function getTrack()
     {
         return $this->getProp('track');
+    }
+
+    /**
+     * A music album.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum|null
+     */
+    function getAlbum()
+    {
+        return $this->getProp('album');
     }
 }

@@ -12,16 +12,16 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     const TYPE = 'TrainTrip';
 
     /**
+     * The station where the train trip ends.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation
+     */
+    public $arrivalStation;
+
+    /**
      * The platform from which the train departs.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $departurePlatform;
-
-    /**
-     * The unique identifier for the train.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $trainNumber;
 
     /**
      * The name of the train (e.g. The Orient Express).
@@ -30,22 +30,32 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     public $trainName;
 
     /**
-     * The station where the train trip ends.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation
-     */
-    public $arrivalStation;
-
-    /**
      * The platform where the train arrives.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $arrivalPlatform;
 
     /**
+     * The unique identifier for the train.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $trainNumber;
+
+    /**
      * The station from which the train departs.
      * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation
      */
     public $departureStation;
+
+    /**
+     * The station where the train trip ends.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation $value
+     * @return static
+     */
+    function setArrivalStation($value)
+    {
+        return $this->setProp('arrivalStation', $value);
+    }
 
     /**
      * The platform from which the train departs.
@@ -55,16 +65,6 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     function setDeparturePlatform($value)
     {
         return $this->setProp('departurePlatform', $value);
-    }
-
-    /**
-     * The unique identifier for the train.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setTrainNumber($value)
-    {
-        return $this->setProp('trainNumber', $value);
     }
 
     /**
@@ -78,16 +78,6 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     }
 
     /**
-     * The station where the train trip ends.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation $value
-     * @return static
-     */
-    function setArrivalStation($value)
-    {
-        return $this->setProp('arrivalStation', $value);
-    }
-
-    /**
      * The platform where the train arrives.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -95,6 +85,16 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     function setArrivalPlatform($value)
     {
         return $this->setProp('arrivalPlatform', $value);
+    }
+
+    /**
+     * The unique identifier for the train.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTrainNumber($value)
+    {
+        return $this->setProp('trainNumber', $value);
     }
 
     /**
@@ -108,21 +108,21 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     }
 
     /**
+     * The station where the train trip ends.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation|null
+     */
+    function getArrivalStation()
+    {
+        return $this->getProp('arrivalStation');
+    }
+
+    /**
      * The platform from which the train departs.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getDeparturePlatform()
     {
         return $this->getProp('departurePlatform');
-    }
-
-    /**
-     * The unique identifier for the train.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getTrainNumber()
-    {
-        return $this->getProp('trainNumber');
     }
 
     /**
@@ -135,21 +135,21 @@ class TrainTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     }
 
     /**
-     * The station where the train trip ends.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\TrainStation|null
-     */
-    function getArrivalStation()
-    {
-        return $this->getProp('arrivalStation');
-    }
-
-    /**
      * The platform where the train arrives.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getArrivalPlatform()
     {
         return $this->getProp('arrivalPlatform');
+    }
+
+    /**
+     * The unique identifier for the train.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTrainNumber()
+    {
+        return $this->getProp('trainNumber');
     }
 
     /**

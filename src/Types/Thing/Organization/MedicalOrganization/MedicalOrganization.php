@@ -12,22 +12,32 @@ class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Org
     const TYPE = 'MedicalOrganization';
 
     /**
+     * A medical specialty of the provider.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Specialty\MedicalSpecialty\MedicalSpecialty
+     */
+    public $medicalSpecialty;
+
+    /**
      * Whether the provider is accepting new patients.
      * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
     public $isAcceptingNewPatients;
 
     /**
-     * A medical specialty of the provider.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
-     */
-    public $medicalSpecialty;
-
-    /**
      * Name or unique ID of network. (Networks are often reused across different insurance plans.)
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $healthPlanNetworkId;
+
+    /**
+     * A medical specialty of the provider.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Specialty\MedicalSpecialty\MedicalSpecialty $value
+     * @return static
+     */
+    function setMedicalSpecialty($value)
+    {
+        return $this->setProp('medicalSpecialty', $value);
+    }
 
     /**
      * Whether the provider is accepting new patients.
@@ -37,16 +47,6 @@ class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Org
     function setIsAcceptingNewPatients($value)
     {
         return $this->setProp('isAcceptingNewPatients', $value);
-    }
-
-    /**
-     * A medical specialty of the provider.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty $value
-     * @return static
-     */
-    function setMedicalSpecialty($value)
-    {
-        return $this->setProp('medicalSpecialty', $value);
     }
 
     /**
@@ -60,21 +60,21 @@ class MedicalOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Org
     }
 
     /**
+     * A medical specialty of the provider.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Specialty\MedicalSpecialty\MedicalSpecialty|null
+     */
+    function getMedicalSpecialty()
+    {
+        return $this->getProp('medicalSpecialty');
+    }
+
+    /**
      * Whether the provider is accepting new patients.
      * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
     function getIsAcceptingNewPatients()
     {
         return $this->getProp('isAcceptingNewPatients');
-    }
-
-    /**
-     * A medical specialty of the provider.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty|null
-     */
-    function getMedicalSpecialty()
-    {
-        return $this->getProp('medicalSpecialty');
     }
 
     /**

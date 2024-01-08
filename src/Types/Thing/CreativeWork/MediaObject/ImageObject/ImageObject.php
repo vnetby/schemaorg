@@ -12,14 +12,14 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
     const TYPE = 'ImageObject';
 
     /**
-     * Indicates whether this image is representative of the content of the page.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
-    public $representativeOfPage;
+    public $caption;
 
     /**
      * exif data for this object.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
      */
     public $exifData;
 
@@ -30,24 +30,24 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
     public $embeddedTextCaption;
 
     /**
-     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * Indicates whether this image is representative of the content of the page.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    public $caption;
+    public $representativeOfPage;
 
     /**
-     * Indicates whether this image is representative of the content of the page.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
      * @return static
      */
-    function setRepresentativeOfPage($value)
+    function setCaption($value)
     {
-        return $this->setProp('representativeOfPage', $value);
+        return $this->setProp('caption', $value);
     }
 
     /**
      * exif data for this object.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue $value
      * @return static
      */
     function setExifData($value)
@@ -66,27 +66,27 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
     }
 
     /**
-     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * Indicates whether this image is representative of the content of the page.
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
-    function setCaption($value)
+    function setRepresentativeOfPage($value)
     {
-        return $this->setProp('caption', $value);
+        return $this->setProp('representativeOfPage', $value);
     }
 
     /**
-     * Indicates whether this image is representative of the content of the page.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
-    function getRepresentativeOfPage()
+    function getCaption()
     {
-        return $this->getProp('representativeOfPage');
+        return $this->getProp('caption');
     }
 
     /**
      * exif data for this object.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|null
      */
     function getExifData()
     {
@@ -103,11 +103,11 @@ class ImageObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
     }
 
     /**
-     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     * Indicates whether this image is representative of the content of the page.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
-    function getCaption()
+    function getRepresentativeOfPage()
     {
-        return $this->getProp('caption');
+        return $this->getProp('representativeOfPage');
     }
 }

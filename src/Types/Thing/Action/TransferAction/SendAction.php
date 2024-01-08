@@ -14,6 +14,12 @@ class SendAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\Tra
     const TYPE = 'SendAction';
 
     /**
+     * A sub property of participant. The participant who is at the receiving end of the action.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint
+     */
+    public $recipient;
+
+    /**
      * A sub property of instrument. The method of delivery.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
@@ -21,9 +27,13 @@ class SendAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\Tra
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint $value
+     * @return static
      */
-    public $recipient;
+    function setRecipient($value)
+    {
+        return $this->setProp('recipient', $value);
+    }
 
     /**
      * A sub property of instrument. The method of delivery.
@@ -37,12 +47,11 @@ class SendAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\Tra
 
     /**
      * A sub property of participant. The participant who is at the receiving end of the action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
-     * @return static
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|null
      */
-    function setRecipient($value)
+    function getRecipient()
     {
-        return $this->setProp('recipient', $value);
+        return $this->getProp('recipient');
     }
 
     /**
@@ -52,14 +61,5 @@ class SendAction extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\Tra
     function getDeliveryMethod()
     {
         return $this->getProp('deliveryMethod');
-    }
-
-    /**
-     * A sub property of participant. The participant who is at the receiving end of the action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\ContactPoint|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
-     */
-    function getRecipient()
-    {
-        return $this->getProp('recipient');
     }
 }

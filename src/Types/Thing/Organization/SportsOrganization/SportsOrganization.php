@@ -13,13 +13,13 @@ class SportsOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Orga
 
     /**
      * A type of sport (e.g. Baseball).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $sport;
 
     /**
      * A type of sport (e.g. Baseball).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setSport($value)
@@ -29,7 +29,7 @@ class SportsOrganization extends \Vnetby\Schemaorg\Types\Thing\Organization\Orga
 
     /**
      * A type of sport (e.g. Baseball).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getSport()
     {

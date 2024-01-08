@@ -19,20 +19,20 @@ class PublicationVolume extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creat
     public $pagination;
 
     /**
-     * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $volumeNumber;
-
-    /**
      * The page on which the work starts; for example "135" or "xiii".
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
     public $pageStart;
 
     /**
-     * The page on which the work ends; for example "138" or "xvi".
+     * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $volumeNumber;
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $pageEnd;
 
@@ -47,16 +47,6 @@ class PublicationVolume extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creat
     }
 
     /**
-     * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setVolumeNumber($value)
-    {
-        return $this->setProp('volumeNumber', $value);
-    }
-
-    /**
      * The page on which the work starts; for example "135" or "xiii".
      * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
@@ -67,8 +57,18 @@ class PublicationVolume extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creat
     }
 
     /**
-     * The page on which the work ends; for example "138" or "xvi".
+     * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
      * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setVolumeNumber($value)
+    {
+        return $this->setProp('volumeNumber', $value);
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPageEnd($value)
@@ -86,15 +86,6 @@ class PublicationVolume extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creat
     }
 
     /**
-     * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getVolumeNumber()
-    {
-        return $this->getProp('volumeNumber');
-    }
-
-    /**
      * The page on which the work starts; for example "135" or "xiii".
      * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
@@ -104,8 +95,17 @@ class PublicationVolume extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creat
     }
 
     /**
-     * The page on which the work ends; for example "138" or "xvi".
+     * Identifies the volume of publication or multi-part work; for example, "iii" or "2".
      * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getVolumeNumber()
+    {
+        return $this->getProp('volumeNumber');
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPageEnd()
     {

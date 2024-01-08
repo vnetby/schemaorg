@@ -20,16 +20,6 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
     public $offerCount;
 
     /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
-     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
-     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
-     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
-     * of Product, can clarify the nature of the offer. 
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
-     */
-    public $offers;
-
-    /**
      * The lowest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
@@ -41,9 +31,19 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $highPrice;
+
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
+     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
+     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
+     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
+     * of Product, can clarify the nature of the offer. 
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|\Vnetby\Schemaorg\Types\Thing\Intangible\Demand
+     */
+    public $offers;
 
     /**
      * The number of offers for the product.
@@ -53,20 +53,6 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
     function setOfferCount($value)
     {
         return $this->setProp('offerCount', $value);
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
-     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
-     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
-     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
-     * of Product, can clarify the nature of the offer. 
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer $value
-     * @return static
-     */
-    function setOffers($value)
-    {
-        return $this->setProp('offers', $value);
     }
 
     /**
@@ -85,12 +71,26 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setHighPrice($value)
     {
         return $this->setProp('highPrice', $value);
+    }
+
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
+     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
+     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
+     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
+     * of Product, can clarify the nature of the offer. 
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|\Vnetby\Schemaorg\Types\Thing\Intangible\Demand $value
+     * @return static
+     */
+    function setOffers($value)
+    {
+        return $this->setProp('offers', $value);
     }
 
     /**
@@ -100,19 +100,6 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
     function getOfferCount()
     {
         return $this->getProp('offerCount');
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
-     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
-     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
-     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
-     * of Product, can clarify the nature of the offer. 
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Demand|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|null
-     */
-    function getOffers()
-    {
-        return $this->getProp('offers');
     }
 
     /**
@@ -130,10 +117,23 @@ class AggregateOffer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offe
      * The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather
      * than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using
      * these symbols as a readability separator.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getHighPrice()
     {
         return $this->getProp('highPrice');
+    }
+
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a
+     * service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc.
+     * This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of
+     * common types, it can be used in others. In that case, using a second type, such as Product or a subtype
+     * of Product, can clarify the nature of the offer. 
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|\Vnetby\Schemaorg\Types\Thing\Intangible\Demand|null
+     */
+    function getOffers()
+    {
+        return $this->getProp('offers');
     }
 }

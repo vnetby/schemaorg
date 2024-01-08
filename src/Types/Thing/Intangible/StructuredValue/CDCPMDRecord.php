@@ -13,62 +13,10 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     const TYPE = 'CDCPMDRecord';
 
     /**
-     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumC19Died;
-
-    /**
-     * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumVentUse;
-
-    /**
-     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting
-     * an inpatient bed and on a mechanical ventilator.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumC19OFMechVentPats;
-
-    /**
-     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are
-     * on a mechanical ventilator.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumC19MechVentPats;
-
-    /**
-     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or
-     * more days after hospitalization.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumC19HOPats;
-
-    /**
      * numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
     public $cvdNumICUBeds;
-
-    /**
-     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumBedsOcc;
-
-    /**
-     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumC19HospPats;
-
-    /**
-     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge)
-     * beds used for inpatients or outpatients.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $cvdNumTotBeds;
 
     /**
      * numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
@@ -78,22 +26,21 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * collectiondate - Date for which patient counts are reported.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
     public $cvdCollectionDate;
 
     /**
-     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient
-     * bed.
+     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $cvdNumC19OverflowPats;
+    public $cvdNumBedsOcc;
 
     /**
-     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $cvdNumBeds;
+    public $cvdNumICUBedsOcc;
 
     /**
      * Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details,
@@ -103,16 +50,50 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     public $cvdFacilityId;
 
     /**
+     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or
+     * more days after hospitalization.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $cvdNumC19HOPats;
+
+    /**
+     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge)
+     * beds used for inpatients or outpatients.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $cvdNumTotBeds;
+
+    /**
      * Publication date of an online listing.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
     public $datePosted;
 
     /**
-     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
+     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $cvdNumICUBedsOcc;
+    public $cvdNumC19Died;
+
+    /**
+     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $cvdNumBeds;
+
+    /**
+     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are
+     * on a mechanical ventilator.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $cvdNumC19MechVentPats;
+
+    /**
+     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient
+     * bed.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $cvdNumC19OverflowPats;
 
     /**
      * Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To
@@ -122,57 +103,23 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     public $cvdFacilityCounty;
 
     /**
-     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting
+     * an inpatient bed and on a mechanical ventilator.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    function setCvdNumC19Died($value)
-    {
-        return $this->setProp('cvdNumC19Died', $value);
-    }
+    public $cvdNumC19OFMechVentPats;
 
     /**
      * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    function setCvdNumVentUse($value)
-    {
-        return $this->setProp('cvdNumVentUse', $value);
-    }
+    public $cvdNumVentUse;
 
     /**
-     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting
-     * an inpatient bed and on a mechanical ventilator.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    function setCvdNumC19OFMechVentPats($value)
-    {
-        return $this->setProp('cvdNumC19OFMechVentPats', $value);
-    }
-
-    /**
-     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are
-     * on a mechanical ventilator.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setCvdNumC19MechVentPats($value)
-    {
-        return $this->setProp('cvdNumC19MechVentPats', $value);
-    }
-
-    /**
-     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or
-     * more days after hospitalization.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setCvdNumC19HOPats($value)
-    {
-        return $this->setProp('cvdNumC19HOPats', $value);
-    }
+    public $cvdNumC19HospPats;
 
     /**
      * numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds.
@@ -182,37 +129,6 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     function setCvdNumICUBeds($value)
     {
         return $this->setProp('cvdNumICUBeds', $value);
-    }
-
-    /**
-     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setCvdNumBedsOcc($value)
-    {
-        return $this->setProp('cvdNumBedsOcc', $value);
-    }
-
-    /**
-     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setCvdNumC19HospPats($value)
-    {
-        return $this->setProp('cvdNumC19HospPats', $value);
-    }
-
-    /**
-     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge)
-     * beds used for inpatients or outpatients.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setCvdNumTotBeds($value)
-    {
-        return $this->setProp('cvdNumTotBeds', $value);
     }
 
     /**
@@ -227,7 +143,7 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * collectiondate - Date for which patient counts are reported.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
     function setCvdCollectionDate($value)
@@ -236,24 +152,23 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
-     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient
-     * bed.
+     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setCvdNumC19OverflowPats($value)
+    function setCvdNumBedsOcc($value)
     {
-        return $this->setProp('cvdNumC19OverflowPats', $value);
+        return $this->setProp('cvdNumBedsOcc', $value);
     }
 
     /**
-     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setCvdNumBeds($value)
+    function setCvdNumICUBedsOcc($value)
     {
-        return $this->setProp('cvdNumBeds', $value);
+        return $this->setProp('cvdNumICUBedsOcc', $value);
     }
 
     /**
@@ -268,6 +183,28 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
+     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or
+     * more days after hospitalization.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setCvdNumC19HOPats($value)
+    {
+        return $this->setProp('cvdNumC19HOPats', $value);
+    }
+
+    /**
+     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge)
+     * beds used for inpatients or outpatients.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setCvdNumTotBeds($value)
+    {
+        return $this->setProp('cvdNumTotBeds', $value);
+    }
+
+    /**
      * Publication date of an online listing.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
@@ -278,13 +215,45 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
-     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
+     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
      * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setCvdNumICUBedsOcc($value)
+    function setCvdNumC19Died($value)
     {
-        return $this->setProp('cvdNumICUBedsOcc', $value);
+        return $this->setProp('cvdNumC19Died', $value);
+    }
+
+    /**
+     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setCvdNumBeds($value)
+    {
+        return $this->setProp('cvdNumBeds', $value);
+    }
+
+    /**
+     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are
+     * on a mechanical ventilator.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setCvdNumC19MechVentPats($value)
+    {
+        return $this->setProp('cvdNumC19MechVentPats', $value);
+    }
+
+    /**
+     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient
+     * bed.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setCvdNumC19OverflowPats($value)
+    {
+        return $this->setProp('cvdNumC19OverflowPats', $value);
     }
 
     /**
@@ -299,51 +268,34 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
-     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting
+     * an inpatient bed and on a mechanical ventilator.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    function getCvdNumC19Died()
+    function setCvdNumC19OFMechVentPats($value)
     {
-        return $this->getProp('cvdNumC19Died');
+        return $this->setProp('cvdNumC19OFMechVentPats', $value);
     }
 
     /**
      * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    function getCvdNumVentUse()
+    function setCvdNumVentUse($value)
     {
-        return $this->getProp('cvdNumVentUse');
+        return $this->setProp('cvdNumVentUse', $value);
     }
 
     /**
-     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting
-     * an inpatient bed and on a mechanical ventilator.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    function getCvdNumC19OFMechVentPats()
+    function setCvdNumC19HospPats($value)
     {
-        return $this->getProp('cvdNumC19OFMechVentPats');
-    }
-
-    /**
-     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are
-     * on a mechanical ventilator.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getCvdNumC19MechVentPats()
-    {
-        return $this->getProp('cvdNumC19MechVentPats');
-    }
-
-    /**
-     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or
-     * more days after hospitalization.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getCvdNumC19HOPats()
-    {
-        return $this->getProp('cvdNumC19HOPats');
+        return $this->setProp('cvdNumC19HospPats', $value);
     }
 
     /**
@@ -353,34 +305,6 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     function getCvdNumICUBeds()
     {
         return $this->getProp('cvdNumICUBeds');
-    }
-
-    /**
-     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getCvdNumBedsOcc()
-    {
-        return $this->getProp('cvdNumBedsOcc');
-    }
-
-    /**
-     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getCvdNumC19HospPats()
-    {
-        return $this->getProp('cvdNumC19HospPats');
-    }
-
-    /**
-     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge)
-     * beds used for inpatients or outpatients.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getCvdNumTotBeds()
-    {
-        return $this->getProp('cvdNumTotBeds');
     }
 
     /**
@@ -394,7 +318,7 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
 
     /**
      * collectiondate - Date for which patient counts are reported.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getCvdCollectionDate()
     {
@@ -402,22 +326,21 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
-     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient
-     * bed.
+     * numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getCvdNumC19OverflowPats()
+    function getCvdNumBedsOcc()
     {
-        return $this->getProp('cvdNumC19OverflowPats');
+        return $this->getProp('cvdNumBedsOcc');
     }
 
     /**
-     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getCvdNumBeds()
+    function getCvdNumICUBedsOcc()
     {
-        return $this->getProp('cvdNumBeds');
+        return $this->getProp('cvdNumICUBedsOcc');
     }
 
     /**
@@ -431,6 +354,26 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
+     * numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or
+     * more days after hospitalization.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumC19HOPats()
+    {
+        return $this->getProp('cvdNumC19HOPats');
+    }
+
+    /**
+     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge)
+     * beds used for inpatients or outpatients.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumTotBeds()
+    {
+        return $this->getProp('cvdNumTotBeds');
+    }
+
+    /**
      * Publication date of an online listing.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
@@ -440,12 +383,41 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
-     * numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
+     * numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
      * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getCvdNumICUBedsOcc()
+    function getCvdNumC19Died()
     {
-        return $this->getProp('cvdNumICUBedsOcc');
+        return $this->getProp('cvdNumC19Died');
+    }
+
+    /**
+     * numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumBeds()
+    {
+        return $this->getProp('cvdNumBeds');
+    }
+
+    /**
+     * numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are
+     * on a mechanical ventilator.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumC19MechVentPats()
+    {
+        return $this->getProp('cvdNumC19MechVentPats');
+    }
+
+    /**
+     * numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient
+     * bed.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumC19OverflowPats()
+    {
+        return $this->getProp('cvdNumC19OverflowPats');
     }
 
     /**
@@ -456,5 +428,33 @@ class CDCPMDRecord extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     function getCvdFacilityCounty()
     {
         return $this->getProp('cvdFacilityCounty');
+    }
+
+    /**
+     * numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting
+     * an inpatient bed and on a mechanical ventilator.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumC19OFMechVentPats()
+    {
+        return $this->getProp('cvdNumC19OFMechVentPats');
+    }
+
+    /**
+     * numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumVentUse()
+    {
+        return $this->getProp('cvdNumVentUse');
+    }
+
+    /**
+     * numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getCvdNumC19HospPats()
+    {
+        return $this->getProp('cvdNumC19HospPats');
     }
 }

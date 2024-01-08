@@ -12,6 +12,12 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
     const TYPE = 'AudioObject';
 
     /**
+     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     */
+    public $caption;
+
+    /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -25,9 +31,13 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @return static
      */
-    public $caption;
+    function setCaption($value)
+    {
+        return $this->setProp('caption', $value);
+    }
 
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of that object.
@@ -51,12 +61,11 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
 
     /**
      * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
      */
-    function setCaption($value)
+    function getCaption()
     {
-        return $this->setProp('caption', $value);
+        return $this->getProp('caption');
     }
 
     /**
@@ -75,14 +84,5 @@ class AudioObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject
     function getEmbeddedTextCaption()
     {
         return $this->getProp('embeddedTextCaption');
-    }
-
-    /**
-     * The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
-     */
-    function getCaption()
-    {
-        return $this->getProp('caption');
     }
 }

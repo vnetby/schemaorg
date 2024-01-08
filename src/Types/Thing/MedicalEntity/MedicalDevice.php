@@ -12,16 +12,10 @@ class MedicalDevice extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalE
     const TYPE = 'MedicalDevice';
 
     /**
-     * A description of the postoperative procedures, care, and/or followups for this device.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * A contraindication for this therapy.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $postOp;
-
-    /**
-     * A description of the workup, testing, and other preparations required before implanting this device.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $preOp;
+    public $contraindication;
 
     /**
      * A description of the procedure involved in setting up, using, and/or installing the device.
@@ -30,17 +24,16 @@ class MedicalDevice extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalE
     public $procedure;
 
     /**
-     * A contraindication for this therapy.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText
+     * A description of the workup, testing, and other preparations required before implanting this device.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $contraindication;
+    public $preOp;
 
     /**
-     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in
-     * death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+     * A description of the postoperative procedures, care, and/or followups for this device.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $adverseOutcome;
+    public $postOp;
 
     /**
      * A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in
@@ -51,23 +44,20 @@ class MedicalDevice extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalE
     public $seriousAdverseOutcome;
 
     /**
-     * A description of the postoperative procedures, care, and/or followups for this device.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in
+     * death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
-    function setPostOp($value)
-    {
-        return $this->setProp('postOp', $value);
-    }
+    public $adverseOutcome;
 
     /**
-     * A description of the workup, testing, and other preparations required before implanting this device.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * A contraindication for this therapy.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setPreOp($value)
+    function setContraindication($value)
     {
-        return $this->setProp('preOp', $value);
+        return $this->setProp('contraindication', $value);
     }
 
     /**
@@ -81,24 +71,23 @@ class MedicalDevice extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalE
     }
 
     /**
-     * A contraindication for this therapy.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * A description of the workup, testing, and other preparations required before implanting this device.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setContraindication($value)
+    function setPreOp($value)
     {
-        return $this->setProp('contraindication', $value);
+        return $this->setProp('preOp', $value);
     }
 
     /**
-     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in
-     * death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
+     * A description of the postoperative procedures, care, and/or followups for this device.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setAdverseOutcome($value)
+    function setPostOp($value)
     {
-        return $this->setProp('adverseOutcome', $value);
+        return $this->setProp('postOp', $value);
     }
 
     /**
@@ -114,30 +103,14 @@ class MedicalDevice extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalE
     }
 
     /**
-     * A description of the postoperative procedures, care, and/or followups for this device.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in
+     * death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
+     * @return static
      */
-    function getPostOp()
+    function setAdverseOutcome($value)
     {
-        return $this->getProp('postOp');
-    }
-
-    /**
-     * A description of the workup, testing, and other preparations required before implanting this device.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getPreOp()
-    {
-        return $this->getProp('preOp');
-    }
-
-    /**
-     * A description of the procedure involved in setting up, using, and/or installing the device.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getProcedure()
-    {
-        return $this->getProp('procedure');
+        return $this->setProp('adverseOutcome', $value);
     }
 
     /**
@@ -150,13 +123,30 @@ class MedicalDevice extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalE
     }
 
     /**
-     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in
-     * death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
+     * A description of the procedure involved in setting up, using, and/or installing the device.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getAdverseOutcome()
+    function getProcedure()
     {
-        return $this->getProp('adverseOutcome');
+        return $this->getProp('procedure');
+    }
+
+    /**
+     * A description of the workup, testing, and other preparations required before implanting this device.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPreOp()
+    {
+        return $this->getProp('preOp');
+    }
+
+    /**
+     * A description of the postoperative procedures, care, and/or followups for this device.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPostOp()
+    {
+        return $this->getProp('postOp');
     }
 
     /**
@@ -168,5 +158,15 @@ class MedicalDevice extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalE
     function getSeriousAdverseOutcome()
     {
         return $this->getProp('seriousAdverseOutcome');
+    }
+
+    /**
+     * A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in
+     * death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
+     */
+    function getAdverseOutcome()
+    {
+        return $this->getProp('adverseOutcome');
     }
 }

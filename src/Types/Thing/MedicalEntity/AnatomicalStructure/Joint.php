@@ -18,16 +18,16 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
     public $structuralClass;
 
     /**
-     * The degree of mobility the joint allows.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
-     */
-    public $functionalClass;
-
-    /**
      * The biomechanical properties of the bone.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $biomechnicalClass;
+
+    /**
+     * The degree of mobility the joint allows.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $functionalClass;
 
     /**
      * The name given to how bone physically connects to each other.
@@ -37,16 +37,6 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
     function setStructuralClass($value)
     {
         return $this->setProp('structuralClass', $value);
-    }
-
-    /**
-     * The degree of mobility the joint allows.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
-     * @return static
-     */
-    function setFunctionalClass($value)
-    {
-        return $this->setProp('functionalClass', $value);
     }
 
     /**
@@ -60,6 +50,16 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
     }
 
     /**
+     * The degree of mobility the joint allows.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setFunctionalClass($value)
+    {
+        return $this->setProp('functionalClass', $value);
+    }
+
+    /**
      * The name given to how bone physically connects to each other.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
@@ -69,20 +69,20 @@ class Joint extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
     }
 
     /**
-     * The degree of mobility the joint allows.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
-     */
-    function getFunctionalClass()
-    {
-        return $this->getProp('functionalClass');
-    }
-
-    /**
      * The biomechanical properties of the bone.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBiomechnicalClass()
     {
         return $this->getProp('biomechnicalClass');
+    }
+
+    /**
+     * The degree of mobility the joint allows.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getFunctionalClass()
+    {
+        return $this->getProp('functionalClass');
     }
 }

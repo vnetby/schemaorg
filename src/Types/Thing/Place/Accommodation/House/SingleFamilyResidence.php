@@ -12,6 +12,13 @@ class SingleFamilyResidence extends \Vnetby\Schemaorg\Types\Thing\Place\Accommod
     const TYPE = 'SingleFamilyResidence';
 
     /**
+     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
+     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $numberOfRooms;
+
+    /**
      * The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal
      * maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person). Typical
      * unit code(s): C62 for person.
@@ -22,9 +29,13 @@ class SingleFamilyResidence extends \Vnetby\Schemaorg\Types\Thing\Place\Accommod
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
      */
-    public $numberOfRooms;
+    function setNumberOfRooms($value)
+    {
+        return $this->setProp('numberOfRooms', $value);
+    }
 
     /**
      * The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal
@@ -41,12 +52,11 @@ class SingleFamilyResidence extends \Vnetby\Schemaorg\Types\Thing\Place\Accommod
     /**
      * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
-    function setNumberOfRooms($value)
+    function getNumberOfRooms()
     {
-        return $this->setProp('numberOfRooms', $value);
+        return $this->getProp('numberOfRooms');
     }
 
     /**
@@ -58,15 +68,5 @@ class SingleFamilyResidence extends \Vnetby\Schemaorg\Types\Thing\Place\Accommod
     function getOccupancy()
     {
         return $this->getProp('occupancy');
-    }
-
-    /**
-     * The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business. Typical unit code(s): ROM for room or
-     * C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
-     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getNumberOfRooms()
-    {
-        return $this->getProp('numberOfRooms');
     }
 }

@@ -12,6 +12,12 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     const TYPE = 'PaymentCard';
 
     /**
+     * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
+     * @var string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     */
+    public $cashBack;
+
+    /**
      * A floor limit is the amount of money above which credit card transactions must be authorized.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
@@ -25,16 +31,20 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     public $monthlyMinimumRepaymentAmount;
 
     /**
-     * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
-     * @var string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $cashBack;
-
-    /**
      * A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
      * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
     public $contactlessPayment;
+
+    /**
+     * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
+     * @param string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @return static
+     */
+    function setCashBack($value)
+    {
+        return $this->setProp('cashBack', $value);
+    }
 
     /**
      * A floor limit is the amount of money above which credit card transactions must be authorized.
@@ -58,16 +68,6 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     }
 
     /**
-     * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
-     * @param string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
-     */
-    function setCashBack($value)
-    {
-        return $this->setProp('cashBack', $value);
-    }
-
-    /**
      * A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
      * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
@@ -75,6 +75,15 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     function setContactlessPayment($value)
     {
         return $this->setProp('contactlessPayment', $value);
+    }
+
+    /**
+     * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
+     * @return string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     */
+    function getCashBack()
+    {
+        return $this->getProp('cashBack');
     }
 
     /**
@@ -94,15 +103,6 @@ class PaymentCard extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Finan
     function getMonthlyMinimumRepaymentAmount()
     {
         return $this->getProp('monthlyMinimumRepaymentAmount');
-    }
-
-    /**
-     * A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
-     * @return string|int|float|bool|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
-     */
-    function getCashBack()
-    {
-        return $this->getProp('cashBack');
     }
 
     /**

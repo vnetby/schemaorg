@@ -12,23 +12,16 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Clip';
 
     /**
+     * The start time of the clip expressed as the number of seconds from the beginning of the work.
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $startOffset;
+
+    /**
      * The composer of the soundtrack.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $musicBy;
-
-    /**
-     * The season to which this episode belongs.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
-     */
-    public $partOfSeason;
-
-    /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
-     * items or with a series, episode, clip.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $director;
 
     /**
      * The episode to which this clip belongs.
@@ -37,16 +30,10 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $partOfEpisode;
 
     /**
-     * Position of the clip within an ordered group of clips.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
+     * The series to which this episode or season belongs.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries\CreativeWorkSeries
      */
-    public $clipNumber;
-
-    /**
-     * The end time of the clip expressed as the number of seconds from the beginning of the work.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry
-     */
-    public $endOffset;
+    public $partOfSeries;
 
     /**
      * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
@@ -56,16 +43,39 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $actor;
 
     /**
-     * The series to which this episode or season belongs.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Series\CreativeWorkSeries\CreativeWorkSeries
+     * The season to which this episode belongs.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
      */
-    public $partOfSeries;
+    public $partOfSeason;
+
+    /**
+     * Position of the clip within an ordered group of clips.
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $clipNumber;
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
+     * items or with a series, episode, clip.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $director;
+
+    /**
+     * The end time of the clip expressed as the number of seconds from the beginning of the work.
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $endOffset;
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    public $startOffset;
+    function setStartOffset($value)
+    {
+        return $this->setProp('startOffset', $value);
+    }
 
     /**
      * The composer of the soundtrack.
@@ -75,27 +85,6 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function setMusicBy($value)
     {
         return $this->setProp('musicBy', $value);
-    }
-
-    /**
-     * The season to which this episode belongs.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason $value
-     * @return static
-     */
-    function setPartOfSeason($value)
-    {
-        return $this->setProp('partOfSeason', $value);
-    }
-
-    /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
-     * items or with a series, episode, clip.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setDirector($value)
-    {
-        return $this->setProp('director', $value);
     }
 
     /**
@@ -109,23 +98,13 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * Position of the clip within an ordered group of clips.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * The series to which this episode or season belongs.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries\CreativeWorkSeries $value
      * @return static
      */
-    function setClipNumber($value)
+    function setPartOfSeries($value)
     {
-        return $this->setProp('clipNumber', $value);
-    }
-
-    /**
-     * The end time of the clip expressed as the number of seconds from the beginning of the work.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry $value
-     * @return static
-     */
-    function setEndOffset($value)
-    {
-        return $this->setProp('endOffset', $value);
+        return $this->setProp('partOfSeries', $value);
     }
 
     /**
@@ -140,23 +119,53 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The series to which this episode or season belongs.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Series\CreativeWorkSeries\CreativeWorkSeries $value
+     * The season to which this episode belongs.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason $value
      * @return static
      */
-    function setPartOfSeries($value)
+    function setPartOfSeason($value)
     {
-        return $this->setProp('partOfSeries', $value);
+        return $this->setProp('partOfSeason', $value);
+    }
+
+    /**
+     * Position of the clip within an ordered group of clips.
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setClipNumber($value)
+    {
+        return $this->setProp('clipNumber', $value);
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
+     * items or with a series, episode, clip.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setDirector($value)
+    {
+        return $this->setProp('director', $value);
+    }
+
+    /**
+     * The end time of the clip expressed as the number of seconds from the beginning of the work.
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setEndOffset($value)
+    {
+        return $this->setProp('endOffset', $value);
     }
 
     /**
      * The start time of the clip expressed as the number of seconds from the beginning of the work.
-     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function setStartOffset($value)
+    function getStartOffset()
     {
-        return $this->setProp('startOffset', $value);
+        return $this->getProp('startOffset');
     }
 
     /**
@@ -169,25 +178,6 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The season to which this episode belongs.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason|null
-     */
-    function getPartOfSeason()
-    {
-        return $this->getProp('partOfSeason');
-    }
-
-    /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
-     * items or with a series, episode, clip.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getDirector()
-    {
-        return $this->getProp('director');
-    }
-
-    /**
      * The episode to which this clip belongs.
      * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode|null
      */
@@ -197,21 +187,12 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * Position of the clip within an ordered group of clips.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The series to which this episode or season belongs.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeries\CreativeWorkSeries|null
      */
-    function getClipNumber()
+    function getPartOfSeries()
     {
-        return $this->getProp('clipNumber');
-    }
-
-    /**
-     * The end time of the clip expressed as the number of seconds from the beginning of the work.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|null
-     */
-    function getEndOffset()
-    {
-        return $this->getProp('endOffset');
+        return $this->getProp('partOfSeries');
     }
 
     /**
@@ -225,20 +206,39 @@ class Clip extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The series to which this episode or season belongs.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Series\CreativeWorkSeries\CreativeWorkSeries|null
+     * The season to which this episode belongs.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason|null
      */
-    function getPartOfSeries()
+    function getPartOfSeason()
     {
-        return $this->getProp('partOfSeries');
+        return $this->getProp('partOfSeason');
     }
 
     /**
-     * The start time of the clip expressed as the number of seconds from the beginning of the work.
+     * Position of the clip within an ordered group of clips.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getClipNumber()
+    {
+        return $this->getProp('clipNumber');
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
+     * items or with a series, episode, clip.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getDirector()
+    {
+        return $this->getProp('director');
+    }
+
+    /**
+     * The end time of the clip expressed as the number of seconds from the beginning of the work.
      * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getStartOffset()
+    function getEndOffset()
     {
-        return $this->getProp('startOffset');
+        return $this->getProp('endOffset');
     }
 }

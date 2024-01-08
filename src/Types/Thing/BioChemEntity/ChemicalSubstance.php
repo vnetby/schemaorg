@@ -13,32 +13,22 @@ class ChemicalSubstance extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioC
     const TYPE = 'ChemicalSubstance';
 
     /**
-     * Intended use of the BioChemEntity by humans.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $potentialUse;
-
-    /**
      * A role played by the BioChemEntity within a chemical context.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
     public $chemicalRole;
 
     /**
+     * Intended use of the BioChemEntity by humans.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     */
+    public $potentialUse;
+
+    /**
      * The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $chemicalComposition;
-
-    /**
-     * Intended use of the BioChemEntity by humans.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
-     */
-    function setPotentialUse($value)
-    {
-        return $this->setProp('potentialUse', $value);
-    }
 
     /**
      * A role played by the BioChemEntity within a chemical context.
@@ -48,6 +38,16 @@ class ChemicalSubstance extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioC
     function setChemicalRole($value)
     {
         return $this->setProp('chemicalRole', $value);
+    }
+
+    /**
+     * Intended use of the BioChemEntity by humans.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @return static
+     */
+    function setPotentialUse($value)
+    {
+        return $this->setProp('potentialUse', $value);
     }
 
     /**
@@ -61,21 +61,21 @@ class ChemicalSubstance extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioC
     }
 
     /**
-     * Intended use of the BioChemEntity by humans.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-     */
-    function getPotentialUse()
-    {
-        return $this->getProp('potentialUse');
-    }
-
-    /**
      * A role played by the BioChemEntity within a chemical context.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
     function getChemicalRole()
     {
         return $this->getProp('chemicalRole');
+    }
+
+    /**
+     * Intended use of the BioChemEntity by humans.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     */
+    function getPotentialUse()
+    {
+        return $this->getProp('potentialUse');
     }
 
     /**

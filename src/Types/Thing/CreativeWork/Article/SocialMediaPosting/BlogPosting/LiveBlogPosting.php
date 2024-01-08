@@ -12,13 +12,6 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
     const TYPE = 'LiveBlogPosting';
 
     /**
-     * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time.
-     * The LiveBlogPosting may also be created before coverage begins.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $coverageStartTime;
-
-    /**
      * An update to the LiveBlog.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\SocialMediaPosting\BlogPosting\BlogPosting
      */
@@ -33,13 +26,9 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
     /**
      * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time.
      * The LiveBlogPosting may also be created before coverage begins.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    function setCoverageStartTime($value)
-    {
-        return $this->setProp('coverageStartTime', $value);
-    }
+    public $coverageStartTime;
 
     /**
      * An update to the LiveBlog.
@@ -64,11 +53,12 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
     /**
      * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time.
      * The LiveBlogPosting may also be created before coverage begins.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @return static
      */
-    function getCoverageStartTime()
+    function setCoverageStartTime($value)
     {
-        return $this->getProp('coverageStartTime');
+        return $this->setProp('coverageStartTime', $value);
     }
 
     /**
@@ -87,5 +77,15 @@ class LiveBlogPosting extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article
     function getCoverageEndTime()
     {
         return $this->getProp('coverageEndTime');
+    }
+
+    /**
+     * The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time.
+     * The LiveBlogPosting may also be created before coverage begins.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     */
+    function getCoverageStartTime()
+    {
+        return $this->getProp('coverageStartTime');
     }
 }

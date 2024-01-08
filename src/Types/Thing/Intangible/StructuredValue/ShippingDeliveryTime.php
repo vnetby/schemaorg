@@ -12,19 +12,11 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     const TYPE = 'ShippingDeliveryTime';
 
     /**
-     * Days of the week when the merchant typically operates, indicated via opening hours markup.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
+     * The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue,
+     * unitCode (d for DAY).
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    public $businessDays;
-
-    /**
-     * Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day.
-     * For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be
-     * most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent
-     * 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime
-     */
-    public $cutoffTime;
+    public $transitTime;
 
     /**
      * The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup,
@@ -36,33 +28,29 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     public $handlingTime;
 
     /**
-     * The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue,
-     * unitCode (d for DAY).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $transitTime;
-
-    /**
-     * Days of the week when the merchant typically operates, indicated via opening hours markup.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification $value
-     * @return static
-     */
-    function setBusinessDays($value)
-    {
-        return $this->setProp('businessDays', $value);
-    }
-
-    /**
      * Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day.
      * For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be
      * most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent
      * 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime $value
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime
+     */
+    public $cutoffTime;
+
+    /**
+     * Days of the week when the merchant typically operates, indicated via opening hours markup.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification
+     */
+    public $businessDays;
+
+    /**
+     * The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue,
+     * unitCode (d for DAY).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
-    function setCutoffTime($value)
+    function setTransitTime($value)
     {
-        return $this->setProp('cutoffTime', $value);
+        return $this->setProp('transitTime', $value);
     }
 
     /**
@@ -79,35 +67,36 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
-     * The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue,
-     * unitCode (d for DAY).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setTransitTime($value)
-    {
-        return $this->setProp('transitTime', $value);
-    }
-
-    /**
-     * Days of the week when the merchant typically operates, indicated via opening hours markup.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification|null
-     */
-    function getBusinessDays()
-    {
-        return $this->getProp('businessDays');
-    }
-
-    /**
      * Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day.
      * For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be
      * most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent
      * 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime $value
+     * @return static
      */
-    function getCutoffTime()
+    function setCutoffTime($value)
     {
-        return $this->getProp('cutoffTime');
+        return $this->setProp('cutoffTime', $value);
+    }
+
+    /**
+     * Days of the week when the merchant typically operates, indicated via opening hours markup.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification $value
+     * @return static
+     */
+    function setBusinessDays($value)
+    {
+        return $this->setProp('businessDays', $value);
+    }
+
+    /**
+     * The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue,
+     * unitCode (d for DAY).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getTransitTime()
+    {
+        return $this->getProp('transitTime');
     }
 
     /**
@@ -123,12 +112,23 @@ class ShippingDeliveryTime extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
-     * The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue,
-     * unitCode (d for DAY).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day.
+     * For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be
+     * most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent
+     * 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
-    function getTransitTime()
+    function getCutoffTime()
     {
-        return $this->getProp('transitTime');
+        return $this->getProp('cutoffTime');
+    }
+
+    /**
+     * Days of the week when the merchant typically operates, indicated via opening hours markup.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OpeningHoursSpecification|null
+     */
+    function getBusinessDays()
+    {
+        return $this->getProp('businessDays');
     }
 }

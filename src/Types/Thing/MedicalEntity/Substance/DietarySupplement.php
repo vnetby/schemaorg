@@ -13,16 +13,34 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     const TYPE = 'DietarySupplement';
 
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\RecommendedDoseSchedule
+     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $recommendedIntake;
+    public $mechanismOfAction;
+
+    /**
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $legalStatus;
+
+    /**
+     * An active ingredient, typically chemical compounds and/or biologic substances.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $activeIngredient;
 
     /**
      * Proprietary name given to the diet plan, typically by its originator or creator.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $proprietaryName;
+
+    /**
+     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $targetPopulation;
 
     /**
      * Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions,
@@ -32,16 +50,10 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     public $safetyConsideration;
 
     /**
-     * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\RecommendedDoseSchedule
      */
-    public $isProprietary;
-
-    /**
-     * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $activeIngredient;
+    public $recommendedIntake;
 
     /**
      * The generic name of this drug or supplement.
@@ -56,31 +68,39 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     public $maximumIntake;
 
     /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
+     * True if this item's name is a proprietary/brand name (vs. generic name).
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    public $legalStatus;
+    public $isProprietary;
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $mechanismOfAction;
-
-    /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $targetPopulation;
-
-    /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\RecommendedDoseSchedule $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setRecommendedIntake($value)
+    function setMechanismOfAction($value)
     {
-        return $this->setProp('recommendedIntake', $value);
+        return $this->setProp('mechanismOfAction', $value);
+    }
+
+    /**
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setLegalStatus($value)
+    {
+        return $this->setProp('legalStatus', $value);
+    }
+
+    /**
+     * An active ingredient, typically chemical compounds and/or biologic substances.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setActiveIngredient($value)
+    {
+        return $this->setProp('activeIngredient', $value);
     }
 
     /**
@@ -91,6 +111,16 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     function setProprietaryName($value)
     {
         return $this->setProp('proprietaryName', $value);
+    }
+
+    /**
+     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTargetPopulation($value)
+    {
+        return $this->setProp('targetPopulation', $value);
     }
 
     /**
@@ -105,23 +135,13 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     }
 
     /**
-     * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\RecommendedDoseSchedule $value
      * @return static
      */
-    function setIsProprietary($value)
+    function setRecommendedIntake($value)
     {
-        return $this->setProp('isProprietary', $value);
-    }
-
-    /**
-     * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setActiveIngredient($value)
-    {
-        return $this->setProp('activeIngredient', $value);
+        return $this->setProp('recommendedIntake', $value);
     }
 
     /**
@@ -145,42 +165,40 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     }
 
     /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * True if this item's name is a proprietary/brand name (vs. generic name).
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
      * @return static
      */
-    function setLegalStatus($value)
+    function setIsProprietary($value)
     {
-        return $this->setProp('legalStatus', $value);
+        return $this->setProp('isProprietary', $value);
     }
 
     /**
      * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setMechanismOfAction($value)
+    function getMechanismOfAction()
     {
-        return $this->setProp('mechanismOfAction', $value);
+        return $this->getProp('mechanismOfAction');
     }
 
     /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setTargetPopulation($value)
+    function getLegalStatus()
     {
-        return $this->setProp('targetPopulation', $value);
+        return $this->getProp('legalStatus');
     }
 
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\RecommendedDoseSchedule|null
+     * An active ingredient, typically chemical compounds and/or biologic substances.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getRecommendedIntake()
+    function getActiveIngredient()
     {
-        return $this->getProp('recommendedIntake');
+        return $this->getProp('activeIngredient');
     }
 
     /**
@@ -190,6 +208,15 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     function getProprietaryName()
     {
         return $this->getProp('proprietaryName');
+    }
+
+    /**
+     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTargetPopulation()
+    {
+        return $this->getProp('targetPopulation');
     }
 
     /**
@@ -203,21 +230,12 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     }
 
     /**
-     * True if this item's name is a proprietary/brand name (vs. generic name).
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\RecommendedDoseSchedule|null
      */
-    function getIsProprietary()
+    function getRecommendedIntake()
     {
-        return $this->getProp('isProprietary');
-    }
-
-    /**
-     * An active ingredient, typically chemical compounds and/or biologic substances.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getActiveIngredient()
-    {
-        return $this->getProp('activeIngredient');
+        return $this->getProp('recommendedIntake');
     }
 
     /**
@@ -239,29 +257,11 @@ class DietarySupplement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Subs
     }
 
     /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * True if this item's name is a proprietary/brand name (vs. generic name).
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
      */
-    function getLegalStatus()
+    function getIsProprietary()
     {
-        return $this->getProp('legalStatus');
-    }
-
-    /**
-     * The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getMechanismOfAction()
-    {
-        return $this->getProp('mechanismOfAction');
-    }
-
-    /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getTargetPopulation()
-    {
-        return $this->getProp('targetPopulation');
+        return $this->getProp('isProprietary');
     }
 }

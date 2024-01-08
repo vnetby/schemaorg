@@ -12,10 +12,22 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     const TYPE = 'ExercisePlan';
 
     /**
-     * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * Length of time to engage in the activity.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    public $workload;
+    public $activityDuration;
+
+    /**
+     * How often one should engage in the activity.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $activityFrequency;
+
+    /**
+     * Number of times one should repeat the activity.
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $repetitions;
 
     /**
      * Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
@@ -24,10 +36,11 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     public $exerciseType;
 
     /**
-     * Length of time to engage in the activity.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
+     * the movement.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $activityDuration;
+    public $intensity;
 
     /**
      * Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order
@@ -37,38 +50,45 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     public $additionalVariable;
 
     /**
-     * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
-     * the movement.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    public $intensity;
+    public $workload;
 
     /**
      * How often one should break from the activity.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $restPeriods;
 
     /**
-     * Number of times one should repeat the activity.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * Length of time to engage in the activity.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
+     * @return static
      */
-    public $repetitions;
+    function setActivityDuration($value)
+    {
+        return $this->setProp('activityDuration', $value);
+    }
 
     /**
      * How often one should engage in the activity.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $activityFrequency;
-
-    /**
-     * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
-    function setWorkload($value)
+    function setActivityFrequency($value)
     {
-        return $this->setProp('workload', $value);
+        return $this->setProp('activityFrequency', $value);
+    }
+
+    /**
+     * Number of times one should repeat the activity.
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setRepetitions($value)
+    {
+        return $this->setProp('repetitions', $value);
     }
 
     /**
@@ -82,13 +102,14 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     }
 
     /**
-     * Length of time to engage in the activity.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
+     * the movement.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setActivityDuration($value)
+    function setIntensity($value)
     {
-        return $this->setProp('activityDuration', $value);
+        return $this->setProp('intensity', $value);
     }
 
     /**
@@ -103,19 +124,18 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     }
 
     /**
-     * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
-     * the movement.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
-    function setIntensity($value)
+    function setWorkload($value)
     {
-        return $this->setProp('intensity', $value);
+        return $this->setProp('workload', $value);
     }
 
     /**
      * How often one should break from the activity.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setRestPeriods($value)
@@ -124,32 +144,30 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     }
 
     /**
-     * Number of times one should repeat the activity.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
+     * Length of time to engage in the activity.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
      */
-    function setRepetitions($value)
+    function getActivityDuration()
     {
-        return $this->setProp('repetitions', $value);
+        return $this->getProp('activityDuration');
     }
 
     /**
      * How often one should engage in the activity.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
-    function setActivityFrequency($value)
+    function getActivityFrequency()
     {
-        return $this->setProp('activityFrequency', $value);
+        return $this->getProp('activityFrequency');
     }
 
     /**
-     * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * Number of times one should repeat the activity.
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getWorkload()
+    function getRepetitions()
     {
-        return $this->getProp('workload');
+        return $this->getProp('repetitions');
     }
 
     /**
@@ -162,12 +180,13 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     }
 
     /**
-     * Length of time to engage in the activity.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
+     * the movement.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getActivityDuration()
+    function getIntensity()
     {
-        return $this->getProp('activityDuration');
+        return $this->getProp('intensity');
     }
 
     /**
@@ -181,39 +200,20 @@ class ExercisePlan extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWo
     }
 
     /**
-     * Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of
-     * the movement.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Energy|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
-    function getIntensity()
+    function getWorkload()
     {
-        return $this->getProp('intensity');
+        return $this->getProp('workload');
     }
 
     /**
      * How often one should break from the activity.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getRestPeriods()
     {
         return $this->getProp('restPeriods');
-    }
-
-    /**
-     * Number of times one should repeat the activity.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getRepetitions()
-    {
-        return $this->getProp('repetitions');
-    }
-
-    /**
-     * How often one should engage in the activity.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getActivityFrequency()
-    {
-        return $this->getProp('activityFrequency');
     }
 }

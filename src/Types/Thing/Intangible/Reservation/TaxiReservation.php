@@ -19,16 +19,16 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
     public $partySize;
 
     /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
-     */
-    public $pickupLocation;
-
-    /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
     public $pickupTime;
+
+    /**
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
+     */
+    public $pickupLocation;
 
     /**
      * Number of people the reservation should accommodate.
@@ -38,16 +38,6 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
     function setPartySize($value)
     {
         return $this->setProp('partySize', $value);
-    }
-
-    /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
-     * @return static
-     */
-    function setPickupLocation($value)
-    {
-        return $this->setProp('pickupLocation', $value);
     }
 
     /**
@@ -61,6 +51,16 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
     }
 
     /**
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @return static
+     */
+    function setPickupLocation($value)
+    {
+        return $this->setProp('pickupLocation', $value);
+    }
+
+    /**
      * Number of people the reservation should accommodate.
      * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
@@ -70,20 +70,20 @@ class TaxiReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reservati
     }
 
     /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
-     */
-    function getPickupLocation()
-    {
-        return $this->getProp('pickupLocation');
-    }
-
-    /**
      * When a taxi will pick up a passenger or a rental car can be picked up.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
     function getPickupTime()
     {
         return $this->getProp('pickupTime');
+    }
+
+    /**
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     */
+    function getPickupLocation()
+    {
+        return $this->getProp('pickupLocation');
     }
 }

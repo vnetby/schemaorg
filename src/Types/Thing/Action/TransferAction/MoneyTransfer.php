@@ -12,13 +12,6 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
     const TYPE = 'MoneyTransfer';
 
     /**
-     * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the
-     * beneficiary.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion
-     */
-    public $beneficiaryBank;
-
-    /**
      * The amount of money.
      * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
@@ -27,13 +20,9 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
     /**
      * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the
      * beneficiary.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion
      */
-    function setBeneficiaryBank($value)
-    {
-        return $this->setProp('beneficiaryBank', $value);
-    }
+    public $beneficiaryBank;
 
     /**
      * The amount of money.
@@ -48,11 +37,12 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
     /**
      * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the
      * beneficiary.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion $value
+     * @return static
      */
-    function getBeneficiaryBank()
+    function setBeneficiaryBank($value)
     {
-        return $this->getProp('beneficiaryBank');
+        return $this->setProp('beneficiaryBank', $value);
     }
 
     /**
@@ -62,5 +52,15 @@ class MoneyTransfer extends \Vnetby\Schemaorg\Types\Thing\Action\TransferAction\
     function getAmount()
     {
         return $this->getProp('amount');
+    }
+
+    /**
+     * A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the
+     * beneficiary.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Organization\LocalBusiness\FinancialService\BankOrCreditUnion|null
+     */
+    function getBeneficiaryBank()
+    {
+        return $this->getProp('beneficiaryBank');
     }
 }

@@ -12,16 +12,16 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     const TYPE = 'Seat';
 
     /**
-     * The type/class of the seat.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $seatingType;
-
-    /**
      * The location of the reserved seat (e.g., 27).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $seatNumber;
+
+    /**
+     * The type/class of the seat.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     */
+    public $seatingType;
 
     /**
      * The section location of the reserved seat (e.g. Orchestra).
@@ -36,16 +36,6 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $seatRow;
 
     /**
-     * The type/class of the seat.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setSeatingType($value)
-    {
-        return $this->setProp('seatingType', $value);
-    }
-
-    /**
      * The location of the reserved seat (e.g., 27).
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -53,6 +43,16 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     function setSeatNumber($value)
     {
         return $this->setProp('seatNumber', $value);
+    }
+
+    /**
+     * The type/class of the seat.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @return static
+     */
+    function setSeatingType($value)
+    {
+        return $this->setProp('seatingType', $value);
     }
 
     /**
@@ -76,21 +76,21 @@ class Seat extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The type/class of the seat.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getSeatingType()
-    {
-        return $this->getProp('seatingType');
-    }
-
-    /**
      * The location of the reserved seat (e.g., 27).
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getSeatNumber()
     {
         return $this->getProp('seatNumber');
+    }
+
+    /**
+     * The type/class of the seat.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     */
+    function getSeatingType()
+    {
+        return $this->getProp('seatingType');
     }
 
     /**

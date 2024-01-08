@@ -12,25 +12,6 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
     const TYPE = 'MusicRelease';
 
     /**
-     * The album this is a release of.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
-     */
-    public $releaseOf;
-
-    /**
-     * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani
-     * Germanotta Band", but by Lady Gaga.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
-     */
-    public $creditedTo;
-
-    /**
-     * The label that issued the release.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
-     */
-    public $recordLabel;
-
-    /**
      * The catalog number for the release.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -43,41 +24,29 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
     public $duration;
 
     /**
+     * The album this is a release of.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
+     */
+    public $releaseOf;
+
+    /**
      * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType
      */
     public $musicReleaseFormat;
 
     /**
-     * The album this is a release of.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum $value
-     * @return static
+     * The label that issued the release.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    function setReleaseOf($value)
-    {
-        return $this->setProp('releaseOf', $value);
-    }
+    public $recordLabel;
 
     /**
      * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani
      * Germanotta Band", but by Lady Gaga.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    function setCreditedTo($value)
-    {
-        return $this->setProp('creditedTo', $value);
-    }
-
-    /**
-     * The label that issued the release.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
-     * @return static
-     */
-    function setRecordLabel($value)
-    {
-        return $this->setProp('recordLabel', $value);
-    }
+    public $creditedTo;
 
     /**
      * The catalog number for the release.
@@ -100,6 +69,16 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
     }
 
     /**
+     * The album this is a release of.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum $value
+     * @return static
+     */
+    function setReleaseOf($value)
+    {
+        return $this->setProp('releaseOf', $value);
+    }
+
+    /**
      * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType $value
      * @return static
@@ -110,31 +89,24 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
     }
 
     /**
-     * The album this is a release of.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum|null
+     * The label that issued the release.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @return static
      */
-    function getReleaseOf()
+    function setRecordLabel($value)
     {
-        return $this->getProp('releaseOf');
+        return $this->setProp('recordLabel', $value);
     }
 
     /**
      * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani
      * Germanotta Band", but by Lady Gaga.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @return static
      */
-    function getCreditedTo()
+    function setCreditedTo($value)
     {
-        return $this->getProp('creditedTo');
-    }
-
-    /**
-     * The label that issued the release.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
-     */
-    function getRecordLabel()
-    {
-        return $this->getProp('recordLabel');
+        return $this->setProp('creditedTo', $value);
     }
 
     /**
@@ -156,11 +128,39 @@ class MusicRelease extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlayl
     }
 
     /**
+     * The album this is a release of.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum|null
+     */
+    function getReleaseOf()
+    {
+        return $this->getProp('releaseOf');
+    }
+
+    /**
      * Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicReleaseFormatType\MusicReleaseFormatType|null
      */
     function getMusicReleaseFormat()
     {
         return $this->getProp('musicReleaseFormat');
+    }
+
+    /**
+     * The label that issued the release.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getRecordLabel()
+    {
+        return $this->getProp('recordLabel');
+    }
+
+    /**
+     * The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani
+     * Germanotta Band", but by Lady Gaga.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getCreditedTo()
+    {
+        return $this->getProp('creditedTo');
     }
 }

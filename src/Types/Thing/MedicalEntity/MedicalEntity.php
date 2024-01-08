@@ -12,12 +12,6 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     const TYPE = 'MedicalEntity';
 
     /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
-     */
-    public $funding;
-
-    /**
      * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalCode
      */
@@ -30,6 +24,30 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $guideline;
 
     /**
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $legalStatus;
+
+    /**
+     * If applicable, a medical specialty in which this entity is relevant.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Specialty\MedicalSpecialty\MedicalSpecialty
+     */
+    public $relevantSpecialty;
+
+    /**
+     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicineSystem\MedicineSystem
+     */
+    public $medicineSystem;
+
+    /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
+     */
+    public $funding;
+
+    /**
      * If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
@@ -40,34 +58,6 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalStudy\MedicalStudy
      */
     public $study;
-
-    /**
-     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicineSystem\MedicineSystem
-     */
-    public $medicineSystem;
-
-    /**
-     * If applicable, a medical specialty in which this entity is relevant.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty
-     */
-    public $relevantSpecialty;
-
-    /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $legalStatus;
-
-    /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant $value
-     * @return static
-     */
-    function setFunding($value)
-    {
-        return $this->setProp('funding', $value);
-    }
 
     /**
      * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
@@ -87,6 +77,46 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     function setGuideline($value)
     {
         return $this->setProp('guideline', $value);
+    }
+
+    /**
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setLegalStatus($value)
+    {
+        return $this->setProp('legalStatus', $value);
+    }
+
+    /**
+     * If applicable, a medical specialty in which this entity is relevant.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Specialty\MedicalSpecialty\MedicalSpecialty $value
+     * @return static
+     */
+    function setRelevantSpecialty($value)
+    {
+        return $this->setProp('relevantSpecialty', $value);
+    }
+
+    /**
+     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicineSystem\MedicineSystem $value
+     * @return static
+     */
+    function setMedicineSystem($value)
+    {
+        return $this->setProp('medicineSystem', $value);
+    }
+
+    /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant $value
+     * @return static
+     */
+    function setFunding($value)
+    {
+        return $this->setProp('funding', $value);
     }
 
     /**
@@ -110,45 +140,6 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicineSystem\MedicineSystem $value
-     * @return static
-     */
-    function setMedicineSystem($value)
-    {
-        return $this->setProp('medicineSystem', $value);
-    }
-
-    /**
-     * If applicable, a medical specialty in which this entity is relevant.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty $value
-     * @return static
-     */
-    function setRelevantSpecialty($value)
-    {
-        return $this->setProp('relevantSpecialty', $value);
-    }
-
-    /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setLegalStatus($value)
-    {
-        return $this->setProp('legalStatus', $value);
-    }
-
-    /**
-     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant|null
-     */
-    function getFunding()
-    {
-        return $this->getProp('funding');
-    }
-
-    /**
      * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
      * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalCode|null
      */
@@ -167,6 +158,42 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
+     * The drug or supplement's legal status, including any controlled substance schedules that apply.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getLegalStatus()
+    {
+        return $this->getProp('legalStatus');
+    }
+
+    /**
+     * If applicable, a medical specialty in which this entity is relevant.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\Specialty\MedicalSpecialty\MedicalSpecialty|null
+     */
+    function getRelevantSpecialty()
+    {
+        return $this->getProp('relevantSpecialty');
+    }
+
+    /**
+     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicineSystem\MedicineSystem|null
+     */
+    function getMedicineSystem()
+    {
+        return $this->getProp('medicineSystem');
+    }
+
+    /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant|null
+     */
+    function getFunding()
+    {
+        return $this->getProp('funding');
+    }
+
+    /**
      * If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
      * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
      */
@@ -182,32 +209,5 @@ class MedicalEntity extends \Vnetby\Schemaorg\Types\Thing\Thing
     function getStudy()
     {
         return $this->getProp('study');
-    }
-
-    /**
-     * The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicineSystem\MedicineSystem|null
-     */
-    function getMedicineSystem()
-    {
-        return $this->getProp('medicineSystem');
-    }
-
-    /**
-     * If applicable, a medical specialty in which this entity is relevant.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalSpecialty\MedicalSpecialty|null
-     */
-    function getRelevantSpecialty()
-    {
-        return $this->getProp('relevantSpecialty');
-    }
-
-    /**
-     * The drug or supplement's legal status, including any controlled substance schedules that apply.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalEnumeration|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DrugLegalStatus|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getLegalStatus()
-    {
-        return $this->getProp('legalStatus');
     }
 }

@@ -16,15 +16,9 @@ class Role extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $startDate;
-
-    /**
-     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    public $endDate;
+    public $startDate;
 
     /**
      * A role played, performed or filled by a person or organization. For example, the team of creators for a comic book
@@ -35,23 +29,19 @@ class Role extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $roleName;
 
     /**
+     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $endDate;
+
+    /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setStartDate($value)
     {
         return $this->setProp('startDate', $value);
-    }
-
-    /**
-     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
-     */
-    function setEndDate($value)
-    {
-        return $this->setProp('endDate', $value);
     }
 
     /**
@@ -67,21 +57,22 @@ class Role extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setEndDate($value)
+    {
+        return $this->setProp('endDate', $value);
+    }
+
+    /**
      * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getStartDate()
     {
         return $this->getProp('startDate');
-    }
-
-    /**
-     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
-     */
-    function getEndDate()
-    {
-        return $this->getProp('endDate');
     }
 
     /**
@@ -93,5 +84,14 @@ class Role extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     function getRoleName()
     {
         return $this->getProp('roleName');
+    }
+
+    /**
+     * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getEndDate()
+    {
+        return $this->getProp('endDate');
     }
 }

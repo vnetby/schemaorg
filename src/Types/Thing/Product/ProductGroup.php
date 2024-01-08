@@ -17,33 +17,23 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     const TYPE = 'ProductGroup';
 
     /**
-     * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Product
-     */
-    public $hasVariant;
-
-    /**
      * Indicates a textual identifier for a ProductGroup.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $productGroupID;
 
     /**
-     * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can
-     * be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
+     * @var \Vnetby\Schemaorg\Types\Thing\Product\Product
      */
-    public $variesBy;
+    public $hasVariant;
 
     /**
-     * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Product $value
-     * @return static
+     * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can
+     * be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setHasVariant($value)
-    {
-        return $this->setProp('hasVariant', $value);
-    }
+    public $variesBy;
 
     /**
      * Indicates a textual identifier for a ProductGroup.
@@ -56,23 +46,24 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     }
 
     /**
+     * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
+     * @param \Vnetby\Schemaorg\Types\Thing\Product\Product $value
+     * @return static
+     */
+    function setHasVariant($value)
+    {
+        return $this->setProp('hasVariant', $value);
+    }
+
+    /**
      * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can
      * be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setVariesBy($value)
     {
         return $this->setProp('variesBy', $value);
-    }
-
-    /**
-     * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Product|null
-     */
-    function getHasVariant()
-    {
-        return $this->getProp('hasVariant');
     }
 
     /**
@@ -85,9 +76,18 @@ class ProductGroup extends \Vnetby\Schemaorg\Types\Thing\Product\Product
     }
 
     /**
+     * Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
+     * @return \Vnetby\Schemaorg\Types\Thing\Product\Product|null
+     */
+    function getHasVariant()
+    {
+        return $this->getProp('hasVariant');
+    }
+
+    /**
      * Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can
      * be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getVariesBy()
     {

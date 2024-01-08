@@ -13,12 +13,6 @@ class WarrantyPromise extends \Vnetby\Schemaorg\Types\Thing\Intangible\Structure
     const TYPE = 'WarrantyPromise';
 
     /**
-     * The scope of the warranty promise.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\WarrantyScope
-     */
-    public $warrantyScope;
-
-    /**
      * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
@@ -26,13 +20,9 @@ class WarrantyPromise extends \Vnetby\Schemaorg\Types\Thing\Intangible\Structure
 
     /**
      * The scope of the warranty promise.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\WarrantyScope $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\WarrantyScope
      */
-    function setWarrantyScope($value)
-    {
-        return $this->setProp('warrantyScope', $value);
-    }
+    public $warrantyScope;
 
     /**
      * The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
@@ -46,11 +36,12 @@ class WarrantyPromise extends \Vnetby\Schemaorg\Types\Thing\Intangible\Structure
 
     /**
      * The scope of the warranty promise.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\WarrantyScope|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\WarrantyScope $value
+     * @return static
      */
-    function getWarrantyScope()
+    function setWarrantyScope($value)
     {
-        return $this->getProp('warrantyScope');
+        return $this->setProp('warrantyScope', $value);
     }
 
     /**
@@ -60,5 +51,14 @@ class WarrantyPromise extends \Vnetby\Schemaorg\Types\Thing\Intangible\Structure
     function getDurationOfWarranty()
     {
         return $this->getProp('durationOfWarranty');
+    }
+
+    /**
+     * The scope of the warranty promise.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\WarrantyScope|null
+     */
+    function getWarrantyScope()
+    {
+        return $this->getProp('warrantyScope');
     }
 }

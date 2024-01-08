@@ -12,12 +12,6 @@ class Taxon extends \Vnetby\Schemaorg\Types\Thing\Thing
     const TYPE = 'Taxon';
 
     /**
-     * Closest parent taxon of the taxon in question.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon
-     */
-    public $parentTaxon;
-
-    /**
      * A Defined Term contained in this term set.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
@@ -25,26 +19,22 @@ class Taxon extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Closest child taxa of the taxon in question.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $childTaxon;
 
     /**
-     * The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG
-     * TaxonRank ontology or equivalent Wikidata URIs.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * Closest parent taxon of the taxon in question.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    public $taxonRank;
+    public $parentTaxon;
 
     /**
-     * Closest parent taxon of the taxon in question.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon $value
-     * @return static
+     * The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG
+     * TaxonRank ontology or equivalent Wikidata URIs.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue
      */
-    function setParentTaxon($value)
-    {
-        return $this->setProp('parentTaxon', $value);
-    }
+    public $taxonRank;
 
     /**
      * A Defined Term contained in this term set.
@@ -58,7 +48,7 @@ class Taxon extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Closest child taxa of the taxon in question.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setChildTaxon($value)
@@ -67,23 +57,24 @@ class Taxon extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
+     * Closest parent taxon of the taxon in question.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setParentTaxon($value)
+    {
+        return $this->setProp('parentTaxon', $value);
+    }
+
+    /**
      * The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG
      * TaxonRank ontology or equivalent Wikidata URIs.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue $value
      * @return static
      */
     function setTaxonRank($value)
     {
         return $this->setProp('taxonRank', $value);
-    }
-
-    /**
-     * Closest parent taxon of the taxon in question.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|null
-     */
-    function getParentTaxon()
-    {
-        return $this->getProp('parentTaxon');
     }
 
     /**
@@ -97,7 +88,7 @@ class Taxon extends \Vnetby\Schemaorg\Types\Thing\Thing
 
     /**
      * Closest child taxa of the taxon in question.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getChildTaxon()
     {
@@ -105,9 +96,18 @@ class Taxon extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
+     * Closest parent taxon of the taxon in question.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Taxon|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getParentTaxon()
+    {
+        return $this->getProp('parentTaxon');
+    }
+
+    /**
      * The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG
      * TaxonRank ontology or equivalent Wikidata URIs.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PropertyValue\PropertyValue|null
      */
     function getTaxonRank()
     {

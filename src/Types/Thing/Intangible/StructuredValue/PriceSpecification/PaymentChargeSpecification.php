@@ -12,12 +12,6 @@ class PaymentChargeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     const TYPE = 'PaymentChargeSpecification';
 
     /**
-     * The payment method(s) to which the payment charge specification applies.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod
-     */
-    public $appliesToPaymentMethod;
-
-    /**
      * The delivery method(s) to which the delivery charge or payment charge specification applies.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
      */
@@ -25,13 +19,9 @@ class PaymentChargeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
 
     /**
      * The payment method(s) to which the payment charge specification applies.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod
      */
-    function setAppliesToPaymentMethod($value)
-    {
-        return $this->setProp('appliesToPaymentMethod', $value);
-    }
+    public $appliesToPaymentMethod;
 
     /**
      * The delivery method(s) to which the delivery charge or payment charge specification applies.
@@ -45,11 +35,12 @@ class PaymentChargeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
 
     /**
      * The payment method(s) to which the payment charge specification applies.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod $value
+     * @return static
      */
-    function getAppliesToPaymentMethod()
+    function setAppliesToPaymentMethod($value)
     {
-        return $this->getProp('appliesToPaymentMethod');
+        return $this->setProp('appliesToPaymentMethod', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class PaymentChargeSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     function getAppliesToDeliveryMethod()
     {
         return $this->getProp('appliesToDeliveryMethod');
+    }
+
+    /**
+     * The payment method(s) to which the payment charge specification applies.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod|null
+     */
+    function getAppliesToPaymentMethod()
+    {
+        return $this->getProp('appliesToPaymentMethod');
     }
 }

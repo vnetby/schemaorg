@@ -13,12 +13,6 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Comment';
 
     /**
-     * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
-     */
-    public $sharedContent;
-
-    /**
      * The number of downvotes this question, answer or comment has received from the community.
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
@@ -34,19 +28,15 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments
      * with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about
      * it.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
     public $parentItem;
 
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
-    function setSharedContent($value)
-    {
-        return $this->setProp('sharedContent', $value);
-    }
+    public $sharedContent;
 
     /**
      * The number of downvotes this question, answer or comment has received from the community.
@@ -72,7 +62,7 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments
      * with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about
      * it.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment $value
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
      */
     function setParentItem($value)
@@ -82,11 +72,12 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @return static
      */
-    function getSharedContent()
+    function setSharedContent($value)
     {
-        return $this->getProp('sharedContent');
+        return $this->setProp('sharedContent', $value);
     }
 
     /**
@@ -111,10 +102,19 @@ class Comment extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments
      * with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about
      * it.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment|null
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
     function getParentItem()
     {
         return $this->getProp('parentItem');
+    }
+
+    /**
+     * A CreativeWork such as an image, video, or audio clip shared as part of this posting.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     */
+    function getSharedContent()
+    {
+        return $this->getProp('sharedContent');
     }
 }

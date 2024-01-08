@@ -18,16 +18,16 @@ class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $serverStatus;
 
     /**
-     * Video game which is played on this server.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\VideoGame
-     */
-    public $game;
-
-    /**
      * Number of players on the server.
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
     public $playersOnline;
+
+    /**
+     * Video game which is played on this server.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\VideoGame
+     */
+    public $game;
 
     /**
      * Status of a game server.
@@ -37,16 +37,6 @@ class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     function setServerStatus($value)
     {
         return $this->setProp('serverStatus', $value);
-    }
-
-    /**
-     * Video game which is played on this server.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\VideoGame $value
-     * @return static
-     */
-    function setGame($value)
-    {
-        return $this->setProp('game', $value);
     }
 
     /**
@@ -60,6 +50,16 @@ class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * Video game which is played on this server.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\VideoGame $value
+     * @return static
+     */
+    function setGame($value)
+    {
+        return $this->setProp('game', $value);
+    }
+
+    /**
      * Status of a game server.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\GameServerStatus\GameServerStatus|null
      */
@@ -69,20 +69,20 @@ class GameServer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * Video game which is played on this server.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\VideoGame|null
-     */
-    function getGame()
-    {
-        return $this->getProp('game');
-    }
-
-    /**
      * Number of players on the server.
      * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getPlayersOnline()
     {
         return $this->getProp('playersOnline');
+    }
+
+    /**
+     * Video game which is played on this server.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Game\VideoGame|null
+     */
+    function getGame()
+    {
+        return $this->getProp('game');
     }
 }

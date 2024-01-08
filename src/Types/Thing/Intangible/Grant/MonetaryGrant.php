@@ -13,7 +13,7 @@ class MonetaryGrant extends \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
 
     /**
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $funder;
 
@@ -25,7 +25,7 @@ class MonetaryGrant extends \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
 
     /**
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
      */
     function setFunder($value)
@@ -45,7 +45,7 @@ class MonetaryGrant extends \Vnetby\Schemaorg\Types\Thing\Intangible\Grant\Grant
 
     /**
      * A person or organization that supports (sponsors) something through some kind of financial contribution.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
     function getFunder()
     {

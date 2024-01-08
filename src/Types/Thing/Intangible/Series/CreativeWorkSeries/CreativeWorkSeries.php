@@ -19,6 +19,12 @@ class CreativeWorkSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series
     const TYPE = 'CreativeWorkSeries';
 
     /**
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $startDate;
+
+    /**
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of,
      * or the linking ISSN (ISSN-L) for, this serial publication.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
@@ -26,16 +32,20 @@ class CreativeWorkSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series
     public $issn;
 
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $startDate;
-
-    /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
     public $endDate;
+
+    /**
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setStartDate($value)
+    {
+        return $this->setProp('startDate', $value);
+    }
 
     /**
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of,
@@ -49,16 +59,6 @@ class CreativeWorkSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series
     }
 
     /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setStartDate($value)
-    {
-        return $this->setProp('startDate', $value);
-    }
-
-    /**
      * The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
      * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
@@ -69,6 +69,15 @@ class CreativeWorkSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series
     }
 
     /**
+     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getStartDate()
+    {
+        return $this->getProp('startDate');
+    }
+
+    /**
      * The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of,
      * or the linking ISSN (ISSN-L) for, this serial publication.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
@@ -76,15 +85,6 @@ class CreativeWorkSeries extends \Vnetby\Schemaorg\Types\Thing\Intangible\Series
     function getIssn()
     {
         return $this->getProp('issn');
-    }
-
-    /**
-     * The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getStartDate()
-    {
-        return $this->getProp('startDate');
     }
 
     /**

@@ -13,10 +13,47 @@ class Article extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Article';
 
     /**
+     * The number of words in the text of the Article.
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $wordCount;
+
+    /**
+     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $articleSection;
+
+    /**
+     * For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how
+     * an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     */
+    public $backstory;
+
+    /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $pagination;
+
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $pageStart;
+
+    /**
+     * The actual body of the article.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $articleBody;
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $pageEnd;
 
     /**
      * Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for
@@ -33,41 +70,35 @@ class Article extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $speakable;
 
     /**
-     * The actual body of the article.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * The number of words in the text of the Article.
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
      */
-    public $articleBody;
+    function setWordCount($value)
+    {
+        return $this->setProp('wordCount', $value);
+    }
+
+    /**
+     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setArticleSection($value)
+    {
+        return $this->setProp('articleSection', $value);
+    }
 
     /**
      * For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how
      * an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @return static
      */
-    public $backstory;
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
-     */
-    public $pageStart;
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
-     */
-    public $pageEnd;
-
-    /**
-     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $articleSection;
-
-    /**
-     * The number of words in the text of the Article.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
-     */
-    public $wordCount;
+    function setBackstory($value)
+    {
+        return $this->setProp('backstory', $value);
+    }
 
     /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
@@ -77,6 +108,36 @@ class Article extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function setPagination($value)
     {
         return $this->setProp('pagination', $value);
+    }
+
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setPageStart($value)
+    {
+        return $this->setProp('pageStart', $value);
+    }
+
+    /**
+     * The actual body of the article.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setArticleBody($value)
+    {
+        return $this->setProp('articleBody', $value);
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setPageEnd($value)
+    {
+        return $this->setProp('pageEnd', $value);
     }
 
     /**
@@ -98,64 +159,31 @@ class Article extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The actual body of the article.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * The number of words in the text of the Article.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
-    function setArticleBody($value)
+    function getWordCount()
     {
-        return $this->setProp('articleBody', $value);
+        return $this->getProp('wordCount');
+    }
+
+    /**
+     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getArticleSection()
+    {
+        return $this->getProp('articleSection');
     }
 
     /**
      * For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how
      * an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
      */
-    function setBackstory($value)
+    function getBackstory()
     {
-        return $this->setProp('backstory', $value);
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
-     * @return static
-     */
-    function setPageStart($value)
-    {
-        return $this->setProp('pageStart', $value);
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
-     * @return static
-     */
-    function setPageEnd($value)
-    {
-        return $this->setProp('pageEnd', $value);
-    }
-
-    /**
-     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setArticleSection($value)
-    {
-        return $this->setProp('articleSection', $value);
-    }
-
-    /**
-     * The number of words in the text of the Article.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
-     * @return static
-     */
-    function setWordCount($value)
-    {
-        return $this->setProp('wordCount', $value);
+        return $this->getProp('backstory');
     }
 
     /**
@@ -165,6 +193,33 @@ class Article extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function getPagination()
     {
         return $this->getProp('pagination');
+    }
+
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getPageStart()
+    {
+        return $this->getProp('pageStart');
+    }
+
+    /**
+     * The actual body of the article.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getArticleBody()
+    {
+        return $this->getProp('articleBody');
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPageEnd()
+    {
+        return $this->getProp('pageEnd');
     }
 
     /**
@@ -182,60 +237,5 @@ class Article extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function getSpeakable()
     {
         return $this->getProp('speakable');
-    }
-
-    /**
-     * The actual body of the article.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getArticleBody()
-    {
-        return $this->getProp('articleBody');
-    }
-
-    /**
-     * For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how
-     * an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getBackstory()
-    {
-        return $this->getProp('backstory');
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
-     */
-    function getPageStart()
-    {
-        return $this->getProp('pageStart');
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
-     */
-    function getPageEnd()
-    {
-        return $this->getProp('pageEnd');
-    }
-
-    /**
-     * Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getArticleSection()
-    {
-        return $this->getProp('articleSection');
-    }
-
-    /**
-     * The number of words in the text of the Article.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
-     */
-    function getWordCount()
-    {
-        return $this->getProp('wordCount');
     }
 }

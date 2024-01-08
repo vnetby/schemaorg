@@ -16,161 +16,37 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     const TYPE = 'Offer';
 
     /**
-     * The type(s) of customers for which the given offer is valid.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessEntityType
-     */
-    public $eligibleCustomerType;
-
-    /**
-     * The duration for which the given offer is valid.
+     * The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup,
+     * in case the delivery method is on site pickup.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    public $eligibleDuration;
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape
-     */
-    public $eligibleRegion;
-
-    /**
-     * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
-     * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
-     * for more details.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $gtin12;
+    public $deliveryLeadTime;
 
     /**
      * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
     public $leaseLength;
 
     /**
-     * The [[mobileUrl]] property is provided for specific situations in which data consumers need to determine whether one of several provided URLs
-     * is a dedicated 'mobile site'. To discourage over-use, and reflecting intial usecases, the property is expected only on [[Product]] and [[Offer]],
-     * rather than [[Thing]]. The general trend in web technology is towards [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) in which content can be flexibly adapted to
-     * a wide range of browsing environments. Pages and sites referenced with the long-established [[url]] property should ideally also be usable on
-     * a wide variety of devices, including mobile phones. In most cases, it would be pointless and counter productive to attempt to
-     * update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily
-     * [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken
-     * as an endorsement of this publication style. 
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
      */
-    public $mobileUrl;
+    public $aggregateRating;
 
     /**
-     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
-     * purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases
-     * to a certain minimal amount.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
-     */
-    public $eligibleTransactionVolume;
-
-    /**
-     * The date when the item becomes valid.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $validFrom;
-
-    /**
-     * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
+     * The current approximate inventory level for the item or items.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    public $advanceBookingRequirement;
-
-    /**
-     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
-     * types, e.g. "Ithaca HOUR".
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $priceCurrency;
+    public $inventoryLevel;
 
     /**
      * An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease
      * etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such
      * as Product or a subtype of Product, can clarify the nature of the offer.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\AggregateOffer|\Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|\Vnetby\Schemaorg\Types\Thing\Event\Event
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\AggregateOffer|\Vnetby\Schemaorg\Types\Thing\Event\Event|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
     public $itemOffered;
-
-    /**
-     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
-     * [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for
-     * [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in
-     * the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as
-     * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
-     * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
-     * Unicode symbols. 
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $price;
-
-    /**
-     * The end of the availability of the product or service included in the offer.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $availabilityEnds;
-
-    /**
-     * An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are
-     * available for a surcharge).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
-     */
-    public $addOn;
-
-    /**
-     * Specifies a MerchantReturnPolicy that may be applicable.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicy
-     */
-    public $hasMerchantReturnPolicy;
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
-     */
-    public $category;
-
-    /**
-     * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $mpn;
-
-    /**
-     * The beginning of the availability of the product or service included in the offer.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $availabilityStarts;
-
-    /**
-     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
-     * specifying that a certain freight charge is valid only for a certain quantity.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $eligibleQuantity;
-
-    /**
-     * The place(s) from which the offer can be obtained (e.g. store locations).
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
-     */
-    public $availableAtOrFrom;
-
-    /**
-     * Indicates whether this content is family friendly.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $isFamilyFriendly;
-
-    /**
-     * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
-     * refers.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $sku;
 
     /**
      * An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a
@@ -180,6 +56,18 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $seller;
 
     /**
+     * A pointer to the organization or person making the offer.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     */
+    public $offeredBy;
+
+    /**
+     * Used to tag an item to be intended or suitable for consumption or use by adults only.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
+     */
+    public $hasAdultConsideration;
+
+    /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for
      * the serial number of the product included in the offer.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
@@ -187,36 +75,17 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $serialNumber;
 
     /**
-     * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $gtin14;
-
-    /**
-     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
-     */
-    public $priceSpecification;
-
-    /**
-     * The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup,
-     * in case the delivery method is on site pickup.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $deliveryLeadTime;
-
-    /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating
-     */
-    public $aggregateRating;
-
-    /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
     public $ineligibleRegion;
+
+    /**
+     * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $advanceBookingRequirement;
 
     /**
      * A URL template (RFC 6570) for a checkout page for an offer. This approach allows merchants to specify a URL for
@@ -234,35 +103,25 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $itemCondition;
 
     /**
-     * Indicates information about the shipping policies and options associated with an [[Offer]].
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OfferShippingDetails
+     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
+     * purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases
+     * to a certain minimal amount.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
      */
-    public $shippingDetails;
+    public $eligibleTransactionVolume;
 
     /**
-     * The delivery method(s) available for this offer.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
+     * An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are
+     * available for a surcharge).
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer
      */
-    public $availableDeliveryMethod;
+    public $addOn;
 
     /**
-     * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
-     * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $gtin8;
-
-    /**
-     * The current approximate inventory level for the item or items.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $inventoryLevel;
-
-    /**
-     * A review of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
-     */
-    public $review;
+    public $gtin14;
 
     /**
      * A product measurement, for example the inseam of pants, the wheel size of a bicycle, or the gauge of a screw.
@@ -272,24 +131,39 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $hasMeasurement;
 
     /**
-     * A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The GS1 [digital
-     * link specifications](https://www.gs1.org/standards/Digital-Link/) express GTINs as URLs (URIs, IRIs, etc.). Details including regular expression examples can be found in, Section 6 of
-     * the GS1 URI Syntax specification; see also [schema.org tracking issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809) for schema.org-specific discussion. A correct [[gtin]] value should be a valid
-     * GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1
-     * Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet
-     * the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values
-     * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
-     * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
-     * the GS1 documentation for authoritative details.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
+     * Indicates information about the shipping policies and options associated with an [[Offer]].
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OfferShippingDetails
      */
-    public $gtin;
+    public $shippingDetails;
 
     /**
-     * A pointer to the organization or person making the offer.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
+     * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
+     * for more details.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $offeredBy;
+    public $gtin12;
+
+    /**
+     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
+     * specifying that a certain freight charge is valid only for a certain quantity.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $eligibleQuantity;
+
+    /**
+     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
+     * types, e.g. "Ithaca HOUR".
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $priceCurrency;
+
+    /**
+     * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
+     */
+    public $availability;
 
     /**
      * This links to a node or nodes indicating the exact quantity of the products included in an [[Offer]] or [[ProductCollection]].
@@ -298,48 +172,59 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $includesObject;
 
     /**
+     * The type(s) of customers for which the given offer is valid.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessEntityType
+     */
+    public $eligibleCustomerType;
+
+    /**
+     * A review of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
+     */
+    public $review;
+
+    /**
+     * Indicates whether this content is family friendly.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
+     */
+    public $isFamilyFriendly;
+
+    /**
+     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification
+     */
+    public $priceSpecification;
+
+    /**
+     * The delivery method(s) available for this offer.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod
+     */
+    public $availableDeliveryMethod;
+
+    /**
      * The payment method(s) accepted by seller for this offer.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod
      */
     public $acceptedPaymentMethod;
 
     /**
-     * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
-     * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
-     * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * Specifies a MerchantReturnPolicy that may be applicable.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicy
+     */
+    public $hasMerchantReturnPolicy;
+
+    /**
+     * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
+     * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $gtin13;
+    public $gtin8;
 
     /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction
+     * The end of the availability of the product or service included in the offer.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    public $businessFunction;
-
-    /**
-     * The geographic area where a service or offered item is provided.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $areaServed;
-
-    /**
-     * The date after which the price is no longer available.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $priceValidUntil;
-
-    /**
-     * Used to tag an item to be intended or suitable for consumption or use by adults only.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration
-     */
-    public $hasAdultConsideration;
-
-    /**
-     * The warranty promise(s) included in the offer.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\WarrantyPromise
-     */
-    public $warranty;
+    public $availabilityEnds;
 
     /**
      * An Amazon Standard Identification Number (ASIN) is a 10-character alphanumeric unique identifier assigned by Amazon.com and its partners for product identification
@@ -358,63 +243,112 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $validThrough;
 
     /**
-     * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    public $availability;
+    public $eligibleRegion;
 
     /**
-     * The type(s) of customers for which the given offer is valid.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessEntityType $value
-     * @return static
+     * The beginning of the availability of the product or service included in the offer.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    function setEligibleCustomerType($value)
-    {
-        return $this->setProp('eligibleCustomerType', $value);
-    }
+    public $availabilityStarts;
+
+    /**
+     * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
+     * refers.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $sku;
+
+    /**
+     * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
+     * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
+     * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $gtin13;
+
+    /**
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction
+     */
+    public $businessFunction;
+
+    /**
+     * The date after which the price is no longer available.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $priceValidUntil;
+
+    /**
+     * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $mpn;
+
+    /**
+     * The geographic area where a service or offered item is provided.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     */
+    public $areaServed;
+
+    /**
+     * The date when the item becomes valid.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $validFrom;
+
+    /**
+     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
+     * [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for
+     * [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in
+     * the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as
+     * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
+     * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
+     * Unicode symbols. 
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $price;
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing
+     */
+    public $category;
+
+    /**
+     * The warranty promise(s) included in the offer.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\WarrantyPromise
+     */
+    public $warranty;
 
     /**
      * The duration for which the given offer is valid.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    function setEligibleDuration($value)
-    {
-        return $this->setProp('eligibleDuration', $value);
-    }
+    public $eligibleDuration;
 
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape $value
-     * @return static
+     * The place(s) from which the offer can be obtained (e.g. store locations).
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    function setEligibleRegion($value)
-    {
-        return $this->setProp('eligibleRegion', $value);
-    }
+    public $availableAtOrFrom;
 
     /**
-     * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
-     * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
-     * for more details.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The GS1 [digital
+     * link specifications](https://www.gs1.org/standards/Digital-Link/) express GTINs as URLs (URIs, IRIs, etc.). Details including regular expression examples can be found in, Section 6 of
+     * the GS1 URI Syntax specification; see also [schema.org tracking issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809) for schema.org-specific discussion. A correct [[gtin]] value should be a valid
+     * GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1
+     * Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet
+     * the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values
+     * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
+     * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
+     * the GS1 documentation for authoritative details.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    function setGtin12($value)
-    {
-        return $this->setProp('gtin12', $value);
-    }
-
-    /**
-     * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setLeaseLength($value)
-    {
-        return $this->setProp('leaseLength', $value);
-    }
+    public $gtin;
 
     /**
      * The [[mobileUrl]] property is provided for specific situations in which data consumers need to determine whether one of several provided URLs
@@ -425,187 +359,61 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily
      * [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken
      * as an endorsement of this publication style. 
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setMobileUrl($value)
-    {
-        return $this->setProp('mobileUrl', $value);
-    }
+    public $mobileUrl;
 
     /**
-     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
-     * purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases
-     * to a certain minimal amount.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification $value
-     * @return static
-     */
-    function setEligibleTransactionVolume($value)
-    {
-        return $this->setProp('eligibleTransactionVolume', $value);
-    }
-
-    /**
-     * The date when the item becomes valid.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
-     */
-    function setValidFrom($value)
-    {
-        return $this->setProp('validFrom', $value);
-    }
-
-    /**
-     * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
+     * The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup,
+     * in case the delivery method is on site pickup.
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
-    function setAdvanceBookingRequirement($value)
+    function setDeliveryLeadTime($value)
     {
-        return $this->setProp('advanceBookingRequirement', $value);
+        return $this->setProp('deliveryLeadTime', $value);
     }
 
     /**
-     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
-     * types, e.g. "Ithaca HOUR".
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
      * @return static
      */
-    function setPriceCurrency($value)
+    function setLeaseLength($value)
     {
-        return $this->setProp('priceCurrency', $value);
+        return $this->setProp('leaseLength', $value);
+    }
+
+    /**
+     * The overall rating, based on a collection of reviews or ratings, of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating $value
+     * @return static
+     */
+    function setAggregateRating($value)
+    {
+        return $this->setProp('aggregateRating', $value);
+    }
+
+    /**
+     * The current approximate inventory level for the item or items.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setInventoryLevel($value)
+    {
+        return $this->setProp('inventoryLevel', $value);
     }
 
     /**
      * An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease
      * etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such
      * as Product or a subtype of Product, can clarify the nature of the offer.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\AggregateOffer|\Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|\Vnetby\Schemaorg\Types\Thing\Event\Event $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\AggregateOffer|\Vnetby\Schemaorg\Types\Thing\Event\Event|\Vnetby\Schemaorg\Types\Thing\Product\Product $value
      * @return static
      */
     function setItemOffered($value)
     {
         return $this->setProp('itemOffered', $value);
-    }
-
-    /**
-     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
-     * [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for
-     * [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in
-     * the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as
-     * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
-     * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
-     * Unicode symbols. 
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setPrice($value)
-    {
-        return $this->setProp('price', $value);
-    }
-
-    /**
-     * The end of the availability of the product or service included in the offer.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setAvailabilityEnds($value)
-    {
-        return $this->setProp('availabilityEnds', $value);
-    }
-
-    /**
-     * An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are
-     * available for a surcharge).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer $value
-     * @return static
-     */
-    function setAddOn($value)
-    {
-        return $this->setProp('addOn', $value);
-    }
-
-    /**
-     * Specifies a MerchantReturnPolicy that may be applicable.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicy $value
-     * @return static
-     */
-    function setHasMerchantReturnPolicy($value)
-    {
-        return $this->setProp('hasMerchantReturnPolicy', $value);
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
-     * @return static
-     */
-    function setCategory($value)
-    {
-        return $this->setProp('category', $value);
-    }
-
-    /**
-     * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setMpn($value)
-    {
-        return $this->setProp('mpn', $value);
-    }
-
-    /**
-     * The beginning of the availability of the product or service included in the offer.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
-     */
-    function setAvailabilityStarts($value)
-    {
-        return $this->setProp('availabilityStarts', $value);
-    }
-
-    /**
-     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
-     * specifying that a certain freight charge is valid only for a certain quantity.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setEligibleQuantity($value)
-    {
-        return $this->setProp('eligibleQuantity', $value);
-    }
-
-    /**
-     * The place(s) from which the offer can be obtained (e.g. store locations).
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
-     * @return static
-     */
-    function setAvailableAtOrFrom($value)
-    {
-        return $this->setProp('availableAtOrFrom', $value);
-    }
-
-    /**
-     * Indicates whether this content is family friendly.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
-     */
-    function setIsFamilyFriendly($value)
-    {
-        return $this->setProp('isFamilyFriendly', $value);
-    }
-
-    /**
-     * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
-     * refers.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setSku($value)
-    {
-        return $this->setProp('sku', $value);
     }
 
     /**
@@ -620,6 +428,26 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * A pointer to the organization or person making the offer.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @return static
+     */
+    function setOfferedBy($value)
+    {
+        return $this->setProp('offeredBy', $value);
+    }
+
+    /**
+     * Used to tag an item to be intended or suitable for consumption or use by adults only.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration $value
+     * @return static
+     */
+    function setHasAdultConsideration($value)
+    {
+        return $this->setProp('hasAdultConsideration', $value);
+    }
+
+    /**
      * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for
      * the serial number of the product included in the offer.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
@@ -631,55 +459,24 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setGtin14($value)
-    {
-        return $this->setProp('gtin14', $value);
-    }
-
-    /**
-     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification $value
-     * @return static
-     */
-    function setPriceSpecification($value)
-    {
-        return $this->setProp('priceSpecification', $value);
-    }
-
-    /**
-     * The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup,
-     * in case the delivery method is on site pickup.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setDeliveryLeadTime($value)
-    {
-        return $this->setProp('deliveryLeadTime', $value);
-    }
-
-    /**
-     * The overall rating, based on a collection of reviews or ratings, of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating $value
-     * @return static
-     */
-    function setAggregateRating($value)
-    {
-        return $this->setProp('aggregateRating', $value);
-    }
-
-    /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setIneligibleRegion($value)
     {
         return $this->setProp('ineligibleRegion', $value);
+    }
+
+    /**
+     * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setAdvanceBookingRequirement($value)
+    {
+        return $this->setProp('advanceBookingRequirement', $value);
     }
 
     /**
@@ -706,54 +503,36 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * Indicates information about the shipping policies and options associated with an [[Offer]].
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OfferShippingDetails $value
+     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
+     * purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases
+     * to a certain minimal amount.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification $value
      * @return static
      */
-    function setShippingDetails($value)
+    function setEligibleTransactionVolume($value)
     {
-        return $this->setProp('shippingDetails', $value);
+        return $this->setProp('eligibleTransactionVolume', $value);
     }
 
     /**
-     * The delivery method(s) available for this offer.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod $value
+     * An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are
+     * available for a surcharge).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer $value
      * @return static
      */
-    function setAvailableDeliveryMethod($value)
+    function setAddOn($value)
     {
-        return $this->setProp('availableDeliveryMethod', $value);
+        return $this->setProp('addOn', $value);
     }
 
     /**
-     * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
-     * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setGtin8($value)
+    function setGtin14($value)
     {
-        return $this->setProp('gtin8', $value);
-    }
-
-    /**
-     * The current approximate inventory level for the item or items.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setInventoryLevel($value)
-    {
-        return $this->setProp('inventoryLevel', $value);
-    }
-
-    /**
-     * A review of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review $value
-     * @return static
-     */
-    function setReview($value)
-    {
-        return $this->setProp('review', $value);
+        return $this->setProp('gtin14', $value);
     }
 
     /**
@@ -768,31 +547,58 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The GS1 [digital
-     * link specifications](https://www.gs1.org/standards/Digital-Link/) express GTINs as URLs (URIs, IRIs, etc.). Details including regular expression examples can be found in, Section 6 of
-     * the GS1 URI Syntax specification; see also [schema.org tracking issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809) for schema.org-specific discussion. A correct [[gtin]] value should be a valid
-     * GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1
-     * Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet
-     * the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values
-     * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
-     * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
-     * the GS1 documentation for authoritative details.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * Indicates information about the shipping policies and options associated with an [[Offer]].
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OfferShippingDetails $value
      * @return static
      */
-    function setGtin($value)
+    function setShippingDetails($value)
     {
-        return $this->setProp('gtin', $value);
+        return $this->setProp('shippingDetails', $value);
     }
 
     /**
-     * A pointer to the organization or person making the offer.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
+     * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
+     * for more details.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setOfferedBy($value)
+    function setGtin12($value)
     {
-        return $this->setProp('offeredBy', $value);
+        return $this->setProp('gtin12', $value);
+    }
+
+    /**
+     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
+     * specifying that a certain freight charge is valid only for a certain quantity.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setEligibleQuantity($value)
+    {
+        return $this->setProp('eligibleQuantity', $value);
+    }
+
+    /**
+     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
+     * types, e.g. "Ithaca HOUR".
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setPriceCurrency($value)
+    {
+        return $this->setProp('priceCurrency', $value);
+    }
+
+    /**
+     * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability $value
+     * @return static
+     */
+    function setAvailability($value)
+    {
+        return $this->setProp('availability', $value);
     }
 
     /**
@@ -806,8 +612,58 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * The type(s) of customers for which the given offer is valid.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessEntityType $value
+     * @return static
+     */
+    function setEligibleCustomerType($value)
+    {
+        return $this->setProp('eligibleCustomerType', $value);
+    }
+
+    /**
+     * A review of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review $value
+     * @return static
+     */
+    function setReview($value)
+    {
+        return $this->setProp('review', $value);
+    }
+
+    /**
+     * Indicates whether this content is family friendly.
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @return static
+     */
+    function setIsFamilyFriendly($value)
+    {
+        return $this->setProp('isFamilyFriendly', $value);
+    }
+
+    /**
+     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification $value
+     * @return static
+     */
+    function setPriceSpecification($value)
+    {
+        return $this->setProp('priceSpecification', $value);
+    }
+
+    /**
+     * The delivery method(s) available for this offer.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod $value
+     * @return static
+     */
+    function setAvailableDeliveryMethod($value)
+    {
+        return $this->setProp('availableDeliveryMethod', $value);
+    }
+
+    /**
      * The payment method(s) accepted by seller for this offer.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod $value
      * @return static
      */
     function setAcceptedPaymentMethod($value)
@@ -816,65 +672,34 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
-     * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
-     * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * Specifies a MerchantReturnPolicy that may be applicable.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicy $value
+     * @return static
+     */
+    function setHasMerchantReturnPolicy($value)
+    {
+        return $this->setProp('hasMerchantReturnPolicy', $value);
+    }
+
+    /**
+     * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
+     * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setGtin13($value)
+    function setGtin8($value)
     {
-        return $this->setProp('gtin13', $value);
+        return $this->setProp('gtin8', $value);
     }
 
     /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction $value
+     * The end of the availability of the product or service included in the offer.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
-    function setBusinessFunction($value)
+    function setAvailabilityEnds($value)
     {
-        return $this->setProp('businessFunction', $value);
-    }
-
-    /**
-     * The geographic area where a service or offered item is provided.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setAreaServed($value)
-    {
-        return $this->setProp('areaServed', $value);
-    }
-
-    /**
-     * The date after which the price is no longer available.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
-     */
-    function setPriceValidUntil($value)
-    {
-        return $this->setProp('priceValidUntil', $value);
-    }
-
-    /**
-     * Used to tag an item to be intended or suitable for consumption or use by adults only.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration $value
-     * @return static
-     */
-    function setHasAdultConsideration($value)
-    {
-        return $this->setProp('hasAdultConsideration', $value);
-    }
-
-    /**
-     * The warranty promise(s) included in the offer.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\WarrantyPromise $value
-     * @return static
-     */
-    function setWarranty($value)
-    {
-        return $this->setProp('warranty', $value);
+        return $this->setProp('availabilityEnds', $value);
     }
 
     /**
@@ -902,61 +727,171 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability $value
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
-    function setAvailability($value)
+    function setEligibleRegion($value)
     {
-        return $this->setProp('availability', $value);
+        return $this->setProp('eligibleRegion', $value);
     }
 
     /**
-     * The type(s) of customers for which the given offer is valid.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessEntityType|null
+     * The beginning of the availability of the product or service included in the offer.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    function getEligibleCustomerType()
+    function setAvailabilityStarts($value)
     {
-        return $this->getProp('eligibleCustomerType');
+        return $this->setProp('availabilityStarts', $value);
+    }
+
+    /**
+     * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
+     * refers.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setSku($value)
+    {
+        return $this->setProp('sku', $value);
+    }
+
+    /**
+     * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
+     * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
+     * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setGtin13($value)
+    {
+        return $this->setProp('gtin13', $value);
+    }
+
+    /**
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction $value
+     * @return static
+     */
+    function setBusinessFunction($value)
+    {
+        return $this->setProp('businessFunction', $value);
+    }
+
+    /**
+     * The date after which the price is no longer available.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setPriceValidUntil($value)
+    {
+        return $this->setProp('priceValidUntil', $value);
+    }
+
+    /**
+     * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setMpn($value)
+    {
+        return $this->setProp('mpn', $value);
+    }
+
+    /**
+     * The geographic area where a service or offered item is provided.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @return static
+     */
+    function setAreaServed($value)
+    {
+        return $this->setProp('areaServed', $value);
+    }
+
+    /**
+     * The date when the item becomes valid.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setValidFrom($value)
+    {
+        return $this->setProp('validFrom', $value);
+    }
+
+    /**
+     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
+     * [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for
+     * [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in
+     * the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as
+     * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
+     * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
+     * Unicode symbols. 
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setPrice($value)
+    {
+        return $this->setProp('price', $value);
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
+     */
+    function setCategory($value)
+    {
+        return $this->setProp('category', $value);
+    }
+
+    /**
+     * The warranty promise(s) included in the offer.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\WarrantyPromise $value
+     * @return static
+     */
+    function setWarranty($value)
+    {
+        return $this->setProp('warranty', $value);
     }
 
     /**
      * The duration for which the given offer is valid.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
      */
-    function getEligibleDuration()
+    function setEligibleDuration($value)
     {
-        return $this->getProp('eligibleDuration');
+        return $this->setProp('eligibleDuration', $value);
     }
 
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|null
+     * The place(s) from which the offer can be obtained (e.g. store locations).
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @return static
      */
-    function getEligibleRegion()
+    function setAvailableAtOrFrom($value)
     {
-        return $this->getProp('eligibleRegion');
+        return $this->setProp('availableAtOrFrom', $value);
     }
 
     /**
-     * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
-     * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
-     * for more details.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The GS1 [digital
+     * link specifications](https://www.gs1.org/standards/Digital-Link/) express GTINs as URLs (URIs, IRIs, etc.). Details including regular expression examples can be found in, Section 6 of
+     * the GS1 URI Syntax specification; see also [schema.org tracking issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809) for schema.org-specific discussion. A correct [[gtin]] value should be a valid
+     * GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1
+     * Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet
+     * the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values
+     * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
+     * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
+     * the GS1 documentation for authoritative details.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
      */
-    function getGtin12()
+    function setGtin($value)
     {
-        return $this->getProp('gtin12');
-    }
-
-    /**
-     * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getLeaseLength()
-    {
-        return $this->getProp('leaseLength');
+        return $this->setProp('gtin', $value);
     }
 
     /**
@@ -968,208 +903,12 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
      * update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily
      * [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken
      * as an endorsement of this publication style. 
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getMobileUrl()
+    function setMobileUrl($value)
     {
-        return $this->getProp('mobileUrl');
-    }
-
-    /**
-     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
-     * purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases
-     * to a certain minimal amount.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|null
-     */
-    function getEligibleTransactionVolume()
-    {
-        return $this->getProp('eligibleTransactionVolume');
-    }
-
-    /**
-     * The date when the item becomes valid.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
-     */
-    function getValidFrom()
-    {
-        return $this->getProp('validFrom');
-    }
-
-    /**
-     * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getAdvanceBookingRequirement()
-    {
-        return $this->getProp('advanceBookingRequirement');
-    }
-
-    /**
-     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
-     * types, e.g. "Ithaca HOUR".
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getPriceCurrency()
-    {
-        return $this->getProp('priceCurrency');
-    }
-
-    /**
-     * An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease
-     * etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such
-     * as Product or a subtype of Product, can clarify the nature of the offer.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\AggregateOffer|\Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|\Vnetby\Schemaorg\Types\Thing\Event\Event|null
-     */
-    function getItemOffered()
-    {
-        return $this->getProp('itemOffered');
-    }
-
-    /**
-     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
-     * [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for
-     * [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in
-     * the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as
-     * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
-     * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
-     * Unicode symbols. 
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getPrice()
-    {
-        return $this->getProp('price');
-    }
-
-    /**
-     * The end of the availability of the product or service included in the offer.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getAvailabilityEnds()
-    {
-        return $this->getProp('availabilityEnds');
-    }
-
-    /**
-     * An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are
-     * available for a surcharge).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|null
-     */
-    function getAddOn()
-    {
-        return $this->getProp('addOn');
-    }
-
-    /**
-     * Specifies a MerchantReturnPolicy that may be applicable.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicy|null
-     */
-    function getHasMerchantReturnPolicy()
-    {
-        return $this->getProp('hasMerchantReturnPolicy');
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
-     */
-    function getCategory()
-    {
-        return $this->getProp('category');
-    }
-
-    /**
-     * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getMpn()
-    {
-        return $this->getProp('mpn');
-    }
-
-    /**
-     * The beginning of the availability of the product or service included in the offer.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
-     */
-    function getAvailabilityStarts()
-    {
-        return $this->getProp('availabilityStarts');
-    }
-
-    /**
-     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
-     * specifying that a certain freight charge is valid only for a certain quantity.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getEligibleQuantity()
-    {
-        return $this->getProp('eligibleQuantity');
-    }
-
-    /**
-     * The place(s) from which the offer can be obtained (e.g. store locations).
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
-     */
-    function getAvailableAtOrFrom()
-    {
-        return $this->getProp('availableAtOrFrom');
-    }
-
-    /**
-     * Indicates whether this content is family friendly.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
-     */
-    function getIsFamilyFriendly()
-    {
-        return $this->getProp('isFamilyFriendly');
-    }
-
-    /**
-     * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
-     * refers.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getSku()
-    {
-        return $this->getProp('sku');
-    }
-
-    /**
-     * An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a
-     * provider.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
-     */
-    function getSeller()
-    {
-        return $this->getProp('seller');
-    }
-
-    /**
-     * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for
-     * the serial number of the product included in the offer.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getSerialNumber()
-    {
-        return $this->getProp('serialNumber');
-    }
-
-    /**
-     * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getGtin14()
-    {
-        return $this->getProp('gtin14');
-    }
-
-    /**
-     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|null
-     */
-    function getPriceSpecification()
-    {
-        return $this->getProp('priceSpecification');
+        return $this->setProp('mobileUrl', $value);
     }
 
     /**
@@ -1183,6 +922,15 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
+     */
+    function getLeaseLength()
+    {
+        return $this->getProp('leaseLength');
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating|null
      */
@@ -1192,13 +940,80 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * The current approximate inventory level for the item or items.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getInventoryLevel()
+    {
+        return $this->getProp('inventoryLevel');
+    }
+
+    /**
+     * An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease
+     * etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such
+     * as Product or a subtype of Product, can clarify the nature of the offer.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem|\Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip|\Vnetby\Schemaorg\Types\Thing\Intangible\Offer\AggregateOffer|\Vnetby\Schemaorg\Types\Thing\Event\Event|\Vnetby\Schemaorg\Types\Thing\Product\Product|null
+     */
+    function getItemOffered()
+    {
+        return $this->getProp('itemOffered');
+    }
+
+    /**
+     * An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a
+     * provider.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getSeller()
+    {
+        return $this->getProp('seller');
+    }
+
+    /**
+     * A pointer to the organization or person making the offer.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getOfferedBy()
+    {
+        return $this->getProp('offeredBy');
+    }
+
+    /**
+     * Used to tag an item to be intended or suitable for consumption or use by adults only.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration|null
+     */
+    function getHasAdultConsideration()
+    {
+        return $this->getProp('hasAdultConsideration');
+    }
+
+    /**
+     * The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for
+     * the serial number of the product included in the offer.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getSerialNumber()
+    {
+        return $this->getProp('serialNumber');
+    }
+
+    /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getIneligibleRegion()
     {
         return $this->getProp('ineligibleRegion');
+    }
+
+    /**
+     * The amount of time that is required between accepting the offer and the actual usage of the resource or service.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getAdvanceBookingRequirement()
+    {
+        return $this->getProp('advanceBookingRequirement');
     }
 
     /**
@@ -1223,49 +1038,33 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * Indicates information about the shipping policies and options associated with an [[Offer]].
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OfferShippingDetails|null
+     * The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal
+     * purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases
+     * to a certain minimal amount.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|null
      */
-    function getShippingDetails()
+    function getEligibleTransactionVolume()
     {
-        return $this->getProp('shippingDetails');
+        return $this->getProp('eligibleTransactionVolume');
     }
 
     /**
-     * The delivery method(s) available for this offer.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod|null
+     * An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are
+     * available for a surcharge).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|null
      */
-    function getAvailableDeliveryMethod()
+    function getAddOn()
     {
-        return $this->getProp('availableDeliveryMethod');
+        return $this->getProp('addOn');
     }
 
     /**
-     * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
-     * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getGtin8()
+    function getGtin14()
     {
-        return $this->getProp('gtin8');
-    }
-
-    /**
-     * The current approximate inventory level for the item or items.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getInventoryLevel()
-    {
-        return $this->getProp('inventoryLevel');
-    }
-
-    /**
-     * A review of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review|null
-     */
-    function getReview()
-    {
-        return $this->getProp('review');
+        return $this->getProp('gtin14');
     }
 
     /**
@@ -1279,29 +1078,53 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The GS1 [digital
-     * link specifications](https://www.gs1.org/standards/Digital-Link/) express GTINs as URLs (URIs, IRIs, etc.). Details including regular expression examples can be found in, Section 6 of
-     * the GS1 URI Syntax specification; see also [schema.org tracking issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809) for schema.org-specific discussion. A correct [[gtin]] value should be a valid
-     * GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1
-     * Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet
-     * the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values
-     * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
-     * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
-     * the GS1 documentation for authoritative details.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * Indicates information about the shipping policies and options associated with an [[Offer]].
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\OfferShippingDetails|null
      */
-    function getGtin()
+    function getShippingDetails()
     {
-        return $this->getProp('gtin');
+        return $this->getProp('shippingDetails');
     }
 
     /**
-     * A pointer to the organization or person making the offer.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification
+     * Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin)
+     * for more details.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getOfferedBy()
+    function getGtin12()
     {
-        return $this->getProp('offeredBy');
+        return $this->getProp('gtin12');
+    }
+
+    /**
+     * The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g.
+     * specifying that a certain freight charge is valid only for a certain quantity.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getEligibleQuantity()
+    {
+        return $this->getProp('eligibleQuantity');
+    }
+
+    /**
+     * The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency
+     * types, e.g. "Ithaca HOUR".
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPriceCurrency()
+    {
+        return $this->getProp('priceCurrency');
+    }
+
+    /**
+     * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability|null
+     */
+    function getAvailability()
+    {
+        return $this->getProp('availability');
     }
 
     /**
@@ -1314,8 +1137,53 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * The type(s) of customers for which the given offer is valid.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessEntityType|null
+     */
+    function getEligibleCustomerType()
+    {
+        return $this->getProp('eligibleCustomerType');
+    }
+
+    /**
+     * A review of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review|null
+     */
+    function getReview()
+    {
+        return $this->getProp('review');
+    }
+
+    /**
+     * Indicates whether this content is family friendly.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     */
+    function getIsFamilyFriendly()
+    {
+        return $this->getProp('isFamilyFriendly');
+    }
+
+    /**
+     * One or more detailed price specifications, indicating the unit price and delivery or payment charges.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\PriceSpecification|null
+     */
+    function getPriceSpecification()
+    {
+        return $this->getProp('priceSpecification');
+    }
+
+    /**
+     * The delivery method(s) available for this offer.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\DeliveryMethod\DeliveryMethod|null
+     */
+    function getAvailableDeliveryMethod()
+    {
+        return $this->getProp('availableDeliveryMethod');
+    }
+
+    /**
      * The payment method(s) accepted by seller for this offer.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod|\Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Service\FinancialProduct\LoanOrCredit\LoanOrCredit|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PaymentMethod\PaymentMethod|null
      */
     function getAcceptedPaymentMethod()
     {
@@ -1323,59 +1191,31 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
-     * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
-     * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * Specifies a MerchantReturnPolicy that may be applicable.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\MerchantReturnPolicy|null
+     */
+    function getHasMerchantReturnPolicy()
+    {
+        return $this->getProp('hasMerchantReturnPolicy');
+    }
+
+    /**
+     * The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8
+     * or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getGtin13()
+    function getGtin8()
     {
-        return $this->getProp('gtin13');
+        return $this->getProp('gtin8');
     }
 
     /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction|null
+     * The end of the availability of the product or service included in the offer.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
-    function getBusinessFunction()
+    function getAvailabilityEnds()
     {
-        return $this->getProp('businessFunction');
-    }
-
-    /**
-     * The geographic area where a service or offered item is provided.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getAreaServed()
-    {
-        return $this->getProp('areaServed');
-    }
-
-    /**
-     * The date after which the price is no longer available.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
-     */
-    function getPriceValidUntil()
-    {
-        return $this->getProp('priceValidUntil');
-    }
-
-    /**
-     * Used to tag an item to be intended or suitable for consumption or use by adults only.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\AdultOrientedEnumeration\AdultOrientedEnumeration|null
-     */
-    function getHasAdultConsideration()
-    {
-        return $this->getProp('hasAdultConsideration');
-    }
-
-    /**
-     * The warranty promise(s) included in the offer.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\WarrantyPromise|null
-     */
-    function getWarranty()
-    {
-        return $this->getProp('warranty');
+        return $this->getProp('availabilityEnds');
     }
 
     /**
@@ -1401,11 +1241,171 @@ class Offer extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ItemAvailability\ItemAvailability|null
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
-    function getAvailability()
+    function getEligibleRegion()
     {
-        return $this->getProp('availability');
+        return $this->getProp('eligibleRegion');
+    }
+
+    /**
+     * The beginning of the availability of the product or service included in the offer.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getAvailabilityStarts()
+    {
+        return $this->getProp('availabilityStarts');
+    }
+
+    /**
+     * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer
+     * refers.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getSku()
+    {
+        return $this->getProp('sku');
+    }
+
+    /**
+     * The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes
+     * and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See
+     * [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getGtin13()
+    {
+        return $this->getProp('gtin13');
+    }
+
+    /**
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\BusinessFunction|null
+     */
+    function getBusinessFunction()
+    {
+        return $this->getProp('businessFunction');
+    }
+
+    /**
+     * The date after which the price is no longer available.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getPriceValidUntil()
+    {
+        return $this->getProp('priceValidUntil');
+    }
+
+    /**
+     * The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getMpn()
+    {
+        return $this->getProp('mpn');
+    }
+
+    /**
+     * The geographic area where a service or offered item is provided.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     */
+    function getAreaServed()
+    {
+        return $this->getProp('areaServed');
+    }
+
+    /**
+     * The date when the item becomes valid.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getValidFrom()
+    {
+        return $this->getProp('validFrom');
+    }
+
+    /**
+     * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
+     * [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for
+     * [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in
+     * the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as
+     * a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable
+     * values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar
+     * Unicode symbols. 
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPrice()
+    {
+        return $this->getProp('price');
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getCategory()
+    {
+        return $this->getProp('category');
+    }
+
+    /**
+     * The warranty promise(s) included in the offer.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\WarrantyPromise|null
+     */
+    function getWarranty()
+    {
+        return $this->getProp('warranty');
+    }
+
+    /**
+     * The duration for which the given offer is valid.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getEligibleDuration()
+    {
+        return $this->getProp('eligibleDuration');
+    }
+
+    /**
+     * The place(s) from which the offer can be obtained (e.g. store locations).
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     */
+    function getAvailableAtOrFrom()
+    {
+        return $this->getProp('availableAtOrFrom');
+    }
+
+    /**
+     * A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The GS1 [digital
+     * link specifications](https://www.gs1.org/standards/Digital-Link/) express GTINs as URLs (URIs, IRIs, etc.). Details including regular expression examples can be found in, Section 6 of
+     * the GS1 URI Syntax specification; see also [schema.org tracking issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809) for schema.org-specific discussion. A correct [[gtin]] value should be a valid
+     * GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1
+     * Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet
+     * the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values
+     * is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. Note also that this
+     * is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see
+     * the GS1 documentation for authoritative details.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getGtin()
+    {
+        return $this->getProp('gtin');
+    }
+
+    /**
+     * The [[mobileUrl]] property is provided for specific situations in which data consumers need to determine whether one of several provided URLs
+     * is a dedicated 'mobile site'. To discourage over-use, and reflecting intial usecases, the property is expected only on [[Product]] and [[Offer]],
+     * rather than [[Thing]]. The general trend in web technology is towards [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) in which content can be flexibly adapted to
+     * a wide range of browsing environments. Pages and sites referenced with the long-established [[url]] property should ideally also be usable on
+     * a wide variety of devices, including mobile phones. In most cases, it would be pointless and counter productive to attempt to
+     * update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily
+     * [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken
+     * as an endorsement of this publication style. 
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getMobileUrl()
+    {
+        return $this->getProp('mobileUrl');
     }
 }

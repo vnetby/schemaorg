@@ -18,27 +18,26 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     public $unitText;
 
     /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
-     * Code may be used with a prefix followed by a colon.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
+     * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration
      */
-    public $unitCode;
+    public $priceComponentType;
 
     /**
      * Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration
      */
     public $priceType;
 
     /**
-     * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to
-     * model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a
+     * replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    public $billingStart;
+    public $referenceQuantity;
 
     /**
      * Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual
@@ -49,17 +48,18 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     public $billingDuration;
 
     /**
-     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a
-     * replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
+     * Code may be used with a prefix followed by a colon.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    public $referenceQuantity;
+    public $unitCode;
 
     /**
-     * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration
+     * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to
+     * model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    public $priceComponentType;
+    public $billingStart;
 
     /**
      * This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement
@@ -79,14 +79,13 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
-     * Code may be used with a prefix followed by a colon.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration $value
      * @return static
      */
-    function setUnitCode($value)
+    function setPriceComponentType($value)
     {
-        return $this->setProp('unitCode', $value);
+        return $this->setProp('priceComponentType', $value);
     }
 
     /**
@@ -94,7 +93,7 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration $value
      * @return static
      */
     function setPriceType($value)
@@ -103,14 +102,14 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to
-     * model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a
+     * replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
      * @return static
      */
-    function setBillingStart($value)
+    function setReferenceQuantity($value)
     {
-        return $this->setProp('billingStart', $value);
+        return $this->setProp('referenceQuantity', $value);
     }
 
     /**
@@ -126,24 +125,25 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a
-     * replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
+     * Code may be used with a prefix followed by a colon.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
-    function setReferenceQuantity($value)
+    function setUnitCode($value)
     {
-        return $this->setProp('referenceQuantity', $value);
+        return $this->setProp('unitCode', $value);
     }
 
     /**
-     * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration $value
+     * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to
+     * model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
      * @return static
      */
-    function setPriceComponentType($value)
+    function setBillingStart($value)
     {
-        return $this->setProp('priceComponentType', $value);
+        return $this->setProp('billingStart', $value);
     }
 
     /**
@@ -167,13 +167,12 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
-     * Code may be used with a prefix followed by a colon.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration|null
      */
-    function getUnitCode()
+    function getPriceComponentType()
     {
-        return $this->getProp('unitCode');
+        return $this->getProp('priceComponentType');
     }
 
     /**
@@ -181,7 +180,7 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|null
      */
     function getPriceType()
     {
@@ -189,13 +188,13 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to
-     * model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a
+     * replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
-    function getBillingStart()
+    function getReferenceQuantity()
     {
-        return $this->getProp('billingStart');
+        return $this->getProp('referenceQuantity');
     }
 
     /**
@@ -210,22 +209,23 @@ class UnitPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible\St
     }
 
     /**
-     * The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a
-     * replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common
+     * Code may be used with a prefix followed by a colon.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function getReferenceQuantity()
+    function getUnitCode()
     {
-        return $this->getProp('referenceQuantity');
+        return $this->getProp('unitCode');
     }
 
     /**
-     * Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceComponentTypeEnumeration\PriceComponentTypeEnumeration|null
+     * Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to
+     * model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
      */
-    function getPriceComponentType()
+    function getBillingStart()
     {
-        return $this->getProp('priceComponentType');
+        return $this->getProp('billingStart');
     }
 
     /**

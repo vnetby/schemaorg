@@ -12,12 +12,6 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
     const TYPE = 'CategoryCode';
 
     /**
-     * A short textual code that uniquely identifies the value.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $codeValue;
-
-    /**
      * A [[CategoryCodeSet]] that contains this category code.
      * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\CategoryCodeSet|\Vnetby\Schemaorg\DataTypes\DataURL
      */
@@ -25,13 +19,9 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setCodeValue($value)
-    {
-        return $this->setProp('codeValue', $value);
-    }
+    public $codeValue;
 
     /**
      * A [[CategoryCodeSet]] that contains this category code.
@@ -45,11 +35,12 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
 
     /**
      * A short textual code that uniquely identifies the value.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getCodeValue()
+    function setCodeValue($value)
     {
-        return $this->getProp('codeValue');
+        return $this->setProp('codeValue', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class CategoryCode extends \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\
     function getInCodeSet()
     {
         return $this->getProp('inCodeSet');
+    }
+
+    /**
+     * A short textual code that uniquely identifies the value.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getCodeValue()
+    {
+        return $this->getProp('codeValue');
     }
 }

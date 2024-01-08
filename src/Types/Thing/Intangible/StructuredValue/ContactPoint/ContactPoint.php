@@ -12,44 +12,6 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     const TYPE = 'ContactPoint';
 
     /**
-     * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact
-     * point and so on. This property is used to specify the kind of contact point.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $contactType;
-
-    /**
-     * The telephone number.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $telephone;
-
-    /**
-     * An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption
-     */
-    public $contactOption;
-
-    /**
-     * Email address.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $email;
-
-    /**
-     * The product or service this support contact point is related to (such as product support for a particular product line). This
-     * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $productSupported;
-
-    /**
-     * The fax number.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $faxNumber;
-
-    /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
      * the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Language
@@ -63,72 +25,48 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     public $hoursAvailable;
 
     /**
+     * The product or service this support contact point is related to (such as product support for a particular product line). This
+     * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $productSupported;
+
+    /**
+     * Email address.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $email;
+
+    /**
+     * The telephone number.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $telephone;
+
+    /**
+     * The fax number.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $faxNumber;
+
+    /**
      * The geographic area where a service or offered item is provided.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
     public $areaServed;
 
     /**
      * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact
      * point and so on. This property is used to specify the kind of contact point.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setContactType($value)
-    {
-        return $this->setProp('contactType', $value);
-    }
-
-    /**
-     * The telephone number.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setTelephone($value)
-    {
-        return $this->setProp('telephone', $value);
-    }
+    public $contactType;
 
     /**
      * An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption
      */
-    function setContactOption($value)
-    {
-        return $this->setProp('contactOption', $value);
-    }
-
-    /**
-     * Email address.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setEmail($value)
-    {
-        return $this->setProp('email', $value);
-    }
-
-    /**
-     * The product or service this support contact point is related to (such as product support for a particular product line). This
-     * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setProductSupported($value)
-    {
-        return $this->setProp('productSupported', $value);
-    }
-
-    /**
-     * The fax number.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setFaxNumber($value)
-    {
-        return $this->setProp('faxNumber', $value);
-    }
+    public $contactOption;
 
     /**
      * A language someone may use with or at the item, service or place. Please use one of the language codes from
@@ -152,8 +90,49 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
+     * The product or service this support contact point is related to (such as product support for a particular product line). This
+     * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setProductSupported($value)
+    {
+        return $this->setProp('productSupported', $value);
+    }
+
+    /**
+     * Email address.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setEmail($value)
+    {
+        return $this->setProp('email', $value);
+    }
+
+    /**
+     * The telephone number.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTelephone($value)
+    {
+        return $this->setProp('telephone', $value);
+    }
+
+    /**
+     * The fax number.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setFaxNumber($value)
+    {
+        return $this->setProp('faxNumber', $value);
+    }
+
+    /**
      * The geographic area where a service or offered item is provided.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
     function setAreaServed($value)
@@ -164,57 +143,22 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     /**
      * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact
      * point and so on. This property is used to specify the kind of contact point.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getContactType()
+    function setContactType($value)
     {
-        return $this->getProp('contactType');
-    }
-
-    /**
-     * The telephone number.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getTelephone()
-    {
-        return $this->getProp('telephone');
+        return $this->setProp('contactType', $value);
     }
 
     /**
      * An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption $value
+     * @return static
      */
-    function getContactOption()
+    function setContactOption($value)
     {
-        return $this->getProp('contactOption');
-    }
-
-    /**
-     * Email address.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getEmail()
-    {
-        return $this->getProp('email');
-    }
-
-    /**
-     * The product or service this support contact point is related to (such as product support for a particular product line). This
-     * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getProductSupported()
-    {
-        return $this->getProp('productSupported');
-    }
-
-    /**
-     * The fax number.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getFaxNumber()
-    {
-        return $this->getProp('faxNumber');
+        return $this->setProp('contactOption', $value);
     }
 
     /**
@@ -237,11 +181,67 @@ class ContactPoint extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredVa
     }
 
     /**
+     * The product or service this support contact point is related to (such as product support for a particular product line). This
+     * can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Product\Product|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getProductSupported()
+    {
+        return $this->getProp('productSupported');
+    }
+
+    /**
+     * Email address.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getEmail()
+    {
+        return $this->getProp('email');
+    }
+
+    /**
+     * The telephone number.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getTelephone()
+    {
+        return $this->getProp('telephone');
+    }
+
+    /**
+     * The fax number.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getFaxNumber()
+    {
+        return $this->getProp('faxNumber');
+    }
+
+    /**
      * The geographic area where a service or offered item is provided.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getAreaServed()
     {
         return $this->getProp('areaServed');
+    }
+
+    /**
+     * A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact
+     * point and so on. This property is used to specify the kind of contact point.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getContactType()
+    {
+        return $this->getProp('contactType');
+    }
+
+    /**
+     * An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\ContactPointOption\ContactPointOption|null
+     */
+    function getContactOption()
+    {
+        return $this->getProp('contactOption');
     }
 }

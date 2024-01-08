@@ -12,12 +12,6 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
     const TYPE = 'MusicAlbum';
 
     /**
-     * A release of this album.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicRelease
-     */
-    public $albumRelease;
-
-    /**
      * The kind of release which this album is: single, EP or album.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MusicAlbumReleaseType\MusicAlbumReleaseType
      */
@@ -25,7 +19,7 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
 
     /**
      * The artist that performed this album or recording.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup
      */
     public $byArtist;
 
@@ -37,13 +31,9 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
 
     /**
      * A release of this album.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicRelease $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicRelease
      */
-    function setAlbumRelease($value)
-    {
-        return $this->setProp('albumRelease', $value);
-    }
+    public $albumRelease;
 
     /**
      * The kind of release which this album is: single, EP or album.
@@ -57,7 +47,7 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
 
     /**
      * The artist that performed this album or recording.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup $value
      * @return static
      */
     function setByArtist($value)
@@ -77,11 +67,12 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
 
     /**
      * A release of this album.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicRelease|null
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicRelease $value
+     * @return static
      */
-    function getAlbumRelease()
+    function setAlbumRelease($value)
     {
-        return $this->getProp('albumRelease');
+        return $this->setProp('albumRelease', $value);
     }
 
     /**
@@ -95,7 +86,7 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
 
     /**
      * The artist that performed this album or recording.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|null
      */
     function getByArtist()
     {
@@ -109,5 +100,14 @@ class MusicAlbum extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylis
     function getAlbumProductionType()
     {
         return $this->getProp('albumProductionType');
+    }
+
+    /**
+     * A release of this album.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicRelease|null
+     */
+    function getAlbumRelease()
+    {
+        return $this->getProp('albumRelease');
     }
 }

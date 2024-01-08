@@ -14,12 +14,6 @@ class PlayAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     const TYPE = 'PlayAction';
 
     /**
-     * Upcoming or past event associated with this place, organization, or action.
-     * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
-     */
-    public $event;
-
-    /**
      * An intended audience, i.e. a group for whom something was created.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
@@ -27,13 +21,9 @@ class PlayAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
-     * @param \Vnetby\Schemaorg\Types\Thing\Event\Event $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    function setEvent($value)
-    {
-        return $this->setProp('event', $value);
-    }
+    public $event;
 
     /**
      * An intended audience, i.e. a group for whom something was created.
@@ -47,11 +37,12 @@ class PlayAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
 
     /**
      * Upcoming or past event associated with this place, organization, or action.
-     * @return \Vnetby\Schemaorg\Types\Thing\Event\Event|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Event\Event $value
+     * @return static
      */
-    function getEvent()
+    function setEvent($value)
     {
-        return $this->getProp('event');
+        return $this->setProp('event', $value);
     }
 
     /**
@@ -61,5 +52,14 @@ class PlayAction extends \Vnetby\Schemaorg\Types\Thing\Action\Action
     function getAudience()
     {
         return $this->getProp('audience');
+    }
+
+    /**
+     * Upcoming or past event associated with this place, organization, or action.
+     * @return \Vnetby\Schemaorg\Types\Thing\Event\Event|null
+     */
+    function getEvent()
+    {
+        return $this->getProp('event');
     }
 }

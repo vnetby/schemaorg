@@ -14,12 +14,6 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
     const TYPE = 'AlignmentObject';
 
     /**
-     * The name of a node in an established educational framework.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $targetName;
-
-    /**
      * The framework to which the resource being described is aligned.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -32,26 +26,22 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
     public $targetDescription;
 
     /**
-     * The URL of a node in an established educational framework.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $targetUrl;
-
-    /**
      * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $alignmentType;
 
     /**
-     * The name of a node in an established educational framework.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * The URL of a node in an established educational framework.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    function setTargetName($value)
-    {
-        return $this->setProp('targetName', $value);
-    }
+    public $targetUrl;
+
+    /**
+     * The name of a node in an established educational framework.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $targetName;
 
     /**
      * The framework to which the resource being described is aligned.
@@ -74,16 +64,6 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
     }
 
     /**
-     * The URL of a node in an established educational framework.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setTargetUrl($value)
-    {
-        return $this->setProp('targetUrl', $value);
-    }
-
-    /**
      * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -94,12 +74,23 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
     }
 
     /**
-     * The name of a node in an established educational framework.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The URL of a node in an established educational framework.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
      */
-    function getTargetName()
+    function setTargetUrl($value)
     {
-        return $this->getProp('targetName');
+        return $this->setProp('targetUrl', $value);
+    }
+
+    /**
+     * The name of a node in an established educational framework.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTargetName($value)
+    {
+        return $this->setProp('targetName', $value);
     }
 
     /**
@@ -121,6 +112,15 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
     }
 
     /**
+     * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getAlignmentType()
+    {
+        return $this->getProp('alignmentType');
+    }
+
+    /**
      * The URL of a node in an established educational framework.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
@@ -130,11 +130,11 @@ class AlignmentObject extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangibl
     }
 
     /**
-     * A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
+     * The name of a node in an established educational framework.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getAlignmentType()
+    function getTargetName()
     {
-        return $this->getProp('alignmentType');
+        return $this->getProp('targetName');
     }
 }

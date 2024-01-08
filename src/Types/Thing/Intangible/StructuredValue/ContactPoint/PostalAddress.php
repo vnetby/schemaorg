@@ -12,10 +12,10 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     const TYPE = 'PostalAddress';
 
     /**
-     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country
+     * The street address. For example, 1600 Amphitheatre Pkwy.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $addressCountry;
+    public $streetAddress;
 
     /**
      * The post office box number for PO box addresses.
@@ -24,17 +24,17 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     public $postOfficeBoxNumber;
 
     /**
-     * The street address. For example, 1600 Amphitheatre Pkwy.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $streetAddress;
-
-    /**
      * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative
      * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $addressRegion;
+
+    /**
+     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $addressCountry;
 
     /**
      * The locality in which the street address is, and which is in the region. For example, Mountain View.
@@ -49,13 +49,13 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     public $postalCode;
 
     /**
-     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country $value
+     * The street address. For example, 1600 Amphitheatre Pkwy.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setAddressCountry($value)
+    function setStreetAddress($value)
     {
-        return $this->setProp('addressCountry', $value);
+        return $this->setProp('streetAddress', $value);
     }
 
     /**
@@ -69,16 +69,6 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     }
 
     /**
-     * The street address. For example, 1600 Amphitheatre Pkwy.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setStreetAddress($value)
-    {
-        return $this->setProp('streetAddress', $value);
-    }
-
-    /**
      * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative
      * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
@@ -87,6 +77,16 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     function setAddressRegion($value)
     {
         return $this->setProp('addressRegion', $value);
+    }
+
+    /**
+     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setAddressCountry($value)
+    {
+        return $this->setProp('addressCountry', $value);
     }
 
     /**
@@ -110,12 +110,12 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     }
 
     /**
-     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|null
+     * The street address. For example, 1600 Amphitheatre Pkwy.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getAddressCountry()
+    function getStreetAddress()
     {
-        return $this->getProp('addressCountry');
+        return $this->getProp('streetAddress');
     }
 
     /**
@@ -128,15 +128,6 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     }
 
     /**
-     * The street address. For example, 1600 Amphitheatre Pkwy.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getStreetAddress()
-    {
-        return $this->getProp('streetAddress');
-    }
-
-    /**
      * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative
      * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
@@ -144,6 +135,15 @@ class PostalAddress extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     function getAddressRegion()
     {
         return $this->getProp('addressRegion');
+    }
+
+    /**
+     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getAddressCountry()
+    {
+        return $this->getProp('addressCountry');
     }
 
     /**

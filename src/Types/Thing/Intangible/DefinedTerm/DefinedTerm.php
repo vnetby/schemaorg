@@ -15,7 +15,7 @@ class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A [[DefinedTermSet]] that contains this term.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet
      */
     public $inDefinedTermSet;
 
@@ -27,7 +27,7 @@ class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A [[DefinedTermSet]] that contains this term.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet $value
      * @return static
      */
     function setInDefinedTermSet($value)
@@ -47,7 +47,7 @@ class DefinedTerm extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A [[DefinedTermSet]] that contains this term.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\DefinedTermSet\DefinedTermSet|null
      */
     function getInDefinedTermSet()
     {

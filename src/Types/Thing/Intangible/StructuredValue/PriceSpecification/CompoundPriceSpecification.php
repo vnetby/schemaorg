@@ -14,15 +14,6 @@ class CompoundPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     const TYPE = 'CompoundPriceSpecification';
 
     /**
-     * Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or
-     * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
-     * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
-     * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $priceType;
-
-    /**
      * This property links to all [[UnitPriceSpecification]] nodes that apply in parallel for the [[CompoundPriceSpecification]] node.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PriceSpecification\UnitPriceSpecification
      */
@@ -33,13 +24,9 @@ class CompoundPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration
      */
-    function setPriceType($value)
-    {
-        return $this->setProp('priceType', $value);
-    }
+    public $priceType;
 
     /**
      * This property links to all [[UnitPriceSpecification]] nodes that apply in parallel for the [[CompoundPriceSpecification]] node.
@@ -56,11 +43,12 @@ class CompoundPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
      * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
      * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
      * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration $value
+     * @return static
      */
-    function getPriceType()
+    function setPriceType($value)
     {
-        return $this->getProp('priceType');
+        return $this->setProp('priceType', $value);
     }
 
     /**
@@ -70,5 +58,17 @@ class CompoundPriceSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangibl
     function getPriceComponent()
     {
         return $this->getProp('priceComponent');
+    }
+
+    /**
+     * Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or
+     * a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify
+     * the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or
+     * as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PriceTypeEnumeration\PriceTypeEnumeration|null
+     */
+    function getPriceType()
+    {
+        return $this->getProp('priceType');
     }
 }

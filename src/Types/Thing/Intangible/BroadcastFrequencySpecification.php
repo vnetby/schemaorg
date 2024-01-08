@@ -12,22 +12,32 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
     const TYPE = 'BroadcastFrequencySpecification';
 
     /**
+     * The frequency in MHz for a particular broadcast.
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $broadcastFrequencyValue;
+
+    /**
      * The subchannel used for the broadcast.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $broadcastSubChannel;
 
     /**
-     * The frequency in MHz for a particular broadcast.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $broadcastFrequencyValue;
-
-    /**
      * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
     public $broadcastSignalModulation;
+
+    /**
+     * The frequency in MHz for a particular broadcast.
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setBroadcastFrequencyValue($value)
+    {
+        return $this->setProp('broadcastFrequencyValue', $value);
+    }
 
     /**
      * The subchannel used for the broadcast.
@@ -37,16 +47,6 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
     function setBroadcastSubChannel($value)
     {
         return $this->setProp('broadcastSubChannel', $value);
-    }
-
-    /**
-     * The frequency in MHz for a particular broadcast.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setBroadcastFrequencyValue($value)
-    {
-        return $this->setProp('broadcastFrequencyValue', $value);
     }
 
     /**
@@ -60,21 +60,21 @@ class BroadcastFrequencySpecification extends \Vnetby\Schemaorg\Types\Thing\Inta
     }
 
     /**
+     * The frequency in MHz for a particular broadcast.
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getBroadcastFrequencyValue()
+    {
+        return $this->getProp('broadcastFrequencyValue');
+    }
+
+    /**
      * The subchannel used for the broadcast.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBroadcastSubChannel()
     {
         return $this->getProp('broadcastSubChannel');
-    }
-
-    /**
-     * The frequency in MHz for a particular broadcast.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getBroadcastFrequencyValue()
-    {
-        return $this->getProp('broadcastFrequencyValue');
     }
 
     /**

@@ -12,16 +12,10 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     const TYPE = 'Permit';
 
     /**
-     * The date when the item is no longer valid.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
+     * The geographic area where a permit or similar thing is valid.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    public $validUntil;
-
-    /**
-     * The date when the item becomes valid.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $validFrom;
+    public $validIn;
 
     /**
      * The duration of validity of a permit or similar thing.
@@ -30,10 +24,10 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $validFor;
 
     /**
-     * The target audience for this permit.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
+     * The service through which the permit was granted.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
      */
-    public $permitAudience;
+    public $issuedThrough;
 
     /**
      * The organization issuing the ticket or permit.
@@ -42,35 +36,31 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $issuedBy;
 
     /**
-     * The geographic area where a permit or similar thing is valid.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
-     */
-    public $validIn;
-
-    /**
-     * The service through which the permit was granted.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service
-     */
-    public $issuedThrough;
-
-    /**
      * The date when the item is no longer valid.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate
      */
-    function setValidUntil($value)
-    {
-        return $this->setProp('validUntil', $value);
-    }
+    public $validUntil;
+
+    /**
+     * The target audience for this permit.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
+     */
+    public $permitAudience;
 
     /**
      * The date when the item becomes valid.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $validFrom;
+
+    /**
+     * The geographic area where a permit or similar thing is valid.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
      * @return static
      */
-    function setValidFrom($value)
+    function setValidIn($value)
     {
-        return $this->setProp('validFrom', $value);
+        return $this->setProp('validIn', $value);
     }
 
     /**
@@ -84,13 +74,13 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The target audience for this permit.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
+     * The service through which the permit was granted.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service $value
      * @return static
      */
-    function setPermitAudience($value)
+    function setIssuedThrough($value)
     {
-        return $this->setProp('permitAudience', $value);
+        return $this->setProp('issuedThrough', $value);
     }
 
     /**
@@ -104,68 +94,33 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * The geographic area where a permit or similar thing is valid.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
-     * @return static
-     */
-    function setValidIn($value)
-    {
-        return $this->setProp('validIn', $value);
-    }
-
-    /**
-     * The service through which the permit was granted.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service $value
-     * @return static
-     */
-    function setIssuedThrough($value)
-    {
-        return $this->setProp('issuedThrough', $value);
-    }
-
-    /**
      * The date when the item is no longer valid.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    function getValidUntil()
+    function setValidUntil($value)
     {
-        return $this->getProp('validUntil');
-    }
-
-    /**
-     * The date when the item becomes valid.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
-     */
-    function getValidFrom()
-    {
-        return $this->getProp('validFrom');
-    }
-
-    /**
-     * The duration of validity of a permit or similar thing.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
-     */
-    function getValidFor()
-    {
-        return $this->getProp('validFor');
+        return $this->setProp('validUntil', $value);
     }
 
     /**
      * The target audience for this permit.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
+     * @return static
      */
-    function getPermitAudience()
+    function setPermitAudience($value)
     {
-        return $this->getProp('permitAudience');
+        return $this->setProp('permitAudience', $value);
     }
 
     /**
-     * The organization issuing the ticket or permit.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * The date when the item becomes valid.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
      */
-    function getIssuedBy()
+    function setValidFrom($value)
     {
-        return $this->getProp('issuedBy');
+        return $this->setProp('validFrom', $value);
     }
 
     /**
@@ -178,11 +133,56 @@ class Permit extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * The duration of validity of a permit or similar thing.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
+     */
+    function getValidFor()
+    {
+        return $this->getProp('validFor');
+    }
+
+    /**
      * The service through which the permit was granted.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|null
      */
     function getIssuedThrough()
     {
         return $this->getProp('issuedThrough');
+    }
+
+    /**
+     * The organization issuing the ticket or permit.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getIssuedBy()
+    {
+        return $this->getProp('issuedBy');
+    }
+
+    /**
+     * The date when the item is no longer valid.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getValidUntil()
+    {
+        return $this->getProp('validUntil');
+    }
+
+    /**
+     * The target audience for this permit.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
+     */
+    function getPermitAudience()
+    {
+        return $this->getProp('permitAudience');
+    }
+
+    /**
+     * The date when the item becomes valid.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getValidFrom()
+    {
+        return $this->getProp('validFrom');
     }
 }

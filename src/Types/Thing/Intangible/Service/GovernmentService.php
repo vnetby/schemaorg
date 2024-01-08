@@ -12,12 +12,6 @@ class GovernmentService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service
     const TYPE = 'GovernmentService';
 
     /**
-     * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $jurisdiction;
-
-    /**
      * The operating organization, if different from the provider. This enables the representation of services that are provided by an organization, but
      * operated by another organization like a subcontractor.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
@@ -26,13 +20,9 @@ class GovernmentService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service
 
     /**
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setJurisdiction($value)
-    {
-        return $this->setProp('jurisdiction', $value);
-    }
+    public $jurisdiction;
 
     /**
      * The operating organization, if different from the provider. This enables the representation of services that are provided by an organization, but
@@ -47,11 +37,12 @@ class GovernmentService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service
 
     /**
      * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getJurisdiction()
+    function setJurisdiction($value)
     {
-        return $this->getProp('jurisdiction');
+        return $this->setProp('jurisdiction', $value);
     }
 
     /**
@@ -62,5 +53,14 @@ class GovernmentService extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service
     function getServiceOperator()
     {
         return $this->getProp('serviceOperator');
+    }
+
+    /**
+     * Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getJurisdiction()
+    {
+        return $this->getProp('jurisdiction');
     }
 }

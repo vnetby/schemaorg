@@ -17,33 +17,9 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
 
     /**
      * The cost per unit of the drug.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
+     * @var string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $costPerUnit;
-
-    /**
-     * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $drugUnit;
-
-    /**
-     * The location in which the status applies.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
-     */
-    public $applicableLocation;
-
-    /**
-     * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $costCurrency;
-
-    /**
-     * The category of cost, such as wholesale, retail, reimbursement cap, etc.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory\DrugCostCategory
-     */
-    public $costCategory;
 
     /**
      * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
@@ -52,53 +28,37 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
     public $costOrigin;
 
     /**
+     * The category of cost, such as wholesale, retail, reimbursement cap, etc.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory\DrugCostCategory
+     */
+    public $costCategory;
+
+    /**
+     * The unit in which the drug is measured, e.g. '5 mg tablet'.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $drugUnit;
+
+    /**
+     * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $costCurrency;
+
+    /**
+     * The location in which the status applies.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
+     */
+    public $applicableLocation;
+
+    /**
      * The cost per unit of the drug.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
+     * @param string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setCostPerUnit($value)
     {
         return $this->setProp('costPerUnit', $value);
-    }
-
-    /**
-     * The unit in which the drug is measured, e.g. '5 mg tablet'.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setDrugUnit($value)
-    {
-        return $this->setProp('drugUnit', $value);
-    }
-
-    /**
-     * The location in which the status applies.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
-     * @return static
-     */
-    function setApplicableLocation($value)
-    {
-        return $this->setProp('applicableLocation', $value);
-    }
-
-    /**
-     * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setCostCurrency($value)
-    {
-        return $this->setProp('costCurrency', $value);
-    }
-
-    /**
-     * The category of cost, such as wholesale, retail, reimbursement cap, etc.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory\DrugCostCategory $value
-     * @return static
-     */
-    function setCostCategory($value)
-    {
-        return $this->setProp('costCategory', $value);
     }
 
     /**
@@ -112,8 +72,48 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
     }
 
     /**
+     * The category of cost, such as wholesale, retail, reimbursement cap, etc.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\DrugCostCategory\DrugCostCategory $value
+     * @return static
+     */
+    function setCostCategory($value)
+    {
+        return $this->setProp('costCategory', $value);
+    }
+
+    /**
+     * The unit in which the drug is measured, e.g. '5 mg tablet'.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setDrugUnit($value)
+    {
+        return $this->setProp('drugUnit', $value);
+    }
+
+    /**
+     * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setCostCurrency($value)
+    {
+        return $this->setProp('costCurrency', $value);
+    }
+
+    /**
+     * The location in which the status applies.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
+     * @return static
+     */
+    function setApplicableLocation($value)
+    {
+        return $this->setProp('applicableLocation', $value);
+    }
+
+    /**
      * The cost per unit of the drug.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
+     * @return string|int|float|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getCostPerUnit()
     {
@@ -121,30 +121,12 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
     }
 
     /**
-     * The unit in which the drug is measured, e.g. '5 mg tablet'.
+     * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getDrugUnit()
+    function getCostOrigin()
     {
-        return $this->getProp('drugUnit');
-    }
-
-    /**
-     * The location in which the status applies.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|null
-     */
-    function getApplicableLocation()
-    {
-        return $this->getProp('applicableLocation');
-    }
-
-    /**
-     * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getCostCurrency()
-    {
-        return $this->getProp('costCurrency');
+        return $this->getProp('costOrigin');
     }
 
     /**
@@ -157,11 +139,29 @@ class DrugCost extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
     }
 
     /**
-     * Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
+     * The unit in which the drug is measured, e.g. '5 mg tablet'.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getCostOrigin()
+    function getDrugUnit()
     {
-        return $this->getProp('costOrigin');
+        return $this->getProp('drugUnit');
+    }
+
+    /**
+     * The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getCostCurrency()
+    {
+        return $this->getProp('costCurrency');
+    }
+
+    /**
+     * The location in which the status applies.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|null
+     */
+    function getApplicableLocation()
+    {
+        return $this->getProp('applicableLocation');
     }
 }

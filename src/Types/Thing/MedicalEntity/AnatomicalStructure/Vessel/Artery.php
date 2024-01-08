@@ -12,12 +12,6 @@ class Artery extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
     const TYPE = 'Artery';
 
     /**
-     * The area to which the artery supplies blood.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
-     */
-    public $supplyTo;
-
-    /**
      * The branches that comprise the arterial structure.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
@@ -25,13 +19,9 @@ class Artery extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
 
     /**
      * The area to which the artery supplies blood.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
-    function setSupplyTo($value)
-    {
-        return $this->setProp('supplyTo', $value);
-    }
+    public $supplyTo;
 
     /**
      * The branches that comprise the arterial structure.
@@ -45,11 +35,12 @@ class Artery extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
 
     /**
      * The area to which the artery supplies blood.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
+     * @return static
      */
-    function getSupplyTo()
+    function setSupplyTo($value)
     {
-        return $this->getProp('supplyTo');
+        return $this->setProp('supplyTo', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class Artery extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruc
     function getArterialBranch()
     {
         return $this->getProp('arterialBranch');
+    }
+
+    /**
+     * The area to which the artery supplies blood.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
+     */
+    function getSupplyTo()
+    {
+        return $this->getProp('supplyTo');
     }
 }

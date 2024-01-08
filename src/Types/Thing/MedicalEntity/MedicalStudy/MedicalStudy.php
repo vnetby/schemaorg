@@ -18,25 +18,13 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
     /**
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical
      * Study or a corporate sponsor of an event.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
      */
     public $sponsor;
 
     /**
-     * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
-     */
-    public $studySubject;
-
-    /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
-     */
-    public $healthCondition;
-
-    /**
      * The status of the study (enumerated).
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus
      */
     public $status;
 
@@ -47,9 +35,21 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
     public $studyLocation;
 
     /**
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
+     */
+    public $healthCondition;
+
+    /**
+     * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
+     */
+    public $studySubject;
+
+    /**
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical
      * Study or a corporate sponsor of an event.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
      */
     function setSponsor($value)
@@ -58,28 +58,8 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
     }
 
     /**
-     * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
-     * @return static
-     */
-    function setStudySubject($value)
-    {
-        return $this->setProp('studySubject', $value);
-    }
-
-    /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
-     * @return static
-     */
-    function setHealthCondition($value)
-    {
-        return $this->setProp('healthCondition', $value);
-    }
-
-    /**
      * The status of the study (enumerated).
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus $value
      * @return static
      */
     function setStatus($value)
@@ -98,9 +78,29 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
     }
 
     /**
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
+     * @return static
+     */
+    function setHealthCondition($value)
+    {
+        return $this->setProp('healthCondition', $value);
+    }
+
+    /**
+     * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity $value
+     * @return static
+     */
+    function setStudySubject($value)
+    {
+        return $this->setProp('studySubject', $value);
+    }
+
+    /**
      * A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical
      * Study or a corporate sponsor of an event.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
     function getSponsor()
     {
@@ -108,26 +108,8 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
     }
 
     /**
-     * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
-     */
-    function getStudySubject()
-    {
-        return $this->getProp('studySubject');
-    }
-
-    /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
-     */
-    function getHealthCondition()
-    {
-        return $this->getProp('healthCondition');
-    }
-
-    /**
      * The status of the study (enumerated).
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|null
      */
     function getStatus()
     {
@@ -141,5 +123,23 @@ class MedicalStudy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEn
     function getStudyLocation()
     {
         return $this->getProp('studyLocation');
+    }
+
+    /**
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
+     */
+    function getHealthCondition()
+    {
+        return $this->getProp('healthCondition');
+    }
+
+    /**
+     * A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity|null
+     */
+    function getStudySubject()
+    {
+        return $this->getProp('studySubject');
     }
 }

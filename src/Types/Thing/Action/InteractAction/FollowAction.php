@@ -18,13 +18,13 @@ class FollowAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\I
 
     /**
      * A sub property of object. The person or organization being followed.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
     public $followee;
 
     /**
      * A sub property of object. The person or organization being followed.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
      * @return static
      */
     function setFollowee($value)
@@ -34,7 +34,7 @@ class FollowAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\I
 
     /**
      * A sub property of object. The person or organization being followed.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
      */
     function getFollowee()
     {

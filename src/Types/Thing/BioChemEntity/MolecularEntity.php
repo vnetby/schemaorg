@@ -13,16 +13,36 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     const TYPE = 'MolecularEntity';
 
     /**
-     * Intended use of the BioChemEntity by humans.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $potentialUse;
+    public $inChIKey;
 
     /**
      * A role played by the BioChemEntity within a chemical context.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
     public $chemicalRole;
+
+    /**
+     * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
+     * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $molecularWeight;
+
+    /**
+     * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $molecularFormula;
+
+    /**
+     * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
+     * data compilations.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $inChI;
 
     /**
      * A specification in form of a line notation for describing the structure of chemical species using short ASCII strings. Double bond
@@ -32,17 +52,10 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     public $smiles;
 
     /**
-     * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * Intended use of the BioChemEntity by humans.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
      */
-    public $iupacName;
-
-    /**
-     * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
-     * data compilations.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $inChI;
+    public $potentialUse;
 
     /**
      * The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass
@@ -53,32 +66,19 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     public $monoisotopicMolecularWeight;
 
     /**
-     * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
-     * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $molecularWeight;
+    public $iupacName;
 
     /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $inChIKey;
-
-    /**
-     * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $molecularFormula;
-
-    /**
-     * Intended use of the BioChemEntity by humans.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setPotentialUse($value)
+    function setInChIKey($value)
     {
-        return $this->setProp('potentialUse', $value);
+        return $this->setProp('inChIKey', $value);
     }
 
     /**
@@ -89,6 +89,38 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     function setChemicalRole($value)
     {
         return $this->setProp('chemicalRole', $value);
+    }
+
+    /**
+     * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
+     * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setMolecularWeight($value)
+    {
+        return $this->setProp('molecularWeight', $value);
+    }
+
+    /**
+     * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setMolecularFormula($value)
+    {
+        return $this->setProp('molecularFormula', $value);
+    }
+
+    /**
+     * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
+     * data compilations.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setInChI($value)
+    {
+        return $this->setProp('inChI', $value);
     }
 
     /**
@@ -103,24 +135,13 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     }
 
     /**
-     * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * Intended use of the BioChemEntity by humans.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
      * @return static
      */
-    function setIupacName($value)
+    function setPotentialUse($value)
     {
-        return $this->setProp('iupacName', $value);
-    }
-
-    /**
-     * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
-     * data compilations.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setInChI($value)
-    {
-        return $this->setProp('inChI', $value);
+        return $this->setProp('potentialUse', $value);
     }
 
     /**
@@ -136,43 +157,22 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     }
 
     /**
-     * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
-     * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setMolecularWeight($value)
+    function setIupacName($value)
     {
-        return $this->setProp('molecularWeight', $value);
+        return $this->setProp('iupacName', $value);
     }
 
     /**
      * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setInChIKey($value)
+    function getInChIKey()
     {
-        return $this->setProp('inChIKey', $value);
-    }
-
-    /**
-     * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setMolecularFormula($value)
-    {
-        return $this->setProp('molecularFormula', $value);
-    }
-
-    /**
-     * Intended use of the BioChemEntity by humans.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
-     */
-    function getPotentialUse()
-    {
-        return $this->getProp('potentialUse');
+        return $this->getProp('inChIKey');
     }
 
     /**
@@ -182,6 +182,35 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     function getChemicalRole()
     {
         return $this->getProp('chemicalRole');
+    }
+
+    /**
+     * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
+     * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getMolecularWeight()
+    {
+        return $this->getProp('molecularWeight');
+    }
+
+    /**
+     * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getMolecularFormula()
+    {
+        return $this->getProp('molecularFormula');
+    }
+
+    /**
+     * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
+     * data compilations.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getInChI()
+    {
+        return $this->getProp('inChI');
     }
 
     /**
@@ -195,22 +224,12 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     }
 
     /**
-     * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * Intended use of the BioChemEntity by humans.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
      */
-    function getIupacName()
+    function getPotentialUse()
     {
-        return $this->getProp('iupacName');
-    }
-
-    /**
-     * Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse
-     * data compilations.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getInChI()
-    {
-        return $this->getProp('inChI');
+        return $this->getProp('potentialUse');
     }
 
     /**
@@ -225,30 +244,11 @@ class MolecularEntity extends \Vnetby\Schemaorg\Types\Thing\BioChemEntity\BioChe
     }
 
     /**
-     * This is the molecular weight of the entity being described, not of the parent. Units should be included in the form
-     * '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getMolecularWeight()
-    {
-        return $this->getProp('molecularWeight');
-    }
-
-    /**
-     * InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
+     * Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getInChIKey()
+    function getIupacName()
     {
-        return $this->getProp('inChIKey');
-    }
-
-    /**
-     * The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getMolecularFormula()
-    {
-        return $this->getProp('molecularFormula');
+        return $this->getProp('iupacName');
     }
 }

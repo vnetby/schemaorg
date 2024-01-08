@@ -12,6 +12,18 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     const TYPE = 'DoseSchedule';
 
     /**
+     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $targetPopulation;
+
+    /**
+     * The unit of the dose, e.g. 'mg'.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $doseUnit;
+
+    /**
      * How often the dose is taken, e.g. 'daily'.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -24,16 +36,24 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     public $doseValue;
 
     /**
-     * The unit of the dose, e.g. 'mg'.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    public $doseUnit;
+    function setTargetPopulation($value)
+    {
+        return $this->setProp('targetPopulation', $value);
+    }
 
     /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * The unit of the dose, e.g. 'mg'.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    public $targetPopulation;
+    function setDoseUnit($value)
+    {
+        return $this->setProp('doseUnit', $value);
+    }
 
     /**
      * How often the dose is taken, e.g. 'daily'.
@@ -56,23 +76,21 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     }
 
     /**
-     * The unit of the dose, e.g. 'mg'.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setDoseUnit($value)
+    function getTargetPopulation()
     {
-        return $this->setProp('doseUnit', $value);
+        return $this->getProp('targetPopulation');
     }
 
     /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * The unit of the dose, e.g. 'mg'.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setTargetPopulation($value)
+    function getDoseUnit()
     {
-        return $this->setProp('targetPopulation', $value);
+        return $this->getProp('doseUnit');
     }
 
     /**
@@ -91,23 +109,5 @@ class DoseSchedule extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     function getDoseValue()
     {
         return $this->getProp('doseValue');
-    }
-
-    /**
-     * The unit of the dose, e.g. 'mg'.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getDoseUnit()
-    {
-        return $this->getProp('doseUnit');
-    }
-
-    /**
-     * Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getTargetPopulation()
-    {
-        return $this->getProp('targetPopulation');
     }
 }

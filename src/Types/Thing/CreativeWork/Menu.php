@@ -12,12 +12,6 @@ class Menu extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Menu';
 
     /**
-     * A subgrouping of the menu (by dishes, course, serving time period, etc.).
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection
-     */
-    public $hasMenuSection;
-
-    /**
      * A food or drink item contained in a menu or menu section.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\MenuItem
      */
@@ -25,13 +19,9 @@ class Menu extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection
      */
-    function setHasMenuSection($value)
-    {
-        return $this->setProp('hasMenuSection', $value);
-    }
+    public $hasMenuSection;
 
     /**
      * A food or drink item contained in a menu or menu section.
@@ -45,11 +35,12 @@ class Menu extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection|null
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection $value
+     * @return static
      */
-    function getHasMenuSection()
+    function setHasMenuSection($value)
     {
-        return $this->getProp('hasMenuSection');
+        return $this->setProp('hasMenuSection', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class Menu extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function getHasMenuItem()
     {
         return $this->getProp('hasMenuItem');
+    }
+
+    /**
+     * A subgrouping of the menu (by dishes, course, serving time period, etc.).
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MenuSection|null
+     */
+    function getHasMenuSection()
+    {
+        return $this->getProp('hasMenuSection');
     }
 }

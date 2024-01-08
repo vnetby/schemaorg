@@ -18,16 +18,16 @@ class BusinessAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience
     public $yearsInOperation;
 
     /**
-     * The number of employees in an organization, e.g. business.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $numberOfEmployees;
-
-    /**
      * The size of the business in annual revenue.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
     public $yearlyRevenue;
+
+    /**
+     * The number of employees in an organization, e.g. business.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $numberOfEmployees;
 
     /**
      * The age of the business.
@@ -37,16 +37,6 @@ class BusinessAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience
     function setYearsInOperation($value)
     {
         return $this->setProp('yearsInOperation', $value);
-    }
-
-    /**
-     * The number of employees in an organization, e.g. business.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setNumberOfEmployees($value)
-    {
-        return $this->setProp('numberOfEmployees', $value);
     }
 
     /**
@@ -60,6 +50,16 @@ class BusinessAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience
     }
 
     /**
+     * The number of employees in an organization, e.g. business.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setNumberOfEmployees($value)
+    {
+        return $this->setProp('numberOfEmployees', $value);
+    }
+
+    /**
      * The age of the business.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
@@ -69,20 +69,20 @@ class BusinessAudience extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience
     }
 
     /**
-     * The number of employees in an organization, e.g. business.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getNumberOfEmployees()
-    {
-        return $this->getProp('numberOfEmployees');
-    }
-
-    /**
      * The size of the business in annual revenue.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
      */
     function getYearlyRevenue()
     {
         return $this->getProp('yearlyRevenue');
+    }
+
+    /**
+     * The number of employees in an organization, e.g. business.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getNumberOfEmployees()
+    {
+        return $this->getProp('numberOfEmployees');
     }
 }

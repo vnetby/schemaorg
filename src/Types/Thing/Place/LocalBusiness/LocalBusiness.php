@@ -20,12 +20,6 @@ class LocalBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     public $currenciesAccepted;
 
     /**
-     * The price range of the business, for example ```$$$```.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $priceRange;
-
-    /**
      * The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then
      * times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using
      * a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified
@@ -35,6 +29,12 @@ class LocalBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\Place
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $openingHours;
+
+    /**
+     * The price range of the business, for example ```$$$```.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $priceRange;
 
     /**
      * Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
@@ -54,16 +54,6 @@ class LocalBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * The price range of the business, for example ```$$$```.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setPriceRange($value)
-    {
-        return $this->setProp('priceRange', $value);
-    }
-
-    /**
      * The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then
      * times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using
      * a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified
@@ -76,6 +66,16 @@ class LocalBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     function setOpeningHours($value)
     {
         return $this->setProp('openingHours', $value);
+    }
+
+    /**
+     * The price range of the business, for example ```$$$```.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setPriceRange($value)
+    {
+        return $this->setProp('priceRange', $value);
     }
 
     /**
@@ -99,15 +99,6 @@ class LocalBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     }
 
     /**
-     * The price range of the business, for example ```$$$```.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getPriceRange()
-    {
-        return $this->getProp('priceRange');
-    }
-
-    /**
      * The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then
      * times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using
      * a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified
@@ -119,6 +110,15 @@ class LocalBusiness extends \Vnetby\Schemaorg\Types\Thing\Place\Place
     function getOpeningHours()
     {
         return $this->getProp('openingHours');
+    }
+
+    /**
+     * The price range of the business, for example ```$$$```.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPriceRange()
+    {
+        return $this->getProp('priceRange');
     }
 
     /**

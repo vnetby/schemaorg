@@ -12,32 +12,22 @@ class RsvpAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\Com
     const TYPE = 'RsvpAction';
 
     /**
-     * If responding yes, the number of guests who will attend in addition to the invitee.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $additionalNumberOfGuests;
-
-    /**
      * The response (yes, no, maybe) to the RSVP.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\RsvpResponseType\RsvpResponseType
      */
     public $rsvpResponse;
 
     /**
+     * If responding yes, the number of guests who will attend in addition to the invitee.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $additionalNumberOfGuests;
+
+    /**
      * Comments, typically from users.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Comment\Comment
      */
     public $comment;
-
-    /**
-     * If responding yes, the number of guests who will attend in addition to the invitee.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setAdditionalNumberOfGuests($value)
-    {
-        return $this->setProp('additionalNumberOfGuests', $value);
-    }
 
     /**
      * The response (yes, no, maybe) to the RSVP.
@@ -47,6 +37,16 @@ class RsvpAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\Com
     function setRsvpResponse($value)
     {
         return $this->setProp('rsvpResponse', $value);
+    }
+
+    /**
+     * If responding yes, the number of guests who will attend in addition to the invitee.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setAdditionalNumberOfGuests($value)
+    {
+        return $this->setProp('additionalNumberOfGuests', $value);
     }
 
     /**
@@ -60,21 +60,21 @@ class RsvpAction extends \Vnetby\Schemaorg\Types\Thing\Action\InteractAction\Com
     }
 
     /**
-     * If responding yes, the number of guests who will attend in addition to the invitee.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getAdditionalNumberOfGuests()
-    {
-        return $this->getProp('additionalNumberOfGuests');
-    }
-
-    /**
      * The response (yes, no, maybe) to the RSVP.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\RsvpResponseType\RsvpResponseType|null
      */
     function getRsvpResponse()
     {
         return $this->getProp('rsvpResponse');
+    }
+
+    /**
+     * If responding yes, the number of guests who will attend in addition to the invitee.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getAdditionalNumberOfGuests()
+    {
+        return $this->getProp('additionalNumberOfGuests');
     }
 
     /**

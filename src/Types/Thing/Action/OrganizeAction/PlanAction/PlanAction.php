@@ -13,13 +13,13 @@ class PlanAction extends \Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\Org
 
     /**
      * The time the object is scheduled to.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
     public $scheduledTime;
 
     /**
      * The time the object is scheduled to.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setScheduledTime($value)
@@ -29,7 +29,7 @@ class PlanAction extends \Vnetby\Schemaorg\Types\Thing\Action\OrganizeAction\Org
 
     /**
      * The time the object is scheduled to.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getScheduledTime()
     {

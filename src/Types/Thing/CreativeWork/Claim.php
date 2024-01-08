@@ -18,12 +18,6 @@ class Claim extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Claim';
 
     /**
-     * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
-     */
-    public $appearance;
-
-    /**
      * For a [[Claim]] interpreted from [[MediaObject]] content sed to indicate a claim contained, implied or refined from the content of a
      * [[MediaObject]].
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
@@ -31,20 +25,16 @@ class Claim extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $claimInterpreter;
 
     /**
+     * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     */
+    public $appearance;
+
+    /**
      * Indicates the first known occurrence of a [[Claim]] in some [[CreativeWork]].
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
     public $firstAppearance;
-
-    /**
-     * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
-     * @return static
-     */
-    function setAppearance($value)
-    {
-        return $this->setProp('appearance', $value);
-    }
 
     /**
      * For a [[Claim]] interpreted from [[MediaObject]] content sed to indicate a claim contained, implied or refined from the content of a
@@ -58,6 +48,16 @@ class Claim extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
+     * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @return static
+     */
+    function setAppearance($value)
+    {
+        return $this->setProp('appearance', $value);
+    }
+
+    /**
      * Indicates the first known occurrence of a [[Claim]] in some [[CreativeWork]].
      * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
      * @return static
@@ -68,15 +68,6 @@ class Claim extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
-     */
-    function getAppearance()
-    {
-        return $this->getProp('appearance');
-    }
-
-    /**
      * For a [[Claim]] interpreted from [[MediaObject]] content sed to indicate a claim contained, implied or refined from the content of a
      * [[MediaObject]].
      * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
@@ -84,6 +75,15 @@ class Claim extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function getClaimInterpreter()
     {
         return $this->getProp('claimInterpreter');
+    }
+
+    /**
+     * Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     */
+    function getAppearance()
+    {
+        return $this->getProp('appearance');
     }
 
     /**

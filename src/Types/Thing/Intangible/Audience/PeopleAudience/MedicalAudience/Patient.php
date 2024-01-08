@@ -12,42 +12,22 @@ class Patient extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAu
     const TYPE = 'Patient';
 
     /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
-     */
-    public $healthCondition;
-
-    /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
-     */
-    public $drug;
-
-    /**
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
     public $diagnosis;
 
     /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
-     * @return static
+     * Specifying a drug or medicine used in a medication procedure.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug
      */
-    function setHealthCondition($value)
-    {
-        return $this->setProp('healthCondition', $value);
-    }
+    public $drug;
 
     /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Drug $value
-     * @return static
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
-    function setDrug($value)
-    {
-        return $this->setProp('drug', $value);
-    }
+    public $healthCondition;
 
     /**
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
@@ -60,21 +40,23 @@ class Patient extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAu
     }
 
     /**
-     * Specifying the health condition(s) of a patient, medical study, or other target audience.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
+     * Specifying a drug or medicine used in a medication procedure.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug $value
+     * @return static
      */
-    function getHealthCondition()
+    function setDrug($value)
     {
-        return $this->getProp('healthCondition');
+        return $this->setProp('drug', $value);
     }
 
     /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Drug|null
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
+     * @return static
      */
-    function getDrug()
+    function setHealthCondition($value)
     {
-        return $this->getProp('drug');
+        return $this->setProp('healthCondition', $value);
     }
 
     /**
@@ -84,5 +66,23 @@ class Patient extends \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAu
     function getDiagnosis()
     {
         return $this->getProp('diagnosis');
+    }
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug|null
+     */
+    function getDrug()
+    {
+        return $this->getProp('drug');
+    }
+
+    /**
+     * Specifying the health condition(s) of a patient, medical study, or other target audience.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
+     */
+    function getHealthCondition()
+    {
+        return $this->getProp('healthCondition');
     }
 }

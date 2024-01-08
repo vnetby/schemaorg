@@ -15,34 +15,10 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     const TYPE = 'MediaObject';
 
     /**
-     * Date (including time if available) when this media object was uploaded to this site.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
-    public $uploadDate;
-
-    /**
-     * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $sha256;
-
-    /**
-     * Player type required&#x2014;for example, Flash or Silverlight.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $playerType;
-
-    /**
-     * The bitrate of the media object.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $bitrate;
-
-    /**
-     * File size in (mega/kilo)bytes.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $contentSize;
+    public $duration;
 
     /**
      * The height of the item.
@@ -51,45 +27,32 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     public $height;
 
     /**
-     * The CreativeWork encoded by this media object.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    public $encodesCreativeWork;
+    public $productionCompany;
 
     /**
-     * The width of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    public $width;
+    public $ineligibleRegion;
 
     /**
      * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
      */
     public $startTime;
 
     /**
-     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
-     * an earlier version had 'yes', 'no').
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription
+     * Date (including time if available) when this media object was uploaded to this site.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    public $requiresSubscription;
-
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
-     */
-    public $duration;
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $ineligibleRegion;
+    public $uploadDate;
 
     /**
      * A URL pointing to a player for a specific video. In general, this is the information in the ```src``` element of
@@ -99,23 +62,37 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     public $embedUrl;
 
     /**
-     * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in
-     * [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
+     * Player type required&#x2014;for example, Flash or Silverlight.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $regionsAllowed;
+    public $playerType;
 
     /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     * Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg
+     * for .mp3 etc. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]]
+     * alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g.
+     * defining Web page or a Wikipedia/Wikidata entry.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $productionCompany;
+    public $encodingFormat;
 
     /**
-     * A NewsArticle associated with the Media Object.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle
+     * File size in (mega/kilo)bytes.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $associatedArticle;
+    public $contentSize;
+
+    /**
+     * The bitrate of the media object.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $bitrate;
+
+    /**
+     * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $sha256;
 
     /**
      * Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The
@@ -131,71 +108,54 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     public $contentUrl;
 
     /**
+     * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in
+     * [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\Place
+     */
+    public $regionsAllowed;
+
+    /**
+     * The CreativeWork encoded by this media object.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
+     */
+    public $encodesCreativeWork;
+
+    /**
+     * A NewsArticle associated with the Media Object.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle
+     */
+    public $associatedArticle;
+
+    /**
+     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
+     * an earlier version had 'yes', 'no').
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription
+     */
+    public $requiresSubscription;
+
+    /**
+     * The width of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $width;
+
+    /**
      * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
      */
     public $endTime;
 
     /**
-     * Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg
-     * for .mp3 etc. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]]
-     * alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g.
-     * defining Web page or a Wikipedia/Wikidata entry.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $encodingFormat;
-
-    /**
-     * Date (including time if available) when this media object was uploaded to this site.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
      * @return static
      */
-    function setUploadDate($value)
+    function setDuration($value)
     {
-        return $this->setProp('uploadDate', $value);
-    }
-
-    /**
-     * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setSha256($value)
-    {
-        return $this->setProp('sha256', $value);
-    }
-
-    /**
-     * Player type required&#x2014;for example, Flash or Silverlight.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setPlayerType($value)
-    {
-        return $this->setProp('playerType', $value);
-    }
-
-    /**
-     * The bitrate of the media object.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setBitrate($value)
-    {
-        return $this->setProp('bitrate', $value);
-    }
-
-    /**
-     * File size in (mega/kilo)bytes.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setContentSize($value)
-    {
-        return $this->setProp('contentSize', $value);
+        return $this->setProp('duration', $value);
     }
 
     /**
@@ -209,23 +169,24 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     }
 
     /**
-     * The CreativeWork encoded by this media object.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
      * @return static
      */
-    function setEncodesCreativeWork($value)
+    function setProductionCompany($value)
     {
-        return $this->setProp('encodesCreativeWork', $value);
+        return $this->setProp('productionCompany', $value);
     }
 
     /**
-     * The width of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
-    function setWidth($value)
+    function setIneligibleRegion($value)
     {
-        return $this->setProp('width', $value);
+        return $this->setProp('ineligibleRegion', $value);
     }
 
     /**
@@ -233,7 +194,7 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
      * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
      * @return static
      */
     function setStartTime($value)
@@ -242,35 +203,13 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     }
 
     /**
-     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
-     * an earlier version had 'yes', 'no').
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription $value
+     * Date (including time if available) when this media object was uploaded to this site.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
-    function setRequiresSubscription($value)
+    function setUploadDate($value)
     {
-        return $this->setProp('requiresSubscription', $value);
-    }
-
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
-     * @return static
-     */
-    function setDuration($value)
-    {
-        return $this->setProp('duration', $value);
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setIneligibleRegion($value)
-    {
-        return $this->setProp('ineligibleRegion', $value);
+        return $this->setProp('uploadDate', $value);
     }
 
     /**
@@ -285,34 +224,56 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     }
 
     /**
-     * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in
-     * [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * Player type required&#x2014;for example, Flash or Silverlight.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setRegionsAllowed($value)
+    function setPlayerType($value)
     {
-        return $this->setProp('regionsAllowed', $value);
+        return $this->setProp('playerType', $value);
     }
 
     /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg
+     * for .mp3 etc. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]]
+     * alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g.
+     * defining Web page or a Wikipedia/Wikidata entry.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setProductionCompany($value)
+    function setEncodingFormat($value)
     {
-        return $this->setProp('productionCompany', $value);
+        return $this->setProp('encodingFormat', $value);
     }
 
     /**
-     * A NewsArticle associated with the Media Object.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle $value
+     * File size in (mega/kilo)bytes.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setAssociatedArticle($value)
+    function setContentSize($value)
     {
-        return $this->setProp('associatedArticle', $value);
+        return $this->setProp('contentSize', $value);
+    }
+
+    /**
+     * The bitrate of the media object.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setBitrate($value)
+    {
+        return $this->setProp('bitrate', $value);
+    }
+
+    /**
+     * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setSha256($value)
+    {
+        return $this->setProp('sha256', $value);
     }
 
     /**
@@ -337,123 +298,68 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     }
 
     /**
-     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
-     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in
+     * [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
-    function setEndTime($value)
+    function setRegionsAllowed($value)
     {
-        return $this->setProp('endTime', $value);
-    }
-
-    /**
-     * Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg
-     * for .mp3 etc. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]]
-     * alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g.
-     * defining Web page or a Wikipedia/Wikidata entry.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setEncodingFormat($value)
-    {
-        return $this->setProp('encodingFormat', $value);
-    }
-
-    /**
-     * Date (including time if available) when this media object was uploaded to this site.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getUploadDate()
-    {
-        return $this->getProp('uploadDate');
-    }
-
-    /**
-     * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getSha256()
-    {
-        return $this->getProp('sha256');
-    }
-
-    /**
-     * Player type required&#x2014;for example, Flash or Silverlight.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getPlayerType()
-    {
-        return $this->getProp('playerType');
-    }
-
-    /**
-     * The bitrate of the media object.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getBitrate()
-    {
-        return $this->getProp('bitrate');
-    }
-
-    /**
-     * File size in (mega/kilo)bytes.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getContentSize()
-    {
-        return $this->getProp('contentSize');
-    }
-
-    /**
-     * The height of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
-     */
-    function getHeight()
-    {
-        return $this->getProp('height');
+        return $this->setProp('regionsAllowed', $value);
     }
 
     /**
      * The CreativeWork encoded by this media object.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork $value
+     * @return static
      */
-    function getEncodesCreativeWork()
+    function setEncodesCreativeWork($value)
     {
-        return $this->getProp('encodesCreativeWork');
+        return $this->setProp('encodesCreativeWork', $value);
     }
 
     /**
-     * The width of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * A NewsArticle associated with the Media Object.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle $value
+     * @return static
      */
-    function getWidth()
+    function setAssociatedArticle($value)
     {
-        return $this->getProp('width');
-    }
-
-    /**
-     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
-     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getStartTime()
-    {
-        return $this->getProp('startTime');
+        return $this->setProp('associatedArticle', $value);
     }
 
     /**
      * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
      * an earlier version had 'yes', 'no').
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription|null
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription $value
+     * @return static
      */
-    function getRequiresSubscription()
+    function setRequiresSubscription($value)
     {
-        return $this->getProp('requiresSubscription');
+        return $this->setProp('requiresSubscription', $value);
+    }
+
+    /**
+     * The width of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setWidth($value)
+    {
+        return $this->setProp('width', $value);
+    }
+
+    /**
+     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
+     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
+     * @return static
+     */
+    function setEndTime($value)
+    {
+        return $this->setProp('endTime', $value);
     }
 
     /**
@@ -466,13 +372,52 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     }
 
     /**
+     * The height of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     */
+    function getHeight()
+    {
+        return $this->getProp('height');
+    }
+
+    /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getProductionCompany()
+    {
+        return $this->getProp('productionCompany');
+    }
+
+    /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
      * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
     function getIneligibleRegion()
     {
         return $this->getProp('ineligibleRegion');
+    }
+
+    /**
+     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
+     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
+     */
+    function getStartTime()
+    {
+        return $this->getProp('startTime');
+    }
+
+    /**
+     * Date (including time if available) when this media object was uploaded to this site.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     */
+    function getUploadDate()
+    {
+        return $this->getProp('uploadDate');
     }
 
     /**
@@ -486,31 +431,51 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     }
 
     /**
-     * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in
-     * [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * Player type required&#x2014;for example, Flash or Silverlight.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getRegionsAllowed()
+    function getPlayerType()
     {
-        return $this->getProp('regionsAllowed');
+        return $this->getProp('playerType');
     }
 
     /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg
+     * for .mp3 etc. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]]
+     * alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g.
+     * defining Web page or a Wikipedia/Wikidata entry.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getProductionCompany()
+    function getEncodingFormat()
     {
-        return $this->getProp('productionCompany');
+        return $this->getProp('encodingFormat');
     }
 
     /**
-     * A NewsArticle associated with the Media Object.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle|null
+     * File size in (mega/kilo)bytes.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getAssociatedArticle()
+    function getContentSize()
     {
-        return $this->getProp('associatedArticle');
+        return $this->getProp('contentSize');
+    }
+
+    /**
+     * The bitrate of the media object.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getBitrate()
+    {
+        return $this->getProp('bitrate');
+    }
+
+    /**
+     * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getSha256()
+    {
+        return $this->getProp('sha256');
     }
 
     /**
@@ -533,26 +498,61 @@ class MediaObject extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWor
     }
 
     /**
+     * The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in
+     * [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     */
+    function getRegionsAllowed()
+    {
+        return $this->getProp('regionsAllowed');
+    }
+
+    /**
+     * The CreativeWork encoded by this media object.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork|null
+     */
+    function getEncodesCreativeWork()
+    {
+        return $this->getProp('encodesCreativeWork');
+    }
+
+    /**
+     * A NewsArticle associated with the Media Object.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\NewsArticle\NewsArticle|null
+     */
+    function getAssociatedArticle()
+    {
+        return $this->getProp('associatedArticle');
+    }
+
+    /**
+     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
+     * an earlier version had 'yes', 'no').
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription|null
+     */
+    function getRequiresSubscription()
+    {
+        return $this->getProp('requiresSubscription');
+    }
+
+    /**
+     * The width of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getWidth()
+    {
+        return $this->getProp('width');
+    }
+
+    /**
      * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
     function getEndTime()
     {
         return $this->getProp('endTime');
-    }
-
-    /**
-     * Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg
-     * for .mp3 etc. In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]]
-     * alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g.
-     * defining Web page or a Wikipedia/Wikidata entry.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getEncodingFormat()
-    {
-        return $this->getProp('encodingFormat');
     }
 }

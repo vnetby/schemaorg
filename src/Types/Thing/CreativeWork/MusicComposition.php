@@ -12,34 +12,22 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     const TYPE = 'MusicComposition';
 
     /**
-     * The person who wrote the words.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $lyricist;
-
-    /**
-     * An audio recording of the work.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording
-     */
-    public $recordedAs;
-
-    /**
-     * The key, mode, or scale this composition uses.
+     * The type of composition (e.g. overture, sonata, symphony, etc.).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $musicalKey;
+    public $musicCompositionForm;
 
     /**
-     * The date and place the work was first performed.
-     * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
-     */
-    public $firstPerformance;
-
-    /**
-     * An arrangement derived from the composition.
+     * Smaller compositions included in this work (e.g. a movement in a symphony).
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
      */
-    public $musicArrangement;
+    public $includedComposition;
+
+    /**
+     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $composer;
 
     /**
      * The International Standard Musical Work Code for the composition.
@@ -54,71 +42,63 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     public $lyrics;
 
     /**
-     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $composer;
-
-    /**
-     * The type of composition (e.g. overture, sonata, symphony, etc.).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $musicCompositionForm;
-
-    /**
-     * Smaller compositions included in this work (e.g. a movement in a symphony).
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
-     */
-    public $includedComposition;
-
-    /**
-     * The person who wrote the words.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setLyricist($value)
-    {
-        return $this->setProp('lyricist', $value);
-    }
-
-    /**
-     * An audio recording of the work.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording $value
-     * @return static
-     */
-    function setRecordedAs($value)
-    {
-        return $this->setProp('recordedAs', $value);
-    }
-
-    /**
-     * The key, mode, or scale this composition uses.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setMusicalKey($value)
-    {
-        return $this->setProp('musicalKey', $value);
-    }
-
-    /**
      * The date and place the work was first performed.
-     * @param \Vnetby\Schemaorg\Types\Thing\Event\Event $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Event\Event
      */
-    function setFirstPerformance($value)
-    {
-        return $this->setProp('firstPerformance', $value);
-    }
+    public $firstPerformance;
 
     /**
      * An arrangement derived from the composition.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
+     */
+    public $musicArrangement;
+
+    /**
+     * The person who wrote the words.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $lyricist;
+
+    /**
+     * The key, mode, or scale this composition uses.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $musicalKey;
+
+    /**
+     * An audio recording of the work.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording
+     */
+    public $recordedAs;
+
+    /**
+     * The type of composition (e.g. overture, sonata, symphony, etc.).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setMusicCompositionForm($value)
+    {
+        return $this->setProp('musicCompositionForm', $value);
+    }
+
+    /**
+     * Smaller compositions included in this work (e.g. a movement in a symphony).
      * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition $value
      * @return static
      */
-    function setMusicArrangement($value)
+    function setIncludedComposition($value)
     {
-        return $this->setProp('musicArrangement', $value);
+        return $this->setProp('includedComposition', $value);
+    }
+
+    /**
+     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setComposer($value)
+    {
+        return $this->setProp('composer', $value);
     }
 
     /**
@@ -142,78 +122,80 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     }
 
     /**
-     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setComposer($value)
-    {
-        return $this->setProp('composer', $value);
-    }
-
-    /**
-     * The type of composition (e.g. overture, sonata, symphony, etc.).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setMusicCompositionForm($value)
-    {
-        return $this->setProp('musicCompositionForm', $value);
-    }
-
-    /**
-     * Smaller compositions included in this work (e.g. a movement in a symphony).
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition $value
-     * @return static
-     */
-    function setIncludedComposition($value)
-    {
-        return $this->setProp('includedComposition', $value);
-    }
-
-    /**
-     * The person who wrote the words.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getLyricist()
-    {
-        return $this->getProp('lyricist');
-    }
-
-    /**
-     * An audio recording of the work.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording|null
-     */
-    function getRecordedAs()
-    {
-        return $this->getProp('recordedAs');
-    }
-
-    /**
-     * The key, mode, or scale this composition uses.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getMusicalKey()
-    {
-        return $this->getProp('musicalKey');
-    }
-
-    /**
      * The date and place the work was first performed.
-     * @return \Vnetby\Schemaorg\Types\Thing\Event\Event|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Event\Event $value
+     * @return static
      */
-    function getFirstPerformance()
+    function setFirstPerformance($value)
     {
-        return $this->getProp('firstPerformance');
+        return $this->setProp('firstPerformance', $value);
     }
 
     /**
      * An arrangement derived from the composition.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition $value
+     * @return static
+     */
+    function setMusicArrangement($value)
+    {
+        return $this->setProp('musicArrangement', $value);
+    }
+
+    /**
+     * The person who wrote the words.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setLyricist($value)
+    {
+        return $this->setProp('lyricist', $value);
+    }
+
+    /**
+     * The key, mode, or scale this composition uses.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setMusicalKey($value)
+    {
+        return $this->setProp('musicalKey', $value);
+    }
+
+    /**
+     * An audio recording of the work.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording $value
+     * @return static
+     */
+    function setRecordedAs($value)
+    {
+        return $this->setProp('recordedAs', $value);
+    }
+
+    /**
+     * The type of composition (e.g. overture, sonata, symphony, etc.).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getMusicCompositionForm()
+    {
+        return $this->getProp('musicCompositionForm');
+    }
+
+    /**
+     * Smaller compositions included in this work (e.g. a movement in a symphony).
      * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition|null
      */
-    function getMusicArrangement()
+    function getIncludedComposition()
     {
-        return $this->getProp('musicArrangement');
+        return $this->getProp('includedComposition');
+    }
+
+    /**
+     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getComposer()
+    {
+        return $this->getProp('composer');
     }
 
     /**
@@ -235,29 +217,47 @@ class MusicComposition extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     }
 
     /**
-     * The person or organization who wrote a composition, or who is the composer of a work performed at some event.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * The date and place the work was first performed.
+     * @return \Vnetby\Schemaorg\Types\Thing\Event\Event|null
      */
-    function getComposer()
+    function getFirstPerformance()
     {
-        return $this->getProp('composer');
+        return $this->getProp('firstPerformance');
     }
 
     /**
-     * The type of composition (e.g. overture, sonata, symphony, etc.).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getMusicCompositionForm()
-    {
-        return $this->getProp('musicCompositionForm');
-    }
-
-    /**
-     * Smaller compositions included in this work (e.g. a movement in a symphony).
+     * An arrangement derived from the composition.
      * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition|null
      */
-    function getIncludedComposition()
+    function getMusicArrangement()
     {
-        return $this->getProp('includedComposition');
+        return $this->getProp('musicArrangement');
+    }
+
+    /**
+     * The person who wrote the words.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getLyricist()
+    {
+        return $this->getProp('lyricist');
+    }
+
+    /**
+     * The key, mode, or scale this composition uses.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getMusicalKey()
+    {
+        return $this->getProp('musicalKey');
+    }
+
+    /**
+     * An audio recording of the work.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicRecording|null
+     */
+    function getRecordedAs()
+    {
+        return $this->getProp('recordedAs');
     }
 }

@@ -13,10 +13,10 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
     const TYPE = 'RentalCarReservation';
 
     /**
-     * When a rental car can be dropped off.
+     * When a taxi will pick up a passenger or a rental car can be picked up.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    public $dropoffTime;
+    public $pickupTime;
 
     /**
      * Where a rental car can be dropped off.
@@ -31,19 +31,19 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
     public $pickupLocation;
 
     /**
-     * When a taxi will pick up a passenger or a rental car can be picked up.
+     * When a rental car can be dropped off.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
-    public $pickupTime;
+    public $dropoffTime;
 
     /**
-     * When a rental car can be dropped off.
+     * When a taxi will pick up a passenger or a rental car can be picked up.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
-    function setDropoffTime($value)
+    function setPickupTime($value)
     {
-        return $this->setProp('dropoffTime', $value);
+        return $this->setProp('pickupTime', $value);
     }
 
     /**
@@ -67,22 +67,22 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
     }
 
     /**
-     * When a taxi will pick up a passenger or a rental car can be picked up.
+     * When a rental car can be dropped off.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
      * @return static
      */
-    function setPickupTime($value)
+    function setDropoffTime($value)
     {
-        return $this->setProp('pickupTime', $value);
+        return $this->setProp('dropoffTime', $value);
     }
 
     /**
-     * When a rental car can be dropped off.
+     * When a taxi will pick up a passenger or a rental car can be picked up.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
-    function getDropoffTime()
+    function getPickupTime()
     {
-        return $this->getProp('dropoffTime');
+        return $this->getProp('pickupTime');
     }
 
     /**
@@ -104,11 +104,11 @@ class RentalCarReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rese
     }
 
     /**
-     * When a taxi will pick up a passenger or a rental car can be picked up.
+     * When a rental car can be dropped off.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
      */
-    function getPickupTime()
+    function getDropoffTime()
     {
-        return $this->getProp('pickupTime');
+        return $this->getProp('dropoffTime');
     }
 }

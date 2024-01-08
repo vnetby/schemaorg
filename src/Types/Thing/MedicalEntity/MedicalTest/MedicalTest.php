@@ -12,6 +12,18 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
     const TYPE = 'MedicalTest';
 
     /**
+     * Drugs that affect the test's results.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug
+     */
+    public $affectedBy;
+
+    /**
+     * Device used to perform the test.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalDevice
+     */
+    public $usesDevice;
+
+    /**
      * A sign detected by the test.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSign\MedicalSign
      */
@@ -24,12 +36,6 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
     public $normalRange;
 
     /**
-     * Device used to perform the test.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalDevice
-     */
-    public $usesDevice;
-
-    /**
      * A condition the test is used to diagnose.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
@@ -37,9 +43,23 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
 
     /**
      * Drugs that affect the test's results.
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug $value
+     * @return static
      */
-    public $affectedBy;
+    function setAffectedBy($value)
+    {
+        return $this->setProp('affectedBy', $value);
+    }
+
+    /**
+     * Device used to perform the test.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalDevice $value
+     * @return static
+     */
+    function setUsesDevice($value)
+    {
+        return $this->setProp('usesDevice', $value);
+    }
 
     /**
      * A sign detected by the test.
@@ -62,16 +82,6 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
     }
 
     /**
-     * Device used to perform the test.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalDevice $value
-     * @return static
-     */
-    function setUsesDevice($value)
-    {
-        return $this->setProp('usesDevice', $value);
-    }
-
-    /**
      * A condition the test is used to diagnose.
      * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
      * @return static
@@ -83,12 +93,20 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
 
     /**
      * Drugs that affect the test's results.
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Drug $value
-     * @return static
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug|null
      */
-    function setAffectedBy($value)
+    function getAffectedBy()
     {
-        return $this->setProp('affectedBy', $value);
+        return $this->getProp('affectedBy');
+    }
+
+    /**
+     * Device used to perform the test.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalDevice|null
+     */
+    function getUsesDevice()
+    {
+        return $this->getProp('usesDevice');
     }
 
     /**
@@ -110,29 +128,11 @@ class MedicalTest extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEnt
     }
 
     /**
-     * Device used to perform the test.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalDevice|null
-     */
-    function getUsesDevice()
-    {
-        return $this->getProp('usesDevice');
-    }
-
-    /**
      * A condition the test is used to diagnose.
      * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
      */
     function getUsedToDiagnose()
     {
         return $this->getProp('usedToDiagnose');
-    }
-
-    /**
-     * Drugs that affect the test's results.
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Drug|null
-     */
-    function getAffectedBy()
-    {
-        return $this->getProp('affectedBy');
     }
 }

@@ -167,8 +167,8 @@ const getTypeClassGettersStr = (item) => {
 
     for (let i = 0; i < item.props.length; i++) {
         let prop = item.props[i];
-        let fnName = `get${ucFirst(prop['rdfs:label'])}`;
-        let propName = prop['rdfs:label'];
+        let fnName = `get${ucFirst(getRdfsLabel(prop))}`;
+        let propName = getRdfsLabel(prop);
         let comment = formatComment(prop['rdfs:comment'], 5);
         let types = formatTypesStr(prop.types);
         let str = `
@@ -192,8 +192,8 @@ const getTypeClassSettersStr = (item) => {
 
     for (let i = 0; i < item.props.length; i++) {
         let prop = item.props[i];
-        let fnName = `set${ucFirst(prop['rdfs:label'])}`;
-        let propName = prop['rdfs:label'];
+        let fnName = `set${ucFirst(getRdfsLabel(prop))}`;
+        let propName = getRdfsLabel(prop);
         let comment = formatComment(prop['rdfs:comment'], 5);
         let types = formatTypesStr(prop.types);
         let str = `
@@ -262,7 +262,7 @@ const getTypeClassPropsStr = (item) => {
     for (let i = 0; i < item.props.length; i++) {
         let prop = item.props[i];
         let comment = formatComment(prop['rdfs:comment'], 5);
-        let name = prop['rdfs:label'];
+        let name = getRdfsLabel(prop);
         let types = formatTypesStr(prop.types);
         let str = `
     /**
@@ -301,11 +301,11 @@ const clearFolder = async (folder, exclude = []) => {
 const createDataTypes = (data, extend = BASE_CLASS_DATA_TYPES) => {
     for (let i = 0; i < data.length; i++) {
         let item = data[i];
-        let filePath = path.join(PATH_DATA_TYPES, `Data${ucFirst(item['rdfs:label'])}.php`);
+        let filePath = path.join(PATH_DATA_TYPES, `Data${ucFirst(getRdfsLabel(item))}.php`);
         let content = getDataTypeClassContent(item, extend);
         fs.writeFileSync(filePath, content);
         if (item.children.length) {
-            let childExtend = `Data${ucFirst(item['rdfs:label'])}`;
+            let childExtend = `Data${ucFirst(getRdfsLabel(item))}`;
             createDataTypes(item.children, childExtend);
         }
     }
@@ -313,7 +313,7 @@ const createDataTypes = (data, extend = BASE_CLASS_DATA_TYPES) => {
 
 
 const getDataTypeClassContent = (item, extend = null) => {
-    let className = 'Data' + ucFirst(item['rdfs:label']);
+    let className = 'Data' + ucFirst(getRdfsLabel(item));
     let comment = formatComment(item['rdfs:comment'], 1);
     let strExtend = extend ? ' extends ' + extend : '';
     let types = DATA_TYPES_TO_PHP[className] && DATA_TYPES_TO_PHP[className].length ? DATA_TYPES_TO_PHP[className].join('|') : 'mixed';
@@ -370,7 +370,7 @@ const getTypesCollection = (data, res) => {
 const fillNamespaces = (data, classNameSpace, classPath, extendClass) => {
     for (let i = 0; i < data.length; i++) {
         let item = data[i];
-        let label = item['rdfs:label'];
+        let label = getRdfsLabel(item);
         let className = /^\d/.test(label) ? `_${label}` : label;
 
         let thisNameSpace = classNameSpace;
@@ -473,7 +473,7 @@ const getClassProps = (data, id) => {
             }
 
             if (DATA_TYPES_IDS.includes(type['@id'])) {
-                info['types'].push(`\\${NAMESPACE_DATA_TYPES}\\Data${ucFirst(type['rdfs:label'])}`);
+                info['types'].push(`\\${NAMESPACE_DATA_TYPES}\\Data${ucFirst(getRdfsLabel(type))}`);
             } else {
                 let typeData = findTypeInCollection(type['@id']);
                 if (typeData) {
@@ -588,6 +588,33 @@ const searchById = (data, id) => {
         }
     }
     return null;
+}
+
+/**
+ * 
+ * @param {SchemaGraph} item 
+ */
+const getRdfsLabel = (item) => {
+    return getRdfsStringProp(item, 'rdfs:label');
+}
+
+
+/**
+ * - Есть свойства, которые должны быть строкой, однако приходят в формате объекта
+ * @param {SchemaGraph} item 
+ * @param {string} prop 
+ */
+const getRdfsStringProp = (item, prop) => {
+    if (!item[prop]) {
+        return '';
+    }
+    if (typeof item[prop] !== 'string') {
+        if (item[prop]['@value']) {
+            return item[prop]['@value'];
+        }
+        return '';
+    }
+    return item[prop];
 }
 
 

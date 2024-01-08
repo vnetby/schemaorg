@@ -12,32 +12,22 @@ class AggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Ra
     const TYPE = 'AggregateRating';
 
     /**
-     * The count of total number of reviews.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
-     */
-    public $reviewCount;
-
-    /**
      * The item that is being reviewed/rated.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
     public $itemReviewed;
 
     /**
+     * The count of total number of reviews.
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $reviewCount;
+
+    /**
      * The count of total number of ratings.
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
     public $ratingCount;
-
-    /**
-     * The count of total number of reviews.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
-     * @return static
-     */
-    function setReviewCount($value)
-    {
-        return $this->setProp('reviewCount', $value);
-    }
 
     /**
      * The item that is being reviewed/rated.
@@ -47,6 +37,16 @@ class AggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Ra
     function setItemReviewed($value)
     {
         return $this->setProp('itemReviewed', $value);
+    }
+
+    /**
+     * The count of total number of reviews.
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
+     */
+    function setReviewCount($value)
+    {
+        return $this->setProp('reviewCount', $value);
     }
 
     /**
@@ -60,21 +60,21 @@ class AggregateRating extends \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\Ra
     }
 
     /**
-     * The count of total number of reviews.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
-     */
-    function getReviewCount()
-    {
-        return $this->getProp('reviewCount');
-    }
-
-    /**
      * The item that is being reviewed/rated.
      * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
      */
     function getItemReviewed()
     {
         return $this->getProp('itemReviewed');
+    }
+
+    /**
+     * The count of total number of reviews.
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     */
+    function getReviewCount()
+    {
+        return $this->getProp('reviewCount');
     }
 
     /**

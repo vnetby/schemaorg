@@ -15,7 +15,7 @@ class Collection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      * The number of items in the [[Collection]].
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
-    public $[object Object];
+    public $collectionSize;
 
     /**
      * The number of items in the [[Collection]].
@@ -24,7 +24,7 @@ class Collection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
     function setCollectionSize($value)
     {
-        return $this->setProp('[object Object]', $value);
+        return $this->setProp('collectionSize', $value);
     }
 
     /**
@@ -33,6 +33,6 @@ class Collection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
      */
     function getCollectionSize()
     {
-        return $this->getProp('[object Object]');
+        return $this->getProp('collectionSize');
     }
 }

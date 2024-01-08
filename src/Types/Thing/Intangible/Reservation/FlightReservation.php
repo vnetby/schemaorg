@@ -20,21 +20,21 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue
      */
     public $passengerPriorityStatus;
-
-    /**
-     * The passenger's sequence number as assigned by the airline.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $passengerSequenceNumber;
 
     /**
      * The airline-specific indicator of boarding order / preference.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $boardingGroup;
+
+    /**
+     * The passenger's sequence number as assigned by the airline.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $passengerSequenceNumber;
 
     /**
      * The type of security screening the passenger is subject to.
@@ -48,22 +48,12 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue $value
      * @return static
      */
     function setPassengerPriorityStatus($value)
     {
         return $this->setProp('passengerPriorityStatus', $value);
-    }
-
-    /**
-     * The passenger's sequence number as assigned by the airline.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setPassengerSequenceNumber($value)
-    {
-        return $this->setProp('passengerSequenceNumber', $value);
     }
 
     /**
@@ -77,6 +67,16 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
     }
 
     /**
+     * The passenger's sequence number as assigned by the airline.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setPassengerSequenceNumber($value)
+    {
+        return $this->setProp('passengerSequenceNumber', $value);
+    }
+
+    /**
      * The type of security screening the passenger is subject to.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
@@ -87,20 +87,11 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
 
     /**
      * The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\QualitativeValue\QualitativeValue|null
      */
     function getPassengerPriorityStatus()
     {
         return $this->getProp('passengerPriorityStatus');
-    }
-
-    /**
-     * The passenger's sequence number as assigned by the airline.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getPassengerSequenceNumber()
-    {
-        return $this->getProp('passengerSequenceNumber');
     }
 
     /**
@@ -110,5 +101,14 @@ class FlightReservation extends \Vnetby\Schemaorg\Types\Thing\Intangible\Reserva
     function getBoardingGroup()
     {
         return $this->getProp('boardingGroup');
+    }
+
+    /**
+     * The passenger's sequence number as assigned by the airline.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPassengerSequenceNumber()
+    {
+        return $this->getProp('passengerSequenceNumber');
     }
 }

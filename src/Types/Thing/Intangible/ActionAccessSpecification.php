@@ -13,42 +13,29 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
 
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape
+     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    public $eligibleRegion;
+    public $ineligibleRegion;
 
     /**
      * The end of the availability of the product or service included in the offer.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
     public $availabilityEnds;
 
     /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place
      */
-    public $category;
+    public $eligibleRegion;
 
     /**
      * The beginning of the availability of the product or service included in the offer.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate
      */
     public $availabilityStarts;
-
-    /**
-     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
-     * an earlier version had 'yes', 'no').
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription
-     */
-    public $requiresSubscription;
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $ineligibleRegion;
 
     /**
      * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy
@@ -58,19 +45,32 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     public $expectsAcceptanceOf;
 
     /**
+     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
+     * an earlier version had 'yes', 'no').
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription
+     */
+    public $requiresSubscription;
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing
+     */
+    public $category;
+
+    /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape $value
+     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
-    function setEligibleRegion($value)
+    function setIneligibleRegion($value)
     {
-        return $this->setProp('eligibleRegion', $value);
+        return $this->setProp('ineligibleRegion', $value);
     }
 
     /**
      * The end of the availability of the product or service included in the offer.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
      * @return static
      */
     function setAvailabilityEnds($value)
@@ -79,13 +79,14 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     }
 
     /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
      * @return static
      */
-    function setCategory($value)
+    function setEligibleRegion($value)
     {
-        return $this->setProp('category', $value);
+        return $this->setProp('eligibleRegion', $value);
     }
 
     /**
@@ -96,28 +97,6 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     function setAvailabilityStarts($value)
     {
         return $this->setProp('availabilityStarts', $value);
-    }
-
-    /**
-     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
-     * an earlier version had 'yes', 'no').
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription $value
-     * @return static
-     */
-    function setRequiresSubscription($value)
-    {
-        return $this->setProp('requiresSubscription', $value);
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setIneligibleRegion($value)
-    {
-        return $this->setProp('ineligibleRegion', $value);
     }
 
     /**
@@ -132,18 +111,39 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     }
 
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|null
+     * Indicates if use of the media require a subscription (either paid or free). Allowed values are ```true``` or ```false``` (note that
+     * an earlier version had 'yes', 'no').
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|\Vnetby\Schemaorg\Types\Thing\Intangible\MediaSubscription $value
+     * @return static
      */
-    function getEligibleRegion()
+    function setRequiresSubscription($value)
     {
-        return $this->getProp('eligibleRegion');
+        return $this->setProp('requiresSubscription', $value);
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
+     */
+    function setCategory($value)
+    {
+        return $this->setProp('category', $value);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     */
+    function getIneligibleRegion()
+    {
+        return $this->getProp('ineligibleRegion');
     }
 
     /**
      * The end of the availability of the product or service included in the offer.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
      */
     function getAvailabilityEnds()
     {
@@ -151,12 +151,13 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     }
 
     /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
+     * the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]]. 
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
      */
-    function getCategory()
+    function getEligibleRegion()
     {
-        return $this->getProp('category');
+        return $this->getProp('eligibleRegion');
     }
 
     /**
@@ -166,6 +167,16 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     function getAvailabilityStarts()
     {
         return $this->getProp('availabilityStarts');
+    }
+
+    /**
+     * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy
+     * a movie before being able to watch it.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|null
+     */
+    function getExpectsAcceptanceOf()
+    {
+        return $this->getProp('expectsAcceptanceOf');
     }
 
     /**
@@ -179,22 +190,11 @@ class ActionAccessSpecification extends \Vnetby\Schemaorg\Types\Thing\Intangible
     }
 
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which
-     * the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]]. 
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoShape\GeoShape|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
-    function getIneligibleRegion()
+    function getCategory()
     {
-        return $this->getProp('ineligibleRegion');
-    }
-
-    /**
-     * An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy
-     * a movie before being able to watch it.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Offer\Offer|null
-     */
-    function getExpectsAcceptanceOf()
-    {
-        return $this->getProp('expectsAcceptanceOf');
+        return $this->getProp('category');
     }
 }

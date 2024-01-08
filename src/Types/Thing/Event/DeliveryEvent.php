@@ -24,16 +24,16 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     public $hasDeliveryMethod;
 
     /**
-     * When the item is available for pickup from the store, locker, etc.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $availableFrom;
-
-    /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $accessCode;
+
+    /**
+     * When the item is available for pickup from the store, locker, etc.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     */
+    public $availableFrom;
 
     /**
      * After this date, the item will no longer be available for pickup.
@@ -56,16 +56,6 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     }
 
     /**
-     * When the item is available for pickup from the store, locker, etc.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setAvailableFrom($value)
-    {
-        return $this->setProp('availableFrom', $value);
-    }
-
-    /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -73,6 +63,16 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     function setAccessCode($value)
     {
         return $this->setProp('accessCode', $value);
+    }
+
+    /**
+     * When the item is available for pickup from the store, locker, etc.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * @return static
+     */
+    function setAvailableFrom($value)
+    {
+        return $this->setProp('availableFrom', $value);
     }
 
     /**
@@ -94,20 +94,20 @@ class DeliveryEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     }
 
     /**
-     * When the item is available for pickup from the store, locker, etc.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
-     */
-    function getAvailableFrom()
-    {
-        return $this->getProp('availableFrom');
-    }
-
-    /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAccessCode()
     {
         return $this->getProp('accessCode');
+    }
+
+    /**
+     * When the item is available for pickup from the store, locker, etc.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     */
+    function getAvailableFrom()
+    {
+        return $this->getProp('availableFrom');
     }
 }

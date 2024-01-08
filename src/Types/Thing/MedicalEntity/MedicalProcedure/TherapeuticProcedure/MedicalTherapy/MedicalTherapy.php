@@ -20,18 +20,18 @@ class MedicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medical
     public $contraindication;
 
     /**
-     * A therapy that duplicates or overlaps this one.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
-     */
-    public $duplicateTherapy;
-
-    /**
      * A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in
      * death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient
      * and may require medical or surgical intervention to prevent one of the outcomes in this definition.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntity
      */
     public $seriousAdverseOutcome;
+
+    /**
+     * A therapy that duplicates or overlaps this one.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
+     */
+    public $duplicateTherapy;
 
     /**
      * A contraindication for this therapy.
@@ -41,16 +41,6 @@ class MedicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medical
     function setContraindication($value)
     {
         return $this->setProp('contraindication', $value);
-    }
-
-    /**
-     * A therapy that duplicates or overlaps this one.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy $value
-     * @return static
-     */
-    function setDuplicateTherapy($value)
-    {
-        return $this->setProp('duplicateTherapy', $value);
     }
 
     /**
@@ -66,21 +56,22 @@ class MedicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medical
     }
 
     /**
+     * A therapy that duplicates or overlaps this one.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy $value
+     * @return static
+     */
+    function setDuplicateTherapy($value)
+    {
+        return $this->setProp('duplicateTherapy', $value);
+    }
+
+    /**
      * A contraindication for this therapy.
      * @return string|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalContraindication|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getContraindication()
     {
         return $this->getProp('contraindication');
-    }
-
-    /**
-     * A therapy that duplicates or overlaps this one.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|null
-     */
-    function getDuplicateTherapy()
-    {
-        return $this->getProp('duplicateTherapy');
     }
 
     /**
@@ -92,5 +83,14 @@ class MedicalTherapy extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medical
     function getSeriousAdverseOutcome()
     {
         return $this->getProp('seriousAdverseOutcome');
+    }
+
+    /**
+     * A therapy that duplicates or overlaps this one.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|null
+     */
+    function getDuplicateTherapy()
+    {
+        return $this->getProp('duplicateTherapy');
     }
 }

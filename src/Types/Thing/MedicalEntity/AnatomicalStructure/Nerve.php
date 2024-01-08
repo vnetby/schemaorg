@@ -13,15 +13,9 @@ class Nerve extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
 
     /**
      * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy
      */
     public $sensoryUnit;
-
-    /**
-     * The neurological pathway that originates the neurons.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\BrainStructure
-     */
-    public $sourcedFrom;
 
     /**
      * The neurological pathway extension that involves muscle control.
@@ -30,23 +24,19 @@ class Nerve extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
     public $nerveMotor;
 
     /**
+     * The neurological pathway that originates the neurons.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\BrainStructure
+     */
+    public $sourcedFrom;
+
+    /**
      * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy $value
      * @return static
      */
     function setSensoryUnit($value)
     {
         return $this->setProp('sensoryUnit', $value);
-    }
-
-    /**
-     * The neurological pathway that originates the neurons.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\BrainStructure $value
-     * @return static
-     */
-    function setSourcedFrom($value)
-    {
-        return $this->setProp('sourcedFrom', $value);
     }
 
     /**
@@ -60,21 +50,22 @@ class Nerve extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
     }
 
     /**
+     * The neurological pathway that originates the neurons.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\BrainStructure $value
+     * @return static
+     */
+    function setSourcedFrom($value)
+    {
+        return $this->setProp('sourcedFrom', $value);
+    }
+
+    /**
      * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|null
      */
     function getSensoryUnit()
     {
         return $this->getProp('sensoryUnit');
-    }
-
-    /**
-     * The neurological pathway that originates the neurons.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\BrainStructure|null
-     */
-    function getSourcedFrom()
-    {
-        return $this->getProp('sourcedFrom');
     }
 
     /**
@@ -84,5 +75,14 @@ class Nerve extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStruct
     function getNerveMotor()
     {
         return $this->getProp('nerveMotor');
+    }
+
+    /**
+     * The neurological pathway that originates the neurons.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\BrainStructure|null
+     */
+    function getSourcedFrom()
+    {
+        return $this->getProp('sourcedFrom');
     }
 }

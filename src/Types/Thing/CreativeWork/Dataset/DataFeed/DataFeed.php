@@ -13,13 +13,13 @@ class DataFeed extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Datase
 
     /**
      * An item within a data feed. Data feeds may have many elements.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DataFeedItem|\Vnetby\Schemaorg\Types\Thing\Thing
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DataFeedItem|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing
      */
     public $dataFeedElement;
 
     /**
      * An item within a data feed. Data feeds may have many elements.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DataFeedItem|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DataFeedItem|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
      */
     function setDataFeedElement($value)
@@ -29,7 +29,7 @@ class DataFeed extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Datase
 
     /**
      * An item within a data feed. Data feeds may have many elements.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DataFeedItem|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DataFeedItem|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Thing|null
      */
     function getDataFeedElement()
     {

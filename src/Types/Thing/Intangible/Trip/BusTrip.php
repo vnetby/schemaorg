@@ -12,22 +12,16 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     const TYPE = 'BusTrip';
 
     /**
-     * The stop or station from which the bus arrives.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop
+     * The stop or station from which the bus departs.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation
      */
-    public $arrivalBusStop;
+    public $departureBusStop;
 
     /**
      * The unique identifier for the bus.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $busNumber;
-
-    /**
-     * The stop or station from which the bus departs.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation
-     */
-    public $departureBusStop;
 
     /**
      * The name of the bus (e.g. Bolt Express).
@@ -37,12 +31,18 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The stop or station from which the bus arrives.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop $value
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation
+     */
+    public $arrivalBusStop;
+
+    /**
+     * The stop or station from which the bus departs.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation $value
      * @return static
      */
-    function setArrivalBusStop($value)
+    function setDepartureBusStop($value)
     {
-        return $this->setProp('arrivalBusStop', $value);
+        return $this->setProp('departureBusStop', $value);
     }
 
     /**
@@ -53,16 +53,6 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     function setBusNumber($value)
     {
         return $this->setProp('busNumber', $value);
-    }
-
-    /**
-     * The stop or station from which the bus departs.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation $value
-     * @return static
-     */
-    function setDepartureBusStop($value)
-    {
-        return $this->setProp('departureBusStop', $value);
     }
 
     /**
@@ -77,20 +67,12 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * The stop or station from which the bus arrives.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation $value
+     * @return static
      */
-    function getArrivalBusStop()
+    function setArrivalBusStop($value)
     {
-        return $this->getProp('arrivalBusStop');
-    }
-
-    /**
-     * The unique identifier for the bus.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getBusNumber()
-    {
-        return $this->getProp('busNumber');
+        return $this->setProp('arrivalBusStop', $value);
     }
 
     /**
@@ -103,11 +85,29 @@ class BusTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
     }
 
     /**
+     * The unique identifier for the bus.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getBusNumber()
+    {
+        return $this->getProp('busNumber');
+    }
+
+    /**
      * The name of the bus (e.g. Bolt Express).
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getBusName()
     {
         return $this->getProp('busName');
+    }
+
+    /**
+     * The stop or station from which the bus arrives.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStop|\Vnetby\Schemaorg\Types\Thing\Place\CivicStructure\BusStation|null
+     */
+    function getArrivalBusStop()
+    {
+        return $this->getProp('arrivalBusStop');
     }
 }

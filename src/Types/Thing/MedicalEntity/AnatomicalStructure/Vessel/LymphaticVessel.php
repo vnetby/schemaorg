@@ -19,7 +19,7 @@ class LymphaticVessel extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Anatom
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem
      */
     public $regionDrained;
 
@@ -41,7 +41,7 @@ class LymphaticVessel extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Anatom
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem $value
      * @return static
      */
     function setRegionDrained($value)
@@ -70,7 +70,7 @@ class LymphaticVessel extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Anatom
 
     /**
      * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|null
      */
     function getRegionDrained()
     {

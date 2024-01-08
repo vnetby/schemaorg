@@ -12,30 +12,6 @@ class QuantitativeValueDistribution extends \Vnetby\Schemaorg\Types\Thing\Intang
     const TYPE = 'QuantitativeValueDistribution';
 
     /**
-     * The median value.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $median;
-
-    /**
-     * The 25th percentile value.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $percentile25;
-
-    /**
-     * The 10th percentile value.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $percentile10;
-
-    /**
-     * The 75th percentile value.
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
-     */
-    public $percentile75;
-
-    /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
      */
@@ -48,44 +24,28 @@ class QuantitativeValueDistribution extends \Vnetby\Schemaorg\Types\Thing\Intang
     public $percentile90;
 
     /**
-     * The median value.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * The 75th percentile value.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    function setMedian($value)
-    {
-        return $this->setProp('median', $value);
-    }
-
-    /**
-     * The 25th percentile value.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
-     */
-    function setPercentile25($value)
-    {
-        return $this->setProp('percentile25', $value);
-    }
+    public $percentile75;
 
     /**
      * The 10th percentile value.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    function setPercentile10($value)
-    {
-        return $this->setProp('percentile10', $value);
-    }
+    public $percentile10;
 
     /**
-     * The 75th percentile value.
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
-     * @return static
+     * The median value.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
-    function setPercentile75($value)
-    {
-        return $this->setProp('percentile75', $value);
-    }
+    public $median;
+
+    /**
+     * The 25th percentile value.
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
+     */
+    public $percentile25;
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
@@ -108,39 +68,43 @@ class QuantitativeValueDistribution extends \Vnetby\Schemaorg\Types\Thing\Intang
     }
 
     /**
-     * The median value.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * The 75th percentile value.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    function getMedian()
+    function setPercentile75($value)
     {
-        return $this->getProp('median');
-    }
-
-    /**
-     * The 25th percentile value.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
-     */
-    function getPercentile25()
-    {
-        return $this->getProp('percentile25');
+        return $this->setProp('percentile75', $value);
     }
 
     /**
      * The 10th percentile value.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    function getPercentile10()
+    function setPercentile10($value)
     {
-        return $this->getProp('percentile10');
+        return $this->setProp('percentile10', $value);
     }
 
     /**
-     * The 75th percentile value.
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     * The median value.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
      */
-    function getPercentile75()
+    function setMedian($value)
     {
-        return $this->getProp('percentile75');
+        return $this->setProp('median', $value);
+    }
+
+    /**
+     * The 25th percentile value.
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber $value
+     * @return static
+     */
+    function setPercentile25($value)
+    {
+        return $this->setProp('percentile25', $value);
     }
 
     /**
@@ -159,5 +123,41 @@ class QuantitativeValueDistribution extends \Vnetby\Schemaorg\Types\Thing\Intang
     function getPercentile90()
     {
         return $this->getProp('percentile90');
+    }
+
+    /**
+     * The 75th percentile value.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getPercentile75()
+    {
+        return $this->getProp('percentile75');
+    }
+
+    /**
+     * The 10th percentile value.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getPercentile10()
+    {
+        return $this->getProp('percentile10');
+    }
+
+    /**
+     * The median value.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getMedian()
+    {
+        return $this->getProp('median');
+    }
+
+    /**
+     * The 25th percentile value.
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|null
+     */
+    function getPercentile25()
+    {
+        return $this->getProp('percentile25');
     }
 }

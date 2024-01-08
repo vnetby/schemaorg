@@ -18,10 +18,10 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $aggregateRating;
 
     /**
-     * A review of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
+     * An associated logo.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    public $review;
+    public $logo;
 
     /**
      * A slogan or motto associated with the item.
@@ -30,10 +30,10 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $slogan;
 
     /**
-     * An associated logo.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL
+     * A review of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review
      */
-    public $logo;
+    public $review;
 
     /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
@@ -43,26 +43,6 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     function setAggregateRating($value)
     {
         return $this->setProp('aggregateRating', $value);
-    }
-
-    /**
-     * A review of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review $value
-     * @return static
-     */
-    function setReview($value)
-    {
-        return $this->setProp('review', $value);
-    }
-
-    /**
-     * A slogan or motto associated with the item.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setSlogan($value)
-    {
-        return $this->setProp('slogan', $value);
     }
 
     /**
@@ -76,6 +56,26 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * A slogan or motto associated with the item.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setSlogan($value)
+    {
+        return $this->setProp('slogan', $value);
+    }
+
+    /**
+     * A review of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review $value
+     * @return static
+     */
+    function setReview($value)
+    {
+        return $this->setProp('review', $value);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the item.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Rating\AggregateRating\AggregateRating|null
      */
@@ -85,12 +85,12 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * A review of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review|null
+     * An associated logo.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function getReview()
+    function getLogo()
     {
-        return $this->getProp('review');
+        return $this->getProp('logo');
     }
 
     /**
@@ -103,11 +103,11 @@ class Brand extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
-     * An associated logo.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\ImageObject\ImageObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * A review of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Review|null
      */
-    function getLogo()
+    function getReview()
     {
-        return $this->getProp('logo');
+        return $this->getProp('review');
     }
 }

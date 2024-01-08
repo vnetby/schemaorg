@@ -12,10 +12,10 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     const TYPE = 'MusicRecording';
 
     /**
-     * The composition this track is a recording of.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
+     * The artist that performed this album or recording.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup
      */
-    public $recordingOf;
+    public $byArtist;
 
     /**
      * The playlist to which this recording belongs.
@@ -24,10 +24,10 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     public $inPlaylist;
 
     /**
-     * The album to which this recording belongs.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
+     * The composition this track is a recording of.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition
      */
-    public $inAlbum;
+    public $recordingOf;
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
@@ -42,19 +42,19 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     public $isrcCode;
 
     /**
-     * The artist that performed this album or recording.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person
+     * The album to which this recording belongs.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum
      */
-    public $byArtist;
+    public $inAlbum;
 
     /**
-     * The composition this track is a recording of.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition $value
+     * The artist that performed this album or recording.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup $value
      * @return static
      */
-    function setRecordingOf($value)
+    function setByArtist($value)
     {
-        return $this->setProp('recordingOf', $value);
+        return $this->setProp('byArtist', $value);
     }
 
     /**
@@ -68,13 +68,13 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     }
 
     /**
-     * The album to which this recording belongs.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum $value
+     * The composition this track is a recording of.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition $value
      * @return static
      */
-    function setInAlbum($value)
+    function setRecordingOf($value)
     {
-        return $this->setProp('inAlbum', $value);
+        return $this->setProp('recordingOf', $value);
     }
 
     /**
@@ -98,22 +98,22 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     }
 
     /**
-     * The artist that performed this album or recording.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * The album to which this recording belongs.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum $value
      * @return static
      */
-    function setByArtist($value)
+    function setInAlbum($value)
     {
-        return $this->setProp('byArtist', $value);
+        return $this->setProp('inAlbum', $value);
     }
 
     /**
-     * The composition this track is a recording of.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition|null
+     * The artist that performed this album or recording.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|null
      */
-    function getRecordingOf()
+    function getByArtist()
     {
-        return $this->getProp('recordingOf');
+        return $this->getProp('byArtist');
     }
 
     /**
@@ -126,12 +126,12 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     }
 
     /**
-     * The album to which this recording belongs.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum|null
+     * The composition this track is a recording of.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicComposition|null
      */
-    function getInAlbum()
+    function getRecordingOf()
     {
-        return $this->getProp('inAlbum');
+        return $this->getProp('recordingOf');
     }
 
     /**
@@ -153,11 +153,11 @@ class MusicRecording extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     }
 
     /**
-     * The artist that performed this album or recording.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\PerformingGroup\MusicGroup|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * The album to which this recording belongs.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\MusicPlaylist\MusicAlbum|null
      */
-    function getByArtist()
+    function getInAlbum()
     {
-        return $this->getProp('byArtist');
+        return $this->getProp('inAlbum');
     }
 }

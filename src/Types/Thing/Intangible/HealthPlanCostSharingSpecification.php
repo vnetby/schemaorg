@@ -24,12 +24,6 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
     public $healthPlanCopay;
 
     /**
-     * The category or type of pharmacy associated with this cost sharing.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $healthPlanPharmacyCategory;
-
-    /**
      * Whether the copay is before or after deductible, etc. TODO: Is this a closed set?
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -40,6 +34,12 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
      * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber
      */
     public $healthPlanCoinsuranceRate;
+
+    /**
+     * The category or type of pharmacy associated with this cost sharing.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $healthPlanPharmacyCategory;
 
     /**
      * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
@@ -59,16 +59,6 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
     function setHealthPlanCopay($value)
     {
         return $this->setProp('healthPlanCopay', $value);
-    }
-
-    /**
-     * The category or type of pharmacy associated with this cost sharing.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setHealthPlanPharmacyCategory($value)
-    {
-        return $this->setProp('healthPlanPharmacyCategory', $value);
     }
 
     /**
@@ -92,6 +82,16 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
     }
 
     /**
+     * The category or type of pharmacy associated with this cost sharing.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setHealthPlanPharmacyCategory($value)
+    {
+        return $this->setProp('healthPlanPharmacyCategory', $value);
+    }
+
+    /**
      * Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
@@ -110,15 +110,6 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
     }
 
     /**
-     * The category or type of pharmacy associated with this cost sharing.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getHealthPlanPharmacyCategory()
-    {
-        return $this->getProp('healthPlanPharmacyCategory');
-    }
-
-    /**
      * Whether the copay is before or after deductible, etc. TODO: Is this a closed set?
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
@@ -134,5 +125,14 @@ class HealthPlanCostSharingSpecification extends \Vnetby\Schemaorg\Types\Thing\I
     function getHealthPlanCoinsuranceRate()
     {
         return $this->getProp('healthPlanCoinsuranceRate');
+    }
+
+    /**
+     * The category or type of pharmacy associated with this cost sharing.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getHealthPlanPharmacyCategory()
+    {
+        return $this->getProp('healthPlanPharmacyCategory');
     }
 }

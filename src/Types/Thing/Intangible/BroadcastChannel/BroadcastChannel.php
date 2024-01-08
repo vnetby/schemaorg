@@ -12,11 +12,10 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     const TYPE = 'BroadcastChannel';
 
     /**
-     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
-     * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText
+     * The CableOrSatelliteService offering the channel.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\CableOrSatelliteService
      */
-    public $broadcastFrequency;
+    public $inBroadcastLineup;
 
     /**
      * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
@@ -25,10 +24,10 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     public $broadcastChannelId;
 
     /**
-     * The BroadcastService offered on this channel.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService
+     * Genre of the creative work, broadcast channel or group.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $providesBroadcastService;
+    public $genre;
 
     /**
      * The type of service required to have access to the channel (e.g. Standard or Premium).
@@ -37,26 +36,26 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     public $broadcastServiceTier;
 
     /**
-     * The CableOrSatelliteService offering the channel.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\CableOrSatelliteService
+     * The BroadcastService offered on this channel.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService
      */
-    public $inBroadcastLineup;
-
-    /**
-     * Genre of the creative work, broadcast channel or group.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $genre;
+    public $providesBroadcastService;
 
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $broadcastFrequency;
+
+    /**
+     * The CableOrSatelliteService offering the channel.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\CableOrSatelliteService $value
      * @return static
      */
-    function setBroadcastFrequency($value)
+    function setInBroadcastLineup($value)
     {
-        return $this->setProp('broadcastFrequency', $value);
+        return $this->setProp('inBroadcastLineup', $value);
     }
 
     /**
@@ -70,13 +69,13 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     }
 
     /**
-     * The BroadcastService offered on this channel.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService $value
+     * Genre of the creative work, broadcast channel or group.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setProvidesBroadcastService($value)
+    function setGenre($value)
     {
-        return $this->setProp('providesBroadcastService', $value);
+        return $this->setProp('genre', $value);
     }
 
     /**
@@ -90,60 +89,24 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     }
 
     /**
-     * The CableOrSatelliteService offering the channel.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\CableOrSatelliteService $value
+     * The BroadcastService offered on this channel.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService $value
      * @return static
      */
-    function setInBroadcastLineup($value)
+    function setProvidesBroadcastService($value)
     {
-        return $this->setProp('inBroadcastLineup', $value);
-    }
-
-    /**
-     * Genre of the creative work, broadcast channel or group.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setGenre($value)
-    {
-        return $this->setProp('genre', $value);
+        return $this->setProp('providesBroadcastService', $value);
     }
 
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getBroadcastFrequency()
+    function setBroadcastFrequency($value)
     {
-        return $this->getProp('broadcastFrequency');
-    }
-
-    /**
-     * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getBroadcastChannelId()
-    {
-        return $this->getProp('broadcastChannelId');
-    }
-
-    /**
-     * The BroadcastService offered on this channel.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService|null
-     */
-    function getProvidesBroadcastService()
-    {
-        return $this->getProp('providesBroadcastService');
-    }
-
-    /**
-     * The type of service required to have access to the channel (e.g. Standard or Premium).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getBroadcastServiceTier()
-    {
-        return $this->getProp('broadcastServiceTier');
+        return $this->setProp('broadcastFrequency', $value);
     }
 
     /**
@@ -156,11 +119,48 @@ class BroadcastChannel extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangib
     }
 
     /**
+     * The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getBroadcastChannelId()
+    {
+        return $this->getProp('broadcastChannelId');
+    }
+
+    /**
      * Genre of the creative work, broadcast channel or group.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getGenre()
     {
         return $this->getProp('genre');
+    }
+
+    /**
+     * The type of service required to have access to the channel (e.g. Standard or Premium).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getBroadcastServiceTier()
+    {
+        return $this->getProp('broadcastServiceTier');
+    }
+
+    /**
+     * The BroadcastService offered on this channel.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Service\BroadcastService\BroadcastService|null
+     */
+    function getProvidesBroadcastService()
+    {
+        return $this->getProp('providesBroadcastService');
+    }
+
+    /**
+     * The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for
+     * frequences of AM and FM radio channels, e.g. "87 FM".
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\BroadcastFrequencySpecification|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getBroadcastFrequency()
+    {
+        return $this->getProp('broadcastFrequency');
     }
 }

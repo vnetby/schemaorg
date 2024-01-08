@@ -13,6 +13,12 @@ class PublicationIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
     const TYPE = 'PublicationIssue';
 
     /**
+     * Identifies the issue of publication; for example, "iii" or "2".
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     */
+    public $issueNumber;
+
+    /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -26,15 +32,19 @@ class PublicationIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The page on which the work ends; for example "138" or "xvi".
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $pageEnd;
 
     /**
      * Identifies the issue of publication; for example, "iii" or "2".
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @return static
      */
-    public $issueNumber;
+    function setIssueNumber($value)
+    {
+        return $this->setProp('issueNumber', $value);
+    }
 
     /**
      * Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
@@ -58,7 +68,7 @@ class PublicationIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The page on which the work ends; for example "138" or "xvi".
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPageEnd($value)
@@ -68,12 +78,11 @@ class PublicationIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * Identifies the issue of publication; for example, "iii" or "2".
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
-     * @return static
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
-    function setIssueNumber($value)
+    function getIssueNumber()
     {
-        return $this->setProp('issueNumber', $value);
+        return $this->getProp('issueNumber');
     }
 
     /**
@@ -96,19 +105,10 @@ class PublicationIssue extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creati
 
     /**
      * The page on which the work ends; for example "138" or "xvi".
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPageEnd()
     {
         return $this->getProp('pageEnd');
-    }
-
-    /**
-     * Identifies the issue of publication; for example, "iii" or "2".
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
-     */
-    function getIssueNumber()
-    {
-        return $this->getProp('issueNumber');
     }
 }

@@ -12,6 +12,13 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
     const TYPE = 'SoftwareSourceCode';
 
     /**
+     * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be
+     * used.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
+     */
+    public $targetProduct;
+
+    /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -24,13 +31,6 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
     public $runtimePlatform;
 
     /**
-     * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be
-     * used.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication
-     */
-    public $targetProduct;
-
-    /**
      * The computer programming language.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ComputerLanguage
      */
@@ -41,6 +41,17 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
      * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $codeRepository;
+
+    /**
+     * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be
+     * used.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication $value
+     * @return static
+     */
+    function setTargetProduct($value)
+    {
+        return $this->setProp('targetProduct', $value);
+    }
 
     /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
@@ -60,17 +71,6 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
     function setRuntimePlatform($value)
     {
         return $this->setProp('runtimePlatform', $value);
-    }
-
-    /**
-     * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be
-     * used.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication $value
-     * @return static
-     */
-    function setTargetProduct($value)
-    {
-        return $this->setProp('targetProduct', $value);
     }
 
     /**
@@ -94,6 +94,16 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
     }
 
     /**
+     * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be
+     * used.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication|null
+     */
+    function getTargetProduct()
+    {
+        return $this->getProp('targetProduct');
+    }
+
+    /**
      * What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
@@ -109,16 +119,6 @@ class SoftwareSourceCode extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Crea
     function getRuntimePlatform()
     {
         return $this->getProp('runtimePlatform');
-    }
-
-    /**
-     * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be
-     * used.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\SoftwareApplication\SoftwareApplication|null
-     */
-    function getTargetProduct()
-    {
-        return $this->getProp('targetProduct');
     }
 
     /**

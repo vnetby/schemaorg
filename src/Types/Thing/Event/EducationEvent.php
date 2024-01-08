@@ -12,48 +12,28 @@ class EducationEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     const TYPE = 'EducationEvent';
 
     /**
-     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $teaches;
-
-    /**
-     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
-     */
-    public $assesses;
-
-    /**
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $educationalLevel;
 
     /**
-     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
+     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setTeaches($value)
-    {
-        return $this->setProp('teaches', $value);
-    }
+    public $assesses;
 
     /**
-     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
-     * @return static
+     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setAssesses($value)
-    {
-        return $this->setProp('assesses', $value);
-    }
+    public $teaches;
 
     /**
      * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
      * and formal sets of level indicators.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setEducationalLevel($value)
@@ -62,17 +42,38 @@ class EducationEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     }
 
     /**
-     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getTeaches()
+    function setAssesses($value)
     {
-        return $this->getProp('teaches');
+        return $this->setProp('assesses', $value);
+    }
+
+    /**
+     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setTeaches($value)
+    {
+        return $this->setProp('teaches', $value);
+    }
+
+    /**
+     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+     * and formal sets of level indicators.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getEducationalLevel()
+    {
+        return $this->getProp('educationalLevel');
     }
 
     /**
      * The item being described is intended to assess the competency or learning outcome defined by the referenced term.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getAssesses()
     {
@@ -80,12 +81,11 @@ class EducationEvent extends \Vnetby\Schemaorg\Types\Thing\Event\Event
     }
 
     /**
-     * The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
-     * and formal sets of level indicators.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|null
+     * The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\DefinedTerm|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getEducationalLevel()
+    function getTeaches()
     {
-        return $this->getProp('educationalLevel');
+        return $this->getProp('teaches');
     }
 }

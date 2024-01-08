@@ -19,30 +19,10 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     public $typicalTest;
 
     /**
-     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the
-     * cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms
-     * to reach the most parsimonious diagnosis or diagnoses in a patient.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DDxElement
-     */
-    public $differentialDiagnosis;
-
-    /**
-     * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
-     */
-    public $secondaryPrevention;
-
-    /**
-     * The likely outcome in either the short term or long term of the medical condition.
+     * The expected progression of the condition if it is not treated and allowed to progress naturally.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $expectedPrognosis;
-
-    /**
-     * The stage of the condition, if applicable.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalConditionStage
-     */
-    public $stage;
+    public $naturalProgression;
 
     /**
      * A possible treatment to address this condition, sign or symptom.
@@ -51,35 +31,49 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     public $possibleTreatment;
 
     /**
-     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
-     */
-    public $primaryPrevention;
-
-    /**
-     * The status of the study (enumerated).
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType
-     */
-    public $status;
-
-    /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
-     */
-    public $drug;
-
-    /**
-     * The anatomy of the underlying organ system or structures associated with this entity.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
-     */
-    public $associatedAnatomy;
-
-    /**
      * A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the
      * disease, extension of the condition to other organ systems, etc.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $possibleComplication;
+
+    /**
+     * The anatomy of the underlying organ system or structures associated with this entity.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy
+     */
+    public $associatedAnatomy;
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug
+     */
+    public $drug;
+
+    /**
+     * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
+     */
+    public $secondaryPrevention;
+
+    /**
+     * The status of the study (enumerated).
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus
+     */
+    public $status;
+
+    /**
+     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $pathophysiology;
+
+    /**
+     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the
+     * cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms
+     * to reach the most parsimonious diagnosis or diagnoses in a patient.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DDxElement
+     */
+    public $differentialDiagnosis;
 
     /**
      * A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age, coexisting condition.
@@ -95,22 +89,28 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     public $signOrSymptom;
 
     /**
-     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * The stage of the condition, if applicable.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalConditionStage
      */
-    public $pathophysiology;
+    public $stage;
 
     /**
-     * The expected progression of the condition if it is not treated and allowed to progress naturally.
+     * The likely outcome in either the short term or long term of the medical condition.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $naturalProgression;
+    public $expectedPrognosis;
 
     /**
      * The characteristics of associated patients, such as age, gender, race etc.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $epidemiology;
+
+    /**
+     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy
+     */
+    public $primaryPrevention;
 
     /**
      * A medical test typically performed given this condition.
@@ -123,45 +123,13 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the
-     * cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms
-     * to reach the most parsimonious diagnosis or diagnoses in a patient.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DDxElement $value
-     * @return static
-     */
-    function setDifferentialDiagnosis($value)
-    {
-        return $this->setProp('differentialDiagnosis', $value);
-    }
-
-    /**
-     * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy $value
-     * @return static
-     */
-    function setSecondaryPrevention($value)
-    {
-        return $this->setProp('secondaryPrevention', $value);
-    }
-
-    /**
-     * The likely outcome in either the short term or long term of the medical condition.
+     * The expected progression of the condition if it is not treated and allowed to progress naturally.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setExpectedPrognosis($value)
+    function setNaturalProgression($value)
     {
-        return $this->setProp('expectedPrognosis', $value);
-    }
-
-    /**
-     * The stage of the condition, if applicable.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalConditionStage $value
-     * @return static
-     */
-    function setStage($value)
-    {
-        return $this->setProp('stage', $value);
+        return $this->setProp('naturalProgression', $value);
     }
 
     /**
@@ -175,46 +143,6 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy $value
-     * @return static
-     */
-    function setPrimaryPrevention($value)
-    {
-        return $this->setProp('primaryPrevention', $value);
-    }
-
-    /**
-     * The status of the study (enumerated).
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType $value
-     * @return static
-     */
-    function setStatus($value)
-    {
-        return $this->setProp('status', $value);
-    }
-
-    /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Drug $value
-     * @return static
-     */
-    function setDrug($value)
-    {
-        return $this->setProp('drug', $value);
-    }
-
-    /**
-     * The anatomy of the underlying organ system or structures associated with this entity.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
-     * @return static
-     */
-    function setAssociatedAnatomy($value)
-    {
-        return $this->setProp('associatedAnatomy', $value);
-    }
-
-    /**
      * A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the
      * disease, extension of the condition to other organ systems, etc.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
@@ -223,6 +151,68 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     function setPossibleComplication($value)
     {
         return $this->setProp('possibleComplication', $value);
+    }
+
+    /**
+     * The anatomy of the underlying organ system or structures associated with this entity.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy $value
+     * @return static
+     */
+    function setAssociatedAnatomy($value)
+    {
+        return $this->setProp('associatedAnatomy', $value);
+    }
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug $value
+     * @return static
+     */
+    function setDrug($value)
+    {
+        return $this->setProp('drug', $value);
+    }
+
+    /**
+     * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy $value
+     * @return static
+     */
+    function setSecondaryPrevention($value)
+    {
+        return $this->setProp('secondaryPrevention', $value);
+    }
+
+    /**
+     * The status of the study (enumerated).
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus $value
+     * @return static
+     */
+    function setStatus($value)
+    {
+        return $this->setProp('status', $value);
+    }
+
+    /**
+     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setPathophysiology($value)
+    {
+        return $this->setProp('pathophysiology', $value);
+    }
+
+    /**
+     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the
+     * cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms
+     * to reach the most parsimonious diagnosis or diagnoses in a patient.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DDxElement $value
+     * @return static
+     */
+    function setDifferentialDiagnosis($value)
+    {
+        return $this->setProp('differentialDiagnosis', $value);
     }
 
     /**
@@ -247,23 +237,23 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * The stage of the condition, if applicable.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalConditionStage $value
      * @return static
      */
-    function setPathophysiology($value)
+    function setStage($value)
     {
-        return $this->setProp('pathophysiology', $value);
+        return $this->setProp('stage', $value);
     }
 
     /**
-     * The expected progression of the condition if it is not treated and allowed to progress naturally.
+     * The likely outcome in either the short term or long term of the medical condition.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setNaturalProgression($value)
+    function setExpectedPrognosis($value)
     {
-        return $this->setProp('naturalProgression', $value);
+        return $this->setProp('expectedPrognosis', $value);
     }
 
     /**
@@ -277,6 +267,16 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
+     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy $value
+     * @return static
+     */
+    function setPrimaryPrevention($value)
+    {
+        return $this->setProp('primaryPrevention', $value);
+    }
+
+    /**
      * A medical test typically performed given this condition.
      * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalTest\MedicalTest|null
      */
@@ -286,41 +286,12 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the
-     * cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms
-     * to reach the most parsimonious diagnosis or diagnoses in a patient.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DDxElement|null
-     */
-    function getDifferentialDiagnosis()
-    {
-        return $this->getProp('differentialDiagnosis');
-    }
-
-    /**
-     * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|null
-     */
-    function getSecondaryPrevention()
-    {
-        return $this->getProp('secondaryPrevention');
-    }
-
-    /**
-     * The likely outcome in either the short term or long term of the medical condition.
+     * The expected progression of the condition if it is not treated and allowed to progress naturally.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getExpectedPrognosis()
+    function getNaturalProgression()
     {
-        return $this->getProp('expectedPrognosis');
-    }
-
-    /**
-     * The stage of the condition, if applicable.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalConditionStage|null
-     */
-    function getStage()
-    {
-        return $this->getProp('stage');
+        return $this->getProp('naturalProgression');
     }
 
     /**
@@ -333,42 +304,6 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|null
-     */
-    function getPrimaryPrevention()
-    {
-        return $this->getProp('primaryPrevention');
-    }
-
-    /**
-     * The status of the study (enumerated).
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|null
-     */
-    function getStatus()
-    {
-        return $this->getProp('status');
-    }
-
-    /**
-     * Specifying a drug or medicine used in a medication procedure.
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Drug|null
-     */
-    function getDrug()
-    {
-        return $this->getProp('drug');
-    }
-
-    /**
-     * The anatomy of the underlying organ system or structures associated with this entity.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
-     */
-    function getAssociatedAnatomy()
-    {
-        return $this->getProp('associatedAnatomy');
-    }
-
-    /**
      * A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the
      * disease, extension of the condition to other organ systems, etc.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
@@ -376,6 +311,62 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     function getPossibleComplication()
     {
         return $this->getProp('possibleComplication');
+    }
+
+    /**
+     * The anatomy of the underlying organ system or structures associated with this entity.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\SuperficialAnatomy|null
+     */
+    function getAssociatedAnatomy()
+    {
+        return $this->getProp('associatedAnatomy');
+    }
+
+    /**
+     * Specifying a drug or medicine used in a medication procedure.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug|null
+     */
+    function getDrug()
+    {
+        return $this->getProp('drug');
+    }
+
+    /**
+     * A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|null
+     */
+    function getSecondaryPrevention()
+    {
+        return $this->getProp('secondaryPrevention');
+    }
+
+    /**
+     * The status of the study (enumerated).
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\StatusEnumeration\EventStatusType\EventStatusType|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalStudyStatus\MedicalStudyStatus|null
+     */
+    function getStatus()
+    {
+        return $this->getProp('status');
+    }
+
+    /**
+     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getPathophysiology()
+    {
+        return $this->getProp('pathophysiology');
+    }
+
+    /**
+     * One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the
+     * cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms
+     * to reach the most parsimonious diagnosis or diagnoses in a patient.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DDxElement|null
+     */
+    function getDifferentialDiagnosis()
+    {
+        return $this->getProp('differentialDiagnosis');
     }
 
     /**
@@ -398,21 +389,21 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     }
 
     /**
-     * Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * The stage of the condition, if applicable.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\MedicalConditionStage|null
      */
-    function getPathophysiology()
+    function getStage()
     {
-        return $this->getProp('pathophysiology');
+        return $this->getProp('stage');
     }
 
     /**
-     * The expected progression of the condition if it is not treated and allowed to progress naturally.
+     * The likely outcome in either the short term or long term of the medical condition.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getNaturalProgression()
+    function getExpectedPrognosis()
     {
-        return $this->getProp('naturalProgression');
+        return $this->getProp('expectedPrognosis');
     }
 
     /**
@@ -422,5 +413,14 @@ class MedicalCondition extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Medic
     function getEpidemiology()
     {
         return $this->getProp('epidemiology');
+    }
+
+    /**
+     * A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalProcedure\TherapeuticProcedure\MedicalTherapy\MedicalTherapy|null
+     */
+    function getPrimaryPrevention()
+    {
+        return $this->getProp('primaryPrevention');
     }
 }

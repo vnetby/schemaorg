@@ -15,23 +15,17 @@ class DefinedRegion extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     const TYPE = 'DefinedRegion';
 
     /**
-     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country
-     */
-    public $addressCountry;
-
-    /**
-     * A defined range of postal codes.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PostalCodeRangeSpecification
-     */
-    public $postalCodeRange;
-
-    /**
      * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative
      * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $addressRegion;
+
+    /**
+     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $addressCountry;
 
     /**
      * A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.
@@ -40,30 +34,16 @@ class DefinedRegion extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     public $postalCodePrefix;
 
     /**
+     * A defined range of postal codes.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PostalCodeRangeSpecification
+     */
+    public $postalCodeRange;
+
+    /**
      * The postal code. For example, 94043.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $postalCode;
-
-    /**
-     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country $value
-     * @return static
-     */
-    function setAddressCountry($value)
-    {
-        return $this->setProp('addressCountry', $value);
-    }
-
-    /**
-     * A defined range of postal codes.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PostalCodeRangeSpecification $value
-     * @return static
-     */
-    function setPostalCodeRange($value)
-    {
-        return $this->setProp('postalCodeRange', $value);
-    }
 
     /**
      * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative
@@ -77,6 +57,16 @@ class DefinedRegion extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     }
 
     /**
+     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setAddressCountry($value)
+    {
+        return $this->setProp('addressCountry', $value);
+    }
+
+    /**
      * A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -84,6 +74,16 @@ class DefinedRegion extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     function setPostalCodePrefix($value)
     {
         return $this->setProp('postalCodePrefix', $value);
+    }
+
+    /**
+     * A defined range of postal codes.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PostalCodeRangeSpecification $value
+     * @return static
+     */
+    function setPostalCodeRange($value)
+    {
+        return $this->setProp('postalCodeRange', $value);
     }
 
     /**
@@ -97,24 +97,6 @@ class DefinedRegion extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     }
 
     /**
-     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|null
-     */
-    function getAddressCountry()
-    {
-        return $this->getProp('addressCountry');
-    }
-
-    /**
-     * A defined range of postal codes.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PostalCodeRangeSpecification|null
-     */
-    function getPostalCodeRange()
-    {
-        return $this->getProp('postalCodeRange');
-    }
-
-    /**
      * The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative
      * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
@@ -125,12 +107,30 @@ class DefinedRegion extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     }
 
     /**
+     * The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getAddressCountry()
+    {
+        return $this->getProp('addressCountry');
+    }
+
+    /**
      * A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPostalCodePrefix()
     {
         return $this->getProp('postalCodePrefix');
+    }
+
+    /**
+     * A defined range of postal codes.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\PostalCodeRangeSpecification|null
+     */
+    function getPostalCodeRange()
+    {
+        return $this->getProp('postalCodeRange');
     }
 
     /**

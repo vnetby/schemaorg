@@ -36,10 +36,41 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     const TYPE = 'SpecialAnnouncement';
 
     /**
-     * Information about public transport closures.
+     * Information about school closures.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
-    public $publicTransportClosuresInfo;
+    public $schoolClosuresInfo;
+
+    /**
+     * Guidelines about quarantine rules, e.g. in the context of a pandemic.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $quarantineGuidelines;
+
+    /**
+     * Information about disease prevention.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $diseasePreventionInfo;
+
+    /**
+     * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
+     * containing [[SpecialAnnouncement]] markup on a site.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $newsUpdatesAndGuidelines;
+
+    /**
+     * Publication date of an online listing.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
+     */
+    public $datePosted;
+
+    /**
+     * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\GovernmentService
+     */
+    public $governmentBenefitsInfo;
 
     /**
      * Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening
@@ -49,41 +80,10 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     public $announcementLocation;
 
     /**
-     * Information about school closures.
+     * Information about travel bans, e.g. in the context of a pandemic.
      * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    public $schoolClosuresInfo;
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing
-     */
-    public $category;
-
-    /**
-     * Guidelines about quarantine rules, e.g. in the context of a pandemic.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
-     */
-    public $quarantineGuidelines;
-
-    /**
-     * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
-     * containing [[SpecialAnnouncement]] markup on a site.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
-     */
-    public $newsUpdatesAndGuidelines;
-
-    /**
-     * Information about disease prevention.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
-     */
-    public $diseasePreventionInfo;
-
-    /**
-     * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\GovernmentService
-     */
-    public $governmentBenefitsInfo;
+    public $travelBans;
 
     /**
      * The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS
@@ -91,18 +91,6 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
      * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\DataFeed\DataFeed
      */
     public $webFeed;
-
-    /**
-     * Information about travel bans, e.g. in the context of a pandemic.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $travelBans;
-
-    /**
-     * Publication date of an online listing.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate
-     */
-    public $datePosted;
 
     /**
      * Information about getting tested (for a [[MedicalCondition]]), e.g. in the context of a pandemic.
@@ -113,18 +101,81 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Statistical information about the spread of a disease, either as [[WebContent]], or described directly as a [[Dataset]], or the specific [[Observation]]s
      * in the dataset. When a [[WebContent]] URL is provided, the page indicated might also contain more such markup.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
      */
     public $diseaseSpreadStatistics;
 
     /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing
+     */
+    public $category;
+
+    /**
      * Information about public transport closures.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent
+     */
+    public $publicTransportClosuresInfo;
+
+    /**
+     * Information about school closures.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
      * @return static
      */
-    function setPublicTransportClosuresInfo($value)
+    function setSchoolClosuresInfo($value)
     {
-        return $this->setProp('publicTransportClosuresInfo', $value);
+        return $this->setProp('schoolClosuresInfo', $value);
+    }
+
+    /**
+     * Guidelines about quarantine rules, e.g. in the context of a pandemic.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setQuarantineGuidelines($value)
+    {
+        return $this->setProp('quarantineGuidelines', $value);
+    }
+
+    /**
+     * Information about disease prevention.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setDiseasePreventionInfo($value)
+    {
+        return $this->setProp('diseasePreventionInfo', $value);
+    }
+
+    /**
+     * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
+     * containing [[SpecialAnnouncement]] markup on a site.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
+     * @return static
+     */
+    function setNewsUpdatesAndGuidelines($value)
+    {
+        return $this->setProp('newsUpdatesAndGuidelines', $value);
+    }
+
+    /**
+     * Publication date of an online listing.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
+     * @return static
+     */
+    function setDatePosted($value)
+    {
+        return $this->setProp('datePosted', $value);
+    }
+
+    /**
+     * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\GovernmentService $value
+     * @return static
+     */
+    function setGovernmentBenefitsInfo($value)
+    {
+        return $this->setProp('governmentBenefitsInfo', $value);
     }
 
     /**
@@ -139,64 +190,13 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     }
 
     /**
-     * Information about school closures.
+     * Information about travel bans, e.g. in the context of a pandemic.
      * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
-    function setSchoolClosuresInfo($value)
+    function setTravelBans($value)
     {
-        return $this->setProp('schoolClosuresInfo', $value);
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing $value
-     * @return static
-     */
-    function setCategory($value)
-    {
-        return $this->setProp('category', $value);
-    }
-
-    /**
-     * Guidelines about quarantine rules, e.g. in the context of a pandemic.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
-     * @return static
-     */
-    function setQuarantineGuidelines($value)
-    {
-        return $this->setProp('quarantineGuidelines', $value);
-    }
-
-    /**
-     * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
-     * containing [[SpecialAnnouncement]] markup on a site.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
-     * @return static
-     */
-    function setNewsUpdatesAndGuidelines($value)
-    {
-        return $this->setProp('newsUpdatesAndGuidelines', $value);
-    }
-
-    /**
-     * Information about disease prevention.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
-     * @return static
-     */
-    function setDiseasePreventionInfo($value)
-    {
-        return $this->setProp('diseasePreventionInfo', $value);
-    }
-
-    /**
-     * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\GovernmentService $value
-     * @return static
-     */
-    function setGovernmentBenefitsInfo($value)
-    {
-        return $this->setProp('governmentBenefitsInfo', $value);
+        return $this->setProp('travelBans', $value);
     }
 
     /**
@@ -208,26 +208,6 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     function setWebFeed($value)
     {
         return $this->setProp('webFeed', $value);
-    }
-
-    /**
-     * Information about travel bans, e.g. in the context of a pandemic.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setTravelBans($value)
-    {
-        return $this->setProp('travelBans', $value);
-    }
-
-    /**
-     * Publication date of an online listing.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate $value
-     * @return static
-     */
-    function setDatePosted($value)
-    {
-        return $this->setProp('datePosted', $value);
     }
 
     /**
@@ -243,7 +223,7 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Statistical information about the spread of a disease, either as [[WebContent]], or described directly as a [[Dataset]], or the specific [[Observation]]s
      * in the dataset. When a [[WebContent]] URL is provided, the page indicated might also contain more such markup.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
      * @return static
      */
     function setDiseaseSpreadStatistics($value)
@@ -252,12 +232,78 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     }
 
     /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
+     */
+    function setCategory($value)
+    {
+        return $this->setProp('category', $value);
+    }
+
+    /**
      * Information about public transport closures.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent $value
+     * @return static
+     */
+    function setPublicTransportClosuresInfo($value)
+    {
+        return $this->setProp('publicTransportClosuresInfo', $value);
+    }
+
+    /**
+     * Information about school closures.
      * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
      */
-    function getPublicTransportClosuresInfo()
+    function getSchoolClosuresInfo()
     {
-        return $this->getProp('publicTransportClosuresInfo');
+        return $this->getProp('schoolClosuresInfo');
+    }
+
+    /**
+     * Guidelines about quarantine rules, e.g. in the context of a pandemic.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getQuarantineGuidelines()
+    {
+        return $this->getProp('quarantineGuidelines');
+    }
+
+    /**
+     * Information about disease prevention.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getDiseasePreventionInfo()
+    {
+        return $this->getProp('diseasePreventionInfo');
+    }
+
+    /**
+     * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
+     * containing [[SpecialAnnouncement]] markup on a site.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
+     */
+    function getNewsUpdatesAndGuidelines()
+    {
+        return $this->getProp('newsUpdatesAndGuidelines');
+    }
+
+    /**
+     * Publication date of an online listing.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
+     */
+    function getDatePosted()
+    {
+        return $this->getProp('datePosted');
+    }
+
+    /**
+     * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Service\GovernmentService|null
+     */
+    function getGovernmentBenefitsInfo()
+    {
+        return $this->getProp('governmentBenefitsInfo');
     }
 
     /**
@@ -271,58 +317,12 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     }
 
     /**
-     * Information about school closures.
+     * Information about travel bans, e.g. in the context of a pandemic.
      * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function getSchoolClosuresInfo()
+    function getTravelBans()
     {
-        return $this->getProp('schoolClosuresInfo');
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Thing|null
-     */
-    function getCategory()
-    {
-        return $this->getProp('category');
-    }
-
-    /**
-     * Guidelines about quarantine rules, e.g. in the context of a pandemic.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
-     */
-    function getQuarantineGuidelines()
-    {
-        return $this->getProp('quarantineGuidelines');
-    }
-
-    /**
-     * Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page
-     * containing [[SpecialAnnouncement]] markup on a site.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
-     */
-    function getNewsUpdatesAndGuidelines()
-    {
-        return $this->getProp('newsUpdatesAndGuidelines');
-    }
-
-    /**
-     * Information about disease prevention.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
-     */
-    function getDiseasePreventionInfo()
-    {
-        return $this->getProp('diseasePreventionInfo');
-    }
-
-    /**
-     * governmentBenefitsInfo provides information about government benefits associated with a SpecialAnnouncement.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Service\GovernmentService|null
-     */
-    function getGovernmentBenefitsInfo()
-    {
-        return $this->getProp('governmentBenefitsInfo');
+        return $this->getProp('travelBans');
     }
 
     /**
@@ -333,24 +333,6 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     function getWebFeed()
     {
         return $this->getProp('webFeed');
-    }
-
-    /**
-     * Information about travel bans, e.g. in the context of a pandemic.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getTravelBans()
-    {
-        return $this->getProp('travelBans');
-    }
-
-    /**
-     * Publication date of an online listing.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataDate|null
-     */
-    function getDatePosted()
-    {
-        return $this->getProp('datePosted');
     }
 
     /**
@@ -365,10 +347,28 @@ class SpecialAnnouncement extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Cre
     /**
      * Statistical information about the spread of a disease, either as [[WebContent]], or described directly as a [[Dataset]], or the specific [[Observation]]s
      * in the dataset. When a [[WebContent]] URL is provided, the page indicated might also contain more such markup.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\Dataset\Dataset|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\Observation|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
      */
     function getDiseaseSpreadStatistics()
     {
         return $this->getProp('diseaseSpreadStatistics');
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\PhysicalActivityCategory\PhysicalActivityCategory|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getCategory()
+    {
+        return $this->getProp('category');
+    }
+
+    /**
+     * Information about public transport closures.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebContent\WebContent|null
+     */
+    function getPublicTransportClosuresInfo()
+    {
+        return $this->getProp('publicTransportClosuresInfo');
     }
 }

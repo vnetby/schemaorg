@@ -12,6 +12,12 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
     const TYPE = 'APIReference';
 
     /**
+     * Associated product/technology version. E.g., .NET Framework 4.5.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $assemblyVersion;
+
+    /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -24,16 +30,20 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
     public $programmingModel;
 
     /**
-     * Associated product/technology version. E.g., .NET Framework 4.5.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $assemblyVersion;
-
-    /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $executableLibraryName;
+
+    /**
+     * Associated product/technology version. E.g., .NET Framework 4.5.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setAssemblyVersion($value)
+    {
+        return $this->setProp('assemblyVersion', $value);
+    }
 
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
@@ -56,16 +66,6 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
     }
 
     /**
-     * Associated product/technology version. E.g., .NET Framework 4.5.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setAssemblyVersion($value)
-    {
-        return $this->setProp('assemblyVersion', $value);
-    }
-
-    /**
      * Library file name, e.g., mscorlib.dll, system.web.dll.
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
@@ -73,6 +73,15 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
     function setExecutableLibraryName($value)
     {
         return $this->setProp('executableLibraryName', $value);
+    }
+
+    /**
+     * Associated product/technology version. E.g., .NET Framework 4.5.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getAssemblyVersion()
+    {
+        return $this->getProp('assemblyVersion');
     }
 
     /**
@@ -91,15 +100,6 @@ class APIReference extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Article\Te
     function getProgrammingModel()
     {
         return $this->getProp('programmingModel');
-    }
-
-    /**
-     * Associated product/technology version. E.g., .NET Framework 4.5.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getAssemblyVersion()
-    {
-        return $this->getProp('assemblyVersion');
     }
 
     /**

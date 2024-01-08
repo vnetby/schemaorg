@@ -12,34 +12,10 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     const TYPE = 'HowToDirection';
 
     /**
-     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $supply;
-
-    /**
      * A media object representing the circumstances while performing this direction.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
     public $duringMedia;
-
-    /**
-     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
-     */
-    public $totalTime;
-
-    /**
-     * A media object representing the circumstances after performing this direction.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL
-     */
-    public $afterMedia;
-
-    /**
-     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $tool;
 
     /**
      * The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO
@@ -55,6 +31,24 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     public $beforeMedia;
 
     /**
+     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $supply;
+
+    /**
+     * A media object representing the circumstances after performing this direction.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     */
+    public $afterMedia;
+
+    /**
+     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
+     */
+    public $totalTime;
+
+    /**
      * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration
@@ -62,14 +56,10 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     public $prepTime;
 
     /**
-     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool
      */
-    function setSupply($value)
-    {
-        return $this->setProp('supply', $value);
-    }
+    public $tool;
 
     /**
      * A media object representing the circumstances while performing this direction.
@@ -79,36 +69,6 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     function setDuringMedia($value)
     {
         return $this->setProp('duringMedia', $value);
-    }
-
-    /**
-     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
-     * @return static
-     */
-    function setTotalTime($value)
-    {
-        return $this->setProp('totalTime', $value);
-    }
-
-    /**
-     * A media object representing the circumstances after performing this direction.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL $value
-     * @return static
-     */
-    function setAfterMedia($value)
-    {
-        return $this->setProp('afterMedia', $value);
-    }
-
-    /**
-     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
-     */
-    function setTool($value)
-    {
-        return $this->setProp('tool', $value);
     }
 
     /**
@@ -133,6 +93,36 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     }
 
     /**
+     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
+     */
+    function setSupply($value)
+    {
+        return $this->setProp('supply', $value);
+    }
+
+    /**
+     * A media object representing the circumstances after performing this direction.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @return static
+     */
+    function setAfterMedia($value)
+    {
+        return $this->setProp('afterMedia', $value);
+    }
+
+    /**
+     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
+     * @return static
+     */
+    function setTotalTime($value)
+    {
+        return $this->setProp('totalTime', $value);
+    }
+
+    /**
      * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration $value
@@ -144,12 +134,13 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     }
 
     /**
-     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool $value
+     * @return static
      */
-    function getSupply()
+    function setTool($value)
     {
-        return $this->getProp('supply');
+        return $this->setProp('tool', $value);
     }
 
     /**
@@ -159,33 +150,6 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     function getDuringMedia()
     {
         return $this->getProp('duringMedia');
-    }
-
-    /**
-     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
-     */
-    function getTotalTime()
-    {
-        return $this->getProp('totalTime');
-    }
-
-    /**
-     * A media object representing the circumstances after performing this direction.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|\Vnetby\Schemaorg\DataTypes\DataURL|null
-     */
-    function getAfterMedia()
-    {
-        return $this->getProp('afterMedia');
-    }
-
-    /**
-     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getTool()
-    {
-        return $this->getProp('tool');
     }
 
     /**
@@ -208,6 +172,33 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     }
 
     /**
+     * A sub-property of instrument. A supply consumed when performing instructions or a direction.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToSupply|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getSupply()
+    {
+        return $this->getProp('supply');
+    }
+
+    /**
+     * A media object representing the circumstances after performing this direction.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     */
+    function getAfterMedia()
+    {
+        return $this->getProp('afterMedia');
+    }
+
+    /**
+     * The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
+     */
+    function getTotalTime()
+    {
+        return $this->getProp('totalTime');
+    }
+
+    /**
      * The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Duration|null
@@ -215,5 +206,14 @@ class HowToDirection extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Creative
     function getPrepTime()
     {
         return $this->getProp('prepTime');
+    }
+
+    /**
+     * A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\HowToItem\HowToTool|null
+     */
+    function getTool()
+    {
+        return $this->getProp('tool');
     }
 }

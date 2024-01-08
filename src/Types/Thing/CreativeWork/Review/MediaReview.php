@@ -16,23 +16,34 @@ class MediaReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
     const TYPE = 'MediaReview';
 
     /**
+     * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
+     * content, e.g. video file.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
+     */
+    public $originalMediaLink;
+
+    /**
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $originalMediaContextDescription;
 
     /**
-     * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
-     * content, e.g. video file.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
-     */
-    public $originalMediaLink;
-
-    /**
      * Indicates a MediaManipulationRatingEnumeration classification of a media object (in the context of how it was published or shared).
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MediaManipulationRatingEnumeration\MediaManipulationRatingEnumeration
      */
     public $mediaAuthenticityCategory;
+
+    /**
+     * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
+     * content, e.g. video file.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
+     * @return static
+     */
+    function setOriginalMediaLink($value)
+    {
+        return $this->setProp('originalMediaLink', $value);
+    }
 
     /**
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
@@ -42,17 +53,6 @@ class MediaReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
     function setOriginalMediaContextDescription($value)
     {
         return $this->setProp('originalMediaContextDescription', $value);
-    }
-
-    /**
-     * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
-     * content, e.g. video file.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject $value
-     * @return static
-     */
-    function setOriginalMediaLink($value)
-    {
-        return $this->setProp('originalMediaLink', $value);
     }
 
     /**
@@ -66,22 +66,22 @@ class MediaReview extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\Review\Revi
     }
 
     /**
+     * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
+     * content, e.g. video file.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
+     */
+    function getOriginalMediaLink()
+    {
+        return $this->getProp('originalMediaLink');
+    }
+
+    /**
      * Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getOriginalMediaContextDescription()
     {
         return $this->getProp('originalMediaContextDescription');
-    }
-
-    /**
-     * Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]]
-     * content, e.g. video file.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\WebPage|\Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject|null
-     */
-    function getOriginalMediaLink()
-    {
-        return $this->getProp('originalMediaLink');
     }
 
     /**

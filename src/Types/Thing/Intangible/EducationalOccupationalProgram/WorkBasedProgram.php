@@ -18,7 +18,7 @@ class WorkBasedProgram extends \Vnetby\Schemaorg\Types\Thing\Intangible\Educatio
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode
      */
     public $occupationalCategory;
 
@@ -33,7 +33,7 @@ class WorkBasedProgram extends \Vnetby\Schemaorg\Types\Thing\Intangible\Educatio
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode $value
      * @return static
      */
     function setOccupationalCategory($value)
@@ -56,7 +56,7 @@ class WorkBasedProgram extends \Vnetby\Schemaorg\Types\Thing\Intangible\Educatio
      * property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for
      * the category should be provided.\n Note: for historical reasons, any textual label and formal code provided as a literal may be
      * assumed to be from O*NET-SOC.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\DefinedTerm\CategoryCode\CategoryCode|null
      */
     function getOccupationalCategory()
     {

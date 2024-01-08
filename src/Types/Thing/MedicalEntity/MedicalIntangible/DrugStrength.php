@@ -12,12 +12,6 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     const TYPE = 'DrugStrength';
 
     /**
-     * The location in which the strength is available.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
-     */
-    public $availableIn;
-
-    /**
      * The units of an active ingredient's strength, e.g. mg.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
@@ -30,10 +24,10 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     public $activeIngredient;
 
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule
+     * The location in which the strength is available.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea
      */
-    public $maximumIntake;
+    public $availableIn;
 
     /**
      * The value of an active ingredient's strength, e.g. 325.
@@ -42,14 +36,10 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     public $strengthValue;
 
     /**
-     * The location in which the strength is available.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
-     * @return static
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule
      */
-    function setAvailableIn($value)
-    {
-        return $this->setProp('availableIn', $value);
-    }
+    public $maximumIntake;
 
     /**
      * The units of an active ingredient's strength, e.g. mg.
@@ -72,13 +62,13 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     }
 
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule $value
+     * The location in which the strength is available.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea $value
      * @return static
      */
-    function setMaximumIntake($value)
+    function setAvailableIn($value)
     {
-        return $this->setProp('maximumIntake', $value);
+        return $this->setProp('availableIn', $value);
     }
 
     /**
@@ -92,12 +82,13 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     }
 
     /**
-     * The location in which the strength is available.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|null
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule $value
+     * @return static
      */
-    function getAvailableIn()
+    function setMaximumIntake($value)
     {
-        return $this->getProp('availableIn');
+        return $this->setProp('maximumIntake', $value);
     }
 
     /**
@@ -119,12 +110,12 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     }
 
     /**
-     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule|null
+     * The location in which the strength is available.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\AdministrativeArea|null
      */
-    function getMaximumIntake()
+    function getAvailableIn()
     {
-        return $this->getProp('maximumIntake');
+        return $this->getProp('availableIn');
     }
 
     /**
@@ -134,5 +125,14 @@ class DrugStrength extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIn
     function getStrengthValue()
     {
         return $this->getProp('strengthValue');
+    }
+
+    /**
+     * Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalIntangible\DoseSchedule\MaximumDoseSchedule|null
+     */
+    function getMaximumIntake()
+    {
+        return $this->getProp('maximumIntake');
     }
 }

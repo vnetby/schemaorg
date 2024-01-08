@@ -12,12 +12,6 @@ class MortgageLoan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     const TYPE = 'MortgageLoan';
 
     /**
-     * Whether borrower is a resident of the jurisdiction where the property is located.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $domiciledMortgage;
-
-    /**
      * Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\MonetaryAmount
      */
@@ -25,13 +19,9 @@ class MortgageLoan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * Whether borrower is a resident of the jurisdiction where the property is located.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    function setDomiciledMortgage($value)
-    {
-        return $this->setProp('domiciledMortgage', $value);
-    }
+    public $domiciledMortgage;
 
     /**
      * Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.
@@ -45,11 +35,12 @@ class MortgageLoan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
 
     /**
      * Whether borrower is a resident of the jurisdiction where the property is located.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @return static
      */
-    function getDomiciledMortgage()
+    function setDomiciledMortgage($value)
     {
-        return $this->getProp('domiciledMortgage');
+        return $this->setProp('domiciledMortgage', $value);
     }
 
     /**
@@ -59,5 +50,14 @@ class MortgageLoan extends \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Fina
     function getLoanMortgageMandateAmount()
     {
         return $this->getProp('loanMortgageMandateAmount');
+    }
+
+    /**
+     * Whether borrower is a resident of the jurisdiction where the property is located.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     */
+    function getDomiciledMortgage()
+    {
+        return $this->getProp('domiciledMortgage');
     }
 }

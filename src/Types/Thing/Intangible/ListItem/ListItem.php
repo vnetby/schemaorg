@@ -12,10 +12,10 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     const TYPE = 'ListItem';
 
     /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
-     * @var \Vnetby\Schemaorg\Types\Thing\Thing
+     * A link to the ListItem that follows the current one.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem
      */
-    public $item;
+    public $nextItem;
 
     /**
      * A link to the ListItem that precedes the current one.
@@ -24,25 +24,25 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     public $previousItem;
 
     /**
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
+     * @var \Vnetby\Schemaorg\Types\Thing\Thing
+     */
+    public $item;
+
+    /**
      * The position of an item in a series or sequence of items.
-     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger
+     * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText
      */
     public $position;
 
     /**
      * A link to the ListItem that follows the current one.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem
-     */
-    public $nextItem;
-
-    /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem $value
      * @return static
      */
-    function setItem($value)
+    function setNextItem($value)
     {
-        return $this->setProp('item', $value);
+        return $this->setProp('nextItem', $value);
     }
 
     /**
@@ -56,8 +56,18 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
+     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
+     */
+    function setItem($value)
+    {
+        return $this->setProp('item', $value);
+    }
+
+    /**
      * The position of an item in a series or sequence of items.
-     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger $value
+     * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
     function setPosition($value)
@@ -67,21 +77,11 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
 
     /**
      * A link to the ListItem that follows the current one.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem $value
-     * @return static
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|null
      */
-    function setNextItem($value)
+    function getNextItem()
     {
-        return $this->setProp('nextItem', $value);
-    }
-
-    /**
-     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
-     */
-    function getItem()
-    {
-        return $this->getProp('item');
+        return $this->getProp('nextItem');
     }
 
     /**
@@ -94,20 +94,20 @@ class ListItem extends \Vnetby\Schemaorg\Types\Thing\Intangible\Intangible
     }
 
     /**
+     * An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
+     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getItem()
+    {
+        return $this->getProp('item');
+    }
+
+    /**
      * The position of an item in a series or sequence of items.
-     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\DataTypes\DataInteger|null
+     * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
     function getPosition()
     {
         return $this->getProp('position');
-    }
-
-    /**
-     * A link to the ListItem that follows the current one.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\ListItem\ListItem|null
-     */
-    function getNextItem()
-    {
-        return $this->getProp('nextItem');
     }
 }

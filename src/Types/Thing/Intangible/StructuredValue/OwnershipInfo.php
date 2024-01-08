@@ -12,6 +12,12 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     const TYPE = 'OwnershipInfo';
 
     /**
+     * The organization or person from which the product was acquired.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     */
+    public $acquiredFrom;
+
+    /**
      * The date and time of obtaining the product.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime
      */
@@ -24,16 +30,20 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     public $ownedThrough;
 
     /**
-     * The organization or person from which the product was acquired.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $acquiredFrom;
-
-    /**
      * The product that this structured value is referring to.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product
      */
     public $typeOfGood;
+
+    /**
+     * The organization or person from which the product was acquired.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @return static
+     */
+    function setAcquiredFrom($value)
+    {
+        return $this->setProp('acquiredFrom', $value);
+    }
 
     /**
      * The date and time of obtaining the product.
@@ -56,16 +66,6 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     }
 
     /**
-     * The organization or person from which the product was acquired.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setAcquiredFrom($value)
-    {
-        return $this->setProp('acquiredFrom', $value);
-    }
-
-    /**
      * The product that this structured value is referring to.
      * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Service\Service|\Vnetby\Schemaorg\Types\Thing\Product\Product $value
      * @return static
@@ -73,6 +73,15 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     function setTypeOfGood($value)
     {
         return $this->setProp('typeOfGood', $value);
+    }
+
+    /**
+     * The organization or person from which the product was acquired.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getAcquiredFrom()
+    {
+        return $this->getProp('acquiredFrom');
     }
 
     /**
@@ -91,15 +100,6 @@ class OwnershipInfo extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredV
     function getOwnedThrough()
     {
         return $this->getProp('ownedThrough');
-    }
-
-    /**
-     * The organization or person from which the product was acquired.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getAcquiredFrom()
-    {
-        return $this->getProp('acquiredFrom');
     }
 
     /**

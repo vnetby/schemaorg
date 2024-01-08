@@ -13,13 +13,6 @@ class DDxElement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInta
     const TYPE = 'DDxElement';
 
     /**
-     * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential
-     * diagnosis.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSignOrSymptom
-     */
-    public $distinguishingSign;
-
-    /**
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
      */
@@ -28,13 +21,9 @@ class DDxElement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInta
     /**
      * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential
      * diagnosis.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSignOrSymptom $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSignOrSymptom
      */
-    function setDistinguishingSign($value)
-    {
-        return $this->setProp('distinguishingSign', $value);
-    }
+    public $distinguishingSign;
 
     /**
      * One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
@@ -49,11 +38,12 @@ class DDxElement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInta
     /**
      * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential
      * diagnosis.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSignOrSymptom|null
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSignOrSymptom $value
+     * @return static
      */
-    function getDistinguishingSign()
+    function setDistinguishingSign($value)
     {
-        return $this->getProp('distinguishingSign');
+        return $this->setProp('distinguishingSign', $value);
     }
 
     /**
@@ -63,5 +53,15 @@ class DDxElement extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalInta
     function getDiagnosis()
     {
         return $this->getProp('diagnosis');
+    }
+
+    /**
+     * One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential
+     * diagnosis.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalSignOrSymptom\MedicalSignOrSymptom|null
+     */
+    function getDistinguishingSign()
+    {
+        return $this->getProp('distinguishingSign');
     }
 }

@@ -15,52 +15,16 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     const TYPE = 'OfferShippingDetails';
 
     /**
-     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
-     */
-    public $shippingDestination;
-
-    /**
-     * The height of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
-     */
-    public $height;
-
-    /**
-     * Indicates the origin of a shipment, i.e. where it should be coming from.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
-     */
-    public $shippingOrigin;
-
-    /**
-     * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
-     */
-    public $doesNotShip;
-
-    /**
-     * The weight of the product or person.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $weight;
-
-    /**
-     * The width of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $width;
-
-    /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
-     */
-    public $transitTimeLabel;
-
-    /**
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
      * @var string|\Vnetby\Schemaorg\DataTypes\DataURL
      */
     public $shippingSettingsLink;
+
+    /**
+     * The depth of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
+     */
+    public $depth;
 
     /**
      * The total delay between the receipt of the order and the goods reaching the final customer.
@@ -69,10 +33,22 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     public $deliveryTime;
 
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * The height of the item.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
+     */
+    public $height;
+
+    /**
+     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
      * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $shippingLabel;
+    public $transitTimeLabel;
+
+    /**
+     * The weight of the product or person.
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
+     */
+    public $weight;
 
     /**
      * The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]])
@@ -82,80 +58,34 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     public $shippingRate;
 
     /**
-     * The depth of the item.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    public $depth;
+    public $shippingLabel;
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
-    function setShippingDestination($value)
-    {
-        return $this->setProp('shippingDestination', $value);
-    }
-
-    /**
-     * The height of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
-     * @return static
-     */
-    function setHeight($value)
-    {
-        return $this->setProp('height', $value);
-    }
+    public $shippingDestination;
 
     /**
      * Indicates the origin of a shipment, i.e. where it should be coming from.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion
      */
-    function setShippingOrigin($value)
-    {
-        return $this->setProp('shippingOrigin', $value);
-    }
-
-    /**
-     * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
-     * @return static
-     */
-    function setDoesNotShip($value)
-    {
-        return $this->setProp('doesNotShip', $value);
-    }
-
-    /**
-     * The weight of the product or person.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
-     */
-    function setWeight($value)
-    {
-        return $this->setProp('weight', $value);
-    }
+    public $shippingOrigin;
 
     /**
      * The width of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    function setWidth($value)
-    {
-        return $this->setProp('width', $value);
-    }
+    public $width;
 
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * Indicates when shipping to a particular [[shippingDestination]] is not available.
+     * @var bool|\Vnetby\Schemaorg\DataTypes\DataBoolean
      */
-    function setTransitTimeLabel($value)
-    {
-        return $this->setProp('transitTimeLabel', $value);
-    }
+    public $doesNotShip;
 
     /**
      * Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
@@ -165,6 +95,16 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     function setShippingSettingsLink($value)
     {
         return $this->setProp('shippingSettingsLink', $value);
+    }
+
+    /**
+     * The depth of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
+     * @return static
+     */
+    function setDepth($value)
+    {
+        return $this->setProp('depth', $value);
     }
 
     /**
@@ -178,13 +118,33 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * The height of the item.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
+     * @return static
+     */
+    function setHeight($value)
+    {
+        return $this->setProp('height', $value);
+    }
+
+    /**
+     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
      * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setShippingLabel($value)
+    function setTransitTimeLabel($value)
     {
-        return $this->setProp('shippingLabel', $value);
+        return $this->setProp('transitTimeLabel', $value);
+    }
+
+    /**
+     * The weight of the product or person.
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
+     */
+    function setWeight($value)
+    {
+        return $this->setProp('weight', $value);
     }
 
     /**
@@ -199,76 +159,53 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
-     * The depth of the item.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
      * @return static
      */
-    function setDepth($value)
+    function setShippingLabel($value)
     {
-        return $this->setProp('depth', $value);
+        return $this->setProp('shippingLabel', $value);
     }
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion $value
+     * @return static
      */
-    function getShippingDestination()
+    function setShippingDestination($value)
     {
-        return $this->getProp('shippingDestination');
-    }
-
-    /**
-     * The height of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
-     */
-    function getHeight()
-    {
-        return $this->getProp('height');
+        return $this->setProp('shippingDestination', $value);
     }
 
     /**
      * Indicates the origin of a shipment, i.e. where it should be coming from.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion $value
+     * @return static
      */
-    function getShippingOrigin()
+    function setShippingOrigin($value)
     {
-        return $this->getProp('shippingOrigin');
-    }
-
-    /**
-     * Indicates when shipping to a particular [[shippingDestination]] is not available.
-     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
-     */
-    function getDoesNotShip()
-    {
-        return $this->getProp('doesNotShip');
-    }
-
-    /**
-     * The weight of the product or person.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
-     */
-    function getWeight()
-    {
-        return $this->getProp('weight');
+        return $this->setProp('shippingOrigin', $value);
     }
 
     /**
      * The width of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
      */
-    function getWidth()
+    function setWidth($value)
     {
-        return $this->getProp('width');
+        return $this->setProp('width', $value);
     }
 
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * Indicates when shipping to a particular [[shippingDestination]] is not available.
+     * @param bool|\Vnetby\Schemaorg\DataTypes\DataBoolean $value
+     * @return static
      */
-    function getTransitTimeLabel()
+    function setDoesNotShip($value)
     {
-        return $this->getProp('transitTimeLabel');
+        return $this->setProp('doesNotShip', $value);
     }
 
     /**
@@ -281,6 +218,15 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
+     * The depth of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     */
+    function getDepth()
+    {
+        return $this->getProp('depth');
+    }
+
+    /**
      * The total delay between the receipt of the order and the goods reaching the final customer.
      * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ShippingDeliveryTime|null
      */
@@ -290,12 +236,30 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
-     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * The height of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     */
+    function getHeight()
+    {
+        return $this->getProp('height');
+    }
+
+    /**
+     * Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
      * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getShippingLabel()
+    function getTransitTimeLabel()
     {
-        return $this->getProp('shippingLabel');
+        return $this->getProp('transitTimeLabel');
+    }
+
+    /**
+     * The weight of the product or person.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getWeight()
+    {
+        return $this->getProp('weight');
     }
 
     /**
@@ -309,11 +273,47 @@ class OfferShippingDetails extends \Vnetby\Schemaorg\Types\Thing\Intangible\Stru
     }
 
     /**
-     * The depth of the item.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     * Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function getDepth()
+    function getShippingLabel()
     {
-        return $this->getProp('depth');
+        return $this->getProp('shippingLabel');
+    }
+
+    /**
+     * indicates (possibly multiple) shipping destinations. These can be defined in several ways, e.g. postalCode ranges.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion|null
+     */
+    function getShippingDestination()
+    {
+        return $this->getProp('shippingDestination');
+    }
+
+    /**
+     * Indicates the origin of a shipment, i.e. where it should be coming from.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\DefinedRegion|null
+     */
+    function getShippingOrigin()
+    {
+        return $this->getProp('shippingOrigin');
+    }
+
+    /**
+     * The width of the item.
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getWidth()
+    {
+        return $this->getProp('width');
+    }
+
+    /**
+     * Indicates when shipping to a particular [[shippingDestination]] is not available.
+     * @return bool|\Vnetby\Schemaorg\DataTypes\DataBoolean|null
+     */
+    function getDoesNotShip()
+    {
+        return $this->getProp('doesNotShip');
     }
 }

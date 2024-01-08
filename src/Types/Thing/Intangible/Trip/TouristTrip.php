@@ -15,13 +15,13 @@ class TouristTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience
      */
     public $touristType;
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience $value
      * @return static
      */
     function setTouristType($value)
@@ -31,7 +31,7 @@ class TouristTrip extends \Vnetby\Schemaorg\Types\Thing\Intangible\Trip\Trip
 
     /**
      * Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc. 
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|\Vnetby\Schemaorg\DataTypes\DataText|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\Audience|null
      */
     function getTouristType()
     {

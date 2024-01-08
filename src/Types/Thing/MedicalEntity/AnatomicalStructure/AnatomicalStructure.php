@@ -12,10 +12,35 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     const TYPE = 'AnatomicalStructure';
 
     /**
+     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
+     * biochemical functions of the system.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     */
+    public $associatedPathophysiology;
+
+    /**
+     * A medical condition associated with this anatomy.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
+     */
+    public $relatedCondition;
+
+    /**
      * Other anatomical structures to which this structure is connected.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
     public $connectedTo;
+
+    /**
+     * The anatomical or organ system that this structure is part of.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem
+     */
+    public $partOfSystem;
+
+    /**
+     * Component (sub-)structure(s) that comprise this anatomical structure.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
+     */
+    public $subStructure;
 
     /**
      * Location in the body of the anatomical structure.
@@ -36,29 +61,25 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     public $relatedTherapy;
 
     /**
-     * A medical condition associated with this anatomy.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition
-     */
-    public $relatedCondition;
-
-    /**
-     * Component (sub-)structure(s) that comprise this anatomical structure.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
-     */
-    public $subStructure;
-
-    /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataText
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    public $associatedPathophysiology;
+    function setAssociatedPathophysiology($value)
+    {
+        return $this->setProp('associatedPathophysiology', $value);
+    }
 
     /**
-     * The anatomical or organ system that this structure is part of.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem
+     * A medical condition associated with this anatomy.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
+     * @return static
      */
-    public $partOfSystem;
+    function setRelatedCondition($value)
+    {
+        return $this->setProp('relatedCondition', $value);
+    }
 
     /**
      * Other anatomical structures to which this structure is connected.
@@ -68,6 +89,26 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     function setConnectedTo($value)
     {
         return $this->setProp('connectedTo', $value);
+    }
+
+    /**
+     * The anatomical or organ system that this structure is part of.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem $value
+     * @return static
+     */
+    function setPartOfSystem($value)
+    {
+        return $this->setProp('partOfSystem', $value);
+    }
+
+    /**
+     * Component (sub-)structure(s) that comprise this anatomical structure.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
+     * @return static
+     */
+    function setSubStructure($value)
+    {
+        return $this->setProp('subStructure', $value);
     }
 
     /**
@@ -101,44 +142,22 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     }
 
     /**
-     * A medical condition associated with this anatomy.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition $value
-     * @return static
-     */
-    function setRelatedCondition($value)
-    {
-        return $this->setProp('relatedCondition', $value);
-    }
-
-    /**
-     * Component (sub-)structure(s) that comprise this anatomical structure.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
-     * @return static
-     */
-    function setSubStructure($value)
-    {
-        return $this->setProp('subStructure', $value);
-    }
-
-    /**
      * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
      * biochemical functions of the system.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataText $value
-     * @return static
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
      */
-    function setAssociatedPathophysiology($value)
+    function getAssociatedPathophysiology()
     {
-        return $this->setProp('associatedPathophysiology', $value);
+        return $this->getProp('associatedPathophysiology');
     }
 
     /**
-     * The anatomical or organ system that this structure is part of.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem $value
-     * @return static
+     * A medical condition associated with this anatomy.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
      */
-    function setPartOfSystem($value)
+    function getRelatedCondition()
     {
-        return $this->setProp('partOfSystem', $value);
+        return $this->getProp('relatedCondition');
     }
 
     /**
@@ -148,6 +167,24 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     function getConnectedTo()
     {
         return $this->getProp('connectedTo');
+    }
+
+    /**
+     * The anatomical or organ system that this structure is part of.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|null
+     */
+    function getPartOfSystem()
+    {
+        return $this->getProp('partOfSystem');
+    }
+
+    /**
+     * Component (sub-)structure(s) that comprise this anatomical structure.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
+     */
+    function getSubStructure()
+    {
+        return $this->getProp('subStructure');
     }
 
     /**
@@ -175,42 +212,5 @@ class AnatomicalStructure extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Me
     function getRelatedTherapy()
     {
         return $this->getProp('relatedTherapy');
-    }
-
-    /**
-     * A medical condition associated with this anatomy.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalCondition\MedicalCondition|null
-     */
-    function getRelatedCondition()
-    {
-        return $this->getProp('relatedCondition');
-    }
-
-    /**
-     * Component (sub-)structure(s) that comprise this anatomical structure.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
-     */
-    function getSubStructure()
-    {
-        return $this->getProp('subStructure');
-    }
-
-    /**
-     * If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and
-     * biochemical functions of the system.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataText|null
-     */
-    function getAssociatedPathophysiology()
-    {
-        return $this->getProp('associatedPathophysiology');
-    }
-
-    /**
-     * The anatomical or organ system that this structure is part of.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|null
-     */
-    function getPartOfSystem()
-    {
-        return $this->getProp('partOfSystem');
     }
 }

@@ -13,13 +13,13 @@ class MedicalWebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\
 
     /**
      * Medical audience for page.
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalAudienceType\MedicalAudienceType|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\MedicalAudience\MedicalAudience
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAudience\MedicalAudience\MedicalAudience|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalAudienceType\MedicalAudienceType
      */
     public $medicalAudience;
 
     /**
      * Medical audience for page.
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalAudienceType\MedicalAudienceType|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\MedicalAudience\MedicalAudience $value
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAudience\MedicalAudience\MedicalAudience|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalAudienceType\MedicalAudienceType $value
      * @return static
      */
     function setMedicalAudience($value)
@@ -29,7 +29,7 @@ class MedicalWebPage extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\WebPage\
 
     /**
      * Medical audience for page.
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalAudienceType\MedicalAudienceType|\Vnetby\Schemaorg\Types\Thing\Intangible\Audience\MedicalAudience\MedicalAudience|null
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\Audience\PeopleAudience\MedicalAudience\MedicalAudience|\Vnetby\Schemaorg\Types\Thing\Intangible\Enumeration\MedicalEnumeration\MedicalAudienceType\MedicalAudienceType|null
      */
     function getMedicalAudience()
     {

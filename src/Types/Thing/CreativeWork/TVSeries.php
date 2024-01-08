@@ -18,11 +18,33 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $musicBy;
 
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
-     * items or with a series, episode, clip.
+     * The country of origin of something, including products as well as creative works such as movie and TV content. In the
+     * case of TV and movie, this would be the country of the principle offices of the production company or individual responsible
+     * for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]]
+     * and [[locationCreated]] may be more applicable. In the case of products, the country of origin of the product. The exact interpretation
+     * of this may vary by context and product type, and cannot be fully enumerated here.
+     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country
+     */
+    public $countryOfOrigin;
+
+    /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     */
+    public $productionCompany;
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
      * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
      */
-    public $director;
+    public $actor;
+
+    /**
+     * An episode of a TV, radio or game media within a series or season.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
+     */
+    public $episode;
 
     /**
      * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television. For example, the
@@ -34,14 +56,17 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $titleEIDR;
 
     /**
-     * The country of origin of something, including products as well as creative works such as movie and TV content. In the
-     * case of TV and movie, this would be the country of the principle offices of the production company or individual responsible
-     * for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]]
-     * and [[locationCreated]] may be more applicable. In the case of products, the country of origin of the product. The exact interpretation
-     * of this may vary by context and product type, and cannot be fully enumerated here.
-     * @var \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country
+     * A season that is part of the media series.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
      */
-    public $countryOfOrigin;
+    public $containsSeason;
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
+     * items or with a series, episode, clip.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
+     */
+    public $director;
 
     /**
      * The trailer of a movie or TV/radio series, season, episode, etc.
@@ -56,35 +81,10 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $numberOfEpisodes;
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $actor;
-
-    /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization
-     */
-    public $productionCompany;
-
-    /**
-     * An episode of a TV, radio or game media within a series or season.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode
-     */
-    public $episode;
-
-    /**
      * The number of seasons in this series.
      * @var string|int|\Vnetby\Schemaorg\DataTypes\DataInteger
      */
     public $numberOfSeasons;
-
-    /**
-     * A season that is part of the media series.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason
-     */
-    public $containsSeason;
 
     /**
      * The composer of the soundtrack.
@@ -97,14 +97,48 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
-     * items or with a series, episode, clip.
+     * The country of origin of something, including products as well as creative works such as movie and TV content. In the
+     * case of TV and movie, this would be the country of the principle offices of the production company or individual responsible
+     * for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]]
+     * and [[locationCreated]] may be more applicable. In the case of products, the country of origin of the product. The exact interpretation
+     * of this may vary by context and product type, and cannot be fully enumerated here.
+     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country $value
+     * @return static
+     */
+    function setCountryOfOrigin($value)
+    {
+        return $this->setProp('countryOfOrigin', $value);
+    }
+
+    /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @return static
+     */
+    function setProductionCompany($value)
+    {
+        return $this->setProp('productionCompany', $value);
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
      * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
      * @return static
      */
-    function setDirector($value)
+    function setActor($value)
     {
-        return $this->setProp('director', $value);
+        return $this->setProp('actor', $value);
+    }
+
+    /**
+     * An episode of a TV, radio or game media within a series or season.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode $value
+     * @return static
+     */
+    function setEpisode($value)
+    {
+        return $this->setProp('episode', $value);
     }
 
     /**
@@ -121,17 +155,24 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The country of origin of something, including products as well as creative works such as movie and TV content. In the
-     * case of TV and movie, this would be the country of the principle offices of the production company or individual responsible
-     * for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]]
-     * and [[locationCreated]] may be more applicable. In the case of products, the country of origin of the product. The exact interpretation
-     * of this may vary by context and product type, and cannot be fully enumerated here.
-     * @param \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country $value
+     * A season that is part of the media series.
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason $value
      * @return static
      */
-    function setCountryOfOrigin($value)
+    function setContainsSeason($value)
     {
-        return $this->setProp('countryOfOrigin', $value);
+        return $this->setProp('containsSeason', $value);
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
+     * items or with a series, episode, clip.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
+     * @return static
+     */
+    function setDirector($value)
+    {
+        return $this->setProp('director', $value);
     }
 
     /**
@@ -155,37 +196,6 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
-     */
-    function setActor($value)
-    {
-        return $this->setProp('actor', $value);
-    }
-
-    /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
-     * @return static
-     */
-    function setProductionCompany($value)
-    {
-        return $this->setProp('productionCompany', $value);
-    }
-
-    /**
-     * An episode of a TV, radio or game media within a series or season.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode $value
-     * @return static
-     */
-    function setEpisode($value)
-    {
-        return $this->setProp('episode', $value);
-    }
-
-    /**
      * The number of seasons in this series.
      * @param string|int|\Vnetby\Schemaorg\DataTypes\DataInteger $value
      * @return static
@@ -193,16 +203,6 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     function setNumberOfSeasons($value)
     {
         return $this->setProp('numberOfSeasons', $value);
-    }
-
-    /**
-     * A season that is part of the media series.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason $value
-     * @return static
-     */
-    function setContainsSeason($value)
-    {
-        return $this->setProp('containsSeason', $value);
     }
 
     /**
@@ -215,13 +215,44 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
-     * items or with a series, episode, clip.
+     * The country of origin of something, including products as well as creative works such as movie and TV content. In the
+     * case of TV and movie, this would be the country of the principle offices of the production company or individual responsible
+     * for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]]
+     * and [[locationCreated]] may be more applicable. In the case of products, the country of origin of the product. The exact interpretation
+     * of this may vary by context and product type, and cannot be fully enumerated here.
+     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|null
+     */
+    function getCountryOfOrigin()
+    {
+        return $this->getProp('countryOfOrigin');
+    }
+
+    /**
+     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
+     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     */
+    function getProductionCompany()
+    {
+        return $this->getProp('productionCompany');
+    }
+
+    /**
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
+     * or with a series, episode, clip.
      * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
      */
-    function getDirector()
+    function getActor()
     {
-        return $this->getProp('director');
+        return $this->getProp('actor');
+    }
+
+    /**
+     * An episode of a TV, radio or game media within a series or season.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode|null
+     */
+    function getEpisode()
+    {
+        return $this->getProp('episode');
     }
 
     /**
@@ -237,16 +268,22 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * The country of origin of something, including products as well as creative works such as movie and TV content. In the
-     * case of TV and movie, this would be the country of the principle offices of the production company or individual responsible
-     * for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]]
-     * and [[locationCreated]] may be more applicable. In the case of products, the country of origin of the product. The exact interpretation
-     * of this may vary by context and product type, and cannot be fully enumerated here.
-     * @return \Vnetby\Schemaorg\Types\Thing\Place\AdministrativeArea\Country|null
+     * A season that is part of the media series.
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason|null
      */
-    function getCountryOfOrigin()
+    function getContainsSeason()
     {
-        return $this->getProp('countryOfOrigin');
+        return $this->getProp('containsSeason');
+    }
+
+    /**
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual
+     * items or with a series, episode, clip.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     */
+    function getDirector()
+    {
+        return $this->getProp('director');
     }
 
     /**
@@ -268,48 +305,11 @@ class TVSeries extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items
-     * or with a series, episode, clip.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|null
-     */
-    function getActor()
-    {
-        return $this->getProp('actor');
-    }
-
-    /**
-     * The production company or studio responsible for the item, e.g. series, video game, episode etc.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
-     */
-    function getProductionCompany()
-    {
-        return $this->getProp('productionCompany');
-    }
-
-    /**
-     * An episode of a TV, radio or game media within a series or season.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\Episode\Episode|null
-     */
-    function getEpisode()
-    {
-        return $this->getProp('episode');
-    }
-
-    /**
      * The number of seasons in this series.
      * @return string|int|\Vnetby\Schemaorg\DataTypes\DataInteger|null
      */
     function getNumberOfSeasons()
     {
         return $this->getProp('numberOfSeasons');
-    }
-
-    /**
-     * A season that is part of the media series.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWorkSeason\CreativeWorkSeason|null
-     */
-    function getContainsSeason()
-    {
-        return $this->getProp('containsSeason');
     }
 }

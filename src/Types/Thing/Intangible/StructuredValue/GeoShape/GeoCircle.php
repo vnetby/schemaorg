@@ -14,12 +14,6 @@ class GeoCircle extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue
     const TYPE = 'GeoCircle';
 
     /**
-     * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
-     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
-     */
-    public $geoRadius;
-
-    /**
      * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
      * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\GeoCoordinates
      */
@@ -27,13 +21,9 @@ class GeoCircle extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue
 
     /**
      * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
-     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
-     * @return static
+     * @var string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance
      */
-    function setGeoRadius($value)
-    {
-        return $this->setProp('geoRadius', $value);
-    }
+    public $geoRadius;
 
     /**
      * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
@@ -47,11 +37,12 @@ class GeoCircle extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue
 
     /**
      * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
-     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     * @param string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance $value
+     * @return static
      */
-    function getGeoRadius()
+    function setGeoRadius($value)
     {
-        return $this->getProp('geoRadius');
+        return $this->setProp('geoRadius', $value);
     }
 
     /**
@@ -61,5 +52,14 @@ class GeoCircle extends \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue
     function getGeoMidpoint()
     {
         return $this->getProp('geoMidpoint');
+    }
+
+    /**
+     * Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
+     * @return string|int|float|\Vnetby\Schemaorg\DataTypes\DataNumber|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\Quantity\Distance|null
+     */
+    function getGeoRadius()
+    {
+        return $this->getProp('geoRadius');
     }
 }

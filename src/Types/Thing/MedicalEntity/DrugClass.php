@@ -13,13 +13,13 @@ class DrugClass extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntit
 
     /**
      * Specifying a drug or medicine used in a medication procedure.
-     * @var \Vnetby\Schemaorg\Types\Thing\Product\Drug
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug
      */
     public $drug;
 
     /**
      * Specifying a drug or medicine used in a medication procedure.
-     * @param \Vnetby\Schemaorg\Types\Thing\Product\Drug $value
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug $value
      * @return static
      */
     function setDrug($value)
@@ -29,7 +29,7 @@ class DrugClass extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\MedicalEntit
 
     /**
      * Specifying a drug or medicine used in a medication procedure.
-     * @return \Vnetby\Schemaorg\Types\Thing\Product\Drug|null
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\Substance\Drug|null
      */
     function getDrug()
     {

@@ -13,16 +13,16 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     const TYPE = 'Game';
 
     /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
-     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
-     */
-    public $numberOfPlayers;
-
-    /**
-     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
+     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    public $quest;
+    public $characterAttribute;
+
+    /**
+     * Real or fictional location of the game (or part of game).
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL
+     */
+    public $gameLocation;
 
     /**
      * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
@@ -31,46 +31,16 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     public $gameItem;
 
     /**
-     * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
+     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
-    public $characterAttribute;
-
-    /**
-     * Real or fictional location of the game (or part of game).
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place
-     */
-    public $gameLocation;
+    public $quest;
 
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
-     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
-     * @return static
+     * @var \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue
      */
-    function setNumberOfPlayers($value)
-    {
-        return $this->setProp('numberOfPlayers', $value);
-    }
-
-    /**
-     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
-     * @return static
-     */
-    function setQuest($value)
-    {
-        return $this->setProp('quest', $value);
-    }
-
-    /**
-     * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
-     * @return static
-     */
-    function setGameItem($value)
-    {
-        return $this->setProp('gameItem', $value);
-    }
+    public $numberOfPlayers;
 
     /**
      * A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
@@ -84,7 +54,7 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
     function setGameLocation($value)
@@ -93,30 +63,33 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
     }
 
     /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
-     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
+     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
      */
-    function getNumberOfPlayers()
+    function setGameItem($value)
     {
-        return $this->getProp('numberOfPlayers');
+        return $this->setProp('gameItem', $value);
     }
 
     /**
      * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
      */
-    function getQuest()
+    function setQuest($value)
     {
-        return $this->getProp('quest');
+        return $this->setProp('quest', $value);
     }
 
     /**
-     * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     * Indicate how many people can play this game (minimum, maximum, or range).
+     * @param \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue $value
+     * @return static
      */
-    function getGameItem()
+    function setNumberOfPlayers($value)
     {
-        return $this->getProp('gameItem');
+        return $this->setProp('numberOfPlayers', $value);
     }
 
     /**
@@ -130,10 +103,37 @@ class Game extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeWork
 
     /**
      * Real or fictional location of the game (or part of game).
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
     function getGameLocation()
     {
         return $this->getProp('gameLocation');
+    }
+
+    /**
+     * An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.
+     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getGameItem()
+    {
+        return $this->getProp('gameItem');
+    }
+
+    /**
+     * The task that a player-controlled character, or group of characters may complete in order to gain a reward.
+     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getQuest()
+    {
+        return $this->getProp('quest');
+    }
+
+    /**
+     * Indicate how many people can play this game (minimum, maximum, or range).
+     * @return \Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\QuantitativeValue\QuantitativeValue|null
+     */
+    function getNumberOfPlayers()
+    {
+        return $this->getProp('numberOfPlayers');
     }
 }

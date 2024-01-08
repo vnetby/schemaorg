@@ -15,6 +15,13 @@ class HyperTocEntry extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     const TYPE = 'HyperTocEntry';
 
     /**
+     * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or
+     * render.
+     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry
+     */
+    public $tocContinuation;
+
+    /**
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
      * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\MediaObject\MediaObject
      */
@@ -30,9 +37,13 @@ class HyperTocEntry extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     /**
      * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or
      * render.
-     * @var \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry
+     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry $value
+     * @return static
      */
-    public $tocContinuation;
+    function setTocContinuation($value)
+    {
+        return $this->setProp('tocContinuation', $value);
+    }
 
     /**
      * A media object that encodes this CreativeWork. This property is a synonym for encoding.
@@ -58,12 +69,11 @@ class HyperTocEntry extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     /**
      * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or
      * render.
-     * @param \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry $value
-     * @return static
+     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|null
      */
-    function setTocContinuation($value)
+    function getTocContinuation()
     {
-        return $this->setProp('tocContinuation', $value);
+        return $this->getProp('tocContinuation');
     }
 
     /**
@@ -83,15 +93,5 @@ class HyperTocEntry extends \Vnetby\Schemaorg\Types\Thing\CreativeWork\CreativeW
     function getUtterances()
     {
         return $this->getProp('utterances');
-    }
-
-    /**
-     * A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or
-     * render.
-     * @return \Vnetby\Schemaorg\Types\Thing\CreativeWork\HyperTocEntry|null
-     */
-    function getTocContinuation()
-    {
-        return $this->getProp('tocContinuation');
     }
 }

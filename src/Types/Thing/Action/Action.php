@@ -14,18 +14,6 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     const TYPE = 'Action';
 
     /**
-     * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
-     * @var \Vnetby\Schemaorg\Types\Thing\Thing
-     */
-    public $instrument;
-
-    /**
-     * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
-     * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
-     */
-    public $participant;
-
-    /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
      * on behalf of the provider. A provider may also serve as the seller.
      * @var \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person
@@ -33,13 +21,16 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $provider;
 
     /**
-     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
-     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
+     * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
      */
-    public $startTime;
+    public $participant;
+
+    /**
+     * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
+     * @var \Vnetby\Schemaorg\Types\Thing\Thing
+     */
+    public $instrument;
 
     /**
      * The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic
@@ -49,10 +40,13 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $object;
 
     /**
-     * Indicates a target EntryPoint, or url, for an Action.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint
+     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
+     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
      */
-    public $target;
+    public $startTime;
 
     /**
      * The result produced in the action. E.g. John wrote *a book*.
@@ -61,10 +55,10 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $result;
 
     /**
-     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place
+     * Indicates a target EntryPoint, or url, for an Action.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint|\Vnetby\Schemaorg\DataTypes\DataURL
      */
-    public $location;
+    public $target;
 
     /**
      * Indicates the current disposition of the Action.
@@ -73,45 +67,31 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     public $actionStatus;
 
     /**
-     * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
-     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
-     */
-    public $agent;
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
-     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @var string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime
-     */
-    public $endTime;
-
-    /**
      * For failed actions, more information on the cause of the failure.
      * @var \Vnetby\Schemaorg\Types\Thing\Thing
      */
     public $error;
 
     /**
-     * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
-     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
-     * @return static
+     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     * @var string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText
      */
-    function setInstrument($value)
-    {
-        return $this->setProp('instrument', $value);
-    }
+    public $location;
 
     /**
-     * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
-     * @param \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person $value
-     * @return static
+     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
+     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @var string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime
      */
-    function setParticipant($value)
-    {
-        return $this->setProp('participant', $value);
-    }
+    public $endTime;
+
+    /**
+     * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
+     * @var \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization
+     */
+    public $agent;
 
     /**
      * The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods
@@ -125,16 +105,23 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
-     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
+     * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
      * @return static
      */
-    function setStartTime($value)
+    function setParticipant($value)
     {
-        return $this->setProp('startTime', $value);
+        return $this->setProp('participant', $value);
+    }
+
+    /**
+     * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
+     * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
+     * @return static
+     */
+    function setInstrument($value)
+    {
+        return $this->setProp('instrument', $value);
     }
 
     /**
@@ -149,13 +136,16 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Indicates a target EntryPoint, or url, for an Action.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint $value
+     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
+     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
      * @return static
      */
-    function setTarget($value)
+    function setStartTime($value)
     {
-        return $this->setProp('target', $value);
+        return $this->setProp('startTime', $value);
     }
 
     /**
@@ -169,13 +159,13 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place $value
+     * Indicates a target EntryPoint, or url, for an Action.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint|\Vnetby\Schemaorg\DataTypes\DataURL $value
      * @return static
      */
-    function setLocation($value)
+    function setTarget($value)
     {
-        return $this->setProp('location', $value);
+        return $this->setProp('target', $value);
     }
 
     /**
@@ -189,29 +179,6 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
-     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
-     * @return static
-     */
-    function setAgent($value)
-    {
-        return $this->setProp('agent', $value);
-    }
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
-     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @param string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime $value
-     * @return static
-     */
-    function setEndTime($value)
-    {
-        return $this->setProp('endTime', $value);
-    }
-
-    /**
      * For failed actions, more information on the cause of the failure.
      * @param \Vnetby\Schemaorg\Types\Thing\Thing $value
      * @return static
@@ -222,21 +189,36 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     * @param string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText $value
+     * @return static
      */
-    function getInstrument()
+    function setLocation($value)
     {
-        return $this->getProp('instrument');
+        return $this->setProp('location', $value);
     }
 
     /**
-     * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
-     * @return \Vnetby\Schemaorg\Types\Thing\Organization\Organization|\Vnetby\Schemaorg\Types\Thing\Person\Person|null
+     * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
+     * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @param string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime $value
+     * @return static
      */
-    function getParticipant()
+    function setEndTime($value)
     {
-        return $this->getProp('participant');
+        return $this->setProp('endTime', $value);
+    }
+
+    /**
+     * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
+     * @param \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization $value
+     * @return static
+     */
+    function setAgent($value)
+    {
+        return $this->setProp('agent', $value);
     }
 
     /**
@@ -250,15 +232,21 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
-     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
-     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
      */
-    function getStartTime()
+    function getParticipant()
     {
-        return $this->getProp('startTime');
+        return $this->getProp('participant');
+    }
+
+    /**
+     * The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
+     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     */
+    function getInstrument()
+    {
+        return $this->getProp('instrument');
     }
 
     /**
@@ -272,12 +260,15 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * Indicates a target EntryPoint, or url, for an Action.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataURL|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint|null
+     * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December.
+     * For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that
+     * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
-    function getTarget()
+    function getStartTime()
     {
-        return $this->getProp('target');
+        return $this->getProp('startTime');
     }
 
     /**
@@ -290,12 +281,12 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
-     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\DataTypes\DataText|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\Types\Thing\Place\Place|null
+     * Indicates a target EntryPoint, or url, for an Action.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\EntryPoint|\Vnetby\Schemaorg\DataTypes\DataURL|null
      */
-    function getLocation()
+    function getTarget()
     {
-        return $this->getProp('location');
+        return $this->getProp('target');
     }
 
     /**
@@ -308,12 +299,21 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
-     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
+     * For failed actions, more information on the cause of the failure.
+     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
      */
-    function getAgent()
+    function getError()
     {
-        return $this->getProp('agent');
+        return $this->getProp('error');
+    }
+
+    /**
+     * The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+     * @return string|\Vnetby\Schemaorg\Types\Thing\Intangible\VirtualLocation|\Vnetby\Schemaorg\Types\Thing\Place\Place|\Vnetby\Schemaorg\Types\Thing\Intangible\StructuredValue\ContactPoint\PostalAddress|\Vnetby\Schemaorg\DataTypes\DataText|null
+     */
+    function getLocation()
+    {
+        return $this->getProp('location');
     }
 
     /**
@@ -321,7 +321,7 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
      * actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*.
      * For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that
      * Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-     * @return string|\Vnetby\Schemaorg\DataTypes\DataTime|\Vnetby\Schemaorg\DataTypes\DataDateTime|null
+     * @return string|\Vnetby\Schemaorg\DataTypes\DataDateTime|\Vnetby\Schemaorg\DataTypes\DataTime|null
      */
     function getEndTime()
     {
@@ -329,11 +329,11 @@ class Action extends \Vnetby\Schemaorg\Types\Thing\Thing
     }
 
     /**
-     * For failed actions, more information on the cause of the failure.
-     * @return \Vnetby\Schemaorg\Types\Thing\Thing|null
+     * The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
+     * @return \Vnetby\Schemaorg\Types\Thing\Person\Person|\Vnetby\Schemaorg\Types\Thing\Organization\Organization|null
      */
-    function getError()
+    function getAgent()
     {
-        return $this->getProp('error');
+        return $this->getProp('agent');
     }
 }

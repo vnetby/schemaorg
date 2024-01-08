@@ -12,22 +12,32 @@ class Vein extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructu
     const TYPE = 'Vein';
 
     /**
+     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
+     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem
+     */
+    public $regionDrained;
+
+    /**
      * The vasculature that the vein drains into.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel
      */
     public $drainsTo;
 
     /**
-     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
-     * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
-     */
-    public $regionDrained;
-
-    /**
      * The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
      * @var \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure
      */
     public $tributary;
+
+    /**
+     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
+     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem $value
+     * @return static
+     */
+    function setRegionDrained($value)
+    {
+        return $this->setProp('regionDrained', $value);
+    }
 
     /**
      * The vasculature that the vein drains into.
@@ -37,16 +47,6 @@ class Vein extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructu
     function setDrainsTo($value)
     {
         return $this->setProp('drainsTo', $value);
-    }
-
-    /**
-     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
-     * @param \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure $value
-     * @return static
-     */
-    function setRegionDrained($value)
-    {
-        return $this->setProp('regionDrained', $value);
     }
 
     /**
@@ -60,21 +60,21 @@ class Vein extends \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructu
     }
 
     /**
+     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
+     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|null
+     */
+    function getRegionDrained()
+    {
+        return $this->getProp('regionDrained');
+    }
+
+    /**
      * The vasculature that the vein drains into.
      * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\Vessel\Vessel|null
      */
     function getDrainsTo()
     {
         return $this->getProp('drainsTo');
-    }
-
-    /**
-     * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
-     * @return \Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalSystem|\Vnetby\Schemaorg\Types\Thing\MedicalEntity\AnatomicalStructure\AnatomicalStructure|null
-     */
-    function getRegionDrained()
-    {
-        return $this->getProp('regionDrained');
     }
 
     /**
